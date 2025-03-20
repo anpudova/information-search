@@ -1,0 +1,1424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	A Note Regarding Prioritization on Congestible Networks
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/TEL_2015093014273973.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60096" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60096.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60096" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60096" />
+<meta property="og:title" content="A Note Regarding Prioritization on Congestible Networks" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/TEL2024061414572149.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/TEL2024061414572149.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="A Note Regarding Prioritization on Congestible Networks" />
+<meta name="keywords" content="Congestible Networks,Net Neutrality,Regulation" />
+<meta name="description" content="Explore the impact of traffic prioritization on congestible networks. Discover how prioritization affects congestion and total network traffic. Read now!" />
+<meta name="citation_journal_title" content="Theoretical Economics Letters" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Samuel Raisanen" />
+<meta name="citation_author" content="Samuel Raisanen" />
+<meta name="citation_title" content="A Note Regarding Prioritization on Congestible Networks" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-09-28" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/tel.2015.55071" />
+<meta name="citation_issnPrint" content="2162-2078" />
+<meta name="citation_issnOnline" content="2162-2086" />
+<meta name="citation_abstract" content="This paper examines the
+effect of allowing prioritization of traffic on a congestible network under
+three demand scenarios. First, it is shown that when prioritization does not
+affect usage, average congestion on the network increases. Second, this result
+is shown to hold when there is demand shifting toward the prioritized network
+service but no impact on total network traffic. Finally, it is proven that for
+prioritization to reduce average congestion on a network it must reduce the
+total traffic on the network." />
+<meta name="citation_publication_date" content="2015/9/28" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/TEL_2015093014273973.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/TEL_2015093014273973.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60096" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60096" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60096" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60096.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60096.xml" />
+<meta name="citation_issue" content="5" />
+<meta name="citation_online_date" content="2015/9/28" />
+<meta name="citation_firstpage" content="606" />
+<meta name="citation_lastpage" content="615" />
+
+<meta name="dc.title" content="A Note Regarding Prioritization on Congestible Networks" />
+
+<meta name="dc.creator" content="Samuel Raisanen" /><meta name="dcterms.issued" content="2015-09-28" />
+<meta name="dc.description" content="This paper examines the
+effect of allowing prioritization of traffic on a congestible network under
+three demand scenarios. First, it is shown that when prioritization does not
+affect usage, average congestion on the network increases. Second, this result
+is shown to hold when there is demand shifting toward the prioritized network
+service but no impact on total network traffic. Finally, it is proven that for
+prioritization to reduce average congestion on a network it must reduce the
+total traffic on the network." />
+<meta name="dc.source" content="Theoretical Economics Letters" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-28" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/tel.2015.55071" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-28" />
+<meta name="prism.issnPrint" content="2162-2078" />
+<meta name="prism.issnOnline" content="2162-2086" />
+<meta name="prism.publicationName" content="Theoretical Economics Letters" />
+<meta name="prism.publicationDate" content="2015-09-28" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="5" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="606" />
+<meta name="prism.doi" content="10.4236/tel.2015.55071" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60096" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAk0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTI4ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAV6PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1TYW11ZWwrK1JhaXNhbmVuJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+U2FtdWVsICBSYWlzYW5lbjwvYT48c3VwPjwvc3VwPiBkAgIPZBYCZg8WAh8EBfIBPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1EZXBhcnRtZW50K29mK0Vjb25vbWljJTJjK0NlbnRyYWwrTWljaGlnYW4rVW5pdmVyc2l0eSUyYytNb3VudCtQbGVhc2FudCUyYytNSSUyYytVU0Emc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5EZXBhcnRtZW50IG9mIEVjb25vbWljLCBDZW50cmFsIE1pY2hpZ2FuIFVuaXZlcnNpdHksIE1vdW50IFBsZWFzYW50LCBNSSwgVVNBPC9hPi48YnIgLz5kAgUPFgIfBAUFNCw2MDBkAgYPFgIfBAUFNSw0MDJkAgcPFgIfAwUNRGlzcGxheTpOb25lO2QCCA9kFgICAQ8WAh8EBcsCPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1Db25nZXN0aWJsZStOZXR3b3JrcyZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkNvbmdlc3RpYmxlIE5ldHdvcmtzPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rTmV0K05ldXRyYWxpdHkmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gTmV0IE5ldXRyYWxpdHk8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStSZWd1bGF0aW9uJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFJlZ3VsYXRpb248L2E+IGQCCg8WAh8EBYMCUmFpc2FuZW4sIFMuICAgKDIwMTUpIEEgTm90ZSBSZWdhcmRpbmcgUHJpb3JpdGl6YXRpb24gb24gQ29uZ2VzdGlibGUgTmV0d29ya3MuIDxpPlRoZW9yZXRpY2FsIEVjb25vbWljcyBMZXR0ZXJzPC9pPiwgPGI+NTwvYj4sIDYwNi02MTUuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi90ZWwuMjAxNS41NTA3MScgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDA5NiknPjEwLjQyMzYvdGVsLjIwMTUuNTUwNzE8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50AgoWFGYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTQwNScgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATFlQ2hlbiwgTS5LLiBhbmQgTmFsZWJ1LCBCLkouICgyMDA2KSBPbmUtV2F5IEVzc2VudGlhbCBDb21wbGVtZW50cy4gQ293ZWxzIEZvdW5kYXRpb24gRGlzY3Vzc2lvbiBQYXBlci5kAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTQwNicgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATLnAUhlcm1hbGluLCBCLkUuIGFuZCBLYXR6LCBNLkwuICgyMDA3KSBUaGUgRWNvbm9taWNzIG9mIFByb2R1Y3QtTGluZSBSZXN0cmljdGlvbnMgd2l0aCBhbiBBcHBsaWNhdGlvbiB0byB0aGUgTmV0d29yayBOZXV0cmFsaXR5IERlYmF0ZS4gSW5mb3JtYXRpb24gRWNvbm9taWNzIGFuZCBQb2xpY3ksIDE5LCAyMTUtMjQ4LiBodHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouaW5mb2Vjb3BvbC4yMDA3LjA0LjAwMWQCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NDA3JyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM4ECS3JhbWVyLCBKLiBhbmQgV2lld2lvcnJhLCBMLiAoMjAxMikgTmV0d29yayBOZXV0cmFsaXR5IGFuZCBDb25nZXN0aW9uIFNlbnNpdGl2ZSBDb250ZW50IFByb3ZpZGVyczogSW1wbGljYXRpb25zIGZvciBDb250ZW50IFZhcmlldHksIEJyb2FkYmFuZCBJbnZlc3RtZW50LCBhbmQgUmVndWxhdGlvbi4gSW5mb3JtYXRpb24gU3lzdGVtcyBSZXNlYXJjaCwgMjMsIDEzMDMtMTMyMS4NCmh0dHA6Ly9keC5kb2kub3JnLzEwLjEyODcvaXNyZS4xMTIwLjA0MjBkAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTQwOCcgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATSdAlNpZGFrLCBKLkcuIGFuZCBUZWVjZSwgRC5KLiAoMjAxMCkgSW5ub3ZhdGlvbiBTcGlsbG92ZXJzIGFuZCB0aGUg4oCcRGlydCBSb2Fk4oCdIEZhbGxhY3k6IFRoZSBJbnRlbGxlY3R1YWwgQmFua3J1cHRjeSBvZiBCYW5uaW5nIE9wdGlvbmFsIFRyYW5zYWN0aW9ucyBmb3IgRW5oYW5jZWQgRGVsaXZlcnkgb3ZlciB0aGUgSW50ZXJuZXQuIEpvdXJuYWwgb2YgQ29tcGV0aXRpb24gTGF3IGFuZCBFY29ub21pY3MsIDYsIDUyMS01OTQuIGh0dHA6Ly9keC5kb2kub3JnLzEwLjEwOTMvam9jbGVjL25ocTAwM2QCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NDA5JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNZABU2luZ2VyLCBILkouIGFuZCBMaXRhbiwgUi5FLiAoMjAwNykgVW5pbnRlbmRlZCBDb25zZXF1ZW5jZXMgb2YgTmV0IE5ldXRyYWxpdHkgUmVndWxhdGlvbi4gSm91cm5hbCBvbiBUZWxlY29tbXVuaWNhdGlvbnMgYW5kIEhpZ2ggVGVjaG5vbG9neSBMYXcuZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk0MTAnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2twFDaGVuZywgSC5LLiwgQmFuZHlvcGFkaHlheSwgUy4gYW5kIEd1bywgSC4gKDIwMTEpIFRoZSBEZWJhdGUgb24gTmV0IE5ldXRyYWxpdHk6IEEgUG9saWN5IFBlcnNwZWN0aXZlLiBJbmZvcm1hdGlvbiBTeXN0ZW1zIFJlc2VhcmNoLCAyMiwgNjAtODIuIGh0dHA6Ly9keC5kb2kub3JnLzEwLjEyODcvaXNyZS4xMDkwLjAyNTdkAgYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTQxMScgdGFyZ2V0PSdfYmxhbmsnPjc8L2E+XQE3ATfDAUVjb25vbWlkZXMsIE4uIGFuZCBUYWcsIEouICgyMDEyKSBOZXR3b3JrIE5ldXRyYWxpdHkgb24gdGhlIEludGVybmV0OiBBIFR3by1TaWRlZCBNYXJrZXQgQW5hbHlzaXMuIEluZm9ybWF0aW9uIEVjb25vbWljcyBhbmQgUG9saWN5LCAyNCwgOTEtMTA0LiBodHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouaW5mb2Vjb3BvbC4yMDEyLjAxLjAwMWQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NDEyJyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOMcBQ2hldHRpYXIsIEkuTS4gYW5kIEhvbGxhZGF5LCBKLlMuICgyMDEwKSBGcmVlIHRvIEludmVzdDogVGhlIEVjb25vbWljIEJlbmVmaXRzIG9mIFByZXNlcnZpbmcgTmV0IE5ldXRyYWxpdHkuIFJlcG9ydCBOby4gNCwgSW5zdGl0dXRlIGZvciBQb2xpY3kgSW50ZWdyaXR5LCBOZXcgWW9yayBVbml2ZXJzaXR5IFNjaG9vbCBvZiBMYXcsIE5ldyBZb3JrLmQCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NDEzJyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBOasBUGlsIENob2ksIEouIGFuZCBLaW0sIEIuLUMuICgyMDEwKSBOZXQgTmV1dHJhbGl0eSBhbmQgSW52ZXN0bWVudCBJbmNlbnRpdmVzLiBUaGUgUkFORCBKb3VybmFsIG9mIEVjb25vbWljcywgNDEsIDQ0Ni00NzEuIGh0dHA6Ly9keC5kb2kub3JnLzEwLjExMTEvai4xNzU2LTIxNzEuMjAxMC4wMDEwNy54ZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk0MTQnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwtgFNYWNLaWUtTWFzb24sIEouSy4gYW5kIFZhcmlhbiwgSC5SLiAoMTk5NSkgUHJpY2luZyBDb25nZXN0aWJsZSBOZXR3b3JrIFJlc291cmNlcy4gSUVFRSBKb3VybmFsIG9uIFNlbGVjdGVkIEFyZWFzIGluIENvbW11bmljYXRpb25zLCAxMywgMTE0MS0xMTQ5LiBodHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5LzQ5LjQxNDYzNGQCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJE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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=666" title="Theoretical Economics Letters">
+                    Theoretical Economics Letters</a> &gt; <a href="home?issueid=7012#60096">Vol.5 No.5, October 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                A Note Regarding Prioritization on Congestible Networks <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Samuel++Raisanen&searchfield=authors&page=1' target='_blank'>Samuel  Raisanen</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Department+of+Economic%2c+Central+Michigan+University%2c+Mount+Pleasant%2c+MI%2c+USA&searchfield=affs&page=1' target='_blank'>Department of Economic, Central Michigan University, Mount Pleasant, MI, USA</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/tel.2015.55071"
+                    target="_blank" onclick='SetNum(60096)'>10.4236/tel.2015.55071</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/TEL_2015093014273973.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60096)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60096' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60096.xml' target='_blank' onclick='SetNum(60096)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    4,600</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    5,402</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:None;"><a href='papercitationdetails?paperid=60096&JournalID=666' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">This paper examines the
+effect of allowing prioritization of traffic on a congestible network under
+three demand scenarios. First, it is shown that when prioritization does not
+affect usage, average congestion on the network increases. Second, this result
+is shown to hold when there is demand shifting toward the prioritized network
+service but no impact on total network traffic. Finally, it is proven that for
+prioritization to reduce average congestion on a network it must reduce the
+total traffic on the network.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Congestible+Networks&searchfield=keyword&page=1' target='_blank'>Congestible Networks</a>, <a href='articles?searchcode=+Net+Neutrality&searchfield=keyword&page=1' target='_blank'> Net Neutrality</a>, <a href='articles?searchcode=+Regulation&searchfield=keyword&page=1' target='_blank'> Regulation</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Raisanen, S.   (2015) A Note Regarding Prioritization on Congestible Networks. <i>Theoretical Economics Letters</i>, <b>5</b>, 606-615. doi: <a href='http://dx.doi.org/10.4236/tel.2015.55071' target='_blank' onclick='SetNum(60096)'>10.4236/tel.2015.55071</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>On February 26, 2015, the US Federal Communications Commission (FCC) revised their Open Internet rules. These rules outline three main sets of regulations. First, Internet service providers (ISPs) cannot block access to legal content. Second, they cannot throttle access on the basis of content. Finally, and subject to much debate, the FCC disallows paid prioritization. Paid prioritization would allow ISPs to divert capacity to some content over non-prioritized content in exchange for compensation from the content provider.</p>
+<p>A number of recent papers debate that network neutrality and paid prioritization would have an effect on consumer welfare and capacity investment. Some argue that allowing service providers to monetize capacity though paid prioritization will cause them to invest in additional capacity and use their capacity more efficiently. Proponents of allowing paid prioritization include Chen and Nalebu [1] , Hermalin and Katz [2] , Kr&auml;mer and Wiewiorra [3] , Sidak and Teece [4] , and Singer and Litan [5] . Others argue that paid prioritization would alter the incentives for the service provides such that they could increase profits by slowing non-prioritized traffic rather than increasing speeds for prioritized traffic. This would create a “fast” and “slow” lane for traffic. Cheng et al. [6] , Economides and T&aring;g [7] , Chettiar and Holladay [8] and Pil Choi and Kim [9] espouse variations of this view.</p>
+<p>In this note, I examine how network congestion would be affected by prioritized traffic for a given level of capacity. Three cases are compared. First, it is shown that when consumer usage of all network services is perfectly inelastic, prioritization of some traffic increases average network congestion. Second, this result is expanded to the case where total network traffic is inelastic but traffic shifts toward the prioritized service. Finally, it is proven that for prioritization to reduce average congestion on a network it must reduce the total traffic on the network. In other words, less congestion for the prioritized traffic is insufficient to reduce average congestion unless the corresponding increase in congestion on the non-prioritized traffic reduces demand for the network overall.</p>
+<p class="E-Title1">2. Prioritization and Network Congestion</p>
+<p>To model network congestion, I expand upon the seminal MacKie-Mason and Varian [10] framework of a congestible network by allowing for multiple services to run on a single network. Content providers supply excludable services on the network while the access provider runs the network itself. Additionally there may be a number of non-excludable, default network services available. Let the set of services offered be indexed <img src="//html.scirp.org/file/2-1500772x5.png" class="200" /> where <img src="//html.scirp.org/file/2-1500772x6.png" class="200" /> are the non-excludable services and <img src="//html.scirp.org/file/2-1500772x7.png" class="200" /> are the excludable services. Index consumers<img src="//html.scirp.org/file/2-1500772x8.png" class="200" />, then <img src="//html.scirp.org/file/2-1500772x9.png" class="200" /> denotes person-i’s usage of service-s on the network. Person-i has network</p>
+<p>consumption vector <img src="//html.scirp.org/file/2-1500772x10.png" class="200" /> Demand for the network by person-i is<img src="//html.scirp.org/file/2-1500772x11.png" class="200" />, total use of service-s is<img src="//html.scirp.org/file/2-1500772x12.png" class="200" />, and total use for the network is<img src="//html.scirp.org/file/2-1500772x13.png" class="200" />. Each user gains utility from the consumption of each service but is negatively impacted by congestion on the network. For a network with bandwidth capacity K, the level of congestion can be defined as<img src="//html.scirp.org/file/2-1500772x14.png" class="200" />.</p>
+<p>To include prioritization into the model, let there be one content provider, <img src="//html.scirp.org/file/2-1500772x15.png" class="200" />, who can pay the access provider a fee F for a guaranteed congestion factor of<img src="//html.scirp.org/file/2-1500772x16.png" class="200" />, where <img src="//html.scirp.org/file/2-1500772x17.png" class="200" /> is the congestion of all other traffic. Denoting the capacity dedicated to the prioritized content provider as <img src="//html.scirp.org/file/2-1500772x18.png" class="200" /> it holds that</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/2-1500772x19.png" /><span class="bracketMark"></span></p>
+<p>Thus, to maintain congestion <img src="//html.scirp.org/file/2-1500772x20.png" class="200" /> for prioritized traffic, a network with capacity <img class="200" data-original="//html.scirp.org/file/2-1500772x21.png" /> must allocate more of that capacity to the prioritized usage as traffic to that use increases. In other words, <img class="200" data-original="//html.scirp.org/file/2-1500772x22.png" />is endogenous. Solving for <img class="200" data-original="//html.scirp.org/file/2-1500772x23.png" /> and substituting into the equation for <img class="200" data-original="//html.scirp.org/file/2-1500772x24.png" /> yields</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x25.png" /><span class="bracketMark">(1)</span></p>
+<p>From this equation come two key observations. First, the capacity is separable and constant-sum. Solving (1) for <img class="200" data-original="//html.scirp.org/file/2-1500772x26.png" /> shows</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x27.png" /><span class="bracketMark"></span></p>
+<p>Unsurprisingly, capacity diverted to the prioritized traffic as <img class="200" data-original="//html.scirp.org/file/2-1500772x28.png" /> increase must be lost, one-for-one, from the rest of the network. Second, congestion for users on the non-prioritized portion of the network increases more for an additional unit of traffic by prioritized users than for an additional unit of traffic by non-prioritized users.</p>
+<p>The effect of increasing traffic for a non-prioritized service, <img class="200" data-original="//html.scirp.org/file/2-1500772x29.png" />, is <img class="200" data-original="//html.scirp.org/file/2-1500772x30.png" /> The effect of increasing prioritized traffic on congestion for non-prioritized traffic is<img class="200" data-original="//html.scirp.org/file/2-1500772x31.png" />. As long as the prioritized traffic is guaranteed lower congestion than the non-prioritized traffic, prioritized traffic causes more congestion for non-prioritized traffic than does other non-prioritized traffic, <img class="200" data-original="//html.scirp.org/file/2-1500772x32.png" />As a direct consequence, prioritization leads to an increase in the average congestion that a unit of traffic faces.</p>
+<p>Theorem 1. Given average congestion without prioritization <img class="200" data-original="//html.scirp.org/file/2-1500772x33.png" /> usage of services <img class="200" data-original="//html.scirp.org/file/2-1500772x34.png" /> for</p>
+<p><img class="200" data-original="//html.scirp.org/file/2-1500772x35.png" />, capacity<img class="200" data-original="//html.scirp.org/file/2-1500772x36.png" />, and prioritized traffic congestion of<img class="200" data-original="//html.scirp.org/file/2-1500772x37.png" />, then average congestion with prioritized traffic is larger than average congestion without prioritization:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x38.png" /><span class="bracketMark"></span></p>
+<p>This result presumes that demand for each of the services <img class="200" data-original="//html.scirp.org/file/2-1500772x39.png" /> is perfectly inelastic. It is unrealistic to assume that as service <img class="200" data-original="//html.scirp.org/file/2-1500772x40.png" /> is guaranteed lower congestion that it will not receive increased traffic. People will switch from other services to use the more of the prioritized service. As traffic flows to the prioritized service the prioritized traffic faces lower congestion and the non-priority traffic faces higher congestion. As demand for the prioritized service increases, the prioritized traffic will require more of the total capacity in order to maintain a constant level of congestion. This reduces the capacity available for the non-prioritized traffic increasing its congestion. Because the level of congestion guaranteed to the prioritized traffic is lower than the level of congestion of the non-prioritized traffic, the required capacity diversion is such that the average traffic faces increased average congestion.</p>
+<p>Now, to simplify the notation, let a negative index on demand denote demand for all services except the magnitude of the index, e.g.<img class="200" data-original="//html.scirp.org/file/2-1500772x41.png" />.</p>
+<p>Theorem 2. For a given level of capacity<img class="200" data-original="//html.scirp.org/file/2-1500772x42.png" />, total demand<img class="200" data-original="//html.scirp.org/file/2-1500772x43.png" />, and prioritized congestion<img class="200" data-original="//html.scirp.org/file/2-1500772x44.png" />,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x45.png" /><span class="bracketMark"></span></p>
+<p>for all <img class="200" data-original="//html.scirp.org/file/2-1500772x46.png" /> where<img class="200" data-original="//html.scirp.org/file/2-1500772x47.png" />, <img class="200" data-original="//html.scirp.org/file/2-1500772x48.png" />, <img class="200" data-original="//html.scirp.org/file/2-1500772x49.png" />, <img class="200" data-original="//html.scirp.org/file/2-1500772x50.png" />, and <img class="200" data-original="//html.scirp.org/file/2-1500772x51.png" /> Additionally, the result only holds with equality when <img class="200" data-original="//html.scirp.org/file/2-1500772x52.png" /> or<img class="200" data-original="//html.scirp.org/file/2-1500772x53.png" />.</p>
+<p>While Theorem 2 states that when total demand is inelastic, prioritizing traffic increases the average level of congestion, the proof does not require that the guaranteed level of congestion for prioritized traffic be less than before prioritization (see Appendix). In fact even deprioritized traffic will increase the average level of congestion as long as it does not eliminate usage of the deprioritized service. As such, Theorem 2 states that to minimize the average congestion traffic on a network faces, Net Neutrality is the required policy.</p>
+<p>When total demand for the congestible resource is not perfectly inelastic with regard to prioritized traffic, demand can either increase or decrease as prioritized congestion is reduced. Total demand may increase if prioritization of a given service attracts new users to the network. On the other hand, total demand may be reduced by prioritization if the corresponding increase in congestion for non-prioritized traffic sufficiently discourages network usage. Theorem 3 states that average congestion can be reduced only in the case where prioritization of some traffic causes total demand for the network to decline.</p>
+<p>Theorem 3. Defining the average network congestion as <img class="200" data-original="//html.scirp.org/file/2-1500772x54.png" /> and the absence of prioritization as <img class="200" data-original="//html.scirp.org/file/2-1500772x55.png" /> then</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x56.png" /><span class="bracketMark"></span></p>
+<p>if and only if <img class="200" data-original="//html.scirp.org/file/2-1500772x57.png" /></p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/2-1500772x58.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Prioritized traffic and average congestion.</p>
+</div>
+<p><a href="#f1" target="_self">Figure 1</a> summarizes these results by showing how guaranteeing lower congestion for prioritized traffic affects the average level of congestion faced by traffic on the network. When demand for all services is constant with respect to congestion, average congestion increases slowly as some traffic is prioritized. If total network usage is constant but traffic shifts towards the prioritized services then average congestion increases quickly as some traffic is prioritized. When prioritizing some traffic leads to a net decline in network traffic, prioritization initially decreases the average congestion on the network. This effect, however, is limited and guaranteeing lower and lower congestion for the prioritized service will eventually increase the average level of congestion on the network.<sup>1</sup></p>
+<p class="E-Title1">3. Concluding Remarks</p>
+<p>While this paper is agnostic on the efficiency of paid prioritization and network neutrality, it is strongly suggestive that any prioritization scheme will lead to higher network congestion. When the cost of changing network capacity is large, firms will alter their capacity infrequently. As such, capacity can be taken as a sunk investment and congestion will depend primarily on usage. As firms are unlikely to use prioritization to reduce demand for their network, the above results can be taken to show that in the absence of a net neutrality rule average congestion on the network will increase.</p>
+<p class="E-Title1">Acknowledgments</p>
+<p>I would like to thank the participants at the 2015 Western Economic Association International session 27 for their invaluable suggestions.</p>
+<p class="E-Title1">Proof Appendix</p>
+<p class="E-Title2">Proof of Theorem 1</p>
+<p>We want to show that combining all traffic to use capacity <img class="200" data-original="//html.scirp.org/file/2-1500772x60.png" /> results in a lower average congestion <img class="200" data-original="//html.scirp.org/file/2-1500772x61.png" /> than prioritizing traffic ensuring traffic <img class="200" data-original="//html.scirp.org/file/2-1500772x62.png" /> receives congestion <img class="200" data-original="//html.scirp.org/file/2-1500772x63.png" /> and the remaining traffic has congestion deter-</p>
+<p>mined by the remaining capacity. Formally stated this says, given<img class="200" data-original="//html.scirp.org/file/2-1500772x64.png" />, and <img class="200" data-original="//html.scirp.org/file/2-1500772x65.png" /> such that<img class="200" data-original="//html.scirp.org/file/2-1500772x66.png" />, then</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x67.png" /><span class="bracketMark"></span></p>
+<p>Proof. For temporary simplification of notation, let <img class="200" data-original="//html.scirp.org/file/2-1500772x68.png" /> <img class="200" data-original="//html.scirp.org/file/2-1500772x69.png" /> and <img class="200" data-original="//html.scirp.org/file/2-1500772x70.png" /> Given that <img class="200" data-original="//html.scirp.org/file/2-1500772x71.png" /> for all <img class="200" data-original="//html.scirp.org/file/2-1500772x72.png" /> and <img class="200" data-original="//html.scirp.org/file/2-1500772x73.png" /> we are assured that<img class="200" data-original="//html.scirp.org/file/2-1500772x74.png" />, <img class="200" data-original="//html.scirp.org/file/2-1500772x75.png" />,<img class="200" data-original="//html.scirp.org/file/2-1500772x76.png" />. Additionally,<img class="200" data-original="//html.scirp.org/file/2-1500772x77.png" />. We proceed by algebraic manipulation from</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x78.png" /><span class="bracketMark"></span></p>
+<p>Since <img class="200" data-original="//html.scirp.org/file/2-1500772x79.png" /> and <img class="200" data-original="//html.scirp.org/file/2-1500772x80.png" /> are strictly positive,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x81.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x82.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x83.png" /><span class="bracketMark"></span></p>
+<p>and because <img class="200" data-original="//html.scirp.org/file/2-1500772x84.png" /></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x85.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x86.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x87.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x88.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x89.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x90.png" /><span class="bracketMark"></span></p>
+<p>Algebraic manipulation verifies that <img class="200" data-original="//html.scirp.org/file/2-1500772x91.png" /> thus</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x92.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x93.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x94.png" /><span class="bracketMark"></span></p>
+<p>As <img class="200" data-original="//html.scirp.org/file/2-1500772x95.png" /> we continue multiplying by<img class="200" data-original="//html.scirp.org/file/2-1500772x96.png" />.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x97.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x98.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x99.png" /><span class="bracketMark"></span></p>
+<p>Substituting for <img class="200" data-original="//html.scirp.org/file/2-1500772x100.png" /> and <img class="200" data-original="//html.scirp.org/file/2-1500772x101.png" /> gives</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x102.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x103.png" /><span class="bracketMark"></span></p>
+<p>Rearranging the definitions of <img class="200" data-original="//html.scirp.org/file/2-1500772x104.png" /> and <img class="200" data-original="//html.scirp.org/file/2-1500772x105.png" /> to solve for capacity yields <img class="200" data-original="//html.scirp.org/file/2-1500772x106.png" /> and<img class="200" data-original="//html.scirp.org/file/2-1500772x107.png" />. Substituting in for capacities <img class="200" data-original="//html.scirp.org/file/2-1500772x108.png" /> and <img class="200" data-original="//html.scirp.org/file/2-1500772x109.png" /> and then substituting for <img class="200" data-original="//html.scirp.org/file/2-1500772x110.png" /> yields our result.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x111.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x112.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x113.png" /><span class="bracketMark"></span></p>
+<p class="E-Title2">Proof of Theorem 2</p>
+<p>Proof. Given that <img class="200" data-original="//html.scirp.org/file/2-1500772x114.png" /> then for all <img class="200" data-original="//html.scirp.org/file/2-1500772x115.png" /> and<img class="200" data-original="//html.scirp.org/file/2-1500772x116.png" />,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x117.png" /><span class="bracketMark"></span></p>
+<p>Additionally, this is a strict inequality whenever <img class="200" data-original="//html.scirp.org/file/2-1500772x118.png" /> and<img class="200" data-original="//html.scirp.org/file/2-1500772x119.png" />. Expanding and substituting for <img class="200" data-original="//html.scirp.org/file/2-1500772x120.png" /> yields</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x121.png" /><span class="bracketMark"></span></p>
+<p>Multiplying through by <img class="200" data-original="//html.scirp.org/file/2-1500772x122.png" /> and expanding gives</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x123.png" /><span class="bracketMark"></span></p>
+<p>From here adding terms <img class="200" data-original="//html.scirp.org/file/2-1500772x124.png" /> to each side of the inequality and algebraically rearranging using the appropriate substitutions yields the result.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x125.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x126.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x127.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x128.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x129.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x130.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x131.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x132.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x133.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x134.png" /><span class="bracketMark"></span></p>
+<p class="E-Title2">Proof of Theorem 3</p>
+<p>Proof. Each of the following implications is bidirectional and follows from <img class="200" data-original="//html.scirp.org/file/2-1500772x135.png" /> and the definitions of <img class="200" data-original="//html.scirp.org/file/2-1500772x136.png" /> and<img class="200" data-original="//html.scirp.org/file/2-1500772x137.png" />.</p>
+<p>Given that <img class="200" data-original="//html.scirp.org/file/2-1500772x138.png" /> if follows</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x139.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x140.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x141.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x142.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x143.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x144.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x145.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x146.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x147.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x148.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x149.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x150.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x151.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x152.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x153.png" /><span class="bracketMark"></span></p>
+<p>Dividing by <img class="200" data-original="//html.scirp.org/file/2-1500772x154.png" /> and algebraically rearranging yields</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x155.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x156.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x157.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/2-1500772x158.png" /><span class="bracketMark"></span></p>
+<p class="E-Title1">NOTES</p>
+<p><sup>1</sup>For readability, the case of increased demand for the network due to prioritization is omitted from the graph. This relationship is bounded below by the total usage inelastic curve.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579405' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Chen, M.K. and Nalebu, B.J. (2006) One-Way Essential Complements. Cowels Foundation Discussion Paper.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579406' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Hermalin, B.E. and Katz, M.L. (2007) The Economics of Product-Line Restrictions with an Application to the Network Neutrality Debate. Information Economics and Policy, 19, 215-248. http://dx.doi.org/10.1016/j.infoecopol.2007.04.001
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579407' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Kramer, J. and Wiewiorra, L. (2012) Network Neutrality and Congestion Sensitive Content Providers: Implications for Content Variety, Broadband Investment, and Regulation. Information Systems Research, 23, 1303-1321.
+http://dx.doi.org/10.1287/isre.1120.0420
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579408' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Sidak, J.G. and Teece, D.J. (2010) Innovation Spillovers and the “Dirt Road” Fallacy: The Intellectual Bankruptcy of Banning Optional Transactions for Enhanced Delivery over the Internet. Journal of Competition Law and Economics, 6, 521-594. http://dx.doi.org/10.1093/joclec/nhq003
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579409' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Singer, H.J. and Litan, R.E. (2007) Unintended Consequences of Net Neutrality Regulation. Journal on Telecommunications and High Technology Law.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579410' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Cheng, H.K., Bandyopadhyay, S. and Guo, H. (2011) The Debate on Net Neutrality: A Policy Perspective. Information Systems Research, 22, 60-82. http://dx.doi.org/10.1287/isre.1090.0257
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579411' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Economides, N. and Tag, J. (2012) Network Neutrality on the Internet: A Two-Sided Market Analysis. Information Economics and Policy, 24, 91-104. http://dx.doi.org/10.1016/j.infoecopol.2012.01.001
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579412' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Chettiar, I.M. and Holladay, J.S. (2010) Free to Invest: The Economic Benefits of Preserving Net Neutrality. Report No. 4, Institute for Policy Integrity, New York University School of Law, New York.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579413' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Pil Choi, J. and Kim, B.-C. (2010) Net Neutrality and Investment Incentives. The RAND Journal of Economics, 41, 446-471. http://dx.doi.org/10.1111/j.1756-2171.2010.00107.x
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579414' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        MacKie-Mason, J.K. and Varian, H.R. (1995) Pricing Congestible Network Resources. IEEE Journal on Selected Areas in Communications, 13, 1141-1149. http://dx.doi.org/10.1109/49.414634
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=666" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=666" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=666" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=666" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=666"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=666"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=666" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=666" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=666" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=666" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=666" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=666"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=666"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=666" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=666&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=666&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=666" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=666" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=666" target="_blank">TEL
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=666" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=666" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=666" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=666" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=666" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=666" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=666" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/tel.2015.55071" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60096 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +666 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +666 +"&paperid=" +60096 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

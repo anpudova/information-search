@@ -1,0 +1,1484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Efficient Choice of a Multilevel Inverter  for Integration on a Hybrid  Wind-Solar Power Station
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JPEE_2015092914360358.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60035" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60035.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60035" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60035" />
+<meta property="og:title" content="Efficient Choice of a Multilevel Inverter  for Integration on a Hybrid  Wind-Solar Power Station" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JPEE2015012717105085.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JPEE2015012717105085.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Efficient Choice of a Multilevel Inverter  for Integration on a Hybrid  Wind-Solar Power Station" />
+<meta name="keywords" content="Multilevel Inverters,FCMLI,DCMLI,CHMLI,Hybrid Power Station,SPWM,Power Bank" />
+<meta name="description" content="Discover the best DC/AC converters for power stations. Compare multilevel inverter architectures and their impact on voltage quality, circuit complexity, cost, and power bank in renewable stations. Simulation-based investigation reveals the optimal characteristics for the cascaded H-bridge inverter. Find the most qualified inverter for hybrid wind-solar energy platforms." />
+<meta name="citation_journal_title" content="Journal of Power and Energy Engineering" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Tajeddine Khalili;Abdelhadi Raihani;Hassan Ouajji;Omar Bouattane;Fouad Amri" />
+<meta name="citation_author" content="Tajeddine Khalili" />
+<meta name="citation_author" content="Abdelhadi Raihani" />
+<meta name="citation_author" content="Hassan Ouajji" />
+<meta name="citation_author" content="Omar Bouattane" />
+<meta name="citation_author" content="Fouad Amri" />
+<meta name="citation_title" content="Efficient Choice of a Multilevel Inverter  for Integration on a Hybrid  Wind-Solar Power Station" />
+<meta name="citation_volume" content="3" />
+<meta name="citation_date" content="2015-09-10" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jpee.2015.39004" />
+<meta name="citation_issnPrint" content="2327-588X" />
+<meta name="citation_issnOnline" content="2327-5901" />
+<meta name="citation_abstract" content="DC/AC converters are very important components that have to be chosen efficiently for each type of power station. In this article, we present in details, a comparison between three different architectures of multilevel inverters, the flying capacitor multilevel inverter (FCMLI), the diode clamped multilevel inverter (DCMLI), and the cascaded H-bridge multilevel inverter (CHMLI). Thus the comparison is focused on the output voltage quality, the complexity of the power circuits, the cost of implementation, and the influence on a power bank inside the renewable power station. We also investigate trough simulation the efficient number of levels and suitable characteristics for the CHMLI that showed the most promising performance. The study uses Matlab Simulink platform as a tool of simulation, and aim to choose the most qualified inverter, for a potential insertion on a hybrid renewable energy platform (wind-solar). In all the simulations we use the same PWM control type (SPWM)." />
+<meta name="citation_publication_date" content="2015/9/10" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JPEE_2015092914360358.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JPEE_2015092914360358.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60035" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60035" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60035" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60035.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60035.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/10" />
+<meta name="citation_firstpage" content="44" />
+<meta name="citation_lastpage" content="58" />
+
+<meta name="dc.title" content="Efficient Choice of a Multilevel Inverter  for Integration on a Hybrid  Wind-Solar Power Station" />
+
+<meta name="dc.creator" content="Tajeddine Khalili" />
+<meta name="dc.creator" content="Abdelhadi Raihani" />
+<meta name="dc.creator" content="Hassan Ouajji" />
+<meta name="dc.creator" content="Omar Bouattane" />
+<meta name="dc.creator" content="Fouad Amri" /><meta name="dcterms.issued" content="2015-09-10" />
+<meta name="dc.description" content="DC/AC converters are very important components that have to be chosen efficiently for each type of power station. In this article, we present in details, a comparison between three different architectures of multilevel inverters, the flying capacitor multilevel inverter (FCMLI), the diode clamped multilevel inverter (DCMLI), and the cascaded H-bridge multilevel inverter (CHMLI). Thus the comparison is focused on the output voltage quality, the complexity of the power circuits, the cost of implementation, and the influence on a power bank inside the renewable power station. We also investigate trough simulation the efficient number of levels and suitable characteristics for the CHMLI that showed the most promising performance. The study uses Matlab Simulink platform as a tool of simulation, and aim to choose the most qualified inverter, for a potential insertion on a hybrid renewable energy platform (wind-solar). In all the simulations we use the same PWM control type (SPWM)." />
+<meta name="dc.source" content="Journal of Power and Energy Engineering" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-10" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jpee.2015.39004" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-10" />
+<meta name="prism.issnPrint" content="2327-588X" />
+<meta name="prism.issnOnline" content="2327-5901" />
+<meta name="prism.publicationName" content="Journal of Power and Energy Engineering" />
+<meta name="prism.publicationDate" content="2015-09-10" />
+<meta name="prism.volume" content="3" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="44" />
+<meta name="prism.doi" content="10.4236/jpee.2015.39004" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60035" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAl0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTEwZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXeBDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9VGFqZWRkaW5lKytLaGFsaWxpJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+VGFqZWRkaW5lICBLaGFsaWxpPC9hPjxzdXA+PC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUFiZGVsaGFkaSsrUmFpaGFuaSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkFiZGVsaGFkaSAgUmFpaGFuaTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1IYXNzYW4rK091YWpqaSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkhhc3NhbiAgT3VhamppPC9hPjxzdXA+PC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPU9tYXIrK0JvdWF0dGFuZSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPk9tYXIgIEJvdWF0dGFuZTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1Gb3VhZCsrQW1yaSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkZvdWFkICBBbXJpPC9hPjxzdXA+PC9zdXA+IGQCAg9kFgJmDxYCHwQF8AE8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUxhYi4rU1NESUElMmMrRU5TRVQrTW9oYW1tJWMzJWE5ZGlhJTJjK0hhc3NhbitJSStVbml2ZXJzaXR5K29mK0Nhc2FibGFuY2ElMmMrTW9yb2NjbyZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkxhYi4gU1NESUEsIEVOU0VUIE1vaGFtbcOpZGlhLCBIYXNzYW4gSUkgVW5pdmVyc2l0eSBvZiBDYXNhYmxhbmNhLCBNb3JvY2NvPC9hPi48YnIgLz5kAgUPFgIfBAUFNCwyMTJkAgYPFgIfBAUFNSw1NzNkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFxQU8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPU11bHRpbGV2ZWwrSW52ZXJ0ZXJzJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+TXVsdGlsZXZlbCBJbnZlcnRlcnM8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStGQ01MSSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBGQ01MSTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0RDTUxJJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IERDTUxJPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rQ0hNTEkmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gQ0hNTEk8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStIeWJyaWQrUG93ZXIrU3RhdGlvbiZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBIeWJyaWQgUG93ZXIgU3RhdGlvbjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1NQV00mc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU1BXTTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1Bvd2VyK0Jhbmsmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gUG93ZXIgQmFuazwvYT4gZAIKDxYCHwQF7gJLaGFsaWxpLCBULiAsIFJhaWhhbmksIEEuICwgT3VhamppLCBILiAsIEJvdWF0dGFuZSwgTy4gIGFuZCBBbXJpLCBGLiAgICgyMDE1KSBFZmZpY2llbnQgQ2hvaWNlIG9mIGEgTXVsdGlsZXZlbCBJbnZlcnRlciAgZm9yIEludGVncmF0aW9uIG9uIGEgSHlicmlkICBXaW5kLVNvbGFyIFBvd2VyIFN0YXRpb24uIDxpPkpvdXJuYWwgb2YgUG93ZXIgYW5kIEVuZXJneSBFbmdpbmVlcmluZzwvaT4sIDxiPjM8L2I+LCA0NC01OC4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2pwZWUuMjAxNS4zOTAwNCcgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDAzNSknPjEwLjQyMzYvanBlZS4yMDE1LjM5MDA0PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIQFiBmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxMjknIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQExoQFGdWNocywgRS5GLiBhbmQgTWFzb3VtLCBNLkEuUy4gKDIwMTEpIFBvd2VyIENvbnZlcnNpb24gb2YgUmVuZXdhYmxlIEVuZXJneSBTeXN0ZW1zLiBTcHJpbmdlciwgTmV3IFlvcmssIDE4Ny0xOTcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy85NzgtMS00NDE5LTc5NzktN2QCAQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTMwJyB0YXJnZXQ9J19ibGFuayc+MjwvYT5dATIBMsQBVG9sYmVydCwgTC5NLiwgUGVuZywgRi5aLiBhbmQgSGFiZXRsZXIsIFQuRy4gKDE5OTkpIE11bHRpbGV2ZWwgQ29udmVydGVycyBmb3IgTGFyZ2UgRWxlY3RyaWMgRHJpdmVzLiBJRUVFIFRyYW5zYWN0aW9ucyBvbiBJbmR1c3RyeSBBcHBsaWNhdGlvbnMsIDM1LCAzNi00NC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5LzI4Ljc0MDg0M2QCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTMxJyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM8UCS2hvbWZvaSwgUy4sIFByYWlzdXdhbm5hLCBOLiBhbmQgVG9sYmVydCwgTC5NLiAoMjAxMCkgQSBIeWJyaWQgQ2FzY2FkZWQgTXVsdGlsZXZlbCBJbnZlcnRlciBBcHBsaWNhdGlvbiBmb3IgUmVuZXdhYmxlIEVuZXJneSBSZXNvdXJjZXMgSW5jbHVkaW5nIGEgUmVjb25maWd1cmF0aW9uIFRlY2huaXF1ZS4gRW5lcmd5IENvbnZlcnNpb24gQ29uZ3Jlc3MgYW5kIEV4cG9zaXRpb24gKEVDQ0UpLCAyMDEwIElFRUUsIEF0bGFudGEsIDEyLTE2IFNlcHRlbWJlciAyMDEwLCAzOTk4LTQwMDUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9lY2NlLjIwMTAuNTYxNzgwM2QCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTMyJyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNP4BS2FuZywgRi5TLiwgUGFyaywgUy5KLiwgQ2hvLCBTLkUuLCBLaW0sIEMuVS4gYW5kIElzZSwgVC4gKDIwMDUpIE11bHRpbGV2ZWwgUFdNIEludmVydGVycyBTdWl0YWJsZSBmb3IgdGhlIFVzZSBvZiBTdGFuZC1BbG9uZSBQaG90b3ZvbHRhaWMgUG93ZXIgU3lzdGVtcy4gSUVFRSBUcmFuc2FjdGlvbnMgb24gRW5lcmd5IENvbnZlcnNpb24sIDIwLCA5MDYtOTE1LiANCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS90ZWMuMjAwNS44NDc5NTZkAgQPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzEzMycgdGFyZ2V0PSdfYmxhbmsnPjU8L2E+XQE1ATWlAkhvY2hncmFmLCBDLiwgTGFzc2V0ZXIsIFIuLCBEaXZhbiwgRC4gYW5kIExpcG8sIFQuQS4gKDE5OTQpIENvbXBhcmlzb24gb2YgTXVsdGlsZXZlbCBJbnZlcnRlcnMgZm9yIFN0YXRpYyBWQXIgQ29tcGVuc2F0aW9uLiBJbmR1c3RyeSBBcHBsaWNhdGlvbnMgU29jaWV0eSBBbm51YWwgTWVldGluZywgMTk5NCwgQ29uZmVyZW5jZSBSZWNvcmQgb2YgdGhlIDE5OTQgSUVFRSwgRGVudmVyLCAyLTYgT2N0b2JlciAxOTk0LCA5MjEtOTI4LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvaWFzLjE5OTQuMzc3NTI4ZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxMzQnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2+gFLYW5nLCBGLlMuLCBQYXJrLCBTLkouLCBMZWUsIE0uSC4gYW5kIEtpbSwgQy5VLiAoMjAwNSkgQW4gRWZmaWNpZW50IE11bHRpbGV2ZWwtU3ludGhlc2lzIEFwcHJvYWNoIGFuZCBJdHMgQXBwbGljYXRpb24gdG8gYSAyNy1MZXZlbCBJbnZlcnRlci4gSUVFRSBUcmFuc2FjdGlvbnMgb24gSW5kdXN0cmlhbCBFbGVjdHJvbmljcywgNTIsIDE2MDAtMTYwNi4gDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvdGllLjIwMDUuODU4NzE1ZAIGD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxMzUnIHRhcmdldD0nX2JsYW5rJz43PC9hPl0BNwE3swJNeXRoaWxpLCBNLiBhbmQgS2F5YWx2aXpoaSwgTi4gKDIwMTMpIEhhcm1vbmljIE1pbmltaXphdGlvbiBpbiBNdWx0aWxldmVsIEludmVydGVycyBVc2luZyBTZWxlY3RpdmUgSGFybW9uaWMgRWxpbWluYXRpb24gUFdNIFRlY2huaXF1ZS4gMjAxMyBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gUmVuZXdhYmxlIEVuZXJneSBhbmQgU3VzdGFpbmFibGUgRW5lcmd5IChJQ1JFU0UpLCBDb2ltYmF0b3JlLCA1LTYgRGVjZW1iZXIgMjAxMywgNzAtNzQuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9pY3Jlc2UuMjAxMy42OTI3NzkwZAIHD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxMzYnIHRhcmdldD0nX2JsYW5rJz44PC9hPl0BOAE46AFBbC1PdGhtYW4sIEEuSy4gYW5kIEFiZGVsaGFtaWQsIFQuSC4gKDIwMDkpIEVsaW1pbmF0aW9uIG9mIEhhcm1vbmljcyBpbiBNdWx0aWxldmVsIEludmVydGVycyB3aXRoIE5vbi1FcXVhbCBkYyBTb3VyY2VzIFVzaW5nIFBTTy4gRW5lcmd5IENvbnZlcnNpb24gYW5kIE1hbmFnZW1lbnQsIDUwLCA3NTYtNzY0LiANCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLmVuY29ubWFuLjIwMDguMDkuMDQ3ZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxMzcnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE54gFSb2RyaWd1ZXosIEouLCBMYWksIEouUy4gYW5kIFBlbmcsIEYuWi4gKDIwMDIpIE11bHRpbGV2ZWwgSW52ZXJ0ZXJzOiBBIFN1cnZleSBvZiBUb3BvbG9naWVzLCBDb250cm9scywgYW5kIEFwcGxpY2F0aW9ucy4gIElFRUUgVHJhbnNhY3Rpb25zIG9uIEluZHVzdHJpYWwgRWxlY3Ryb25pY3MsIDQ5LCA3MjQtNzM4LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvdGllLjIwMDIuODAxMDUyZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxMzgnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwxwJGdWppaSwgSy4sIFNjaHdhcnplciwgVS4gYW5kIERlIERvbmNrZXIsIFIuVy4gKDIwMDUpIENvbXBhcmlzb24gb2YgSGFyZC1Td2l0Y2hlZCBNdWx0aS1MZXZlbCBJbnZlcnRlciBUb3BvbG9naWVzIGZvciBTVEFUQ09NIGJ5IExvc3MtSW1wbGVtZW50ZWQgU2ltdWxhdGlvbiBhbmQgY29zdCBFc3RpbWF0aW9uLiBQb3dlciBFbGVjdHJvbmljcyBTcGVjaWFsaXN0cyBDb25mZXJlbmNlLCAyMDA1LiBQRVNDJzA1LiBJRUVFIDM2dGgsIFJlY2lmZSwgMTYtMTYgSnVuZSAyMDA1LCAzNDAtMzQ2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvcGVzYy4yMDA1LjE1ODE2NDZkAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzEzOScgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTGGAkRpeGl0LCBBLiwgTWlzaHJhLCBOLiwgU2luaGEsIFMuSy4gYW5kIFNpbmdoLCBQLiAoMjAxMikgQSBSZXZpZXcgb24gRGlmZmVyZW50IFBXTSBUZWNobmlxdWVzIGZvciBGaXZlIExlZyBWb2x0YWdlIFNvdXJjZSBJbnZlcnRlci4gMjAxMiBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gQWR2YW5jZXMgaW4gRW5naW5lZXJpbmcsIFNjaWVuY2UgYW5kIE1hbmFnZW1lbnQgKElDQUVTTSksIE5hZ2FwYXR0aW5hbSwgMzAtMzEgTWFyY2ggMjAxMiwgNDIxLTQyOC5kAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE0MCcgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTLmAkxlZSwgVy5LLiwgS2ltLCBTLlkuLCBZb29uLCBKLlMuIGFuZCBCYWVrLCBELkguICgyMDA2KSBBIENvbXBhcmlzb24gb2YgdGhlIENhcnJpZXItQmFzZWQgUFdNIFRlY2huaXF1ZXMgZm9yIFZvbHRhZ2UgQmFsYW5jZSBvZiBGbHlpbmcgQ2FwYWNpdG9yIGluIHRoZSBGbHlpbmcgQ2FwYWNpdG9yIE11bHRpbGV2ZWwgSW52ZXJ0ZXIuIEFwcGxpZWQgUG93ZXIgRWxlY3Ryb25pY3MgQ29uZmVyZW5jZSBhbmQgRXhwb3NpdGlvbiwgMjAwNi4gQVBFQycwNi4gVHdlbnR5LUZpcnN0IEFubnVhbCBJRUVFLCAxOS0yMyBNYXJjaCAyMDA2LCA2IHAuICAgDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvYXBlYy4yMDA2LjE2MjA3NjNkAgwPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE0MScgdGFyZ2V0PSdfYmxhbmsnPjEzPC9hPl0CMTMCMTPDAU5hYmFlLCBBLiwgVGFrYWhhc2hpLCBJLiBhbmQgQWthZ2ksIEguICgxOTgxKSBBIE5ldyBOZXV0cmFsLVBvaW50LUNsYW1wZWQgUFdNIEludmVydGVyLiBJRUVFIFRyYW5zYWN0aW9ucyBvbiBJbmR1c3RyeSBBcHBsaWNhdGlvbnMsIElBLTE3LCA1MTgtNTIzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvdGlhLjE5ODEuNDUwMzk5MmQCDQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTQyJyB0YXJnZXQ9J19ibGFuayc+MTQ8L2E+XQIxNAIxNIkCQXJ1bGt1bWFyLCBLLiwgVmlqYXlha3VtYXIsIEQuIGFuZCBQYWxhbmlzYW15LCBLLiAoMjAxNSkgTW9kZWxpbmcgYW5kIENvbnRyb2wgU3RyYXRlZ3kgb2YgVGhyZWUgUGhhc2UgTmV1dHJhbCBQb2ludCBDbGFtcGVkIE11bHRpbGV2ZWwgUFYgSW52ZXJ0ZXIgQ29ubmVjdGVkIHRvIHRoZSBHcmlkLiBKb3VybmFsIG9mIEJ1aWxkaW5nIEVuZ2luZWVyaW5nLCAzLCAxOTUtMjAyLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouam9iZS4yMDE1LjA2LjAwMWQCDg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTQzJyB0YXJnZXQ9J19ibGFuayc+MTU8L2E+XQIxNQIxNe0BUGVuZywgRi5aLiwgTWNLZWV2ZXIsIEouVy4gYW5kIEFkYW1zLCBELkouICgxOTk4KSBBIFBvd2VyIExpbmUgQ29uZGl0aW9uZXIgVXNpbmcgQ2FzY2FkZSBNdWx0aWxldmVsIEludmVydGVycyBmb3IgRGlzdHJpYnV0aW9uIFN5c3RlbXMuIElFRUUgVHJhbnNhY3Rpb25zIG9uIEluZHVzdHJ5IEFwcGxpY2F0aW9ucywgMzQsIDEyOTMtMTI5OC4gDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvMjguNzM5MDEyZAIPD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxNDQnIHRhcmdldD0nX2JsYW5rJz4xNjwvYT5dAjE2AjE21AJBbG9uc28sIE8uUy4sIEd1YmlhLCBQLiBhbmQgRSBNYXJyb3lvLCBMLiAoMjAwMykgQ2FzY2FkZWQgSC1CcmlkZ2UgTXVsdGlsZXZlbCBDb252ZXJ0ZXIgZm9yIEdyaWQgQ29ubmVjdGVkIFBob3Rvdm9sdGFpYyBHZW5lcmF0b3JzIHdpdGggSW5kZXBlbmRlbnQgTWF4aW11bSBQb3dlciBQb2ludCBUcmFja2luZyBvZiBFYWNoIFNvbGFyIEFycmF5LiBQb3dlciBFbGVjdHJvbmljcyBTcGVjaWFsaXN0IENvbmZlcmVuY2UsIDIwMDMuIFBFU0MgJzAzLiAyMDAzIElFRUUgMzR0aCBBbm51YWwsIDIsIDczMS03MzUuIA0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5L3Blc2MuMjAwMy4xMjE4MTQ2ZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pTVAVPSlNUQQRPSlRSBE9KVFMDT0pVBE9KVk0DT1BKA1BPUwJQUANQU1QFUFNZQ0gDU0FSA1NDRARTR1JFAlNNAlNOA1NOTARTb2Z0AlNTA1RFTAJUSQRVT0FKAlZQA1dFVANXSkEEV0pDRAVXSkNNUARXSkNTBFdKRVQDV0pNBFdKTlMFV0pOU0UFV0pOU1QDV0pWA1dTTgJZTRWAAgEwAzczNwQxNDA4BDE0MDYEMTAwMgQyNDIzAzE2NAM2MTEEMTQ3OAM0NzMDNDkyBDE1NzkEMjQzNwQyNDQyBDI0NDQEMjQyNgQyMzE2AzgwMwQxMDAwAzQ3NgMyMDMEMjQyMgQxMzA0AzUzNQM4ODQDNTMyAzUyOQMyMDcDOTk2BDE1MTcEMjMxNwMxNjADNDc3AzY3NQQxNTczBDE1NzQDNzQzAzUxMwQxNTc1BDI0NDUDMTkxAzgxMgMyNjAEMjQ1NQMxMzYEMjA3NAQxNDkzAzEyMgM5ODkCOTIEMjAzMwMxNzMEMTQ5MgQyNDM4BDE1MTgEMjQ1NAQyNDU3AjY0AjkzBDEzMTEEMjMxNQMyMDgEMjQzMgQyNDYyAzU0MQQxNjkwAzUxMgI2NQMxMDMDMTc2AzExMQM0OTAEMjQ0OQQxMzkxAzIwMgE0AzIwOQQyNDI4Azc0NwQxMjYxBDE1NzgEMTUxOQM1MjcEMTQ3NwQxMjk4BDE5ODAEMjQzNgM1MjUDNDc1BDI0NDMCMzAEMjQzNQMyMzADMTYyBDI0MzEDNTMwAzUyNgMxMjUEMjQyNQM0NzkDNTMxAzY5MQIyOQMxNDQEMTk4NgQxMzk1AzExNAQyNDYxBDI0MjEEMTQxMQMxMDIDMTc1AzY0OAMzOTcEMTc1MwMxNzIEMjQzMwM1OTEDOTkwAjQ1AzU0MwMzMzkEMjQzMAIyOAM0NzgEMjQzOQQyNDYwAzM1NwI0NgMyMTAEMTQ4NQMxNjMDNzg3Azc4NgM5MTcDODE1BDI0NDEEMTQ4NwQxNTc2AzE3NAQyNDM0AzUyOAMyMDUDMTkyAjY5BDI0NTkEMjQ2MwQyNDUzAzczOAQxNDgwBDE1OTADODE0BDE0MDcEMTQ3OQQxMDAzBDI0NDYDNjAxAzgwNgM3ODUEMjQ0NwQyNDUyAzk5NwM2MDYDNzg4Azc5MgQxOTc3AzgxMAM1ODYDNjE0BDE1NzcEMjQ1NgM4MTEDODE2BDE5NzkDNzM2BDEwMDQDNTg3AzgxNwM2MTMDNjAyAzU5MgM1OTMDNzkzBDExODYDNTg4Azc5MAM3ODQDNzM5AzgyMAM2MTIDNzQyAzk5OQM4MjIDOTk4AzU5NgQyNDI0AzYwNQM4MjEDODA0AzYwNAQyNDY0BDE5NzgDODA1Azc5NAM4MjMDODEzAzU4OQM3OTEDNjA5AzYxMAM3NDEDNzQ0AzYwMwM4MDcDNzg5AzgyNAQxMzk0AzU5MAM3MzUDNjAwAzYwNwQxNDg2BDI0NDgDODA4AzUwOQQxMDAxAzU0NwI3MQMyMDYEMjQ0MAMxNDgEMjQ1MAM1MzMDMTM1AzQ3NAQxNTg5AzQ5MQQyMDM0AzIwNAM2NjYDMTA0BDE0MDUEMjQ1OAMxNDYDNTExAzgxOAM1MDIDODA5BDI0NTEDNTA2AzYxNQM0OTMDNTM0AzUxMAI0MQQyNDY1FCsDgAJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRk039/DwLCOgdPNCgEyO+uN1c8TpNVWxtb2+27cfdX0vw=" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=2433" title="Journal of Power and Energy Engineering">
+                    Journal of Power and Energy Engineering</a> &gt; <a href="home?issueid=6959#60035">Vol.3 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Efficient Choice of a Multilevel Inverter  for Integration on a Hybrid  Wind-Solar Power Station <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Tajeddine++Khalili&searchfield=authors&page=1' target='_blank'>Tajeddine  Khalili</a><sup></sup>, <a href='articles?searchcode=Abdelhadi++Raihani&searchfield=authors&page=1' target='_blank'>Abdelhadi  Raihani</a><sup></sup>, <a href='articles?searchcode=Hassan++Ouajji&searchfield=authors&page=1' target='_blank'>Hassan  Ouajji</a><sup></sup>, <a href='articles?searchcode=Omar++Bouattane&searchfield=authors&page=1' target='_blank'>Omar  Bouattane</a><sup></sup>, <a href='articles?searchcode=Fouad++Amri&searchfield=authors&page=1' target='_blank'>Fouad  Amri</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Lab.+SSDIA%2c+ENSET+Mohamm%c3%a9dia%2c+Hassan+II+University+of+Casablanca%2c+Morocco&searchfield=affs&page=1' target='_blank'>Lab. SSDIA, ENSET Mohammédia, Hassan II University of Casablanca, Morocco</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jpee.2015.39004"
+                    target="_blank" onclick='SetNum(60035)'>10.4236/jpee.2015.39004</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JPEE_2015092914360358.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60035)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60035' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60035.xml' target='_blank' onclick='SetNum(60035)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    4,212</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    5,573</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60035&JournalID=2433' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">DC/AC converters are very important components that have to be chosen efficiently for each type of power station. In this article, we present in details, a comparison between three different architectures of multilevel inverters, the flying capacitor multilevel inverter (FCMLI), the diode clamped multilevel inverter (DCMLI), and the cascaded H-bridge multilevel inverter (CHMLI). Thus the comparison is focused on the output voltage quality, the complexity of the power circuits, the cost of implementation, and the influence on a power bank inside the renewable power station. We also investigate trough simulation the efficient number of levels and suitable characteristics for the CHMLI that showed the most promising performance. The study uses Matlab Simulink platform as a tool of simulation, and aim to choose the most qualified inverter, for a potential insertion on a hybrid renewable energy platform (wind-solar). In all the simulations we use the same PWM control type (SPWM).</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Multilevel+Inverters&searchfield=keyword&page=1' target='_blank'>Multilevel Inverters</a>, <a href='articles?searchcode=+FCMLI&searchfield=keyword&page=1' target='_blank'> FCMLI</a>, <a href='articles?searchcode=+DCMLI&searchfield=keyword&page=1' target='_blank'> DCMLI</a>, <a href='articles?searchcode=+CHMLI&searchfield=keyword&page=1' target='_blank'> CHMLI</a>, <a href='articles?searchcode=+Hybrid+Power+Station&searchfield=keyword&page=1' target='_blank'> Hybrid Power Station</a>, <a href='articles?searchcode=+SPWM&searchfield=keyword&page=1' target='_blank'> SPWM</a>, <a href='articles?searchcode=+Power+Bank&searchfield=keyword&page=1' target='_blank'> Power Bank</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Khalili, T. , Raihani, A. , Ouajji, H. , Bouattane, O.  and Amri, F.   (2015) Efficient Choice of a Multilevel Inverter  for Integration on a Hybrid  Wind-Solar Power Station. <i>Journal of Power and Energy Engineering</i>, <b>3</b>, 44-58. doi: <a href='http://dx.doi.org/10.4236/jpee.2015.39004' target='_blank' onclick='SetNum(60035)'>10.4236/jpee.2015.39004</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>Multilevel inverters have emerged, as a new option for DC/AC conversion [1] for high power and renewable energy applications [2] [3] . The multilevel inverter synthesizes basically a stair wave voltages staged in several DC levels [4] . There are many topologies of multilevel inverters, some are basic, others are a combination of different types, and however they can be classified into three basic structures: the FCMLI, the DCMLI, and the CHMLI. All multilevel inverter topologies produce almost a similar output, which consists of voltage steps, thus providing a higher quality voltage [5] , compared to classic 2 level inverters, and as close as possible to the waveform intended to be produced. Multilevel inverters are an efficient alternative to solve problems posed by conventional inverters; their main characteristics are having lower switching losses, lower solicitation on switching devices, higher power applications, and they filter easier since the output consists of DC voltage levels. In literature, there are many research activities dealing with a special topology trying to raise the number of levels [6] , or developing new methods for harmonic minimization [7] [8] . In this paper we decided to focus our study on the three 5 level basic multilevel inverters, as they are the most widespread [9] , and investigate the most efficient parameters for the CHMLI, as it was the best candidate in our comparative study. An analysis using Matlab Simulink tool was made, to compare between the performances of the different 5 levels architectures (voltage quality, the complexity of the power circuits, the cost of implementation [10] , and the impact on a power bank inside the renewable power station) using the same PWM techniques [11] in order to choose the best inverter suited for a hybrid wind-solar renewable power station. An evaluation of the effect of levels configuration on the CHMLI performance was made to determinate the most effective parameters of this inverter. Thus a simulative testing of the CHMLI inverter was made from level 5 to 15.</p>
+<p class="E-Title1">2. The Hybrid Renewable Power Station with a Classic Inverter</p>
+<p>The hybrid renewable power station that the inverter is intended to, is composed basically of two sources; photovoltaic panels and a wind turbine. In this part we simulate the work of the power station, with a normal full bridge inverter, in order to compare its performance to the rest of multilevel inverters. The <a href="#f1" target="_self">Figure 1</a> presents the diagram used on Matlab Simulink to simulate the running of the inverter.</p>
+<p><a href="#f2" target="_self">Figure 2</a> represents the wave form of the output voltage, and current of the full bridge used in the simulation. The output current of the full bridge inverter was simulated with a (R = 50 Ω, L = 100 mH) load.</p>
+<p>The total harmonic distortion is given by the well-known expression:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-1770155x5.png" /><span class="bracketMark">(1)</span></p>
+<p><img src="//html.scirp.org/file/4-1770155x6.png" class="200" />is the k harmonic and <img src="//html.scirp.org/file/4-1770155x7.png" class="200" /> is the fundamental. The <a href="#f3" target="_self">Figure 3</a> shows the output voltage spectrum; we found that the classic full bridge inverter that we used has an output voltage THD of 76.51%, which is very high compared to the signal purity wanted in the hybrid power station.</p>
+<p>In the power bank where we used a model of 20 lead acid batteries of 12 Vdc, and a rated capacity of 6.5 Ah each, we noticed a general power drop of 57.3 mv during a 1 sec time simulation.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x8.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Diagram of the full bridge inverter used on Matlab Simulink.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x9.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Output simulation results of the full bridge: (a) voltage; (b) current.</p>
+</div>
+<p class="E-Title1">3. The Hybrid Renewable Power Station with the Studied Multilevel Inverters</p>
+<p class="E-Title2">3.1. The PWM Law Command and Power Bank Used for All Multilevel Inverters in the Simulation</p>
+<p>In this entire article we used the same SPWM law command, which is the most widespread command in multilevel inverters field. Its principle is to compare a reference signal <img src="//html.scirp.org/file/4-1770155x10.png" class="200" /> to four saw tooth carriers <a href="#f4" target="_self">Figure 4</a>.</p>
+<p>The signal references for the three phases used in the simulation are expressed as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-1770155x11.png" /><span class="bracketMark">(2)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-1770155x12.png" /><span class="bracketMark">(3)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-1770155x13.png" /><span class="bracketMark">(4)</span></p>
+<p><img src="//html.scirp.org/file/4-1770155x14.png" class="200" />: The magnitude.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x15.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>.Output voltage spectrum analyze of the full bridge inverter.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x16.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>.The reference signal with the four saw tooth carriers used for the command.</p>
+</div>
+<p><img src="//html.scirp.org/file/4-1770155x17.png" class="200" />: The modulation index.</p>
+<p><img src="//html.scirp.org/file/4-1770155x18.png" class="200" />: The frequency.</p>
+<p>In order to see the influence of each multilevel inverter on storage units, we modeled a power bank out of 20 lead-acid batteries on Matlab Simulink having the following simulation characteristics:</p>
+<p>- Nominal voltage: 12 V</p>
+<p>- Rated capacity: 6.5 A∙h</p>
+<p>- Initial state of charge: 100%</p>
+<p>- Maximum capacity: 6.77 A∙h</p>
+<p>- Fully charged voltage: 13.06 V</p>
+<p>- Nominal discharge current: 1.3 A</p>
+<p>- Internal resistance: 0.02 Ω</p>
+<p class="E-Title2">3.2. The Flying Capacitor Multilevel Inverter (FCMLI)</p>
+<p>In this type of multilevel inverters, the output can be expressed as the different possible combinations of connection of the capacitors [12] . This structure is similar to the DCMLI but uses capacitors instead of diodes to set the voltage levels.</p>
+<p>If we examine the power circuit of the FCMLI <a href="#f5" target="_self">Figure 5</a>(a) we can find some useful relations; if m is the number of levels, k the number of capacitors at the DC side, l the number of switches per phase, and <img src="//html.scirp.org/file/4-1770155x19.png" class="200" /> the number of clamping capacitors then:</p>
+<p><img src="//html.scirp.org/file/4-1770155x20.png" class="200" /> (5)</p>
+<p><img class="200" data-original="//html.scirp.org/file/4-1770155x21.png" /> (6)</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x22.png" />(a)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x23.png" />(b)</p>
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. The architecture of the FCMLI: (a) basic diagram; (b) simulation diagram used in Matlab Simulink.</p>
+</div>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-1770155x24.png" /><span class="bracketMark">(7)</span></p>
+<p>In this structure, the boot is more complex, because this topology has the disadvantage of requiring the pre- charge of the capacitors before beginning to operate as an inverter. However the stress on voltage switches is balanced with the number of levels, and it provides different combinations of switching states for the same output level.</p>
+<p>To analyze this topology, only one phase will be taken in consideration. We used the diagram in <a href="#f5" target="_self">Figure 5</a>(b) on Matlab Simulink to study the 5 level FCMLI.</p>
+<p><a href="#f6" target="_self">Figure 6</a> represents the output simulation results of the voltage, current, and voltage spectrum analyze successively. The simulation showed that the flying capacitor multilevel inverter that we used has an output voltage level THD of 35.34%. In the same power bank, and using the same load (R = 50 Ω, L = 100 mH), we have noticed a general power drop of 50.4 mv during a 1sec time simulation.</p>
+<p class="E-Title2">3.3. The Diode Clamped Multilevel Inverter (DCMLI)</p>
+<p>This topology <a href="#f7" target="_self">Figure 7</a>(a) was first presented by [13] [14] ; its main function is to use locking diodes to synthesize a sine wave from several voltage levels, typically obtained from capacitors that work as DC sources. The capacitors used are connected in series to divide the voltage.</p>
+<p>If j is the number of clamping diodes per phase; we can find the following relations:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-1770155x25.png" /><span class="bracketMark">(8)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-1770155x26.png" /><span class="bracketMark">(9)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-1770155x27.png" /><span class="bracketMark">(10)</span></p>
+<p>In this structure the effort that each device must handle decreases as the number of levels increases. And yet interlocking diodes may handle the stress of more than one level. We used a single phase diagram to analyze this structure; the diagram <a href="#f7" target="_self">Figure 7</a>(b) was implemented on Matlab Simulink, Using the same command pattern as previously.</p>
+<p><a href="#f8" target="_self">Figure 8</a> represents the output simulation results of the voltage, current, and voltage spectrum analyze successively. The simulation showed that the diode clamped multilevel inverter that we used has an output voltage level THD of 38.21%. In the same power bank, and using the same load (R = 50 Ω, L = 100 mH), we have noticed a general power drop of 12.3 mv during a 1sec time simulation.</p>
+<p class="E-Title2">3.4. The Cascaded H-Bridge Multilevel Inverter (CHMLI)</p>
+<p>This topology [15] [16] performs the same function as the above, a sinusoidal voltage is generated from different DC sources; it is based on cascading full bridge inverters <a href="#f9" target="_self">Figure 9</a>(a). This configuration is widely used in applications where the AC sources are destined to variable speed drives, and high voltage.</p>
+<p>Each module may generate for itself different output voltage levels, 0, +V, or ?V. By using different combinations we obtain the stepped AC voltage output. Generally if we consider Ns the number of indepen- dent DC sources per phase, then:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-1770155x28.png" /><span class="bracketMark">(11)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-1770155x29.png" /><span class="bracketMark">(12)</span></p>
+<p>This converter can avoid the use of interlocking diodes or balancing capacitors. We can also get a low harmonic distortion by controlling the firing angles of different voltage levels. Furthermore this significant topology offers great flexibility to increase the number of levels. We used a single phase CHMLI to simulate the inverter; the diagram <a href="#f9" target="_self">Figure 9</a>(b) was implemented on Matlab Simulink.</p>
+<p><a href="#f10" target="_self">Figure 10</a> represents the output simulation results of the voltage, current, and voltage spectrum analyze success- sively. The simulation showed that the diode clamped multilevel inverter that we used has an output voltage level THD of 35.12%. To simulate the impact of this inverter on the power bank, we divided it into two parts of 10 batteries each in a way that each section gives a 120 Vdc. We noticed that in the first section there is a general power drop of 58 mV while there is in the second section a power drop of 67 mV, during 1 sec time simulation.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x30.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Output simulation results of the FCMLI: (a) voltage; (b) current; (c) output voltage spectrum analyze.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x31.png" />(a)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x32.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. The architecture of the DCMLI: (a) basic diagram; (b) simulation diagram used in Matlab Simulink.</p>
+</div>
+<p class="E-Title1">4. Effect of Level State on the CHMLI Performance</p>
+<p>The CHMLI has shown the most promising features and performances, because it has the lowest THD in term of output voltage. Compared to the rest of multilevel inverters the cascaded H-bridge multilevel inverter requires the fewest number of components. CHMLI possesses a very importer characteristic; if we need to change the number of levels, this means increasing or decreasing the number of levels, there is no need to change the command laws, and there is no major change on the circuits, we only add or remove cells with a slight time shift on carriers. Thus we picked this inverter for more detailed testing. In attempt to establish the influence of the number of levels on the CHMLI performance, we simulated this multilevel inverter in different level states ranging from 5 to 15. <a href="#t1" target="_self">Table 1</a> summarizes all the simulation results obtained for the CHMLI from 5 to 15.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x33.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Output simulation results of the DCMLI: (a) voltage; (b) current; (c) output voltage spectrum analyze.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x34.png" />(a)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x35.png" />(b)</p>
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. The architecture of the CHMLI: (a) basic diagram; (b) simulation diagram used in Matlab Simulink.</p>
+</div>
+<p>As it can be clearly observed in <a href="#t1" target="_self">Table 1</a>, starting from level 11, the THD decrease is slightly noticeable. The power drop is also more affecting. <a href="#f11" target="_self">Figure 11</a> represents the evolution of THD and power drop with the rising of levels.</p>
+<p>As it can be observed in <a href="#f11" target="_self">Figure 11</a>, level 11 is the limit from where the THD’s decrease is note very noticeable and the power drop is more important. Our primary objective is to choose the most efficient configuration of the CHMLI, which means getting a reasonable output current and voltage, yet at the same time the inverter has to be energy efficient. Therefore a CHMLI of more than 11 would not be a preferable investment for our hybrid renewable power station. Due to these conclusions we decided to aim our study toward the CHMLI with 11 levels in order to draw the most accurate results, <a href="#f12" target="_self">Figure 12</a> represents the diagram of the 11 levels CHMLI used in the study. We used the same simulative conditions as before in all the multilevel inverters concerned by this study.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x36.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f10" id="f10"><span class="cs_fig_con">Figure 10</span></a>. Output simulation results of the CHMLI: (a) voltage; (b) current; (c) output voltage spectrum analyze.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x37.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f11" id="f11"><span class="cs_fig_con">Figure 11</span></a>. Simulation results of the CHMLI in many levels ranging from 5 to 15.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x38.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f12" id="f12"><span class="cs_fig_con">Figure 12</span></a>. Diagram of the 11 levels CHMLI used on Matlab simulink.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-1770155_1.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Simulation results of the CHMLI in many levels ranging from 5 to 15.</p>
+</div>
+<p><a href="#f13" target="_self">Figure 13</a> represents the output simulation results of the voltage, current, and voltage spectrum analyze successively. During the simulation of the CHMLI from level 5 to 15 we ensured that the previous simulation parameters were tightly respected, in order to have uniform results.</p>
+<p class="E-Title1">5. Discussion of the Simulation Results</p>
+<p>In our study we found that the classic full bridge inverter has a THD of 76.51%. Despite its few components we</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-1770155x39.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f13" id="f13"><span class="cs_fig_con">Figure 13</span></a>. Output simulation results of the 11 levels CHMLI: (a) voltage; (b) current; (c) output voltage spectrum analyze.</p>
+</div>
+<p>noticed a 57.3 voltage decrease inside the power bank for the use of a (R = 50 Ω, L = 100 mH) load, during 1sec, which makes this inverter non effective for the use in the hybrid PowerStation.</p>
+<p>The FCMLI circuitry, offers the advantage of providing extra switching combinations to balance the voltage levels, which may be used also to balance the switching losses, it also has a better signal quality (THD = 35.34%) than the DCMLI. But still the main default of the FCMLI is requiring excessive number of capacitors when the number of levels is high, which makes it difficult and expensive to implement. We noticed despite the com- ponents, the use of the FCMLI with a (R = 50 Ω, L = 100 mH) load causes a 50.4 mV general power decrease in the power bank.</p>
+<p>We noticed in the DCMLI that it is possible to achieve a high efficiency. The use of filters can also be avoided when the number of levels is high enough. The simulation showed that the use of the DCMLI during a 1sec time, on a (R = 50 Ω, L = 100 mH) load causes a voltage drop in the power bank of approximately 12.3 mV; this allows us to say that the DCMLI has the lightest impact on the power bank. Despite these conclusions the DCMLI used still has a high THD (38.21%) compared to the rest of inverters. The DCMLI requires excessive locking diodes when the number of levels is high.</p>
+<p>As it can be seen from the study, the CHMLI requires the fewest number of power components. thus to increase the number of levels, no diodes or capacitors are needed, each semiconductor switch manages a uniform stress, whatever is the level of the inverter, which makes it the easiest to implement. The 5 level CHMLI has also the lowest THD (35.12%); on the one hand this inverter needs separated DC sources, which can be used to divide the power bank in multiple sections, on the other hand the use of such inverter causes bigger voltage decrease in the power bank (58 mV in the first section, and 67 mV in the other one for a (R = 50 Ω, L = 100 mH) during 1 sec time simulation); this is normally due to the fact that the CHMLI is basically a cascaded set of full bridge inverters. Therefore we decided to raise the number of levels in an attempt to study the impact of level increasing upon the performance of the CHMLI. Thus the optimal level found was 11. In this level state the CHMLI in our study had a 13.96% THD, and caused a 128 mv power decrease inside the power bank during a 1 sec time simulation. On the basis of these conclusions we can affirm that the optimal choice for our hybrid power station is a CHMLI with 11 levels.</p>
+<p class="E-Title1">6. Conclusion</p>
+<p>In our study a comparison was made between the three basic 5 levels inverters topologies: the FCMLI, the DCMLI, and the CHMLI using the a PWM law command, in order to draw accurate conclusions to develop the most adequate multilevel inverter for a hybrid wind-solar power station. In addition to the THD and the number of components this study reveals a unique comparison result on the impact of the multilevel inverter type on storage units. The CHMLI was identified as the most suited multilevel inverter for the hybride renwable power station, even if it causes a more important power drop. The FCMLI and the the DCMLI require both more components and have higher THD on the output voltage. This study has also shown unique findings related to the effect of level state on the efficiency of the CHMLI, in this countext we found that the CHMLI with 11 levels is the most efficient configuration for this type of multi level inverters. Furthermore we have found that impact on power storage units with level increasing for the CHMLI is less consistent compared to the signal purity obtained. These results pushes us to focus our effort on realizing an apropriate CHMLI for the renewable power station experimentaly speaking. In terms of perspectives a real time obtimisation command would allow us to get more sutisfying results witout altering the power consumption. Eliminating spesific harmonics is also a fast way to get a better power quality, but is still hard to implement in real time mode. Our prime goal is to get best performance by accomodation between real time optimization and harmonic elimination without compromising power storage eficiency.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577129' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Fuchs, E.F. and Masoum, M.A.S. (2011) Power Conversion of Renewable Energy Systems. Springer, New York, 187-197. <br/>http://dx.doi.org/10.1007/978-1-4419-7979-7
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577130' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Tolbert, L.M., Peng, F.Z. and Habetler, T.G. (1999) Multilevel Converters for Large Electric Drives. IEEE Transactions on Industry Applications, 35, 36-44. <br/>http://dx.doi.org/10.1109/28.740843
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577131' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Khomfoi, S., Praisuwanna, N. and Tolbert, L.M. (2010) A Hybrid Cascaded Multilevel Inverter Application for Renewable Energy Resources Including a Reconfiguration Technique. Energy Conversion Congress and Exposition (ECCE), 2010 IEEE, Atlanta, 12-16 September 2010, 3998-4005. <br/>http://dx.doi.org/10.1109/ecce.2010.5617803
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577132' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Kang, F.S., Park, S.J., Cho, S.E., Kim, C.U. and Ise, T. (2005) Multilevel PWM Inverters Suitable for the Use of Stand-Alone Photovoltaic Power Systems. IEEE Transactions on Energy Conversion, 20, 906-915. 
+<br/>http://dx.doi.org/10.1109/tec.2005.847956
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577133' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Hochgraf, C., Lasseter, R., Divan, D. and Lipo, T.A. (1994) Comparison of Multilevel Inverters for Static VAr Compensation. Industry Applications Society Annual Meeting, 1994, Conference Record of the 1994 IEEE, Denver, 2-6 October 1994, 921-928. <br/>http://dx.doi.org/10.1109/ias.1994.377528
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577134' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Kang, F.S., Park, S.J., Lee, M.H. and Kim, C.U. (2005) An Efficient Multilevel-Synthesis Approach and Its Application to a 27-Level Inverter. IEEE Transactions on Industrial Electronics, 52, 1600-1606. 
+<br/>http://dx.doi.org/10.1109/tie.2005.858715
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577135' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Mythili, M. and Kayalvizhi, N. (2013) Harmonic Minimization in Multilevel Inverters Using Selective Harmonic Elimination PWM Technique. 2013 International Conference on Renewable Energy and Sustainable Energy (ICRESE), Coimbatore, 5-6 December 2013, 70-74. <br/>http://dx.doi.org/10.1109/icrese.2013.6927790
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577136' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Al-Othman, A.K. and Abdelhamid, T.H. (2009) Elimination of Harmonics in Multilevel Inverters with Non-Equal dc Sources Using PSO. Energy Conversion and Management, 50, 756-764. 
+<br/>http://dx.doi.org/10.1016/j.enconman.2008.09.047
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577137' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Rodriguez, J., Lai, J.S. and Peng, F.Z. (2002) Multilevel Inverters: A Survey of Topologies, Controls, and Applications.  IEEE Transactions on Industrial Electronics, 49, 724-738. <br/>http://dx.doi.org/10.1109/tie.2002.801052
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577138' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Fujii, K., Schwarzer, U. and De Doncker, R.W. (2005) Comparison of Hard-Switched Multi-Level Inverter Topologies for STATCOM by Loss-Implemented Simulation and cost Estimation. Power Electronics Specialists Conference, 2005. PESC'05. IEEE 36th, Recife, 16-16 June 2005, 340-346. <br/>http://dx.doi.org/10.1109/pesc.2005.1581646
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577139' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Dixit, A., Mishra, N., Sinha, S.K. and Singh, P. (2012) A Review on Different PWM Techniques for Five Leg Voltage Source Inverter. 2012 International Conference on Advances in Engineering, Science and Management (ICAESM), Nagapattinam, 30-31 March 2012, 421-428.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577140' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Lee, W.K., Kim, S.Y., Yoon, J.S. and Baek, D.H. (2006) A Comparison of the Carrier-Based PWM Techniques for Voltage Balance of Flying Capacitor in the Flying Capacitor Multilevel Inverter. Applied Power Electronics Conference and Exposition, 2006. APEC'06. Twenty-First Annual IEEE, 19-23 March 2006, 6 p.   
+<br/>http://dx.doi.org/10.1109/apec.2006.1620763
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577141' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Nabae, A., Takahashi, I. and Akagi, H. (1981) A New Neutral-Point-Clamped PWM Inverter. IEEE Transactions on Industry Applications, IA-17, 518-523. <br/>http://dx.doi.org/10.1109/tia.1981.4503992
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577142' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Arulkumar, K., Vijayakumar, D. and Palanisamy, K. (2015) Modeling and Control Strategy of Three Phase Neutral Point Clamped Multilevel PV Inverter Connected to the Grid. Journal of Building Engineering, 3, 195-202.
+<br/>http://dx.doi.org/10.1016/j.jobe.2015.06.001
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577143' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Peng, F.Z., McKeever, J.W. and Adams, D.J. (1998) A Power Line Conditioner Using Cascade Multilevel Inverters for Distribution Systems. IEEE Transactions on Industry Applications, 34, 1293-1298. 
+<br/>http://dx.doi.org/10.1109/28.739012
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577144' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Alonso, O.S., Gubia, P. and E Marroyo, L. (2003) Cascaded H-Bridge Multilevel Converter for Grid Connected Photovoltaic Generators with Independent Maximum Power Point Tracking of Each Solar Array. Power Electronics Specialist Conference, 2003. PESC '03. 2003 IEEE 34th Annual, 2, 731-735. 
+<br/>http://dx.doi.org/10.1109/pesc.2003.1218146
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2433" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2433" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2433" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2433" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2433"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2433"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2433" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2433" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2433" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2433" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2433" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2433"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2433"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2433" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=2433&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=2433&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=2433" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=2433" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=2433" target="_blank">JPEE
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=2433" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=2433" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=2433" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=2433" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=2433" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=2433" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=2433" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jpee.2015.39004" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60035 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +2433 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +2433 +"&paperid=" +60035 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

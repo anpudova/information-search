@@ -1,0 +1,1621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	On the Massless Vector Fields in a Rindler Space
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JMP_2015093015051476.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60110" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60110.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60110" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60110" />
+<meta property="og:title" content="On the Massless Vector Fields in a Rindler Space" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JMP2024060314222254.png" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JMP2024060314222254.png" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="On the Massless Vector Fields in a Rindler Space" />
+<meta name="keywords" content="Rindler Space,Unruh Effect,Vector Fields,Bogoliubov Coefficients" />
+<meta name="description" content="Explore the quantum theory of mass-less vector fields on Rindler space. Discover our innovative technique using light-front coordinates and Mellin transform to evaluate Bogoliubov coefficients. Learn about the Unruh effect and its implications." />
+<meta name="citation_journal_title" content="Journal of Modern Physics" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Roberto Soldati;Caterina Specchia" />
+<meta name="citation_author" content="Roberto Soldati" />
+<meta name="citation_author" content="Caterina Specchia" />
+<meta name="citation_title" content="On the Massless Vector Fields in a Rindler Space" />
+<meta name="citation_volume" content="6" />
+<meta name="citation_date" content="2015-09-30" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jmp.2015.612176" />
+<meta name="citation_issnPrint" content="2153-1196" />
+<meta name="citation_issnOnline" content="2153-120X" />
+<meta name="citation_abstract" content="We study the quantum theory of the mass-less vector fields on the Rindler space. We evaluate the Bogoliubov coefficients by means of a new technique based upon the use of light-front coordinates and Mellin transform. We briefly comment about the ensuing Unruh effect and its consequences." />
+<meta name="citation_publication_date" content="2015/9/30" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JMP_2015093015051476.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JMP_2015093015051476.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60110" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60110" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60110" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60110.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60110.xml" />
+<meta name="citation_issue" content="12" />
+<meta name="citation_online_date" content="2015/9/30" />
+<meta name="citation_firstpage" content="1743" />
+<meta name="citation_lastpage" content="1755" />
+
+<meta name="dc.title" content="On the Massless Vector Fields in a Rindler Space" />
+
+<meta name="dc.creator" content="Roberto Soldati" />
+<meta name="dc.creator" content="Caterina Specchia" /><meta name="dcterms.issued" content="2015-09-30" />
+<meta name="dc.description" content="We study the quantum theory of the mass-less vector fields on the Rindler space. We evaluate the Bogoliubov coefficients by means of a new technique based upon the use of light-front coordinates and Mellin transform. We briefly comment about the ensuing Unruh effect and its consequences." />
+<meta name="dc.source" content="Journal of Modern Physics" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-30" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jmp.2015.612176" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-30" />
+<meta name="prism.issnPrint" content="2153-1196" />
+<meta name="prism.issnOnline" content="2153-120X" />
+<meta name="prism.publicationName" content="Journal of Modern Physics" />
+<meta name="prism.publicationDate" content="2015-09-30" />
+<meta name="prism.volume" content="6" />
+<meta name="prism.number" content="12" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="1743" />
+<meta name="prism.doi" content="10.4236/jmp.2015.612176" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60110" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTMwZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAX+ATxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9Um9iZXJ0bysrU29sZGF0aSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlJvYmVydG8gIFNvbGRhdGk8L2E+PHN1cD4xLDIqPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUNhdGVyaW5hKytTcGVjY2hpYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkNhdGVyaW5hICBTcGVjY2hpYTwvYT48c3VwPjM8L3N1cD4gZAICD2QWAmYPFgIfBAXgBTxzdXA+MTwvc3VwPjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RGlwYXJ0aW1lbnRvK2RpK0Zpc2ljYStlK0FzdHJvbm9taWElZTIlODAlOTRVbml2ZXJzaXQlYzMlYTArZGkrQm9sb2duYSUyYytCb2xvZ25hJTJjK0l0YWx5JnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RGlwYXJ0aW1lbnRvIGRpIEZpc2ljYSBlIEFzdHJvbm9taWHigJRVbml2ZXJzaXTDoCBkaSBCb2xvZ25hLCBCb2xvZ25hLCBJdGFseTwvYT4uPGJyIC8+PHN1cD4yPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1Jc3RpdHV0bytOYXppb25hbGUrZGkrRmlzaWNhK051Y2xlYXJlJWUyJTgwJTk0U2V6aW9uZStkaStCb2xvZ25hJTJjK0JvbG9nbmElMmMrSXRhbHkmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Jc3RpdHV0byBOYXppb25hbGUgZGkgRmlzaWNhIE51Y2xlYXJl4oCUU2V6aW9uZSBkaSBCb2xvZ25hLCBCb2xvZ25hLCBJdGFseTwvYT4uPGJyIC8+PHN1cD4zPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1JbnN0aXR1dCtmJWMzJWJjcitUaGVvcmV0aXNjaGUrUGh5c2lrJTJjK0VUSCtaJWMzJWJjcmljaCUyYytTd2l0emVybGFuZCZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkluc3RpdHV0IGbDvHIgVGhlb3JldGlzY2hlIFBoeXNpaywgRVRIIFrDvHJpY2gsIFN3aXR6ZXJsYW5kPC9hPi48YnIgLz5kAgUPFgIfBAUFMiw4MzlkAgYPFgIfBAUFMyw2MjlkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFvwM8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVJpbmRsZXIrU3BhY2Umc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5SaW5kbGVyIFNwYWNlPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rVW5ydWgrRWZmZWN0JnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFVucnVoIEVmZmVjdDwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1ZlY3RvcitGaWVsZHMmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gVmVjdG9yIEZpZWxkczwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0JvZ29saXVib3YrQ29lZmZpY2llbnRzJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEJvZ29saXVib3YgQ29lZmZpY2llbnRzPC9hPiBkAgoPFgIfBAWNAlNvbGRhdGksIFIuICBhbmQgU3BlY2NoaWEsIEMuICAgKDIwMTUpIE9uIHRoZSBNYXNzbGVzcyBWZWN0b3IgRmllbGRzIGluIGEgUmluZGxlciBTcGFjZS4gPGk+Sm91cm5hbCBvZiBNb2Rlcm4gUGh5c2ljczwvaT4sIDxiPjY8L2I+LCAxNzQzLTE3NTUuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qbXAuMjAxNS42MTIxNzYnIHRhcmdldD0nX2JsYW5rJyBvbmNsaWNrPSdTZXROdW0oNjAxMTApJz4xMC40MjM2L2ptcC4yMDE1LjYxMjE3NjwvYT4uZAILDxYCHwQFLVRoZSBhdXRob3JzIGRlY2xhcmUgbm8gY29uZmxpY3RzIG9mIGludGVyZXN0LmQCDQ8WAh4LXyFJdGVtQ291bnQCExYmZg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODA2JyB0YXJnZXQ9J19ibGFuayc+MTwvYT5dATEBMaIBQmlycmVsLCBOLkQuIGFuZCBEYXZpZXMsIFAuQy5XLiAoMTk4MikgUXVhbnR1bSBGaWVsZHMgaW4gQ3VydmVkIFNwYWNlLiBDYW1icmlkZ2UgVW5pdmVyc2l0eSBQcmVzcywgQ2FtYnJpZGdlIChVSykuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNy9DQk85NzgwNTExNjIyNjMyZAIBD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MDcnIHRhcmdldD0nX2JsYW5rJz4yPC9hPl0BMgEyWUhhd3RvbiwgTS4gKDIwMTMpIFBoeXNpY2FsIFJldmlldyBBLCA4NywgQXJ0aWNsZSBJRDogMDQyMTE2LiBhclhpdjoxMzA0LjUxMzh2MSBbcXVhbnQtcGhdZAICD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MDgnIHRhcmdldD0nX2JsYW5rJz4zPC9hPl0BMwEzZlNwZWNjaGlhLCBDLiAoMjAxMykgVmVjdG9yIEZpZWxkcyBpbiBhIFJpbmRsZXIgU3BhY2UuIEFNUyBUZXNpIGRpIExhdXJlYSwgQm9sb2duYSBVbml2ZXJzaXR5LCBCb2xvZ25hLmQCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODA5JyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNGFVbnJ1aCwgVy5HLiAoMTk3NikgUGh5c2ljYWwgUmV2aWV3IEQsIDE0LCA4NzAtODkyLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDMvUGh5c1JldkQuMTQuODcwZAIED2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MTAnIHRhcmdldD0nX2JsYW5rJz41PC9hPl0BNQE1X0Z1bGxpbmcsIFMuQS4gKDE5NzMpIFBoeXNpY2FsIFJldmlldyBELCA3LCAyODUwLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDMvUGh5c1JldkQuNy4yODUwZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MTEnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2qwFGZWRvdG92LCBBLk0uLCBNdXIsIFYuRC4sIE5hcm96aG55LCBOLkIuLCBCZWxpbnNraWFuZCwgVi5BLiBhbmQgS2FybmFrb3YsIEIuTS4gKDE5OTkpIFBoeXNpY3MgTGV0dGVycyBBLCAyNTQsIDEyNi0xMzIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9TMDM3NS05NjAxKDk5KTAwMDkyLTRkAgYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTgxMicgdGFyZ2V0PSdfYmxhbmsnPjc8L2E+XQE3ATeXAUxvbmdoaSwgUC4gYW5kIFNvbGRhdGksIFIuICgyMDExKSBQaHlzaWNhbCBSZXZpZXcgRCwgODMsIEFydGljbGUgSUQ6IDEwNzcwMS4gYXJYaXY6MTEwMS41OTc2IFtoZXAtdGhdIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2RC44My4xMDc3MDFkAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTgxMycgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4AThbQ2FzdG9yaW5hLCBQLiBhbmQgRmlub2NjaGlhcm8sIE0uICgyMDEyKSBKb3VyLiBNb2QuIFBoeXMuIDMsIDE3MDMuIGFyWGl2OjEyMDcuMzY3NyBbaGVwLXRoXWQCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODE0JyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBObkBQ290YWVzY3UsIEkuSS4gKDIwMTUpIEV1cm9waHlzaWNzIExldHRlcnMsIDEwOSwgNCwgQXJ0aWNsZSBJRDogNDAwMDIuIGFyWGl2OjE0MDcuMjUwMiBbZ3ItcWNdIDxici8+Q290YWVzY3UsIEkuSS4gKDIwMTMpIEhvdyB0byBLaWxsIHRoZSBVbnJ1aCBFZmZlY3QuIGUtUHJpbnQsIGFyWGl2OjEzMDEuNjY1MHY0IFtnci1xY11kAgkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTgxNScgdGFyZ2V0PSdfYmxhbmsnPjEwPC9hPl0CMTACMTB2TGluZXQsIEIuICgxOTk4KSBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgTW9kZXJuIFBoeXNpY3MgRCwgNywgNjEtNzEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE0Mi9TMDIxODI3MTg5ODAwMDA2MWQCCg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODE2JyB0YXJnZXQ9J19ibGFuayc+MTE8L2E+XQIxMQIxMYUBTGVueiwgRi4sIE9odGEsIEsuIGFuZCBZYXpha2ksIEsuICgyMDA4KSBQaHlzaWNhbCBSZXZpZXcgRCwgNzgsIEFydGljbGUgSUQ6IDA2NTAyNi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXZELjc4LjA2NTAyNmQCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODE3JyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMpABQ3Jpc3Bpbm8sIEwuQy5CLiwgSGlndWNoaSwgQS4gYW5kIE1hdHNhcywgRy5FLkEuICgyMDA4KSBSZXZpZXdzIG9mIE1vZGVybiBQaHlzaWNzLCA4MCwgNzg3LTgzOC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1Jldk1vZFBoeXMuODAuNzg3ZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MTgnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEzM09yaXRpLCBELiAoMjAwMCkgSWwgTnVvdm8gQ2ltZW50bywgQjExNSwgMTAwNS0xMDI0LmQCDQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODE5JyB0YXJnZXQ9J19ibGFuayc+MTQ8L2E+XQIxNAIxNJYBTG9uZ2hpLCBQLiBhbmQgU29sZGF0aSwgUi4gKDIwMTMpIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBNb2Rlcm4gUGh5c2ljcyBBLCAyOCwgQXJ0aWNsZSBJRDogMTM1MDEwOS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTQyL1MwMjE3NzUxWDEzNTAxMDkxZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MjAnIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE13QVCbGV1bGVyLCBLLiAoMTk1MCkgSGVsdmV0aWNhIFBoeXNpY2EgQWN0YSwgMjMsIDU2Ny01ODYuPGJyLz5HdXB0YSwgUy5OLiAoMTk1MCkgUHJvY2VlZGluZ3Mgb2YgdGhlIFBoeXNpY2FsIFNvY2lldHkgQSwgNjMsIDY4MS02OTEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA4OC8wMzcwLTEyOTgvNjMvNy8zMDE8YnIvPkxhdXRydXAsIEIuICgxOTY3KSBLb25nZWxpZ2UgRGFuc2tlIFZpZGVuc2thYmVybmVzIFNlbHNrYWIgTWF0Li1meXMuIE1lZGQsIDM1LCAxLiA8YnIvPk5ha2FuaXNoaSwgTi4gKDE5NjYpIFByb2dyZXNzIG9mIFRoZW9yZXRpY2FsIFBoeXNpY3MsIDM1LCAxMTExLTExMTYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE0My9QVFAuMzUuMTExMTxici8+TmFrYW5pc2hpLCBOLiAoMTk3MykgUHJvZ3Jlc3Mgb2YgVGhlb3JldGljYWwgUGh5c2ljcywgNDksIDY0MC02NTEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE0My9QVFAuNDkuNjQwPGJyLz5OYWthbmlzaGksIE4uICgxOTc0KSBQcm9ncmVzcyBvZiBUaGVvcmV0aWNhbCBQaHlzaWNzLCA1MiwgMTkyOS0xOTQ1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExNDMvUFRQLjUyLjE5Mjk8YnIvPk5ha2FuaXNoaSwgTi4gKDE5NzIpIFByb2dyZXNzIG9mIFRoZW9yZXRpY2FsIFBoeXNpY3MgU3VwcGxlbWVudHMsIDUxLCAxLTk1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExNDMvUFRQUy41MS4xZAIPD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MjEnIHRhcmdldD0nX2JsYW5rJz4xNjwvYT5dAjE2AjE2ZkFyZWbigJlldmEsIEkuWS4gYW5kIFZvbG92aWNoLCBJLlYuICgyMDEzKSBOb3RlIG9uIHRoZSBVbnJ1aCBFZmZlY3QuIGUtUHJpbnQgYXJYaXY6MTMwMi42Njk5IFtoZXAtdGhdLmQCEA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODIyJyB0YXJnZXQ9J19ibGFuayc+MTc8L2E+XQIxNwIxN6wBUmluZGxlciwgVy4gKDE5NjQpIEFtZXJpY2FuIEpvdXJuYWwgb2YgUGh5c2ljcywgMzQsIDExNzQtMTE3OC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTE5LzEuMTk3MjU0Nzxici8+UmluZGxlciwgVy4gKDE5NjkpIEVzc2VudGlhbCBSZWxhdGl2aXR5LiBWYW4gTm9zdHJhbmQsIE5ldyBZb3JrLmQCEQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5ODIzJyB0YXJnZXQ9J19ibGFuayc+MTg8L2E+XQIxOAIxOFhTb2tvbG92c2t5LCBNLiAoMjAxMykgUmluZGxlciBTcGFjZSBhbmQgVW5ydWggRWZmZWN0LiBlLVByaW50IGFyWGl2OjEzMDQuMjgzM3YyIFtnci1xY10uZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk4MjQnIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5jgFHcmFkc2h0ZXluLCBJLlMuIGFuZCBSeXpoaWssIEkuTS4gKDE5OTYpIFRhYmxlIG9mIEludGVncmFscywgU2VyaWVzLCBhbmQgUHJvZHVjdHMuIEZpZnRoIEVkaXRpb24sIEplZmZyZXksIEEuLCBFZC4sIEFjYWRlbWljIFByZXNzLCBTYW4gRGllZ28uZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQ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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAIYC+JAduqW/niD5Th/eaxPB3sxO15cYiUM4G9ciXBy5rRbTxQn0wurVpykN++S3qsY9gqm4NhJKbhUsb9qOzDz5+BaQ51Lu9YTI5y+UD8ReCXYCCq5883RYOyuQBDQdgBKJQ9NYSepAvxIHsUIEBszIF9kVAw+OtKpSo2nY0L5TS7pjZcI4a2ubz4FZUJ/qeIscQNjFFetjMQu+gPAKi1cuu0dXATu8ZTMsEIKUEeEK3+aBofovXqmNNgBwrJCAFSq2Co/mvvaNFGqy28nyI+vv6yf3gTw51pjuwP3t6rjAvP5x1lbHcKM5M/ROzquUHr9lNeWWklFj9cK1TFZpQdUnWziPR3qwNn0ScFNmZAws/jpBm80jcsuZv9XDBeU2KB136TAPmetewitSt9wGNYTIY9UJhFPM+0hDu7cwMKVpp+mmnD8+pMa1yHYRYzLQxH5n1Q/qqDptM9kfJbC1I4q9xL93cbaAMQ4tG4BJWGCzAW6vtR3JnRPdbQo4gA4sZaXer04IxUa3arSwCxRuEDIYFbblwRpneYEy3rzwScqJxuezOuEOjOptTX9AYvM9jKmAypI8kdyyyB4CNN3pFGdOk4mu/WExNjWQ5X01rKdDbeJN4TzreHSTLkh+d4B8EihhF81TpqgKTnD/fd/yNWGbO9zMdjKdAolzLesxJOG2bR2t4ae94pZJoUOvCEPRLh7u5h+HR1RXp8jKz3XyrzwGq5ViD0Fyb+qhGFHNfa6dxzK0n1qu2d9hzAGJ1ZdEzFgVObshVy2ouP3umau52TJFwKhqohqorHyJZt7h54jbR7oXke9kR+ABe996RxzCmx1L/42I3la9AkYiuUmh4mE9Rk5DdY/KiLlE+29svjthmIPNdKgZlA9dvwpjASVteCo/ksy0uMaOE+alzU72eZ1rlvR6C3RGA9Jmsr/oit2h5HWYxsN1nFXBqJbgXwz0iYh7JCUYpOW+jbALhRmLv9UpsX2EI+d3W02YqShNDct3I94Sq9enXMFtuVRPWGCF1oN1TlM8aQC+B45LfHfFCnZz6KlRuP6GvEqI8VDdi+sTnM71Jn53VrlKa3UuXcRuCcAe+GQxyfHfD/wZ+ergvp+hsx48VT9Xih8PA4vj1aNtQlLCsXezalJjXjgEl/cAa7arjDkAIe6rJDf9KPGPMwoKLWIBVM9nLqRvTn4xs2uCHsZiAOZ8Y5IAuKZeArneMeYK8+pLRvERCDkGURuCyuXbsR59h/AAdaKvPM2BT4SSKNj0Us/NQU9+MI9hDNgMZowy9xCOwBNddniKd5JiX1iETIuSWSu2galT3CZ4MpRQGqIfvz80X8fuyGyFF2wHP/HcdHP4x0OBSCxdPk53jUQtAQ6g8akcdK7Kr4deoDeUynf9l1Y6lbf6JC8NoSbMA+vc8O8QqrB2tS2vv8gSiSoIhJ/70GOmod2HPYumgEmpn8vgLAz5ccZUA7bkVUoObyVZV/Zm1Uh4Ozw57X6RDPtK9aubBoko1p5gcjMIWvm4T+T41pjKCycN70aK5E4MwFc6qbRpzIzeaUUIv5qiWg3dZvXV/9M9IwoMUAdYUH5UMA5AJDCfNUkJ1q+n5sIsxUCB6Nq0yAoqoFwFjOj8ZbQjUP5/q/DGUJDHtaZDExzq62tLwfe18PsgWsDuILbV32BFX07jDSTdc2CHO2xi6fhORGg5L0lBgRl4s0zp6Bc/YgBEniC2eneyWSDQ2iw5NhVKu3HJAuZnur70V7iwzDcGwQI2IDR/+2+ZDAfID+MM8+0XNaUlaIgX8fsjMqD2JWDxa8kn7ReZiPgMqAmE7acxyMlKdMtk6XhHjwc25wp4AlleDWbzVGzQLtuUmBfLRhb1duIXiNLsi/yRLp4WZPUJ27df65bU1anG4WItJ4LM9y1kFgUPkaZCD7G3W6HUl/HynBFJ9UbqeGaq8vaK1/YQfFvpLYGg0bJLmJIb7I1VBtGRefxiocvIkjuBnFbKIG1Bvp3bdqOCotobzRhTIfJPz1ybr2D6/DEvFCV2tebkdleZKtgLobZ6iejVWuu1VZxJWsflUf5AhdWNPs78Mu7xVHmmifThhNhHXVuTcjWgOc0+ha7t+FzBP9w8kasJY44yZnpObyYDO1ZdBcb+9I3REzEpeEvJizUogox2uLy8cRq3yp6lmmMvyTt1q1wGJKr3RN2vrp1bz9IC1X58ObtB/5VtKrLwiwYTZ4JczAShm49AkZfwZHQTZLyjY3qS4jbPi09pGNXw+uGS3Hu4tDXabra7UmIrVTJ6nt2BS+IV2oARGuf8d10+bFGE4Rxb8X5OWr9o8NP/NkSmCAkxIVC+Aj7EdIJsmLDnfzTIbDsJUtH/K7KPeiLbFjhDUrnAx6wO2/9ofSkwJg74y7KTIDV/ngs3MovqY+DwVzncJ9d75iLyCizSur2z/AoWxQnguyVJbTVltsvXYae72/GCovpvEoLWlmf4Sg6Yu4BBu5RYruCk5N7MezxIv1QQ8tjDdhoGXqAbWrRFFDWx3FK4oHDCvJJHjmn4y1G1QBsNDvWkIszuXW6E1KUz6dtoSwPj0wA0Ssong9DXWhtYuS9jtH4StM1ZT+6tqYvxtAJndAQ0NFNV1597E/y6Lte1J3ZP1twzvBpB/f0YxWaTDHZ72u7NlSVoCSjnWeNWCBfpptecl27SJO0njN9e8jHgDwmPC2NlIgGmq46k97juUD2lSjIB/+AeyDUaBy5oIhTdg6INeWTgkUTzyXC34fsOvEb0hxwmbeOjctVaE3x0pTijWTsKmSeGzIda8uoJkZcuTbWHVoRB6h5Dc72rcIz1lA5hJghfGLyFGxD6b7ArQwZHjISLbPwxJYkFbxLsCrMOEMVNCcxGdx56w146VqqjCImkPDvKFHUQ/jY9+FyVc120CiMOMieHjy4dyVomOSf6gPMkkPd4ClcsQoipAxZgLTxG67FCpcEH/ewS/egbmWx04V1w9x54+T8GkfQObxizPwQZQvPeZm6KLBvrmvLYp1CaHAQxp15ZTATs7okf7S5ePo2gUI6UpzRPUgMetACnXOfa/MSurf56LkzDvZSlRprJXfFcpjnNRle7ZhR+nzipiAi6t6fJxRB4sYqEuxZikZ0sS/pn76iye8xM0q+tFJNR5AEEH/rcf8wyXJ1I9n+HN9S0Q60NH0z6qdFkKcgxGmbQ8xoxIk8T5csYyuHHJ8T3qv4mAA1kgwWmcUBQcbF5yr4YQxwmztMkcCEMt6aAvfC8f6toJF0YzyYX6qP1l6BNvsoSTEoNJmHhXQ9HjrS4USE6yCYyzwmeO12MO4U1xeipGR+e8TLpQ6CqXnairBPYGsz+glJyTODudGLzInafKtakhjlbm2TNMFfJb+9E3OOHfsq+2OJbTt6ZXJufxbbdOy1pecKV+u7JTFDadGMONSTueBvDAHypkesyjW4yuwX56tldt764R/77OW2TjDwb0ccJpLN4gZuPJdFGPDo8zpRNpCEOepOJcfUo9I8zG9qwVzTuTYjxDFDg2EFzwz1hep69FpxYJxedOu96B/Dnw5jBPjdr2PsTL/fVgG4rRrihebOjXHUfqiglDXkf85mvQfywWRzIsCAYnsAqHdzBwJuSxhofmDKZ6kAcIU59NL+2Ji/ZlNfEKQgjenXIkOQXcybyFgFk6H+fsgvXkF6guW0mK/96yfu7+n2DpGArzAn8Ug7zyAfpekzLtWT6UsgXZRNiIa8gkid6xp0spp/D5y5u2oeDBhSnXl6da309+kboqvL0EZR7RebudBufyINEOSNkpXst+LCzHcoZXcZBkagLrxGz5Lr3OmrcaZrIzlq5X4ZeFENOm92bbMpLQVD4IMoZREdVKbJIoaDV/CJq5z9wEVDB/cC79FvrePkFE4bul1aFFPyyi0kOKqg/hxo/OJaXSW+9WIG+vrsJvPgrum9ZyyaHkmzelazeN+yHPLxy1zNV9jyZToogsZf6RZ3nFRpnXxmMlVnH0OVgW+2Mohtqfe2KKfX/VnF0jyp37UjD6+NIz5zrn96FS+VMJNGWR2O5842Lmw660AZaYl38EWqjS11SHbcorNwflYBLGOSBhYCgfIyVLGUTbPYfzEgNQqTHnxA1GPsHqBrOtCWMEkB/uzd4oi1XWCyepKSG7lNpxxFzdDjX98Oc6FzbVsmLIEUldUkJbRhZrvplfZYEL0HEIrr0hA25YbbMqPgsadaNs2L0PL6NJIUvaBZj+4WJDzg+qXCxGdKNlUbGu4DHu5jY9jggQ/M+bLYw70SYQesq8eoufw0gVy+VJXLOb/8y4R0wEYH7yRWOc8vTOLrzSGCW44GJlYyDbnWEuvxMiv+ao715+CTPTCKoBBsIcfS54DwjalRqX/tdios6c/R4l8RBx+bEs2I/OhFPcGy16UdcBobgA6MDXqDiN8qHUE5edBy836NpfClbftFfnfyfCIoNo/LoLepzD03QezF7mHekW07wckU6+7Q9YdIbSVVhYrVWNy4V9SLNt9rDNP2lL0qzP3/u+7FCVXpVsepRRHoAuuwZCqIEy9pj8H80hp7qY3PsWfym5PFwPDpDrw5btVy0nYXPzmSU7Uq1R+xlIyX8GjtJduBVZ8wbk6aTUuK/MPWJrZBr6wJdTeGfZt62TS2PvUX8Bszn2XYFWa+KC0AGHhHOlm+2AJHVPZlyUq17Cl5102dlAYHzK+0AG32kPT2GuoyTOE8BIy6ZumGISrsX9PtvrJQT973r7tutrOJdmSsuzZmet4ka9s4KBh2pnNpSnp5KKvbJBe/2u8kjranZVADkNkEKOEXepq4YzpMaSxC3MlYLFhnFkgI5ZVRMzmO+OO/YgsPyT8yRPxZINEKJmxVfR6o2/dlXAveRG+kmgscPVzG2fU+7RYWdJ6A7dYUqm+3QeXKaM60OaCxssNom3YyO27eklt3YlQIip36uoWBxadwhW6Xr4hpzG+fVoqWHCOB4W0tkB4Ys2fVx/u4hWeNar3onUwWIr3qyzShdQuq1yLoOGDw62HfXCpHg+2MgPzx0D30ZvvTRWoyLCT5KXRfbhCHc0ft6eEqaV2Bsm1PQ1adRpxas+YKl6OM0XfBYI7e+D/PTCV8kGkiBFjju03VDE4za5rygA5Hlm2Nw7Z/jwlgzZu+xnq4r5sKXwqO2GiO0Yz0phNMal/uj9jQH01r6jZOWZdGYv25HB18pD1BnnheFvgIBd4A+Yzzd4445ZYYBPi1KjUxhWknmQ3xMtk+VekEsyt5OsRToo3sdsrHlF0S3wBO8PMh2hXpztV0Nul20IZOgLNZXnw69o2KVsiPg3L1Ov2ccetI/l78hqpSial79UDetTUKR6jdST7RI/tNxHgqa2VZpA6vgUwhJt7/J+BSGBMS8EJAsf/9j8QXzOPuANANF9n6qx9M8VFm3znHUngYh/toDPhEifiWmFe8/WqO48axLW568ANtWdjn5DflrdMhUJcxSKlMY6hfUROf4lKD2WVzMrBGUEyM1i/IioLJF4GlMlIJPWPw9wKGpav4okyiSNWyQxlltAoA50ScVI3orHMZwfosp1huw/AZY81iQ2w5g07s7Nd1y8K5gjHHQyvDDAfOa9Uhob6FFUKupq0cp79O5lEinAeGxXRxG/pkqwZ/RaUSVLUv+DcHy" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=172" title="Journal of Modern Physics">
+                    Journal of Modern Physics</a> &gt; <a href="home?issueid=7027#60110">Vol.6 No.12, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                On the Massless Vector Fields in a Rindler Space <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Roberto++Soldati&searchfield=authors&page=1' target='_blank'>Roberto  Soldati</a><sup>1,2*</sup>, <a href='articles?searchcode=Caterina++Specchia&searchfield=authors&page=1' target='_blank'>Caterina  Specchia</a><sup>3</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Dipartimento+di+Fisica+e+Astronomia%e2%80%94Universit%c3%a0+di+Bologna%2c+Bologna%2c+Italy&searchfield=affs&page=1' target='_blank'>Dipartimento di Fisica e Astronomia—Università di Bologna, Bologna, Italy</a>.<br /><sup>2</sup><a href='articles?searchcode=Istituto+Nazionale+di+Fisica+Nucleare%e2%80%94Sezione+di+Bologna%2c+Bologna%2c+Italy&searchfield=affs&page=1' target='_blank'>Istituto Nazionale di Fisica Nucleare—Sezione di Bologna, Bologna, Italy</a>.<br /><sup>3</sup><a href='articles?searchcode=Institut+f%c3%bcr+Theoretische+Physik%2c+ETH+Z%c3%bcrich%2c+Switzerland&searchfield=affs&page=1' target='_blank'>Institut für Theoretische Physik, ETH Zürich, Switzerland</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jmp.2015.612176"
+                    target="_blank" onclick='SetNum(60110)'>10.4236/jmp.2015.612176</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JMP_2015093015051476.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60110)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60110' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60110.xml' target='_blank' onclick='SetNum(60110)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    2,839</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    3,629</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60110&JournalID=172' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">We study the quantum theory of the mass-less vector fields on the Rindler space. We evaluate the Bogoliubov coefficients by means of a new technique based upon the use of light-front coordinates and Mellin transform. We briefly comment about the ensuing Unruh effect and its consequences.
+</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Rindler+Space&searchfield=keyword&page=1' target='_blank'>Rindler Space</a>, <a href='articles?searchcode=+Unruh+Effect&searchfield=keyword&page=1' target='_blank'> Unruh Effect</a>, <a href='articles?searchcode=+Vector+Fields&searchfield=keyword&page=1' target='_blank'> Vector Fields</a>, <a href='articles?searchcode=+Bogoliubov+Coefficients&searchfield=keyword&page=1' target='_blank'> Bogoliubov Coefficients</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Soldati, R.  and Specchia, C.   (2015) On the Massless Vector Fields in a Rindler Space. <i>Journal of Modern Physics</i>, <b>6</b>, 1743-1755. doi: <a href='http://dx.doi.org/10.4236/jmp.2015.612176' target='_blank' onclick='SetNum(60110)'>10.4236/jmp.2015.612176</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p>The production, propagation and detection of real photons in a non-inertial reference frame are a highly nontrivial subject [1] [2] . The matter is that, if one aims to describe those features in a coordinate independent way, i.e. local diffeomorphism invariant in the physical 3 + 1 dimensional space-time, one has to properly separate the physical and nonphysical polarization modes, the latter ones being necessarily present in any gauge and diffeomorphism invariant general formulation of the quantum theory: this becomes a hard task which has not yet been reached, even for a uniformly accelerated frame in a flat space-time referred to a curved coordinate system [3] . Actually, in the nearly whole literature on the non-inertial effects on quantum fields, just like the celebrated Unruh effect [4] , or about quantum field theory in curved spaces, the emphasis, examples and applications are always centered around the real scalar field case [4] - [9] up to some few exceptions concerning the realistic electromagnetic or Proca vector fields [10] - [12] or the Dirac and Majorana spinor fields [13] [14] . Recently, a quite interesting attempt to investigate, both from a theoretical and operational points of view, the process of emission, propagation and detection of electromagnetic radiation in a uniformly accelerated reference frame has been pursued in [2] in the four dimensional space-time. However, to the aim of avoiding the difficult disentanglement of the physical and nonphysical polarization, the author does restrict the dynamics along the acceleration direction, just turning to a 2-dimensional setting and to the treatment of the radiation field in terms of a conventional mass-less scalar degree of freedom in a 1 + 1 dimensional Minkowskian space<img src="//html.scirp.org/file/3-7502222x5.png" class="200" />. But in so doing, it turns out that the correct canonical quantization [15] of the radiation field is not properly taken into account so that, consequently, some fictitious singularities appear, which are an artifact of the too drastic simplification of the radiation dynamics in an accelerated reference frame hitherto employed.</p> 
+<p>It is the aim of the present short note to fill this lack and to provide a fully consistent Lorentz and gauge invariant quantum theory for the lineal, i.e. on a one dimensional spatial real line, radiation field. In so doing, thanks to a new method based upon the use of the Mellin transforms and the light-front system of coordinates, which has been recently developed by Aref’eva and Volovich [16] , the Bogoliubov coefficients connecting inertial and accelerated reference frames are eventually and correctly obtained to be singularity free. Thanks to the present contribution, the quite relevant and interesting operational analysis developed in [2] is actually set on a firm and reliable framework and might become seminal for some future experimental verification.</p> 
+<p class="E-Title1">2. Rindler Space and Coordinate System</p> 
+<p> <img src="//html.scirp.org/file/3-7502222x6.png" class="100" /></p> 
+<p><sup>1</sup>Throughout this note we shall use natural units <img src="//html.scirp.org/file/3-7502222x7.png" class="200" /> unless explicitly stated.</p> 
+<p>In this Section we aim to briefly collect and recall the most useful systems of coordinates, which are utmost suitable to describe the field dynamics for a uniformly accelerated Observer in the Rindler space [17] , a non- inertial flat space-time in two dimensional curved coordinate systems―many more details and useful properties, aspects and relevant features can be found in [18] . To this concern, consider a two dimensional Minkowskian space <img src="//html.scirp.org/file/3-7502222x8.png" class="200" /> with coordinates1</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/3-7502222x9.png" /><span class="bracketMark"></span></p> 
+<p>and metric</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/3-7502222x10.png" /><span class="bracketMark">(1)</span></p> 
+<p>where <img src="//html.scirp.org/file/3-7502222x11.png" class="200" /> is the metric tensor while</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/3-7502222x12.png" /><span class="bracketMark"></span></p> 
+<p>are the standard light-front coordinates. If we perform the non-inertial coordinate transformation in the restricted space-like region <img src="//html.scirp.org/file/3-7502222x13.png" class="200" /> of the Minkowskian space</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/3-7502222x14.png" /><span class="bracketMark">(2)</span></p> 
+<p>with <img src="//html.scirp.org/file/3-7502222x15.png" class="200" /> and <img src="//html.scirp.org/file/3-7502222x16.png" class="200" /> or equivalently</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/3-7502222x17.png" /><span class="bracketMark">(3)</span></p> 
+<p>then the line element of Equation (1) becomes</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/3-7502222x18.png" /><span class="bracketMark">(4)</span></p> 
+<p>Moreover we can readily obtain the inversion formul&aelig; for <img src="//html.scirp.org/file/3-7502222x19.png" class="200" /></p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/3-7502222x20.png" /><span class="bracketMark">(5)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x21.png" /><span class="bracketMark">(6)</span></p> 
+<p>whence we get</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x22.png" /><span class="bracketMark">(7)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x23.png" /><span class="bracketMark">(8)</span></p> 
+<p>in such a manner that if we set <img class="200" data-original="//html.scirp.org/file/3-7502222x24.png" /> then we find</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x25.png" /><span class="bracketMark">(9)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x26.png" /><span class="bracketMark">(10)</span></p> 
+<p>Finally we can readily find the transformation formul&aelig;for the differential operators, viz.</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x27.png" /><span class="bracketMark">(11)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x28.png" /><span class="bracketMark">(12)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x29.png" /><span class="bracketMark">(13)</span></p> 
+<p>The curved coordinates <img class="200" data-original="//html.scirp.org/file/3-7502222x30.png" /> cover only a quadrant of the Minkowskian space <img class="200" data-original="//html.scirp.org/file/3-7502222x31.png" /> i.e. the Rindler region R named the right Rindler wedge [17]</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x32.png" /><span class="bracketMark"></span></p> 
+<p>Since <img class="200" data-original="//html.scirp.org/file/3-7502222x33.png" /> lines of constant η are straight while lines of constant ξ are just hyperbolas</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x34.png" /><span class="bracketMark">(14)</span></p> 
+<p>the asymptotic of which are the null rays <img class="200" data-original="//html.scirp.org/file/3-7502222x35.png" /> or <img class="200" data-original="//html.scirp.org/file/3-7502222x36.png" /> Thus the accelerated Observers do indefinitely approach the speed of light for <img class="200" data-original="//html.scirp.org/file/3-7502222x37.png" /> while the proper time <img class="200" data-original="//html.scirp.org/file/3-7502222x38.png" /> and the proper acceleration <img class="200" data-original="//html.scirp.org/file/3-7502222x39.png" /> for the accelerated Observers are respectively given by</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x40.png" /><span class="bracketMark">(15)</span></p> 
+<p>in such a manner that hyperbol&aelig; of large negative ξ, i.e. close to the Rindler horizon <img class="200" data-original="//html.scirp.org/file/3-7502222x41.png" /> do represent strongly accelerated Observers with a short proper time<img class="200" data-original="//html.scirp.org/file/3-7502222x42.png" />.</p> 
+<p>As a further quite useful example of curved coordinate system to label the two dimensional Rindler space, consider once again the sub-spaces R and L of the Minkowskian space <img class="200" data-original="//html.scirp.org/file/3-7502222x43.png" /> in the curved coordinate system <img class="200" data-original="//html.scirp.org/file/3-7502222x44.png" /> associated to the uniformly accelerated Observer: namely,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x45.png" /><span class="bracketMark">(16)</span></p> 
+<p>where the plus and minus signs refer to the right and left Rindler’s wedges respectively, while the line element takes the forms</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x46.png" /><span class="bracketMark">(17)</span></p> 
+<p>whence we obtain the metric tensors</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x47.png" /><span class="bracketMark">(18)</span></p> 
+<p>so that</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x48.png" /><span class="bracketMark">(19)</span></p> 
+<p>Moreover, after setting</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x49.png" /><span class="bracketMark"></span></p> 
+<p>we readily get the transformation matrix</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x50.png" /><span class="bracketMark">(20)</span></p> 
+<p>where <img class="200" data-original="//html.scirp.org/file/3-7502222x51.png" /> Notice that, in general, the transformation matrix connecting the inertial and the accelerated reference frames can be written as the product of a local Lorentz transformation and the Zwei-Beine field</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x52.png" /><span class="bracketMark">(21)</span></p> 
+<p>and specifically, for the present case of a uniformly accelerated Observer,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x53.png" /><span class="bracketMark">(22)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x54.png" /><span class="bracketMark">(23)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x55.png" /><span class="bracketMark">(24)</span></p> 
+<p>Hence we can eventually write the following chain equality</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x56.png" /><span class="bracketMark"></span></p> 
+<p>For any contravariant vector field in the Minkowski space we can derive the corresponding vector field in the Rindler space, viz.,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x57.png" /><span class="bracketMark">(25)</span></p> 
+<p>Consider for example the complete orthogonal set of the mass-less vector normal modes in the 2-dimensional Minkowski space <img class="200" data-original="//html.scirp.org/file/3-7502222x58.png" /></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x59.png" /><span class="bracketMark">(26)</span></p> 
+<p>where the dual pair of constant light-like polarization vectors is provided by</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x60.png" /><span class="bracketMark">(27)</span></p> 
+<p>while the scalar wave functions read</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x61.png" /><span class="bracketMark">(28)</span></p> 
+<p>The Minkowskian space vector normal modes do fulfill</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x62.png" /><span class="bracketMark">(29)</span></p> 
+<p>where the invariant inner product is defined by</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x63.png" /><span class="bracketMark">(30)</span></p> 
+<p>The complete and orthogonal set of the mass-less vector normal modes in the right Rindler wedge R can be readily obtained from Equations (21) and (25). To this concern it is expedient to introduce the accelerated polarization vectors</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x64.png" /><span class="bracketMark">(31)</span></p> 
+<p>in such a manner that we eventually come to</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x65.png" /><span class="bracketMark">(32)</span></p> 
+<p>where</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x66.png" /><span class="bracketMark">(33)</span></p> 
+<p>with <img class="200" data-original="//html.scirp.org/file/3-7502222x67.png" /> and<img class="200" data-original="//html.scirp.org/file/3-7502222x68.png" />.</p> 
+<p class="E-Title1">3. Quantization of the Lineal Radiation Field</p> 
+<p>The manifestly covariant quantization of the free radiation field on a two dimensional Minkowskian space <img class="200" data-original="//html.scirp.org/file/3-7502222x69.png" /> in the non-homogeneous Lorenz gauge <img class="200" data-original="//html.scirp.org/file/3-7502222x70.png" /> can be suitably performed according to the well known and long standing procedure and formalism developed by Bleuler, Gupta, Lautrup and Nakanishi [15] in the four dimensional case. The Lagrangian is</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x71.png" /><span class="bracketMark">(34)</span></p> 
+<p>where <img class="200" data-original="//html.scirp.org/file/3-7502222x72.png" /> is the auxiliary scalar field, while <img class="200" data-original="//html.scirp.org/file/3-7502222x73.png" /> is the gauge parameter, so that the field equations read</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x74.png" /><span class="bracketMark">(35)</span></p> 
+<p>It turns out that the following general canonical commutation relations hold true: namely,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x75.png" /><span class="bracketMark">(36)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x76.png" /><span class="bracketMark">(37)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x77.png" /><span class="bracketMark">(38)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x78.png" /><span class="bracketMark">(39)</span></p> 
+<p>where the mass-less Pauli-Jordan real and odd distribution is provided by</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x79.png" /><span class="bracketMark">(40)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x80.png" /><span class="bracketMark">(41)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x81.png" /><span class="bracketMark">(42)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x82.png" /><span class="bracketMark">(43)</span></p> 
+<p>whereas <img class="200" data-original="//html.scirp.org/file/3-7502222x83.png" /> is named the mass-less dipole-ghost invariant distribution, which is defined by the property</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x84.png" /><span class="bracketMark"></span></p> 
+<p>an integral-differential representation being given by</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x85.png" /><span class="bracketMark">(44)</span></p> 
+<p>An explicit expression can be obtained as follows. Let us first consider the positive and negative Wightman functions, i.e. the positive and negative parts of the Pauli-Jordan distribution, in the two dimensional Minkowskian space <img class="200" data-original="//html.scirp.org/file/3-7502222x86.png" /></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x87.png" /><span class="bracketMark"></span></p> 
+<p>whence it is clear that the positive and negative parts of the Pauli-Jordan commutator are complex conjugate quantities</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x88.png" /><span class="bracketMark"></span></p> 
+<p>Consider now the integral for <img class="200" data-original="//html.scirp.org/file/3-7502222x89.png" /></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x90.png" /><span class="bracketMark">(45)</span></p> 
+<p>and change the variable <img class="200" data-original="//html.scirp.org/file/3-7502222x91.png" /> so that <img class="200" data-original="//html.scirp.org/file/3-7502222x92.png" /> Then we obtain</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x93.png" /><span class="bracketMark"></span></p> 
+<p>Here <img class="200" data-original="//html.scirp.org/file/3-7502222x94.png" /> so that two cases should be distinguished, i.e. <img class="200" data-original="//html.scirp.org/file/3-7502222x95.png" />and<img class="200" data-original="//html.scirp.org/file/3-7502222x96.png" />. After setting <img class="200" data-original="//html.scirp.org/file/3-7502222x97.png" /> it is convenient to carry out respectively the substitutions</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x98.png" /><span class="bracketMark"></span></p> 
+<p>in such a way that we can write</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x99.png" /><span class="bracketMark"></span></p> 
+<p>Now we can use the integral representations of the Bessel functions of real and imaginary arguments [19] that eventually yield for arbitrary <img class="200" data-original="//html.scirp.org/file/3-7502222x100.png" /> and <img class="200" data-original="//html.scirp.org/file/3-7502222x101.png" /></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x102.png" /><span class="bracketMark"></span></p> 
+<p>and thereby</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x103.png" /><span class="bracketMark">(46)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x104.png" /><span class="bracketMark">(47)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x105.png" /><span class="bracketMark">(48)</span></p> 
+<p>so that</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x106.png" /><span class="bracketMark">(49)</span></p> 
+<p>while the mass-less dipole-ghost in two space-time dimensions becomes</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x107.png" /><span class="bracketMark">(50)</span></p> 
+<p>It is a simple and instructive exercise to verify the compatibility between the above general covariant canonical commutation relations and the equations of motion, for<img class="200" data-original="//html.scirp.org/file/3-7502222x108.png" />,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x109.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x110.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x111.png" /><span class="bracketMark"></span></p> 
+<p>together with</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x112.png" /><span class="bracketMark">(51)</span></p> 
+<p>Moreover one can readily check that the initial conditions fulfilled by the above general covariant canonical commutation relations are</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x113.png" /><span class="bracketMark"></span></p> 
+<p>all the remaining equal-time commutation relations being equal to zero. The most general solution of the canonical commutation relations in the non-homogeneous Lorenz gauge can be written in the form</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x114.png" /><span class="bracketMark">(52)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x115.png" /><span class="bracketMark">(53)</span></p> 
+<p>where <img class="200" data-original="//html.scirp.org/file/3-7502222x116.png" /> are the destruction operators which satisfy the canonical commutation relations</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x117.png" /><span class="bracketMark">(54)</span></p> 
+<p>all the other commutators vanishing. The canonical commutation relations indicates that the Fock space is of indefinite metric, so that a physical Hilbert sub-space with semi-definite metric is selected by the subsidiary condition</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x118.png" /><span class="bracketMark">(55)</span></p> 
+<p>where</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x119.png" /><span class="bracketMark"></span></p> 
+<p>is the positive frequency part of the auxiliary scalar field operator. It follows therefrom that, for instance, the 1-particle states <img class="200" data-original="//html.scirp.org/file/3-7502222x120.png" /> describe Lorenz lineal nonphysical photons, while the 1-particle states <img class="200" data-original="//html.scirp.org/file/3-7502222x121.png" /> do represent the physical lineal scalar photons, which are all of zero norm and satisfy (55) just owing to the canonical commutation relations (54).</p> 
+<p>Things greatly and neatly simplify in the Feynman gauge <img class="200" data-original="//html.scirp.org/file/3-7502222x122.png" /> that we shall select in what follows without loss of generality. Notice that if we set</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x123.png" /><span class="bracketMark">(56)</span></p> 
+<p>we can recast the covariant wave equations and the non-homogeneous Lorenz condition in the light-front form</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x124.png" /><span class="bracketMark">(57)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x125.png" /><span class="bracketMark">(58)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x126.png" /><span class="bracketMark">(59)</span></p> 
+<p>It turns out that the mass-less vector wave equations and gauge condition in a two dimensional Minkowskian space possess the set of light-like solutions</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x127.png" /><span class="bracketMark">(60)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x128.png" /><span class="bracketMark">(61)</span></p> 
+<p>where <img class="200" data-original="//html.scirp.org/file/3-7502222x129.png" /> while</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x130.png" /><span class="bracketMark">(62)</span></p> 
+<p>does represent the standard orthogonal set of mass-less scalar modes. As we have</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x131.png" /><span class="bracketMark">(63)</span></p> 
+<p>it follows that the Lorenz condition is satisfied only for the longitudinal normal modes, viz.,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x132.png" /><span class="bracketMark">(64)</span></p> 
+<p>Notice that the polarization vector <img class="200" data-original="//html.scirp.org/file/3-7502222x133.png" /> is indeed a Minkowski bi-vector, because it can be written in the form</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x134.png" /><span class="bracketMark">(65)</span></p> 
+<p>the other light-like bi-vector <img class="200" data-original="//html.scirp.org/file/3-7502222x135.png" /> being the dual of the bi-vector <img class="200" data-original="//html.scirp.org/file/3-7502222x136.png" /> labeling the energy-momentum carried by the normal mode</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x137.png" /><span class="bracketMark"></span></p> 
+<p>In order to set up a complete orthogonal basis of mass-less vector modes on the Minkowskian space<img class="200" data-original="//html.scirp.org/file/3-7502222x138.png" />,</p> 
+<p>one has to introduce the dual light-like polarization vector <img class="200" data-original="//html.scirp.org/file/3-7502222x139.png" /> such that</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x140.png" /><span class="bracketMark">(66)</span></p> 
+<p>It turns out that all the normal modes (61) are of positive frequencies with respect to the time-like Killing vector<img class="200" data-original="//html.scirp.org/file/3-7502222x141.png" />, for they fulfill</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x142.png" /><span class="bracketMark">(67)</span></p> 
+<p>It is also useful to introduce the light-front components of the light-like polarization vectors that read</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x143.png" /><span class="bracketMark">(68)</span></p> 
+<p>The normal modes with <img class="200" data-original="//html.scirp.org/file/3-7502222x144.png" /> consist of the trigonometric functions of the light-front spatial variables <img class="200" data-original="//html.scirp.org/file/3-7502222x145.png" /> see equation (3)</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x146.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x147.png" /><span class="bracketMark"></span></p> 
+<p>It turns out that in the standard instant-form coordinates <img class="200" data-original="//html.scirp.org/file/3-7502222x148.png" /> those normal modes do represent wave fronts propagating from left to right along the Ox-line with unit velocity, so that we can conclude that the trigonometric functions of the variable <img class="200" data-original="//html.scirp.org/file/3-7502222x149.png" /> do describe progressive waves.</p> 
+<p>Conversely, for <img class="200" data-original="//html.scirp.org/file/3-7502222x150.png" /> one has to deal with the trigonometric functions of the other light-front temporal variables <img class="200" data-original="//html.scirp.org/file/3-7502222x151.png" /> so that</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x152.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x153.png" /><span class="bracketMark"></span></p> 
+<p>which shows that the trigonometric functions of the temporal light-front variable <img class="200" data-original="//html.scirp.org/file/3-7502222x154.png" /> actually correspond, in instant-form coordinates, to regressive waves moving with unit velocity from right to left along the Ox-straight line.</p> 
+<p>It is worthwhile to remark that the mass-less normal modes <img class="200" data-original="//html.scirp.org/file/3-7502222x155.png" /> for the auxiliary scalar field <img class="200" data-original="//html.scirp.org/file/3-7502222x156.png" /> are normalized according to the Lorentz invariant inner product</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x157.png" /><span class="bracketMark">(69)</span></p> 
+<p>while the polarized vector normal modes <img class="200" data-original="//html.scirp.org/file/3-7502222x158.png" /> in the Feynman gauge are normalized according to the Lorentz invariant inner product</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x159.png" /><span class="bracketMark">(70)</span></p> 
+<p>which fulfill</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x160.png" /><span class="bracketMark">(71)</span></p> 
+<p>The vector normal modes <img class="200" data-original="//html.scirp.org/file/3-7502222x161.png" /> do represent the wave functions of the lineal photons with definite momentum and polarization satisfying the Lorenz condition because <img class="200" data-original="//html.scirp.org/file/3-7502222x162.png" /> while <img class="200" data-original="//html.scirp.org/file/3-7502222x163.png" /> describe the scalar lineal photons because</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x164.png" /><span class="bracketMark">(72)</span></p> 
+<p>Putting altogether we can write the light-front components of the Feynman gauge vector potential in the form</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x165.png" /><span class="bracketMark">(73)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x166.png" /><span class="bracketMark">(74)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x167.png" /><span class="bracketMark">(75)</span></p> 
+<p>together with</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x168.png" /><span class="bracketMark">(76)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x169.png" /><span class="bracketMark">(77)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x170.png" /><span class="bracketMark">(78)</span></p> 
+<p>Moreover, from Equation (53) we get the normal mode expansion of the auxiliary scalar field</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x171.png" /><span class="bracketMark">(79)</span></p> 
+<p>It is worthwhile to remark that the above expressions manifestly satisfy both the D’Alembert wave equation as well as the non-homogeneous Lorenz condition because</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x172.png" /><span class="bracketMark">(80)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x173.png" /><span class="bracketMark">(81)</span></p> 
+<p>while the electric field strength is provided by</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x174.png" /><span class="bracketMark">(82)</span></p> 
+<p class="E-Title1">4. The Bogoliubov Coefficients</p> 
+<p>It is very convenient to write</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x175.png" /><span class="bracketMark">(83)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x176.png" /><span class="bracketMark">(84)</span></p> 
+<p>in such a manner that one gets a representation for the solutions of the wave equations and the Feynman gauge subsidiary condition in the Rindler’s regions R and L, the two regions being interchanged by parity and time reversal symmetry. Actually, in the Rindler’s regions L and R one may adopt an alternative expansion based upon the Rindler’s counterparts <img class="200" data-original="//html.scirp.org/file/3-7502222x177.png" /> of the massless scalar normal modes <img class="200" data-original="//html.scirp.org/file/3-7502222x178.png" /> on the Minkowskian space<img class="200" data-original="//html.scirp.org/file/3-7502222x179.png" />. To this concern, we remark that the metric (4) is conformal to the whole Minkowskian space, so that under the conformal transformation<img class="200" data-original="//html.scirp.org/file/3-7502222x180.png" />, the line element reduces to<img class="200" data-original="//html.scirp.org/file/3-7502222x181.png" />. Since the D’Alembert wave equation as well as the Lorenz condition are conformally invariant, we can recast the latter in Rindler’s coordinates as</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x182.png" /><span class="bracketMark">(85)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x183.png" /><span class="bracketMark">(86)</span></p> 
+<p>for which there exist normal mode solutions</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x184.png" /><span class="bracketMark">(87)</span></p> 
+<p>It follows that from Equation (3) we eventually find for<img class="200" data-original="//html.scirp.org/file/3-7502222x185.png" />, i.e. in the right Rindler wedge<img class="200" data-original="//html.scirp.org/file/3-7502222x186.png" />,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x187.png" /><span class="bracketMark">(88)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x188.png" /><span class="bracketMark">(89)</span></p> 
+<p>where <img class="200" data-original="//html.scirp.org/file/3-7502222x189.png" /> do represent the holomorphic amplitudes of the Lorenz gauge potential on the the right Rindler wedge<img class="200" data-original="//html.scirp.org/file/3-7502222x190.png" />.</p> 
+<p>The relation between the normal modes expansions of the quantum fields in the Minkowski and Rindler spaces is well known [1] [4] [5] and expressed by the Bogoliubov coefficients, which satisfy a set of consistency conditions just provided by the canonical commutation relations. It turns out that the connection between the expansions of the Lorenz gauge potential in terms of the Minkowski modes (73)-(76) and of the Rindler modes (88)-(89) can be neatly obtained according to the method recently developed by Aref’eva and Volovich [16] . Actually, for any real tempered distribution <img class="200" data-original="//html.scirp.org/file/3-7502222x191.png" /> the Mellin transform of its restriction <img class="200" data-original="//html.scirp.org/file/3-7502222x192.png" /> to the real positive half-line <img class="200" data-original="//html.scirp.org/file/3-7502222x193.png" /> is defined by</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x194.png" /><span class="bracketMark">(90)</span></p> 
+<p>which admits analytic continuation to a meromorphic function in the whole complex plane with simple poles at <img class="200" data-original="//html.scirp.org/file/3-7502222x195.png" /> The inversion formula reads</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x196.png" /><span class="bracketMark">(91)</span></p> 
+<p>where <img class="200" data-original="//html.scirp.org/file/3-7502222x197.png" /> and <img class="200" data-original="//html.scirp.org/file/3-7502222x198.png" /> are real positive numbers. A comparison with Equation (89) yields <img class="200" data-original="//html.scirp.org/file/3-7502222x199.png" /> and<img class="200" data-original="//html.scirp.org/file/3-7502222x200.png" />, in such a manner that for <img class="200" data-original="//html.scirp.org/file/3-7502222x201.png" /></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x202.png" /><span class="bracketMark">(92)</span></p> 
+<p>Moreover we get</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x203.png" /><span class="bracketMark">(93)</span></p> 
+<p>where use has been made of the Minkowski set (76). From the relation</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x204.png" /><span class="bracketMark"></span></p> 
+<p>we definitely obtain</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x205.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x206.png" /><span class="bracketMark">(94)</span></p> 
+<p>that eventually yields the relationships between the holomorphic amplitudes of the Lorenz gauge potential on the Minkowskian space <img class="200" data-original="//html.scirp.org/file/3-7502222x207.png" /> and the right Rindler wedge <img class="200" data-original="//html.scirp.org/file/3-7502222x208.png" /> respectively: namely,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x209.png" /><span class="bracketMark">(95)</span></p> 
+<p>in full accordance with [16] . The above operator transformation (95) leads to the coefficients</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x210.png" /><span class="bracketMark">(96)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x211.png" /><span class="bracketMark">(97)</span></p> 
+<p>that yields</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x212.png" /><span class="bracketMark">(98)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x213.png" /><span class="bracketMark">(99)</span></p> 
+<p>which actually corresponds to Bose-Einstein thermal distributions at the equilibrium temperature<img class="200" data-original="//html.scirp.org/file/3-7502222x214.png" />, i.e. the Unruh temperature [4] , <img class="200" data-original="//html.scirp.org/file/3-7502222x215.png" />being the Boltzmann constant. A quite similar calculation drives to</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x216.png" /><span class="bracketMark">(100)</span></p> 
+<p>where use has been made of the Minkowski set (73). Hence we definitely obtain</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x217.png" /><span class="bracketMark">(101)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x218.png" /><span class="bracketMark">(102)</span></p> 
+<p>and thereby</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x219.png" /><span class="bracketMark">(103)</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/3-7502222x220.png" /><span class="bracketMark">(104)</span></p> 
+<p class="E-Title1">5. Conclusion</p> 
+<p>In this short note we have presented the quantum theory of the lineal, i.e. one dimensional in space, radiation field in a uniformly accelerated reference frame referred to Rindler’s curved coordinates. The pair of physical and nonphysical radiation fields, which must be introduced in a diffeomorphism and gauge invariant quantum theory on a flat space-time, appear to be described by null norm quantum fields, in such a manner that a subsidiary condition must be introduced to select the physical Hilbert sub-space, the quantum states of which are of positive semi-definite norm according to [15] . The Bogoliubov coefficients connecting the inertial and non-inertial Observers have been calculated by means of a new technique due to Aref’eva and Volovich [16] . The result of our calculations turns out to be singularity free and in full agreement with the long standing known expression [4] , which is valid for an ordinary mass-less scalar field. This conclusion allows to set upon a solid and reliable framework the operational analysis of [2] concerning the emission, propagation and detection of the electromagnetic radiation in a non-inertial reference frame.</p> 
+<p class="E-Title1">Acknowledgements</p> 
+<p>The work has been supported by the Department of Physics and Astronomy of the University of Bologna (DIFA).</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579806' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Birrel, N.D. and Davies, P.C.W. (1982) Quantum Fields in Curved Space. Cambridge University Press, Cambridge (UK). <br/>http://dx.doi.org/10.1017/CBO9780511622632
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579807' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Hawton, M. (2013) Physical Review A, 87, Article ID: 042116. arXiv:1304.5138v1 [quant-ph]
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579808' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Specchia, C. (2013) Vector Fields in a Rindler Space. AMS Tesi di Laurea, Bologna University, Bologna.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579809' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Unruh, W.G. (1976) Physical Review D, 14, 870-892. <br/>http://dx.doi.org/10.1103/PhysRevD.14.870
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579810' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Fulling, S.A. (1973) Physical Review D, 7, 2850. <br/>http://dx.doi.org/10.1103/PhysRevD.7.2850
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579811' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Fedotov, A.M., Mur, V.D., Narozhny, N.B., Belinskiand, V.A. and Karnakov, B.M. (1999) Physics Letters A, 254, 126-132. <br/>http://dx.doi.org/10.1016/S0375-9601(99)00092-4
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579812' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Longhi, P. and Soldati, R. (2011) Physical Review D, 83, Article ID: 107701. arXiv:1101.5976 [hep-th] <br/>http://dx.doi.org/10.1103/PhysRevD.83.107701
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579813' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Castorina, P. and Finocchiaro, M. (2012) Jour. Mod. Phys. 3, 1703. arXiv:1207.3677 [hep-th]
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579814' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Cotaescu, I.I. (2015) Europhysics Letters, 109, 4, Article ID: 40002. arXiv:1407.2502 [gr-qc] <br/>Cotaescu, I.I. (2013) How to Kill the Unruh Effect. e-Print, arXiv:1301.6650v4 [gr-qc]
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579815' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Linet, B. (1998) International Journal of Modern Physics D, 7, 61-71. <br/>http://dx.doi.org/10.1142/S0218271898000061
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579816' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Lenz, F., Ohta, K. and Yazaki, K. (2008) Physical Review D, 78, Article ID: 065026. <br/>http://dx.doi.org/10.1103/PhysRevD.78.065026
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579817' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Crispino, L.C.B., Higuchi, A. and Matsas, G.E.A. (2008) Reviews of Modern Physics, 80, 787-838. <br/>http://dx.doi.org/10.1103/RevModPhys.80.787
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579818' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Oriti, D. (2000) Il Nuovo Cimento, B115, 1005-1024.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579819' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Longhi, P. and Soldati, R. (2013) International Journal of Modern Physics A, 28, Article ID: 1350109. <br/>http://dx.doi.org/10.1142/S0217751X13501091
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579820' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Bleuler, K. (1950) Helvetica Physica Acta, 23, 567-586.<br/>Gupta, S.N. (1950) Proceedings of the Physical Society A, 63, 681-691. <br/>http://dx.doi.org/10.1088/0370-1298/63/7/301<br/>Lautrup, B. (1967) Kongelige Danske Videnskabernes Selskab Mat.-fys. Medd, 35, 1. <br/>Nakanishi, N. (1966) Progress of Theoretical Physics, 35, 1111-1116. <br/>http://dx.doi.org/10.1143/PTP.35.1111<br/>Nakanishi, N. (1973) Progress of Theoretical Physics, 49, 640-651. <br/>http://dx.doi.org/10.1143/PTP.49.640<br/>Nakanishi, N. (1974) Progress of Theoretical Physics, 52, 1929-1945. <br/>http://dx.doi.org/10.1143/PTP.52.1929<br/>Nakanishi, N. (1972) Progress of Theoretical Physics Supplements, 51, 1-95. <br/>http://dx.doi.org/10.1143/PTPS.51.1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579821' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Aref’eva, I.Y. and Volovich, I.V. (2013) Note on the Unruh Effect. e-Print arXiv:1302.6699 [hep-th].
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579822' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Rindler, W. (1964) American Journal of Physics, 34, 1174-1178. <br/>http://dx.doi.org/10.1119/1.1972547<br/>Rindler, W. (1969) Essential Relativity. Van Nostrand, New York.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579823' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Sokolovsky, M. (2013) Rindler Space and Unruh Effect. e-Print arXiv:1304.2833v2 [gr-qc].
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579824' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Gradshteyn, I.S. and Ryzhik, I.M. (1996) Table of Integrals, Series, and Products. Fifth Edition, Jeffrey, A., Ed., Academic Press, San Diego.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=172" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=172" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=172" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=172" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=172"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=172"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=172" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=172" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=172" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=172" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=172" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=172"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=172"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=172" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=172&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=172&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=172" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=172" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=172" target="_blank">JMP
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=172" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=172" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=172" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=172" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=172" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=172" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=172" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jmp.2015.612176" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60110 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +172 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +172 +"&paperid=" +60110 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

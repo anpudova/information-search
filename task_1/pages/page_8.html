@@ -1,0 +1,1502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	A Prototype of a Semantic Platform with a Speech Recognition System for Visual Impaired People
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JILSA_2015092909341288.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60008" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60008.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60008" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60008" />
+<meta property="og:title" content="A Prototype of a Semantic Platform with a Speech Recognition System for Visual Impaired People" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JILSA2016090511393812.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JILSA2016090511393812.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="A Prototype of a Semantic Platform with a Speech Recognition System for Visual Impaired People" />
+<meta name="keywords" content="Semantic Web,Ontology,ASR,Raspberry Pi" />
+<meta name="description" content="Enhancing Web Accessibility for Visually Impaired Users: A Prototype Semantic Platform with Voice Interaction. Discover how our innovative approach using Semantic Web tools, Google APIs, and Raspberry Pi board improves technology access for the blind." />
+<meta name="citation_journal_title" content="Journal of Intelligent Learning Systems and Applications" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Jimmy Rosales-Huamaní;José Castillo-Sequera;Fabricio Puente-Mansilla;Gustavo Boza-Quispe" />
+<meta name="citation_author" content="Jimmy Rosales-Huamaní" />
+<meta name="citation_author" content="José Castillo-Sequera" />
+<meta name="citation_author" content="Fabricio Puente-Mansilla" />
+<meta name="citation_author" content="Gustavo Boza-Quispe" />
+<meta name="citation_title" content="A Prototype of a Semantic Platform with a Speech Recognition System for Visual Impaired People" />
+<meta name="citation_volume" content="7" />
+<meta name="citation_date" content="2015-09-29" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jilsa.2015.74008" />
+<meta name="citation_issnPrint" content="2150-8402" />
+<meta name="citation_issnOnline" content="2150-8410" />
+<meta name="citation_abstract" content="In the world, 10% of the world population
+suffer with some type of disability, however the fast technological development
+can originate some barriers that these people have to face if they want to
+access to technology. This is particularly true in the case of visually
+impaired users, as they require special assistance when they use any computer
+system and also depend on the audio for navigation tasks. Therefore, this paper
+is focused on making a prototype of a semantic platform with web accessibility
+for blind people. We propose a method to interaction with user through voice
+commands, allowing the direct communication with the platform. The proposed
+platform will be implemented using Semantic Web tools, because we intend to
+facilitate the search and retrieval of information in a more efficient way and
+offer a personalized learning. Also, Google APIs (STT (Speech to Text) and TTS
+(Text to Speech)) and Raspberry Pi board will be integrated in a speech
+recognition module." />
+<meta name="citation_publication_date" content="2015/9/29" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JILSA_2015092909341288.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JILSA_2015092909341288.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60008" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60008" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60008" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60008.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60008.xml" />
+<meta name="citation_issue" content="4" />
+<meta name="citation_online_date" content="2015/9/29" />
+<meta name="citation_firstpage" content="87" />
+<meta name="citation_lastpage" content="92" />
+
+<meta name="dc.title" content="A Prototype of a Semantic Platform with a Speech Recognition System for Visual Impaired People" />
+
+<meta name="dc.creator" content="Jimmy Rosales-Huamaní" />
+<meta name="dc.creator" content="José Castillo-Sequera" />
+<meta name="dc.creator" content="Fabricio Puente-Mansilla" />
+<meta name="dc.creator" content="Gustavo Boza-Quispe" /><meta name="dcterms.issued" content="2015-09-29" />
+<meta name="dc.description" content="In the world, 10% of the world population
+suffer with some type of disability, however the fast technological development
+can originate some barriers that these people have to face if they want to
+access to technology. This is particularly true in the case of visually
+impaired users, as they require special assistance when they use any computer
+system and also depend on the audio for navigation tasks. Therefore, this paper
+is focused on making a prototype of a semantic platform with web accessibility
+for blind people. We propose a method to interaction with user through voice
+commands, allowing the direct communication with the platform. The proposed
+platform will be implemented using Semantic Web tools, because we intend to
+facilitate the search and retrieval of information in a more efficient way and
+offer a personalized learning. Also, Google APIs (STT (Speech to Text) and TTS
+(Text to Speech)) and Raspberry Pi board will be integrated in a speech
+recognition module." />
+<meta name="dc.source" content="Journal of Intelligent Learning Systems and Applications" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-29" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jilsa.2015.74008" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-29" />
+<meta name="prism.issnPrint" content="2150-8402" />
+<meta name="prism.issnOnline" content="2150-8410" />
+<meta name="prism.publicationName" content="Journal of Intelligent Learning Systems and Applications" />
+<meta name="prism.publicationDate" content="2015-09-29" />
+<meta name="prism.volume" content="7" />
+<meta name="prism.number" content="4" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="87" />
+<meta name="prism.doi" content="10.4236/jilsa.2015.74008" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60008" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlkPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTI5ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAWtBDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SmltbXkrK1Jvc2FsZXMtSHVhbWFuJWMzJWFkJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+SmltbXkgIFJvc2FsZXMtSHVhbWFuw608L2E+PHN1cD4xPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUpvcyVjMyVhOSsrQ2FzdGlsbG8tU2VxdWVyYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkpvc8OpICBDYXN0aWxsby1TZXF1ZXJhPC9hPjxzdXA+Mjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1GYWJyaWNpbysrUHVlbnRlLU1hbnNpbGxhJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RmFicmljaW8gIFB1ZW50ZS1NYW5zaWxsYTwvYT48c3VwPjE8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9R3VzdGF2bysrQm96YS1RdWlzcGUmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5HdXN0YXZvICBCb3phLVF1aXNwZTwvYT48c3VwPjE8L3N1cD4gZAICD2QWAmYPFgIfBAXgAjxzdXA+MTwvc3VwPjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9TmF0aW9uYWwrVW5pdmVyc2l0eStvZitFbmdpbmVlcmluZyUyYytMaW1hJTJjK1BlcnUmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5OYXRpb25hbCBVbml2ZXJzaXR5IG9mIEVuZ2luZWVyaW5nLCBMaW1hLCBQZXJ1PC9hPi48YnIgLz48c3VwPjI8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUFsY2FsYStVbml2ZXJzaXR5JTJjK01hZHJpZCUyYytTcGFpbiZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkFsY2FsYSBVbml2ZXJzaXR5LCBNYWRyaWQsIFNwYWluPC9hPi48YnIgLz5kAgUPFgIfBAUFNCw3MTVkAgYPFgIfBAUFNiwyMTBkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFiwM8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVNlbWFudGljK1dlYiZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlNlbWFudGljIFdlYjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K09udG9sb2d5JnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IE9udG9sb2d5PC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rQVNSJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEFTUjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1Jhc3BiZXJyeStQaSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBSYXNwYmVycnkgUGk8L2E+IGQCCg8WAh8EBZEDUm9zYWxlcy1IdWFtYW7DrSwgSi4gLCBDYXN0aWxsby1TZXF1ZXJhLCBKLiAsIFB1ZW50ZS1NYW5zaWxsYSwgRi4gIGFuZCBCb3phLVF1aXNwZSwgRy4gICAoMjAxNSkgQSBQcm90b3R5cGUgb2YgYSBTZW1hbnRpYyBQbGF0Zm9ybSB3aXRoIGEgU3BlZWNoIFJlY29nbml0aW9uIFN5c3RlbSBmb3IgVmlzdWFsIEltcGFpcmVkIFBlb3BsZS4gPGk+Sm91cm5hbCBvZiBJbnRlbGxpZ2VudCBMZWFybmluZyBTeXN0ZW1zIGFuZCBBcHBsaWNhdGlvbnM8L2k+LCA8Yj43PC9iPiwgODctOTIuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qaWxzYS4yMDE1Ljc0MDA4JyB0YXJnZXQ9J19ibGFuaycgb25jbGljaz0nU2V0TnVtKDYwMDA4KSc+MTAuNDIzNi9qaWxzYS4yMDE1Ljc0MDA4PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIUFihmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MDMnIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQExa0Jlcm5lcnMtTGVlLCBULiwgSGVuZGxlciwgSi4sIExhc3NpbGEsIE8uLCBldCBhbC4gKDIwMDEpIFRoZSBTZW1hbnRpYyBXZWIuIFNjaWVudGlmaWMgQW1lcmljYW4sIDI4NCwgMjgtMzcuZAIBD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MDQnIHRhcmdldD0nX2JsYW5rJz4yPC9hPl0BMgEytAJHYXJjaWEtQ3Jlc3BvLCBBLiwgUnVpei1NZXpjdWEsIEIuLCBHb256YWxlei1DYXJyYXNjbywgSS4sIExvcGV6LUN1YWRyYWRvLCBKLiwgSGVybmFuZGV6LCBaLiwgQmFyYWhvbmEsIFIuIGFuZCBIb2xuZXMgZGUgVG9wcGluLCBMLiAoMjAxNCkgQWNjZXNzaWJpbGl0eSBTZXJ2aWNlcyBhbmQgSW50ZXJhY3RpdmUgRGlnaXRhbCBUZWxldmlzaW9uOiBBbiBPcHBvcnR1bml0eSB0byBSZWR1Y2UgdGhlIERpZ2l0YWwgR2FwLiBJRUVFIFJldmlzdGEgSWJlcm9hbWVyaWNhbmEgZGUgVGVjbm9sb2dpYXMgZGVsIEFwcmVuZGl6YWplLCA5LCA4LTE2LmQCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTA1JyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM6ABWmFrcmFvdWksIEouIGFuZCBaYWdsZXIsIFcuICgyMDEwKSBBbiBPbnRvbG9neSBmb3IgUmVwcmVzZW50aW5nIENvbnRleHQgaW4gVXNlciBJbnRlcmFjdGlvbiBmb3IgRW5oYW5jaW5nIFdlYiBBY2Nlc3NpYmlsaXR5IGZvciBBbGwuIGh0dHA6Ly9wZi1taC51dnQucm51LnRuLzU2L2QCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTA2JyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNNwBTmdhbmppLCBKLlQuLCBCcmF5c2hhdywgTS4gYW5kIFRvbXBzZXR0LCBCLiAoMjAxMSkgT250b2xvZ3ktQmFzZWQgRS1MZWFybmluZyBQZXJzb25hbGl6YXRpb24gZm9yIERpc2FibGVkIFN0dWRlbnRzIGluIEhpZ2hlciBFZHVjYXRpb24uIElubm92YXRpb24gaW4gVGVhY2hpbmcgYW5kIExlYXJuaW5nIGluIEluZm9ybWF0aW9uIGFuZCBDb20tcHV0ZXIgU2NpZW5jZXMsIDEwLCAxLTExLmQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTA3JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNeoCS2VoYWdpYXMsIEQuIGFuZCBUem92YXJhcywgRC4gKDIwMTApIEFuIE9udG9sb2d5LUJhc2VkIEZyYW1ld29yayBmb3IgV2ViIFNlcnZpY2UgSW50ZWdyYXRpb24gYW5kIERlbGl2ZXJ5IHRvIE1vYmlsaXR5IEltcGFpcmVkIFVzZXJzLiBJbjogTHl0cmFzLCBNLiwgT3Jkb25leiBEZSBQYWJsb3MsIFAuLCBaaWRlcm1hbiwgQS4sIFJvdWxzdG9uZSwgQS4sIE1hdXJlciwgSC4gYW5kIEltYmVyLCBKLiwgRWRzLiwgS25vd2xlZGdlIE1hbmFnZW1lbnQsIEluZm9ybWF0aW9uIFN5c3RlbXMsIEUtTGVhcm5pbmcsIGFuZCBTdXN0YWluYWJpbGl0eSBSZXNlYXJjaCwgU3ByaW5nZXIgQmVybGluIEhlaWRlbGJlcmcsIEJlcmxpbiwgNTU1LTU2My5kAgUPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUwOCcgdGFyZ2V0PSdfYmxhbmsnPjY8L2E+XQE2ATb6Akd1cHRhLCBTLiBhbmQgR2FyZywgRC4gKDIwMTEpIE9udG9sb2d5IEJhc2VkIEluZm9ybWF0aW9uIFJldHJpZXZhbCBmb3IgTGVhcm5pbmcgU3R5bGVzIG9mIEF1dGlzdGljIFBlb3BsZS4gSW46IE1hbnRyaSwgQS4sIE5hbmRpLCBTLiwgS3VtYXIsIEcuLCBhbmQgS3VtYXIsIFMuLCBFZHMuLCBIaWdoIFBlcmZvcm1hbmNlIEFyY2hpdGVjdHVyZSBhbmQgR3JpZCBDb21wdXRpbmcsIFZvbHVtZSAxNjkgb2YgQ29tbXVuaWNhdGlvbnMgaW4gQ29tcHV0ZXIgYW5kIEluZm9ybWF0aW9uIFNjaWVuY2UsIFNwcmluZ2VyIEJlcmxpbiBIZWlkZWxiZXJnLCBCZXJsaW4sIDI5My0yOTguIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy85NzgtMy02NDItMjI1NzctMl80MGQCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTA5JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN60CRXBlbGRlLCBHLiwgVmFsZW5jaWEsIFguLCBBYmFzY2FsLCBKLiwgRGlheiwgVS4sIFppbm5pa3VzLCBJLiBhbmQgSHVzb2RvLVNjaHVseiwgQy4gKDIwMTEpIFR2IGFzIGEgSHVtYW4gSW50ZXJmYWNlIGZvciBBbWJpZW50IEludGVsbGlnZW5jZSBFbnZpcm9ubWVudHMuIDIwMTEgSUVFRSBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gTXVsdGltZWRpYSBhbmQgRXhwbyAoSUNNRSksIEJhcmNlbG9uYSwgMTEtMTUgSnVseSAyMDExLCAxLTYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9JQ01FLjIwMTEuNjAxMjE4NmQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTEwJyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOPEBS2VldCwgQy5NLiwgQWxiZXJ0cywgUi4sIEdlcmJlciwgQS4gYW5kIENoaW1hbWl3YSwgRy4gKDIwMDgpIEVuaGFuY2luZyBXZWIgUG9ydGFscyB3aXRoIE9udG9sb2d5LUJhc2VkIERhdGEgQWNjZXNzOiBUaGUgQ2FzZSBTdHVkeSBvZiBTb3V0aCBBZnJpY2HigJlzIEFjY2Vzc2liaWxpdHkgUG9ydGFsIGZvciBQZW9wbGUgd2l0aCBEaXNhYmlsaXRpZXMuIE9XTEVELCA0MzIuIGh0dHA6Ly9jZXVyLXdzLm9yZy9Wb2wtNDMyL2QCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTExJyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBObQDQWxvbnNvLCBLLiwgQWdpbmFrbywgTi4sIExvemFubywgSi4gYW5kIE9sYWl6b2xhLCBJLiAoMjAxMikgT250b2xvZ3kgQmFzZWQgTWlkZGxld2FyZSBmb3IgUmFua2luZyBhbmQgUmV0cmlldmluZyBJbmZvcm1hdGlvbiBvbiBMb2NhdGlvbnMgQWRhcHRlZCBmb3IgUGVvcGxlIHdpdGggU3BlY2lhbCBOZWVkcy4gSW46IE1pZXNlbmJlcmdlciwgSy4sIEthcnNobWVyLCBBLiwgUGVuYXosIFAuIGFuZCBaYWdsZXIsIFcuLCBFZHMuLCBDb21wdXRlcnMgSGVscGluZyBQZW9wbGUgd2l0aCBTcGVjaWFsIE5lZWRzLCBWb2x1bWUgNzM4MiBvZiBMZWN0dXJlIE5vdGVzIGluIENvbXB1dGVyIFNjaWVuY2UsIFNwcmluZ2VyIEJlcmxpbiBIZWlkZWxiZXJnLCBCZXJsaW4sIDM1MS0zNTQuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy85NzgtMy02NDItMzE1MjItMF81M2QCCQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTEyJyB0YXJnZXQ9J19ibGFuayc+MTA8L2E+XQIxMAIxMKgBQnVraGFyaSwgQS4gYW5kIEtpbSwgWS4tRy4gKDIwMTIpIE9udG9sb2d5LUFzc2lzdGVkIEF1dG9tYXRpYyBQcmVjaXNlIEluZm9ybWF0aW9uIEV4dHJhY3RvciBmb3IgVmlzdWFsbHkgSW1wYWlyZWQgSW5oYWJpdGFudHMuIEFydGlmaWNpYWwgSW50ZWxsaWdlbmNlIFJldmlldywgMzgsIDktMjQuZAIKD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MTMnIHRhcmdldD0nX2JsYW5rJz4xMTwvYT5dAjExAjExrwJWYXNzaWxldiwgVi4sIFVsbWFuLCBNLiwgT3VhenphbmUsIEsuLCBLYXplbWlhbiwgSC4sIEFpZ2JvZGksIE0uIGFuZCBCb3lkLCBSLiAoMjAxMykgT250b2NhcmVyOiBBbiBPbnRvbG9naWNhbCBGcmFtZXdvcmsgZm9yIEFzc2lzdGl2ZSBBZ2VudHMgZm9yIHRoZSBEaXNhYmxlZC4gVGhlIDNyZCBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gRGlnaXRhbCBJbmZvcm1hdGlvbiBQcm9jZXNzaW5nIGFuZCBDb21tdW5pY2F0aW9ucyAoSUNESVBDMjAxMyksIER1YmFpLCAzMCBKYW51YXJ5LTEgRmVicnVhcnkgMjAxMywgNDA0LTQxNi5kAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUxNCcgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTKMAVl1LCBMLiAoMjAwNykgSW50cm9kdWN0aW9uIHRvIHRoZSBTZW1hbnRpYyBXZWIgYW5kIFNlbWFudGljIFdlYiBTZXJ2aWNlcy4gQ1JDIFByZXNzLCBCb2NhIFJhdG9uLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTIwMS85NzgxNTg0ODg5MzQyZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MTUnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEzogFGZXJuw6FuZGV6LUzDs3BleiwgTS4sIEfDs21lei1Qw6lyZXosIEEuIGFuZCBKdXJpc3RvLCBOLiAoMTk5NykgTWV0aG9udG9sb2d5OiBGcm9tIE9udG9sb2dpY2FsIEFydCB0b3dhcmRzIE9udG9sb2dpY2FsIEVuZ2luZWVyaW5nLiBodHRwOi8vb2EudXBtLmVzL2lkL2ZpbGUvODg5MzBkAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUxNicgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTSRAVl1LCBMLiAoMjAxMSkgQSBEZXZlbG9wZXJzIEd1aWRlIHRvIHRoZSBTZW1hbnRpYyBXZWIuIFNwcmluZ2VyIFNjaWVuY2UgJiBCdXNpbmVzcyBNZWRpYSwgQmVybGluLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvOTc4LTMtNjQyLTE1OTcwLTFkAg4PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUxNycgdGFyZ2V0PSdfYmxhbmsnPjE1PC9hPl0CMTUCMTVaQW50b25pb3UsIEcuIGFuZCBWYW4gSGFybWVsZW4sIEYuICgyMDA0KSBBIFNlbWFudGljIFdlYiBQcmltZXIuIE1JVCBQcmVzcywgQ2FtYnJpZGdlLCBVU0EuZAIPD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MTgnIHRhcmdldD0nX2JsYW5rJz4xNjwvYT5dAjE2AjE20AJQcmFkZWwsIEMuLCBIYWVtbWVybCwgTy4gYW5kIEhlcm5hbmRleiwgTi4gKDIwMTIpIEEgU2VtYW50aWMgV2ViIEludGVyZmFjZSBVc2luZyBQYXR0ZXJuczogVGhlIFN3aXAgU3lzdGVtLiBJbjogQ3JvaXRvcnUsIE0uLCBSdWRvbHBoLCBTLiwgV2lsc29uLCBOLiwgSG93c2UsIEouIGFuZCBDb3JieSwgTy4sIEVkcy4sIEdyYXBoIFN0cnVjdHVyZXMgZm9yIEtub3dsZWRnZSBSZXByZXNlbnRhdGlvbiBhbmQgUmVhc29uaW5nLCBTcHJpbmdlciBCZXJsaW4gSGVpZGVsYmVyZywgQmFyY2Vsb25hLCAxNzItMTg3LiBodHRwOi8vZHguZG9pLm9yZy8xMC4xMDA3Lzk3OC0zLTY0Mi0yOTQ0OS01XzdkAhAPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUxOScgdGFyZ2V0PSdfYmxhbmsnPjE3PC9hPl0CMTcCMTeUAUR1YXJ0ZSwgVC4sIFByaWtsYWRuaWNraSwgUi4sIENhbGVmYXRvLCBGLiBhbmQgTGFudWJpbGUsIEYuICgyMDE0KSBTcGVlY2ggUmVjb2duaXRpb24gZm9yIFZvaWNlLUJhc2VkIE1hY2hpbmUgVHJhbnNsYXRpb24uIElFRUUgU29mdHdhcmUsIDMxLCAyNi0zMS5kAhEPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUyMCcgdGFyZ2V0PSdfYmxhbmsnPjE4PC9hPl0CMTgCMTiDAlN0ZWZhbm92aWMsIE0uLCBDZXRpYywgTi4sIEtvdmFjZXZpYywgTS4sIEtvdmFjZXZpYywgSi4gYW5kIEphbmtvdmljLCBNLiAoMjAxMikgVm9pY2UgQ29udHJvbCBTeXN0ZW0gd2l0aCBBZHZhbmNlZCBSZWNvZ25pdGlvbi4gMjB0aCBUZWxlY29tbXVuaWNhdGlvbnMgRm9ydW0gKFRFTEZPUiksIEJlbGdyYWRlLCAyMC0yMiBOb3ZlbWJlciAyMDEyLCAxNjAxLTE2MDQuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5L1RFTEZPUi4yMDEyLjY0MTk1MjlkAhIPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUyMScgdGFyZ2V0PSdfYmxhbmsnPjE5PC9hPl0CMTkCMTmfAU5hZWVtLCBBLiwgUWFkaXIsIEEuIGFuZCBTYWZkYXIsIFcuICgyMDE0KSBWb2ljZSBDb250cm9sbGVkIEludGVsbGlnZW50IFdoZWVsY2hhaXIgVXNpbmcgUmFzcGJlcnJ5IFBpLiBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgVGVjaG5vbG9neSBhbmQgUmVzZWFyY2gsIDIsIDY1LmQCEw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTIyJyB0YXJnZXQ9J19ibGFuayc+MjA8L2E+XQIyMAIyMOMBVW5nZXIsIEMuLCBCw7xobWFuLCBMLiwgTGVobWFubiwgSi4sIE5nb25nYSBOZ29tbywgQS4tQy4sIEdlcmJlciwgRC4gYW5kIENpbWlhbiwgUC4gKDIwMTIpIFRlbXBsYXRlLUJhc2VkIFF1ZXN0aW9uIEFuc3dlcmluZyBvdmVyIFJERiBEYXRhLiBQcm9jZWVkaW5ncyBvZiB0aGUgMjFzdCBJbnRlcm5hdGlvbmFsIENvbmZlci1lbmNlIG9uIFdvcmxkIFdpZGUgV2ViLCBOZXcgWW9yaywgNjM5LTY0OC5kAggPZBYEAgcPFgIfAwUNRGlzUGxheTpOb25lO2QCCA8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAILD2QWAmYPFgIeB1Zpc2libGVnZAIMD2QWAgIBD2QWAgIBD2QWAgIDDxAPFgYeDURhdGFUZXh0RmllbGQFCVNob3J0TmFtZR4ORGF0YVZhbHVlRmllbGQFCUpvdXJuYWxJRB4LXyFEYXRhQm91bmRnZBAVgAIOU2VsZWN0IEpvdXJuYWwCQUEDQUFEA0FBUgZBQVNvY2kEQUFTVANBQkIDQUJDBEFCQ1IEQUNFUwNBQ1MDQUNUAkFEA0FEUgJBRQNBRVIDQUhTA0FJRANBaU0DQUlUBEFKQUMDQUpDBEFKQ0MEQUpDTQVBSklCTQRBSk1CBEFKT1IEQUpQUwVBTEFNVANBTEMDQUxTAkFNA0FNSQRBTVBDA0FOUANBUEQDQVBFA0FQTQNBUlMFQVJTY2kCQVMDQVNNA0JMUgJDQwJDRQdDZWxsQmlvBkNoblN0ZAJDTQNDTUICQ04EQ1JDTQJDUwRDU1RBA0NVUwVDV0VFRQlEZXRlY3Rpb24ERU1BRQNFTkcDRVBFBEVUU04ERk1BUgNGTlMDR0VQA0dJUwJHTQhHcmFwaGVuZQNHU0MGSGVhbHRoAklCA0lDQQNJSU0ESUpBQQZJSkFNU0MFSUpDQ0UESUpDTQVJSkNOUwNJSkcFSUpJRFMESUpJUwZJSk1OVEEISUpNUENFUk8ESUpOTQRJSk9DBklKT0hOUwtJbmZyYU1hdGljcwVKQUNFTgRKQU1QBUpBU01JBEpCQlMFSkJDUFIFSkJpU0UDSkJNBEpCTkIESkJQQwNKQ0MFSkNEU0EESkNQVANKQ1QFSkRBSVADSkRNBEpFQVMFSkVDVEMFSkVNQUEDSkVQBUpGQ01WBEpGUk0ESkdJUwZKSEVQR0MFSkhSU1MGSklCVFZBBUpJTFNBA0pJUwNKTUYGSk1HQk5EBUpNTUNFA0pNUARKUEVFBEpRSVMESlNCUwRKU0VBBkpTRU1BVARKU0lQA0pTUwRKU1NNA0pTVANKVFIESlRTVARKVFRzBUpXQVJQA0xDRQJNQwJNRQJNSQNNTUUFTU5TTVMDTVBTAk1SA01SQwNNUkkDTVNBBE1TQ0UETkpHQwJOTQJOUgJOUwVPQUxpYgZPQUxpYkoET0RFTQNPSkEET0pBQgZPSkFjY3QGT0pBbmVzBE9KQVAFT0pBcG8GT0pBcHBTBU9KQVByBE9KQVMET0pCRAdPSkJJ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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=102" title="Journal of Intelligent Learning Systems and Applications">
+                    Journal of Intelligent Learning Systems and Applications</a> &gt; <a href="home?issueid=7014#60008">Vol.7 No.4, November 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                A Prototype of a Semantic Platform with a Speech Recognition System for Visual Impaired People <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Jimmy++Rosales-Huaman%c3%ad&searchfield=authors&page=1' target='_blank'>Jimmy  Rosales-Huamaní</a><sup>1</sup>, <a href='articles?searchcode=Jos%c3%a9++Castillo-Sequera&searchfield=authors&page=1' target='_blank'>José  Castillo-Sequera</a><sup>2</sup>, <a href='articles?searchcode=Fabricio++Puente-Mansilla&searchfield=authors&page=1' target='_blank'>Fabricio  Puente-Mansilla</a><sup>1</sup>, <a href='articles?searchcode=Gustavo++Boza-Quispe&searchfield=authors&page=1' target='_blank'>Gustavo  Boza-Quispe</a><sup>1</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=National+University+of+Engineering%2c+Lima%2c+Peru&searchfield=affs&page=1' target='_blank'>National University of Engineering, Lima, Peru</a>.<br /><sup>2</sup><a href='articles?searchcode=Alcala+University%2c+Madrid%2c+Spain&searchfield=affs&page=1' target='_blank'>Alcala University, Madrid, Spain</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jilsa.2015.74008"
+                    target="_blank" onclick='SetNum(60008)'>10.4236/jilsa.2015.74008</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JILSA_2015092909341288.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60008)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60008' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60008.xml' target='_blank' onclick='SetNum(60008)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    4,715</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    6,210</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60008&JournalID=102' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">In the world, 10% of the world population
+suffer with some type of disability, however the fast technological development
+can originate some barriers that these people have to face if they want to
+access to technology. This is particularly true in the case of visually
+impaired users, as they require special assistance when they use any computer
+system and also depend on the audio for navigation tasks. Therefore, this paper
+is focused on making a prototype of a semantic platform with web accessibility
+for blind people. We propose a method to interaction with user through voice
+commands, allowing the direct communication with the platform. The proposed
+platform will be implemented using Semantic Web tools, because we intend to
+facilitate the search and retrieval of information in a more efficient way and
+offer a personalized learning. Also, Google APIs (STT (Speech to Text) and TTS
+(Text to Speech)) and Raspberry Pi board will be integrated in a speech
+recognition module.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Semantic+Web&searchfield=keyword&page=1' target='_blank'>Semantic Web</a>, <a href='articles?searchcode=+Ontology&searchfield=keyword&page=1' target='_blank'> Ontology</a>, <a href='articles?searchcode=+ASR&searchfield=keyword&page=1' target='_blank'> ASR</a>, <a href='articles?searchcode=+Raspberry+Pi&searchfield=keyword&page=1' target='_blank'> Raspberry Pi</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Rosales-Huamaní, J. , Castillo-Sequera, J. , Puente-Mansilla, F.  and Boza-Quispe, G.   (2015) A Prototype of a Semantic Platform with a Speech Recognition System for Visual Impaired People. <i>Journal of Intelligent Learning Systems and Applications</i>, <b>7</b>, 87-92. doi: <a href='http://dx.doi.org/10.4236/jilsa.2015.74008' target='_blank' onclick='SetNum(60008)'>10.4236/jilsa.2015.74008</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>In recent years the size of the World Wide Web (WWW) has grown dramatically; this has led to a considerable increase in the difficulty to find data about a particular issue, due to the ambiguity of terms used to make queries on the web.</p>
+<p>The Semantic Web, also known as the Data Web and Web 3.0 [1] pretend to solve this problem creating a mechanism for the exchange information with certain meaning. To provide a website with a comprehensible meaning by computers, it is necessary to have a knowledge representation. The Semantic Web proposes the use of collections of information called ontologies in order to have a structured knowledge.</p>
+<p>By other hand, people with disabilities are nearly 10% in the world; these people have to deal with many physical barriers and some new barriers have been added: Technology. These are causing the digital gap, also known as the digital divide or digital stratification [2] .</p>
+<p>To be precise, in case of blind people, they require special help to work with any kind of computer system. Furthermore, these people needs appropriate tools to get relevant data from Internet.</p>
+<p>From our point of view, in any case, the implementation of a web platform has to address certain problems like meaning understandable by computers, efficient retrieval of information and accessibility for everyone.</p>
+<p>The World Wide Web Consortium (W3C) offers standards which are internationally accepted. They offer quantifiable rules, however, web developers often fail to implement them effectively. One of the reasons is that most of the available accessibility guidelines appear too costly [3] .</p>
+<p>According to [4] , with the Semantic Web, there are now new opportunities to build flexible systems that will meet the needs of disabled students. Disability aware systems could be designed using Semantic Web tech- nologies, leading to personalized environments that will enable disabled students to have relevant learning resources and to work independently, with little assistance from a tutor.</p>
+<p>For these reasons, in this paper we make a prototype of a platform based on semantic web with speech recog- nition using natural language allowing blind students access to knowledge resources and learn independently of their tutor. The present work is divided as follow: in Section 2 we review related papers. The next section discusses the current problems. Afterwards, in Section 4 we present our proposal, in Section 5 we present the conceptual scheme of architecture and finally in Section 6 expected contribution is presented.</p>
+<p class="E-Title1">2. Review of Literature</p>
+<p>The state-of-art was based in papers related to ontology, Semantic Web and accessibility for disabled people. In this section, we review papers from 2010 to date.</p>
+<p>In [3] was developed an ontology called CO to represent user interaction in its context and improve web accessibility for all people. In this work, four important concepts are identified: User context, physical context, environmental context and computational context.</p>
+<p>In [5] was developed a model based on ontologies for integrating several web services and their delivery to users with reduced mobility. Under this proposal, people with disabilities are able to search on web for services.</p>
+<p>In [6] was developed a prototype system based on an ontology for Internet information retrieval for autistic people through learning styles. In this paper, the autistic user expect to retrieve information with different characteristics, but this is difficult for autistic people, because of their lack of ability to process and retain information. In this work the aim is to find the desired result, based on a suitable set of keywords that are based on their memories of people with autism.</p>
+<p>In [7] was proposed the use of the URC framework (The Universal Remote Console) in form of UCH- oriented Gateway (The Universal Control Hub) and some services of Ontologies, such as ODP (Platform for dialogue based on Ontologies) to provide interactive services accessible to any TV architecture. This platform is called VITAL (Vital Assistance for the Elderly) and helps to elderly people to participate in dialogue.</p>
+<p>In [4] was developed an ontology called ADOOLES (Abilities and Disabilities Ontology for Online Learning and Services) based on personalized online instruction for disabled students in higher education. This ontology was built on ADOLENA (Abilities and Disabilities Ontology for Enhancing Accessibility) that was developed by [8] .</p>
+<p>In [9] , a middleware based on ontologies for personalize tourism to people with special needs was presented. Its function was to retrieve and classify information in places adapted for people with special needs. This was supported by PATRAC (Accesible Heritage) philosophy. Furthermore, they proposed a content manager based on ontologies divided in three designed modules. The content manager uses SOAP (Simple Object Access Protocol) web services.</p>
+<p>Independently, in [10] was developed HIV (Heavyweight ontology Based Information Extraction for Visually impaired User) that provide a mechanism for highly precise information extraction using heavyweight ontology and built-in vocal command system for visually impaired internet users.</p>
+<p>Finally, [11] presented the research program of the London Metropolitan University, which aims to use Semantic Web and mobile Internet for care of the disabled and elderly people using intelligent agents. The authors use as a conceptual background the International Classification of functionality, Disability and Health (ICF), it has been established as a standard for the classification of the various states of health. Where the core of the framework is a pilot whose ontological domain is disability.</p>
+<p class="E-Title1">3. Current Problems of Web Platforms for Accessibility</p>
+<p>A review of the literature found the following problems:</p>
+<p> A big part of e-learning environments are not yet accessible for all users, because there are many electronic barriers that prevent access to online resources, and it does not have access technical aids (such as the use of screen reader) [3] .</p>
+<p> The number of students with disabilities in UK higher education institutions increases every year. Delivering education online is becoming increasingly challenging as institutions encounter some disabilities requiring adjustments of learning environments. The law requires that people with disabilities be given equivalent learning experiences to their non-disabled peers through reasonable adjustments. Educational institutions have thus utilised assistive technologies to assist disabled students in their learning, but some of these technologies are incompatible with some learning environments, hence excluding some disabled students and resulting in a disability divide [4] .</p>
+<p> Disabled people represent an important part of our society, they have different needs based on the type of disability that they presented, and being the assistance provided to them important and the use of new technologies should accommodate their needs [11] .</p>
+<p class="E-Title1">4. Prototype of Semantic Platform with Speech Recognition System</p>
+<p>In order to achieve the prototype we consider the following steps:</p>
+<p>1) Building of Ontology. For an easy and rapid extraction of information by the user, the knowledge about a particular subject or domain will be stored in an ontology. Such ontology contain terms and the relationships among these terms. Terms are often called classes, or concepts; these words are interchangeable. The relation- ships between these classes can be expressed by using a hierarchical structure: superclasses represent higher- level concepts and subclasses represent finer concepts, and the finer concepts have all the attributes and features that the higher concepts have. The ontology is designed in the language OWL (Ontology Web Language) that is most popular language for creating ontologies today [12] .</p>
+<p>In addition for modelling the ontology we should follow the recommendations of Methontology that is a standard created by the Ontology Engineering Group of the Polytechnic University of Madrid (UPM), which comprises the following steps: Specification, conceptualization, acquiring knowledge, integration, implementa- tion, maintenance, evaluation, and documentation [13] .</p>
+<p>2) Semantic Platform Implementation</p>
+<p>The implementation of the Semantic Platform will be using Jena libraries API for Java that allow the management of ontologies in OWL code and support a reasoner engine.</p>
+<p>According to [14] Jena is a library to develop applications based on RDF (Resource Definition Framework) and OWL documents. It is only used in application code as a collection of APIs, and there is no GUI of any kind. Also provides a framework to development Semantic Web applications using Java language.</p>
+<p>Furthermore, the platform will be based on the Model-View-Controller scheme, which implement servlets to manage user queries. Such queries can be verified in an ontological editor using SPARQL (SPARQL Protocol and RDF Query Language) [15] , so as W3C recommend, SPARQL will be used to consult RDF or OWL documents.</p>
+<p>3) Adaptation of Speech Recognition System to Semantic Platform.</p>
+<p>Automatic speech recognition systems (ASR) compared to other human-machine interaction systems like keyboard, mouse, etc. provide better naturalness. Speech recognition seems so natural and simple for people but for machines is quite complicated. For this reason, a recognition of patterns is used, these patterns are a set of linguistic units as (words, syllables, sounds, shapes).</p>
+<p>There are studies that use queries patterns using SPARQL [16] . We propose a mechanism to facilitate the interaction between the user and the platform through an interface that use natural language. We pretend to create a module that translates user queries in natural language to SPARQL queries. To solve this problem we will build a series of templates in SPARQL.</p>
+<p>In our platform, a template consists of a SPARQL representation, which reflects the internal structure of the question from natural language. This module would be integrated into the server and also linked to the ASR system. A user with visual disabilities requires an accessible medium to interact with the platform. To achieve this, the following processes are required.</p>
+<p>a) Voice-to-text. The process used for adapt the voice recognition system is the ASR (Automatic Speech Recognition). In [17] , we can see a considerable number ASR systems, some open source, other privative and even based in cloud services. In the last case, we focus specifically in API Google STT Service, because it is a cloud computing system and does not compromise the performance of the local computer. According to [18] , thanks to the processing in the cloud, the ASR can be used in devices that have no high-performance processor and avoid the use of complex algorithms. In [19] was presented a system using API Google STT that operate together with reduced board computer Raspberry Pi, with excellent results (85% - 90% accuracy). The advantage of using this Raspberry Pi is its small size that makes ideal to be embedded anywhere, without saturating the available space. By other hand, the low cost of equipment enables this massive distribution.</p>
+<p>b) Text-to-Speech. To convert Text to Speech (TTS) we propose to use the cloud services of Google, using Google Translator, although is a less complex process compared with ASR. Other possibility could be run locally on your Raspberry Pi, obviously with a reduced quality of voice synthesis.</p>
+<p class="E-Title1">5. Conceptual Scheme of Architecture</p>
+<p>The conceptual scheme is roughed out in <a href="#f1" target="_self">Figure 1</a> and explained as follow.</p>
+<p>1) Information Request Module (IRM).</p>
+<p>This module allows the user to makes consult through the keyboard and computer screen, this information is sent to a KRM. Once information is processed, the requested are shown to the user in the Prototype Portal.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-9601311x5.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Conceptual scheme of architecture.</p>
+</div>
+<p>2) Knowledge Representation Module (KRM). The module consists of an ontology that contains all the con- cept models of study case, and is used to describe and represent a specific area of knowledge such as medicine, tourism, film, etc.</p>
+<p>The ontology provides a way to encode knowledge and semantics such that machines can understand. Also, the ontological model contain logical rules. These rules depend on the selected domain, and it will need to be implemented as part of ontological model properties.</p>
+<p>Depending on the source of the query, this module can interact with the other modules including IRM and NLM. In our prototype the SPARQL language will be used to extract different information from the ontology and answer the queries made by different modules.</p>
+<p>3) Speech Recognition Module (SRM). This module allows to visually impaired people make queries in our Semantic Platform. For instance, the user ask for information in the microphone and such consult is converted to text in the ASR system. Then, this text is sent to the NLM to identify the appropriate template. After identifying the appropriate template, in KRM we make the SPARQL query to get the required information. This informa- tion is returned to the SRM in order to be converted to speech using TTS (Text-to-Speech). Finally, information is read for the user.</p>
+<p>4) Natural Language Module (NLM). This module analyses and compare text queries come from SRM with certain patterns to create queries in SPARQL language and then it will be sent to KRM.</p>
+<p>Although the process of formulating a natural language query and transform to SPARQL language is quite complex, it is possible to perform the query using query patterns [16] .</p>
+<p>In [20] , they present a new approach based on a syntactic analysis of the questions to produce a SPARQL template that reflects the internal structure of the question.</p>
+<p>With this in mind, we propose to use a series of templates associated with natural language. To give an illustration, in the query “Tell me the name of all transport to the city of Lima”, template natural language query would be: “Tell me the name of all transport to the city of %PLACE%” where %PLACE% is a variable that the system recognize and is associated in the following SPARQL template:</p>
+<p><img src="//html.scirp.org/file/1-9601311x6.png" class="100" /></p>
+<p>The system will replace the variable %PLACE% with Lima and send SPARQL query resultant to the KRM, where the information initially is requested, will be obtained, finally this information will be read by the SRM.</p>
+<p class="E-Title1">6. Expected Contributions and Future Work</p>
+<p>Actually, there are studies about the accessibility to internet for disabled people using tools of the Semantic Web. The reason of our proposal is the lack of works that use natural language to achieve the integration of semantics and ASR systems as a tool for people with visual disabilities.</p>
+<p>The implementation must choose a particular domain and such ontology must contain all knowledge of this specific domain.</p>
+<p>Once implemented the prototype of Semantic Platform with ASR system, the following benefits are expected:</p>
+<p> The integration of semantics and ASR system using natural language for assisting visually impaired people through the web.</p>
+<p> The developed platform architecture based on the prototype.</p>
+<p> The high accuracy with the use of the Raspberry Pi in ASR implementation.</p>
+<p> Generation of different templates SPARQL depending on the domain ontology for natural language queries.</p>
+<p> The expected SPARQL query templates will be quite similar to queries in the day-to-day language.</p>
+<p> As a complement and from the implemented prototype, a navigation support systems using voice commands, can be created to help people with visual disabilities, providing autonomy in its movement in an unfamiliar environment.</p>
+<p> The construction of a more flexible and personalized platform using tools of the Semantic Web.</p>
+<p>As a future work, we expect to develop a prototype in the domain of tourism. The prototype will help people with visual disabilities to obtain information about several tourist attractions in Peru.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576503' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Berners-Lee, T., Hendler, J., Lassila, O., et al. (2001) The Semantic Web. Scientific American, 284, 28-37.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576504' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Garcia-Crespo, A., Ruiz-Mezcua, B., Gonzalez-Carrasco, I., Lopez-Cuadrado, J., Hernandez, Z., Barahona, R. and Holnes de Toppin, L. (2014) Accessibility Services and Interactive Digital Television: An Opportunity to Reduce the Digital Gap. IEEE Revista Iberoamericana de Tecnologias del Aprendizaje, 9, 8-16.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576505' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Zakraoui, J. and Zagler, W. (2010) An Ontology for Representing Context in User Interaction for Enhancing Web Accessibility for All. http://pf-mh.uvt.rnu.tn/56/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576506' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Nganji, J.T., Brayshaw, M. and Tompsett, B. (2011) Ontology-Based E-Learning Personalization for Disabled Students in Higher Education. Innovation in Teaching and Learning in Information and Com-puter Sciences, 10, 1-11.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576507' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Kehagias, D. and Tzovaras, D. (2010) An Ontology-Based Framework for Web Service Integration and Delivery to Mobility Impaired Users. In: Lytras, M., Ordonez De Pablos, P., Ziderman, A., Roulstone, A., Maurer, H. and Imber, J., Eds., Knowledge Management, Information Systems, E-Learning, and Sustainability Research, Springer Berlin Heidelberg, Berlin, 555-563.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576508' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Gupta, S. and Garg, D. (2011) Ontology Based Information Retrieval for Learning Styles of Autistic People. In: Mantri, A., Nandi, S., Kumar, G., and Kumar, S., Eds., High Performance Architecture and Grid Computing, Volume 169 of Communications in Computer and Information Science, Springer Berlin Heidelberg, Berlin, 293-298. <br/>http://dx.doi.org/10.1007/978-3-642-22577-2_40
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576509' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Epelde, G., Valencia, X., Abascal, J., Diaz, U., Zinnikus, I. and Husodo-Schulz, C. (2011) Tv as a Human Interface for Ambient Intelligence Environments. 2011 IEEE International Conference on Multimedia and Expo (ICME), Barcelona, 11-15 July 2011, 1-6. <br/>http://dx.doi.org/10.1109/ICME.2011.6012186
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576510' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Keet, C.M., Alberts, R., Gerber, A. and Chimamiwa, G. (2008) Enhancing Web Portals with Ontology-Based Data Access: The Case Study of South Africa’s Accessibility Portal for People with Disabilities. OWLED, 432. http://ceur-ws.org/Vol-432/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576511' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Alonso, K., Aginako, N., Lozano, J. and Olaizola, I. (2012) Ontology Based Middleware for Ranking and Retrieving Information on Locations Adapted for People with Special Needs. In: Miesenberger, K., Karshmer, A., Penaz, P. and Zagler, W., Eds., Computers Helping People with Special Needs, Volume 7382 of Lecture Notes in Computer Science, Springer Berlin Heidelberg, Berlin, 351-354. <br/>http://dx.doi.org/10.1007/978-3-642-31522-0_53
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576512' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Bukhari, A. and Kim, Y.-G. (2012) Ontology-Assisted Automatic Precise Information Extractor for Visually Impaired Inhabitants. Artificial Intelligence Review, 38, 9-24.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576513' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Vassilev, V., Ulman, M., Ouazzane, K., Kazemian, H., Aigbodi, M. and Boyd, R. (2013) Ontocarer: An Ontological Framework for Assistive Agents for the Disabled. The 3rd International Conference on Digital Information Processing and Communications (ICDIPC2013), Dubai, 30 January-1 February 2013, 404-416.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576514' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Yu, L. (2007) Introduction to the Semantic Web and Semantic Web Services. CRC Press, Boca Raton.<br/>http://dx.doi.org/10.1201/9781584889342
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576515' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Fernández-López, M., Gómez-Pérez, A. and Juristo, N. (1997) Methontology: From Ontological Art towards Ontological Engineering. http://oa.upm.es/id/file/88930
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576516' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Yu, L. (2011) A Developers Guide to the Semantic Web. Springer Science & Business Media, Berlin. <br/>http://dx.doi.org/10.1007/978-3-642-15970-1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576517' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Antoniou, G. and Van Harmelen, F. (2004) A Semantic Web Primer. MIT Press, Cambridge, USA.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576518' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Pradel, C., Haemmerl, O. and Hernandez, N. (2012) A Semantic Web Interface Using Patterns: The Swip System. In: Croitoru, M., Rudolph, S., Wilson, N., Howse, J. and Corby, O., Eds., Graph Structures for Knowledge Representation and Reasoning, Springer Berlin Heidelberg, Barcelona, 172-187. http://dx.doi.org/10.1007/978-3-642-29449-5_7
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576519' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Duarte, T., Prikladnicki, R., Calefato, F. and Lanubile, F. (2014) Speech Recognition for Voice-Based Machine Translation. IEEE Software, 31, 26-31.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576520' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Stefanovic, M., Cetic, N., Kovacevic, M., Kovacevic, J. and Jankovic, M. (2012) Voice Control System with Advanced Recognition. 20th Telecommunications Forum (TELFOR), Belgrade, 20-22 November 2012, 1601-1604.<br/>http://dx.doi.org/10.1109/TELFOR.2012.6419529
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576521' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Naeem, A., Qadir, A. and Safdar, W. (2014) Voice Controlled Intelligent Wheelchair Using Raspberry Pi. International Journal of Technology and Research, 2, 65.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576522' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Unger, C., Bühman, L., Lehmann, J., Ngonga Ngomo, A.-C., Gerber, D. and Cimian, P. (2012) Template-Based Question Answering over RDF Data. Proceedings of the 21st International Confer-ence on World Wide Web, New York, 639-648.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=102" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=102" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=102" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=102" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=102"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=102"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=102" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=102" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=102" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=102" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=102" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=102"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=102"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=102" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=102&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=102&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=102" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=102" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=102" target="_blank">JILSA
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=102" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=102" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=102" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=102" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=102" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=102" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=102" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jilsa.2015.74008" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60008 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +102 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +102 +"&paperid=" +60008 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

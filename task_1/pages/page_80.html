@@ -1,0 +1,1787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	The Electrochemical Behaviour of PEDOT Film Electrosynthesized in Presence of Some Dopants
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/OJOPM_2015093011350517.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/html/60080.html" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60080" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60080" />
+<meta property="og:title" content="The Electrochemical Behaviour of PEDOT Film Electrosynthesized in Presence of Some Dopants" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/OJOPM2015012717204801.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/OJOPM2015012717204801.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="The Electrochemical Behaviour of PEDOT Film Electrosynthesized in Presence of Some Dopants" />
+<meta name="keywords" content="Nanocomposite Films,Carbon Nanotubes,Electropolymerization,SEM,EIS,Capacitance" />
+<meta name="description" content="Study on electropolymerization and characterization of PEDOT doped with SWANTs, PABS, and different dopants. Nanocomposite coatings prepared using electrochemical methods. Analysis of morphology and evaluation of electrochemical and physical properties. Improved electrode properties with SDS and tiron dopants." />
+<meta name="citation_journal_title" content="Open Journal of Organic Polymer Materials" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Florina Branzoi;Viorel Branzoi" />
+<meta name="citation_author" content="Florina Branzoi" />
+<meta name="citation_author" content="Viorel Branzoi" />
+<meta name="citation_title" content="The Electrochemical Behaviour of PEDOT Film Electrosynthesized in Presence of Some Dopants" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-09-30" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ojopm.2015.54010" />
+<meta name="citation_issnPrint" content="2164-5736" />
+<meta name="citation_issnOnline" content="2164-5752" />
+<meta name="citation_abstract" content="Electropolymerization and characterization of poly(3,4-ethylene dioxythiophene) (PEDOT) doped
+with functionalized single-walled carbon nanotubes (SWANTs) polyaminobenzene sulfonic acid
+(PABS) and different dopants were studied. It was fabricated by a simple oxidative electropolymerization
+method. The nanocomposite coatings have been prepared by using electrochemical
+methods from aqueous solutions, such that the components were deposited onto platinum electrode
+substrate. The morphology of composite films was analyzed by scanning electron microscopy
+(SEM). The electrochemical and physical properties of the resulting composites were evaluated
+by cyclic voltammetry (CV), electrochemical impedance spectroscopy (EIS) and Fourier transform
+infrared spectroscopy (FT-IR) techniques in 0.1 M LiClO4 aqueous solutions. The value of
+specific electrochemical capacitance of the composite films is considerably higher than that of the
+pure polymers films. The improved properties of the electrodes were obtained by using these
+composite films. The dopant substances used were sodium dodecyl sulfate (SDS) and 1,2-Dihydroxy-
+benzene-3,5-disulfonic acid disodium salt hydrate (tiron)." />
+<meta name="citation_publication_date" content="2015/9/30" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/OJOPM_2015093011350517.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/OJOPM_2015093011350517.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60080" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/html/60080.html" />
+<meta name="fulltext_html" content="https://www.scirp.org/html/60080.html" />
+<meta name="citation_issue" content="4" />
+<meta name="citation_online_date" content="2015/9/30" />
+<meta name="citation_firstpage" content="89" />
+<meta name="citation_lastpage" content="102" />
+
+<meta name="dc.title" content="The Electrochemical Behaviour of PEDOT Film Electrosynthesized in Presence of Some Dopants" />
+
+<meta name="dc.creator" content="Florina Branzoi" />
+<meta name="dc.creator" content="Viorel Branzoi" /><meta name="dcterms.issued" content="2015-09-30" />
+<meta name="dc.description" content="Electropolymerization and characterization of poly(3,4-ethylene dioxythiophene) (PEDOT) doped
+with functionalized single-walled carbon nanotubes (SWANTs) polyaminobenzene sulfonic acid
+(PABS) and different dopants were studied. It was fabricated by a simple oxidative electropolymerization
+method. The nanocomposite coatings have been prepared by using electrochemical
+methods from aqueous solutions, such that the components were deposited onto platinum electrode
+substrate. The morphology of composite films was analyzed by scanning electron microscopy
+(SEM). The electrochemical and physical properties of the resulting composites were evaluated
+by cyclic voltammetry (CV), electrochemical impedance spectroscopy (EIS) and Fourier transform
+infrared spectroscopy (FT-IR) techniques in 0.1 M LiClO4 aqueous solutions. The value of
+specific electrochemical capacitance of the composite films is considerably higher than that of the
+pure polymers films. The improved properties of the electrodes were obtained by using these
+composite films. The dopant substances used were sodium dodecyl sulfate (SDS) and 1,2-Dihydroxy-
+benzene-3,5-disulfonic acid disodium salt hydrate (tiron)." />
+<meta name="dc.source" content="Open Journal of Organic Polymer Materials" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-30" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ojopm.2015.54010" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-30" />
+<meta name="prism.issnPrint" content="2164-5736" />
+<meta name="prism.issnOnline" content="2164-5752" />
+<meta name="prism.publicationName" content="Open Journal of Organic Polymer Materials" />
+<meta name="prism.publicationDate" content="2015-09-30" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="4" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="89" />
+<meta name="prism.doi" content="10.4236/ojopm.2015.54010" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60080" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAk0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTMwZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAX1ATxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RmxvcmluYSsrQnJhbnpvaSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkZsb3JpbmEgIEJyYW56b2k8L2E+PHN1cD4xPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVZpb3JlbCsrQnJhbnpvaSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlZpb3JlbCAgQnJhbnpvaTwvYT48c3VwPjI8L3N1cD4gZAICD2QWAmYPFgIfBAXQAzxzdXA+MTwvc3VwPjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SW5zdGl0dXRlK29mK1BoeXNpY2FsK0NoZW1pc3RyeSslZTIlODAlOWNJbGllK011cmd1bGVzY3UlZTIlODAlOWQlMmMrQnVjaGFyZXN0JTJjK1JvbWFuaWEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5JbnN0aXR1dGUgb2YgUGh5c2ljYWwgQ2hlbWlzdHJ5IOKAnElsaWUgTXVyZ3VsZXNjdeKAnSwgQnVjaGFyZXN0LCBSb21hbmlhPC9hPi48YnIgLz48c3VwPjI8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVVuaXZlcnNpdHkrUG9saXRlaG5pY2Erb2YrQnVjaGFyZXN0JTJjK0J1Y2hhcmVzdCUyYytSb21hbmlhJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+VW5pdmVyc2l0eSBQb2xpdGVobmljYSBvZiBCdWNoYXJlc3QsIEJ1Y2hhcmVzdCwgUm9tYW5pYTwvYT4uPGJyIC8+ZAIFDxYCHwQFBTMsODQyZAIGDxYCHwQFBTUsMTM4ZAIHDxYCHwMFD0Rpc3BsYXk6aW5saW5lO2QCCA9kFgICAQ8WAh8EBfsEPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1OYW5vY29tcG9zaXRlK0ZpbG1zJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+TmFub2NvbXBvc2l0ZSBGaWxtczwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0NhcmJvbitOYW5vdHViZXMmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gQ2FyYm9uIE5hbm90dWJlczwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0VsZWN0cm9wb2x5bWVyaXphdGlvbiZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBFbGVjdHJvcG9seW1lcml6YXRpb248L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStTRU0mc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU0VNPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rRUlTJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEVJUzwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0NhcGFjaXRhbmNlJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IENhcGFjaXRhbmNlPC9hPiBkAgoPFgIfBAXFAkJyYW56b2ksIEYuICBhbmQgQnJhbnpvaSwgVi4gICAoMjAxNSkgVGhlIEVsZWN0cm9jaGVtaWNhbCBCZWhhdmlvdXIgb2YgUEVET1QgRmlsbSBFbGVjdHJvc3ludGhlc2l6ZWQgaW4gUHJlc2VuY2Ugb2YgU29tZSBEb3BhbnRzLiA8aT5PcGVuIEpvdXJuYWwgb2YgT3JnYW5pYyBQb2x5bWVyIE1hdGVyaWFsczwvaT4sIDxiPjU8L2I+LCA4OS0xMDIuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9vam9wbS4yMDE1LjU0MDEwJyB0YXJnZXQ9J19ibGFuaycgb25jbGljaz0nU2V0TnVtKDYwMDgwKSc+MTAuNDIzNi9vam9wbS4yMDE1LjU0MDEwPC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAI5FnJmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NTInIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQEx6gFIdW5nLCBTLiwgV2VuLCBULiBhbmQgR29wYWxhbiwgQS4gKDIwMDIpIEFwcGxpY2F0aW9uIG9mIFN0YXRpc3RpY2FsIERlc2lnbiBTdHJhdGVnaWVzIHRvIE9wdGltaXplIHRoZSBDb25kdWN0aXZpdHkgb2YgRWxlY3Ryb3N5bnRoZXNpemVkIFBvbHlweXJyb2xlLiBNYXRlcmlhbHMgTGV0dGVycywgNTUsIDE2NS0xNzAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9TMDE2Ny01NzdYKDAxKTAwNjQwLTFkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY1MycgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATK7AU1vcnZhbnQsIE0uQy4gYW5kIFJleW5vbGRzLCBKLlIuICgxOTk4KSBJbiBTaXR1IENvbmR1Y3Rpdml0eSBTdHVkaWVzIG9mIFBvbHkoMyw0LWV0aHlsZW5lZGlveHl0aGlvcGhlbmUpLiBTeW50aGV0aWMgTWV0YWxzLCA5MiwgNTctNjEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9TMDM3OS02Nzc5KDk4KTgwMDIzLTRkAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY1NCcgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATPjAUd1cHRhLCBWLiBhbmQgTWl1cmEsIE4uICgyMDA2KSBIaWdoIFBlcmZvcm1hbmNlIEVsZWN0cm9jaGVtaWNhbCBTdXBlcmNhcGFjaXRvciBmcm9tIEVsZWN0cm9jaGVtaWNhbGx5IFN5bnRoZXNpemVkIE5hbm9zdHJ1Y3R1cmVkIFBvbHlhbmlsaW5lLiBNYXRlcmlhbHMgTGV0dGVycywgNjAsIDE0NjYtMTQ2OS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oubWF0bGV0LjIwMDUuMTEuMDQ3ZAIDD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NTUnIHRhcmdldD0nX2JsYW5rJz40PC9hPl0BNAE09QFMb3RhLCBLLiwgS2hvbWVua28sIFYuIGFuZCBGcmFja293aWFrLCBFLiAoMjAwNCkgQ2FwYWNpdGFuY2UgUHJvcGVydGllcyBvZiBQb2x5KDMsNC1ldGh5bGVuZWRpb3h5dGhpb3BoZW5lKS9DYXItIGJvbiBOYW5vdHViZXMgQ29tcG9zaXRlcy4gSm91cm5hbCBvZiBQaHlzaWNzIGFuZCBDaGVtaXN0cnkgb2YgU29saWRzLCA2NSwgMjk1LTMwMS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouanBjcy4yMDAzLjEwLjA1MWQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjU2JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNeEBQWpheWFuLCBQLk0uLCBTdGVwaGFuLCBPLiwgQ29sbGlleCwgQy4gYW5kIFRyYXV0aCwgRC4gKDE5OTQpIEFsaWduZWQgQ2FyYm9uIE5hbm90dWJlIEFycmF5cyBGb3JtZWQgYnkgQ3V0dGluZyBhIFBvbHltZXIgUmVzaW7igJROYW5vdHViZSBDb21wb3NpdGUuIFNjaWVuY2UsIDI2NSwgMTIxMi0xMjE0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMjYvc2NpZW5jZS4yNjUuNTE3Ni4xMjEyZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NTcnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2mQJEYWksIEwuIGFuZCBNYXUsIEEuVy5ILiAoMjAwMSkgQ29udHJvbGxlZCBTeW50aGVzaXMgYW5kIE1vZGlmaWNhdGlvbiBvZiBDYXJib24gTmFub3R1YmVzIGFuZCBDNjA6IENhcmJvbiBOYW5vc3RydWN0dXJlcyBmb3IgQWR2YW5jZWQgUG9seW1lcmljIENvbXBvc2l0ZSBNYXRlcmlhbHMuIEFkdmFuY2VkIE1hdGVyaWFscywgMTMsIDg5OS05MTMuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwMi8xNTIxLTQwOTUoMjAwMTA3KTEzOjEyLzEzPDg5OTo6QUlELUFETUE4OTk+My4wLkNPOzItR2QCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjU4JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN6wBQmF1Z2htYW4sIFIuSC4sIFpha2hpZG92LCBBLkEuIGFuZCBIZWVyLCBXLkEuICgyMDAyKSBDYXJib24gTmFub3R1YmVz4oCUVGhlIFJvdXRlIHRvd2FyZCBBcHBsaWNhdGlvbnMuIFNjaWVuY2UsIDI5NywgNzg3LTc5Mi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMTA2MDkyOGQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjU5JyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOIICTGlhbywgWS5aLiwgWmhhbmcsIEMuLCBaaGFuZywgWS4sIFN0cm9uZywgVi4sIEthbGFudGFyLXphZGVoLCBLLiwgSG9laywgRS4sIFdhbmcsIEsuIGFuZCBLYW5lciwgUi4gKDIwMTEpIENhcmJvbiBOYW5vdHViZS9Qb2x5YW5pbGluZSBDb21wb3NpdGUgTmFub2ZpYmVyczogRmFjaWxlIFN5bnRoZXNpcyBhbmQgQ2hlbW9zZW5zb3JzLiBOYW5vIExldHRlcnMsIDExLCA5NTQtOTU5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMjEvbmwxMDMzMjJiZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NjAnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5pAJEYWksIEwuICgxOTk5KSBBZHZhbmNlZCBTeW50aGVzZXMgYW5kIE1pY3JvZmFicmljYXRpb25zIG9mIENvbmp1Z2F0ZWQgUG9seW1lcnMsIEM2MC1Db250YWluaW5nIFBvbHltZXJzIGFuZCBDYXJib24gTmFub3R1YmVzIGZvciBPcHRvZWxlY3Ryb25pYyBBcHBsaWNhdGlvbnMuIFBvbHltZXJzIGZvciBBZHZhbmNlZCBUZWNobm9sb2dpZXMsIDEwLCAzNTctNDIwLjxici8+IGh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDIvKFNJQ0kpMTA5OS0xNTgxKDE5OTkwNykxMDo3PDM1Nzo6QUlELVBBVDg4Nj4zLjAuQ087Mi05ZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NjEnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwjwJDaGVuLCBHLlouLCBTaGFmZmVyLCBNLlMuUC4sIENvbGVieSwgRC4sIERpb3hhbiwgRy4sIEZyYXksIEQuSi4gYW5kIFdpbmRsZSwgQS5ILiAoMjAwMCkgQ2FyYm9uIE5hbm90dWJlIGFuZCBQb2x5cHlycm9sZSBDb21wb3NpdGVzOiBDb2F0aW5nIGFuZCBEb3BpbmcuIEFkdmFuY2VkIE1hdGVyaWFscywgMTIsIDUyMi01MjYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwMi8oU0lDSSkxNTIxLTQwOTUoMjAwMDA0KTEyOjc8NTIyOjpBSUQtQURNQTUyMj4zLjAuQ087Mi1TZAIKD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NjInIHRhcmdldD0nX2JsYW5rJz4xMTwvYT5dAjExAjEx0QFTYWl0bywgWS4sIFVlbXVyYSwgUy4gYW5kIEhhbWFndWNoaSwgSy4gKDE5OTgpIENhdGhvZGUgUmF5IFR1YmUgTGlnaHRpbmcgRWxlbWVudHMgd2l0aCBDYXJib24gTmFub3R1YmUgRmllbGQgRW1pdHRlcnMuIEphcGFuZXNlIEpvdXJuYWwgb2YgQXBwbGllZCBQaHlzaWNzLCAzNywgTDM0Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTQzL0pKQVAuMzcuTDM0NmQCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjYzJyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMpcCTGlhbywgWS4sIFpoYW5nLCBDLiwgV2FuZywgWC4sIExpLCBYLkcuLCBJcHBvbGl0bywgUy5KLiwgS2FsYW50YXItemFkZWgsIEsuIGFuZCBLYW5lciwgUi5CLiAoMjAxMSkgQ2FycmllciBNb2JpbGl0eSBvZiBTaW5nbGUtV2FsbGVkIENhcmJvbiBOYW5vdHViZS1SZWluZm9yY2VkIFBvbHlhbmlsaW5lIE5hbm9maWJlcnMuIFRoZSBKb3VybmFsIG9mIFBoeXNpY2FsIENoZW1pc3RyeSBDLCAxMTUsIDE2MTg3LTE2MTkyLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMjEvanAyMDUzNTg1ZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NjQnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEz0QFQcnVuLCBBLiwgQnJhbnpvaSwgVi4gYW5kIEJyYW56b2ksIEYuICgyMDExKSBPcmRlcmVkIEFycmF5cyBvZiBDb3BwZXIgTmFub3dpcmVzIEVudmVsb3BlZCBpbiBQb2x5YW5pbGluZSBOYW5vdHViZXMuIEpvdXJuYWwgQXBwbGllZCBFbGVjdHJvY2hlbWlzdHJ5LCA0MSwgNzctODEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy9zMTA4MDAtMDEwLTAyMDktNGQCDQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjY1JyB0YXJnZXQ9J19ibGFuayc+MTQ8L2E+XQIxNAIxNIsCU2hpcmFrd2EsIEguICgyMDAxKSBUaGUgRGlzY292ZXJ5IG9mIFBvbHlhY2V0eWxlbmUgRmlsbTogVGhlIERhd25pbmcgb2YgYW4gRXJhIG9mIENvbmR1Y3RpbmcgUG9seW1lcnMgKE5vYmVsIExlY3R1cmUpLCBBbmdldy4gQW5nZXdhbmR0ZSBDaGVtaWUgSW50ZXJuYXRpb25hbCBFZGl0aW9uLCA0MCwgMjU3NC0yNTgwLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDIvMTUyMS0zNzczKDIwMDEwNzE2KTQwOjE0PDI1NzQ6OkFJRC1BTklFMjU3ND4zLjAuQ087Mi1OZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NjYnIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE1+gJDcmlzcGluLCBYLiwgSmFrb2Jzc29uLCBGLkwuRS4sIENyaXNwaW4sIEEuLCBHcmltLCBQLkMuTS4sIEFuZGVyc3NvbiwgUC4sIFZvbG9kaW4sIEEuLCB2YW4gSGFlc2VuZG9uY2ssIEMuLCBWYW4gZGVyIEF1d2VyYWVyLCBNLiwgU2FsYW5lY2ssIFcuUi4gYW5kIEJlcmdncmVuLCBNLiAoMjAwNikgVGhlIE9yaWdpbiBvZiB0aGUgSGlnaCBDb25kdWN0aXZpdHkgb2YgUG9seSAoMyw0LWV0aHlsZW5lLSBkaW94eXRoaW9waGVuZSktcG9seShzdHlyZW5lc3VsZm9uYXRlKSAoUEVET1QtUFNTKSBQbGFzdGljIEVsZWN0cm9kZXMuIENoZW1pc3RyeSBvZiBNYXRlcmlhbHMsIDE4LCA0MzU0LTQzNjAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAyMS9jbTA2MTAzMitkAg8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY2NycgdGFyZ2V0PSdfYmxhbmsnPjE2PC9hPl0CMTYCMTb9AUJyZWlieSwgRC5XLiwgU2FtdWVsc2VuLCBMLkIuIGFuZCBHcm9lbmVuZGFhbCwgQi4gKDIwMDMpIFNtZWN0aWMgU3RydWN0dXJlcyBpbiBFbGVjdHJvY2hlbWljYWxseSBQcmVwYXJlZCBQb2x5ICgzLDQtZXRoeWxlbmVkaW94eXRoaW9waGVuZSkgRmlsbXMuIEpvdXJuYWwgb2YgUG9seW1lciBTY2llbmNlIFBhcnQgQjogUG9seW1lciBQaHlzaWNzLCA0MSwgOTQ1LTk1Mi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDAyL3BvbGIuMTA0MTJkAhAPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY2OCcgdGFyZ2V0PSdfYmxhbmsnPjE3PC9hPl0CMTcCMTerAkx1bywgUy5DLiwgTW9oYW1lZCwgQS5FLiwgVGFuc2lsLCBOLkMuLCBZdSwgSC5ILiwgR2FvLCBTLiBhbmQgWWluZywgSi5ZLiAoMjAwOCkgUG9seSgzLDQtZXRoeWxlbmVkaW94eXRoaW9waGVuZSkgKFBFRE9UKSBOYW5vYmlvaW50ZXJmYWNlczogVGhpbiwgVWx0cmFzbW9vdGgsIGFuZCBGdW5jdGlvbmFsaXplZCBQRURPVCBGaWxtcyB3aXRoIGluIFZpdHJvIGFuZCBpbiBWaXZvIEJpb2NvbXBhdGliaWxpdHkuIExhbmdtdWlyLCAyNCwgODA3MS04MDc3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMjEvbGE4MDAzMzNnZAIRD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NjknIHRhcmdldD0nX2JsYW5rJz4xODwvYT5dAjE4AjE4nAJHcm9lbmVuZGFhbCwgQi5MLiwgSm9uYXMsIEYuLCBGcmVpdGFnLCBELiwgUGllbGFydHppaywgSC4gYW5kIFJleW5vbGRzLCBKLlIuICgyMDAwKSBQb2x5KDMsNC1ldGh5bGVuZWRpb3h5dGhpb3BoZW5lKSBhbmQgSXRzIERlcml2YXRpdmVzOiBQYXN0LCBQcmVzZW50LCBhbmQgRnV0dXJlLiBBZHZhbmNlZCBNYXRlcmlhbHMsIDEyLCA0ODEtNDk0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDIvKFNJQ0kpMTUyMS00MDk1KDIwMDAwNCkxMjo3PDQ4MTo6QUlELUFETUE0ODE+My4wLkNPOzItQ2QCEg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjcwJyB0YXJnZXQ9J19ibGFuayc+MTk8L2E+XQIxOQIxOYgCQnJlaWJ5LCBELlcuLCBTYW11ZWxzZW4sIEwuQi4sIEdyb2VuZW5kYWFsLCBCLiBhbmQgU3RydXRoLCBCLiAoMjAwMykgU21lY3RpYyBTdHJ1Y3R1cmVzIGluIEVsZWN0cm9jaGVtaWNhbGx5IFByZXBhcmVkIFBvbHkoMyw0LWV0aHlsZW5lZGlveHl0aGlvcGhlbmUpIEZpbG1zLiBKb3VybmFsIG9mIFBvbHltZXIgU2NpZW5jZSBQYXJ0IEI6IFBvbHltZXIgUGh5c2ljcywgNDEsIDk0NS05NTIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwMi9wb2xiLjEwNDEyZAITD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NzEnIHRhcmdldD0nX2JsYW5rJz4yMDwvYT5dAjIwAjIw0wFXaW50aGVyLUplbnNlbiwgQi4gYW5kIFdlc3QsIEsuICgyMDA2KSBTdGFiaWxpdHkgb2YgSGlnaGx5IENvbmR1Y3RpdmUgUG9seS0zLDQtZXRoeWxlbmUtZGlveHl0aGlvcGhlbmUuIFJlYWN0aXZlIGFuZCBGdW5jdGlvbmFsIFBvbHltZXJzLCA2NiwgNDc5LTQ4My4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucmVhY3RmdW5jdHBvbHltLjIwMDUuMDguMDA3ZAIUD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NzInIHRhcmdldD0nX2JsYW5rJz4yMTwvYT5dAjIxAjIx+QFLcm9zLCBBLiwgU29tbWVyZGlqaywgTi5BLkouTS4gYW5kIE5vbHRlLCBSLkouTS4gKDIwMDUpIFBvbHkocHlycm9sZSkgdmVyc3VzIFBvbHkoMyw0LWV0aHlsZW5lZGlveHl0aGlvcGhlbmUpOiBJbXBsaWNhdGlvbnMgZm9yIEJpb3NlbnNvciBBcHBsaWNhdGlvbnMuIFNlbnNvcnMgYW5kIEFjdHVhdG9ycyBCOiBDaGVtaWNhbCwgMTA2LCAyODktMjk1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5zbmIuMjAwNC4wOC4wMTFkAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY3MycgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjK9Akx1bywgUy5DLiwgTW9oYW1lZCwgQS5FLiwgVGFuc2lsLCBOLkMuLCBZdSwgSC5ILiwgR2FvLCBTLiwgS2FudGNoZXYsIEUuQS4gYW5kIFlpbmcsIEouWS4gKDIwMDgpIFBvbHkoMyw0LWV0aHlsZW5lLSBkaW94eXRoaW9waGVuZSkgKFBFRE9UKSBOYW5vYmlvaW50ZXJmYWNlczogVGhpbiwgVWx0cmFzbW9vdGgsIGFuZCBGdW5jdGlvbmFsaXplZCBQRURPVCBGaWxtcyB3aXRoIGluIFZpdHJvIGFuZCBpbiBWaXZvIEJpb2NvbXBhdGliaWxpdHkuIExhbmdtdWlyLCAyNCwgODA3MS04MDc3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMjEvbGE4MDAzMzNnZAIWD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2NzQnIHRhcmdldD0nX2JsYW5rJz4yMzwvYT5dAjIzAjIz/wFCcmFuem9pLCBGLiBhbmQgQnJhbnpvaSwgVi4gKDIwMTQpIEVuenltYXRpYyBFbGVjdHJvZGUgT2J0YWluZWQgYnkgSW1tb2JpbGl6aW5nIG9mIFVyZWFzZSBpbnRvIGEgTmFub2NvbXBvc2l0ZSBGaWxtIEJhc2VkIG9uIENvbmR1Y3RpbmcgUG9seW1lcnMgYW5kIERpZmZlcmVudCBBZGRpdGl2ZXMuIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBQb2x5bWVyaWMgTWF0ZXJpYWxzIGFuZCBQb2x5bWVyaWMgQmlvbWF0ZXJpYWxzLCA2MywgNTQ5LTU1Ny5kAhcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY3NScgdGFyZ2V0PSdfYmxhbmsnPjI0PC9hPl0CMjQCMjTJAVRhbmd1eSwgSi4sIFNsYW1hLCBNLiwgSG9jbGV0LCBNLiBhbmQgQmF1ZG91aW4sIEouTC4gKDE5ODkpIEltcGVkYW5jZSBNZWFzdXJlbWVudHMgb24gRGlmZmVyZW50IENvbmR1Y3RpbmcgUG9seS0gbWVycy4gU3ludGhldGljIE1ldGFscywgMjgsIDE0NS0xNTAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wMzc5LTY3NzkoODkpOTA1MTItMmQCGA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njc2JyB0YXJnZXQ9J19ibGFuayc+MjU8L2E+XQIyNQIyNacBU2l2YWt1bWFyLCBSLiBhbmQgU2FyYXN3YXRoaSwgUi4gKDIwMDMpIFJlZG94IFByb3BlcnRpZXMgb2YgUG9seShOLW1ldGh5bGFuaWxpbmUpLiBTeW50aGV0aWMgTWV0YWxzLCAxMzgsIDM4MS0zOTAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9TMDM3OS02Nzc5KDAzKTAwMDIzLTdkAhkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY3NycgdGFyZ2V0PSdfYmxhbmsnPjI2PC9hPl0CMjYCMjbeAUJyYW56b2ksIEYuLCBCcmFuem9pLCBWLiBhbmQgTXVzaW5hLCBBLiAoMjAxMikgRmFicmljYXRpb24gYW5kIENoYXJhY3RlcmlzYXRpb24gb2YgQ29uZHVjdGluZyBDb21wb3NpdGUgRmlsbXMgQmFzZWQgb24gQ29uZHVjdGluZyBQb2x5bWVycyBhbmQgRnVuY3Rpb25hbGlzZWQgQ2FyYm9uIE5hbm90dWJlcy4gU3VyZmFjZSBhbmQgSW50ZXJmYWNlIEFuYWx5c2lzLCA0NCwgMTA3Ni0xMDgxLmQCGg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njc4JyB0YXJnZXQ9J19ibGFuayc+Mjc8L2E+XQIyNwIyN8kCT2hzYWthLCBULiwgT2thamltYSwgVC4gYW5kIE95YW1hLCBOLiAoMTk4NikgQW5pb24tRXhjaGFuZ2UgUHJvcGVydGllcyBvZiBQb2x5bWVyIEZpbG1zIFByZXBhcmVkIGJ5IEVsZWN0cm9jaGVtaWNhbGx5IEluaXRpYXRlZCBQb2x5bWVyaXphdGlvbiBvZiBOLE4tRGlhbGt5bCBTdWJzdGl0dXRlZCBBbmlsaW5lIERlcml2YXRpdmVzLiBKb3VybmFsIG9mIEVsZWN0cm9hbmFseXRpY2FsIENoZW1pc3RyeSBhbmQgSW50ZXJmYWNpYWwgRWxlY3Ryb2NoZW1pc3RyeSwgMjAwLCAxNTktMTc4LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvMDAyMi0wNzI4KDg2KTkwMDUzLTdkAhsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY3OScgdGFyZ2V0PSdfYmxhbmsnPjI4PC9hPl0CMjgCMjjYAU90ZXJvLCBULkYuIGFuZCBEZSBMYXJldHRhLCBFLiAoMTk4OCkgRWxlY3Ryb2NoZW1pY2FsIENvbnRyb2wgb2YgdGhlIE1vcnBob2xvZ3ksIEFkaGVyZW5jZSwgQXBwZWFyYW5jZSBhbmQgR3Jvd3RoIG9mIFBvbHlweXJyb2xlIEZpbG1zLiBTeW50aGV0aWMgTWV0YWxzLCAyNiwgNzktODguIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wMzc5LTY3NzkoODgpOTAzMzctMmQCHA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjgwJyB0YXJnZXQ9J19ibGFuayc+Mjk8L2E+XQIyOQIyOcwBRHUsIFguIGFuZCBXYW5nLCBaLiAoMjAwMykgRWZmZWN0cyBvZiBQb2x5bWVyaXphdGlvbiBQb3RlbnRpYWwgb24gdGhlIFByb3BlcnRpZXMgb2YgRWxlY3Ryb3N5bnRoZXNpemVkIFBFRE9UIEZpbG1zLiBFbGVjdHJvY2hpbWljYSBBY3RhLCA0OCwgMTcxMy0xNzE3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvUzAwMTMtNDY4NigwMykwMDE0My05ZAIdD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2ODEnIHRhcmdldD0nX2JsYW5rJz4zMDwvYT5dAjMwAjMwhQJQZW5nLCBDLiwgSmluLCBKLiBhbmQgQ2hlbiwgRy5aLiAoMjAwNykgQSBDb21wYXJhdGl2ZSBTdHVkeSBvbiBFbGVjdHJvY2hlbWljYWwgQ28tRGVwb3NpdGlvbiBhbmQgQ2FwYWNpdGFuY2Ugb2YgQ29tcG9zaXRlIEZpbG1zIG9mIENvbmR1Y3RpbmcgUG9seW1lcnMgYW5kIENhcmJvbiBOYW5vdHViZXMuIEVsZWN0cm9jaGltaWNhIEFjdGEsIDUzLCA1MjUtNTM3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5lbGVjdGFjdGEuMjAwNy4wNy4wMDRkAh4PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY4MicgdGFyZ2V0PSdfYmxhbmsnPjMxPC9hPl0CMzECMzGDAkhvbmcsIEouLUkuLCBZZW8sIEkuLUguIGFuZCBQYWlrLCBXLi1LLiAoMjAwMSkgQ29uZHVjdGluZyBQb2x5bWVyIHdpdGggTWV0YWwgT3hpZGUgZm9yIEVsZWN0cm9jaGVtaWNhbCBDYXBhY2l0b3I6IFBvbHkoMyw0LWV0aHlsZW5lZGlveHl0aGlvcGhlbmUpIFJ1T3ggRWxlY3Ryb2RlLiBKb3VybmFsIG9mIHRoZSBFbGVjdHJvY2hlbWljYWwgU29jaWV0eSwgMTQ4LCBBMTU2LUExNjMuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE0OS8xLjEzNDIxNjZkAh8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY4MycgdGFyZ2V0PSdfYmxhbmsnPjMyPC9hPl0CMzICMzLMAUR1LCBYLiBhbmQgV2FuZywgWi4gKDIwMDMpIEVmZmVjdHMgb2YgUG9seW1lcml6YXRpb24gUG90ZW50aWFsIG9uIHRoZSBQcm9wZXJ0aWVzIG9mIEVsZWN0cm9zeW50aGVzaXplZCBQRURPVCBGaWxtcy4gRWxlY3Ryb2NoaW1pY2EgQWN0YSwgNDgsIDE3MTMtMTcxNy4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L1MwMDEzLTQ2ODYoMDMpMDAxNDMtOWQCIA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njg0JyB0YXJnZXQ9J19ibGFuayc+MzM8L2E+XQIzMwIzM5kCTGksIEwuLCBMb3ZlZGF5LCBELkMuLCBNdWRpZ29uZGEsIEQuUy5LLiBhbmQgRmVycmFyaXMsIEouUC4gKDIwMDIpIEVmZmVjdCBvZiBFbGVjdHJvbHl0ZXMgb24gUGVyZm9ybWFuY2Ugb2YgRWxlY3Ryb2NoZW1pY2FsIENhcGFjaXRvcnMgQmFzZWQgb24gUG9seVszLSgzLDQtZGlmbHVvcm9waGVueWwpdGhpb3BoZW5lXS4gSm91cm5hbCBvZiB0aGUgRWxlY3Ryb2NoZW1pY2FsIFNvY2lldHksIDE0OSwgQTEyMDEtQTEyMDcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE0OS8xLjE0OTg4NDBkAiEPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY4NScgdGFyZ2V0PSdfYmxhbmsnPjM0PC9hPl0CMzQCMzTVAUJyYW56b2ksIFYuLCBQcnVuLCBBLiBhbmQgQnJhbnpvaSwgRi4gKDIwMDgpIEVsZWN0cm9zeW50aGVzaXplZCBEb3BlZCBQb2x5cHlycm9sZSBGaWxtcyBvbiBQdXJlIFppbmMgRWxlY3Ryb2RlLiBNb2xlY3VsYXIgQ3J5c3RhbCBhbmQgTGlxdWlkIENyeXN0YWxzLCA0ODUsIDg1My04NjEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA4MC8xNTQyMTQwMDgwMTkyMjQ4NmQCIg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njg2JyB0YXJnZXQ9J19ibGFuayc+MzU8L2E+XQIzNQIzNf0BQnJhbnpvaSwgVi4sIEJyYW56b2ksIEYuIGFuZCBQaWxhbiwgTC4gKDIwMDkpIENoYXJhY3Rlcml6YXRpb24gb2YgRWxlY3Ryb2RlcG9zaXRlZCBQb2x5bWVyaWMgYW5kIENvbXBvc2l0ZSBNb2RpZmllZCBFbGVjdHJvZGVzIG9uIENvYmFsdCBCYXNlZCBBbGxveS4gTWF0ZXJpYWxzIENoZW1pc3RyeSBhbmQgUGh5c2ljcywgMTE4LCAxOTctMjAzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5tYXRjaGVtcGh5cy4yMDA5LjA3LjAyMGQCIw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njg3JyB0YXJnZXQ9J19ibGFuayc+MzY8L2E+XQIzNgIzNo4CQWdvLCBILiwgUGV0cml0Y2gsIEsuLCBTaGFmZmVyLCBNLlMuUC4gYW5kIEZyaWVuZCwgUi5ILiAoMTk5OSkgQ29tcG9zaXRlcyBvZiBDYXJib24gTmFub3R1YmVzIGFuZCBDb25qdWdhdGVkIFBvbHktIG1lcnMgZm9yIFBob3Rvdm9sdGFpYyBEZXZpY2VzLiBBZHZhbmNlZCBNYXRlcmlhbHMsIDExLCAxMjgxLTEyODUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwMi8oU0lDSSkxNTIxLTQwOTUoMTk5OTEwKTExOjE1PDEyODE6OkFJRC1BRE1BMTI4MT4zLjAuQ087Mi02ZAIkD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2ODgnIHRhcmdldD0nX2JsYW5rJz4zNzwvYT5dAjM3AjM3hQJQZW5nLCBDLiwgSmluLCBKLiBhbmQgQ2hlbiwgRy5aLiAoMjAwNykgQSBDb21wYXJhdGl2ZSBTdHVkeSBvbiBFbGVjdHJvY2hlbWljYWwgQ28tRGVwb3NpdGlvbiBhbmQgQ2FwYWNpdGFuY2Ugb2YgQ29tcG9zaXRlIEZpbG1zIG9mIENvbmR1Y3RpbmcgUG9seW1lcnMgYW5kIENhcmJvbiBOYW5vdHViZXMuIEVsZWN0cm9jaGltaWNhIEFjdGEsIDUzLCA1MjUtNTM3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5lbGVjdGFjdGEuMjAwNy4wNy4wMDRkAiUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY4OScgdGFyZ2V0PSdfYmxhbmsnPjM4PC9hPl0CMzgCMziiAVdhbmcsIEouLCBEYWksIEouIGFuZCBZYXJsYWdhZGRhLCBULiAoMjAwNSkgQ2FyYm9uIE5hbm90dWJl4oCUQ29uZHVjdGluZy1Qb2x5bWVyIENvbXBvc2l0ZSBOYW5vd2lyZXMuIExhbmdtdWlyLCAyMSwgOS0xMi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDIxL2xhMDQ3NTk3N2QCJg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjkwJyB0YXJnZXQ9J19ibGFuayc+Mzk8L2E+XQIzOQIzOYkCVHNhaSwgQy4sIExpLCBTLkMuIGFuZCBMaWFvLCBTLlcuICgyMDA2KSBFbGVjdHJvZGVwb3NpdGlvbiBvZiBQb2x5cHlycm9sZS1NdWx0aXdhbGxlZCBDYXJib24gTmFub3R1YmUtR2x1Y29zZSBPeGktIGRhc2UgTmFub2Jpb2NvbXBvc2l0ZSBGaWxtIGZvciB0aGUgRGV0ZWN0aW9uIG9mIEdsdWNvc2UuIEJpb3NlbnNvcnMgYW5kIEJpb2VsZWN0cm9uaWNzLCAyMiwgNDk1LTUwMC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouYmlvcy4yMDA2LjA2LjAwOWQCJw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjkxJyB0YXJnZXQ9J19ibGFuayc+NDA8L2E+XQI0MAI0MNcBQ2hlbiwgSi4sIEhhbW9uLCBNLkEuLCBIdSwgSC4sIENoZW4sIFkuLCBSYW8sIEEuTS4sIEVrbHVuZCwgUC5DLiBhbmQgSGFkZG9uLCBSLkMuICgxOTk4KSBTb2x1dGlvbiBQcm9wZXJ0aWVzIG9mIFNpbmdsZS1XYWxsZWQgQ2FyYm9uIE5hbm90dWJlcy4gU2NpZW5jZSwgMjgyLCA5NS05OC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMjgyLjUzODYuOTVkAigPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY5MicgdGFyZ2V0PSdfYmxhbmsnPjQxPC9hPl0CNDECNDHBAkNoZW4sIFkuLCBIYWRkb24sIFIuQy4sIEZhbmcsIFMuLCBSYW8sIEEuTS4sIEVrbHVuZCwgUC5DLiwgTGVlLCBXLkguLCBEaWNrZXksIEUuQy4sIEdydWxrZSwgRS5BLiwgUGVuZGVyZ3Jhc3MsIEEuIGFuZCBTbWFsbGV5LCBSLkUuICgxOTk4KSBDaGVtaWNhbCBBdHRhY2htZW50IG9mIE9yZ2FuaWMgRnVuY3Rpb25hbCBHcm91cHMgdG8gU2luZ2xlLVdhbGxlZCBDYXJib24gTmFub3R1YmUgTWF0ZXJpYWwuIEpvdXJuYWwgb2YgTWF0ZXJpYWxzIFJlc2VhcmNoLCAxMywgMjQyMy0yNDMxLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjE1NTcvSk1SLjE5OTguMDMzN2QCKQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjkzJyB0YXJnZXQ9J19ibGFuayc+NDI8L2E+XQI0MgI0MqQCSG9semluZ2VyLCBNLiwgVm9zdHJvd3NreSwgTy4sIEhpcnNjaCwgQS4sIEhlbm5yaWNoLCBGLiwgS2FwcGVzLCBNLiwgV2Vpc3MsIFIuIGFuZCBKZWxsZW4sIEYuICgyMDAxKSBTaWRld2FsbCBGdW5jLSB0aW9uYWxpemF0aW9uIG9mIENhcmJvbiBOYW5vdHViZXMuIEFuZ2V3YW5kdGUgQ2hlbWllIEludGVybmF0aW9uYWwgRWRpdGlvbiwgNDAsIDQwMDItNDAwNS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDAyLzE1MjEtMzc3MygyMDAxMTEwNSk0MDoyMTw0MDAyOjpBSUQtQU5JRTQwMDI+My4wLkNPOzItOGQCKg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njk0JyB0YXJnZXQ9J19ibGFuayc+NDM8L2E+XQI0MwI0M7IBRHlrZSwgQy5BLiBhbmQgVG91ciwgSi5NLiAoMjAwMykgVW5idW5kbGVkIGFuZCBIaWdobHkgRnVuY3Rpb25hbGl6ZWQgQ2FyYm9uIE5hbm90dWJlcyBmcm9tIEFxdWVvdXMgUmVhY3Rpb25zLiBOYW5vIExldHRlcnMsIDMsIDEyMTUtMTIxOC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDIxL25sMDM0NTM3eGQCKw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njk1JyB0YXJnZXQ9J19ibGFuayc+NDQ8L2E+XQI0NAI0NOgBU2FpbmksIFIuSy4sIENoaWFuZywgSS5XLiwgUGVuZywgSC4sIFNtYWxsZXksIFIuRS4sIEJpbGx1cHMsIFcuRS4sIEhhdWdlLCBSLkguIGFuZCBNYXJncmF2ZSwgSi5MLiAoMjAwMykgQ292YWxlbnQgU2lkZXdhbGwgRnVuY3Rpb25hbGl6YXRpb24gb2YgU2luZ2xlIFdhbGwgQ2FyYm9uIE5hbm90dWJlcy4gSm91cm5hbCBvZiB0aGUgQW1lcmljYW4gQ2hlbWljYWwgU29jaWV0eSwgMTI1LCAzNjE3LSAzNjIxLmQCLA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4Njk2JyB0YXJnZXQ9J19ibGFuayc+NDU8L2E+XQI0NQI0NbkBRHlrZSwgQy5BLiBhbmQgVG91ciwgSi5NLiAoMjAwMykgU29sdmVudC1GcmVlIEZ1bmN0aW9uYWxpemF0aW9uIG9mIENhcmJvbiBOYW5vdHViZXMuIEpvdXJuYWwgb2YgdGhlIEFtZXJpY2FuIENoZS0gbWljYWwgU29jaWV0eSwgMTI1LCAxMTU2LTExNTcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAyMS9qYTAyODk4MDZkAi0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY5NycgdGFyZ2V0PSdfYmxhbmsnPjQ2PC9hPl0CNDYCNDbHAVdpbGxpYW1zLCBLLkEuLCBWZWVuaHVpemVuLCBQLlQuTS4sIGRlIGxhIFRvcnJlLCBCLkcuLCBFcml0amEsIFIuIGFuZCBEZWtrZXIsIEMuICgyMDAyKSBOYW5vdGVjaG5vbG9neTogQ2FyYm9uIE5hbm90dWJlcyB3aXRoIEROQSBSZWNvZ25pdGlvbi4gTmF0dXJlLCA0MjAsIDc2MS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDM4LzQyMDc2MWFkAi4PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY5OCcgdGFyZ2V0PSdfYmxhbmsnPjQ3PC9hPl0CNDcCNDfoAU5peW9naSwgUy4sIEhhbW9uLCBNLkEuLCBIdSwgSC4sIFpoYW8sIEIuLCBCaG93bWlrLCBQLiwgU2VuLCBSLiwgSXRraXMsIE0uRS4gYW5kIEhhZGRvbiwgUi5DLiAoMjAwMikgQ2hlbWlzdHJ5IG9mIFNpbmdsZS1XYWxsZWQgQ2FyYm9uIE5hbm90dWJlcy4gQWNjb3VudHMgb2YgQ2hlbWljYWwgUmVzZWFyY2gsIDM1LCAxMTA1LTExMTMuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAyMS9hcjAxMDE1NXJkAi8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODY5OScgdGFyZ2V0PSdfYmxhbmsnPjQ4PC9hPl0CNDgCNDi5AUthbWFyYXMsIEsuLCBJdGtpcywgTS5FLiwgSHUsIEguLCBaaGFvLCBCLiBhbmQgSGFkZG9uLCBSLkMuICgyMDAzKSBDb3ZhbGVudCBCb25kIEZvcm1hdGlvbiB0byBhIENhcmJvbiBOYW5vdHViZSBNZXRhbC4gU2NpZW5jZSwgMzAxLCAxNTAxLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMjYvc2NpZW5jZS4xMDg4MDgzZAIwD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg3MDAnIHRhcmdldD0nX2JsYW5rJz40OTwvYT5dAjQ5AjQ5nQJDaGVuLCBKLiwgUmFvLCBBLk0uLCBMeXVrc3l1dG92LCBTLiwgSXRraXMsIE0uRS4sIEhhbW9uLCBNLkEuLCBIdSwgSC4sIENvaG4sIFIuVy4sIEVrbHVuZCwgRC5ULiwgU21hbGxleSwgUi4gYW5kIEhhZGRvbiwgUi5DLiAoMjAwMSkgRGlzc29sdXRpb24gb2YgRnVsbC1MZW5ndGggU2luZ2xlLVdhbGxlZCBDYXJib24gTmFub3R1YmVzLiBUaGUgSm91cm5hbCBvZiBQaHlzaWNhbCBDaGVtaXN0cnkgQiwgMTA1LCAyNTI1LTI1MjguIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAyMS9qcDAwMjU5NmlkAjEPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODcwMScgdGFyZ2V0PSdfYmxhbmsnPjUwPC9hPl0CNTACNTCDAlpoYW8sIEIuLCBIdSwgSC4gYW5kIEhhZGRvbiwgUi5DLiAoMjAwNCkgU3ludGhlc2lzIGFuZCBQcm9wZXJ0aWVzIG9mIGEgV2F0ZXItU29sdWJsZSBTaW5nbGUtV2FsbGVkIENhcmJvbiBOYW5vLSB0dWJl4oCUUG9seShtLWFtaW5vYmVuemVuZSBzdWxmb25pYyBhY2lkKSBHcmFmdCBDb3BvbHltZXIuIEFkdmFuY2VkIEZ1bmN0aW9uYWwgTWF0ZXJpYWxzLCAxNCwgNzEtNzYuICA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDIvYWRmbS4yMDAzMDQ0NDBkAjIPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODcwMicgdGFyZ2V0PSdfYmxhbmsnPjUxPC9hPl0CNTECNTHVAUp1cmV3aWV6LCBLLiwgRGVscGV1eCwgUy4sIEJlcnRhZ25hLCBWLiBhbmQgRnJhY2tvd2lhaywgRS4gKDIwMDEpIFN1cGVyY2FwYWNpdG9ycyBmcm9tIE5hbm90dWJlcy9Qb2x5cHlycm9sZSBDb20tIHBvc2l0ZXMuIENoZW1pY2FsIFBoeXNpY3MgTGV0dGVycywgMzQ3LCAzNi00MC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L1MwMDA5LTI2MTQoMDEpMDEwMzctNWQCMw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NzAzJyB0YXJnZXQ9J19ibGFuayc+NTI8L2E+XQI1MgI1MuEBR3VwdGEsIFYuIGFuZCBNaXVyYSwgTi4gKDIwMDYpIFBvbHlhbmlsaW5lL1NpbmdsZS1XYWxsIENhcmJvbiBOYW5vdHViZSAoUEFOSS9TV0NOVCkgQ29tcG9zaXRlcyBmb3IgSGlnaCBQZXItIGZvcm1hbmNlIFN1cGVyY2FwYWNpdG9ycy4gRWxlY3Ryb2NoaW1pY2EgQWN0YSwgNTIsIDE3MjEtMTcyNi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouZWxlY3RhY3RhLjIwMDYuMDEuMDc0ZAI0D2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg3MDQnIHRhcmdldD0nX2JsYW5rJz41MzwvYT5dAjUzAjUz0gFYaWFvLCBRLiBhbmQgWmhvdSwgWC4gKDIwMDMpIFRoZSBTdHVkeSBvZiBNdWx0aXdhbGxlZCBDYXJib24gTmFub3R1YmUgRGVwb3NpdGVkIHdpdGggQ29uZHVjdGluZyBQb2x5bWVyIGZvciBTdXBlcmNhcGFjaXRvci4gRWxlY3Ryb2NoaW1pY2EgQWN0YSwgNDgsIDU3NS01ODAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9TMDAxMy00Njg2KDAyKTAwNzI3LTJkAjUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODcwNScgdGFyZ2V0PSdfYmxhbmsnPjU0PC9hPl0CNTQCNTSpAlplbmcsIEouWC4sIFdlaSwgVy5aLiwgV3UsIEwuLCBMaXUsIFguWS4sIExpdSwgSy4gYW5kIExpLCBZLiAoMjAwNikgRmFicmljYXRpb24gb2YgUG9seSh0b2x1aWRpbmUgYmx1ZSBPKS9DYXJib24gTmFub3R1YmUgQ29tcG9zaXRlIE5hbm93aXJlcyBhbmQgSXRzIFN0YWJsZSBMb3ctUG90ZW50aWFsIERldGVjdGlvbiBvZiBOQURILiBKb3VybmFsIG9mIEVsZWN0cm9hbmFseXRpY2FsIENoZW1pc3RyeSwgNTk1LCAxNTItMTYwLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5qZWxlY2hlbS4yMDA2LjA3LjAxNGQCNg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NzA2JyB0YXJnZXQ9J19ibGFuayc+NTU8L2E+XQI1NQI1NewBRmVycmVyLUFuZ2xhZGEsIE4uLCBLYWVtcGdlbiwgTS4gYW5kIFJvdGgsIFMuICgyMDA2KSBUcmFuc3BhcmVudCBhbmQgRmxleGlibGUgQ2FyYm9uIE5hbm90dWJlL1BvbHlweXJyb2xlIGFuZCBDYXJib24gTmFub3R1YmUvUG9seWFuaWxpbmUgcEggU2Vuc29ycy4gUGh5c2ljYSBTdGF0dXMgU29saWRpIEIsIDI0MywgMzUxOS0zNTIzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDIvcHNzYi4yMDA2NjkyMjBkAjcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODcwNycgdGFyZ2V0PSdfYmxhbmsnPjU2PC9hPl0CNTYCNTadAlNhbnRob3NoLCBQLiwgTWFuZXNoLCBLLk0uLCBMZWUsIEsuLVAuIGFuZCBHb3BhbGFuLCBBLkkuICgyMDA2KSBFbmhhbmNlZCBFbGVjdHJvY2F0YWx5c2lzIGZvciB0aGUgUmVkdWN0aW9uIG9mIEh5ZHJvZ2VuIFBlcm94aWRlIGF0IE5ldyBNdWx0aXdhbGwgQ2FyYm9uIE5hbm90dWJlIEdyYWZ0ZWQgUG9seWRpcGhlbnlsYW1pbmUgTW9kaWZpZWQgRWxlY3Ryb2RlLiBFbGVjdHJvYW5hbHktIHNpcywgMTgsIDg5NC05MDMuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwMi9lbGFuLjIwMDUwMzQ3NGQCOA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NzA4JyB0YXJnZXQ9J19ibGFuayc+NTc8L2E+XQI1NwI1N7QCTHUsIEcuVy4sIExpLCBDLiwgU2hlbiwgSi5ZLiwgQ2hlbiwgWi5KLiBhbmQgU2hpLCBHLlEuICgyMDA3KSBQcmVwYXJhdGlvbiBvZiBIaWdobHkgQ29uZHVjdGl2ZSBHb2xk4oCUUG9seSgzLDQtIGV0aHlsZW5lZGlveHl0aGlvcGhlbmUpIE5hbm9jYWJsZXMgYW5kIFRoZWlyIENvbnZlcnNpb24gdG8gUG9seSgzLDQtZXRoeWxlbmVkaW94eXRoaW9waGVuZSkgTmFub3R1YmVzLiBUaGUgSm91cm5hbCBvZiBQaHlzaWNhbCBDaGVtaXN0cnkgQywgMTExLCA1OTI2LTU5MzEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAyMS9qcDA3MDM4N3RkAggPZBYEAgcPFgIfAwUNRGlzUGxheTpOb25lO2QCCA8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAILD2QWAmYPFgIeB1Zpc2libGVnZAIMD2QWAgIBD2QWAgIBD2QWAgIDDxAPFgYeDURhdGFUZXh0RmllbGQFCVNob3J0TmFtZR4ORGF0YVZhbHVlRmllbGQFCUpvdXJuYWxJRB4LXyFEYXRhQm91bmRnZBAVgAIOU2VsZWN0IEpvdXJuYWwCQUEDQUFEA0FBUgZBQVNvY2kEQUFTVANBQkIDQUJDBEFCQ1IEQUNFUwNBQ1MDQUNUAkFEA0FEUgJBRQNBRVIDQUhTA0FJRANBaU0DQUlUBEFKQUMDQUpDBEFKQ0MEQUpDTQVBSklCTQRBSk1CBEFKT1IEQUpQUwVBTEFNVANBTEMDQUxTAkFNA0FNSQRBTVBDA0FOUANBUEQDQVBFA0FQTQNBUlMFQVJTY2kCQVMDQVNNA0JMUgJDQwJDRQdDZWxsQmlvBkNoblN0ZAJDTQNDTUICQ04EQ1JDTQJDUwRDU1RBA0NVUwVDV0VFRQlEZXRlY3Rpb24ERU1BRQNFTkcDRVBFBEVUU04ERk1BUgNGTlMDR0VQA0dJUwJHTQhHcmFwaGVuZQNHU0MGSGVhbHRoAklCA0lDQQNJSU0ESUpBQQZJSkFNU0MFSUpDQ0UESUpDTQVJSkNOUwNJSkcFSUpJRFMESUpJUwZJSk1OVEEISUpNUENFUk8ESUpOTQRJSk9DBklKT0hOUwtJbmZyYU1hdGljcwVKQUNFTgRKQU1QBUpBU01JBEpCQlMFSkJDUFIFSkJpU0UDSkJNBEpCTkIESkJQQwNKQ0MFSkNEU0EESkNQVANKQ1QFSkRBSVADSkRNBEpFQVMFSkVDVEMFSkVNQUEDSkVQBUpGQ01WBEpGUk0ESkdJUwZKSEVQR0MFSkhSU1MGSklCVFZBBUpJTFNBA0pJUwNKTUYGSk1HQk5EBUpNTUNFA0pNUARKUEVFBEpRSVMESlNCUwRKU0VBBkpTRU1BVARKU0lQA0pTUwRKU1NNA0pTVANKVFIESlRTVARKVFRzBUpXQVJQA0xDRQJNQwJNRQJNSQNNTUUFTU5TTVMDTVBTAk1SA01SQwNNUkkDTVNBBE1TQ0UETkpHQwJOTQJOUgJOUwVPQUxpYgZPQUxpYkoET0RFTQNPSkEET0pBQgZPSkFjY3QGT0pBbmVzBE9KQVAFT0pBcG8GT0pBcHBTBU9KQVByBE9KQVMET0pCRAdPSkJJUEhZBE9KQk0DT0pDBE9KQ0IET0pDRARPSkNFBE9KQ00DT0pEBU9KRGVyBE9KRE0DT0pFBE9KRUUET0pFTQVPSkVNRAVPSkVwaQRPSkVSA09KRgRPSkZEA09KRwVPSkdhcwVPSkdlbgNPSkkET0pJQwRPSklNBU9KSU5NA09KTANPSk0ET0pNQwdPSk1ldGFsBE9KTUgET0pNSQVPSk1JUARPSk1MBE9KTU0ET0pNTgRPSk1QBE9KTVMFT0pNU2kDT0pOBk9KTmVwaANPSk8ET0pPRwZPSk9HYXMET0pPcAVPSk9waAVPSk9QTQVPSk9UUwtPSlBhdGhvbG9neQRPSlBDB09KUENoZW0FT0pQZWQET0pQTQRPSlBQBE9KUFMHT0pQc3ljaARPSlJBBU9KUmFkBE9KUkQET0pSTQNPSlMET0pTUwVPSlNTVARPSlNUBU9KU1RBBE9K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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=794" title="Open Journal of Organic Polymer Materials">
+                    Open Journal of Organic Polymer Materials</a> &gt; <a href="home?issueid=7023#60080">Vol.5 No.4, October 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                The Electrochemical Behaviour of PEDOT Film Electrosynthesized in Presence of Some Dopants <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Florina++Branzoi&searchfield=authors&page=1' target='_blank'>Florina  Branzoi</a><sup>1</sup>, <a href='articles?searchcode=Viorel++Branzoi&searchfield=authors&page=1' target='_blank'>Viorel  Branzoi</a><sup>2</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Institute+of+Physical+Chemistry+%e2%80%9cIlie+Murgulescu%e2%80%9d%2c+Bucharest%2c+Romania&searchfield=affs&page=1' target='_blank'>Institute of Physical Chemistry “Ilie Murgulescu”, Bucharest, Romania</a>.<br /><sup>2</sup><a href='articles?searchcode=University+Politehnica+of+Bucharest%2c+Bucharest%2c+Romania&searchfield=affs&page=1' target='_blank'>University Politehnica of Bucharest, Bucharest, Romania</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ojopm.2015.54010"
+                    target="_blank" onclick='SetNum(60080)'>10.4236/ojopm.2015.54010</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/OJOPM_2015093011350517.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60080)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/html/60080.html' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    3,842</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    5,138</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60080&JournalID=794' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">Electropolymerization and characterization of poly(3,4-ethylene dioxythiophene) (PEDOT) doped
+with functionalized single-walled carbon nanotubes (SWANTs) polyaminobenzene sulfonic acid
+(PABS) and different dopants were studied. It was fabricated by a simple oxidative electropolymerization
+method. The nanocomposite coatings have been prepared by using electrochemical
+methods from aqueous solutions, such that the components were deposited onto platinum electrode
+substrate. The morphology of composite films was analyzed by scanning electron microscopy
+(SEM). The electrochemical and physical properties of the resulting composites were evaluated
+by cyclic voltammetry (CV), electrochemical impedance spectroscopy (EIS) and Fourier transform
+infrared spectroscopy (FT-IR) techniques in 0.1 M LiClO<span style="white-space:nowrap;"><SUB>4</SUB></span> aqueous solutions. The value of
+specific electrochemical capacitance of the composite films is considerably higher than that of the
+pure polymers films. The improved properties of the electrodes were obtained by using these
+composite films. The dopant substances used were sodium dodecyl sulfate (SDS) and 1,2-Dihydroxy-
+benzene-3,5-disulfonic acid disodium salt hydrate (tiron).</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Nanocomposite+Films&searchfield=keyword&page=1' target='_blank'>Nanocomposite Films</a>, <a href='articles?searchcode=+Carbon+Nanotubes&searchfield=keyword&page=1' target='_blank'> Carbon Nanotubes</a>, <a href='articles?searchcode=+Electropolymerization&searchfield=keyword&page=1' target='_blank'> Electropolymerization</a>, <a href='articles?searchcode=+SEM&searchfield=keyword&page=1' target='_blank'> SEM</a>, <a href='articles?searchcode=+EIS&searchfield=keyword&page=1' target='_blank'> EIS</a>, <a href='articles?searchcode=+Capacitance&searchfield=keyword&page=1' target='_blank'> Capacitance</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Branzoi, F.  and Branzoi, V.   (2015) The Electrochemical Behaviour of PEDOT Film Electrosynthesized in Presence of Some Dopants. <i>Open Journal of Organic Polymer Materials</i>, <b>5</b>, 89-102. doi: <a href='http://dx.doi.org/10.4236/ojopm.2015.54010' target='_blank' onclick='SetNum(60080)'>10.4236/ojopm.2015.54010</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578652' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Hung, S., Wen, T. and Gopalan, A. (2002) Application of Statistical Design Strategies to Optimize the Conductivity of Electrosynthesized Polypyrrole. Materials Letters, 55, 165-170. <br/>http://dx.doi.org/10.1016/S0167-577X(01)00640-1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578653' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Morvant, M.C. and Reynolds, J.R. (1998) In Situ Conductivity Studies of Poly(3,4-ethylenedioxythiophene). Synthetic Metals, 92, 57-61. <br/>http://dx.doi.org/10.1016/S0379-6779(98)80023-4
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578654' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Gupta, V. and Miura, N. (2006) High Performance Electrochemical Supercapacitor from Electrochemically Synthesized Nanostructured Polyaniline. Materials Letters, 60, 1466-1469. <br/>http://dx.doi.org/10.1016/j.matlet.2005.11.047
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578655' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Lota, K., Khomenko, V. and Frackowiak, E. (2004) Capacitance Properties of Poly(3,4-ethylenedioxythiophene)/Car- bon Nanotubes Composites. Journal of Physics and Chemistry of Solids, 65, 295-301. <br/>http://dx.doi.org/10.1016/j.jpcs.2003.10.051
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578656' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Ajayan, P.M., Stephan, O., Colliex, C. and Trauth, D. (1994) Aligned Carbon Nanotube Arrays Formed by Cutting a Polymer Resin—Nanotube Composite. Science, 265, 1212-1214. <br/>http://dx.doi.org/10.1126/science.265.5176.1212
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578657' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Dai, L. and Mau, A.W.H. (2001) Controlled Synthesis and Modification of Carbon Nanotubes and C60: Carbon Nanostructures for Advanced Polymeric Composite Materials. Advanced Materials, 13, 899-913. <br/>http://dx.doi.org/10.1002/1521-4095(200107)13:12/13<899::AID-ADMA899>3.0.CO;2-G
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578658' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Baughman, R.H., Zakhidov, A.A. and Heer, W.A. (2002) Carbon Nanotubes—The Route toward Applications. Science, 297, 787-792. <br/>http://dx.doi.org/10.1126/science.1060928
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578659' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Liao, Y.Z., Zhang, C., Zhang, Y., Strong, V., Kalantar-zadeh, K., Hoek, E., Wang, K. and Kaner, R. (2011) Carbon Nanotube/Polyaniline Composite Nanofibers: Facile Synthesis and Chemosensors. Nano Letters, 11, 954-959. <br/>http://dx.doi.org/10.1021/nl103322b
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578660' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Dai, L. (1999) Advanced Syntheses and Microfabrications of Conjugated Polymers, C60-Containing Polymers and Carbon Nanotubes for Optoelectronic Applications. Polymers for Advanced Technologies, 10, 357-420.<br/> http://dx.doi.org/10.1002/(SICI)1099-1581(199907)10:7<357::AID-PAT886>3.0.CO;2-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578661' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Chen, G.Z., Shaffer, M.S.P., Coleby, D., Dioxan, G., Fray, D.J. and Windle, A.H. (2000) Carbon Nanotube and Polypyrrole Composites: Coating and Doping. Advanced Materials, 12, 522-526. <br/>http://dx.doi.org/10.1002/(SICI)1521-4095(200004)12:7<522::AID-ADMA522>3.0.CO;2-S
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578662' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Saito, Y., Uemura, S. and Hamaguchi, K. (1998) Cathode Ray Tube Lighting Elements with Carbon Nanotube Field Emitters. Japanese Journal of Applied Physics, 37, L346. <br/>http://dx.doi.org/10.1143/JJAP.37.L346
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578663' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Liao, Y., Zhang, C., Wang, X., Li, X.G., Ippolito, S.J., Kalantar-zadeh, K. and Kaner, R.B. (2011) Carrier Mobility of Single-Walled Carbon Nanotube-Reinforced Polyaniline Nanofibers. The Journal of Physical Chemistry C, 115, 16187-16192. <br/>http://dx.doi.org/10.1021/jp2053585
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578664' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Prun, A., Branzoi, V. and Branzoi, F. (2011) Ordered Arrays of Copper Nanowires Enveloped in Polyaniline Nanotubes. Journal Applied Electrochemistry, 41, 77-81. <br/>http://dx.doi.org/10.1007/s10800-010-0209-4
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578665' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Shirakwa, H. (2001) The Discovery of Polyacetylene Film: The Dawning of an Era of Conducting Polymers (Nobel Lecture), Angew. Angewandte Chemie International Edition, 40, 2574-2580. <br/>http://dx.doi.org/10.1002/1521-3773(20010716)40:14<2574::AID-ANIE2574>3.0.CO;2-N
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578666' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Crispin, X., Jakobsson, F.L.E., Crispin, A., Grim, P.C.M., Andersson, P., Volodin, A., van Haesendonck, C., Van der Auweraer, M., Salaneck, W.R. and Berggren, M. (2006) The Origin of the High Conductivity of Poly (3,4-ethylene- dioxythiophene)-poly(styrenesulfonate) (PEDOT-PSS) Plastic Electrodes. Chemistry of Materials, 18, 4354-4360. <br/>http://dx.doi.org/10.1021/cm061032+
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578667' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Breiby, D.W., Samuelsen, L.B. and Groenendaal, B. (2003) Smectic Structures in Electrochemically Prepared Poly (3,4-ethylenedioxythiophene) Films. Journal of Polymer Science Part B: Polymer Physics, 41, 945-952. <br/>http://dx.doi.org/10.1002/polb.10412
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578668' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Luo, S.C., Mohamed, A.E., Tansil, N.C., Yu, H.H., Gao, S. and Ying, J.Y. (2008) Poly(3,4-ethylenedioxythiophene) (PEDOT) Nanobiointerfaces: Thin, Ultrasmooth, and Functionalized PEDOT Films with in Vitro and in Vivo Biocompatibility. Langmuir, 24, 8071-8077. <br/>http://dx.doi.org/10.1021/la800333g
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578669' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Groenendaal, B.L., Jonas, F., Freitag, D., Pielartzik, H. and Reynolds, J.R. (2000) Poly(3,4-ethylenedioxythiophene) and Its Derivatives: Past, Present, and Future. Advanced Materials, 12, 481-494. <br/>http://dx.doi.org/10.1002/(SICI)1521-4095(200004)12:7<481::AID-ADMA481>3.0.CO;2-C
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578670' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Breiby, D.W., Samuelsen, L.B., Groenendaal, B. and Struth, B. (2003) Smectic Structures in Electrochemically Prepared Poly(3,4-ethylenedioxythiophene) Films. Journal of Polymer Science Part B: Polymer Physics, 41, 945-952. <br/>http://dx.doi.org/10.1002/polb.10412
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578671' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Winther-Jensen, B. and West, K. (2006) Stability of Highly Conductive Poly-3,4-ethylene-dioxythiophene. Reactive and Functional Polymers, 66, 479-483. <br/>http://dx.doi.org/10.1016/j.reactfunctpolym.2005.08.007
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578672' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Kros, A., Sommerdijk, N.A.J.M. and Nolte, R.J.M. (2005) Poly(pyrrole) versus Poly(3,4-ethylenedioxythiophene): Implications for Biosensor Applications. Sensors and Actuators B: Chemical, 106, 289-295. <br/>http://dx.doi.org/10.1016/j.snb.2004.08.011
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578673' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Luo, S.C., Mohamed, A.E., Tansil, N.C., Yu, H.H., Gao, S., Kantchev, E.A. and Ying, J.Y. (2008) Poly(3,4-ethylene- dioxythiophene) (PEDOT) Nanobiointerfaces: Thin, Ultrasmooth, and Functionalized PEDOT Films with in Vitro and in Vivo Biocompatibility. Langmuir, 24, 8071-8077. <br/>http://dx.doi.org/10.1021/la800333g
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578674' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Branzoi, F. and Branzoi, V. (2014) Enzymatic Electrode Obtained by Immobilizing of Urease into a Nanocomposite Film Based on Conducting Polymers and Different Additives. International Journal of Polymeric Materials and Polymeric Biomaterials, 63, 549-557.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578675' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Tanguy, J., Slama, M., Hoclet, M. and Baudouin, J.L. (1989) Impedance Measurements on Different Conducting Poly- mers. Synthetic Metals, 28, 145-150. <br/>http://dx.doi.org/10.1016/0379-6779(89)90512-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578676' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        Sivakumar, R. and Saraswathi, R. (2003) Redox Properties of Poly(N-methylaniline). Synthetic Metals, 138, 381-390. <br/>http://dx.doi.org/10.1016/S0379-6779(03)00023-7
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578677' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Branzoi, F., Branzoi, V. and Musina, A. (2012) Fabrication and Characterisation of Conducting Composite Films Based on Conducting Polymers and Functionalised Carbon Nanotubes. Surface and Interface Analysis, 44, 1076-1081.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578678' target='_blank'>27</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref27" id="ref27"></a>
+                                        Ohsaka, T., Okajima, T. and Oyama, N. (1986) Anion-Exchange Properties of Polymer Films Prepared by Electrochemically Initiated Polymerization of N,N-Dialkyl Substituted Aniline Derivatives. Journal of Electroanalytical Chemistry and Interfacial Electrochemistry, 200, 159-178. <br/>http://dx.doi.org/10.1016/0022-0728(86)90053-7
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578679' target='_blank'>28</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref28" id="ref28"></a>
+                                        Otero, T.F. and De Laretta, E. (1988) Electrochemical Control of the Morphology, Adherence, Appearance and Growth of Polypyrrole Films. Synthetic Metals, 26, 79-88. <br/>http://dx.doi.org/10.1016/0379-6779(88)90337-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578680' target='_blank'>29</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref29" id="ref29"></a>
+                                        Du, X. and Wang, Z. (2003) Effects of Polymerization Potential on the Properties of Electrosynthesized PEDOT Films. Electrochimica Acta, 48, 1713-1717. <br/>http://dx.doi.org/10.1016/S0013-4686(03)00143-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578681' target='_blank'>30</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref30" id="ref30"></a>
+                                        Peng, C., Jin, J. and Chen, G.Z. (2007) A Comparative Study on Electrochemical Co-Deposition and Capacitance of Composite Films of Conducting Polymers and Carbon Nanotubes. Electrochimica Acta, 53, 525-537. <br/>http://dx.doi.org/10.1016/j.electacta.2007.07.004
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578682' target='_blank'>31</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref31" id="ref31"></a>
+                                        Hong, J.-I., Yeo, I.-H. and Paik, W.-K. (2001) Conducting Polymer with Metal Oxide for Electrochemical Capacitor: Poly(3,4-ethylenedioxythiophene) RuOx Electrode. Journal of the Electrochemical Society, 148, A156-A163. <br/>http://dx.doi.org/10.1149/1.1342166
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578683' target='_blank'>32</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref32" id="ref32"></a>
+                                        Du, X. and Wang, Z. (2003) Effects of Polymerization Potential on the Properties of Electrosynthesized PEDOT Films. Electrochimica Acta, 48, 1713-1717. <br/>http://dx.doi.org/10.1016/S0013-4686(03)00143-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578684' target='_blank'>33</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref33" id="ref33"></a>
+                                        Li, L., Loveday, D.C., Mudigonda, D.S.K. and Ferraris, J.P. (2002) Effect of Electrolytes on Performance of Electrochemical Capacitors Based on Poly[3-(3,4-difluorophenyl)thiophene]. Journal of the Electrochemical Society, 149, A1201-A1207. <br/>http://dx.doi.org/10.1149/1.1498840
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578685' target='_blank'>34</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref34" id="ref34"></a>
+                                        Branzoi, V., Prun, A. and Branzoi, F. (2008) Electrosynthesized Doped Polypyrrole Films on Pure Zinc Electrode. Molecular Crystal and Liquid Crystals, 485, 853-861. <br/>http://dx.doi.org/10.1080/15421400801922486
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578686' target='_blank'>35</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref35" id="ref35"></a>
+                                        Branzoi, V., Branzoi, F. and Pilan, L. (2009) Characterization of Electrodeposited Polymeric and Composite Modified Electrodes on Cobalt Based Alloy. Materials Chemistry and Physics, 118, 197-203. <br/>http://dx.doi.org/10.1016/j.matchemphys.2009.07.020
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578687' target='_blank'>36</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref36" id="ref36"></a>
+                                        Ago, H., Petritch, K., Shaffer, M.S.P. and Friend, R.H. (1999) Composites of Carbon Nanotubes and Conjugated Poly- mers for Photovoltaic Devices. Advanced Materials, 11, 1281-1285. <br/>http://dx.doi.org/10.1002/(SICI)1521-4095(199910)11:15<1281::AID-ADMA1281>3.0.CO;2-6
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578688' target='_blank'>37</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref37" id="ref37"></a>
+                                        Peng, C., Jin, J. and Chen, G.Z. (2007) A Comparative Study on Electrochemical Co-Deposition and Capacitance of Composite Films of Conducting Polymers and Carbon Nanotubes. Electrochimica Acta, 53, 525-537. <br/>http://dx.doi.org/10.1016/j.electacta.2007.07.004
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578689' target='_blank'>38</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref38" id="ref38"></a>
+                                        Wang, J., Dai, J. and Yarlagadda, T. (2005) Carbon Nanotube—Conducting-Polymer Composite Nanowires. Langmuir, 21, 9-12. <br/>http://dx.doi.org/10.1021/la0475977
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578690' target='_blank'>39</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref39" id="ref39"></a>
+                                        Tsai, C., Li, S.C. and Liao, S.W. (2006) Electrodeposition of Polypyrrole-Multiwalled Carbon Nanotube-Glucose Oxi- dase Nanobiocomposite Film for the Detection of Glucose. Biosensors and Bioelectronics, 22, 495-500. <br/>http://dx.doi.org/10.1016/j.bios.2006.06.009
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578691' target='_blank'>40</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref40" id="ref40"></a>
+                                        Chen, J., Hamon, M.A., Hu, H., Chen, Y., Rao, A.M., Eklund, P.C. and Haddon, R.C. (1998) Solution Properties of Single-Walled Carbon Nanotubes. Science, 282, 95-98. <br/>http://dx.doi.org/10.1126/science.282.5386.95
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578692' target='_blank'>41</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref41" id="ref41"></a>
+                                        Chen, Y., Haddon, R.C., Fang, S., Rao, A.M., Eklund, P.C., Lee, W.H., Dickey, E.C., Grulke, E.A., Pendergrass, A. and Smalley, R.E. (1998) Chemical Attachment of Organic Functional Groups to Single-Walled Carbon Nanotube Material. Journal of Materials Research, 13, 2423-2431. <br/>http://dx.doi.org/10.1557/JMR.1998.0337
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578693' target='_blank'>42</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref42" id="ref42"></a>
+                                        Holzinger, M., Vostrowsky, O., Hirsch, A., Hennrich, F., Kappes, M., Weiss, R. and Jellen, F. (2001) Sidewall Func- tionalization of Carbon Nanotubes. Angewandte Chemie International Edition, 40, 4002-4005. <br/>http://dx.doi.org/10.1002/1521-3773(20011105)40:21<4002::AID-ANIE4002>3.0.CO;2-8
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578694' target='_blank'>43</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref43" id="ref43"></a>
+                                        Dyke, C.A. and Tour, J.M. (2003) Unbundled and Highly Functionalized Carbon Nanotubes from Aqueous Reactions. Nano Letters, 3, 1215-1218. <br/>http://dx.doi.org/10.1021/nl034537x
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578695' target='_blank'>44</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref44" id="ref44"></a>
+                                        Saini, R.K., Chiang, I.W., Peng, H., Smalley, R.E., Billups, W.E., Hauge, R.H. and Margrave, J.L. (2003) Covalent Sidewall Functionalization of Single Wall Carbon Nanotubes. Journal of the American Chemical Society, 125, 3617- 3621.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578696' target='_blank'>45</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref45" id="ref45"></a>
+                                        Dyke, C.A. and Tour, J.M. (2003) Solvent-Free Functionalization of Carbon Nanotubes. Journal of the American Che- mical Society, 125, 1156-1157. <br/>http://dx.doi.org/10.1021/ja0289806
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578697' target='_blank'>46</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref46" id="ref46"></a>
+                                        Williams, K.A., Veenhuizen, P.T.M., de la Torre, B.G., Eritja, R. and Dekker, C. (2002) Nanotechnology: Carbon Nanotubes with DNA Recognition. Nature, 420, 761. <br/>http://dx.doi.org/10.1038/420761a
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578698' target='_blank'>47</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref47" id="ref47"></a>
+                                        Niyogi, S., Hamon, M.A., Hu, H., Zhao, B., Bhowmik, P., Sen, R., Itkis, M.E. and Haddon, R.C. (2002) Chemistry of Single-Walled Carbon Nanotubes. Accounts of Chemical Research, 35, 1105-1113. <br/>http://dx.doi.org/10.1021/ar010155r
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578699' target='_blank'>48</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref48" id="ref48"></a>
+                                        Kamaras, K., Itkis, M.E., Hu, H., Zhao, B. and Haddon, R.C. (2003) Covalent Bond Formation to a Carbon Nanotube Metal. Science, 301, 1501. <br/>http://dx.doi.org/10.1126/science.1088083
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578700' target='_blank'>49</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref49" id="ref49"></a>
+                                        Chen, J., Rao, A.M., Lyuksyutov, S., Itkis, M.E., Hamon, M.A., Hu, H., Cohn, R.W., Eklund, D.T., Smalley, R. and Haddon, R.C. (2001) Dissolution of Full-Length Single-Walled Carbon Nanotubes. The Journal of Physical Chemistry B, 105, 2525-2528. <br/>http://dx.doi.org/10.1021/jp002596i
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578701' target='_blank'>50</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref50" id="ref50"></a>
+                                        Zhao, B., Hu, H. and Haddon, R.C. (2004) Synthesis and Properties of a Water-Soluble Single-Walled Carbon Nano- tube—Poly(m-aminobenzene sulfonic acid) Graft Copolymer. Advanced Functional Materials, 14, 71-76.  <br/>http://dx.doi.org/10.1002/adfm.200304440
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578702' target='_blank'>51</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref51" id="ref51"></a>
+                                        Jurewiez, K., Delpeux, S., Bertagna, V. and Frackowiak, E. (2001) Supercapacitors from Nanotubes/Polypyrrole Com- posites. Chemical Physics Letters, 347, 36-40. <br/>http://dx.doi.org/10.1016/S0009-2614(01)01037-5
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578703' target='_blank'>52</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref52" id="ref52"></a>
+                                        Gupta, V. and Miura, N. (2006) Polyaniline/Single-Wall Carbon Nanotube (PANI/SWCNT) Composites for High Per- formance Supercapacitors. Electrochimica Acta, 52, 1721-1726. <br/>http://dx.doi.org/10.1016/j.electacta.2006.01.074
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578704' target='_blank'>53</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref53" id="ref53"></a>
+                                        Xiao, Q. and Zhou, X. (2003) The Study of Multiwalled Carbon Nanotube Deposited with Conducting Polymer for Supercapacitor. Electrochimica Acta, 48, 575-580. <br/>http://dx.doi.org/10.1016/S0013-4686(02)00727-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578705' target='_blank'>54</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref54" id="ref54"></a>
+                                        Zeng, J.X., Wei, W.Z., Wu, L., Liu, X.Y., Liu, K. and Li, Y. (2006) Fabrication of Poly(toluidine blue O)/Carbon Nanotube Composite Nanowires and Its Stable Low-Potential Detection of NADH. Journal of Electroanalytical Chemistry, 595, 152-160. <br/>http://dx.doi.org/10.1016/j.jelechem.2006.07.014
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578706' target='_blank'>55</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref55" id="ref55"></a>
+                                        Ferrer-Anglada, N., Kaempgen, M. and Roth, S. (2006) Transparent and Flexible Carbon Nanotube/Polypyrrole and Carbon Nanotube/Polyaniline pH Sensors. Physica Status Solidi B, 243, 3519-3523. <br/>http://dx.doi.org/10.1002/pssb.200669220
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578707' target='_blank'>56</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref56" id="ref56"></a>
+                                        Santhosh, P., Manesh, K.M., Lee, K.-P. and Gopalan, A.I. (2006) Enhanced Electrocatalysis for the Reduction of Hydrogen Peroxide at New Multiwall Carbon Nanotube Grafted Polydiphenylamine Modified Electrode. Electroanaly- sis, 18, 894-903. <br/>http://dx.doi.org/10.1002/elan.200503474
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578708' target='_blank'>57</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref57" id="ref57"></a>
+                                        Lu, G.W., Li, C., Shen, J.Y., Chen, Z.J. and Shi, G.Q. (2007) Preparation of Highly Conductive Gold—Poly(3,4- ethylenedioxythiophene) Nanocables and Their Conversion to Poly(3,4-ethylenedioxythiophene) Nanotubes. The Journal of Physical Chemistry C, 111, 5926-5931. <br/>http://dx.doi.org/10.1021/jp070387t
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=794" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=794" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=794" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=794" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=794"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=794"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=794" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=794" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=794" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=794" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=794" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=794"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=794"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=794" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=794&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=794&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=794" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=794" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=794" target="_blank">OJOPM
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=794" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=794" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=794" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=794" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=794" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=794" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=794" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ojopm.2015.54010" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60080 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +794 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +794 +"&paperid=" +60080 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

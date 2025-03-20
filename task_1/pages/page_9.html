@@ -1,0 +1,2015 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Facility Location Decisions Based on Driving Distances on Spherical Surface
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/AJOR_2015092909395255.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60009" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60009" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60009" />
+<meta property="og:title" content="Facility Location Decisions Based on Driving Distances on Spherical Surface" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/AJOR2016070511062088.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/AJOR2016070511062088.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Facility Location Decisions Based on Driving Distances on Spherical Surface" />
+<meta name="keywords" content="Facility Location,Spherical Surface,Euclidean Distance,Great Circle Distance,Clustering,Heuristic Method" />
+<meta name="description" content="Discover how driving distances on a spherical surface can optimize facility location decisions. Explore algorithmic approaches and tools for assessing optimal facility locations." />
+<meta name="citation_journal_title" content="American Journal of Operations Research" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Han Shih" />
+<meta name="citation_author" content="Han Shih" />
+<meta name="citation_title" content="Facility Location Decisions Based on Driving Distances on Spherical Surface" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-07-24" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ajor.2015.55037" />
+<meta name="citation_issnPrint" content="2160-8830" />
+<meta name="citation_issnOnline" content="2160-8849" />
+<meta name="citation_abstract" content="Facility location problems are concerned with the location of one or more facilities in a way that optimizes a certain objective such as minimizing transportation cost, providing equitable service to customers, capturing the largest market share, etc. Many facility location decisions involving distance objective functions on Spherical Surface have been approached using algorithmic, metaheuristic algorithms, branch-and-bound algorithm, approximation algorithms, simulation, heuristic techniques, and decomposition method. These approaches are most based on Euclidean distance or Great circle distance functions. However, if the location points are widely separated, the difference between driving distance, Euclidean distance and Great circle distance may be significant and this may lead to significant variations in the locations of the corresponding optimal source points. This paper presents a framework and algorithm to use driving distances on spherical surface and explores its use as a facility location decision tool and helps companies assess the optimal locations of facilities." />
+<meta name="citation_publication_date" content="2015/7/24" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/AJOR_2015092909395255.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/AJOR_2015092909395255.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60009" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60009" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60009" />
+<meta name="citation_issue" content="5" />
+<meta name="citation_online_date" content="2015/7/24" />
+<meta name="citation_firstpage" content="450" />
+<meta name="citation_lastpage" content="492" />
+
+<meta name="dc.title" content="Facility Location Decisions Based on Driving Distances on Spherical Surface" />
+
+<meta name="dc.creator" content="Han Shih" /><meta name="dcterms.issued" content="2015-07-24" />
+<meta name="dc.description" content="Facility location problems are concerned with the location of one or more facilities in a way that optimizes a certain objective such as minimizing transportation cost, providing equitable service to customers, capturing the largest market share, etc. Many facility location decisions involving distance objective functions on Spherical Surface have been approached using algorithmic, metaheuristic algorithms, branch-and-bound algorithm, approximation algorithms, simulation, heuristic techniques, and decomposition method. These approaches are most based on Euclidean distance or Great circle distance functions. However, if the location points are widely separated, the difference between driving distance, Euclidean distance and Great circle distance may be significant and this may lead to significant variations in the locations of the corresponding optimal source points. This paper presents a framework and algorithm to use driving distances on spherical surface and explores its use as a facility location decision tool and helps companies assess the optimal locations of facilities." />
+<meta name="dc.source" content="American Journal of Operations Research" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-07-24" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ajor.2015.55037" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-07-24" />
+<meta name="prism.issnPrint" content="2160-8830" />
+<meta name="prism.issnOnline" content="2160-8849" />
+<meta name="prism.publicationName" content="American Journal of Operations Research" />
+<meta name="prism.publicationDate" content="2015-07-24" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="5" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="450" />
+<meta name="prism.doi" content="10.4236/ajor.2015.55037" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60009" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAkkPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA3LTI0ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAVsPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1IYW4rK1NoaWgmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5IYW4gIFNoaWg8L2E+PHN1cD48L3N1cD4gZAICD2QWAmYPFgIfBAWgATxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9VW5pdmVyc2l0eStvZitNaXNzb3VyaSUyYytDb2x1bWJpYSUyYytVU0Emc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Vbml2ZXJzaXR5IG9mIE1pc3NvdXJpLCBDb2x1bWJpYSwgVVNBPC9hPi48YnIgLz5kAgUPFgIfBAUFNiw2NjRkAgYPFgIfBAUFOCw1NDRkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFrwU8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUZhY2lsaXR5K0xvY2F0aW9uJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RmFjaWxpdHkgTG9jYXRpb248L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStTcGhlcmljYWwrU3VyZmFjZSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBTcGhlcmljYWwgU3VyZmFjZTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0V1Y2xpZGVhbitEaXN0YW5jZSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBFdWNsaWRlYW4gRGlzdGFuY2U8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStHcmVhdCtDaXJjbGUrRGlzdGFuY2Umc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gR3JlYXQgQ2lyY2xlIERpc3RhbmNlPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rQ2x1c3RlcmluZyZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBDbHVzdGVyaW5nPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rSGV1cmlzdGljK01ldGhvZCZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBIZXVyaXN0aWMgTWV0aG9kPC9hPiBkAgoPFgIfBAWfAlNoaWgsIEguICAgKDIwMTUpIEZhY2lsaXR5IExvY2F0aW9uIERlY2lzaW9ucyBCYXNlZCBvbiBEcml2aW5nIERpc3RhbmNlcyBvbiBTcGhlcmljYWwgU3VyZmFjZS4gPGk+QW1lcmljYW4gSm91cm5hbCBvZiBPcGVyYXRpb25zIFJlc2VhcmNoPC9pPiwgPGI+NTwvYj4sIDQ1MC00OTIuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9ham9yLjIwMTUuNTUwMzcnIHRhcmdldD0nX2JsYW5rJyBvbmNsaWNrPSdTZXROdW0oNjAwMDkpJz4xMC40MjM2L2Fqb3IuMjAxNS41NTAzNzwvYT4uZAILDxYCHwQFLVRoZSBhdXRob3JzIGRlY2xhcmUgbm8gY29uZmxpY3RzIG9mIGludGVyZXN0LmQCDQ8WAh4LXyFJdGVtQ291bnQCKxZWZg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTIzJyB0YXJnZXQ9J19ibGFuayc+MTwvYT5dATEBMWNSZWlkLCBSLkQuIGFuZCBTYW5kZXJzLCBOLlIuICgyMDEzKSBPcGVyYXRpb25zIE1hbmFnZW1lbnQuIDV0aCBFZGl0aW9uLCBKb2huIFdpbGV5ICYgU29ucywgSG9ib2tlbi5kAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUyNCcgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATJnV2lraXBlZGlhICgyMDE0KSBGYWNpbGl0eSBMb2NhdGlvbiBQcm9ibGVtLiA8YnIvPmh0dHA6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRmFjaWxpdHlfbG9jYXRpb25fcHJvYmxlbWQCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTI1JyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM8EBQnJpbWJlcmcsIEouLCBIYW5zZW4sIFAuLCBNbGFkZW5vdmljLCBOLiBhbmQgU2FsaGksIFMuICgyMDA4KSBBIFN1cnZleSBvZiBTb2x1dGlvbiBNZXRob2RzIGZvciB0aGUgQ29udGludW91cyBMb2NhdGlvbi1BbGxvY2F0aW9uIFByb2JsZW0uIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBPcGVyYXRpb25zIFJlc2VhcmNoLCA1LCAxLTEyLmQCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTI2JyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNOIBVGNoYSwgRC5XLiBhbmQgTGVlLCBCLkkuICgxOTg0KSBBIEJyYW5jaC1hbmQtQm91bmQgQWxnb3JpdGhtIGZvciB0aGUgTXVsdGktTGV2ZWwgVW5jYXBhY2l0YXRlZCBGYWNpbGl0eSBMb2NhdGlvbiBQcm9ibGVtLiBFdXJvcGVhbiBKb3VybmFsIG9mIE9wZXJhdGlvbmFsIFJlc2VhcmNoLCAxOCwgMzUtNDMuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wMzc3LTIyMTcoODQpOTAyNTgtM2QCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTI3JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNYABRnJhbmNpcywgUi5MLiBhbmQgV2hpdGUgSi5BLiAoMTk3NCkgRmFjaWxpdHkgTGF5b3V0IGFuZCBMb2NhdGlvbjogQW4gQW5hbHl0aWNhbCBBcHByb2FjaC4gUHJlbnRpY2UtSGFsbCwgSW5jLiwgRW5nbGV3b29kIENsaWZmcy5kAgUPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUyOCcgdGFyZ2V0PSdfYmxhbmsnPjY8L2E+XQE2ATaMAUxvdmUsIFIuRi4sIEphbWVzLCBKLiwgTW9ycmlzLCBHLiBhbmQgV2Vzb2xvd3NreSwgRy5PLiAoMTk4OCkgRmFjaWxpdGllcyBMb2NhdGlvbjogTW9kZWxzICYgTWV0aG9kcy4gTm9ydGgtSG9sbGFuZCBQdWJsaXNoaW5nIENvLiwgTmV3IFlvcmsuZAIGD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MjknIHRhcmdldD0nX2JsYW5rJz43PC9hPl0BNwE3wgFGYXJhaGFuaSwgUi5aLiBhbmQgTWFzb3VkLCBILiAoMjAwOSkgRmFjaWxpdHkgTG9jYXRpb246IENvbmNlcHRzLCBNb2RlbHMsIEFsZ29yaXRobSBhbmQgQ2FzZSBTdHVkaWVzLCBTcHJpbmdlci1WZXJsYWcgQmVybGluIEhlaWRlbGJlcmcsIEdlcm1hbnkuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy85NzgtMy03OTA4LTIxNTEtMmQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTMwJyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOK4BVnlnZW4sIEouICgyMDA0LTIwMDUpIEFwcHJveGltYXRpb24gQWxnb3JpdGhtcyBmb3IgRmFjaWxpdHkgTG9jYXRpb24gUHJvYmxlbXMgKExlY3R1cmUgTm90ZXMpLiBSZXNlYXJjaCBJbnN0aXR1dGUgZm9yIERpc2NyZXRlIE1hdGhlbWF0aWNzLCBVbml2ZXJzaXR5IG9mIEJvbm4sIEJvbm4sIEdlcm1hbnkuZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MzEnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE53QFTaG1veXMsIEQuQi4sIFRhcmRvcywgRS4gYW5kIEFhcmRhbCwgSy4gKDE5OTgpIEFwcHJveGltYXRpb24gQWxnb3JpdGhtcyBmb3IgRmFjaWxpdHkgTG9jYXRpb24gUHJvYmxlbXMgKEV4dGVuZGVkIEFic3RyYWN0KS4gUHJvY2VlZGluZ3Mgb2YgdGhlIDI5dGggQW5udWFsIEFDTSBTeW1wb3NpdW0gb24gVGhlb3J5IG9mIENvbXB1dGluZywgRWwgUGFzbywgNC02IE1heSAxOTk3LCAxLTIxLmQCCQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTMyJyB0YXJnZXQ9J19ibGFuayc+MTA8L2E+XQIxMAIxMMcBSXlpZ3VuLCBDLiBhbmQgQmVuLUlzcmFlbCwgQS4gKDIwMTApIEEgR2VuZXJhbGl6ZWQgV2Vpc3pmZWxkIE1ldGhvZCBmb3IgdGhlIE11bHRpLUZhY2lsaXR5IExvY2F0aW9uIFByb2JsZW0uIE9wZXJhdGlvbnMgUmVzZWFyY2ggTGV0dGVycywgMzgsIDIwNy0yMTQuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLm9ybC4yMDA5LjExLjAwNWQCCg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTMzJyB0YXJnZXQ9J19ibGFuayc+MTE8L2E+XQIxMQIxMasBQmFsbG91LCBSLkguICgyMDA0KSBCdXNpbmVzcyBMb2dpc3RpY3MvU3VwcGx5IENoYWluIE1hbmFnZW1lbnQ6IFBsYW5uaW5nLCBPcmdhbml6aW5nIGFuZCBDb250cm9sbGluZyB0aGUgU3VwcGx5IGNoYWluLiA1dGggRWRpdGlvbiwgUGVhcnNvbi9QcmVudGljZSBIYWxsIEluYy4sIE5ldyBKZXJzZXkuZAILD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MzQnIHRhcmdldD0nX2JsYW5rJz4xMjwvYT5dAjEyAjEyqQFLYXR6LCBJLk4uIGFuZCBDb29wZXIsIEwuICgxOTgwKSBPcHRpbWFsIExvY2F0aW9uIG9uIGEgU3BoZXJlLiBDb21wdXRlcnMgJiBNYXRoZW1hdGljcyB3aXRoIEFwcGxpY2F0aW9ucywgNiwgMTc1LTE5Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzA4OTgtMTIyMSg4MCk5MDAyNy05ZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MzUnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEzrgFEcmV6bmVyLCBaLiBhbmQgV2Vzb2xvd3NreSwgRy5PLiAoMTk3OCkgRmFjaWxpdHkgTG9jYXRpb24gb24gYSBTcGhlcmUuIEpvdXJuYWwgb2YgdGhlIE9wZXJhdGlvbmFsIFJlc2VhcmNoIFNvY2lldHksIDI5LCA5OTctMTAwNC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDU3L2pvcnMuMTk3OC4yMTNkAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjUzNicgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTS9AVh1ZSwgRy5MLiAoMTk5NCkgQSBHbG9iYWxseSBDb252ZXJnZW50IEFsZ29yaXRobSBmb3IgRmFjaWxpdHkgTG9jYXRpb24gb24gYSBTcGhlcmUuIENvbXB1dGVycyAmIE1hdGhlbWF0aWNzIHdpdGggQXBwbGljYXRpb25zLCAyNywgMzctNTAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wODk4LTEyMjEoOTQpOTAxMDktMGQCDg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTM3JyB0YXJnZXQ9J19ibGFuayc+MTU8L2E+XQIxNQIxNZABTXdlbWV6aSwgSi4gYW5kIEh1YW5nLCBZLiAoMjAxMSkgT3B0aW1hbCBGYWNpbGl0eSBMb2NhdGlvbiBvbiBTcGhlcmljYWwgU3VyZmFjZXM6IEFsZ29yaXRobSBhbmQgQXBwbGljYXRpb24uIE5ldyBZb3JrIFNjaWVuY2UgSm91cm5hbCwgNCwgMjEtMjguZAIPD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1MzgnIHRhcmdldD0nX2JsYW5rJz4xNjwvYT5dAjE2AjE2jAFTdWxsaXZhbiwgRS4gYW5kIFBldGVycywgTi4gKDE5ODApIEEgRmxleGlibGUgVXNlci1PcmllbnRlZCBMb2NhdGlvbi1BbGxvY2F0aW9uIEFsZ29yaXRobS4gSm91cm5hbCBvZiBFbnZpcm9ubWVudGFsIE1hbmFnZW1lbnQsIDEwLCAxODEtMTkzLmQCEA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTM5JyB0YXJnZXQ9J19ibGFuayc+MTc8L2E+XQIxNwIxN/YBQmVzcGFteWF0bmlraCwgUy4sIEtlZGVtLCBLLiwgU2VnYWwgTS4gYW5kIFRhbWlyIEEuICgyMDAwKSBPcHRpbWFsIEZhY2lsaXR5IExvY2F0aW9uIHVuZGVyIFZhcmlvdXMgRGlzdGFuY2UgRnVuY3Rpb25zLiBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgQ29tcHV0YXRpb25hbCBHZW9tZXRyeSAmIEFwcGxpY2F0aW9ucywgMTAsIDUyMy01MzQuIA0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTQyL1MwMjE4MTk1OTAwMDAwMjkyZAIRD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NDAnIHRhcmdldD0nX2JsYW5rJz4xODwvYT5dAjE4AjE4ygFMZXZpbiwgWS4gYW5kIEJlbi1Jc3JhZWwsIEEuICgyMDA0KSBBIEhldXJpc3RpYyBNZXRob2QgZm9yIExhcmdlIFNjYWxlIE11bHRpZmFjaWxpdHkgTG9jYXRpb24gUHJvYmxlbXMuIENvbXB1dGVycyAmIE9wZXJhdGlvbnMgUmVzZWFyY2gsIDMxLCAyNTctMjcyLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvUzAzMDUtMDU0OCgwMikwMDE5MS0wZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NDEnIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5wgFMZXZpbiwgWS4gYW5kIEJlbi1Jc3JhZWwsIEEuICgyMDAyKSBUaGUgTmV3dG9uIEJyYWNrZXRpbmcgTWV0aG9kIGZvciBDb252ZXggTWluaW1pemF0aW9uLiBDb21wdXRhdGlvbmFsIE9wdGltaXphdGlvbiBhbmQgQXBwbGljYXRpb25zLCAyMSwgMjEzLTIyOS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDIzL0E6MTAxMzc2ODkwMTc4MGQCEw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTQyJyB0YXJnZXQ9J19ibGFuayc+MjA8L2E+XQIyMAIyMJMCUm9kcsOtZ3Vlei1DaMOtYSwgQS5NLiBhbmQgVmFsZXJvLUZyYW5jbywgQy4gKDIwMTMpIE9uIHRoZSBHbG9iYWwgQ29udmVyZ2VuY2Ugb2YgYSBHZW5lcmFsaXplZCBJdGVyYXRpdmUgUHJvY2VkdXJlIGZvciB0aGUgTWluaXN1bSBMb2NhdGlvbiBQcm9ibGVtIHdpdGggP3AgRGlzdGFuY2VzIGZvciBwID4gMi4gU3ByaW5nZXIgYW5kIE1hdGhlbWF0aWNhbCBPcHRpbWl6YXRpb24gU29jaWV0eSwgTWF0aGVtYXRpY2FsIFByb2dyYW1taW5nLCBTZXJpZXMgQSwgMTM3LCA0NzctNTAyLgBkAhQPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjU0MycgdGFyZ2V0PSdfYmxhbmsnPjIxPC9hPl0CMjECMjHOAUtvdGlhbiwgUy5SLiwgQm9uaWxsYSwgQy4gYW5kIEhhbGUsIFQuUy4gKDIwMDgpIFRoZSBQbGFuYXIgay1DZW50cmFsIExvY2F0aW9uIFByb2JsZW0uIFRoZSBPcGVuIEluZHVzdHJpYWwgYW5kIE1hbnVmYWN0dXJpbmcgRW5naW5lZXJpbmcgSm91cm5hbCwgMSwgNDItNDkuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMjE3NC8xODc0MTUyNTAwODAxMDEwMDQyZAIVD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NDQnIHRhcmdldD0nX2JsYW5rJz4yMjwvYT5dAjIyAjIylgFTQVMgSW5jLiAoMjAxNCkuIA0KPGJyLz5odHRwOi8vc3VwcG9ydC5zYXMuY29tL2RvY3VtZW50YXRpb24vY2RsL2VuL2xlZnVuY3Rpb25zcmVmLzY3Mzk4L0hUTUwvZGVmYXVsdC88YnIvPnZpZXdlci5odG0jbjFrb3JwZmcyZTE4bG9uMW53cG93OXFpamR4ZS5odG1kAhYPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjU0NScgdGFyZ2V0PSdfYmxhbmsnPjIzPC9hPl0CMjMCMjM/S3N1LiA8YnIvPmh0dHA6Ly93d3cubWF0aC5rc3UuZWR1L35kYnNraS93cml0aW5ncy9oYXZlcnNpbmUucGRmZAIXD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NDYnIHRhcmdldD0nX2JsYW5rJz4yNDwvYT5dAjI0AjI0VVRoZSBNYXRoIEZvcnVtLiAoMTk5NC0yMDEzKS4gPGJyLz5odHRwOi8vbWF0aGZvcnVtLm9yZy9saWJyYXJ5L2RybWF0aC92aWV3LzUxNzU2Lmh0bWxkAhgPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjU0NycgdGFyZ2V0PSdfYmxhbmsnPjI1PC9hPl0CMjUCMjU0R29vZ2xlIEluYy4gKDIwMTQpLiBodHRwczovL3d3dy5nb29nbGUuY29tL21hcHMvZGlyL2QCGQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTQ4JyB0YXJnZXQ9J19ibGFuayc+MjY8L2E+XQIyNgIyNkZXaWtpcGVkaWEgKDIwMTQpLiA8YnIvPmh0dHA6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRXVjbGlkZWFuX2Rpc3RhbmNlZAIaD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NDknIHRhcmdldD0nX2JsYW5rJz4yNzwvYT5dAjI3AjI3SFdpa3Rpb25hcnkgKDIwMTQpLiA8YnIvPmh0dHA6Ly9lbi53aWt0aW9uYXJ5Lm9yZy93aWtpL0V1Y2xpZGVhbl9kaXN0YW5jZWQCGw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTUwJyB0YXJnZXQ9J19ibGFuayc+Mjg8L2E+XQIyOAIyOElXaWtpcGVkaWEgKDIwMTQpLiA8YnIvPmh0dHA6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR3JlYXQtY2lyY2xlX2Rpc3RhbmNlZAIcD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NTEnIHRhcmdldD0nX2JsYW5rJz4yOTwvYT5dAjI5AjI5UU1vdmFibGUgVHlwZSBMdGQuICgyMDE0KS4gPGJyLz5odHRwOi8vd3d3Lm1vdmFibGUtdHlwZS5jby51ay9zY3JpcHRzL2xhdGxvbmcuaHRtbGQCHQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTUyJyB0YXJnZXQ9J19ibGFuayc+MzA8L2E+XQIzMAIzMI4BV2Vpc3pmZWxkLCBFLiAoMTkzNykgU3VyIGxlIHBvaW50IHBhciBsZXF1ZWwgbGEgc29tbWUgZGVzIGRpc3RhbmNlcyBkZSBuIHBvaW50cyBkb25uVmVzIGVzdCBtaW5pbXVtLiBUb2hva3UgTWF0aGVtYXRpY2FsIEpvdXJuYWwsIDQzLCAzNTUtMzg2LmQCHg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTUzJyB0YXJnZXQ9J19ibGFuayc+MzE8L2E+XQIzMQIzMZUBQXlraW4sIFQuICgxOTg0KSBTb21lIEFzcGVjdHMgaW4gdGhlIExhcmdlIFJlZ2lvbiBMb2NhdGlvbiBQcm9ibGVtcyBvbiB0aGUgU3VyZmFjZSBvZiB0aGUgRWFydGguIFBoRCBUaGVzaXMsIFN0YXRlIFVuaXZlcnNpdHkgb2YgTmV3IFlvcmsgYXQgQnVmZmFsby5kAh8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjU1NCcgdGFyZ2V0PSdfYmxhbmsnPjMyPC9hPl0CMzICMzJ+U0FTIEluYy4gKDIwMTQpLiANCjxici8+aHR0cDovL3N1cHBvcnQuc2FzLmNvbS9kb2N1bWVudGF0aW9uL2NkbC9lbi9zdGF0dWcvNjMwMzMvPGJyLz5IVE1ML2RlZmF1bHQvdmlld2VyLmh0bSNtb2RlY2x1c190b2MuaHRtZAIgD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NTUnIHRhcmdldD0nX2JsYW5rJz4zMzwvYT5dAjMzAjMzdUhlaXplciwgSi4gYW5kIFJlbmRlciwgQi4gKDIwMTEpIFByaW5jaXBsZXMgb2YgT3BlcmF0aW9ucyBNYW5hZ2VtZW50LiA4dGggRWRpdGlvbiwgUHJlbnRpY2UgSGFsbCwgVXBwZXIgU2FkZGxlIFJpdmVyLmQCIQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTU2JyB0YXJnZXQ9J19ibGFuayc+MzQ8L2E+XQIzNAIzNGtQZWFyc29uICgyMDE0KS4NCjxici8+aHR0cDovL3d3dy5wcmVuaGFsbC5jb20vZGl2aXNpb25zL2JwL2FwcC9ydXNzZWxsY2QvUFJPVEVDVC9DSEFQVEVSUy9DSEFQMDkvSEVBRDA2LkhUTWQCIg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTU3JyB0YXJnZXQ9J19ibGFuayc+MzU8L2E+XQIzNQIzNURHZW9taWRwb2ludCAoMjAxNCkuIDxici8+aHR0cDovL3d3dy5nZW9taWRwb2ludC5jb20vY2FsY3VsYXRpb24uaHRtbGQCIw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTU4JyB0YXJnZXQ9J19ibGFuayc+MzY8L2E+XQIzNgIzNpUCQ2hlbiwgWi5YLiBhbmQgSGUsIFcuICgyMDEwKSBTdHVkeSBhbmQgQXBwbGljYXRpb24gb2YgQ2VudGVyLW9mLUdyYXZpdHkgb24gdGhlIExvY2F0aW9uIFNlbGVjdGlvbiBvZiBEaXN0cmlidXRpb24gQ2VudGVyLCBMb2dpc3RpY3MgU3lzdGVtcyBhbmQgSW50ZWxsaWdlbnQgTWFuYWdlbWVudC4gSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlIG9uIExvZ2lzdGljcyBTeXN0ZW1zIGFuZCBJbnRlbGxpZ2VudCBNYW5hZ2VtZW50LCBIYXJiaW4sIDktMTAgSmFudWFyeSAyMDEwLCA5ODEtOTg0LmQCJA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTU5JyB0YXJnZXQ9J19ibGFuayc+Mzc8L2E+XQIzNwIzN8gBS3VvLCBDLkMuLCBSaWNoYXJkLCBFLiBhbmQgV2hpdGUsIFIuRS4gKDIwMDQpIEEgTm90ZSBvbiB0aGUgVHJlYXRtZW50IG9mIHRoZSBDZW50ZXItb2YtR3Jhdml0eSBNZXRob2QgaW4gT3BlcmF0aW9ucyBNYW5hZ2VtZW50IFRleHRib29rcy4gRGVjaXNpb24gU2NpZW5jZXMgSm91cm5hbCBvZiBJbm5vdmF0aXZlIEVkdWNhdGlvbiwgMiwgMjE5LTIyNy5kAiUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjU2MCcgdGFyZ2V0PSdfYmxhbmsnPjM4PC9hPl0CMzgCMziQAUNoYXNlLCBSLkIuLCBBcXVpbGFuZG8sIE4uSi4gYW5kIEphY29icywgRi5SLiAoMjAwNikgT3BlcmF0aW9ucyBNYW5hZ2VtZW50IGZvciBDb21wZXRpdGl2ZSBBZHZhbnRhZ2UuIDExdGggRWRpdGlvbiwgTWNHcmF3LUhpbGwvSXJ3aW4sIE5ldyBZb3JrLmQCJg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTYxJyB0YXJnZXQ9J19ibGFuayc+Mzk8L2E+XQIzOQIzOfUBTGlnYXMsIE0uIGFuZCBCYW5hc2lrLCBQLiAoMjAxMSkgQ29udmVyc2lvbiBiZXR3ZWVuIENhcnRlc2lhbiBhbmQgR2VvZGV0aWMgQ29vcmRpbmF0ZXMgb24gYSBSb3RhdGlvbmFsIEVsbGlwc29pZCBieSBTb2x2aW5nIGEgU3lzdGVtIG9mIE5vbmxpbmVhciBFcXVhdGlvbnMuIEdlb2Rlc3kgYW5kIENhcnRvZ3JhcGh5LCA2MCwgMTQ1LTE1OS4gDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjI0NzgvdjEwMjc3LTAxMi0wMDEzLXhkAicPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjU2MicgdGFyZ2V0PSdfYmxhbmsnPjQwPC9hPl0CNDACNDBXVGhpbmtHZW8gTExDLiAoMjAxNCkuIDxici8+aHR0cDovL3RoaW5rZ2VvLmNvbS9tYXAtc3VpdGUtZGV2ZWxvcGVyLWdpcy9kZXNrdG9wLWVkaXRpb24vZAIoD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY1NjMnIHRhcmdldD0nX2JsYW5rJz40MTwvYT5dAjQxAjQxRU5hdHVyYWwgRWFydGggKDIwMTQpLiA8YnIvPmh0dHA6Ly93d3cubmF0dXJhbGVhcnRoZGF0YS5jb20vZG93bmxvYWRzL2QCKQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTY0JyB0YXJnZXQ9J19ibGFuayc+NDI8L2E+XQI0MgI0MoIBSGlsbGllciwgRi5TLiBhbmQgTGllYmVybWFuLCBHLkouICgyMDA5KSBJbnRyb2R1Y3Rpb24gdG8gT3BlcmF0aW9ucyBSZXNlYXJjaC4gOXRoIEVkaXRpb24sIE1jR3Jhdy1IaWxsIEhpZ2hlciBFZHVjYXRpb24sIE5ldyBZb3JrLmQCKg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NTY1JyB0YXJnZXQ9J19ibGFuayc+NDM8L2E+XQI0MwI0M6UBTGl0d2hpbGVyIEpyLiwgRC5XLiBhbmQgQWx5LCBBLkEuICgxOTc5KSBMYXJnZSBSZWdpb24gTG9jYXRpb24gUFJPQkxFTVMuIENvbXB1dGVyICYgT3BlcmF0aW9ucyBSZXNlYXJjaCwgNiwgMS0xMi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzAzMDUtMDU0OCg3OSk5MDAwOS0xZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pTVAVPSlNUQQRPSlRSBE9KVFMDT0pVBE9KVk0DT1BKA1BPUwJQUANQU1QFUFNZQ0gDU0FSA1NDRARTR1JFAlNNAlNOA1NOTARTb2Z0AlNTA1RFTAJUSQRVT0FKAlZQA1dFVANXSkEEV0pDRAVXSkNNUARXSkNTBFdKRVQDV0pNBFdKTlMFV0pOU0UFV0pOU1QDV0pWA1dTTgJZTRWAAgEwAzczNwQxNDA4BDE0MDYEMTAwMgQyNDIzAzE2NAM2MTEEMTQ3OAM0NzMDNDkyBDE1NzkEMjQzNwQyNDQyBDI0NDQEMjQyNgQyMzE2AzgwMwQxMDAwAzQ3NgMyMDMEMjQyMgQxMzA0AzUzNQM4ODQDNTMyAzUyOQMyMDcDOTk2BDE1MTcEMjMxNwMxNjADNDc3AzY3NQQxNTczBDE1NzQDNzQzAzUxMwQxNTc1BDI0NDUDMTkxAzgxMgMyNjAEMjQ1NQMxMzYEMjA3NAQxNDkzAzEyMgM5ODkCOTIEMjAzMwMxNzMEMTQ5MgQyNDM4BDE1MTgEMjQ1NAQyNDU3AjY0AjkzBDEzMTEEMjMxNQMyMDgEMjQzMgQyNDYyAzU0MQQxNjkwAzUxMgI2NQMxMDMDMTc2AzExMQM0OTAEMjQ0OQQxMzkxAzIwMgE0AzIwOQQyNDI4Azc0NwQxMjYxBDE1NzgEMTUxOQM1MjcEMTQ3NwQxMjk4BDE5ODAEMjQzNgM1MjUDNDc1BDI0NDMCMzAEMjQzNQMyMzADMTYyBDI0MzEDNTMwAzUyNgMxMjUEMjQyNQM0NzkDNTMxAzY5MQIyOQMxNDQEMTk4NgQxMzk1AzExNAQyNDYxBDI0MjEEMTQxMQMxMDIDMTc1AzY0OAMzOTcEMTc1MwMxNzIEMjQzMwM1OTEDOTkwAjQ1AzU0MwMzMzkEMjQzMAIyOAM0NzgEMjQzOQQyNDYwAzM1NwI0NgMyMTAEMTQ4NQMxNjMDNzg3Azc4NgM5MTcDODE1BDI0NDEEMTQ4NwQxNTc2AzE3NAQyNDM0AzUyOAMyMDUDMTkyAjY5BDI0NTkEMjQ2MwQyNDUzAzczOAQxNDgwBDE1OTADODE0BDE0MDcEMTQ3OQQxMDAzBDI0NDYDNjAxAzgwNgM3ODUEMjQ0NwQyNDUyAzk5NwM2MDYDNzg4Azc5MgQxOTc3AzgxMAM1ODYDNjE0BDE1NzcEMjQ1NgM4MTEDODE2BDE5NzkDNzM2BDEwMDQDNTg3AzgxNwM2MTMDNjAyAzU5MgM1OTMDNzkzBDExODYDNTg4Azc5MAM3ODQDNzM5AzgyMAM2MTIDNzQyAzk5OQM4MjIDOTk4AzU5NgQyNDI0AzYwNQM4MjEDODA0AzYwNAQyNDY0BDE5NzgDODA1Azc5NAM4MjMDODEzAzU4OQM3OTEDNjA5AzYxMAM3NDEDNzQ0AzYwMwM4MDcDNzg5AzgyNAQxMzk0AzU5MAM3MzUDNjAwAzYwNwQxNDg2BDI0NDgDODA4AzUwOQQxMDAxAzU0NwI3MQMyMDYEMjQ0MAMxNDgEMjQ1MAM1MzMDMTM1AzQ3NAQxNTg5AzQ5MQQyMDM0AzIwNAM2NjYDMTA0BDE0MDUEMjQ1OAMxNDYDNTExAzgxOAM1MDIDODA5BDI0NTEDNTA2AzYxNQM0OTMDNTM0AzUxMAI0MQQyNDY1FCsDgAJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkTmYLoNYRlsUU39GK9y/1TOB6v84rJyiAOQCh1m8ntPk=" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAIYCRQRZ+8ZtsREX4fZUQzYN8sxO15cYiUM4G9ciXBy5rRbTxQn0wurVpykN++S3qsY9gqm4NhJKbhUsb9qOzDz5+BaQ51Lu9YTI5y+UD8ReCXYCCq5883RYOyuQBDQdgBKJQ9NYSepAvxIHsUIEBszIF9kVAw+OtKpSo2nY0L5TS7pjZcI4a2ubz4FZUJ/qeIscQNjFFetjMQu+gPAKi1cuu0dXATu8ZTMsEIKUEeEK3+aBofovXqmNNgBwrJCAFSq2Co/mvvaNFGqy28nyI+vv6yf3gTw51pjuwP3t6rjAvP5x1lbHcKM5M/ROzquUHr9lNeWWklFj9cK1TFZpQdUnWziPR3qwNn0ScFNmZAws/jpBm80jcsuZv9XDBeU2KB136TAPmetewitSt9wGNYTIY9UJhFPM+0hDu7cwMKVpp+mmnD8+pMa1yHYRYzLQxH5n1Q/qqDptM9kfJbC1I4q9xL93cbaAMQ4tG4BJWGCzAW6vtR3JnRPdbQo4gA4sZaXer04IxUa3arSwCxRuEDIYFbblwRpneYEy3rzwScqJxuezOuEOjOptTX9AYvM9jKmAypI8kdyyyB4CNN3pFGdOk4mu/WExNjWQ5X01rKdDbeJN4TzreHSTLkh+d4B8EihhF81TpqgKTnD/fd/yNWGbO9zMdjKdAolzLesxJOG2bR2t4ae94pZJoUOvCEPRLh7u5h+HR1RXp8jKz3XyrzwGq5ViD0Fyb+qhGFHNfa6dxzK0n1qu2d9hzAGJ1ZdEzFgVObshVy2ouP3umau52TJFwKhqohqorHyJZt7h54jbR7oXke9kR+ABe996RxzCmx1L/42I3la9AkYiuUmh4mE9Rk5DdY/KiLlE+29svjthmIPNdKgZlA9dvwpjASVteCo/ksy0uMaOE+alzU72eZ1rlvR6C3RGA9Jmsr/oit2h5HWYxsN1nFXBqJbgXwz0iYh7JCUYpOW+jbALhRmLv9UpsX2EI+d3W02YqShNDct3I94Sq9enXMFtuVRPWGCF1oN1TlM8aQC+B45LfHfFCnZz6KlRuP6GvEqI8VDdi+sTnM71Jn53VrlKa3UuXcRuCcAe+GQxyfHfD/wZ+ergvp+hsx48VT9Xih8PA4vj1aNtQlLCsXezalJjXjgEl/cAa7arjDkAIe6rJDf9KPGPMwoKLWIBVM9nLqRvTn4xs2uCHsZiAOZ8Y5IAuKZeArneMeYK8+pLRvERCDkGURuCyuXbsR59h/AAdaKvPM2BT4SSKNj0Us/NQU9+MI9hDNgMZowy9xCOwBNddniKd5JiX1iETIuSWSu2galT3CZ4MpRQGqIfvz80X8fuyGyFF2wHP/HcdHP4x0OBSCxdPk53jUQtAQ6g8akcdK7Kr4deoDeUynf9l1Y6lbf6JC8NoSbMA+vc8O8QqrB2tS2vv8gSiSoIhJ/70GOmod2HPYumgEmpn8vgLAz5ccZUA7bkVUoObyVZV/Zm1Uh4Ozw57X6RDPtK9aubBoko1p5gcjMIWvm4T+T41pjKCycN70aK5E4MwFc6qbRpzIzeaUUIv5qiWg3dZvXV/9M9IwoMUAdYUH5UMA5AJDCfNUkJ1q+n5sIsxUCB6Nq0yAoqoFwFjOj8ZbQjUP5/q/DGUJDHtaZDExzq62tLwfe18PsgWsDuILbV32BFX07jDSTdc2CHO2xi6fhORGg5L0lBgRl4s0zp6Bc/YgBEniC2eneyWSDQ2iw5NhVKu3HJAuZnur70V7iwzDcGwQI2IDR/+2+ZDAfID+MM8+0XNaUlaIgX8fsjMqD2JWDxa8kn7ReZiPgMqAmE7acxyMlKdMtk6XhHjwc25wp4AlleDWbzVGzQLtuUmBfLRhb1duIXiNLsi/yRLp4WZPUJ27df65bU1anG4WItJ4LM9y1kFgUPkaZCD7G3W6HUl/HynBFJ9UbqeGaq8vaK1/YQfFvpLYGg0bJLmJIb7I1VBtGRefxiocvIkjuBnFbKIG1Bvp3bdqOCotobzRhTIfJPz1ybr2D6/DEvFCV2tebkdleZKtgLobZ6iejVWuu1VZxJWsflUf5AhdWNPs78Mu7xVHmmifThhNhHXVuTcjWgOc0+ha7t+FzBP9w8kasJY44yZnpObyYDO1ZdBcb+9I3REzEpeEvJizUogox2uLy8cRq3yp6lmmMvyTt1q1wGJKr3RN2vrp1bz9IC1X58ObtB/5VtKrLwiwYTZ4JczAShm49AkZfwZHQTZLyjY3qS4jbPi09pGNXw+uGS3Hu4tDXabra7UmIrVTJ6nt2BS+IV2oARGuf8d10+bFGE4Rxb8X5OWr9o8NP/NkSmCAkxIVC+Aj7EdIJsmLDnfzTIbDsJUtH/K7KPeiLbFjhDUrnAx6wO2/9ofSkwJg74y7KTIDV/ngs3MovqY+DwVzncJ9d75iLyCizSur2z/AoWxQnguyVJbTVltsvXYae72/GCovpvEoLWlmf4Sg6Yu4BBu5RYruCk5N7MezxIv1QQ8tjDdhoGXqAbWrRFFDWx3FK4oHDCvJJHjmn4y1G1QBsNDvWkIszuXW6E1KUz6dtoSwPj0wA0Ssong9DXWhtYuS9jtH4StM1ZT+6tqYvxtAJndAQ0NFNV1597E/y6Lte1J3ZP1twzvBpB/f0YxWaTDHZ72u7NlSVoCSjnWeNWCBfpptecl27SJO0njN9e8jHgDwmPC2NlIgGmq46k97juUD2lSjIB/+AeyDUaBy5oIhTdg6INeWTgkUTzyXC34fsOvEb0hxwmbeOjctVaE3x0pTijWTsKmSeGzIda8uoJkZcuTbWHVoRB6h5Dc72rcIz1lA5hJghfGLyFGxD6b7ArQwZHjISLbPwxJYkFbxLsCrMOEMVNCcxGdx56w146VqqjCImkPDvKFHUQ/jY9+FyVc120CiMOMieHjy4dyVomOSf6gPMkkPd4ClcsQoipAxZgLTxG67FCpcEH/ewS/egbmWx04V1w9x54+T8GkfQObxizPwQZQvPeZm6KLBvrmvLYp1CaHAQxp15ZTATs7okf7S5ePo2gUI6UpzRPUgMetACnXOfa/MSurf56LkzDvZSlRprJXfFcpjnNRle7ZhR+nzipiAi6t6fJxRB4sYqEuxZikZ0sS/pn76iye8xM0q+tFJNR5AEEH/rcf8wyXJ1I9n+HN9S0Q60NH0z6qdFkKcgxGmbQ8xoxIk8T5csYyuHHJ8T3qv4mAA1kgwWmcUBQcbF5yr4YQxwmztMkcCEMt6aAvfC8f6toJF0YzyYX6qP1l6BNvsoSTEoNJmHhXQ9HjrS4USE6yCYyzwmeO12MO4U1xeipGR+e8TLpQ6CqXnairBPYGsz+glJyTODudGLzInafKtakhjlbm2TNMFfJb+9E3OOHfsq+2OJbTt6ZXJufxbbdOy1pecKV+u7JTFDadGMONSTueBvDAHypkesyjW4yuwX56tldt764R/77OW2TjDwb0ccJpLN4gZuPJdFGPDo8zpRNpCEOepOJcfUo9I8zG9qwVzTuTYjxDFDg2EFzwz1hep69FpxYJxedOu96B/Dnw5jBPjdr2PsTL/fVgG4rRrihebOjXHUfqiglDXkf85mvQfywWRzIsCAYnsAqHdzBwJuSxhofmDKZ6kAcIU59NL+2Ji/ZlNfEKQgjenXIkOQXcybyFgFk6H+fsgvXkF6guW0mK/96yfu7+n2DpGArzAn8Ug7zyAfpekzLtWT6UsgXZRNiIa8gkid6xp0spp/D5y5u2oeDBhSnXl6da309+kboqvL0EZR7RebudBufyINEOSNkpXst+LCzHcoZXcZBkagLrxGz5Lr3OmrcaZrIzlq5X4ZeFENOm92bbMpLQVD4IMoZREdVKbJIoaDV/CJq5z9wEVDB/cC79FvrePkFE4bul1aFFPyyi0kOKqg/hxo/OJaXSW+9WIG+vrsJvPgrum9ZyyaHkmzelazeN+yHPLxy1zNV9jyZToogsZf6RZ3nFRpnXxmMlVnH0OVgW+2Mohtqfe2KKfX/VnF0jyp37UjD6+NIz5zrn96FS+VMJNGWR2O5842Lmw660AZaYl38EWqjS11SHbcorNwflYBLGOSBhYCgfIyVLGUTbPYfzEgNQqTHnxA1GPsHqBrOtCWMEkB/uzd4oi1XWCyepKSG7lNpxxFzdDjX98Oc6FzbVsmLIEUldUkJbRhZrvplfZYEL0HEIrr0hA25YbbMqPgsadaNs2L0PL6NJIUvaBZj+4WJDzg+qXCxGdKNlUbGu4DHu5jY9jggQ/M+bLYw70SYQesq8eoufw0gVy+VJXLOb/8y4R0wEYH7yRWOc8vTOLrzSGCW44GJlYyDbnWEuvxMiv+ao715+CTPTCKoBBsIcfS54DwjalRqX/tdios6c/R4l8RBx+bEs2I/OhFPcGy16UdcBobgA6MDXqDiN8qHUE5edBy836NpfClbftFfnfyfCIoNo/LoLepzD03QezF7mHekW07wckU6+7Q9YdIbSVVhYrVWNy4V9SLNt9rDNP2lL0qzP3/u+7FCVXpVsepRRHoAuuwZCqIEy9pj8H80hp7qY3PsWfym5PFwPDpDrw5btVy0nYXPzmSU7Uq1R+xlIyX8GjtJduBVZ8wbk6aTUuK/MPWJrZBr6wJdTeGfZt62TS2PvUX8Bszn2XYFWa+KC0AGHhHOlm+2AJHVPZlyUq17Cl5102dlAYHzK+0AG32kPT2GuoyTOE8BIy6ZumGISrsX9PtvrJQT973r7tutrOJdmSsuzZmet4ka9s4KBh2pnNpSnp5KKvbJBe/2u8kjranZVADkNkEKOEXepq4YzpMaSxC3MlYLFhnFkgI5ZVRMzmO+OO/YgsPyT8yRPxZINEKJmxVfR6o2/dlXAveRG+kmgscPVzG2fU+7RYWdJ6A7dYUqm+3QeXKaM60OaCxssNom3YyO27eklt3YlQIip36uoWBxadwhW6Xr4hpzG+fVoqWHCOB4W0tkB4Ys2fVx/u4hWeNar3onUwWIr3qyzShdQuq1yLoOGDw62HfXCpHg+2MgPzx0D30ZvvTRWoyLCT5KXRfbhCHc0ft6eEqaV2Bsm1PQ1adRpxas+YKl6OM0XfBYI7e+D/PTCV8kGkiBFjju03VDE4za5rygA5Hlm2Nw7Z/jwlgzZu+xnq4r5sKXwqO2GiO0Yz0phNMal/uj9jQH01r6jZOWZdGYv25HB18pD1BnnheFvgIBd4A+Yzzd4445ZYYBPi1KjUxhWknmQ3xMtk+VekEsyt5OsRToo3sdsrHlF0S3wBO8PMh2hXpztV0Nul20IZOgLNZXnw69o2KVsiPg3L1Ov2ccetI/l78hqpSial79UDetTUKR6jdST7RI/tNxHgqa2VZpA6vgUwhJt7/J+BSGBMS8EJAsf/9j8QXzOPuANANF9n6qx9M8VFm3znHUngYh/toDPhEifiWmFe8/WqO48axLW568ANtWdjn5DflrdMhUJcxSKlMY6hfUROf4lKD2WVzMrBGUEyM1i/IioLJF4GlMlIJPWPw9wKGpav4okyiSNWyQxlltAoA50ScVI3orHMZwfosp1huw/AZY81iQ2w5g07s7Nd1y8K5gjHHQyvDDAfOa9Uhob6FFUAHiGaPiQlLpZsvHrhgsulhhbrvxkpIsMpSYlu6mHqQ2" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=529" title="American Journal of Operations Research">
+                    American Journal of Operations Research</a> &gt; <a href="home?issueid=6754#60009">Vol.5 No.5, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Facility Location Decisions Based on Driving Distances on Spherical Surface <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Han++Shih&searchfield=authors&page=1' target='_blank'>Han  Shih</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=University+of+Missouri%2c+Columbia%2c+USA&searchfield=affs&page=1' target='_blank'>University of Missouri, Columbia, USA</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ajor.2015.55037"
+                    target="_blank" onclick='SetNum(60009)'>10.4236/ajor.2015.55037</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/AJOR_2015092909395255.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60009)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60009' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    6,664</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    8,544</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60009&JournalID=529' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">Facility location problems are concerned with the location of one or more facilities in a way that optimizes a certain objective such as minimizing transportation cost, providing equitable service to customers, capturing the largest market share, etc. Many facility location decisions involving distance objective functions on Spherical Surface have been approached using algorithmic, metaheuristic algorithms, branch-and-bound algorithm, approximation algorithms, simulation, heuristic techniques, and decomposition method. These approaches are most based on Euclidean distance or Great circle distance functions. However, if the location points are widely separated, the difference between driving distance, Euclidean distance and Great circle distance may be significant and this may lead to significant variations in the locations of the corresponding optimal source points. This paper presents a framework and algorithm to use driving distances on spherical surface and explores its use as a facility location decision tool and helps companies assess the optimal locations of facilities.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Facility+Location&searchfield=keyword&page=1' target='_blank'>Facility Location</a>, <a href='articles?searchcode=+Spherical+Surface&searchfield=keyword&page=1' target='_blank'> Spherical Surface</a>, <a href='articles?searchcode=+Euclidean+Distance&searchfield=keyword&page=1' target='_blank'> Euclidean Distance</a>, <a href='articles?searchcode=+Great+Circle+Distance&searchfield=keyword&page=1' target='_blank'> Great Circle Distance</a>, <a href='articles?searchcode=+Clustering&searchfield=keyword&page=1' target='_blank'> Clustering</a>, <a href='articles?searchcode=+Heuristic+Method&searchfield=keyword&page=1' target='_blank'> Heuristic Method</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Shih, H.   (2015) Facility Location Decisions Based on Driving Distances on Spherical Surface. <i>American Journal of Operations Research</i>, <b>5</b>, 450-492. doi: <a href='http://dx.doi.org/10.4236/ajor.2015.55037' target='_blank' onclick='SetNum(60009)'>10.4236/ajor.2015.55037</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p>The facility location problem, also known as location analysis or k center problem, is a branch of operations research and computational geometry concerned with the optimal placement of facilities to minimize transportation costs plus facilities costs while considering factors like avoiding placing hazardous materials near housing and competitors’ facilities. Poor facility location decisions can result in high transportation costs, inadequate supplies of raw materials and labor, loss of competitive advantage, and financial loss (Reid and Sanders [1] ).</p> 
+<p>The facility location problem on general graphs is NP-hard to solve optimally (Wikipedia [2] ). In the past, many facility location decisions involving distance objective functions on Spherical Surface have been approached using algorithmic, metaheuristic algorithms (Brimberg et al. [3] , branch-and-bound algorithm (Tcha and Lee [4] ), heuristic techniques (Francis and White [5] , Love et al. [6] and Farahani and Masoud [7] ), approximation algorithm (Vygen [8] and Shmoys et al. [9] ), simulation, and decomposition method (Iyigun and Ben-Israel [10] ). Ballou [11] presented an exact Center of Gravity method for facility location problems; he used iterative method to solve the facility location problems based on Euclidean distance. Several papers present general problem formulations which are involving the distance functions. The spherical facility location model studied by Katz and Cooper [12] and by Drezner and Wesolowsky [13] is a more realistic model than the Euclidean planar facility location model, especially for large regional facility location problems. Xue [14] has presented a gradient algorithm for solving the spherical facility location problem and proved a global convergence theorem for the algorithm as well as a hull property for the spherical facility location problem. Mwemezi and Huang [15] stated that current practices are dominated by Euclidean and Rectilinear models which are best suited to planar surfaces and presented an alternative distance measurement based on “great circle distance” which represents the shortest path on spherical surface. Sullivan and Peters [16] presented a new location- allocation algorithm that clusters points in a two-dimensional region into mutually exclusive groups, such that the sum of the value of a user-specified objective function calculated for each group is minimized over the whole study region. The squared distance, L-shaped distance and straight line distance functions were selected for the objective function in their example. Bespamyatnikh et al. [17] presented efficient algorithms for two problems of facility location, the first to seek a location that maximizes a weighted distance function between the facility and the sites, and the second to find a location that minimizes the sum (or sum of the squares) of the distances of k of the sites from the facility. Levin and Ben-Israel [18] presented a heuristic method to solve large- scale multi facility location problems; the method is using the authors’ single facility location method (Levin and Ben-Israel [19] ) as a parallel subroutine, and reassigning customers to facilities using the heuristic of Nearest Center Reclassification. Rodr&iacute;guez-Ch&iacute;a and Franco [20] presented a procedure to solve the classical location median problem where the distances are measured with p-norms with p &gt; 2. The global convergence of the sequence generated by this iterative scheme is proved by considering an approximated problem. Kotian et al. [21] developed a procedure that will solve contingent on a necessary and sufficient optimality condition, the planar k-centra location problem seeks to find a location that minimizes the sum of the Euclidean distances to the k furthest existing facilities. Iyigun and Ben-Israel [10] proposed a probabilistic decomposition method for the K facilities location problem. The problem is relaxed using probabilistic assignments, depending on the distances to the facilities. The probabilities, that decompose the problem into K single-facility location problems, are updated at each iteration together with the facility locations.</p> 
+<p>These approaches are most based on Euclidean distance or Great circle distance functions. So far, there seem to be no published papers that present the optimal or near optimal facility location decisions involving driving distance objective functions.</p> 
+<p class="E-Title1">2. Motivation</p> 
+<p>In <a href="#f1" target="_self">Figure 1</a>, the driving distance, Euclidean distance and Great circle distance between Detroit, MI (42.331427, −83.0457538) and Cleveland, OH (41.4994954, −81.6954088) are calculated as:</p> 
+<p>Euclidean distance = 90.23 Miles as shown in <a href="#f2" target="_self">Figure 2</a>.</p> 
+<p>Great circle distance = 90.251 Miles (SAS Inc. [22] , KSU [23] and The Math Forum [24] ) as shown in <a href="#f3" target="_self">Figure 3</a>.</p> 
+<p>Driving distance = 170 Miles (Google Inc. [25] ) as shown in <a href="#f4" target="_self">Figure 4</a>.</p> 
+<p> From Figures 2-4, it is clear that the Euclidean distance and Great circle distance are not much different, the driving distance are much longer than Euclidean distance and Great circle distance. Moreover, in the U.S, as a whole, road distances between major cities are about 18% greater than the straight-line distances (Love et al. [6] ). The Euclidean distance is the “ordinary” distance between two points defined as the square root of the sum of the squares of the differences between the corresponding coordinates of the points. In Euclidean three-space (Wikipedia [26] and Wiktionary [27] ), the distance between points <img src="//html.scirp.org/file/12-1040415x5.png" class="200" /> and <img src="//html.scirp.org/file/12-1040415x6.png" class="200" /> is </p> 
+<p> <img src="//html.scirp.org/file/12-1040415x7.png" class="200" />. </p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x8.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Points of Detroit, MI and Cleveland, OH.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x9.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Euclidean distance between Detroit, MI and Cleveland, OH.</p> 
+</div> 
+<p>The great-circle distance is the shortest distance between two points on the surface of a sphere, measured with “Haversine” formula as (Wikipedia [28] and Movable Type Ltd [29] ).</p> 
+<p> Haversine: <img src="//html.scirp.org/file/12-1040415x10.png" class="200" /> </p> 
+<p> Great circle distance: <img src="//html.scirp.org/file/12-1040415x11.png" class="200" /> </p> 
+<p>where φ is latitude, λ is longitude, R is earth’s radius (mean radius = 6371 km);</p> 
+<p> <img src="//html.scirp.org/file/12-1040415x12.png" class="200" />Is difference between two latitudes radians </p> 
+<p> <img src="//html.scirp.org/file/12-1040415x13.png" class="200" />Is difference between two longitudes radians </p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x14.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Great circle distance between Detroit, MI and Cleveland, OH.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x15.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Driving distance between Detroit, MI and Cleveland, OH.</p> 
+</div> 
+<p> where <img src="//html.scirp.org/file/12-1040415x16.png" class="200" /> is the arctangent function with two arguments. In terms of the standard arctan function, whose range is<img src="//html.scirp.org/file/12-1040415x17.png" class="200" />, it can be expressed as follows: </p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/12-1040415x18.png" /><span class="bracketMark"></span> </p> 
+<p>Microsoft C# uses Math. Atan2(y, x) function to calculate Atan2(y, x)</p> 
+<p>Several papers have applied Weiszfeld [30] iterative method to solve spherical facility locations problems involving Euclidean distance and Great circle distance. Katz and Cooper [12] proposed the following closed form iteration formula for solving the spherical facility location problems. There are no any iteration formulas in relation to driving distances.</p> 
+<p> For Euclidean distance <img src="//html.scirp.org/file/12-1040415x19.png" class="200" /> </p> 
+<p>For Great circle distance</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/12-1040415x20.png" /><span class="bracketMark"></span> </p> 
+<p>So far, there seem to be no published papers that have applied iterative method based on driving distances. Katz and Cooper [12] stated that if points are widely separated, the difference between Euclidean and Great circle distances may be significant, and this may lead to significant variations in the location of the corresponding optimal source points. Aykin [31] stated that the assumption that the earth can be considered as a plane is not appropriate and introduces error if the demand points are spread over a relatively large region.</p> 
+<p>These facts motivate me to do research and propose an approach for facility location decisions based on driving distances on spherical surface using heuristic technique and helps companies assess the optimal locations of facilities. In particular, the following problem is worth pursuing:</p> 
+<p>Given:</p> 
+<p>・ The location of each destination in terms of their co-ordinates</p> 
+<p>・ The requirement at each destination</p> 
+<p>・ A set of shipping costs for the region of interest</p> 
+<p>To determine:</p> 
+<p>・ The optimal number of facilities</p> 
+<p>・ The location of each facility</p> 
+<p>The optimal facilities locations are those that minimize the driving distances related costs plus facilities costs.</p> 
+<p>The implementation method proposed in this paper is carried out by using heuristic iterative approach. This paper is organized as follows: Sections 1 is Introduction. Section 2 states the motivation for researching this paper and proposes a framework and algorithm. In Section 3, the facility locations decisions implementation of the proposed framework and algorithm is carried out using a hypothetical case study. In conclusion, Section 4 summarizes this study and outlines its contributions and future research.</p> 
+<p class="E-Title1">3. Implementation Methodology for Facility Location Decisions</p> 
+<p class="E-Title2">3.1. Algorithm</p> 
+<p>The algorithm of this paper is to develop a method to determine the optimal facility location to minimize the sum of facilities cost and the sum of the volume of goods at a destination multiplied by the transportation rate to ship to the destination multiplied by the Google maps driving distance based on the following assumptions:</p> 
+<p>1) The good of every destination points can be transported in one time, and the velocity is not changed.</p> 
+<p>2) The one destination point is only served by one warehouse.</p> 
+<p>3) The cost is related the length from the warehouse to the destination point, the transport conditions are not considered. Transportation cost is related to the distance only. The transportation cost equals the distances traveled times a fixed price per unit, distance.</p> 
+<p>4) The warehouse locations are located at populated places (cities/towns).</p> 
+<p>5) All service facilities are identical.</p> 
+<p>6) Each destination point wishes to minimize the cost of acquiring the product.</p> 
+<p>7) The company treats each cluster independently.</p> 
+<p>The strategy of the algorithm involves the following steps:</p> 
+<p>Step 1. Generate Google maps driving distance matrix from the set of destination locations’ latitudes/longi- tudes.</p> 
+<p>Step 2. Perform K means clustering based on the destination locations driving distance matrix to generate K clusters.</p> 
+<p>Step 3. Calculate starting point of facility location for each cluster using Center of Gravity method and sets as current facility location.</p> 
+<p>Step 4. Construct the circle whose radius is the maximal Google maps driving distance from current facility location.</p> 
+<p>Step 5. Query the populated cities within the circle constructed in Step 4.</p> 
+<p>Step 6. Calculate the cost from each queried city to all destination locations, the queried city with the smallest cost will become new current point.</p> 
+<p>Step 7. Repeat steps 4 to 6 until no new current point can be found.</p> 
+<p>Step 8. Randomly select several cities points as current points and perform steps 4 to 6 to show that the local optimal facility location is the global optimal or nearly global optimal facility location.</p> 
+<p>Step 9. Calculate the total cost for each set of clusters.</p> 
+<p>Step 10. Perform another set of clustering if desired and repeat Steps 3 to 9 until no clustering is desired.</p> 
+<p>Step 11. Compare the cost of each set of clusters; select the set of clusters with the minimal total cost and optimal facility locations.</p> 
+<p><a href="#f5" target="_self">Figure 5</a> shows the flowchart of Facility location decisions process.</p> 
+<p>In <a href="#f5" target="_self">Figure 5</a>, the implementation details are described as follows and a lot of C# programs have been written for the implementation (Source codes are available from the author).</p> 
+<p>Step 1. A Google maps driving distance matrix is generated as a distance data set and used as input in SAS</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x21.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Flowchart of facility location decisions process.</p> 
+</div> 
+<p>Clustering procedure. A C# program is written using the Google Maps API (Google Inc. [25] ) to create a driving distance matrix that will be used as input in SAS Clustering procedure.</p> 
+<p>Step 2. After driving distance matrix is generated, the next step is to cluster the cities based on Driving distances. This paper will use SAS Clustering procedure (SAS Inc. [32] ) to cluster for the cities. TYPE = DISTANCE data set can be used as an input data set to PROC MODECLUS or PROC CLUSTER (SAS Inc. [32] ). PROC CLUSTER ignores the upper triangular portion set and assumes that all main diagonal values are zero, even if they are missing. PROC MODECLUS uses the entire distance matrix and does not require the matrix to be symmetric. Since the driving distance matrix data set is not necessary symmetric, the MODECLUS Procedure is used in my paper to cluster the cities.</p> 
+<p>Step 3. Calculate the initial starting facility location centers for each cluster. Several quantitative techniques (Heizer and Render [33] , Reid and Sanders [1] and Pearson [34] ) have been developed to assist initial site selection. This paper uses Center of Gravity method (Ballou [11] , Geo Midpoint [35] , Chen and He [36] , Heizer and Render [33] and Kuo and White [37] ) to calculate the starting point of facility location. The Center of Gravity method assumes that the cost is directly proportional to distance and volume shipped, inbound and outbound transportation costs are equal, and it does not include special shipping costs for less than full loads. Using latitude and longitude coordinates might be helpful (Heizer and Render [33] and Chase et al. [38] ) to calculate the initial facility location centers for each cluster. This paper assumes a spherical earth and sea-level points, the following formula is used to perform spherical coordinate conversion from latitude/longitudes to Cartesian coordinates for each destination location. The formula is much more complex for ellipsoidal earth (Ligas and Banasik [39] ).</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x22.png" /><span class="bracketMark">(1)</span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x23.png" /><span class="bracketMark">(2)</span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x24.png" /><span class="bracketMark">(3)</span> </p> 
+<p>where r is the earth’s radius.</p> 
+<p>Next, compute weight volume of good multiple by shipping cost for each location</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x25.png" /><span class="bracketMark">(4)</span> </p> 
+<p> where <img class="200" data-original="//html.scirp.org/file/12-1040415x26.png" /> is the volume of good to be shipped to location i, <img class="200" data-original="//html.scirp.org/file/12-1040415x27.png" />is the shipping rate per unit of good to location i. </p> 
+<p> The initial center of gravity <img class="200" data-original="//html.scirp.org/file/12-1040415x28.png" /> and <img class="200" data-original="//html.scirp.org/file/12-1040415x29.png" /> are calculated as </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x30.png" /><span class="bracketMark">(5)</span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x31.png" /><span class="bracketMark">(6)</span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x32.png" /><span class="bracketMark">(7)</span> </p> 
+<p>Then, the initial starting Cartesian coordinates are converted to latitude/longitudes points as input for Step 4.</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x33.png" /><span class="bracketMark">(8)</span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x34.png" /><span class="bracketMark">(9)</span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x35.png" /><span class="bracketMark">(10)</span> </p> 
+<p>Step 4. Calculate the driving distances from the current point calculated in Step 3 to each destination location of each cluster using the Google Maps API (Google Inc. [25] ).</p> 
+<p>Step 5. Search the optimal facility locations. All distances are calculated using the Google maps driving distances. Let the starting point be the current point calculated in Step 3. Use the maximal Google maps driving distance calculated from Step 4 as radius of current point. The cities are queried in a circular pattern around the current point at a maximal driving distance. This paper utilizes a function in Map Suite WinForms Desktop free trial Edition (Thinkgeo LLC [40] ) and a populated places database of Natural earth data source (Natural Earth [41] ) to query all cities with the maximal driving distance of current location point.</p> 
+<p>Step 6. Calculate the total cost between each queried city to all destinations locations within each cluster. Compare the cost of each queried city and find the city which has minimal cost. If any of the queried cities has a new minimal cost, then that city will become new current point and go back to repeat steps 4 to 6 until no new smallest cost can be found. Otherwise, If none of the queried cities has a new minimal cost, then the current city becomes the optimal facility location for that cluster.</p> 
+<p>Step 7. Randomly select several points (Hillier and Lieberman [42] ) and perform Steps 5 to 6 to show that the local optimal facility location obtained in Step 6 is the global optimal or nearly global optimal facility location.</p> 
+<p>Step 8. Calculate the total cost for all clusters in the cluster set.</p> 
+<p>Step 9. Generate other clusters if desired and repeat steps 3 to 8 to calculate the total cost for all clusters in the cluster set until no clustering is desired.</p> 
+<p>Step 10. Select the set of clusters which has the minimal total cost, the optimal facilities locations will be the cities found in Step 7.</p> 
+<p class="E-Title2">3.2. Methodology Implementation</p> 
+<p>Based on the formulas from several papers (Rodriguez-Chia and Valero-Franco [20] , Mwemezi and Huang [15] , Katz and Cooper [12] and Litwhiler and Aly [43] ), this paper formulates the model as follows:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x36.png" /><span class="bracketMark">(11)</span> </p> 
+<p> Subject to: <img class="200" data-original="//html.scirp.org/file/12-1040415x37.png" /> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x38.png" /><span class="bracketMark"></span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x39.png" /><span class="bracketMark"></span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x40.png" /><span class="bracketMark"></span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x41.png" /><span class="bracketMark"></span> </p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/12-1040415x42.png" /><span class="bracketMark"></span> </p> 
+<p> <img class="200" data-original="//html.scirp.org/file/12-1040415x43.png" />= total # of destinations </p> 
+<p> where <img class="200" data-original="//html.scirp.org/file/12-1040415x44.png" /> = Total cost for m clusters </p> 
+<p> <img class="200" data-original="//html.scirp.org/file/12-1040415x45.png" />= destination locations for each cluster </p> 
+<p> <img class="200" data-original="//html.scirp.org/file/12-1040415x46.png" />= Volume at destination i in cluster k </p> 
+<p> <img class="200" data-original="//html.scirp.org/file/12-1040415x47.png" />= Transportation rate to destination i in cluster k </p> 
+<p> <img class="200" data-original="//html.scirp.org/file/12-1040415x48.png" />= Driving distance from the facility to be located to destination i in cluster k </p> 
+<p> <img class="200" data-original="//html.scirp.org/file/12-1040415x49.png" />= facility cost at each cluster k </p> 
+<p>Given the assumptions described in Section 3.1. We search the optimal facility to minimize the sum of facilities cost and the sum of the volume at a destination multiplied by the transportation rate to ship to the destination multiplied by the driving distance for the cluster.</p> 
+<p class="E-Title2">3.3. Hypothetical Case Study</p> 
+<p>ABC Company has 88 market cities located in Midwest, USA; the company seeks to build several warehouse centers to ship their goods to those markets to serve their customers. Assume that travel originates and ends at the warehouse centers. The coordinates (Latitude/Longitudes) of each market location and volume of goods and transportation rate for each market location are provided. The facility cost is 100,000.00. The goal is to minimize the sum of facilities costs and the sum of transportation costs. <a href="#f6" target="_self">Figure 6</a> is the graphical map of 88 major market cities.</p> 
+<p>Appendix A is the coordinates (Latitude/Longitudes) of each market location and volume of goods and transportation rate for each market location. The facility cost is 100,000.00.</p> 
+<p>Step 1. Converting major cities data to driving distance matrix</p> 
+<p>Use coordinates (Latitude/Longitudes) provided in Appendix A as inputs to create a driving distance matrix that will be used as inputs to MODECLUS clustering procedure in SAS. Appendix B is part of Google maps distance matrix of 88 Midwest major market cities.</p> 
+<p>Step 2. Clustering techniques</p> 
+<p>Set the driving distance matrix in Appendix B as input, the SAS MODECLUS Procedure is used to perform clustering for the cities. <a href="#t1" target="_self">Table 1</a> is cluster output from SAS code:</p> 
+<p>Proc modeclus data = work. Driving Data (TYPE = DISTANCE) list m = 1 k = 3; id location; run;</p> 
+<p><a href="#f7" target="_self">Figure 7</a> is the map of 14 clusters for the 88 major market cities located in Midwest, USA.</p> 
+<p>The following steps 3 to 7 are performed for cluster 1.</p> 
+<p>Step 3. Using equations from (1) to (7), the initial center of gravity for cluster 1 is calculated as in <a href="#t2" target="_self">Table 2</a> and shown in <a href="#f8" target="_self">Figure 8</a>.</p> 
+<p>Using equations (8) to (10), the Latitude and Longitude of Center of gravity is calculated as 41.5995134613, −96.62241872.</p> 
+<p>Step 4. <a href="#t3" target="_self">Table 3</a> shows the driving distances from current point to each market city location.</p> 
+<p>Step 5. The surrounding cities/towns with radius of maximum driving distance (157 miles) from Center of gravity are queried with Map suite tools and Natural populated placed data, the queried results are show in <a href="#t4" target="_self">Table 4</a> and the map is shown in <a href="#f9" target="_self">Figure 9</a>.</p> 
+<p>Step 6. <a href="#t5" target="_self">Table 5</a> shows the costs from each city to all market cities locations. From <a href="#t5" target="_self">Table 5</a>, the Depot 15 has the smallest cost, and then Depot 15 (Omaha, NEB) will become new current point. The driving distances from new current point to each market city location are calculated as in <a href="#t6" target="_self">Table 6</a>. The maximum driving distance is 190 miles.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x50.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Map of 88 major market cities located in Midwest, USA.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x51.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Map of 14 clusters for the 88 major market cities in Midwest, USA.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x52.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Cluster 1 with initial starting point- center of gravity (Scribner, NE―Green square).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x53.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. Cluster1 with Cities (Blue stars) of radius of maximum driving distance of current point (Scribner, NE―Green square).</p> 
+</div> 
+<p>Repeat Steps 4, 5, &amp; 6. The surrounding cities/towns with radius of maximum driving distance (190 Miles in <a href="#t6" target="_self">Table 6</a>) from Depot 15 (Omaha, Nebraska, USA) are queried with Map Suite tools and Natural populated placed data, the queried results are show in <a href="#f10" target="_self">Figure 10</a>.</p> 
+<p><a href="#t7" target="_self">Table 7</a> is the queried cities within the radius of maximum driving distance (190 miles) from current point. <a href="#f10" target="_self">Figure 10</a> is the map with queried cities of radius of maximum driving distance of current point. <a href="#t8" target="_self">Table 8</a> shows the cost from each city to all market cities locations.</p> 
+<p>From <a href="#t8" target="_self">Table 8</a>, use Depot 23 as the current point (Omaha, Neb.) and repeat steps 4 to 6, there is no new smallest cost can be found.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <a href="//html.scirp.org/file/_12-1040415_1.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> <a href="//html.scirp.org/file/_12-1040415_2.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Modeclus cluster procedure with m = 1, K = 3.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <a href="//html.scirp.org/file/_12-1040415_3.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> <a href="//html.scirp.org/file/_12-1040415_4.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Center of Gravity for cluster 1.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_5.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t3" id="t3"><span class="cs_fig_con">Table 3</span></a>. Driving distances from current point to each market location.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_6.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t4" id="t4"><span class="cs_fig_con">Table 4</span></a>. The queried cities within the radius of maximum driving distance from current point Radius of 157 miles.</p> 
+</div> 
+<p>Step 7. Randomly select several points (Hillier and Lieberman [42] ) and perform Steps 5 to 6 to show that the local optimal facility location obtained in Step 6 is the global optimal or nearly global optimal facility location. Tables 9-12 show the results of each randomly selected city to all market cities locations. It is concluded that the global optimal facility location is the city found in Step 6. The optimal facility location will be Omaha, Nebraska shown as in <a href="#f11" target="_self">Figure 11</a>.</p> 
+<p>Using the same steps for cluster 1, the optimal facility locations for clusters 2 to 14 are calculated and shown as from Figures 12-24.</p> 
+<p>The total cost for these 14 clusters is calculated using equation (11) and shown as follows:</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_7.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_8.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_9.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t5" id="t5"><span class="cs_fig_con">Table 5</span></a>. Cluster1 costs from queried cities to market locations-iteration1.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_10.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t6" id="t6"><span class="cs_fig_con">Table 6</span></a>. Driving distances from current point (Omaha, NE) to each market location.</p> 
+</div> 
+<p class="E-Title2">3.4. Results: Driving Distance vs. Euclidean Distance and Great Circle Distance</p> 
+<p>With the data in <a href="#t13" target="_self">Table 13</a>, I use the steps described in Section 3.2 to search the optimal facility location based on driving distance vs. Euclidean distance and Great circle distance. As the results shown in Figures 25-27, the optimal facility location based on driving distance is different from the optimal facility location based on Euclidean distance and Great circle distance.</p> 
+<p>With the data in this case study, I use the steps described in Section 3.2 to search the optimal facility location based on Euclidean distance and Great circle distance. It is found out that the optimal facilities locations for Clusters 1 to 14 are the same when the distances are based on driving distance, Euclidean distance or Great circle distance. For examples, Cluster 3 (see <a href="#f13" target="_self">Figure 13</a> and <a href="#f28" target="_self">Figure 28</a>), Cluster 4 (see <a href="#f14" target="_self">Figure 14</a> and <a href="#f29" target="_self">Figure 29</a>), Cluster 5 (see <a href="#f15" target="_self">Figure 15</a> and <a href="#f30" target="_self">Figure 30</a>) and Cluster 10 (see <a href="#f20" target="_self">Figure 20</a> and <a href="#f31" target="_self">Figure 31</a>) have the same optimal facilities locations.</p> 
+<p>However, the above results reveal that if the driving distance is much longer than Euclidean distance or Great circle distance because there are lakes, rivers between locations (see Figures 2-4 and <a href="#f25" target="_self">Figure 25</a>), the optimal facility location based on driving distance will be different from the optimal facility location based on Euclidean</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_11.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t7" id="t7"><span class="cs_fig_con">Table 7</span></a>. The cities within the radius of maximum driving distance from current point (Omaha, NE).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <a href="//html.scirp.org/file/_12-1040415_12.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> <a href="//html.scirp.org/file/_12-1040415_13.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t8" id="t8"><span class="cs_fig_con">Table 8</span></a>. Cluster1 costs from queried cities to market locations―iteration 2.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x54.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f10" id="f10"><span class="cs_fig_con">Figure 10</span></a>. Cluster1 with cities (Blue stars) of radius of maximum driving distance of current point (Omaha, Neb.)</p> 
+</div> 
+<p>distance and Great circle distance. The facility location decision based on driving distances is a practical approach. In regard to transportation cost, the driving distances in the presence of geographic barriers should be taken into consideration in facility location decisions.</p> 
+<p class="E-Title2">3.5. Compare the Total Cost of Different Set of Clusters</p> 
+<p>Now, this paper uses MODECLUS Procedure to get different set of clustering and select the best set of clusters.</p> 
+<p><a href="#t14" target="_self">Table 14</a> is clustering output of 11 clusters from SAS code with m = 1, k = 4.</p> 
+<p><a href="#t15" target="_self">Table 15</a> is clustering output of 9 clusters from SAS code with m = 1, k = 5.</p> 
+<p> From equation (11) <img class="200" data-original="//html.scirp.org/file/12-1040415x55.png" /> </p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x56.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f11" id="f11"><span class="cs_fig_con">Figure 11</span></a>. Cluster 1 with optimal facility location (Omaha, Neb.―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x57.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f12" id="f12"><span class="cs_fig_con">Figure 12</span></a>. Cluster 2 with optimal facility location (Kansas City, MO―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x58.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f13" id="f13"><span class="cs_fig_con">Figure 13</span></a>. Cluster 3 with optimal facility location (Akron, OH―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x59.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f14" id="f14"><span class="cs_fig_con">Figure 14</span></a>. Cluster 4 with optimal facility location (Milwaukee, WI―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x60.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f15" id="f15"><span class="cs_fig_con">Figure 15</span></a>. Cluster 5 with optimal facility location (Flint, MI―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x61.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f16" id="f16"><span class="cs_fig_con">Figure 16</span></a>. Cluster 6 with optimal facility location (Lima, OH―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x62.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f17" id="f17"><span class="cs_fig_con">Figure 17</span></a>. Cluster 7 with optimal facility location (Springfield, IL―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x63.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f18" id="f18"><span class="cs_fig_con">Figure 18</span></a>. Cluster 8 with optimal facility location (Dayton, OH―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x64.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f19" id="f19"><span class="cs_fig_con">Figure 19</span></a>. Cluster 9 with optimal facility location (Mooresville, IN―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x65.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f20" id="f20"><span class="cs_fig_con">Figure 20</span></a>. Cluster 10 with optimal facility location (Detroit, MI―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x66.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f21" id="f21"><span class="cs_fig_con">Figure 21</span></a>. Cluster 11 with optimal location (Rochester, MN―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x67.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f22" id="f22"><span class="cs_fig_con">Figure 22</span></a>. Cluster 12 with optimal facility location (Jamestown, ND―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x68.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f23" id="f23"><span class="cs_fig_con">Figure 23</span></a>. Cluster 13 with optimal location (Carbondale, IL―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x69.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f24" id="f24"><span class="cs_fig_con">Figure 24</span></a>. Cluster 14 with optimal facility location (Hutchinson, KS―Brown triangle).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x70.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f25" id="f25"><span class="cs_fig_con">Figure 25</span></a>. Optimal facility location (Milwaukee, WI) based on driving distance.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x71.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f26" id="f26"><span class="cs_fig_con">Figure 26</span></a>. Optimal facility location (Fond du Lac, WI) based on Euclidean distance.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x72.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f27" id="f27"><span class="cs_fig_con">Figure 27</span></a>. Optimal facility location (Fond du Lac, WI) based on Great circle distance.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x73.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f28" id="f28"><span class="cs_fig_con">Figure 28</span></a>. Cluster 3 with optimal facility location (Akron, OH―Brown triangle) based on Euclidean distance or Great Circle distance.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x74.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f29" id="f29"><span class="cs_fig_con">Figure 29</span></a>. Cluster 4 with optimal facility (Milwaukee, WI―Brown triangle) based on Euclidean distance or Great Circle distance.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x75.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f30" id="f30"><span class="cs_fig_con">Figure 30</span></a>. Cluster 5 with optimal facility location (Flint, MI―Brown triangle) based on Euclidean distance or Great Circle distance.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x76.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f31" id="f31"><span class="cs_fig_con">Figure 31</span></a>. Cluster 10 with optimal facility (Detroit, MI―Brown triangle) based on Euclidean distance or Great Circle distance.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/12-1040415x77.png" /> </p> 
+ <p class=" sacImgMarkCss"><a name="f32" id="f32"><span class="cs_fig_con">Figure 32</span></a>. 9 clusters with 9 optimal facilities locations (Brown triangles).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_14.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t9" id="t9"><span class="cs_fig_con">Table 9</span></a>. Cluster 1 costs from queried cities with Sioux City, Iowa as COG to market locations.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <a href="//html.scirp.org/file/_12-1040415_15.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> <a href="//html.scirp.org/file/_12-1040415_16.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t10" id="t10"><span class="cs_fig_con">Table 10</span></a>. Cluster 1 costs from queried cities with Council Bluffs, Iowa as COG to market locations.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_17.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t11" id="t11"><span class="cs_fig_con">Table 11</span></a>. Cluster 1 costs from queried cities with Norfolk, Nebraska as COG to market locations.</p> 
+</div> 
+<p><a href="#t16" target="_self">Table 16</a> is the summary of total cost for each set of clusters. From the result shown in <a href="#t16" target="_self">Table 16</a>, it is con- cluded that the set of 9 clusters with 9 optimal facilities locations are selected shown as in <a href="#f32" target="_self">Figure 32</a>.</p> 
+<p class="E-Title1">4. Conclusions and Future Research</p> 
+<p>Facility location decisions play an important role in the strategic planning and design of logistics/supply chain network. Well-planned location decisions enable the efficient flow of materials through the distribution system,</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_18.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t12" id="t12"><span class="cs_fig_con">Table 12</span></a>. Cluster 1 costs from queried cities with Yankton, South Dakota as COG to market locations.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_19.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t13" id="t13"><span class="cs_fig_con">Table 13</span></a>. Six locations with volume and transportation rate.</p> 
+</div> 
+<p>and lead to decreased costs and improved customer service. This paper has focused on the implementation of facility location decisions based on driving distances on a sphere surface. Two objectives have been achieved inthis paper. Given the location of each destination in terms of their coordinates, the requirement at each destination and shipping costs for the region of interest, the proposed methodology in this paper is able to determine the</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <a href="//html.scirp.org/file/_12-1040415_20.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> <a href="//html.scirp.org/file/_12-1040415_21.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t14" id="t14"><span class="cs_fig_con">Table 14</span></a>. Modeclus cluster procedure with m = 1, K = 4.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <a href="//html.scirp.org/file/_12-1040415_22.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> <a href="//html.scirp.org/file/_12-1040415_23.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t15" id="t15"><span class="cs_fig_con">Table 15</span></a>. Modeclus cluster procedure with m = 1, K = 5.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <a href="//html.scirp.org/file/_12-1040415_24.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> <a href="//html.scirp.org/file/_12-1040415_25.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p class="sacImgMarkCss"><a name="t16" id="t16"><span class="cs_fig_con">Table 16</span></a>. Summary of total cost for each set of clusters.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_26.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<p>11 clusters:</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_27.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_28.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<p>9 clusters:</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_29.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_30.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<p>optimal location of each facility and helps companies assess the locations of facilities. The second object is to establish terminology and an analytical framework for locating optimal facility in perspective. In regard to transportation cost, the driving distance in the presence of geographic barriers should be taken into consideration in facility location decisions. The proposed method in this paper has shown very promising results. The potential benefits of my work include:</p> 
+<p>• The driving distance measure can be applied to transportation problems, travelling sales person problems, and etc., in Operations Research (OR) study.</p> 
+<p>• This proposed method can be extended to facility location decisions based on Euclidean distance and Great circle distance functions.</p> 
+<p>• The framework and methodology proposed in this paper can be applied to improve the management of logistics/supply chain system decisions and planning to make smooth flow throughout the supply chain.</p> 
+<p>This paper has focused on the facility locations in the region of Midwest, USA. Markets and competition are increasingly global, further research work could include investigation in the process of international facility locations around the world. Therefore, a global driving distance model within and/or outside the US is needed for further work. In addition to qualitative analysis, some factors affecting locations need to be considered, such as labor costs and availability, including wages, productivity, attitudes, age, distribution, unionization, and skills, State and local government fiscal policies (including incentives, taxes, unemployment compensation), proximity to customers, population distribution, quality-of-life issues (education, cost of living, health care, sports, cultural activities, housing, entertainment, religious facilities, etc.).</p> 
+<p>This paper assumes a spherical earth and uses equation (1) to (7) to calculate initial center of gravity and equation (8) to (10) to convert Cartesian coordinated to latitude/longitudes. Further research could be done on assumption of ellipsoidal earth. Also, further research work can be suggested to apply this proposed methodology on capacity facility location decisions problems.</p> 
+<p>Geographic Information Systems (GIS) also helps in location analysis; further research work can be approached using GIS instead of Google maps.</p> 
+<p>Finally, since uncertainty associated with future conditions exists in real world, facility location decisions must account for the inherent uncertainty. This is an area worthy of additional research too.</p> 
+<p class="E-Title1">Acknowledgements</p> 
+<p>The author is very grateful to the editor and anonymous referees for their valuable comments and suggestions on the earlier version of the manuscript.</p>     
+<p class="E-Title1">Appendix A: Coordinates (Latitude/Longitudes) and Volume of Goods and Transportation Rate for Each Market City Location</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_31.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_32.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_33.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<p class="E-Title1">Appendix B: Google Maps Distance Matrix of 88 Midwest Major Market Cities</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_34.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_35.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_12-1040415_36.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a> </p> 
+ <p></p> 
+</div>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576523' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Reid, R.D. and Sanders, N.R. (2013) Operations Management. 5th Edition, John Wiley & Sons, Hoboken.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576524' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Wikipedia (2014) Facility Location Problem. <br/>http://en.wikipedia.org/wiki/Facility_location_problem
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576525' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Brimberg, J., Hansen, P., Mladenovic, N. and Salhi, S. (2008) A Survey of Solution Methods for the Continuous Location-Allocation Problem. International Journal of Operations Research, 5, 1-12.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576526' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Tcha, D.W. and Lee, B.I. (1984) A Branch-and-Bound Algorithm for the Multi-Level Uncapacitated Facility Location Problem. European Journal of Operational Research, 18, 35-43. <br/>http://dx.doi.org/10.1016/0377-2217(84)90258-3
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576527' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Francis, R.L. and White J.A. (1974) Facility Layout and Location: An Analytical Approach. Prentice-Hall, Inc., Englewood Cliffs.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576528' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Love, R.F., James, J., Morris, G. and Wesolowsky, G.O. (1988) Facilities Location: Models & Methods. North-Holland Publishing Co., New York.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576529' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Farahani, R.Z. and Masoud, H. (2009) Facility Location: Concepts, Models, Algorithm and Case Studies, Springer-Verlag Berlin Heidelberg, Germany. <br/>http://dx.doi.org/10.1007/978-3-7908-2151-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576530' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Vygen, J. (2004-2005) Approximation Algorithms for Facility Location Problems (Lecture Notes). Research Institute for Discrete Mathematics, University of Bonn, Bonn, Germany.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576531' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Shmoys, D.B., Tardos, E. and Aardal, K. (1998) Approximation Algorithms for Facility Location Problems (Extended Abstract). Proceedings of the 29th Annual ACM Symposium on Theory of Computing, El Paso, 4-6 May 1997, 1-21.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576532' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Iyigun, C. and Ben-Israel, A. (2010) A Generalized Weiszfeld Method for the Multi-Facility Location Problem. Operations Research Letters, 38, 207-214. <br/>http://dx.doi.org/10.1016/j.orl.2009.11.005
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576533' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Ballou, R.H. (2004) Business Logistics/Supply Chain Management: Planning, Organizing and Controlling the Supply chain. 5th Edition, Pearson/Prentice Hall Inc., New Jersey.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576534' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Katz, I.N. and Cooper, L. (1980) Optimal Location on a Sphere. Computers & Mathematics with Applications, 6, 175-196. <br/>http://dx.doi.org/10.1016/0898-1221(80)90027-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576535' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Drezner, Z. and Wesolowsky, G.O. (1978) Facility Location on a Sphere. Journal of the Operational Research Society, 29, 997-1004. <br/>http://dx.doi.org/10.1057/jors.1978.213
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576536' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Xue, G.L. (1994) A Globally Convergent Algorithm for Facility Location on a Sphere. Computers & Mathematics with Applications, 27, 37-50. <br/>http://dx.doi.org/10.1016/0898-1221(94)90109-0
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576537' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Mwemezi, J. and Huang, Y. (2011) Optimal Facility Location on Spherical Surfaces: Algorithm and Application. New York Science Journal, 4, 21-28.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576538' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Sullivan, E. and Peters, N. (1980) A Flexible User-Oriented Location-Allocation Algorithm. Journal of Environmental Management, 10, 181-193.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576539' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Bespamyatnikh, S., Kedem, K., Segal M. and Tamir A. (2000) Optimal Facility Location under Various Distance Functions. International Journal of Computational Geometry & Applications, 10, 523-534. 
+<br/>http://dx.doi.org/10.1142/S0218195900000292
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576540' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Levin, Y. and Ben-Israel, A. (2004) A Heuristic Method for Large Scale Multifacility Location Problems. Computers & Operations Research, 31, 257-272. <br/>http://dx.doi.org/10.1016/S0305-0548(02)00191-0
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576541' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Levin, Y. and Ben-Israel, A. (2002) The Newton Bracketing Method for Convex Minimization. Computational Optimization and Applications, 21, 213-229. <br/>http://dx.doi.org/10.1023/A:1013768901780
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576542' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Rodríguez-Chía, A.M. and Valero-Franco, C. (2013) On the Global Convergence of a Generalized Iterative Procedure for the Minisum Location Problem with ?p Distances for p > 2. Springer and Mathematical Optimization Society, Mathematical Programming, Series A, 137, 477-502. 
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576543' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Kotian, S.R., Bonilla, C. and Hale, T.S. (2008) The Planar k-Central Location Problem. The Open Industrial and Manufacturing Engineering Journal, 1, 42-49. <br/>http://dx.doi.org/10.2174/1874152500801010042
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576544' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        SAS Inc. (2014). 
+<br/>http://support.sas.com/documentation/cdl/en/lefunctionsref/67398/HTML/default/<br/>viewer.htm#n1korpfg2e18lon1nwpow9qijdxe.htm
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576545' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Ksu. <br/>http://www.math.ksu.edu/~dbski/writings/haversine.pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576546' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        The Math Forum. (1994-2013). <br/>http://mathforum.org/library/drmath/view/51756.html
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576547' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        Google Inc. (2014). https://www.google.com/maps/dir/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576548' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Wikipedia (2014). <br/>http://en.wikipedia.org/wiki/Euclidean_distance
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576549' target='_blank'>27</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref27" id="ref27"></a>
+                                        Wiktionary (2014). <br/>http://en.wiktionary.org/wiki/Euclidean_distance
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576550' target='_blank'>28</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref28" id="ref28"></a>
+                                        Wikipedia (2014). <br/>http://en.wikipedia.org/wiki/Great-circle_distance
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576551' target='_blank'>29</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref29" id="ref29"></a>
+                                        Movable Type Ltd. (2014). <br/>http://www.movable-type.co.uk/scripts/latlong.html
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576552' target='_blank'>30</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref30" id="ref30"></a>
+                                        Weiszfeld, E. (1937) Sur le point par lequel la somme des distances de n points donnVes est minimum. Tohoku Mathematical Journal, 43, 355-386.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576553' target='_blank'>31</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref31" id="ref31"></a>
+                                        Aykin, T. (1984) Some Aspects in the Large Region Location Problems on the Surface of the Earth. PhD Thesis, State University of New York at Buffalo.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576554' target='_blank'>32</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref32" id="ref32"></a>
+                                        SAS Inc. (2014). 
+<br/>http://support.sas.com/documentation/cdl/en/statug/63033/<br/>HTML/default/viewer.htm#modeclus_toc.htm
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576555' target='_blank'>33</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref33" id="ref33"></a>
+                                        Heizer, J. and Render, B. (2011) Principles of Operations Management. 8th Edition, Prentice Hall, Upper Saddle River.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576556' target='_blank'>34</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref34" id="ref34"></a>
+                                        Pearson (2014).
+<br/>http://www.prenhall.com/divisions/bp/app/russellcd/PROTECT/CHAPTERS/CHAP09/HEAD06.HTM
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576557' target='_blank'>35</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref35" id="ref35"></a>
+                                        Geomidpoint (2014). <br/>http://www.geomidpoint.com/calculation.html
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576558' target='_blank'>36</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref36" id="ref36"></a>
+                                        Chen, Z.X. and He, W. (2010) Study and Application of Center-of-Gravity on the Location Selection of Distribution Center, Logistics Systems and Intelligent Management. International Conference on Logistics Systems and Intelligent Management, Harbin, 9-10 January 2010, 981-984.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576559' target='_blank'>37</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref37" id="ref37"></a>
+                                        Kuo, C.C., Richard, E. and White, R.E. (2004) A Note on the Treatment of the Center-of-Gravity Method in Operations Management Textbooks. Decision Sciences Journal of Innovative Education, 2, 219-227.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576560' target='_blank'>38</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref38" id="ref38"></a>
+                                        Chase, R.B., Aquilando, N.J. and Jacobs, F.R. (2006) Operations Management for Competitive Advantage. 11th Edition, McGraw-Hill/Irwin, New York.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576561' target='_blank'>39</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref39" id="ref39"></a>
+                                        Ligas, M. and Banasik, P. (2011) Conversion between Cartesian and Geodetic Coordinates on a Rotational Ellipsoid by Solving a System of Nonlinear Equations. Geodesy and Cartography, 60, 145-159. 
+<br/>http://dx.doi.org/10.2478/v10277-012-0013-x
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576562' target='_blank'>40</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref40" id="ref40"></a>
+                                        ThinkGeo LLC. (2014). <br/>http://thinkgeo.com/map-suite-developer-gis/desktop-edition/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576563' target='_blank'>41</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref41" id="ref41"></a>
+                                        Natural Earth (2014). <br/>http://www.naturalearthdata.com/downloads/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576564' target='_blank'>42</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref42" id="ref42"></a>
+                                        Hillier, F.S. and Lieberman, G.J. (2009) Introduction to Operations Research. 9th Edition, McGraw-Hill Higher Education, New York.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576565' target='_blank'>43</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref43" id="ref43"></a>
+                                        Litwhiler Jr., D.W. and Aly, A.A. (1979) Large Region Location PROBLEMS. Computer & Operations Research, 6, 1-12. <br/>http://dx.doi.org/10.1016/0305-0548(79)90009-1
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=529" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=529" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=529" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=529" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=529"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=529"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=529" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=529" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=529" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=529" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=529" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=529"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=529"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=529" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=529&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=529&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=529" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=529" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=529" target="_blank">AJOR
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=529" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=529" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=529" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=529" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=529" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=529" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=529" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ajor.2015.55037" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60009 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +529 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +529 +"&paperid=" +60009 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

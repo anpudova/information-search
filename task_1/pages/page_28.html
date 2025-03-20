@@ -1,0 +1,1591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Developing Ontology Systems as a Base of an Environmental Quality Management Model in México
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JEP_2015092914212222.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60028" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60028.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60028" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60028" />
+<meta property="og:title" content="Developing Ontology Systems as a Base of an Environmental Quality Management Model in México" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JEP2024061315013892.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JEP2024061315013892.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Developing Ontology Systems as a Base of an Environmental Quality Management Model in México" />
+<meta name="keywords" content="Ontology,Software Knowledge Modeling,Environmental Quality,EIA" />
+<meta name="description" content="Discover how our ontology integrates data from various sources to create an Environmental Quality Synoptic System. Automate environmental statement generation and enhance decision-making with our expert system architecture and Geographic Information System (GIS) integration." />
+<meta name="citation_journal_title" content="Journal of Environmental Protection" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="René Bernardo Elías Cabrera-Cruz;Erika Alarcón-Ruiz;Julio César Rolón-Aguilar;Salvador W. Nava-Díaz;Elena María Otazo-Sánchez;Ricardo Pérez Aviléz" />
+<meta name="citation_author" content="René Bernardo Elías Cabrera-Cruz" />
+<meta name="citation_author" content="Erika Alarcón-Ruiz" />
+<meta name="citation_author" content="Julio César Rolón-Aguilar" />
+<meta name="citation_author" content="Salvador W. Nava-Díaz" />
+<meta name="citation_author" content="Elena María Otazo-Sánchez" />
+<meta name="citation_author" content="Ricardo Pérez Aviléz" />
+<meta name="citation_title" content="Developing Ontology Systems as a Base of an Environmental Quality Management Model in México" />
+<meta name="citation_volume" content="6" />
+<meta name="citation_date" content="2015-08-31" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jep.2015.69095" />
+<meta name="citation_issnPrint" content="2152-2197" />
+<meta name="citation_issnOnline" content="2152-2219" />
+<meta name="citation_abstract" content="The process of identifying the attributes and relationships considered in an ontology is a complex task because there are many factors involved in the deterioration of environmental quality, the diversity of sources and data dispersion. This work presents an ontology that integrates the data required by an Environmental Quality Synoptic System (EQSS), which to date scatters in different Internet sites and concentrates by different agencies for example INEGI, CONABIO, SEMARNAT, CNA, among others. The methodology process consists of the collection of environmental information in Mexico through the application of computational techniques resulting ontology with environmental knowledge that will be processed by the system EQSS. Among the main advantages is than the selection and structure of information allow the automated generation of results in an environmental statement. The ontology proposal is based on knowledge of EQSS system that is based on the architecture of expert systems and through this important information for decision-making in regard to environmental quality and interaction with Geographic Information System (GIS) is obtained." />
+<meta name="citation_publication_date" content="2015/8/31" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JEP_2015092914212222.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JEP_2015092914212222.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60028" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60028" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60028" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60028.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60028.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/8/31" />
+<meta name="citation_firstpage" content="1084" />
+<meta name="citation_lastpage" content="1093" />
+
+<meta name="dc.title" content="Developing Ontology Systems as a Base of an Environmental Quality Management Model in México" />
+
+<meta name="dc.creator" content="René Bernardo Elías Cabrera-Cruz" />
+<meta name="dc.creator" content="Erika Alarcón-Ruiz" />
+<meta name="dc.creator" content="Julio César Rolón-Aguilar" />
+<meta name="dc.creator" content="Salvador W. Nava-Díaz" />
+<meta name="dc.creator" content="Elena María Otazo-Sánchez" />
+<meta name="dc.creator" content="Ricardo Pérez Aviléz" /><meta name="dcterms.issued" content="2015-08-31" />
+<meta name="dc.description" content="The process of identifying the attributes and relationships considered in an ontology is a complex task because there are many factors involved in the deterioration of environmental quality, the diversity of sources and data dispersion. This work presents an ontology that integrates the data required by an Environmental Quality Synoptic System (EQSS), which to date scatters in different Internet sites and concentrates by different agencies for example INEGI, CONABIO, SEMARNAT, CNA, among others. The methodology process consists of the collection of environmental information in Mexico through the application of computational techniques resulting ontology with environmental knowledge that will be processed by the system EQSS. Among the main advantages is than the selection and structure of information allow the automated generation of results in an environmental statement. The ontology proposal is based on knowledge of EQSS system that is based on the architecture of expert systems and through this important information for decision-making in regard to environmental quality and interaction with Geographic Information System (GIS) is obtained." />
+<meta name="dc.source" content="Journal of Environmental Protection" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-08-31" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jep.2015.69095" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-08-31" />
+<meta name="prism.issnPrint" content="2152-2197" />
+<meta name="prism.issnOnline" content="2152-2219" />
+<meta name="prism.publicationName" content="Journal of Environmental Protection" />
+<meta name="prism.publicationDate" content="2015-08-31" />
+<meta name="prism.volume" content="6" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="1084" />
+<meta name="prism.doi" content="10.4236/jep.2015.69095" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60028" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAmEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA4LTMxZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAWKBzxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9UmVuJWMzJWE5K0Jlcm5hcmRvK0VsJWMzJWFkYXMrK0NhYnJlcmEtQ3J1eiZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlJlbsOpIEJlcm5hcmRvIEVsw61hcyAgQ2FicmVyYS1DcnV6PC9hPjxzdXA+MSo8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RXJpa2ErK0FsYXJjJWMzJWIzbi1SdWl6JnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RXJpa2EgIEFsYXJjw7NuLVJ1aXo8L2E+PHN1cD4xPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUp1bGlvK0MlYzMlYTlzYXIrK1JvbCVjMyViM24tQWd1aWxhciZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkp1bGlvIEPDqXNhciAgUm9sw7NuLUFndWlsYXI8L2E+PHN1cD4xPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVNhbHZhZG9yK1cuKytOYXZhLUQlYzMlYWRheiZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlNhbHZhZG9yIFcuICBOYXZhLUTDrWF6PC9hPjxzdXA+MTwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1FbGVuYStNYXIlYzMlYWRhKytPdGF6by1TJWMzJWExbmNoZXomc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5FbGVuYSBNYXLDrWEgIE90YXpvLVPDoW5jaGV6PC9hPjxzdXA+Mjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1SaWNhcmRvK1AlYzMlYTlyZXorK0F2aWwlYzMlYTl6JnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+UmljYXJkbyBQw6lyZXogIEF2aWzDqXo8L2E+PHN1cD4zPC9zdXA+IGQCAg9kFgJmDxYCHwQFoAc8c3VwPjE8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURpdmlzaW9uK29mK1Bvc3RncmFkdWF0ZStTdHVkaWVzK2FuZCtSZXNlYXJjaCUyYytGYWN1bHR5K29mK0VuZ2luZWVyaW5nKyVlMiU4MCU5Y0FydHVybytOYXJybytTaWxsZXIlZTIlODAlOWQlMmMrQXV0b25vbW91cytVbml2ZXJzaXR5K29mK1RhbWF1bGlwYXMlMmMrVGFtYXVsaXBhcyUyYytNZXhpY28mc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5EaXZpc2lvbiBvZiBQb3N0Z3JhZHVhdGUgU3R1ZGllcyBhbmQgUmVzZWFyY2gsIEZhY3VsdHkgb2YgRW5naW5lZXJpbmcg4oCcQXJ0dXJvIE5hcnJvIFNpbGxlcuKAnSwgQXV0b25vbW91cyBVbml2ZXJzaXR5IG9mIFRhbWF1bGlwYXMsIFRhbWF1bGlwYXMsIE1leGljbzwvYT4uPGJyIC8+PHN1cD4yPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1DZW50ZXIrZm9yK0NoZW1pY2FsK1Jlc2VhcmNoJTJjK0F1dG9ub21vdXMrVW5pdmVyc2l0eStvZitIaWRhbGdvK1N0YXRlJTJjK0hpZGFsZ28lMmMrTWV4aWNvJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+Q2VudGVyIGZvciBDaGVtaWNhbCBSZXNlYXJjaCwgQXV0b25vbW91cyBVbml2ZXJzaXR5IG9mIEhpZGFsZ28gU3RhdGUsIEhpZGFsZ28sIE1leGljbzwvYT4uPGJyIC8+PHN1cD4zPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1JbnN0aXR1dGUrb2YrU2NpZW5jZXMlMmMrQXV0b25vbW91cytVbml2ZXJzaXR5K29mK1B1ZWJsYSUyYytQdWVibGElMmMrTWV4aWNvJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+SW5zdGl0dXRlIG9mIFNjaWVuY2VzLCBBdXRvbm9tb3VzIFVuaXZlcnNpdHkgb2YgUHVlYmxhLCBQdWVibGEsIE1leGljbzwvYT4uPGJyIC8+ZAIFDxYCHwQFBTMsODEyZAIGDxYCHwQFBTQsODg5ZAIHDxYCHwMFD0Rpc3BsYXk6aW5saW5lO2QCCA9kFgICAQ8WAh8EBbsDPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1PbnRvbG9neSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPk9udG9sb2d5PC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rU29mdHdhcmUrS25vd2xlZGdlK01vZGVsaW5nJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFNvZnR3YXJlIEtub3dsZWRnZSBNb2RlbGluZzwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0Vudmlyb25tZW50YWwrUXVhbGl0eSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBFbnZpcm9ubWVudGFsIFF1YWxpdHk8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStFSUEmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gRUlBPC9hPiBkAgoPFgIfBAWVA0NhYnJlcmEtQ3J1eiwgUi4gLCBBbGFyY8Ozbi1SdWl6LCBFLiAsIFJvbMOzbi1BZ3VpbGFyLCBKLiAsIE5hdmEtRMOtYXosIFMuICwgT3Rhem8tU8OhbmNoZXosIEUuICBhbmQgQXZpbMOpeiwgUi4gICAoMjAxNSkgRGV2ZWxvcGluZyBPbnRvbG9neSBTeXN0ZW1zIGFzIGEgQmFzZSBvZiBhbiBFbnZpcm9ubWVudGFsIFF1YWxpdHkgTWFuYWdlbWVudCBNb2RlbCBpbiBNw6l4aWNvLiA8aT5Kb3VybmFsIG9mIEVudmlyb25tZW50YWwgUHJvdGVjdGlvbjwvaT4sIDxiPjY8L2I+LCAxMDg0LTEwOTMuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qZXAuMjAxNS42OTA5NScgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDAyOCknPjEwLjQyMzYvamVwLjIwMTUuNjkwOTU8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50Ah4WPGYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAwMycgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATGzAkdhcnJpZG8sIEouIGFuZCBSZXF1ZW5hLCBJLiAoMjAxMSkgUHJvcG9zYWwgb2YgT250b2xvZ3kgZm9yIEVudmlyb25tZW50YWwgSW1wYWN0IEFzc2Vzc21lbnQ6IEFuIEFwcGxpY2F0aW9uIHdpdGggS25vd2xlZGdlIE1vYmlsaXphdGlvbi4gRXhwZXJ0IFN5c3RlbXMgd2l0aCBBcHBsaWNhdGlvbnMsIDM4LCAyNDYyLTI0NzIuIDxici8+aHR0cDovL3d3dy5zY2llbmNlZGlyZWN0LmNvbS9zY2llbmNlL2FydGljbGUvcGlpL1MwOTU3NDE3NDEwMDA4MzE2IDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLmVzd2EuMjAxMC4wOC4wMzVkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAwNCcgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATK4AU5hdGlvbmFsIEluc3RpdHV0ZSBvZiBFY29sb2d5ICgyMDA1KSBHdWlkZSBEZXZlbG9wbWVudCBhbmQgVXNlIG9mIEVtaXNzaW9uIEludmVudG9yaWVzLiBOYXRpb25hbCBJbnN0aXR1dGUgb2YgRWNvbG9neS4gU2VjcmV0YXJ5IG9mIHRoZSBFbnZpcm9ubWVudCBhbmQgTmF0dXJhbCBSZXNvdXJjZXMgUHJlc3MsIE1leGljby5kAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAwNScgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATO2AkNlY2Nhcm9uaSwgTC4sIENvcnTDqXMsIFUuIGFuZCBTw6BuY2hlei1NYXJyw6gsIE0uICgyMDA0KSBPbnRvIFdFRFNTOiBBdWdtZW50aW5nIEVudmlyb25tZW50YWwgRGVjaXNpb24tU3VwcG9ydCBTeXN0ZW1zIHdpdGggT250b2xvZ2llcy4gRW52aXJvbm1lbnRhbCBNb2RlbGxpbmcgJiBTb2Z0d2FyZSwgMTksIDc4NS03OTcuIDxici8+aHR0cDovL3d3dy5zY2llbmNlZGlyZWN0LmNvbS9zY2llbmNlL2FydGljbGUvcGlpL1MxMzY0ODE1MjAzMDAyMDU2IDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLmVudnNvZnQuMjAwMy4wMy4wMDZkAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAwNicgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATSMA1RvcnJlcy1CZWphcmFubywgRi4sIFJhbWlyZXosIEguLCBEZW56ZXIsIFIuLCBGcnlzaW5nZXIsIFMuLCBIZWxsLCBULiBhbmQgU2NobG9iaW5za2ksIFMuICgyMDEzKSBMaW5raW5nIE51bWVyaWNhbCBXYXRlciBRdWFsaXR5IE1vZGVscyBpbiBhbiBFbnZpcm9ubWVudGFsIEluZm9ybWF0aW9uIFN5c3RlbSBmb3IgSW50ZWdyYXRlZCBFbnZpcm9ubWVudGFsIEFzc2Vzc21lbnRzLiBKb3VybmFsIG9mIEVudmlyb25tZW50YWwgUHJvdGVjdGlvbiwgNCwgMTI2LTEzNy4gPGJyLz5odHRwOi8vd3d3LnNjaXJwLm9yZy9qb3VybmFsL1BhcGVySW5mb3JtYXRpb24uYXNweD9QYXBlcklEPTM0ODQzIy5WVHN5UkNGX09rbyAgPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2plcC4yMDEzLjQ3QTAxNWQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDA3JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNdACV3JpZ2h0LCBBLkouLCBEb2xtYW4sIFMuSi4sIEphc255LCBNLiwgUGFyc29ucywgRS5DLk0uLCBTY2hpZWRlaywgRC4gYW5kIFlvdW5nLCBTLkIuICgyMDEzKSBNeXRoIGFuZCBNb21lbnR1bTogQSBDcml0aXF1ZSBvZiBFbnZpcm9ubWVudGFsIEltcGFjdCBBc3Nlc3NtZW50cy4gSm91cm5hbCBvZiBFbnZpcm9ubWVudGFsIFByb3RlY3Rpb24sIDQsIDcyLTc3LiA8YnIvPmh0dHA6Ly93d3cuc2NpcnAub3JnL2pvdXJuYWwvUGFwZXJJbmZvcm1hdGlvbi5hc3B4P1BhcGVySUQ9MzYxNjIjLlZUd2pYQ0ZfT2tvIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qZXAuMjAxMy40OEEyMDA5ZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMDgnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2wwJPbGl2ZWlyYSwgSS4sIE1vbnRhJiMyNDE7bywgTS4gYW5kIFNvdXphLCBNLiAoMjAxMykgU3RyYXRlZ2ljIEVudmlyb25tZW50YWwgQXNzZXNzbWVudCB0byBJbXByb3ZlIEluZnJhc3RydWN0dXJlIEltcGFjdCBBc3Nlc3NtZW50cyBpbiBCcmF6aWwuIEpvdXJuYWwgb2YgRW52aXJvbm1lbnRhbCBQcm90ZWN0aW9uLCA0LCAxMTg5LTExOTYuIDxici8+aHR0cDovL3d3dy5zY2lycC5vcmcvam91cm5hbC9QYXBlckluZm9ybWF0aW9uLmFzcHg/UGFwZXJJRD0zODY5MCMuVlR3alV5Rl9Pa28gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2plcC4yMDEzLjQxMDEzNmQCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDA5JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN+4CQWxhcmPDs24sIEUuLCBDYWJyZXJhLCBSLkIuRS4sIFJvbMOzbiwgSi5DLiwgUGljaGFyZG8sIFIuLCBHb3JkaWxsbywgQS5KLiBhbmQgT3Rhem8sIEUuTS4gKDIwMTQpIEludGVyYWN0aW9uIGJldHdlZW4gRW52aXJvbm1lbnRhbCBhbmQgQ29tcHV0ZXIgU2NpZW5jZSBmb3IgdGhlIERldmVsb3BtZW50IG9mIEVudmlyb25tZW50YWwgUXVhbGl0eSBTb2Z0d2FyZS4gSW46IEzDs3Blei1WZWxhc2NvLCBSLiBhbmQgUm9kcsOtZ3Vlei1IZXJyZXJhLCBBLkwuLCBFZHMuLCBVcmJhbiBhbmQgUnVyYWwgQXJlYXMgYW5kIHRoZSBQcm9ibGVtIG9mIFN1c3RhaW5hYmlsaXR5LCBBdXRvbm9tb3VzIFVuaXZlcnNpdHkgb2YgR3VlcnJlcm8sIDI2MC0yNzkuZAIHD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMTAnIHRhcmdldD0nX2JsYW5rJz44PC9hPl0BOAE4+gFaaHUsIFMuIGFuZCBGZW5nLCBKLiAoMjAxMCkgVXNpbmcgYW4gT250b2xvZ3kgdG8gSGVscCBSZWFzb24gYWJvdXQgdGhlIEluZm9ybWF0aW9uIENvbnRlbnQgb2YgRGF0YS4gSm91cm5hbCBvZiBTb2Z0d2FyZSBFbmdpbmVlcmluZyBhbmQgQXBwbGljYXRpb25zLCAzLCA2MjktNjQzLiA8YnIvPmh0dHA6Ly9maWxlLnNjaXJwLm9yZy9IdG1sLzIyMTkuaHRtbCA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjQyMzYvanNlYS4yMDEwLjM3MDczZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMTEnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE51gFaaG9uZywgTC4sIFpoZW5nLCBNLiwgWXVhbiwgSi4gYW5kIEppbiwgSi4gKDIwMTIpIFRoZSBKZW5hLUJhc2VkIE9udG9sb2d5IE1vZGVsIEluZmVyZW5jZSBhbmQgUmV0cmlldmFsIEFwcGxpY2F0aW9uLiBJbnRlbGxpZ2VudCBJbmZvcm1hdGlvbiBNYW5hZ2VtZW50LCA0LCAxNTctMTYwLiA8YnIvPmh0dHA6Ly9maWxlLnNjaXJwLm9yZy9IdG1sLzktMzAzMDVfMjE0MTIuaHRtZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMTInIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwrAFHdW8sIE0uICgyMDEzKSBUaGUgQXBwbGljYXRpb24gb2YgT250b2xvZ3kgaW4gU2VtYW50aWMgRGlzY292ZXJ5IGZvciBHZW9EYXRhIFdlYiBTZXJ2aWNlLiBDb21tdW5pY2F0aW9ucyBhbmQgTmV0d29yaywgNSwgNjc4LTY4MC4gPGJyLz5odHRwOi8vZmlsZS5zY2lycC5vcmcvSHRtbC8zOTU4MC5odG1sZAIKD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMTMnIHRhcmdldD0nX2JsYW5rJz4xMTwvYT5dAjExAjExlQJVamFuZywgVS4gYW5kIFJhaG1hbiwgQS5BLiAoMjAxMykgVGVtcG9yYWwgVGhyZWUtRGltZW5zaW9uYWwgT250b2xvZ3kgZm9yIEdlb2dyYXBoaWNhbCBJbmZvcm1hdGlvbiBTY2llbmNlIChHSVMp4oCUQSBSZXZpZXcuIEpvdXJuYWwgb2YgR2VvZ3JhcGhpYyBJbmZvcm1hdGlvbiBTeXN0ZW0sIDUsIDMxNC0zMjMuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qZ2lzLjIwMTMuNTMwMzA8YnIvPmh0dHA6Ly9maWxlLnNjaXJwLm9yZy9IdG1sLzEzLTg0MDEyNTNfMzMyOTAuaHRtZAILD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMTQnIHRhcmdldD0nX2JsYW5rJz4xMjwvYT5dAjEyAjEyjQJMb3phLVBhY2hlY28sIEUuLCBUb3JyZXMtUnVpeiwgTS4gYW5kIEd1em3DoW4tTHVnbywgRy4gKDIwMTIpIFNwYXRpYWwgUmVhc29uaW5nIGZvciBEZXRlcm1pbmluZyB0aGUgRG9tYWluIG9mIHRoZSBTZXQgb2YgVGFncyBUaGF0IFJlcHJlc2VudCBHZW9ncmFwaGljIE9iamVjdHMuIFBvbGliaXRzLCA0NSwgMzctNTIuIDxici8+aHR0cDovL3d3dy5zY2llbG8ub3JnLm14L3NjaWVsby5waHA/cGlkPVMxODcwLTkwNDQyMDEyMDAwMTAwMDA2JnNjcmlwdD1zY2lfYXJ0dGV4dGQCDA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDE1JyB0YXJnZXQ9J19ibGFuayc+MTM8L2E+XQIxMwIxM8kBVG9sZWRvLCBKLkkuLCBHdXptw6FuLCBBLiBhbmQgTWFydMOtbmV6LCBHLkwuICgyMDEyKSBBdXRvbWF0aWMgQnVpbGRpbmcgb2YgYW4gT250b2xvZ3kgZnJvbSBhIENvcnB1cyBvZiBUZXh0IERvY3VtZW50cy4gVXNpbmcgRGF0YSBNaW5pbmcgVG9vbHMuIEpvdXJuYWwgb2YgQXBwbGllZCBSZXNlYXJjaCBhbmQgVGVjaG5vbG9neSwgMTAsIDM5OC00MDQuZAIND2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMTYnIHRhcmdldD0nX2JsYW5rJz4xNDwvYT5dAjE0AjE0xQFCcmFjaG8sIFAuLCBLbGVlZGVyLCBKLiwgVXJlJiMyNDE7YSwgVi4gYW5kIFlhbiwgQy4gKDIwMTIpIE9udG9sb2d5IERldmVsb3BtZW50IG9mIFJlc2VhcmNoIGFuZCBDdWx0dXJlLiBFbi1DbGF2ZXMgZGVsIFBlbnNhbWllbnRvLCA2LCAxMS0yOS4gPGJyLz5odHRwOi8vd3d3LnJlZGFseWMub3JnL2FydGljdWxvLm9hP2lkPTE0MTEyNTM1OTAxMWQCDg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDE3JyB0YXJnZXQ9J19ibGFuayc+MTU8L2E+XQIxNQIxNfoBTWFydMOtbmV6LCBSLkMuLCBUw6lsbGV6LCBSLlEuLCBJYmFycmEsIE0uQS5NLiwgUnVpeiwgTS5ULiBhbmQgTHVnbywgRy5HLiAoMjAxMykgU2VtYW50aWMgQ29tcGFyaXNvbiBvZiBHZW9ncmFwaGljIERhdGFzZXRzIENvbmNlcHR1YWxpemVkIHRocm91Z2ggT250b2xvZ2llcy4gQ29tcHV0YWNpw7NuIHkgU2lzdGVtYXMsIDE3LCA1NjktNTgxLjxici8+aHR0cDovL3d3dy5yZWRhbHljLm9yZy9hcnRpY3Vsby5vYT9pZD02MTUyOTI5NTAxMGQCDw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDE4JyB0YXJnZXQ9J19ibGFuayc+MTY8L2E+XQIxNgIxNukBQmFrYWV2LCBNLiBhbmQgQXZkZWVua28sIFQuICgyMDEzKSBJbmRleGluZyBhbmQgQ29tcGFyaXNvbiBvZiBNdWx0aS1EaW1lbnNpb25hbCBFbnRpdGllcyBpbiBhIFJlY29tbWVuZGVyIFN5c3RlbSBCYXNlZCBvbiBPbnRvbG9naWNhbCBBcHByb2FjaC4gQ29tcHV0YWNpw7NuIHkgU2lzdGVtYXMsIDE3LCA1LTEzLjxici8+aHR0cDovL3d3dy5zY2llbG8ub3JnLm14L3BkZi9jeXMvdjE3bjEvdjE3bjFhMi5wZGZkAhAPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAxOScgdGFyZ2V0PSdfYmxhbmsnPjE3PC9hPl0CMTcCMTfTAVNvc25pbiwgUC4gKDIwMTApIENyZWF0aW9uIGFuZCBVc2FnZSBvZiBQcm9qZWN0IE9udG9sb2d5IGluIERldmVsb3BtZW50IG9mIFNvZnR3YXJlIEludGVuc2l2ZSBTeXN0ZW1zLiBQb2xpYml0cywgNDIsIDUxLTU4LiA8YnIvPmh0dHA6Ly93d3cuc2NpZWxvLm9yZy5teC9zY2llbG8ucGhwP3BpZD1TMTg3MC05MDQ0MjAxMDAwMDIwMDAwNiZzY3JpcHQ9c2NpX2FydHRleHRkAhEPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAyMCcgdGFyZ2V0PSdfYmxhbmsnPjE4PC9hPl0CMTgCMTivA1N0cm9obWFpZXIsIE0uLCBXYWxrLCBTLiwgUCYjMjQ2O3NjaGtvLCBKLiwgTGFtcHJlY2h0LCBELiwgVHVkb3JhY2hlLCBULiwgTnl1bGFzLCBDLiwgTXVzZW4sIE0uQS4gYW5kIE5veSwgTi5GLiAoMjAxMykgSG93IE9udG9sb2dpZXMgQXJlIE1hZGU6IFN0dWR5aW5nIHRoZSBIaWRkZW4gU29jaWFsIER5bmFtaWNzIGJlaGluZCBDb2xsYWJvcmF0aXZlIE9udG9sb2d5IEVuZ2luZWVyaW5nIFByb2plY3RzLiBXZWIgU2VtYW50aWNzOiBTY2llbmNlLCBTZXJ2aWNlcyBhbmQgQWdlbnRzIG9uIHRoZSBXb3JsZCBXaWRlIFdlYiwgMjAsIDE4LTM0Ljxici8+aHR0cDovL3d3dy5zY2llbmNlZGlyZWN0LmNvbS9zY2llbmNlL2FydGljbGUvcGlpL1MxNTcwODI2ODEzMDAwMTY0PGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oud2Vic2VtLjIwMTMuMDQuMDAxZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMjEnIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE54AFOb3ksIE4uRi4gYW5kIE1jR3Vpbm5lc3MsIEQuICgyMDAxKSBPbnRvbG9neSBEZXZlbG9wbWVudCAxMDE6IEEgR3VpZGUgdG8gQ3JlYXRpbmcgWW91ciBGaXJzdCBPbnRvbG9neS4gU3RhbmZvcmQgS25vd2xlZGdlIFN5c3RlbXMgTGFib3JhdG9yeS4gPGJyLz5odHRwOi8vcHJvdGVnZS5zdGFuZm9yZC5lZHUvcHVibGljYXRpb25zL29udG9sb2d5X2RldmVsb3BtZW50L29udG9sb2d5MTAxLnBkZmQCEw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDIyJyB0YXJnZXQ9J19ibGFuayc+MjA8L2E+XQIyMAIyMMgBVG9sZWRvLCBKLkkuLCBHdXptw6FuLCBBLiBhbmQgTWFydMOtbmV6LCBHLkwuICgyMDEyKSBBdXRvbWF0aWMgQnVpbGRpbmcgb2YgYW4gT250b2xvZ3kgZnJvbSBhIENvcnB1cyBvZiBUZXh0IERvY3VtZW50cyBVc2luZyBEYXRhIE1pbmluZyBUb29scy4gSm91cm5hbCBvZiBBcHBsaWVkIFJlc2VhcmNoIGFuZCBUZWNobm9sb2d5LCAxMCwgMzk4LTQwNC5kAhQPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAyMycgdGFyZ2V0PSdfYmxhbmsnPjIxPC9hPl0CMjECMjE4Q09OQUJJTyAoMjAxNCkgPGJyLz5odHRwOi8vd3d3LmNvbmFiaW8uZ29iLm14L2luZGV4Lmh0bWxkAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAyNCcgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjIwU0VNQVJOQVQgKDIwMTQpPGJyLz4gaHR0cDovL3d3dy5zZW1hcm5hdC5nb2IubXgvZAIWD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMjUnIHRhcmdldD0nX2JsYW5rJz4yMzwvYT5dAjIzAjIzKklORUdJICgyMDE0KSA8YnIvPmh0dHA6Ly93d3cuaW5lZ2kub3JnLm14L2QCFw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDI2JyB0YXJnZXQ9J19ibGFuayc+MjQ8L2E+XQIyNAIyNC1DT05BR1VBICgyMDE0KSA8YnIvPmh0dHA6Ly93d3cuY29uYWd1YS5nb2IubXhkAhgPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAyNycgdGFyZ2V0PSdfYmxhbmsnPjI1PC9hPl0CMjUCMjUuUFJPRkVQQSAoMjAxNCkgPGJyLz5odHRwOi8vd3d3LnByb2ZlcGEuZ29iLm14L2QCGQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDI4JyB0YXJnZXQ9J19ibGFuayc+MjY8L2E+XQIyNgIyNn5WaWNrZXJ5LCBCLkMuICgxOTk3KSBPbnRvbG9naWVzLiBKb3VybmFsIG9mIEluZm9ybWF0aW9uIFNjaWVuY2UsIDIzLCAyNzctMjg2Ljxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE3Ny8wMTY1NTUxNTk3MDIzMDA0MDJkAhoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzAyOScgdGFyZ2V0PSdfYmxhbmsnPjI3PC9hPl0CMjcCMjeKAUdpYXJyYXRhbm8sIEouIGFuZCBSaWxleSwgRy4gKDIwMDEpIEV4cGVydCBTeXN0ZW1zOiBQcmluY2lwbGVzIGFuZCBQcm9ncmFtbWluZy4gM3JkIEVkaXRpb24sIEludGVybmF0aW9uYWwgVGhvbXNvbiBFZGl0b3JlcywgTcOpeGljbywgRC5GLmQCGw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDMwJyB0YXJnZXQ9J19ibGFuayc+Mjg8L2E+XQIyOAIyOLQDS3l6aXJha29zLCBLLiwgS2FycGF0aGlvdGFraXMsIE0uLCBHYXJiaXMsIEcuLCBOaWtvbGFvdSwgQy4sIEJlcmV0YSwgSy4sIFBhcG91dHNpcywgSS4sIEhlcmVrYWtpcywgVC4sIE1pY2hhaWwsIEQuLCBLb3ViYXJha2lzLCBNLiBhbmQgS29udG9lcywgQy4gKDIwMTQpIFdpbGRmaXJlIE1vbml0b3JpbmcgVXNpbmcgU2F0ZWxsaXRlIEltYWdlcywgT250b2xvZ2llcyBhbmQgTGlua2VkIEdlb3NwYXRpYWwgRGF0YS4gV2ViIFNlbWFudGljczogU2NpZW5jZSwgU2VydmljZXMgYW5kIEFnZW50cyBvbiB0aGUgV29ybGQgV2lkZSBXZWIsIDI0LCAxOC0yNi48YnIvPmh0dHA6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL3BpaS9TMTU3MDgyNjgxNDAwMDAzMTxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLndlYnNlbS4yMDEzLjEyLjAwMmQCHA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDMxJyB0YXJnZXQ9J19ibGFuayc+Mjk8L2E+XQIyOQIyOesBU29lcmdlbCwgRC4gKDE5OTkpIFRoZSBSaXNlIG9mIE9udG9sb2dpZXMgb3IgdGhlIFJlaW52ZW50aW9uIG9mIENsYXNzaWZpY2F0aW9uLiBKb3VybmFsIG9mIHRoZSBBbWVyaWNhbiBTb2NpZXR5IGZvciBJbmZvcm1hdGlvbiBTY2llbmNlLCA1MCwgMTExOS0xMTIwLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwMi8oU0lDSSkxMDk3LTQ1NzEoMTk5OSk1MDoxMjwxMTE5OjpBSUQtQVNJMTI+My4wLkNPOzItSWQCHQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDMyJyB0YXJnZXQ9J19ibGFuayc+MzA8L2E+XQIzMAIzMJwBSGVybsOhbmRleiwgQS4sIEhlcm7DoW5kZXosIFAuIGFuZCBHb3JkaWxsbywgQS4gKDIwMDYpIEhhbmRib29rIG9mIEVudmlyb25tZW50YWwgSW1wYWN0cyBBc3Nlc3NtZW50LiBJTk5DSVZFLCBJbm5vdmFjacOzbiBDaXZpbCBFc3BhJiMyNDE7b2xhLCBTLkwuLCBNYWRyaWQuZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pTVAVPSlNUQQRPSlRSBE9KVFMDT0pVBE9KVk0DT1BKA1BPUwJQUANQU1QFUFNZQ0gDU0FSA1NDRARTR1JFAlNNAlNOA1NOTARTb2Z0AlNTA1RFTAJUSQRVT0FKAlZQA1dFVANXSkEEV0pDRAVXSkNNUARXSkNTBFdKRVQDV0pNBFdKTlMFV0pOU0UFV0pOU1QDV0pWA1dTTgJZTRWAAgEwAzczNwQxNDA4BDE0MDYEMTAwMgQyNDIzAzE2NAM2MTEEMTQ3OAM0NzMDNDkyBDE1NzkEMjQzNwQyNDQyBDI0NDQEMjQyNgQyMzE2AzgwMwQxMDAwAzQ3NgMyMDMEMjQyMgQxMzA0AzUzNQM4ODQDNTMyAzUyOQMyMDcDOTk2BDE1MTcEMjMxNwMxNjADNDc3AzY3NQQxNTczBDE1NzQDNzQzAzUxMwQxNTc1BDI0NDUDMTkxAzgxMgMyNjAEMjQ1NQMxMzYEMjA3NAQxNDkzAzEyMgM5ODkCOTIEMjAzMwMxNzMEMTQ5MgQyNDM4BDE1MTgEMjQ1NAQyNDU3AjY0AjkzBDEzMTEEMjMxNQMyMDgEMjQzMgQyNDYyAzU0MQQxNjkwAzUxMgI2NQMxMDMDMTc2AzExMQM0OTAEMjQ0OQQxMzkxAzIwMgE0AzIwOQQyNDI4Azc0NwQxMjYxBDE1NzgEMTUxOQM1MjcEMTQ3NwQxMjk4BDE5ODAEMjQzNgM1MjUDNDc1BDI0NDMCMzAEMjQzNQMyMzADMTYyBDI0MzEDNTMwAzUyNgMxMjUEMjQyNQM0NzkDNTMxAzY5MQIyOQMxNDQEMTk4NgQxMzk1AzExNAQyNDYxBDI0MjEEMTQxMQMxMDIDMTc1AzY0OAMzOTcEMTc1MwMxNzIEMjQzMwM1OTEDOTkwAjQ1AzU0MwMzMzkEMjQzMAIyOAM0NzgEMjQzOQQyNDYwAzM1NwI0NgMyMTAEMTQ4NQMxNjMDNzg3Azc4NgM5MTcDODE1BDI0NDEEMTQ4NwQxNTc2AzE3NAQyNDM0AzUyOAMyMDUDMTkyAjY5BDI0NTkEMjQ2MwQyNDUzAzczOAQxNDgwBDE1OTADODE0BDE0MDcEMTQ3OQQxMDAzBDI0NDYDNjAxAzgwNgM3ODUEMjQ0NwQyNDUyAzk5NwM2MDYDNzg4Azc5MgQxOTc3AzgxMAM1ODYDNjE0BDE1NzcEMjQ1NgM4MTEDODE2BDE5NzkDNzM2BDEwMDQDNTg3AzgxNwM2MTMDNjAyAzU5MgM1OTMDNzkzBDExODYDNTg4Azc5MAM3ODQDNzM5AzgyMAM2MTIDNzQyAzk5OQM4MjIDOTk4AzU5NgQyNDI0AzYwNQM4MjEDODA0AzYwNAQyNDY0BDE5NzgDODA1Azc5NAM4MjMDODEzAzU4OQM3OTEDNjA5AzYxMAM3NDEDNzQ0AzYwMwM4MDcDNzg5AzgyNAQxMzk0AzU5MAM3MzUDNjAwAzYwNwQxNDg2BDI0NDgDODA4AzUwOQQxMDAxAzU0NwI3MQMyMDYEMjQ0MAMxNDgEMjQ1MAM1MzMDMTM1AzQ3NAQxNTg5AzQ5MQQyMDM0AzIwNAM2NjYDMTA0BDE0MDUEMjQ1OAMxNDYDNTExAzgxOAM1MDIDODA5BDI0NTEDNTA2AzYxNQM0OTMDNTM0AzUxMAI0MQQyNDY1FCsDgAJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRk6ve4C/46eUGjhGt5dTq/Or8iSMz91FdjEKu1wonXAqI=" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=144" title="Journal of Environmental Protection">
+                    Journal of Environmental Protection</a> &gt; <a href="home?issueid=6907#60028">Vol.6 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Developing Ontology Systems as a Base of an Environmental Quality Management Model in México <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Ren%c3%a9+Bernardo+El%c3%adas++Cabrera-Cruz&searchfield=authors&page=1' target='_blank'>René Bernardo Elías  Cabrera-Cruz</a><sup>1*</sup>, <a href='articles?searchcode=Erika++Alarc%c3%b3n-Ruiz&searchfield=authors&page=1' target='_blank'>Erika  Alarcón-Ruiz</a><sup>1</sup>, <a href='articles?searchcode=Julio+C%c3%a9sar++Rol%c3%b3n-Aguilar&searchfield=authors&page=1' target='_blank'>Julio César  Rolón-Aguilar</a><sup>1</sup>, <a href='articles?searchcode=Salvador+W.++Nava-D%c3%adaz&searchfield=authors&page=1' target='_blank'>Salvador W.  Nava-Díaz</a><sup>1</sup>, <a href='articles?searchcode=Elena+Mar%c3%ada++Otazo-S%c3%a1nchez&searchfield=authors&page=1' target='_blank'>Elena María  Otazo-Sánchez</a><sup>2</sup>, <a href='articles?searchcode=Ricardo+P%c3%a9rez++Avil%c3%a9z&searchfield=authors&page=1' target='_blank'>Ricardo Pérez  Aviléz</a><sup>3</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Division+of+Postgraduate+Studies+and+Research%2c+Faculty+of+Engineering+%e2%80%9cArturo+Narro+Siller%e2%80%9d%2c+Autonomous+University+of+Tamaulipas%2c+Tamaulipas%2c+Mexico&searchfield=affs&page=1' target='_blank'>Division of Postgraduate Studies and Research, Faculty of Engineering “Arturo Narro Siller”, Autonomous University of Tamaulipas, Tamaulipas, Mexico</a>.<br /><sup>2</sup><a href='articles?searchcode=Center+for+Chemical+Research%2c+Autonomous+University+of+Hidalgo+State%2c+Hidalgo%2c+Mexico&searchfield=affs&page=1' target='_blank'>Center for Chemical Research, Autonomous University of Hidalgo State, Hidalgo, Mexico</a>.<br /><sup>3</sup><a href='articles?searchcode=Institute+of+Sciences%2c+Autonomous+University+of+Puebla%2c+Puebla%2c+Mexico&searchfield=affs&page=1' target='_blank'>Institute of Sciences, Autonomous University of Puebla, Puebla, Mexico</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jep.2015.69095"
+                    target="_blank" onclick='SetNum(60028)'>10.4236/jep.2015.69095</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JEP_2015092914212222.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60028)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60028' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60028.xml' target='_blank' onclick='SetNum(60028)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    3,812</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    4,889</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60028&JournalID=144' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">The process of identifying the attributes and relationships considered in an ontology is a complex task because there are many factors involved in the deterioration of environmental quality, the diversity of sources and data dispersion. This work presents an ontology that integrates the data required by an Environmental Quality Synoptic System (EQSS), which to date scatters in different Internet sites and concentrates by different agencies for example INEGI, CONABIO, SEMARNAT, CNA, among others. The methodology process consists of the collection of environmental information in Mexico through the application of computational techniques resulting ontology with environmental knowledge that will be processed by the system EQSS. Among the main advantages is than the selection and structure of information allow the automated generation of results in an environmental statement. The ontology proposal is based on knowledge of EQSS system that is based on the architecture of expert systems and through this important information for decision-making in regard to environmental quality and interaction with Geographic Information System (GIS) is obtained.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Ontology&searchfield=keyword&page=1' target='_blank'>Ontology</a>, <a href='articles?searchcode=+Software+Knowledge+Modeling&searchfield=keyword&page=1' target='_blank'> Software Knowledge Modeling</a>, <a href='articles?searchcode=+Environmental+Quality&searchfield=keyword&page=1' target='_blank'> Environmental Quality</a>, <a href='articles?searchcode=+EIA&searchfield=keyword&page=1' target='_blank'> EIA</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Cabrera-Cruz, R. , Alarcón-Ruiz, E. , Rolón-Aguilar, J. , Nava-Díaz, S. , Otazo-Sánchez, E.  and Aviléz, R.   (2015) Developing Ontology Systems as a Base of an Environmental Quality Management Model in México. <i>Journal of Environmental Protection</i>, <b>6</b>, 1084-1093. doi: <a href='http://dx.doi.org/10.4236/jep.2015.69095' target='_blank' onclick='SetNum(60028)'>10.4236/jep.2015.69095</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>The constant evolution of technology has enabled us to manipulate information in the ways different from the past when it was only carried out manually and with a large time investment. Similarly, it is also possible to perform processes that previously require a lot of human resources, such as statistical calculations, reports, and graphs. Currently there is a lot of environmental information from different sources, such as documents, databases and files with geographic information, satellite images, aerial photographs, maps, among others. These sets of data can provide important information on qualitative and quantitative characteristics inherent to the environment and its relation to the relative’s capacity to meet the needs of people and ecosystems [1] . From this information, we can estimate the greenhouse gas emissions, wastewater discharges and solid waste generation by indirect methods because they are based on emission factors, rates activity, estimated using historical data, material balance, engineering calculations and mathematical emission models [2] . To do this, you must have access to enough environmental information, industrial sources, vehicle sources, sources of waste, emission sources, rankings, and current regulations, and then get the data required for the study area. It is very difficult to determine the integration of necessary information due to the heterogeneity of the data sources and the different tables and field names. Meanwhile, in Mexico, the policy states the need for inventories of pollutants through a record of emissions and transfers of pollutants emphasizing three major themes: hazardous waste, solid waste, air emissions and wastewater discharges, and specific sources of pollution such as mining, agriculture, livestock, pet and service. These sources and these types of wastes represent different dimensions of environmental problems, depending on the level of importance of the economic orientation of the different regions of the country. While ontologies have been developed that serve to integrate databases that generate environmental information based on study areas and methods for environmental impact assessment and management of wastewater lines, etc. [1] [3] [4] ; in Mexico there have been not developed. These ontologies based on environmental information, can be used for the management of environmental systems and their application in environmental policy tools lines. This has been considered as the first of a string of errors in the application of tools such as the process of environmental impact assessment or strategic impact assessment [5] [6] .</p>
+<p>Hence, the objective of this research is to present a methodology for the design of an environmental ontology and its application in the Environmental Quality Synoptic System (EQSS). Given the complexity of the collection of environmental information and its impact on decision-making in environmental public policy, it is required to have a mechanism capable of integrating data and relations between them allowing form a knowledge base EQSS. This architecture operates according to the methodology of the art Rapid Evaluation of Sources of Environmental Contamination (ERFCA by its acronym in Spanish) [5] [7] . The computational strategy to structure a data warehouse from databases taken from government agencies responsible for environmental information in Mexico is based on defining semantic relationship in the designed context. In a previous review of environmental ontologies studies, we did not find an environmental ontology that incorporated the necessary information as posed by the ERFCA technique [7] , and the concept of ontology was used since the late 1990s [8] [9] , taken a peak in recent years thanks to advances in information technology [10] - [13] . The implementation of Web ontologies is mainly done using W3C standards for knowledge management based on RDF: OWL and SKOS [14] and using the software primarily prot&eacute;g&eacute; [15] [16] . The tendency to access information remotely and in real time has promoted the use of mainly developed in languages like PHP and ASP NET Web systems, incorporating the benefits of JavaScript libraries like Jason, jQuery, bootstrap that allow information viewed from any mobile device. Ontologies developed in recent years [10] [11] use a service-oriented technology and Semantic Web, in addition to incorporating of spatial data using a Server Maps [17] [18] through web services [13] .</p>
+<p>As described within the requirements to allow the assessment of environmental quality in a given study area, it is necessary to have a mechanism to integrate useful information. The objective of this research is to present the methodology required to design an environmental ontology and its application in a Web system for estimating environmental quality. The term ontology is used in systems of knowledge representation to denote a knowledge model that represents a particular domain of interest. A knowledge domain represented by formally in a conceptualization: the objects, concepts and other entities that presumed to exist in some area of interest and the relationships between them. In the Semantic Web, ontologies are a key component for knowledge modeling through the interoperability between different systems and reuse of existing knowledge in new systems [18] . On the other hand, in the area of Artificial Intelligence, a repository of information is used with a structure that allows interpretation to the data to make inferences within a learning process allowing the acquisition of knowledge automatically. The Web Ontology developed in this research, is based on the ERFCA technique [5] and its modification by Econopoulous [7] , in 2002 for air pollution sources which allow conducting inventories of pollution sources and their results obtained by the use of indicators of environmental quality status Batelle type. These indicators establish evaluation criteria and an estimate of pollution generated according to the production of goods or services of different generating sources of contamination. The technique uses data from the public, social and private sectors available, highlighting the most important sources of generation that have a significant impact on the environment. The proposed ontology also provides information for decision-making in regard to environmental quality and it is expected to interact with other environmental policy instruments, incorporating tools of Geographic Information Systems (GIS).</p>
+<p class="E-Title1">2. Methodology</p>
+<p>The proposed methodology integrates provided by Noy and McGuinness [18] , which state that you must first determine the scope, and extent of ontology considering whether there is a similar ontology that reused. Subsequently shall list the important terms to define classes and their properties and their hierarchy. This process allows you to create the necessary instances where information is stored. The following describes each of the steps presented in <a href="#f1" target="_self">Figure 1</a>.</p>
+<p>Defining the scope of environmental ontology. The goal of the ontology and its functionality within the Web evaluation system of environmental quality, for it must analyze existing ontologies and technology that has been used for implementation defined. At this stage the field of environmental ontology is determined, i.e. the set of information that will be modeling and computational tools necessary for its creation.</p>
+<p>Ontology design from the input and expected output. The structure of the ontology defined by identifying the attributes, relationships based on the information obtained in the previous step. The structure of the bases of official environmental data analyzed, identifying and relating each of the entities and their attributes with the concepts defined in the ontology.</p>
+<p>Integration of ontology instances proposals. Mechanism is defined to feed the required data in the ontology, this process is called mapping instances and unifies the different data sets and integrate them into the ontology.</p>
+<p>Implementing search engine. The design and implementation of the interface and modules required searching for information about the ontology performed, this process involves the mapping of instances, the process of search and display process for displaying the data required by the user.</p>
+<p>Retrieving and displaying data. Function responsible for formatting oftenest consultation data ontology implemented. This output format is an executive report, called Cabinet Study, which may include graphic and thematic maps if it selected in the user interface EQSS system that aims to provide the assessment of environmental impact consistent material for decision-making.</p>
+<p class="E-Title1">3. Results</p>
+<p class="E-Title2">3.1. Ontology Design</p>
+<p>The design of the ontology based on client-server architecture, as shown in <a href="#f2" target="_self">Figure 2</a>, so allow users of the same</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x5.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Methodology for the implementation of the environmental ontology.</p>
+</div>
+<p>access information through a Web browser. For the import of databases has been used MYSQL 5.6.14 and SQL Server 2008 Language program for Web user interfaces is PHP 5.5.6. The ontology was developed in language OWL (Web Ontology Language) based on the RDF/XML syntax using the Prot&eacute;g&eacute; tool, which is a tool for developing ontologies created by Stanford University, which aims to further facilitate the construction is able to display all the knowledge of an area for later analysis.</p>
+<p>Regarding the definition of domain ontology, has made a previous work to identify the domain and scope of the ontology by analyzing the information required by the technical ERFCA mainly covering the following criteria:</p>
+<p>1) Study area.</p>
+<p>2) Industrial pollutants and non-industrial sources.</p>
+<p>3) Classification of pollution sources according to United Nations, UN.</p>
+<p>4) Pollutants and factors associated with each of the categories described in the UN classification.</p>
+<p>The study area, pollutant sources, UN classification, Environmental Statement, indicators primarily, and from this information and based on propositional logic entities identified a taxonomy has been modeled from a hierarchical graph to represent a semantic network mainly order to establish the classes. The relationship types, properties and allow ontology know what the inheritance relationships that exist through their predecessors in the graph are. <a href="#f3" target="_self">Figure 3</a> shows the information considered by the Environmental Statement. Each of the items represents a class properties and which related entity polluting sources through the study area entity. <a href="#f4" target="_self">Figure 4</a> show a part of the rules that form the taxonomy described and a fragment of semantic network.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x6.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Architecture of the ontology.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x7.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Information considered by the entity cabinet study.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x8.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. View of the semantic network of environmental ontology.</p>
+</div>
+<p>Instance mapping is based on the D2RQ [19] platform enables unified data sources and principally consists of two access steps. In the first filter of the information needed for each of the data sources is performed and the information can’t be obtained and identified to be configured in a database design itself, this database is has been given the name of ERFCA data Base. With respect to the information required by the system, it dispersed as it stored and/or generated by various organizations mentioned above which makes it difficult to integrate them shown below:</p>
+<p>・ The National Commission for the Knowledge and Use of Biodiversity (CONABIO by its acronym in Spanish) [20] created in 1992 to provide data, information and advice to multiple users, and to comply with international commitments and carrying out actions to conservation and sustainable use of biodiversity in Mexico.</p>
+<p>・ The Secretariat of Environment and Natural Resources (SEMARNAT by its acronym in Spanish) [21] . Since 2000, it is the federal government agency responsible for promoting the protection, restoration and conservation of ecosystems and natural resources and environmental goods and services in Mexico, in order to promote their use and sustainable development.</p>
+<p>・ The National Institute of Statistics, Geography and Informatics (INEGI by its acronym in Spanish) [22] . Since 1983 has brought together the responsibility to generate statistics and geographic information modernizing capture, processing and dissemination of information about the land, people and economy.</p>
+<p>・ The National Water Commission (CNA by its acronym in Spanish) [23] . In 1989 given the responsibility to manage, regulate, control and protect the country’s national waters, establish policy and national strategies hydraulic and establish programs to assist municipalities in providing safe drinking water and sanitation in cities and rural communities, and to promote the efficient use of water in irrigation and industry.</p>
+<p>・ The Federal Attorney for Environmental Protection (PROFEPA by its acronym in Spanish) [24] originated from the need to address and control the increasing environmental deterioration in Mexico, regulate risky industrial activities, contamination to soil and air, and the care of resources natural.</p>
+<p>It has been decided to consider primarily stores data from INEGI and SEMARNAT. All information collected downloaded directly from its official website, considering data, images and maps related to the ontology entities. The structure that uses each of the selected data sources and data base ERFCA itself is variable in <a href="#f5" target="_self">Figure 5</a> shows some of the catalogs considered during information filtering.</p>
+<p>Once concentrated information relevant to the ontology we proceed to generate instances (<a href="#f6" target="_self">Figure 6</a> and <a href="#f7" target="_self">Figure 7</a>) to integrate to form the information domain ontology, and thus the necessary mechanisms for configuring and updating data sets.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x9.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Data sources consulted.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x10.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Generation of instances from the data accessed.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x11.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Data obtained from the INEGI database.</p>
+</div>
+<p>The information obtained in the first step follows the principle of relational databases so it is necessary to establish a correspondence between the information obtained and the ontology. The following figure shows the tables presented with information extracted from the BDs of INEGI and SEMARNAT, with his environmental variable to which they belong.</p>
+<p class="E-Title2">3.2. Semantic Integration</p>
+<p>The goal of integration is to provide a unified database with different structures through independent ontology access avoiding duplication and lack of updating information. The unified access means that once connected the ontology to the external data store, through a user interface, access to a set of heterogeneous data that are independent to each other, but both are part of the same domain. In <a href="#f8" target="_self">Figure 8</a>, you can see graphically the mapping process instance, for this work two databases containing information from INEGI and SEMARNAT respectively. Each database has its own structure represented by a diagram were chosen quantity ratio E1 and E2, the mapping process instance is to relate each of the attributes of E1 and E2 with its equivalent in the ontology through the language mapping D2RQ platform consisting of a declarative language to describe relationships between a relational database and the OWL ontology.</p>
+<p>Firstly, it is set to a file using the syntax D2RQ the relationship between OWL ontology schema and relational database. Database, D2RQ: jdbcDSN, D2RQ: ClassMap and D2RQ: PropertyBridge For this, two basic structures D2RQ language D2RQ are used. Below in <a href="#f9" target="_self">Figure 9</a> and <a href="#f10" target="_self">Figure 10</a> presented a view of the code needed to connect the relational database.</p>
+<p>The ClassMap structure represents the group of OWL ontology classes and through the sentence, map database is linked with some data of ontology. The D2RQ property: uriPattern Tabla. Columna notation specifies the schema within the database and so on set during the mapping information.</p>
+<p>As a result of mapping instances a mapping file is generated from a declarative language that describes relationship between RDFS or OWL ontologies with a relational database through D2RQ. From this file the D2RQ platform manages to transform a database on a network. By mapping data, the user is able to request consultation with the ontology. In EQSS UI, the user selects the study area, comprising one or more municipalities in</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x12.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Integration of two information entities ontology.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x13.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. Definition of relational databases using.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x14.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f10" id="f10"><span class="cs_fig_con">Figure 10</span></a>. Connecting the relational database ontology.</p>
+</div>
+<p>Mexico, and is generated through a report called ontology Baseline or Environmental Statement, this process is shown in <a href="#f11" target="_self">Figure 11</a>. A once the mapping is completed, it will have a file that may be used in implementing a project on Environmental Quality, where queries of information will be made only in the employees terms in the ontology and only will answer those classes where there instances.</p>
+<p>The Environmental Statement is generated from an interface and modeled by an ontology is a critical tool necessary in the process of assessing environmental quality territorial regulation, planning and management, development of environmental management plans, waste management, vulnerability analysis, among others [25] [26] . Importantly, depending on the results of the query, using the features of Google Maps API for spatial information representation is interpreted in a map embedded within the user interface EQSS generating small custom thematic maps. <a href="#f12" target="_self">Figure 12</a> shows a view of the Environmental Statement that is generated by the interface shown.</p>
+<p>The studies in the area of Artificial Intelligence since 1960 [27] , but in recent years, thanks to advances in the development of software, hardware and more precisely in telecommunications, allowed environmental modeling and geographical systems automating processes and enabling better management of data. On the other hand, it is important to note that a progressive trend to replace conventional process models for information retrieval that apply cognitive models of human memory and learning models for intelligent agents in information retrieval is seen proposing ontologies for structuring the knowledge base. So that may share information and knowledge</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x15.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f11" id="f11"><span class="cs_fig_con">Figure 11</span></a>. Generating a baseline study from the environmental ontology.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/14-6702483x16.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f12" id="f12"><span class="cs_fig_con">Figure 12</span></a>. Report generated by the interface of environmental ontology.</p>
+</div>
+<p>generating services offer a rich and modern knowledge for modeling providing services and manage terminology in any subject contextual framework. The ontology proposed based on knowledge of EQSS, which requires a set of related data-dos with physical-natural, mainly social and economic information. The information obtained from data sources in Mexico and government agencies are working to ensure that access to the data is in real time through the available Web services. Within perspectives is implementing a Web Service based GeoData semantic mapping, which allows to the user modeled in accordance with the needs of the problem to be solved, such as prediction models fire, requiring the creation and integration of geospatial data more related climate, human activities and flammability of specific regions [28] -[30] .</p>
+<p class="E-Title1">4. Conclusions and Recommendations</p>
+<p>Within the assessment, methods in the field of semantic technologies are found and the ontologies as the knowledge of storage model in the area of environment are dynamic, collaborative and iterative. This process needs to be understood, evaluated and managed between domain experts and an automated manner. Progress in this direction allows us to expand the existing arsenal of techniques for analyzing environmental data ontology evaluation towards more holistic approaches. With the emergence of new devices, new technologies and new services, the GIS applications are really very important and are used in various fields such as public policy instruments which can model the dispersion of pollutants.</p>
+<p>To determine the system requirements, the process and outputs of ERFCA technique, the data entry system is related to the study area to assess, while the expected outputs must be in terms of media (air, water, soil), sectorial (industrial, not industrial) and source (mobile or not mobile). The environment ontology proposed based on the user interface EQSS can produce information for decision-making concerning environmental quality and is considered to interact with Geographic Information Systems (GIS).</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>The authors thank the Improvement Professorate Program (PROMEP for its acronym in Spanish) for the support given to project number: New Teachers Full Time Support for PROMEP/103.5/13/6715.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577003' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Garrido, J. and Requena, I. (2011) Proposal of Ontology for Environmental Impact Assessment: An Application with Knowledge Mobilization. Expert Systems with Applications, 38, 2462-2472. <br/>http://www.sciencedirect.com/science/article/pii/S0957417410008316 <br/>http://dx.doi.org/10.1016/j.eswa.2010.08.035
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577004' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        National Institute of Ecology (2005) Guide Development and Use of Emission Inventories. National Institute of Ecology. Secretary of the Environment and Natural Resources Press, Mexico.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577005' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Ceccaroni, L., Cortés, U. and Sànchez-Marrè, M. (2004) Onto WEDSS: Augmenting Environmental Decision-Support Systems with Ontologies. Environmental Modelling & Software, 19, 785-797. <br/>http://www.sciencedirect.com/science/article/pii/S1364815203002056 <br/>http://dx.doi.org/10.1016/j.envsoft.2003.03.006
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577006' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Torres-Bejarano, F., Ramirez, H., Denzer, R., Frysinger, S., Hell, T. and Schlobinski, S. (2013) Linking Numerical Water Quality Models in an Environmental Information System for Integrated Environmental Assessments. Journal of Environmental Protection, 4, 126-137. <br/>http://www.scirp.org/journal/PaperInformation.aspx?PaperID=34843#.VTsyRCF_Oko  <br/>http://dx.doi.org/10.4236/jep.2013.47A015
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577007' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Wright, A.J., Dolman, S.J., Jasny, M., Parsons, E.C.M., Schiedek, D. and Young, S.B. (2013) Myth and Momentum: A Critique of Environmental Impact Assessments. Journal of Environmental Protection, 4, 72-77. <br/>http://www.scirp.org/journal/PaperInformation.aspx?PaperID=36162#.VTwjXCF_Oko <br/>http://dx.doi.org/10.4236/jep.2013.48A2009
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577008' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Oliveira, I., Monta&#241;o, M. and Souza, M. (2013) Strategic Environmental Assessment to Improve Infrastructure Impact Assessments in Brazil. Journal of Environmental Protection, 4, 1189-1196. <br/>http://www.scirp.org/journal/PaperInformation.aspx?PaperID=38690#.VTwjUyF_Oko <br/>http://dx.doi.org/10.4236/jep.2013.410136
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577009' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Alarcón, E., Cabrera, R.B.E., Rolón, J.C., Pichardo, R., Gordillo, A.J. and Otazo, E.M. (2014) Interaction between Environmental and Computer Science for the Development of Environmental Quality Software. In: López-Velasco, R. and Rodríguez-Herrera, A.L., Eds., Urban and Rural Areas and the Problem of Sustainability, Autonomous University of Guerrero, 260-279.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577010' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Zhu, S. and Feng, J. (2010) Using an Ontology to Help Reason about the Information Content of Data. Journal of Software Engineering and Applications, 3, 629-643. <br/>http://file.scirp.org/Html/2219.html <br/>http://dx.doi.org/10.4236/jsea.2010.37073
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577011' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Zhong, L., Zheng, M., Yuan, J. and Jin, J. (2012) The Jena-Based Ontology Model Inference and Retrieval Application. Intelligent Information Management, 4, 157-160. <br/>http://file.scirp.org/Html/9-30305_21412.htm
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577012' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Guo, M. (2013) The Application of Ontology in Semantic Discovery for GeoData Web Service. Communications and Network, 5, 678-680. <br/>http://file.scirp.org/Html/39580.html
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577013' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Ujang, U. and Rahman, A.A. (2013) Temporal Three-Dimensional Ontology for Geographical Information Science (GIS)—A Review. Journal of Geographic Information System, 5, 314-323. <br/>http://dx.doi.org/10.4236/jgis.2013.53030<br/>http://file.scirp.org/Html/13-8401253_33290.htm
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577014' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Loza-Pacheco, E., Torres-Ruiz, M. and Guzmán-Lugo, G. (2012) Spatial Reasoning for Determining the Domain of the Set of Tags That Represent Geographic Objects. Polibits, 45, 37-52. <br/>http://www.scielo.org.mx/scielo.php?pid=S1870-90442012000100006&script=sci_arttext
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577015' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Toledo, J.I., Guzmán, A. and Martínez, G.L. (2012) Automatic Building of an Ontology from a Corpus of Text Documents. Using Data Mining Tools. Journal of Applied Research and Technology, 10, 398-404.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577016' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Bracho, P., Kleeder, J., Ure&#241;a, V. and Yan, C. (2012) Ontology Development of Research and Culture. En-Claves del Pensamiento, 6, 11-29. <br/>http://www.redalyc.org/articulo.oa?id=141125359011
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577017' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Martínez, R.C., Téllez, R.Q., Ibarra, M.A.M., Ruiz, M.T. and Lugo, G.G. (2013) Semantic Comparison of Geographic Datasets Conceptualized through Ontologies. Computación y Sistemas, 17, 569-581.<br/>http://www.redalyc.org/articulo.oa?id=61529295010
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577018' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Bakaev, M. and Avdeenko, T. (2013) Indexing and Comparison of Multi-Dimensional Entities in a Recommender System Based on Ontological Approach. Computación y Sistemas, 17, 5-13.<br/>http://www.scielo.org.mx/pdf/cys/v17n1/v17n1a2.pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577019' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Sosnin, P. (2010) Creation and Usage of Project Ontology in Development of Software Intensive Systems. Polibits, 42, 51-58. <br/>http://www.scielo.org.mx/scielo.php?pid=S1870-90442010000200006&script=sci_arttext
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577020' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Strohmaier, M., Walk, S., P&#246;schko, J., Lamprecht, D., Tudorache, T., Nyulas, C., Musen, M.A. and Noy, N.F. (2013) How Ontologies Are Made: Studying the Hidden Social Dynamics behind Collaborative Ontology Engineering Projects. Web Semantics: Science, Services and Agents on the World Wide Web, 20, 18-34.<br/>http://www.sciencedirect.com/science/article/pii/S1570826813000164<br/>http://dx.doi.org/10.1016/j.websem.2013.04.001
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577021' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Noy, N.F. and McGuinness, D. (2001) Ontology Development 101: A Guide to Creating Your First Ontology. Stanford Knowledge Systems Laboratory. <br/>http://protege.stanford.edu/publications/ontology_development/ontology101.pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577022' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Toledo, J.I., Guzmán, A. and Martínez, G.L. (2012) Automatic Building of an Ontology from a Corpus of Text Documents Using Data Mining Tools. Journal of Applied Research and Technology, 10, 398-404.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577023' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        CONABIO (2014) <br/>http://www.conabio.gob.mx/index.html
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577024' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        SEMARNAT (2014)<br/> http://www.semarnat.gob.mx/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577025' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        INEGI (2014) <br/>http://www.inegi.org.mx/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577026' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        CONAGUA (2014) <br/>http://www.conagua.gob.mx
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577027' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        PROFEPA (2014) <br/>http://www.profepa.gob.mx/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577028' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Vickery, B.C. (1997) Ontologies. Journal of Information Science, 23, 277-286.<br/>http://dx.doi.org/10.1177/016555159702300402
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577029' target='_blank'>27</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref27" id="ref27"></a>
+                                        Giarratano, J. and Riley, G. (2001) Expert Systems: Principles and Programming. 3rd Edition, International Thomson Editores, México, D.F.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577030' target='_blank'>28</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref28" id="ref28"></a>
+                                        Kyzirakos, K., Karpathiotakis, M., Garbis, G., Nikolaou, C., Bereta, K., Papoutsis, I., Herekakis, T., Michail, D., Koubarakis, M. and Kontoes, C. (2014) Wildfire Monitoring Using Satellite Images, Ontologies and Linked Geospatial Data. Web Semantics: Science, Services and Agents on the World Wide Web, 24, 18-26.<br/>http://www.sciencedirect.com/science/article/pii/S1570826814000031<br/>http://dx.doi.org/10.1016/j.websem.2013.12.002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577031' target='_blank'>29</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref29" id="ref29"></a>
+                                        Soergel, D. (1999) The Rise of Ontologies or the Reinvention of Classification. Journal of the American Society for Information Science, 50, 1119-1120.<br/>http://dx.doi.org/10.1002/(SICI)1097-4571(1999)50:12<1119::AID-ASI12>3.0.CO;2-I
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577032' target='_blank'>30</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref30" id="ref30"></a>
+                                        Hernández, A., Hernández, P. and Gordillo, A. (2006) Handbook of Environmental Impacts Assessment. INNCIVE, Innovación Civil Espa&#241;ola, S.L., Madrid.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=144" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=144" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=144" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=144" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=144"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=144"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=144" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=144" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=144" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=144" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=144" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=144"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=144"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=144" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=144&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=144&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=144" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=144" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=144" target="_blank">JEP
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=144" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=144" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=144" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=144" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=144" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=144" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=144" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jep.2015.69095" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60028 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +144 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +144 +"&paperid=" +60028 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

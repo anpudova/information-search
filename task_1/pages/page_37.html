@@ -1,0 +1,1560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Optimal Design of a Multibody Self-Referencing Attenuator
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JPEE_2015092914515052.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60037" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60037.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60037" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60037" />
+<meta property="og:title" content="Optimal Design of a Multibody Self-Referencing Attenuator" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JPEE2015012717105085.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JPEE2015012717105085.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Optimal Design of a Multibody Self-Referencing Attenuator" />
+<meta name="keywords" content="Attenuator,Pelamis,Extraction Efficiency &amp;amp,Power,Numerical Simulation,Parametric Study" />
+<meta name="description" content="Discover the optimal size and number of tubes for a Pelamis P2-like attenuator through ANSYS simulations. Explore energy absorption and hydrodynamic fluid waves in this comprehensive study." />
+<meta name="citation_journal_title" content="Journal of Power and Energy Engineering" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Dongmei Zhou;Jennifer A. Eden" />
+<meta name="citation_author" content="Dongmei Zhou" />
+<meta name="citation_author" content="Jennifer A. Eden" />
+<meta name="citation_title" content="Optimal Design of a Multibody Self-Referencing Attenuator" />
+<meta name="citation_volume" content="3" />
+<meta name="citation_date" content="2015-09-10" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jpee.2015.39005" />
+<meta name="citation_issnPrint" content="2327-588X" />
+<meta name="citation_issnOnline" content="2327-5901" />
+<meta name="citation_abstract" content="The purpose of this paper is to determine the optimal size and number of tubes for a generic attenuator that is similar to Pelamis P2, the wave energy converter. Simulations using ANSYS Workbench, Design Modeler, and AQWA are performed to study the energy absorption at the nodes between the tubes. The analysis is limited to linearized hydrodynamic fluid waves loading on floating bodies by employing three-dimensional radiation/diffraction theory in regular waves in the frequency domain. Three sets of tests are conducted by varying total tube number, each tube length and the order of tubes with different lengths. After a systematic study in the frequency domain, the optimal size and number of the genetic attenuator is recommended." />
+<meta name="citation_publication_date" content="2015/9/10" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JPEE_2015092914515052.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JPEE_2015092914515052.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60037" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60037" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60037" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60037.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60037.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/10" />
+<meta name="citation_firstpage" content="59" />
+<meta name="citation_lastpage" content="69" />
+
+<meta name="dc.title" content="Optimal Design of a Multibody Self-Referencing Attenuator" />
+
+<meta name="dc.creator" content="Dongmei Zhou" />
+<meta name="dc.creator" content="Jennifer A. Eden" /><meta name="dcterms.issued" content="2015-09-10" />
+<meta name="dc.description" content="The purpose of this paper is to determine the optimal size and number of tubes for a generic attenuator that is similar to Pelamis P2, the wave energy converter. Simulations using ANSYS Workbench, Design Modeler, and AQWA are performed to study the energy absorption at the nodes between the tubes. The analysis is limited to linearized hydrodynamic fluid waves loading on floating bodies by employing three-dimensional radiation/diffraction theory in regular waves in the frequency domain. Three sets of tests are conducted by varying total tube number, each tube length and the order of tubes with different lengths. After a systematic study in the frequency domain, the optimal size and number of the genetic attenuator is recommended." />
+<meta name="dc.source" content="Journal of Power and Energy Engineering" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-10" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jpee.2015.39005" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-10" />
+<meta name="prism.issnPrint" content="2327-588X" />
+<meta name="prism.issnOnline" content="2327-5901" />
+<meta name="prism.publicationName" content="Journal of Power and Energy Engineering" />
+<meta name="prism.publicationDate" content="2015-09-10" />
+<meta name="prism.volume" content="3" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="59" />
+<meta name="prism.doi" content="10.4236/jpee.2015.39005" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60037" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTEwZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXxATxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RG9uZ21laSsrWmhvdSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkRvbmdtZWkgIFpob3U8L2E+PHN1cD48L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SmVubmlmZXIrQS4rK0VkZW4mc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5KZW5uaWZlciBBLiAgRWRlbjwvYT48c3VwPjwvc3VwPiBkAgIPZBYCZg8WAh8EBYYCPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1EZXBhcnRtZW50K29mK01lY2hhbmljYWwrRW5naW5lZXJpbmclMmMrQ2FsaWZvcm5pYStTdGF0ZStVbml2ZXJzaXR5JTJjK1NhY3JhbWVudG8lMmMrQ0ElMmMrVVNBJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RGVwYXJ0bWVudCBvZiBNZWNoYW5pY2FsIEVuZ2luZWVyaW5nLCBDYWxpZm9ybmlhIFN0YXRlIFVuaXZlcnNpdHksIFNhY3JhbWVudG8sIENBLCBVU0E8L2E+LjxiciAvPmQCBQ8WAh8EBQU0LDg0M2QCBg8WAh8EBQU1LDc3NmQCBw8WAh8DBQ9EaXNwbGF5OmlubGluZTtkAggPZBYCAgEPFgIfBAW9BDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9QXR0ZW51YXRvciZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkF0dGVudWF0b3I8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStQZWxhbWlzJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFBlbGFtaXM8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStFeHRyYWN0aW9uK0VmZmljaWVuY3krJTI2K1Bvd2VyJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEV4dHJhY3Rpb24gRWZmaWNpZW5jeSAmIFBvd2VyPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rTnVtZXJpY2FsK1NpbXVsYXRpb24mc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gTnVtZXJpY2FsIFNpbXVsYXRpb248L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStQYXJhbWV0cmljK1N0dWR5JnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFBhcmFtZXRyaWMgU3R1ZHk8L2E+IGQCCg8WAh8EBZkCWmhvdSwgRC4gIGFuZCBFZGVuLCBKLiAgICgyMDE1KSBPcHRpbWFsIERlc2lnbiBvZiBhIE11bHRpYm9keSBTZWxmLVJlZmVyZW5jaW5nIEF0dGVudWF0b3IuIDxpPkpvdXJuYWwgb2YgUG93ZXIgYW5kIEVuZXJneSBFbmdpbmVlcmluZzwvaT4sIDxiPjM8L2I+LCA1OS02OS4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2pwZWUuMjAxNS4zOTAwNScgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDAzNyknPjEwLjQyMzYvanBlZS4yMDE1LjM5MDA1PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIaFjRmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxNjknIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQEx4QFMZXlib3VybmUsIE0uLCBCYWhhaiwgQS5TLiwgTWlubnMsIE4uIGFuZCBP4oCZTmlhbnMsIEouICgyMDE0KSBQcmVsaW1pbmFyeSBEZXNpZ24gb2YgdGhlIE9XRUwgV2F2ZSBFbmVyZ3kgQ29udmVydGVyIFByZS1Db21tZXJjaWFsIERlbW9uc3RyYXRvci4gUmVuZXdhYmxlIEVuZXJneSwgNjEsIDUxLTU2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5yZW5lbmUuMjAxMi4wOC4wMTlkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE3MCcgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATKzAlJ1ZWhsLCBLLiwgQnJla2tlbiwgVC5BLiwgQm9zbWEsIEIuIGFuZCBQYWFzY2gsIFIuICgyMDEwKSBMYXJnZS1TY2FsZSBPY2VhbiBXYXZlIEVuZXJneSBQbGFudCBNb2RlbGluZy4gMjAxMCBJRUVFIENvbmZlcmVuY2Ugb24gSW5ub3ZhdGl2ZSBUZWNobm9sb2dpZXMgZm9yIGFuIEVmZmljaWVudCBhbmQgUmVsaWFibGUgRWxlY3RyaWNpdHkgU3VwcGx5LCBXYWx0aGFtLCBNYXNzYWNodXNldHRzLCAyNy0yOSBTZXB0ZW1iZXIgMjAxMCwgMzc5LTM4Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5L2NpdHJlcy4yMDEwLjU2MTk3NzVkAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE3MScgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATP2AUJhYmFyaXRhLCBBLiwgSGFsc2IsIEouLCBNdWxpYXdhbmIsIE0uSi4sIEt1cm5pYXdhbmIsIEEuLCBNb2FuYiwgVC4gYW5kIEtyb2tzdGFkYywgSi4gKDIwMTIpIE51bWVyaWNhbCBCZW5jaG1hcmtpbmcgU3R1ZHkgb2YgYSBTZWxlY3Rpb24gb2YgV2F2ZSBFbmVyZ3kgQ29udmVydGVycy4gUmVuZXdhYmxlIEVuZXJneSwgNDEsIDQ0LTYzLiANCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLnJlbmVuZS4yMDExLjEwLjAwMmQCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTcyJyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNMcBU2lsdmEsIEQuLCBSdXN1LCBFLiBhbmQgU29hcmVzLCBDLkcuICgyMDEzKSBFdmFsdWF0aW9uIG9mIFZhcmlvdXMgVGVjaG5vbG9naWVzIGZvciBXYXZlIEVuZXJneSBDb252ZXJzaW9uIGluIHRoZSBQb3J0dWd1ZXNlIE5lYXJzaG9yZS4gRW5lcmdpZXMsIDYsIDEzNDQtMTM2NC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4zMzkwL2VuNjAzMTM0NGQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTczJyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNa8CWXUsIFkuLUguLCBMaSwgWS4sIEhhbGxldHQsIEsuIGFuZCBIb3RpbXNreSwgQy4gKDIwMTQpIERlc2lnbiBhbmQgQW5hbHlzaXMgZm9yIGEgRmxvYXRpbmcgT3NjaWxsYXRpbmcgU3VyZ2UgV2F2ZSBFbmVyZ3kgQ29udmVydGVyLiBBU01FIDIwMTQgMzNyZCBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gT2NlYW4sIE9mZnNob3JlIGFuZCBBcmN0aWMgRW5naW5lZXJpbmcsIFNhbiBGcmFuY2lzY28sIDgtMTMgSnVuZSAyMDE0LCBWMDlCVDA5QTA0OC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTE1L29tYWUyMDE0LTI0NTExZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxNzQnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2ckNydXosIEouICgyMDA4KSBPY2VhbiBXYXZlIEVuZXJneS4gMXN0IEVkaXRpb24sIFNwcmluZ2VyLCBCZXJsaW4uIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy85NzgtMy01NDAtNzQ4OTUtM2QCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTc1JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN74BRmFsYyZhdGlsZGU7bywgQS5GLkQuTy4gKDIwMTApIFdhdmUgRW5lcmd5IFV0aWxpemF0aW9uOiBBIFJldmlldyBvZiB0aGUgVGVjaG5vbG9naWVzLiBSZW5ld2FibGUgYW5kIFN1c3RhaW5hYmxlIEVuZXJneSBSZXZpZXdzLCAxMiwgODk5LTkxOC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucnNlci4yMDA5LjExLjAwM2QCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTc2JyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBONsBTGksIFkuIGFuZCBZdSwgWS4tSC4gKDIwMTIpIEEgU3ludGhlc2lzIG9mIE51bWVyaWNhbCBNZXRob2RzIGZvciBNb2RlbGluZyBXYXZlIEVuZXJneSBDb252ZXJ0ZXItUG9pbnQgQWJzb3JiZXJzLiBSZW5ld2FibGUgYW5kIFN1c3RhaW5hYmxlIEVuZXJneSBSZXZpZXdzLCAxNiwgNDM1Mi00MzY0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5yc2VyLjIwMTEuMTEuMDA4ZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxNzcnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5qANGb2xsZXksIE0uLCBCYWJhcml0LCBBLiwgQ2hpbGQsIEIuLCBGb3JlaGFuZCwgRC4sIE/igJlCb3lsZSwgTC4sIFNpbHZlcnRob3JuZSwgSy4sIFNwaW5uZWtlbiwgSi4sIFN0cmF0aWdha2ksIFYuIGFuZCBUcm9jaCwgUC4gKDIwMTIpIEEgUmV2aWV3IG9mIE51bWVyaWNhbCBNb2RlbGxpbmcgb2YgV2F2ZSBFbmVyZ3kgQ29udmVydGVyIEFycmF5cy4gQVNNRSAyMDEyIDMxc3QgSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlIG9uIE9jZWFuLCBPZmZzaG9yZSBhbmQgQXJjdGljIEVuZ2luZWVyaW5nLCBWb2wuIDc6IE9jZWFuIFNwYWNlIFV0aWxpemF0aW9uOyBPY2VhbiBSZW5ld2FibGUgRW5lcmd5LCBSaW8gZGUgSmFuZWlybywgMS02IEp1bHkgMjAxMiwgNTM1LTU0NS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTE1L29tYWUyMDEyLTgzODA3ZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxNzgnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEw1AFQaXplciwgRC5KLiwgUmV0emxlciwgQy5ILiBhbmQgWWVtbSwgUi5XLiAoMjAwMCkgVGhlIE9QRCBQZWxhbWlzOiBFeHBlcmltZW50YWwgYW5kIE51bWVyaWNhbCBSZXN1bHRzIGZyb20gdGhlIEh5ZHJvLUR5bmFtaWMgV29yayBQcm9ncmFtLiA0dGggRXVyb3BlYW4gV2F2ZSBFbmVyZ3kgQ29uZmVyZW5jZSwgQWFsYm9yZywgNC02IERlY2VtYmVyLCAyMDAwLCAyMjctMjM0LmQCCg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTc5JyB0YXJnZXQ9J19ibGFuayc+MTE8L2E+XQIxMQIxMYkCUmV0emxlciwgQy5ILiBhbmQgUGl6ZXIsIEQuSi4gKDIwMDEpIFRoZSBIeWRyb2R5bmFtaWNzIG9mIHRoZSBQZWxhbWlzIFdhdmUgRW5lcmd5IERldmljZTogRXhwZXJpbWVudGFsIGFuZCBOdW1lcmljYWwgUmVzdWx0cy4gUHJvY2VlZGluZ3Mgb2YgT01BReKAmTAxLCAyMHRoIEludGVybmF0aW9uYWwgQ29uZmVyZW5jZSBvbiBPZmZzaG9yZSBNZWNoYW5pY3MgYW5kIEFyY3RpYyBFbmdpbmVlcmluZywgUmlvIGRlIEphbmVpcm8sIDMtOCBKdW5lIDIwMDEsIDMxLTM1LmQCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTgwJyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMrYBQ2FyY2FzLCBNLkMuICgyMDAzKSBUaGUgT1BEIFBlbGFtaXMgV0VDOiBDdXJyZW50IFN0YXR1cyBhbmQgT253YXJkIFByb2dyYW1tZS4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIEFtYmllbnQgRW5lcmd5LCAyNCwgMjEtMjguIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA4MC8wMTQzMDc1MC4yMDAzLjk2NzQ4OTlkAgwPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE4MScgdGFyZ2V0PSdfYmxhbmsnPjEzPC9hPl0CMTMCMTNqSGVuZGVyc29uLCBSLiAoMjAwOCkgQ2FzZSBTdHVkeTogUGVsYW1pcy4gSW46IENydXosIEouLCBFZC4sIE9jZWFuIFdhdmUgRW5lcmd5LCBTcHJpbmdlciwgQmVybGluLCAxNjktMTg4LmQCDQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTgyJyB0YXJnZXQ9J19ibGFuayc+MTQ8L2E+XQIxNAIxNN4BWWVtbSwgUi5XLiwgUGl6ZXIsIEQuSi4sIFJldHpsZXIsIEMuSC4gYW5kIEhlbmRlcnNvbiwgUi4gKDIwMTIpIFBlbGFtaXM6IEV4cGVyaWVuY2UgZnJvbSBDb25jZXB0IHRvIENvbm5lY3Rpb24uIFBoaWxvc29waGljYWwgVHJhbnNhY3Rpb25zIG9mIHRoZSBSb3lhbCBTb2NpZXR5IEEsIDM3MCwgMzY1LTM4MC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDk4L3JzdGEuMjAxMS4wMzEyZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxODMnIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE19QFP4oCZQ29ubm9yLCBNLiwgTGV3aXMsIFQuIGFuZCBEYWx0b24sIEcuICgyMDEzKSBUZWNobm8tRWNvbm9taWMgUGVyZm9ybWFuY2Ugb2YgdGhlIFBlbGFtaXMgUDEgYW5kIFdhdmVzdGFyIGF0IERpZmZlcmVudCBSYXRpbmdzIGFuZCBWYXJpb3VzIExvY2F0aW9ucyBpbiBFdXJvcGUuIFJlbmV3YWJsZSBFbmVyZ3ksIDUwLCA4ODktOTAwLiANCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLnJlbmVuZS4yMDEyLjA4LjAwOWQCDw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTg0JyB0YXJnZXQ9J19ibGFuayc+MTY8L2E+XQIxNgIxNqcBRHVubmV0dCwgRC4gYW5kIFdhbGxhY2UsIEouICgyMDA5KSBFbGVjdHJpY2l0eSBHZW5lcmF0aW9uIGZyb20gV2F2ZSBQb3dlciBpbiBDYW5hZGEuIFJlbmV3YWJsZSBFbmVyZ3ksIDM0LCAxNzktMTk1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5yZW5lbmUuMjAwOC4wNC4wMzRkAhAPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE4NScgdGFyZ2V0PSdfYmxhbmsnPjE3PC9hPl0CMTcCMTfdAVBhbGhhLCBBLiwgTWVuZGVzLCBMLiwgRm9ydGVzLCBDLiwgQnJpdG8tTWVsbywgQS4gYW5kIFNhcm1lbnRvLCBBLiAoMjAxMCkgTW9kZWxsaW5nIHRoZSBFY29ub21pYyBJbXBhY3RzIG9mIDUwMCBNVyBvZiBXYXZlIFBvd2VyIGluIElyZWxhbmQuIFJlbmV3YWJsZSBFbmVyZ3ksIDI1LCA2Mi03Ny4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucmVuZW5lLjIwMDkuMDUuMDI1ZAIRD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxODYnIHRhcmdldD0nX2JsYW5rJz4xODwvYT5dAjE4AjE42QFIZW5kZXJzb24sIFIuICgyMDA2KSBEZXNpZ24sIFNpbXVsYXRpb24sIGFuZCBUZXN0aW5nIG9mIGEgTm92ZWwgSHlkcmF1bGljIFBvd2VyIFRha2UtT2ZmIFN5c3RlbSBmb3IgdGhlIFBlbGFtaXMgV2F2ZSBFbmVyZ3kgQ29udmVydGVyLiBSZW5ld2FibGUgRW5lcmd5LCAzMSwgMjcxLTI4My4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucmVuZW5lLjIwMDUuMDguMDIxZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxODcnIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5mgFBTlNZUyAoMjAxMykgQU5TWVMgQVFXQS4gDQo8YnIvPmh0dHBzOi8vc3VwcG9ydC5hbnN5cy5jb20vcG9ydGFsL3NpdGUvQW5zeXNDdXN0b21lclBvcnRhbC90ZW1wbGF0ZS5mc3M/ZmlsZT0vPGJyLz5wcm9kX2RvY3UvMTUuMC9BcXdhJTIwVXNlcnMlMjBNYW51YWwucGRmZAITD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcxODgnIHRhcmdldD0nX2JsYW5rJz4yMDwvYT5dAjIwAjIwTkVNRUMxMCwgV2F2ZSBEYXRhLiA8YnIvPmh0dHA6Ly93d3cuZW1lYy5vcmcudWsvZmFjaWxpdGllcy9saXZlLWRhdGEvd2F2ZS1kYXRhL2QCFA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTg5JyB0YXJnZXQ9J19ibGFuayc+MjE8L2E+XQIyMQIyMXVUaGUgU2NvdHRpc2ggR292ZXJubWVudCAoMjAxMCkgMy42IFdlc3Qgb2YgU2hldGxhbmQuIDxici8+aHR0cDovL3d3dy5zY290bGFuZC5nb3YudWsvUHVibGljYXRpb25zLzIwMTAvMDkvMTcwOTUxMjMvMTRkAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE5MCcgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjLDAUZsYW5lcywgSi4gKDIwMDIpIE9jZWFuIFdhdmVzIGFuZCBPc2NpbGxhdGluZyBTeXN0ZW1zOiBMaW5lYXIgSW50ZXJhY3Rpb25zIEluY2x1ZGluZyBXYXZlLUVuZXJneSBFeHRyYWN0aW9uLiBDYW1icmlkZ2UgVW5pdmVyc2l0eSBQcmVzcywgQ2FtYnJpZGdlLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTcvQ0JPOTc4MDUxMTc1NDYzMGQCFg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTkxJyB0YXJnZXQ9J19ibGFuayc+MjM8L2E+XQIyMwIyM5gBTWVpLCBDLiwgU3RpYXNzbmllLCBNLiBhbmQgWXVlLCBELiAoMjAwNSkgVGhlb3J5IGFuZCBBcHBsaWNhdGlvbiBvZiBPY2VhbiBTdXJmYWNlIFdhdmVzLCBQYXJ0IDE6IExpbmVhciBBc3BlY3RzLiBXb3JsZCBTY2llbnRpZmljIFB1Ymxpc2hpbmcsIFNpbmdhcG9yZS5kAhcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzE5MicgdGFyZ2V0PSdfYmxhbmsnPjI0PC9hPl0CMjQCMjSQAVBlbGFtaXMgV2F2ZSBQb3dlciwgU2NvdHRpc2ggUG93ZXIgUmVuZXdhYmxlcyBhdCBFTUVDLiANCjxici8+aHR0cDovL3d3dy5wZWxhbWlzd2F2ZS5jb20vb3VyLXByb2plY3RzL3Byb2plY3QvMi9TY290dGlzaFBvd2VyLVJlbmV3YWJsZXMtYXQtRU1FQ2QCGA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTkzJyB0YXJnZXQ9J19ibGFuayc+MjU8L2E+XQIyNQIyNYUBS2ltLCBTLiwgTm92YWssIEQuLCBXZWVtcywgSy4gYW5kIENoZW4sIEguICgyMDA4KSBTbGFtbWluZyBJbXBhY3QgRGVzaWduIExvYWRzIG9uIExhcmdlIEhpZ2ggU3BlZWQgTmF2YWwgQ3JhZnQuIEFCUyBUZWNobmljYWwgUGFwZXJzLmQCGQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MTk0JyB0YXJnZXQ9J19ibGFuayc+MjY8L2E+XQIyNgIyNqwBVGhlIFNjb3R0aXNoIEdvdmVybm1lbnQgKDIwMDgpIENoYXB0ZXIgMiBQaHlzaWNhbCBDaGFyYWN0ZXJpc3RpY3MgYW5kIE1vZGVsaW5nIG9mIHRoZSBNYXJpbmUgRW52aXJvbm1lbnQuIA0KPGJyLz5odHRwOi8vd3d3LnNjb3RsYW5kLmdvdi51ay9QdWJsaWNhdGlvbnMvMjAwOC8wNC8wMzA5MzYwOC8xM2QCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJEB09KQklQSFkET0pCTQNPSkMET0pDQgRPSkNEBE9KQ0UET0pDTQNPSkQFT0pEZXIET0pETQNPSkUET0pFRQRPSkVNBU9KRU1E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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=2433" title="Journal of Power and Energy Engineering">
+                    Journal of Power and Energy Engineering</a> &gt; <a href="home?issueid=6959#60037">Vol.3 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Optimal Design of a Multibody Self-Referencing Attenuator <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Dongmei++Zhou&searchfield=authors&page=1' target='_blank'>Dongmei  Zhou</a><sup></sup>, <a href='articles?searchcode=Jennifer+A.++Eden&searchfield=authors&page=1' target='_blank'>Jennifer A.  Eden</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Department+of+Mechanical+Engineering%2c+California+State+University%2c+Sacramento%2c+CA%2c+USA&searchfield=affs&page=1' target='_blank'>Department of Mechanical Engineering, California State University, Sacramento, CA, USA</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jpee.2015.39005"
+                    target="_blank" onclick='SetNum(60037)'>10.4236/jpee.2015.39005</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JPEE_2015092914515052.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60037)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60037' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60037.xml' target='_blank' onclick='SetNum(60037)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    4,843</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    5,776</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60037&JournalID=2433' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">The purpose of this paper is to determine the optimal size and number of tubes for a generic attenuator that is similar to Pelamis P2, the wave energy converter. Simulations using ANSYS Workbench, Design Modeler, and AQWA are performed to study the energy absorption at the nodes between the tubes. The analysis is limited to linearized hydrodynamic fluid waves loading on floating bodies by employing three-dimensional radiation/diffraction theory in regular waves in the frequency domain. Three sets of tests are conducted by varying total tube number, each tube length and the order of tubes with different lengths. After a systematic study in the frequency domain, the optimal size and number of the genetic attenuator is recommended.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Attenuator&searchfield=keyword&page=1' target='_blank'>Attenuator</a>, <a href='articles?searchcode=+Pelamis&searchfield=keyword&page=1' target='_blank'> Pelamis</a>, <a href='articles?searchcode=+Extraction+Efficiency+%26+Power&searchfield=keyword&page=1' target='_blank'> Extraction Efficiency & Power</a>, <a href='articles?searchcode=+Numerical+Simulation&searchfield=keyword&page=1' target='_blank'> Numerical Simulation</a>, <a href='articles?searchcode=+Parametric+Study&searchfield=keyword&page=1' target='_blank'> Parametric Study</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Zhou, D.  and Eden, J.   (2015) Optimal Design of a Multibody Self-Referencing Attenuator. <i>Journal of Power and Energy Engineering</i>, <b>3</b>, 59-69. doi: <a href='http://dx.doi.org/10.4236/jpee.2015.39005' target='_blank' onclick='SetNum(60037)'>10.4236/jpee.2015.39005</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>Hydrokinetic wave energy is interchanging potential and kinetic energy, carried by the wave away from its origin as wave travels through space in time. Wind, creates the most common waves, surface wave and then sea swells. In order to convert the constant motion of ocean waves into usable energy such as electricity, the wave energy converter (WEC) must survive the hostile environment at extreme sea states, absorb the maximum wave power, and be cost-effective for commercial market. Considerable research and effort continue to focus on the following aspects: 1) design new wave energy converter [1] ; 2) create generic mode like wind energy [2] ; 3) conduct numerical benchmarking [3] [4] ; and 4) improve the design to be more cost-effective [5] . Excellent literature reviews on WEC systems can be found in the book edited by Cruz [6] and in the reviews on WEC technology by Falc&atilde;o [7] , on hydrodynamic modeling methods by Ye and Yu [8] , and on numerical modeling of WEC arrays by Folley et al. [9] . This paper concentrates on the optimal design to improve cost efficiency of a generic attenuator that is similar to the wave energy converter, Pelamis.</p>
+<p>The Pelamis is a particular type of ocean attenuator consisting of either four (P1 model) or five (P2 model) cylindrical sections linked together by universal joints that allow for motion with four degrees of freedom, as seen in <a href="#f1" target="_self">Figure 1</a>. The Pelamis faces the direction of the waves. As the waves pass down the machine, the sections bend. It is this bending movement that converts the energy from the waves into electricity by hydraulic jack systems housed at each joint. The P1 model was the world’s first full-scale offshore WEC to generate electricity and the first wave energy farm to successfully supply electricity to the national grid. The new P2 model has five tube sections with the power conversion modules integrated into them and it has an overall length of 180 m and a diameter of 4 m; each joint has four hydraulic motors. Both P1 and P2 models create the same amount of electricity, 750 kW.</p>
+<p>Pelamis Wave Power Corporation has published several papers [10] -[14] , reporting the development progress from numerical modeling, experimental test to grid connection. The Pelamis Wave Power Corporation conducted their own in-house simulations using their own proprietary software to analyze various aspects of the structure in both linear and non-linear hydrodynamics. Yet, limited data on optimization from numerical modeling has been published. Most studies in other papers have comprised of performance comparisons between different types of WECs. It was found by O’Connor et al. [15] and Rusu et al. [16] that the Pelamis devices had the highest energy and economic returns at high resource locations but produced poor results at poor resource locations; therefore the location determines which WEC is the best option. The impact of electricity from the Portugal Pelamis Farm on current market prices was found to be negligible for wholesale electricity prices [17] . There was also research [18] done to create an optimum model for the hydraulic power take-off system of the Pelamis, yet no research has been done into optimizing the attenuator Pelamis device. This lack of knowledge and research, along with the excitement of a new technology lead to this paper.</p>
+<p>The objective of this study is to determine the optimal design of a multibody self-referencing attenuator that is similar to the wave energy converter Pelamis P2. The software programs, ANSYS Workbench, Design Modeler, and AQWA [19] are used to determine the optimal length, diameter, and number of individual tubes for the attenuator based on parametric study. The analysis is limited to linearized hydrodynamic fluid waves loading on floating bodies by employing three-dimensional radiation/diffraction theory in regular waves in the frequency domain. Not only will this analysis provide the model with the overall highest energy extraction, it will also provide the model with the greatest efficiency over the range of frequencies experienced off the coast of Scotland.</p>
+<p class="E-Title1">2. Numerical Method</p>
+<p>The development of a WEC starts from concept and design, then numerical modeling, model testing in wave basin, testing under real sea conditions, and finally to commercial stage. It is a long, difficult, and expensive process. Numerical modeling has the advantage of providing quick and inexpensive evaluation and optimization</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1770158x5.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Attenuator view: (a) created simulation model; (b) actual device; (c) control model.</p>
+</div>
+<p>of designs. In this study, ANSYS AQWA, an industry standard hydrodynamic software package, is employed to capture the behavior of the attenuator by simulating the interaction between waves, the WEC device and the power take-off mechanism. The software ANSYS AQWQ can simulate linearized hydrodynamic fluid wave loading on floating bodies by employing three-dimensional radiation/diffraction theory in regular waves in the frequency domain. Frequency domain analysis is the first step in the hydrodynamic modeling process by assuming everything is linear. This analysis is especially useful in geometry optimization routines and thus it is employed in this paper. However, it should be fully aware the limitations of this analysis method compared to realistic conditions.</p>
+<p class="E-Title2">2.1. Linear (Airy) Theory and Wave Data</p>
+<p>The resource, surface gravity waves can be linearized if a/λ &lt;&lt; 1 and a/H &lt;&lt; 1, where the variable, a, is the wave amplitude (m), λ is the wavelength (m) and H is the uniform water depth (m). Typically the surface gravity waves of oceans have wavelengths between 30 - 40 m, enabling the water surface tension to be neglected as it pertains to wavelengths of less than 5 - 10 cm. As the attenuator is deployed at water depths greater than 50 m it is classified as a deep-water device due to H &gt; λ/3. It is also noted that as the frequency is much larger than the Coriolis frequency, the wave motion is unaffected by Earth’s rotation. Assumptions made here are that 1) the water is incompressible (constant density) and irrotational; 2) gravity is the only external force; and 3) viscosity can be neglected. For the regular wave based on linear theory, the power obtained from ocean per meter of wave front is the total energy of the system (kinetic plus potential) per unit horizontal area multiplied by the phase speed to yield the following relation:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/5-1770158x6.png" /><span class="bracketMark">(1)</span></p>
+<p>where, P<sub>t</sub> is power per unit length of wave front (W/m), ρ is density of seawater (kg/m<sup>3</sup>), g is gravity (m/s<sup>2</sup>), a is the wave amplitude (m), and ω is angular frequency (rad/s).</p>
+<p>The European Marine Energy Center (EMEC) [20] compiled the wave data from three data-well directional waverider buoys. The EMEC determines the instantaneous data for the maximum wave height, the significant wave height, the maximum wave period, and the significant wave period. It also provides a graph for a 24 hour time period and this data can be used to determine the current energy production of the device. As the actual attenuator Pelamis P2 is located off the west coast of Orkney, Scotland, according to the Scottish Government website [21] the annual mean wave height for the region is 2.0 - 2.4 m; therefore from here on, a significant wave height of 2.2 m, resulting in an amplitude a of 1.1 m, is used in the simulations.</p>
+<p class="E-Title2">2.2. Evaluation of Pelamis Performance</p>
+<p>The multibody self-referencing attenuator generates electricity based on the relative motion between its tubes. The attenuator moves with two degrees of freedom to capture energy: pitch and heave, given that this study is restricted to the case in the x-z plane, with z as the vertical axis and x as the axis passing through the head and tail of a tube. Thus for each tube there are two dynamic equations, one for moment due to pitch and one for force due to heave. In order to find the potential power output from the attenuator, the forces and moments acting on the attenuator tube need to be defined. As shown in <a href="#f2" target="_self">Figure 2</a>, the vertical hydrodynamic force, F<sub>n</sub>, on tube n is a resultant force of wave pressure. The pressure can be resolved from the Bernoulli’s equation after the velocity potential is determined. The reaction force, R<sub>n</sub>, exerted on node n represents the power take-off mechanism. The hydrodynamic moment, M<sub>n</sub>, about the midpoint of tube n can be expressed in terms of the angular displacement, Θ<sub>n</sub>.</p>
+<p>In rotational systems, the power is derived as the product of angular velocity and torque, or in our case the product of angular frequency ω and the moment M<sub>n</sub>. Thus the power absorbed by attenuator at hinge n is the product of the extraction rate at node n and the angular displacement of tubes n and n − 1. The time averaged power extraction derived by Flanes [22] and Mei et al. [23] , is the product of the angular displacement squared divided by two, the extraction rate and the real portion of the angular rotation squared as:</p>
+<p><img src="//html.scirp.org/file/5-1770158x7.png" class="200" /> (2)</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1770158x8.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Illustration for force F<sub>n</sub>; moment M<sub>n</sub>; reaction force R<sub>n</sub>; angular displacement Θ<sub>n</sub>.</p>
+</div>
+<p>where <img src="//html.scirp.org/file/5-1770158x9.png" class="200" /> in the unit of Nm/(m/s) is the extraction rate between tubes and B<sub>n</sub>/L<sub>n</sub>(m/m) is the tube amplitude. The extraction rate <img src="//html.scirp.org/file/5-1770158x10.png" class="200" /> is equivalent to the amount of radiation damping in the global x-direction. The overall efficiency of the system at a particular frequency is defined as the mean power P<sub>n</sub> that is extracted at a node from Equation (2) divided by the total power of the system P<sub>t</sub> that is defined in Equation (1), yielding</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/5-1770158x11.png" /><span class="bracketMark">(3)</span></p>
+<p class="E-Title2">2.3. Modeling Using ANSYS AQWA and Validation</p>
+<p>In the simulation process using computer software ANSYS AWQA, a computer model of attenuator is first created by use of the ANSYS Design Modeler software to generate three-dimensional tubes as shown in <a href="#f1" target="_self">Figure 1</a>. This model is then fed to the hydrodynamics package. Next, the hydrodynamics package is applied and numerical simulations are performed. Finally, Excel is used to post process the data provided by ANSYS AQWA software. A summary of input parameters to calculate the power, P<sub>n</sub>, extracted from the attenuator using Equation (2) and the efficiency, eff, using Equation (3) is displayed in <a href="#t1" target="_self">Table 1</a>. The extractions rates <img src="//html.scirp.org/file/5-1770158x12.png" class="200" /> are determined from the ANSYS AQWA software via the Radiation Damping. The ratios of amplitude of the center of mass for tube n (midpoint of the tube) to the length of tube n, B<sub>n</sub>/L<sub>n</sub>, are also determined from the ANSYS AQWA software via the RAOs (Response Amplitude Operators); the results are generated in terms of m/m. A large enough range for the frequency f is selected to encompass the range of efficient energy capture for all design models of attenuator.</p>
+<p>To validate the numerical model, ANSYS AQWA is applied to the control model T5L36D4, an attenuator with 5 tubes, a 36 m tube length, and a 4 m tube diameter as defined in <a href="#t3" target="_self">Table 3</a>. The actual Pelamis P2 currently in production off the west coast of Scotland at a frequency of 0.15 Hz. Pelamis Wave Power [24] states that the actual Pelamis P2 model experiences efficiencies around 70% in all sea states. The validation here is to examine how varying the mesh selection affects the efficiency value of the WEC system. It should be noted that the ANSYS program demands the default tolerance be no greater than 0.6 times the maximum element size. The validation results are presented in <a href="#t2" target="_self">Table 2</a>, and it can be observed that the efficiencies are all within 2.5% of one another and in agreement with the measured efficiency data 70%. The amount of difference appears to relate with the difference between the maximum element size and the default tolerance; the closer the maximum element size and the default tolerance values are, the larger the change in efficiency is. <a href="#f3" target="_self">Figure 3</a> shows the effect of altering mesh size on the efficiency eff (%) of the attenuator at different frequencies. From <a href="#f3" target="_self">Figure 3</a>, it can be seen that the shape of the curves is consistent because they all appear to overlap one another. As the efficiency curves do not change and 2.5% difference in efficiency is such a small value, it is concluded that the numerical simulation results are independent of the mesh size.</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-1770158_1.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Input parameters to calculate overall efficiency.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-1770158_2.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Validation results with altering mesh size at frequency f = 0.15 Hz.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1770158x14.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Effect of altering mesh size on efficiency of attenuator at different frequencies.</p>
+</div>
+<p class="E-Title1">3. Results and Discussion</p>
+<p class="E-Title2">3.1. Test Models of Attenuator Design</p>
+<p>The attenuator uses resonance to increase power capture of small waves. The default setting of the attenuator is non-resonant, allowing it to withstand large swells. However, the joints can be actively controlled by its power take off system to create a cross-coupled resonant response. Optimal design of attenuator is based on such a principle that the device must be designed to operate efficiently within the frequency range and power level. In an attempt to standardize the amount of raw materials required for each model, the overall length of 180 m and weight of 1350 tons are chosen to maintain the same overall length and weight as the current Pelamis P2 model.</p>
+<p>A summary of all test models is provided in <a href="#t3" target="_self">Table 3</a>. The first set of test models varies the number of tubes for each structure while maintaining a diameter of 4 m. The second set of test models uses the same number of tubes and lengths as the first set, but it varies the tube diameter. The third set of models takes the most efficient model from sets one and two, which is the model T6L30D5 as shown later, and then determines how altering the length of each tube affects the efficiency. The third set contains the model T6D5 Increasing, where the tubes increase in length (L1 &lt; L2 &lt; L3 &lt; L4 &lt; L5 &lt; L6) and the model T6D5 Decreasing, where the tubes decrease in length (L6 &lt; L5 &lt; L4 &lt; L3 &lt; L2 &lt; L1). For these two models (T6D5 Increasing and Decreasing), the ratio of 1:2:3:4:5:6 with a total of 21 units, does not divide evenly into the total length of the structure (180 m), resulting in 8 - 12/21. To overcome this, this remainder of 12 in 8 - 12/21 is split evenly amongst the six tubes. Thus, the length of each tube in meter is 10:18:26:34:42:50 for model T6D5 Increasing and 50:42:34:26:18:10 for model T6D5 Decreasing. The model T6D5 SBS has the end tubes that are longer than the center tubes (L1 &gt; L2 &gt; L3 = L4 &lt; L5 &lt; L6) and the model T6D5 BSB has the middle tubes that are longer than the end tubes (L1 &lt; L2 &lt; L3 =</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-1770158_3.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t3" id="t3"><span class="cs_fig_con">Table 3</span></a>. Summary of three sets of test models including control model T5L36D4.</p>
+</div>
+<p>L4 &gt; L5 &gt; L6). For these two models (T6D5 SBS and BSB), the ratio of 1:2:3:3:2:1 with a total of 12 units does divide evenly into the total length, resulting in the lengths of each tube to be, in meters, 15:30:45:45:30:15 for the model T6D5 SBS and 45:30:15:15:30:45 for the model T6D5 BSB.</p>
+<p class="E-Title2">3.2. Test Set One Results</p>
+<p>Test set one models vary the number of tubes for each structure while maintaining a diameter of 4 m. The peak efficiencies for each model, along with the corresponding frequencies are provided in <a href="#t4" target="_self">Table 4</a>. The efficiency of the actual Pelamis P2 model has been stated to be around 70%. The maximum efficiency for the control model of our attenuator is calculated to be 73.27%. This is the theoretical maximum of the device and does not account for additional efficiency losses generated by the conversion of mechanical work to electrical work. With the exception of model T8L22.5D4, the efficiency for every other model is lower than that of the control model. As shown in <a href="#t4" target="_self">Table 4</a> and <a href="#f4" target="_self">Figure 4</a>, as the tube length increases (i.e., decrease in tube number), the efficiency of the system drastically decreased. The results do not show any correlation for the decrease in tube length (or increase in tube number) and efficiency; the efficiency of T6L30D4 is slightly lower than that of control model T5L3D4, while the efficiency of T8L22.5D4 is slightly higher than that of control model by 1.88%. Also of note is that the frequency corresponding to the peak efficiency gradually increases for the first four models, and decreases slightly for the last model. As is evident in <a href="#f4" target="_self">Figure 4</a> that the range of frequency for available energy capture is widest for models T4L45D4, T5L36D4, and T6L30D4.</p>
+<p>Given the restrictions of maintaining the overall length and weight of the attenuator structure, the efficiencies are highest with a smaller tube length (i.e., larger number of tubes). The T8L22.5D4 model would be the best choice from this test set at 1.88% more efficient than the control model. However, devices with more moving parts require more maintenance and can experience a greater loss in efficiency due to friction when converting the mechanical energy to electrical energy, therefore it may not be cost effective from this perspective to increase the amount of moving parts associated with additional nodes while only achieving a 1.88% increase in</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-1770158_4.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t4" id="t4"><span class="cs_fig_con">Table 4</span></a>. Test set-one: maximum efficiencies and corresponding frequency for attenuators with 4 m diameter.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1770158x15.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Test set one: efficiency curves for attenuators with 4 m diameter (T = tube number, L = tube length).</p>
+</div>
+<p>efficiency from the control model.</p>
+<p class="E-Title2">3.3. Test Set Two Results</p>
+<p>Test set two demonstrates the effects of tube length at different diameter of the structures. The peak efficiencies for each model, along with the corresponding frequencies are provided in <a href="#t5" target="_self">Table 5</a>. For the set of models with a 3 m diameter, there is a direct correlation between the tube length and the maximum efficiency; as the tube length decreases (i.e., increase in tube number) the efficiency increases. Yet all these values are significantly lower than those seen in Test Set One. By observing <a href="#t5" target="_self">Table 5</a> and <a href="#f5" target="_self">Figure 5</a>, no direct correlation is found between tube length and the frequency where maximum efficiency occurs; T4L45D3, T5L36D3, and T6L30D3 occur at the same frequency of 0.143 Hz, while T3L60D3 and T8L22.5D3 occur the same (but higher) frequency of 0.163 Hz.</p>
+<p>For the set of models with a diameter of 5 m, the model with tube length of 30 m (six tubes, model T6L30D5) has the highest efficiency. It is interesting to note that the efficiencies for T3L60D5, T4L45D5, and T5L36D5 are lower than their counterparts in Test Set One, yet the efficiencies for T6L30D5 and T8L22.5D5 are higher than those in Test Set One, by 6.39% and 2.80% respectively. Therefore, additional models are created for tube lengths of 30 m and 22.5 m to have a diameter of 6 m; these efficiencies are lower than those of the 5 m diameter models. From <a href="#t5" target="_self">Table 5</a> and <a href="#f6" target="_self">Figure 6</a>, it is observed that as the tube length decreases (i.e., the tube number increases) at the same diameter 5 m, the frequency where the maximum efficiency occurs, increases for the first two models and then holds at the same value of 0.157 Hz.</p>
+<p>For the effect of tube diameter, it is observed that for a given tube length, there is an optimum tube diameter. By making the structure narrower, the tube slices through the oncoming waves rather than the wave lifting the tubes to create sufficient angular rotation about the hinges. The narrower models experience less hull pressure from the water, and thus it creates less of a hydrodynamic moment and therefore it absorbs less energy. This is the same principle used when oceangoing vessels are designed for speed. The reason that an increase in diameter reduces the efficiency of the system is theorized here that the first tube(s) does experience a higher vertical pressure but then it experiences an effect called “slamming” [25] , wherein the tubes experience a large force upon impact with the water surface. This slamming would then result in the generation of a large amount of radiation waves, thereby taking the structure out of resonance and decreasing its overall efficiency.</p>
+<p class="E-Title2">3.4. Test Three Results</p>
+<p>Based solely on maximum efficiency, from Test Set One and Test Set Two, the model T6L30D5 with 6 tubes, a</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-1770158_5.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t5" id="t5"><span class="cs_fig_con">Table 5</span></a>. Test set two: maximum efficiencies and corresponding frequency for attenuators at different tube diameters.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1770158x16.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Test set two: efficiency curves for attenuators with 3 m diameter (T = tube number, L = tube length).</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1770158x17.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Test set two: efficiency curves for attenuators with 5 m diameter (T = tube number, L = tube length).</p>
+</div>
+<p>30 m tube length, and a 5 m tube diameter, is the highest performer with an efficiency of 78.905% and is used for Test Set Three. As shown in <a href="#t6" target="_self">Table 6</a> and <a href="#f7" target="_self">Figure 7</a> in all four cases for test set three, the maximum efficiency is greater than that of constant tube length model T6L3D5. The T6D5 SBS model (middle tubes longer than the end ones) is the highest performer, 94.72%, followed by the T6D5 Increasing model, 85.41%, which in turn is closely followed by the T6D5 BSB model, 85.10%; the T6D5 Decreasing model was only slightly more efficient than the T6L30D5 model. The two models with the highest efficiency occur at the same frequency of</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-1770158_6.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t6" id="t6"><span class="cs_fig_con">Table 6</span></a>. Test set three: maximum efficiencies and corresponding frequency for attenuators at different tube arrangements.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1770158x18.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Test set three: T6D5 series of efficiency curves.</p>
+</div>
+<p>0.164 Hz and the two with the lower efficiencies occur at the same frequency of 0.171 Hz, yet all four models experienced peak efficiencies at higher frequencies compared to the model T6L3D5 with consistent tube lengths, f = 0.156 Hz.</p>
+<p>While the short end tubes of the T6D5 SBS model have a low damping value, the middle tubes act as sort of vertical mooring structure that allow for these shorter end tubes to generate large vertical elevation which increase the angular rotation at the hinges, resulting in larger power generation and higher efficiency. The model T6D5 BSB operates on an opposing principle; there is an even balance of high damping and low elevation with low damping and high elevation. The large end tubes create a large amount of damping and experience slight elevation, while the smaller tubes connected to them are able to increase their elevation and angular rotation, resulting in high power generation and efficiency values. The model T6D5 Decreasing has its largest tubes at the head of the structure; this causes a greater amount of wave damping, leaving less wave height available for energy extraction at later hinges. The very opposite of this principle leads to the model T6D5 Increasing absorbing a larger amount of energy, as the smaller front tubes create less wave damping and hence leave more of the wave to be extracted at later hinges.</p>
+<p>Thusly, out of all three test sets, the best model simulation based solely on maximum efficiency would be the model T6D5 SBS, having six tubes, a diameter of five meters, and the tubes varying in size, with the middle tubes longer than the end tubes (L1 &lt; L2 &lt; L3 = L4 &gt; L5 &gt; L6). However, selecting a model based on overall maximum efficiency is not always the best decision. It is important to create the model with the characteristics of the environment in mind, specifically by knowing what frequency range is experienced at the proposed location.</p>
+<p class="E-Title2">3.5. Effect of Frequency and a Case of Application</p>
+<p>Ocean locations have energy distributed over a range of wave heights and periods, or frequencies. Off the coast of Scotland where the actual Pelamis P2 model resides, the ocean state experiences a mean wave period between 8.1 s in winter and 6.3 s in summer which corresponds to frequencies of 0.123 Hz and 0.159 Hz, respectively, [26] . With this in mind, the optimal design of the attenuator for this site needs to capture the most energy over that entire range. While all models (diameters 3 m to 5 m) have their peak efficiency within that range, the efficiency of the three-meter diameter models is too small for these devices to be considered viable; when the diameter is increased the frequency is increased as well to be on the edge of the frequency range observed off the coast of Scotland. The six-meter diameter models are out of the range altogether. Therefore, the four-meter diameter models are the best fit for these constraints. Of these five models, the T3L60D4 and T4L45D4 models produced significantly less efficiencies and will be excluded from consideration. While it has the higher efficiency, the T8D22.5L4 model also has a narrower frequency range and it would not produce any viable energy during the winter months. The T8D22.5L4 mode is therefore excluded from consideration. Between the remaining models, T5L36D4 and T6L30D4, the control model T5L36D4 has the higher efficiency and it absorbs viable energy over greater frequency range that includes the frequencies off the coast of Scotland. By combining this with the results from Test Set Three, the optimal design of the attenuator that is being deployed off the coast of Scotland would be the model T5D4 SBS model, a device containing five tubes with four-meter diameters whose tube lengths increase then decrease (L1 &lt; L2 &lt; L3 &gt; L4 &gt; L5), given the restrictions of 180 m overall length and 1350 tons overall weight.</p>
+<p class="E-Title1">4. Conclusions</p>
+<p>In this study, the wave energy converter, amultibody self-referencing attenuator that is similar to the actual Pelamis P2 is studied using numerical modeling to determine the optimal size and number of the attenuator structure. Three sets of tests are conducted by varying total tube number, each tube length and the order of each tube with different length. The analysis is based pm linearized hydrodynamic fluid waves loading on a floating body by employing three-dimensional radiation/diffraction theory in regular waves in the frequency domainand the conclusion is drawn as follows.</p>
+<p>1) Given the restrictions of maintaining the overall length and weight of the attenuator structure, the efficiencies are highest with a smaller tube length (i.e., larger number of tubes).</p>
+<p>2) For a given tube length, there is an optimum tube diameter corresponding to the maximum efficiency.</p>
+<p>3) Out of all three test sets, the best model simulation based solely on maximum efficiency of 94.74% would be the model T6D5 SBS with six tubes, a 5 m diameter, and the tubes varying in size, with the middle tubes longer than the end tubes (L1 &lt; L2 &lt; L3 = L4 &gt; L5 &gt; L6).</p>
+<p>4) Given the restrictions of 180 m overall length and 1350 tons overall weight, the optimum design of the attenuator to be deployed off the coast of Scotland is the model T5D4 SBS with five tubes of four-meter diameters, whose tube lengths increase then decrease (L1 &lt; L2 &lt; L3 &gt; L4 &gt; L5).</p>
+<p>The future work after this paper will be to credit the optimal design in the time-domain analysis by introducing nonlinearities and viscous effect with cost-effective in mind. It is expected that the extraction power and efficiency will be decreased by 3% - 5% after introducing nonlinearities and viscous effect. However, the results and conclusion should hold for irregular waves if the range of wave frequencies is appropriate.</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>The research project was partially supported by 2013-2014 Provost’s Research Fellow program and Provost’s Research Incentive Fund Summer 2014.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577169' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Leybourne, M., Bahaj, A.S., Minns, N. and O’Nians, J. (2014) Preliminary Design of the OWEL Wave Energy Converter Pre-Commercial Demonstrator. Renewable Energy, 61, 51-56. <br/>http://dx.doi.org/10.1016/j.renene.2012.08.019
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577170' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Ruehl, K., Brekken, T.A., Bosma, B. and Paasch, R. (2010) Large-Scale Ocean Wave Energy Plant Modeling. 2010 IEEE Conference on Innovative Technologies for an Efficient and Reliable Electricity Supply, Waltham, Massachusetts, 27-29 September 2010, 379-386. <br/>http://dx.doi.org/10.1109/citres.2010.5619775
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577171' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Babarita, A., Halsb, J., Muliawanb, M.J., Kurniawanb, A., Moanb, T. and Krokstadc, J. (2012) Numerical Benchmarking Study of a Selection of Wave Energy Converters. Renewable Energy, 41, 44-63. 
+<br/>http://dx.doi.org/10.1016/j.renene.2011.10.002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577172' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Silva, D., Rusu, E. and Soares, C.G. (2013) Evaluation of Various Technologies for Wave Energy Conversion in the Portuguese Nearshore. Energies, 6, 1344-1364. <br/>http://dx.doi.org/10.3390/en6031344
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577173' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Yu, Y.-H., Li, Y., Hallett, K. and Hotimsky, C. (2014) Design and Analysis for a Floating Oscillating Surge Wave Energy Converter. ASME 2014 33rd International Conference on Ocean, Offshore and Arctic Engineering, San Francisco, 8-13 June 2014, V09BT09A048. <br/>http://dx.doi.org/10.1115/omae2014-24511
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577174' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Cruz, J. (2008) Ocean Wave Energy. 1st Edition, Springer, Berlin. <br/>http://dx.doi.org/10.1007/978-3-540-74895-3
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577175' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Falc&atilde;o, A.F.D.O. (2010) Wave Energy Utilization: A Review of the Technologies. Renewable and Sustainable Energy Reviews, 12, 899-918. <br/>http://dx.doi.org/10.1016/j.rser.2009.11.003
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577176' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Li, Y. and Yu, Y.-H. (2012) A Synthesis of Numerical Methods for Modeling Wave Energy Converter-Point Absorbers. Renewable and Sustainable Energy Reviews, 16, 4352-4364. <br/>http://dx.doi.org/10.1016/j.rser.2011.11.008
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577177' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Folley, M., Babarit, A., Child, B., Forehand, D., O’Boyle, L., Silverthorne, K., Spinneken, J., Stratigaki, V. and Troch, P. (2012) A Review of Numerical Modelling of Wave Energy Converter Arrays. ASME 2012 31st International Conference on Ocean, Offshore and Arctic Engineering, Vol. 7: Ocean Space Utilization; Ocean Renewable Energy, Rio de Janeiro, 1-6 July 2012, 535-545. <br/>http://dx.doi.org/10.1115/omae2012-83807
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577178' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Pizer, D.J., Retzler, C.H. and Yemm, R.W. (2000) The OPD Pelamis: Experimental and Numerical Results from the Hydro-Dynamic Work Program. 4th European Wave Energy Conference, Aalborg, 4-6 December, 2000, 227-234.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577179' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Retzler, C.H. and Pizer, D.J. (2001) The Hydrodynamics of the Pelamis Wave Energy Device: Experimental and Numerical Results. Proceedings of OMAE’01, 20th International Conference on Offshore Mechanics and Arctic Engineering, Rio de Janeiro, 3-8 June 2001, 31-35.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577180' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Carcas, M.C. (2003) The OPD Pelamis WEC: Current Status and Onward Programme. International Journal of Ambient Energy, 24, 21-28. <br/>http://dx.doi.org/10.1080/01430750.2003.9674899
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577181' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Henderson, R. (2008) Case Study: Pelamis. In: Cruz, J., Ed., Ocean Wave Energy, Springer, Berlin, 169-188.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577182' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Yemm, R.W., Pizer, D.J., Retzler, C.H. and Henderson, R. (2012) Pelamis: Experience from Concept to Connection. Philosophical Transactions of the Royal Society A, 370, 365-380. <br/>http://dx.doi.org/10.1098/rsta.2011.0312
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577183' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        O’Connor, M., Lewis, T. and Dalton, G. (2013) Techno-Economic Performance of the Pelamis P1 and Wavestar at Different Ratings and Various Locations in Europe. Renewable Energy, 50, 889-900. 
+<br/>http://dx.doi.org/10.1016/j.renene.2012.08.009
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577184' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Dunnett, D. and Wallace, J. (2009) Electricity Generation from Wave Power in Canada. Renewable Energy, 34, 179-195. <br/>http://dx.doi.org/10.1016/j.renene.2008.04.034
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577185' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Palha, A., Mendes, L., Fortes, C., Brito-Melo, A. and Sarmento, A. (2010) Modelling the Economic Impacts of 500 MW of Wave Power in Ireland. Renewable Energy, 25, 62-77. <br/>http://dx.doi.org/10.1016/j.renene.2009.05.025
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577186' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Henderson, R. (2006) Design, Simulation, and Testing of a Novel Hydraulic Power Take-Off System for the Pelamis Wave Energy Converter. Renewable Energy, 31, 271-283. <br/>http://dx.doi.org/10.1016/j.renene.2005.08.021
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577187' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        ANSYS (2013) ANSYS AQWA. 
+<br/>https://support.ansys.com/portal/site/AnsysCustomerPortal/template.fss?file=/<br/>prod_docu/15.0/Aqwa%20Users%20Manual.pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577188' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        EMEC10, Wave Data. <br/>http://www.emec.org.uk/facilities/live-data/wave-data/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577189' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        The Scottish Government (2010) 3.6 West of Shetland. <br/>http://www.scotland.gov.uk/Publications/2010/09/17095123/14
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577190' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Flanes, J. (2002) Ocean Waves and Oscillating Systems: Linear Interactions Including Wave-Energy Extraction. Cambridge University Press, Cambridge. <br/>http://dx.doi.org/10.1017/CBO9780511754630
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577191' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Mei, C., Stiassnie, M. and Yue, D. (2005) Theory and Application of Ocean Surface Waves, Part 1: Linear Aspects. World Scientific Publishing, Singapore.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577192' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Pelamis Wave Power, Scottish Power Renewables at EMEC. 
+<br/>http://www.pelamiswave.com/our-projects/project/2/ScottishPower-Renewables-at-EMEC
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577193' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        Kim, S., Novak, D., Weems, K. and Chen, H. (2008) Slamming Impact Design Loads on Large High Speed Naval Craft. ABS Technical Papers.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577194' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        The Scottish Government (2008) Chapter 2 Physical Characteristics and Modeling of the Marine Environment. 
+<br/>http://www.scotland.gov.uk/Publications/2008/04/03093608/13
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2433" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2433" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2433" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2433" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2433"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2433"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2433" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2433" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2433" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2433" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2433" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2433"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2433"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2433" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=2433&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=2433&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=2433" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=2433" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=2433" target="_blank">JPEE
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=2433" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=2433" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=2433" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=2433" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=2433" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=2433" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=2433" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jpee.2015.39005" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60037 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +2433 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +2433 +"&paperid=" +60037 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

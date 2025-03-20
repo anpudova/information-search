@@ -1,0 +1,1710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Piezoelectric Vibration Harvesters Based on Vibrations of Cantilevered Bimorphs: A Review
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/MSA_2015092914133549.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60025" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60025.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60025" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60025" />
+<meta property="og:title" content="Piezoelectric Vibration Harvesters Based on Vibrations of Cantilevered Bimorphs A Review" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/MSA2024061816365988.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/MSA2024061816365988.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Piezoelectric Vibration Harvesters Based on Vibrations of Cantilevered Bimorphs: A Review" />
+<meta name="keywords" content="Piezoelectric Generator,Micro Electromechanical Systems (MEMS),Power Output,Frequency,Voltage" />
+<meta name="description" content="Discover the potential of MEMS devices in harvesting energy from various sources like solar, wind, and mechanical vibrations. Explore the design and characteristics of piezoelectric generators for MEMS applications. Review the power output, frequency, and application of different generators." />
+<meta name="citation_journal_title" content="Materials Sciences and Applications" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Anam Khalid;Amit Kumar Redhewal;Manoj Kumar;Anupam Srivastav" />
+<meta name="citation_author" content="Anam Khalid" />
+<meta name="citation_author" content="Amit Kumar Redhewal" />
+<meta name="citation_author" content="Manoj Kumar" />
+<meta name="citation_author" content="Anupam Srivastav" />
+<meta name="citation_title" content="Piezoelectric Vibration Harvesters Based on Vibrations of Cantilevered Bimorphs: A Review" />
+<meta name="citation_volume" content="6" />
+<meta name="citation_date" content="2015-09-09" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/msa.2015.69084" />
+<meta name="citation_issnPrint" content="2153-117X" />
+<meta name="citation_issnOnline" content="2153-1188" />
+<meta name="citation_abstract" content="With the advancement in the technologies around the world over the past few years, the microelectromechanical
+systems (MEMS) have gained much attention in harvesting the energy for wireless,
+self-powered and MEMS devices. In the present era, many devices are available for energy
+harnessing such as electromagnetic, electrostatic and piezoelectric generator and these devices
+are designed based on its ability to capture the different form of environment energy such as solar
+energy, wind energy, thermal energy and convert it into the useful energy form. Out of these devices,
+the use of a piezoelectric generator for energy harvesting is very attractive for MEMS applications.
+There are various sources of harvestable energy including waste heat, solar energy, wind
+energy, energy in floating water and mechanical vibrations which are used by the researchers for
+energy harvesting purposes. This paper reviews the state-of-the-art in harvesting mechanical vibrations
+as an energy source by various generators (such as electromagnetic, electrostatic and
+piezoelectric generators). Also, the design and characteristics of piezoelectric generators, using
+vibrations of cantilevered bimorphs, for MEMS have also been reviewed here. Electromagnetic,
+electrostatic and piezoelectric generators presented in the literature are reviewed by taking into
+an account the power output, frequency, acceleration, dimension and application of each generator
+and the coupling factor of each transduction mechanism has also been discussed for all the devices." />
+<meta name="citation_publication_date" content="2015/9/9" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/MSA_2015092914133549.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/MSA_2015092914133549.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60025" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60025" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60025" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60025.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60025.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/9" />
+<meta name="citation_firstpage" content="818" />
+<meta name="citation_lastpage" content="827" />
+
+<meta name="dc.title" content="Piezoelectric Vibration Harvesters Based on Vibrations of Cantilevered Bimorphs: A Review" />
+
+<meta name="dc.creator" content="Anam Khalid" />
+<meta name="dc.creator" content="Amit Kumar Redhewal" />
+<meta name="dc.creator" content="Manoj Kumar" />
+<meta name="dc.creator" content="Anupam Srivastav" /><meta name="dcterms.issued" content="2015-09-09" />
+<meta name="dc.description" content="With the advancement in the technologies around the world over the past few years, the microelectromechanical
+systems (MEMS) have gained much attention in harvesting the energy for wireless,
+self-powered and MEMS devices. In the present era, many devices are available for energy
+harnessing such as electromagnetic, electrostatic and piezoelectric generator and these devices
+are designed based on its ability to capture the different form of environment energy such as solar
+energy, wind energy, thermal energy and convert it into the useful energy form. Out of these devices,
+the use of a piezoelectric generator for energy harvesting is very attractive for MEMS applications.
+There are various sources of harvestable energy including waste heat, solar energy, wind
+energy, energy in floating water and mechanical vibrations which are used by the researchers for
+energy harvesting purposes. This paper reviews the state-of-the-art in harvesting mechanical vibrations
+as an energy source by various generators (such as electromagnetic, electrostatic and
+piezoelectric generators). Also, the design and characteristics of piezoelectric generators, using
+vibrations of cantilevered bimorphs, for MEMS have also been reviewed here. Electromagnetic,
+electrostatic and piezoelectric generators presented in the literature are reviewed by taking into
+an account the power output, frequency, acceleration, dimension and application of each generator
+and the coupling factor of each transduction mechanism has also been discussed for all the devices." />
+<meta name="dc.source" content="Materials Sciences and Applications" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-09" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/msa.2015.69084" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-09" />
+<meta name="prism.issnPrint" content="2153-117X" />
+<meta name="prism.issnOnline" content="2153-1188" />
+<meta name="prism.publicationName" content="Materials Sciences and Applications" />
+<meta name="prism.publicationDate" content="2015-09-09" />
+<meta name="prism.volume" content="6" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="818" />
+<meta name="prism.doi" content="10.4236/msa.2015.69084" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60025" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlkPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTA5ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXqAzxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9QW5hbSsrS2hhbGlkJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+QW5hbSAgS2hhbGlkPC9hPjxzdXA+MTwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1BbWl0K0t1bWFyKytSZWRoZXdhbCZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkFtaXQgS3VtYXIgIFJlZGhld2FsPC9hPjxzdXA+MTwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1NYW5vaisrS3VtYXImc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5NYW5vaiAgS3VtYXI8L2E+PHN1cD4xPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUFudXBhbSsrU3JpdmFzdGF2JnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+QW51cGFtICBTcml2YXN0YXY8L2E+PHN1cD4yKjwvc3VwPiBkAgIPZBYCZg8WAh8EBcoDPHN1cD4xPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1NZWNoYW5pY2FsK0VuZ2luZWVyaW5nK0RlcGFydG1lbnQlMmMrSUZUTStVbml2ZXJzaXR5JTJjK01vcmFkYWJhZCUyYytJbmRpYSZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPk1lY2hhbmljYWwgRW5naW5lZXJpbmcgRGVwYXJ0bWVudCwgSUZUTSBVbml2ZXJzaXR5LCBNb3JhZGFiYWQsIEluZGlhPC9hPi48YnIgLz48c3VwPjI8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPU1pZGRsZStFYXN0K0NvbGxlZ2UlMmMrS25vd2xlZGdlK09hc2lzK011c2NhdCUyYytTdWx0YW5hdGUrb2YrT21hbiZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPk1pZGRsZSBFYXN0IENvbGxlZ2UsIEtub3dsZWRnZSBPYXNpcyBNdXNjYXQsIFN1bHRhbmF0ZSBvZiBPbWFuPC9hPi48YnIgLz5kAgUPFgIfBAUFMyw2MTBkAgYPFgIfBAUFNSwyMjhkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFyQQ8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVBpZXpvZWxlY3RyaWMrR2VuZXJhdG9yJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+UGllem9lbGVjdHJpYyBHZW5lcmF0b3I8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStNaWNybytFbGVjdHJvbWVjaGFuaWNhbCtTeXN0ZW1zKyhNRU1TKSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBNaWNybyBFbGVjdHJvbWVjaGFuaWNhbCBTeXN0ZW1zIChNRU1TKTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1Bvd2VyK091dHB1dCZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBQb3dlciBPdXRwdXQ8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStGcmVxdWVuY3kmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gRnJlcXVlbmN5PC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rVm9sdGFnZSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBWb2x0YWdlPC9hPiBkAgoPFgIfBAXXAktoYWxpZCwgQS4gLCBSZWRoZXdhbCwgQS4gLCBLdW1hciwgTS4gIGFuZCBTcml2YXN0YXYsIEEuICAgKDIwMTUpIFBpZXpvZWxlY3RyaWMgVmlicmF0aW9uIEhhcnZlc3RlcnMgQmFzZWQgb24gVmlicmF0aW9ucyBvZiBDYW50aWxldmVyZWQgQmltb3JwaHM6IEEgUmV2aWV3LiA8aT5NYXRlcmlhbHMgU2NpZW5jZXMgYW5kIEFwcGxpY2F0aW9uczwvaT4sIDxiPjY8L2I+LCA4MTgtODI3LiBkb2k6IDxhIGhyZWY9J2h0dHA6Ly9keC5kb2kub3JnLzEwLjQyMzYvbXNhLjIwMTUuNjkwODQnIHRhcmdldD0nX2JsYW5rJyBvbmNsaWNrPSdTZXROdW0oNjAwMjUpJz4xMC40MjM2L21zYS4yMDE1LjY5MDg0PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAInFk5mD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5NjQnIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQEx6wFSb3VuZHksIFMuLCBTdGVpbmdhcnQsIEQuLCBGcmVjaGV0dGUsIEwuLCBXcmlnaHQsIFAuIGFuZCBSYWJhZXksIEouICgyMDA0KSBQb3dlciBTb3VyY2VzIGZvciBXaXJlbGVzcyBTZW5zb3IgTmV0d29ya3MgV2lyZWwuIDFzdCBFdXJvcGVhbiBXaXJlbGVzcyBTZW5zb3IgTmV0d29ya3MgV29ya3Nob3AsIDI5MjAsIDEtMTcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy85NzgtMy01NDAtMjQ2MDYtMF8xZAIBD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5NjUnIHRhcmdldD0nX2JsYW5rJz4yPC9hPl0BMgEylwJSb3VuZHksIFMuLCBMZWxhbmQsIEUuUy4sIEJha2VyLCBKLiwgQ2FybGV0b24sIEUuLCBSZWlsbHksIEUuLCBMYWksIEUuLCBPdGlzLCBCLiwgUmFiYWV5LCBKLk0uLCBXcmlnaHQsIFAuSy4gYW5kIFN1bmRhcmFyYWphbiwgVi4gKDIwMDUpIEltcHJvdmluZyBQb3dlciBPdXRwdXQgZm9yIFZpYnJhdGlvbi1CYXNlZCBFbmVyZ3kgU2NhdmVuZ2Vycy4gSUVFRSBQZXJ2YXNpdmUgQ29tcHV0aW5nLCA0LCAyOC0gMzYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9NUFJWLjIwMDUuMTRkAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk2NicgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATOCAVNvZGFubywgSC5BLiAoMjAwNCkgQSBSZXZpZXdzIG9mIFBvd2VyIEhhcnZlc3RpbmcgZnJvbSBWaWJyYXRpb24gVXNpbmcgUGllem9lbGVjdHJpYyBNYXRlcmlhbHMuIFNob2NrICYgVmlicmF0aW9uIERpZ2VzdCwgMzYsIDE5Ny5kAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk2NycgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATTtAVJvdW5keSwgUy4sIFdyaWdodCwgUC5LLiBhbmQgUGlzdGVyLCBLLlMuSi4gKDIwMDIpIE1pY3JvLUVsZWN0cm9zdGF0aWMgVmlicmF0aW9uIHRvIEVsZWN0cmljaXR5IENvbnZlcnRlcnMuIEFTTUUgSW50ZXJuYXRpb25hbCBNZWNoYW5pY2FsIEVuZ2luZWVyaW5nIENvbmdyZXNzICYgRXhwb3NpdGlvbiwgTm92ZW1iZXIsIDE3LTIyLiAgPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTE1L2ltZWNlMjAwMi0zOTMwOWQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTY4JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNeUBR2x5bm5lLUpvbmVzLCBQLiwgVHVkb3IsIE0uSi4sIEJlZWJ5LCBTLlAuIGFuZCBXaGl0ZSwgTi5NLiAoMjAwNCkgQW4gRWxlY3Ryb21hZ25ldGljLCBWaWJyYXRpb24tUG93ZXJlZCBHZW5lcmF0b3IgZm9yIEludGVsbGlnZW50IFNlbnNvciBTeXN0ZW1zLiBTZW5zb3JzIEFjdHVhdG9ycyBBLCAxMTAsIDM0NC0zNDkuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLnNuYS4yMDAzLjA5LjA0NWQCBQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTY5JyB0YXJnZXQ9J19ibGFuayc+NjwvYT5dATYBNvQBTWl0Y2hlc29uLCBQLkQuLCBNaWFvLCBQLiwgU3RhcmssIEIuSC4sIFllYXRtYW4sIEUuTS4sIEhvbG1lcywgQS5TLiBhbmQgR3JlZW4sIFQuQy4gKDIwMDQpIE1FTVMgRWxlY3Ryb3N0YXRpYyBNaWNyby1Qb3dlciBHZW5lcmF0b3IgZm9yIExvdyBGcmVxdWVuY3kgT3BlcmF0aW9uLiBTZW5zb3JzIEFjdHVhdG9ycyBBLCAxMTUsIDUyMy01MjkuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLnNuYS4yMDA0LjA0LjAyNmQCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTcwJyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN8cBUm91bmR5LCBTLiBhbmQgV3JpZ2h0LCBQLksuICgyMDA0KSBBIFBpZXpvZWxlY3RyaWMgVmlicmF0aW9uIEJhc2VkIEdlbmVyYXRvciBmb3IgV2lyZWxlc3MgRWxlY3Ryb25pY3MuIFNtYXJ0IE1hdGVyaWFscyBhbmQgU3RydWN0dXJlcywgMTMsIDExMzEtMTE0Mi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDg4LzA5NjQtMTcyNi8xMy81LzAxOGQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTcxJyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBONQBVGFkaWdhZGFwYSwgUy4gYW5kIE1hdGV0aSwgSy4gKDIwMDkpIFBpZXpvZWxlY3RyaWMgTUVNUyBTZW5zb3JzOiBTdGF0ZS1vZi10aGUtQXJ0IGFuZCBQZXJzcGVjdGl2ZXMuIE1lYXN1cmVtZW50IFNjaWVuY2UgYW5kIFRlY2hub2xvZ3ksIDIwLCBBcnRpY2xlIElEOiAwOTIwMDEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA4OC8wOTU3LTAyMzMvMjAvOS8wOTIwMDFkAggPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk3MicgdGFyZ2V0PSdfYmxhbmsnPjk8L2E+XQE5ATnYAUJlZWJ5LCBTLlAuLCBUdWRvciwgTS5KLiBhbmQgV2hpdGUsIE4uTS4gKDIwMDYpIEVuZXJneSBIYXJ2ZXN0aW5nIFZpYnJhdGlvbiBTb3VyY2VzIGZvciBNaWNyb3N5c3RlbXMgQXBwbGljYXRpb25zLiBNZWFzdXJlbWVudCBTY2llbmNlIGFuZCBUZWNobm9sb2d5LCAxNywgUjE3NS1SMTk1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwODgvMDk1Ny0wMjMzLzE3LzEyL3IwMWQCCQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTczJyB0YXJnZXQ9J19ibGFuayc+MTA8L2E+XQIxMAIxMHIoMjAxNSkgV2hhdCBJcyBhbiBFbGVjdHJvbWFnbmV0aWMgR2VuZXJhdG9yICA8YnIvPmh0dHA6Ly93d3cud2lzZWdlZWsuY29tL3doYXQtaXMtYW4tZWxlY3Ryb21hZ25ldGljLWdlbmVyYXRvci5odG1kAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk3NCcgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTGgAUhhdGlwb2dsdSwgRy4gYW5kIFVyZXksIEguICgyMDA5KSBGUjQgQmFzZWQgRWxlY3Ryb21hZ25ldGljIEVuZXJneSBIYXJ2ZXN0ZXJzIGZvciBXaXJlbGVzcyBTZW5zb3IgTm9kZXMuIFNtYXJ0IE1hdGVyaWFscyBhbmQgU3RydWN0dXJlcywgMTksIEFydGljbGUgSUQ6IDAxNTAyMi5kAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk3NScgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTLjAUtpbSwgUy5ILiwgSmksIEMuSC4sIEdhbGxlLCBQLiwgSGVycmF1bHQsIEYuLCBXdSwgWC4sIExlZSwgSi5ILiwgQ2hvaSwgQy5BLiBhbmQgQWxsZW4sIE0uRy4gKDIwMDkpIEFuIEVsZWN0cm9tYWduZXRpYyBFbmVyZ3kgU2NhdmVuZ2VyIGZyb20gRGlyZWN0IEFpcmZsb3cuIEpvdXJuYWwgb2YgTWljcm9tZWNoYW5pY3MgYW5kIE1pY3JvZW5naW5lZXJpbmcsIDE5LCBBcnRpY2xlIElEOiAwOTQwMTAuZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5NzYnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEz6gFNZW5pbmdlciwgUy4sIE11ci1NaXJhbmRhLCBKLk8uLCBBbWlydGhhcmFqYWgsIFIuLCBDaGFuZHJha2FzYW4sIEEuUC4gYW5kIExhbmcsIEouSC4gKDIwMDEpIFZpYnJhdGlvbi10by1FbGVjdHJpYyBFbmVyZ3kgQ29udmVyc2lvbi4gSUVFRSBUcmFuc2FjdGlvbnMgb24gVmVyeSBMYXJnZSBTY2FsZSBJbnRlZ3JhdGlvbiwgOSwgNjQtNzYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS85Mi45MjA4MjBkAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk3NycgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTTuAVJvdW5keSwgUy4sIFdyaWdodCwgUC5LLiwgS3Jpc3RvZmVyLCBTLiBhbmQgUGlzdGVyLCBKLiAoMjAwMikgTWljcm8tRWxlY3Ryb3N0YXRpYyBWaWJyYXRpb24gdG8gRWxlY3RyaWNpdHkgQ29udmVydGVycy4gUHJvY2VlZGluZ3Mgb2YgdGhlIEFTTUUgSW50ZXJuYXRpb25hbCBNZWNoYW5pY2FsIEVuZ2luZWVyaW5nIENvbmdyZXNzIGFuZCBFeHBvc2l0aW9uLCBOZXcgT3JsZWFucywgMTctMjIgTm92ZW1iZXIgMjAwMi5kAg4PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk3OCcgdGFyZ2V0PSdfYmxhbmsnPjE1PC9hPl0CMTUCMTU0aHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9FbGVjdHJvc3RhdGljX2dlbmVyYXRvcmQCDw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTc5JyB0YXJnZXQ9J19ibGFuayc+MTY8L2E+XQIxNgIxNjpodHRwczovL3d3dy5hbWVyaWNhbnBpZXpvLmNvbS9waWV6by10aGVvcnkvZ2VuZXJhdG9ycy5odG1sZAIQD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5ODAnIHRhcmdldD0nX2JsYW5rJz4xNzwvYT5dAjE3AjE32AFCZWVieSwgUy5QLiwgVHVkb3IsIE0uSi4gYW5kIFdoaXRlLCBOLk0uICgyMDA2KSBFbmVyZ3kgSGFydmVzdGluZyBWaWJyYXRpb24gU291cmNlcyBmb3IgTWljcm9zeXN0ZW1zIEFwcGxpY2F0aW9ucy4gTWVhc3VyZW1lbnQgU2NpZW5jZSBhbmQgVGVjaG5vbG9neSwgMTcsIFIxNzUtUjE5NS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDg4LzA5NTctMDIzMy8xNy8xMi9SMDFkAhEPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk4MScgdGFyZ2V0PSdfYmxhbmsnPjE4PC9hPl0CMTgCMTjIAVdpbGxpYW1zLCBDLkIuLCBXb29kcywgUi5DLiBhbmQgWWF0ZXMsIFIuQi4gKDE5OTYpIEZlYXNpYmlsaXR5IG9mIGEgVmlicmF0aW9uIFBvd2VyZWQgTWljcm8tRWxlY3RyaWMgR2VuZXJhdG9yLiBQcm9jZWVkaW5ncyBvZiB0aGUgSUVFIENvbGxvcXVpdW0gb24gQ29tcGFjdCBQb3dlciBTb3VyY2VzLCBMb25kb24sIDggTWF5IDE5OTYsIDcvMS03LzMuZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5ODInIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5pgFTaGVhcndvb2QsIEMuIGFuZCBZYXRlcywgUi5CLiAoMTk5NykgRGV2ZWxvcG1lbnQgb2YgYW4gRWxlY3Ryb21hZ25ldGljIE1pY3JvLUdlbmVyYXRvci4gRWxlY3Ryb25pY3MgTGV0dGVycywgMzMsIDE4ODMtMTg4NC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDQ5L2VsOjE5OTcxMjYyZAITD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5ODMnIHRhcmdldD0nX2JsYW5rJz4yMDwvYT5dAjIwAjIw7gFSb3VuZHksIFMuLCBXcmlnaHQsIFAuSy4sIEtyaXN0b2ZlciwgUy4gYW5kIFBpc3RlciwgSi4gKDIwMDIpIE1pY3JvLUVsZWN0cm9zdGF0aWMgVmlicmF0aW9uIHRvIEVsZWN0cmljaXR5IENvbnZlcnRlcnMuIFByb2NlZWRpbmdzIG9mIHRoZSBBU01FIEludGVybmF0aW9uYWwgTWVjaGFuaWNhbCBFbmdpbmVlcmluZyBDb25ncmVzcyBhbmQgRXhwb3NpdGlvbiwgTmV3IE9ybGVhbnMsIDE3LTIyIE5vdmVtYmVyIDIwMDIuZAIUD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5ODQnIHRhcmdldD0nX2JsYW5rJz4yMTwvYT5dAjIxAjIx6gFNZW5pbmdlciwgUy4sIE11ci1NaXJhbmRhLCBKLk8uLCBBbWlydGhhcmFqYWgsIFIuLCBDaGFuZHJha2FzYW4sIEEuUC4gYW5kIExhbmcsIEouSC4gKDIwMDEpIFZpYnJhdGlvbi10by1FbGVjdHJpYyBFbmVyZ3kgQ29udmVyc2lvbi4gSUVFRSBUcmFuc2FjdGlvbnMgb24gVmVyeSBMYXJnZSBTY2FsZSBJbnRlZ3JhdGlvbiwgOSwgNjQtNzYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS85Mi45MjA4MjBkAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk4NScgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjKNAlRhc2hpcm8sIFIuLCBLYWJlaSwgTi4sIEthdGF5YW1hLCBLLiwgVHN1Ym9pLCBGLiBhbmQgVHN1Y2hpeWEsIEsuICgyMDAyKSBEZXZlbG9wbWVudCBvZiBhbiBFbGVjdHJvc3RhdGljIEdlbmVyYXRvciBmb3IgYSBDYXJkaWFjIFBhY2VtYWtlciBUaGF0IEhhcm5lc3NlcyB0aGUgVmVudHJpY3VsYXIgV2FsbCBNb3Rpb24uIEpvdXJuYWwgb2YgQXJ0aWZpY2lhbCBPcmdhbnMsIDUsIDIzOS0yNDUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy9zMTAwNDcwMjAwMDQ1ZAIWD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5ODYnIHRhcmdldD0nX2JsYW5rJz4yMzwvYT5dAjIzAjIztwFBcmFrYXdhLCBZLiwgU3V6dWtpLCBZLiBhbmQgS2FzYWdpLCBOLiAoMjAwNCkgTWljcm8gU2Vpc21pYyBQb3dlciBHZW5lcmF0b3IgVXNpbmcgRWxlY3RyZXQgUG9seW1lciBGaWxtLiBQcm9jZWVkaW5ncyBvZiB0aGUgUG93ZXIgTUVNUyBDb25mZXJlbmNlLCBLeW90bywgMjgtMzAgTm92ZW1iZXIgMjAwNCwgMTg3LTE5MC5kAhcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk4NycgdGFyZ2V0PSdfYmxhbmsnPjI0PC9hPl0CMjQCMjT+AU1pdGNoZXNvbiwgUC4sIFN0YXJrLCBCLiwgTWlhbywgUC4sIFllYXRtYW4sIEUuLCBIb2xtZXMsIEEuIGFuZCBHcmVlbiwgVC4gKDIwMDMpIEFuYWx5c2lzIGFuZCBPcHRpbWl6YXRpb24gb2YgTUVNUyBPbi1DaGlwIFBvd2VyIFN1cHBseSBmb3IgU2VsZi1Qb3dlcmluZyBvZiBTbG93IE1vdmluZyBTZW5zb3JzLiBQcm9jZWVkaW5ncyBvZiB0aGUgRXVyb3NlbnNvcnMgWFZJSSwgR3VpbWFyYWVzLCAyMS0yNCBTZXB0ZW1iZXIgMjAwMywgMzAtMzEuZAIYD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5ODgnIHRhcmdldD0nX2JsYW5rJz4yNTwvYT5dAjI1AjI1LWh0dHA6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGllem9lbGVjdHJpY2l0eWQCGQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTg5JyB0YXJnZXQ9J19ibGFuayc+MjY8L2E+XQIyNgIyNtwBUm91bmR5LCBTLiwgV3JpZ2h0LCBQLksuIGFuZCBSYWJheWUsIEouICgyMDAzKSBBIFN0dWR5IG9mIExvdyBMZXZlbCBWaWJyYXRpb25zIGFzIGEgUG93ZXIgU291cmNlIGZvciBXaXJlbGVzcyBTZW5zb3IgTm9kZXMuIENvbXB1dGVyIGFuZCBDb21tdW5pY2F0aW9ucywgMjYsIDExMzEtMTE0NC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L1MwMTQwLTM2NjQoMDIpMDAyNDgtN2QCGg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTkwJyB0YXJnZXQ9J19ibGFuayc+Mjc8L2E+XQIyNwIyN+cBTGVlLCBCLlMuLCBMaW4sIFMuQy4sIFd1LCBXLkouLCBXYW5nLCBYLlkuLCBDaGFuZywgUC5aLiBhbmQgTGVlLCBDLksuICgyMDA5KSBQaWV6b2VsZWN0cmljIE1FTVMgR2VuZXJhdG9ycyBGYWJyaWNhdGVkIHdpdGggYW4gQWVyb3NvbCBEZXBvc2l0aW9uIFBaVCBUaGluIEZpbG0uIEpvdXJuYWwgb2YgTWljcm9tZWNoYW5pY3MgYW5kIE1pY3JvZW5naW5lZXJpbmcsIDE5LCBBcnRpY2xlIElEOiAwNjUwMTQuZAIbD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5OTEnIHRhcmdldD0nX2JsYW5rJz4yODwvYT5dAjI4AjI44QFIdSwgSi4sIEpvbmcsIEouIGFuZCBaaGFvLCBDLiAoMjAxMCkgVmlicmF0aW9uIEVuZXJneSBIYXJ2ZXN0aW5nIEJhc2VkIG9uIEludGVncmF0ZWQgUGllem9lbGVjdHJpYyBDb21wb25lbnRzIE9wZXJhdGluZyBpbiBEaWZmZXJlbnQgTW9kZXMuIElFRUUgVHJhbnNhY3Rpb25zIG9uIFVsdHJhc29uaWNzLCBGZXJyb2VsZWN0cmljcywgYW5kIEZyZXF1ZW5jeSBDb250cm9sLCA1NywgMzg2LTM5NC5kAhwPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk5MicgdGFyZ2V0PSdfYmxhbmsnPjI5PC9hPl0CMjkCMjnUAVdoaXRlLCBOLk0uLCBHbHlubmUtSm9uZXMsIFAuIGFuZCBCZWVieSwgUy5QLiAoMjAwMSkgQSBOb3ZlbCBUaGljay1GaWxtIFBpZXpvZWxlY3RyaWMgTWljcm8tR2VuZXJhdG9yIFRlY2huaWNhbCBOb3RlLiBTbWFydCBNYXRlcmlhbHMgYW5kIFN0cnVjdHVyZXMsIDEwLCA4NTAtODUyLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwODgvMDk2NC0xNzI2LzEwLzQvNDAzZAIdD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5OTMnIHRhcmdldD0nX2JsYW5rJz4zMDwvYT5dAjMwAjMw9AFMdSwgRi4sIExlZSwgSC5QLiBhbmQgTGltLCBTLlAuICgyMDA0KSBNb2RlbGluZyBhbmQgQW5hbHlzaXMgb2YgTWljcm8gUGllem9lbGVjdHJpYyBQb3dlciBHZW5lcmF0b3JzIGZvciBNaWNyby0gRWxlY3Ryb21lY2hhbmljYWwgU3lzdGVtcyBBcHBsaWNhdGlvbnMuIFNtYXJ0IE1hdGVyaWFscyBhbmQgU3RydWN0dXJlcywgMTMsIDU3LTYzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwODgvMDk2NC0xNzI2LzEzLzEvMDA3ZAIeD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5OTQnIHRhcmdldD0nX2JsYW5rJz4zMTwvYT5dAjMxAjMxlgJCYWtlciwgSi4sIFJvdW5keSwgUy4gYW5kIFdyaWdodCwgUC4gKDIwMDUpIEFsdGVybmF0aXZlIEdlb21ldHJpZXMgZm9yIEluY3JlYXNpbmcgUG93ZXIgRGVuc2l0eSBpbiBWaWJyYXRpb24gRW5lcmd5IFNjYXZlbmdpbmcgZm9yIFdpcmVsZXNzIFNlbnNvciBOZXR3b3Jrcy4gUHJvY2VlZGluZ3Mgb2YgdGhlIDNyZCBJbnRlcm5hdGlvbmFsIEVuZXJneSBDb252ZXJzaW9uIEVuZ2luZWVyaW5nIENvbmZlcmVuY2UsIFNhbiBGcmFuY2lzY28sIDE1LTE4IEF1Z3VzdCAyMDA1LCA5NTktOTcwLmQCHw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTk1JyB0YXJnZXQ9J19ibGFuayc+MzI8L2E+XQIzMgIzMogCWWFuZywgSi4sIFpoYW8sIEguLCBIdSwgWS4gYW5kIEppYW5nLCBRLiAoMjAwNSkgUGVyZm9ybWFuY2Ugb2YgYSBQaWV6b2VsZWN0cmljIEhhcnZlc3RlciBpbiBUaGlja25lc3MtU3RyZXRjaCBNb2RlIG9mIGEgUGxhdGUuIElFRUUgVHJhbnNhY3Rpb25zIG9uIFVsdHJhc29uaWNzLCBGZXJyb2VsZWN0cmljcywgYW5kIEZyZXF1ZW5jeSBDb250cm9sLCA1MiwgMTg3Mi0xODc2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvVFVGRkMuMjAwNS4xNTYxNjQ0ZAIgD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5OTYnIHRhcmdldD0nX2JsYW5rJz4zMzwvYT5dAjMzAjMz2AFHYW8sIFIuIGFuZCBDdWksIFkuICgyMDA1KSBWaWJyYXRpb24gQmFzZWQgU2Vuc29yIFBvd2VyaW5nIGZvciBNYW51ZmFjdHVyaW5nIFByb2Nlc3MgTW9uaXRvcmluZy4gVHJhbnNhY3Rpb25zIG9mIHRoZSBOb3J0aCBBbWVyaWNhbiBNYW51ZmFjdHVyaW5nIFJlc2VhcmNoIEluc3RpdHV0aW9uLCBTb2NpZXR5IG9mIE1hbnVmYWN0dXJpbmcgRW5naW5lZXJzLCAzMywgMzM1LTM0Mi5kAiEPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njk5NycgdGFyZ2V0PSdfYmxhbmsnPjM0PC9hPl0CMzQCMzTqAU1hdGV1LCBMLiBhbmQgTW9sbCwgRi4gKDIwMDUpIE9wdGltdW0gUGllem9lbGVjdHJpYyBCZW5kaW5nIEJlYW0gU3RydWN0dXJlcyBmb3IgRW5lcmd5IEhhcnZlc3RpbmcgVXNpbmcgU2hvZSBJbnNlcnRzLiBKb3VybmFsIG9mIEludGVsbGlnZW50IE1hdGVyaWFsIFN5c3RlbXMgYW5kIFN0cnVjdHVyZXMsIDE2LCA4MzUtODQ1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExNzcvMTA0NTM4OVgwNTA1NTI4MGQCIg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2OTk4JyB0YXJnZXQ9J19ibGFuayc+MzU8L2E+XQIzNQIzNYEBUm91bmR5LCBTLiBhbmQgWmhhbmcsIFkuICgyMDA1KSBUb3dhcmQgU2VsZi1UdW5pbmcgQWRhcHRpdmUgVmlicmF0aW9uIEJhc2VkIE1pY3JvLUdlbmVyYXRvcnMuIFByb2NlZWRpbmdzIG9mIFNQSUUsIDU2NDksIDM3My0zODQuZAIjD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY5OTknIHRhcmdldD0nX2JsYW5rJz4zNjwvYT5dAjM2AjM29AFMdSwgRi4sIExlZSwgSC5QLiBhbmQgTGltLCBTLlAuICgyMDA0KSBNb2RlbGluZyBhbmQgQW5hbHlzaXMgb2YgTWljcm8gUGllem9lbGVjdHJpYyBQb3dlciBHZW5lcmF0b3JzIGZvciBNaWNyby0gRWxlY3Ryb21lY2hhbmljYWwgU3lzdGVtcyBBcHBsaWNhdGlvbnMuIFNtYXJ0IE1hdGVyaWFscyBhbmQgU3RydWN0dXJlcywgMTMsIDU3LTYzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwODgvMDk2NC0xNzI2LzEzLzEvMDA3ZAIkD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMDAnIHRhcmdldD0nX2JsYW5rJz4zNzwvYT5dAjM3AjM36QFFcnR1cmssIEEuIGFuZCBJbm1hbiwgRC5KLiAoMjAwOCkgQSBEaXN0cmlidXRlZCBQYXJhbWV0ZXIgRWxlY3Ryb21lY2hhbmljYWwgTW9kZWwgZm9yIENhbnRpbGV2ZXJlZCBQaWV6b2VsZWN0cmljIEVuZXJneSBIYXJ2ZXN0ZXJzLiBKb3VybmFsIG9mIFZpYnJhdGlvbiBhbmQgQWNvdXN0aWNzLCAxMzAsIEFydGljbGUgSUQ6IDA0MTAwMi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTE1LzEuMjg5MDQwMmQCJQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDAxJyB0YXJnZXQ9J19ibGFuayc+Mzg8L2E+XQIzOAIzOOcBTGVlLCBCLlMuLCBMaW4sIFMuQy4sIFd1LCBXLkouLCBXYW5nLCBYLlkuLCBDaGFuZywgUC5aLiBhbmQgTGVlLCBDLksuICgyMDA5KSBQaWV6b2VsZWN0cmljIE1FTVMgR2VuZXJhdG9ycyBGYWJyaWNhdGVkIHdpdGggYW4gQWVyb3NvbCBEZXBvc2l0aW9uIFBaVCBUaGluIEZpbG0uIEpvdXJuYWwgb2YgTWljcm9tZWNoYW5pY3MgYW5kIE1pY3JvZW5naW5lZXJpbmcsIDE5LCBBcnRpY2xlIElEOiAwNjUwMTQuZAImD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwMDInIHRhcmdldD0nX2JsYW5rJz4zOTwvYT5dAjM5AjM54wFLaW0sIFMuSC4sIEppLCBDLkguLCBHYWxsZSwgUC4sIEhlcnJhdWx0LCBGLiwgV3UsIFguLCBMZWUsIEouSC4sIENob2ksIEMuQS4gYW5kIEFsbGVuLCBNLkcuICgyMDA5KSBBbiBFbGVjdHJvbWFnbmV0aWMgRW5lcmd5IFNjYXZlbmdlciBmcm9tIERpcmVjdCBBaXJmbG93LiBKb3VybmFsIG9mIE1pY3JvbWVjaGFuaWNzIGFuZCBNaWNyb2VuZ2luZWVyaW5nLCAxOSwgQXJ0aWNsZSBJRDogMDk0MDEwLmQCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJEB09KQklQSFkET0pCTQNPSkMET0pDQgRPSkNEBE9KQ0UET0pDTQNPSkQFT0pEZXIET0pETQNPSkUET0pFRQRPSkVNBU9KRU1EBU9KRXBpBE9KRVIDT0pGBE9KRkQDT0pHBU9KR2FzBU9KR2VuA09KSQRPSklDBE9KSU0FT0pJTk0DT0pMA09KTQRPSk1DB09KTWV0YWwET0pNSARPSk1JBU9KTUlQBE9KTUwET0pNTQRPSk1OBE9KTVAET0pNUwVPSk1TaQNPSk4GT0pOZXBoA09KTwRPSk9HBk9KT0dhcwRPSk9wBU9KT3BoBU9KT1BNBU9KT1RTC09KUGF0aG9sb2d5BE9KUEMHT0pQQ2hlbQVPSlBlZARPSlBNBE9KUFAET0pQUwdPSlBzeWNoBE9KUkEFT0pSYWQET0pSRARPSlJNA09KUwRPSlNTBU9KU1NUBE9KU1QFT0pTVEEET0pUUgRPSlRTA09KVQRPSlZNA09QSgNQT1MCUFADUFNUBVBTWUNIA1NBUgNTQ0QEU0dSRQJTTQJTTgNTTkwEU29mdAJTUwNURUwCVEkEVU9BSgJWUANXRVQDV0pBBFdKQ0QFV0pDTVAEV0pDUwRXSkVUA1dKTQRXSk5TBVdKTlNFBVdKTlNUA1dKVgNXU04CWU0VgAIBMAM3MzcEMTQwOAQxNDA2BDEwMDIEMjQyMwMxNjQDNjExBDE0NzgDNDczAzQ5MgQxNTc5BDI0MzcEMjQ0MgQyNDQ0BDI0MjYEMjMxNgM4MDMEMTAwMAM0NzYDMjAzBDI0MjIEMTMwNAM1MzUDODg0AzUzMgM1MjkDMjA3Azk5NgQxNTE3BDIzMTcDMTYwAzQ3NwM2NzUEMTU3MwQxNTc0Azc0MwM1MTMEMTU3NQQyNDQ1AzE5MQM4MTIDMjYwBDI0NTUDMTM2BDIwNzQEMTQ5MwMxMjIDOTg5AjkyBDIwMzMDMTczBDE0OTIEMjQzOAQxNTE4BDI0NTQEMjQ1NwI2NAI5MwQxMzExBDIzMTUDMjA4BDI0MzIEMjQ2MgM1NDEEMTY5MAM1MTICNjUDMTAzAzE3NgMxMTEDNDkwBDI0NDkEMTM5MQMyMDIBNAMyMDkEMjQyOAM3NDcEMTI2MQQxNTc4BDE1MTkDNTI3BDE0NzcEMTI5OAQxOTgwBDI0MzYDNTI1AzQ3NQQyNDQzAjMwBDI0MzUDMjMwAzE2MgQyNDMxAzUzMAM1MjYDMTI1BDI0MjUDNDc5AzUzMQM2OTECMjkDMTQ0BDE5ODYEMTM5NQMxMTQEMjQ2MQQyNDIxBDE0MTEDMTAyAzE3NQM2NDgDMzk3BDE3NTMDMTcyBDI0MzMDNTkxAzk5MAI0NQM1NDMDMzM5BDI0MzACMjgDNDc4BDI0MzkEMjQ2MAMzNTcCNDYDMjEwBDE0ODUDMTYzAzc4NwM3ODYDOTE3AzgxNQQyNDQxBDE0ODcEMTU3NgMxNzQEMjQzNAM1MjgDMjA1AzE5MgI2OQQyNDU5BDI0NjMEMjQ1MwM3MzgEMTQ4MAQxNTkwAzgxNAQxNDA3BDE0NzkEMTAwMwQyNDQ2AzYwMQM4MDYDNzg1BDI0NDcEMjQ1MgM5OTcDNjA2Azc4OAM3OTIEMTk3NwM4MTADNTg2AzYxNAQxNTc3BDI0NTYDODExAzgxNgQxOTc5AzczNgQxMDA0AzU4NwM4MTcDNjEzAzYwMgM1OTIDNTkzAzc5MwQxMTg2AzU4OAM3OTADNzg0AzczOQM4MjADNjEyAzc0MgM5OTkDODIyAzk5OAM1OTYEMjQyNAM2MDUDODIxAzgwNAM2MDQEMjQ2NAQxOTc4AzgwNQM3OTQDODIzAzgxMwM1ODkDNzkxAzYwOQM2MTADNzQxAzc0NAM2MDMDODA3Azc4OQM4MjQEMTM5NAM1OTADNzM1AzYwMAM2MDcEMTQ4NgQyNDQ4AzgwOAM1MDkEMTAwMQM1NDcCNzEDMjA2BDI0NDADMTQ4BDI0NTADNTMzAzEzNQM0NzQEMTU4OQM0OTEEMjAzNAMyMDQDNjY2AzEwNAQxNDA1BDI0NTgDMTQ2AzUxMQM4MTgDNTAyAzgwOQQyNDUxAzUwNgM2MTUDNDkzAzUzNAM1MTACNDEEMjQ2NRQrA4ACZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkZONuFnFhJO/I97ecB/j0TlI6sgTo8ouQtRsUk3y1NbfS" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAIYC5gtjxI8GOgXrYp8y6naa+MxO15cYiUM4G9ciXBy5rRbTxQn0wurVpykN++S3qsY9gqm4NhJKbhUsb9qOzDz5+BaQ51Lu9YTI5y+UD8ReCXYCCq5883RYOyuQBDQdgBKJQ9NYSepAvxIHsUIEBszIF9kVAw+OtKpSo2nY0L5TS7pjZcI4a2ubz4FZUJ/qeIscQNjFFetjMQu+gPAKi1cuu0dXATu8ZTMsEIKUEeEK3+aBofovXqmNNgBwrJCAFSq2Co/mvvaNFGqy28nyI+vv6yf3gTw51pjuwP3t6rjAvP5x1lbHcKM5M/ROzquUHr9lNeWWklFj9cK1TFZpQdUnWziPR3qwNn0ScFNmZAws/jpBm80jcsuZv9XDBeU2KB136TAPmetewitSt9wGNYTIY9UJhFPM+0hDu7cwMKVpp+mmnD8+pMa1yHYRYzLQxH5n1Q/qqDptM9kfJbC1I4q9xL93cbaAMQ4tG4BJWGCzAW6vtR3JnRPdbQo4gA4sZaXer04IxUa3arSwCxRuEDIYFbblwRpneYEy3rzwScqJxuezOuEOjOptTX9AYvM9jKmAypI8kdyyyB4CNN3pFGdOk4mu/WExNjWQ5X01rKdDbeJN4TzreHSTLkh+d4B8EihhF81TpqgKTnD/fd/yNWGbO9zMdjKdAolzLesxJOG2bR2t4ae94pZJoUOvCEPRLh7u5h+HR1RXp8jKz3XyrzwGq5ViD0Fyb+qhGFHNfa6dxzK0n1qu2d9hzAGJ1ZdEzFgVObshVy2ouP3umau52TJFwKhqohqorHyJZt7h54jbR7oXke9kR+ABe996RxzCmx1L/42I3la9AkYiuUmh4mE9Rk5DdY/KiLlE+29svjthmIPNdKgZlA9dvwpjASVteCo/ksy0uMaOE+alzU72eZ1rlvR6C3RGA9Jmsr/oit2h5HWYxsN1nFXBqJbgXwz0iYh7JCUYpOW+jbALhRmLv9UpsX2EI+d3W02YqShNDct3I94Sq9enXMFtuVRPWGCF1oN1TlM8aQC+B45LfHfFCnZz6KlRuP6GvEqI8VDdi+sTnM71Jn53VrlKa3UuXcRuCcAe+GQxyfHfD/wZ+ergvp+hsx48VT9Xih8PA4vj1aNtQlLCsXezalJjXjgEl/cAa7arjDkAIe6rJDf9KPGPMwoKLWIBVM9nLqRvTn4xs2uCHsZiAOZ8Y5IAuKZeArneMeYK8+pLRvERCDkGURuCyuXbsR59h/AAdaKvPM2BT4SSKNj0Us/NQU9+MI9hDNgMZowy9xCOwBNddniKd5JiX1iETIuSWSu2galT3CZ4MpRQGqIfvz80X8fuyGyFF2wHP/HcdHP4x0OBSCxdPk53jUQtAQ6g8akcdK7Kr4deoDeUynf9l1Y6lbf6JC8NoSbMA+vc8O8QqrB2tS2vv8gSiSoIhJ/70GOmod2HPYumgEmpn8vgLAz5ccZUA7bkVUoObyVZV/Zm1Uh4Ozw57X6RDPtK9aubBoko1p5gcjMIWvm4T+T41pjKCycN70aK5E4MwFc6qbRpzIzeaUUIv5qiWg3dZvXV/9M9IwoMUAdYUH5UMA5AJDCfNUkJ1q+n5sIsxUCB6Nq0yAoqoFwFjOj8ZbQjUP5/q/DGUJDHtaZDExzq62tLwfe18PsgWsDuILbV32BFX07jDSTdc2CHO2xi6fhORGg5L0lBgRl4s0zp6Bc/YgBEniC2eneyWSDQ2iw5NhVKu3HJAuZnur70V7iwzDcGwQI2IDR/+2+ZDAfID+MM8+0XNaUlaIgX8fsjMqD2JWDxa8kn7ReZiPgMqAmE7acxyMlKdMtk6XhHjwc25wp4AlleDWbzVGzQLtuUmBfLRhb1duIXiNLsi/yRLp4WZPUJ27df65bU1anG4WItJ4LM9y1kFgUPkaZCD7G3W6HUl/HynBFJ9UbqeGaq8vaK1/YQfFvpLYGg0bJLmJIb7I1VBtGRefxiocvIkjuBnFbKIG1Bvp3bdqOCotobzRhTIfJPz1ybr2D6/DEvFCV2tebkdleZKtgLobZ6iejVWuu1VZxJWsflUf5AhdWNPs78Mu7xVHmmifThhNhHXVuTcjWgOc0+ha7t+FzBP9w8kasJY44yZnpObyYDO1ZdBcb+9I3REzEpeEvJizUogox2uLy8cRq3yp6lmmMvyTt1q1wGJKr3RN2vrp1bz9IC1X58ObtB/5VtKrLwiwYTZ4JczAShm49AkZfwZHQTZLyjY3qS4jbPi09pGNXw+uGS3Hu4tDXabra7UmIrVTJ6nt2BS+IV2oARGuf8d10+bFGE4Rxb8X5OWr9o8NP/NkSmCAkxIVC+Aj7EdIJsmLDnfzTIbDsJUtH/K7KPeiLbFjhDUrnAx6wO2/9ofSkwJg74y7KTIDV/ngs3MovqY+DwVzncJ9d75iLyCizSur2z/AoWxQnguyVJbTVltsvXYae72/GCovpvEoLWlmf4Sg6Yu4BBu5RYruCk5N7MezxIv1QQ8tjDdhoGXqAbWrRFFDWx3FK4oHDCvJJHjmn4y1G1QBsNDvWkIszuXW6E1KUz6dtoSwPj0wA0Ssong9DXWhtYuS9jtH4StM1ZT+6tqYvxtAJndAQ0NFNV1597E/y6Lte1J3ZP1twzvBpB/f0YxWaTDHZ72u7NlSVoCSjnWeNWCBfpptecl27SJO0njN9e8jHgDwmPC2NlIgGmq46k97juUD2lSjIB/+AeyDUaBy5oIhTdg6INeWTgkUTzyXC34fsOvEb0hxwmbeOjctVaE3x0pTijWTsKmSeGzIda8uoJkZcuTbWHVoRB6h5Dc72rcIz1lA5hJghfGLyFGxD6b7ArQwZHjISLbPwxJYkFbxLsCrMOEMVNCcxGdx56w146VqqjCImkPDvKFHUQ/jY9+FyVc120CiMOMieHjy4dyVomOSf6gPMkkPd4ClcsQoipAxZgLTxG67FCpcEH/ewS/egbmWx04V1w9x54+T8GkfQObxizPwQZQvPeZm6KLBvrmvLYp1CaHAQxp15ZTATs7okf7S5ePo2gUI6UpzRPUgMetACnXOfa/MSurf56LkzDvZSlRprJXfFcpjnNRle7ZhR+nzipiAi6t6fJxRB4sYqEuxZikZ0sS/pn76iye8xM0q+tFJNR5AEEH/rcf8wyXJ1I9n+HN9S0Q60NH0z6qdFkKcgxGmbQ8xoxIk8T5csYyuHHJ8T3qv4mAA1kgwWmcUBQcbF5yr4YQxwmztMkcCEMt6aAvfC8f6toJF0YzyYX6qP1l6BNvsoSTEoNJmHhXQ9HjrS4USE6yCYyzwmeO12MO4U1xeipGR+e8TLpQ6CqXnairBPYGsz+glJyTODudGLzInafKtakhjlbm2TNMFfJb+9E3OOHfsq+2OJbTt6ZXJufxbbdOy1pecKV+u7JTFDadGMONSTueBvDAHypkesyjW4yuwX56tldt764R/77OW2TjDwb0ccJpLN4gZuPJdFGPDo8zpRNpCEOepOJcfUo9I8zG9qwVzTuTYjxDFDg2EFzwz1hep69FpxYJxedOu96B/Dnw5jBPjdr2PsTL/fVgG4rRrihebOjXHUfqiglDXkf85mvQfywWRzIsCAYnsAqHdzBwJuSxhofmDKZ6kAcIU59NL+2Ji/ZlNfEKQgjenXIkOQXcybyFgFk6H+fsgvXkF6guW0mK/96yfu7+n2DpGArzAn8Ug7zyAfpekzLtWT6UsgXZRNiIa8gkid6xp0spp/D5y5u2oeDBhSnXl6da309+kboqvL0EZR7RebudBufyINEOSNkpXst+LCzHcoZXcZBkagLrxGz5Lr3OmrcaZrIzlq5X4ZeFENOm92bbMpLQVD4IMoZREdVKbJIoaDV/CJq5z9wEVDB/cC79FvrePkFE4bul1aFFPyyi0kOKqg/hxo/OJaXSW+9WIG+vrsJvPgrum9ZyyaHkmzelazeN+yHPLxy1zNV9jyZToogsZf6RZ3nFRpnXxmMlVnH0OVgW+2Mohtqfe2KKfX/VnF0jyp37UjD6+NIz5zrn96FS+VMJNGWR2O5842Lmw660AZaYl38EWqjS11SHbcorNwflYBLGOSBhYCgfIyVLGUTbPYfzEgNQqTHnxA1GPsHqBrOtCWMEkB/uzd4oi1XWCyepKSG7lNpxxFzdDjX98Oc6FzbVsmLIEUldUkJbRhZrvplfZYEL0HEIrr0hA25YbbMqPgsadaNs2L0PL6NJIUvaBZj+4WJDzg+qXCxGdKNlUbGu4DHu5jY9jggQ/M+bLYw70SYQesq8eoufw0gVy+VJXLOb/8y4R0wEYH7yRWOc8vTOLrzSGCW44GJlYyDbnWEuvxMiv+ao715+CTPTCKoBBsIcfS54DwjalRqX/tdios6c/R4l8RBx+bEs2I/OhFPcGy16UdcBobgA6MDXqDiN8qHUE5edBy836NpfClbftFfnfyfCIoNo/LoLepzD03QezF7mHekW07wckU6+7Q9YdIbSVVhYrVWNy4V9SLNt9rDNP2lL0qzP3/u+7FCVXpVsepRRHoAuuwZCqIEy9pj8H80hp7qY3PsWfym5PFwPDpDrw5btVy0nYXPzmSU7Uq1R+xlIyX8GjtJduBVZ8wbk6aTUuK/MPWJrZBr6wJdTeGfZt62TS2PvUX8Bszn2XYFWa+KC0AGHhHOlm+2AJHVPZlyUq17Cl5102dlAYHzK+0AG32kPT2GuoyTOE8BIy6ZumGISrsX9PtvrJQT973r7tutrOJdmSsuzZmet4ka9s4KBh2pnNpSnp5KKvbJBe/2u8kjranZVADkNkEKOEXepq4YzpMaSxC3MlYLFhnFkgI5ZVRMzmO+OO/YgsPyT8yRPxZINEKJmxVfR6o2/dlXAveRG+kmgscPVzG2fU+7RYWdJ6A7dYUqm+3QeXKaM60OaCxssNom3YyO27eklt3YlQIip36uoWBxadwhW6Xr4hpzG+fVoqWHCOB4W0tkB4Ys2fVx/u4hWeNar3onUwWIr3qyzShdQuq1yLoOGDw62HfXCpHg+2MgPzx0D30ZvvTRWoyLCT5KXRfbhCHc0ft6eEqaV2Bsm1PQ1adRpxas+YKl6OM0XfBYI7e+D/PTCV8kGkiBFjju03VDE4za5rygA5Hlm2Nw7Z/jwlgzZu+xnq4r5sKXwqO2GiO0Yz0phNMal/uj9jQH01r6jZOWZdGYv25HB18pD1BnnheFvgIBd4A+Yzzd4445ZYYBPi1KjUxhWknmQ3xMtk+VekEsyt5OsRToo3sdsrHlF0S3wBO8PMh2hXpztV0Nul20IZOgLNZXnw69o2KVsiPg3L1Ov2ccetI/l78hqpSial79UDetTUKR6jdST7RI/tNxHgqa2VZpA6vgUwhJt7/J+BSGBMS8EJAsf/9j8QXzOPuANANF9n6qx9M8VFm3znHUngYh/toDPhEifiWmFe8/WqO48axLW568ANtWdjn5DflrdMhUJcxSKlMY6hfUROf4lKD2WVzMrBGUEyM1i/IioLJF4GlMlIJPWPw9wKGpav4okyiSNWyQxlltAoA50ScVI3orHMZwfosp1huw/AZY81iQ2w5g07s7Nd1y8K5gjHHQyvDDAfOa9Uhob6FFUIJz544XnVU/bMVa9/9TWORTqtDYnCTH88lqEuzb9sIa" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=174" title="Materials Sciences and Applications">
+                    Materials Sciences and Applications</a> &gt; <a href="home?issueid=6955#60025">Vol.6 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Piezoelectric Vibration Harvesters Based on Vibrations of Cantilevered Bimorphs: A Review <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Anam++Khalid&searchfield=authors&page=1' target='_blank'>Anam  Khalid</a><sup>1</sup>, <a href='articles?searchcode=Amit+Kumar++Redhewal&searchfield=authors&page=1' target='_blank'>Amit Kumar  Redhewal</a><sup>1</sup>, <a href='articles?searchcode=Manoj++Kumar&searchfield=authors&page=1' target='_blank'>Manoj  Kumar</a><sup>1</sup>, <a href='articles?searchcode=Anupam++Srivastav&searchfield=authors&page=1' target='_blank'>Anupam  Srivastav</a><sup>2*</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Mechanical+Engineering+Department%2c+IFTM+University%2c+Moradabad%2c+India&searchfield=affs&page=1' target='_blank'>Mechanical Engineering Department, IFTM University, Moradabad, India</a>.<br /><sup>2</sup><a href='articles?searchcode=Middle+East+College%2c+Knowledge+Oasis+Muscat%2c+Sultanate+of+Oman&searchfield=affs&page=1' target='_blank'>Middle East College, Knowledge Oasis Muscat, Sultanate of Oman</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/msa.2015.69084"
+                    target="_blank" onclick='SetNum(60025)'>10.4236/msa.2015.69084</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/MSA_2015092914133549.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60025)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60025' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60025.xml' target='_blank' onclick='SetNum(60025)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    3,610</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    5,228</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60025&JournalID=174' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">With the advancement in the technologies around the world over the past few years, the microelectromechanical
+systems (MEMS) have gained much attention in harvesting the energy for wireless,
+self-powered and MEMS devices. In the present era, many devices are available for energy
+harnessing such as electromagnetic, electrostatic and piezoelectric generator and these devices
+are designed based on its ability to capture the different form of environment energy such as solar
+energy, wind energy, thermal energy and convert it into the useful energy form. Out of these devices,
+the use of a piezoelectric generator for energy harvesting is very attractive for MEMS applications.
+There are various sources of harvestable energy including waste heat, solar energy, wind
+energy, energy in floating water and mechanical vibrations which are used by the researchers for
+energy harvesting purposes. This paper reviews the state-of-the-art in harvesting mechanical vibrations
+as an energy source by various generators (such as electromagnetic, electrostatic and
+piezoelectric generators). Also, the design and characteristics of piezoelectric generators, using
+vibrations of cantilevered bimorphs, for MEMS have also been reviewed here. Electromagnetic,
+electrostatic and piezoelectric generators presented in the literature are reviewed by taking into
+an account the power output, frequency, acceleration, dimension and application of each generator
+and the coupling factor of each transduction mechanism has also been discussed for all the devices.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Piezoelectric+Generator&searchfield=keyword&page=1' target='_blank'>Piezoelectric Generator</a>, <a href='articles?searchcode=+Micro+Electromechanical+Systems+(MEMS)&searchfield=keyword&page=1' target='_blank'> Micro Electromechanical Systems (MEMS)</a>, <a href='articles?searchcode=+Power+Output&searchfield=keyword&page=1' target='_blank'> Power Output</a>, <a href='articles?searchcode=+Frequency&searchfield=keyword&page=1' target='_blank'> Frequency</a>, <a href='articles?searchcode=+Voltage&searchfield=keyword&page=1' target='_blank'> Voltage</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Khalid, A. , Redhewal, A. , Kumar, M.  and Srivastav, A.   (2015) Piezoelectric Vibration Harvesters Based on Vibrations of Cantilevered Bimorphs: A Review. <i>Materials Sciences and Applications</i>, <b>6</b>, 818-827. doi: <a href='http://dx.doi.org/10.4236/msa.2015.69084' target='_blank' onclick='SetNum(60025)'>10.4236/msa.2015.69084</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                          
+<p class="E-Title1">1. Introduction</p> 
+<p>Over the past few years, the use of energy harvesting devices for harvesting the useless surrounding energy has grown tremendously for empowering small portable as well as importable units. Many researchers have focused on the different available environmental energy sources including wind energy, solar energy, thermal gradients and mechanical vibrations [1] . Among these sources, solar energy was the first to be considered as alternative source, but it is available in environments where large and extended illumination is available. Also, it requires large area for installation of devices/plants. Other resources also have their demerits. Therefore mechanical vibration is a potential energy source for MEMS applications [2] [3] . Commonly occurring vibrations are potentially useful method of powering MEMS devices. Although vibrations are available only in certain environments, there are a substantial number of application areas in which sufficient vibration energy exists. Applications areas include spaces with industrial equipment such as manufacturing or automated assembly floors, certain locations in buildings such as the heating and cooling ducts, small appliances, large exterior windows, automobiles and aircraft [4] . Many techniques are available for converting mechanical vibration into the usable electrical energy such as electromagnetic (for instance, see [5] ), electrostatic (for instance, see [6] ), and also piezoelectric generators (for instance, see [7] ). Among these techniques piezoelectric generator is considered as a potential technique of energy conversion for MEMS application.</p> 
+<p>Electromagnetic generators employ electromagnetic induction arising from the relative motion between a gradient and a conductor whereas electrostatic generators employ the relative motion between electrically isolated charged capacitors plates to generate energy and piezoelectric generators employs piezoelectric materials that generate a charge when subjected to external load. Piezoelectric generators have the advantage that they can be more easily implemented with MEMS technology. Generators using piezoelectric materials can be called either as actuators, when the design of the device is optimized for generating stress or strain using the converse piezoelectric effect, or as sensors when the design of the device is optimized for the generation of an electric signal by employing the direct piezoelectric effect, in response to the mechanical input [8] .</p> 
+<p>This review article is about energy harvesting concepts, different types of harvesting generators which convert mechanical movement (energy) present in the application environment into usable electrical energy. It also discusses the design and characterization of piezoelectric vibration in electricity converters.</p> 
+<p class="E-Title1">2. Theory of Energy Harvesting Devices</p> 
+<p class="E-Title2">2.1. Energy Harvesting</p> 
+<p>Energy harvesting refers to the generation of energy from sources such as ambient temperature, vibration or air flow, solar energy and wind energy. As shown <a href="#f1" target="_self">Figure 1</a>, there are various sources and different types of losses during energy conversion.</p> 
+<p>Converting the available energy from the environment allows a self-sufficient energy supply for MEMS devices. Energy harvesting requires a transduction mechanism to generate electrical energy from motion and the generator will require a mechanical system that couples environmental displacements to the transduction mechanism. The design of the mechanical system should maximize the coupling between the energy source and the transduction mechanism and will depend entirely upon the characteristics of the environmental motion. The transduction mechanism itself can generate electricity by exploiting the mechanical strain or relative displacement occurring within the system. The strain effect utilizes the deformation within the mechanical system and typically employs piezoelectric materials whereas in case of relative displacement, either the velocity or position</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-7701629x6.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Actual process of energy harvesting.</p> 
+</div> 
+<p>can be coupled to a transduction mechanism. Velocity is mainly associated with electromagnetic transduction while relative position is associated with electrostatic transduction [9] .</p> 
+<p class="E-Title2">2.2. Energy Harvesting Devices</p> 
+<p>Energy harvesting devices are those which are used for converting the available surrounding energy, which may go waste as shown in <a href="#f2" target="_self">Figure 2</a>, into the usable electrical energy. Electromagnetic, electrostatic and piezoelectric generators are some of the widely used energy harvesting devices. Electromagnetic generator is an inductive energy scavenger that transforms mechanical energy into electrical energy, using the interconnected principles of magnetism and electricity. The process by which an electromagnetic generator produces current or electricity is known as electromagnetic induction, which basically means that an electric current is induced within a conductor through the use of a magnet. Most of the electromagnetic generators work on electromagnetic induction, and some of these use renewable sources such as water power and wind power to create the initial mechanical energy. Mechanical energy can basically be thought of as kinetic energy or movement energy [10] . However, nearly all the reported electromagnetic (EM) micro power generators are silicon based devices. Therefore these harvesters result in poor scavenging performance. In order to improve the performance, the most common printed circuit board material, FR4 (Flame Retardant 4) is used as an alternative element for energy harvesting applications. Hatipoglu [11] presented the use of FR4 as the most commonly used PCB material for body worn sensors and intelligent tire sensors instead of silicon MEMS devices. Kim [12] presented two types of EM power generators exploiting direct conversion of airflow into mechanical vibration.</p> 
+<p>An electrostatic generator is a generator that produces static electricity, or electricity at high and low current. These generators can be operated through manual power to transform mechanical work into the electrical energy. Electrostatic generators develop electrostatic charges of opposite signs rendered to two conductors, using only the electric forces, and the work done by using the moving plates, drums, or belts to carry electric charge to a high potential electrode. The charge is generated by one of two methods: either by using the triboelectric effect (friction) or electrostatic induction. Electrostatic converters have the advantage that they can be more easily implemented with MEMS technology. Meninger et al. [13] have designed an electrostatic converter fabricate with MEMS technology. Their simulations result shows that 8.6 &micro;W can be converted from a device of 1.5 cm &times; 1.5 cm in size. Roundy [14] focused on electrostatic vibration to electricity converter made by using MEMS technology; their simulations result shows that an output power density of 116 &micro;W/cm<sup>3</sup> is possible from input vibrations of 2.25 m/s<sup>2</sup> at 120 Hz. Electrostatic machines are typically used in science classrooms to safely demonstrate the electrical forces along with high voltage phenomenon. The elevated potential differences achieved have been also used for a variety of practical applications, such as operating X-ray tubes, medical applications, sterilization of food, and nuclear physics experiments [15] .</p> 
+<p>When the piezoelectric ceramics, activated mechanically with pressure or vibration it has the capacity to generate electric voltages sufficient to produce spark across an electrode gap. The advantage of the piezoelectric energy harvester is that it has high energy density and can be integrated with electronic devices by MEMS technology. The voltage of the output energy harvester can be more than 10 volts, so up-conversion is not necessary. The disadvantage is that the resonant frequency of the piezoelectric energy harvester is higher than that of the</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-7701629x7.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. General concept of energy harvesting.</p> 
+</div> 
+<p>ambient vibration sources normally available when the energy harvester is miniaturized. The latter has a typical value below 200 Hz, and the former is well above 1 kHz. Also the PZ material is brittle, so long term mechanic wear out may limit the lifetime of the energy harvester. Two common applications of piezoelectric generators are in the push button cigarette lighters and gas barbecue grills. In these applications, pressing a button causes a spring-loaded hammer to apply a mechanical force to a rod-shaped single-layer piezoelectric ceramic. As a result of the piezoelectric effect, the ceramic element produces a voltage that passes across a small spark gap causing the fuel source to ignite. Electrical energy in a rod-shaped single-layer piezo generator is released very quickly, is very high voltage, and very low current. Piezoelectric ignition systems are small and simple, long lasting and require little maintenance. Multilayer piezo generators consist of a stack of very thin (sub-millime- ter-thick) piezoelectric ceramics alternated with electrodes. The electrical energy produced by a multilayer piezo generator is of a much lower voltage than is generated by a single-layer piezo generator. On the other hand, the current produced by a multilayer generator is significantly higher than the current generated by a single-layer piezoelectric generator. Because they do not create an electromagnetic interference as multilayer piezo generators are excellent solid-state batteries for electronic circuits. Due to advancements in micro-electronic systems many consumer devices have decreased in size. Smaller electronic systems require less power to operate. As a result, the solid state multilayer piezoelectric generators have become a feasible power source for some applications. Current applications for multilayer piezo generators are energy sources for munitions and wireless sensors, such as sensors that monitor tire pressure in automobiles [16] .</p> 
+<p class="E-Title1">3. Electromagnetic Generators</p> 
+<p>Electromagnetic generators works on the principle of electromagnetic induction which was first discovered by Faraday in 1831, is the generation of electric current in a conductor located within a magnetic field. The conductor typically takes the form of a coil and generates electricity because of the change in the magnetic field or due to the relative movement of the magnet and coil. The amount of electricity generated within a coil depends upon the strength of the magnetic field, number of turns in a coil and the velocity of the relative movement between the magnet and the coil. One of the most effective methods for energy harvesting is to produce electromagnetic induction by means of permanent magnets, a coil and a resonating cantilever beam [17] . Williams [18] describes an electromagnetic transducer of size around (5 mm &times; 5 mm &times; 1 mm) and the harmonic analysis was undertaken in order to assess the viability of the device. For a typical device, the predicted power generation was 1 &micro;W for an excitation frequency of 70 Hz, and 100 &micro;W at 330 Hz. Shearwood et al. [19] have fabricated a generator which comprises of a flexible circular membrane, which was bulk micromachined on a GaAs substrate coated with a 7 &micro;m layer of polyimide. A SmCo magnet, having a mass of 2.4 &times; 10<sup>−3</sup> Kg, was attached to the underside of the membrane. The planar Au coil had 13 turns and was patterned on a separate wafer. The device was tested and generated 0.3 &micro;W at excitation frequency of 4.4 kHz. El-Hami describes the simulation, modeling, fabrication and characterization of a vibration based electromechanical power generator which is shown in <a href="#f3" target="_self">Figure 3</a>. The device comprises a cantilever beam fixed at one end and supporting a pair of NdFeB magnets on a c-shaped core at the free end. The coil is made up of many turns of enameled copper wire and is fixed in position between the poles of the magnets. The device is shown below. It was found that power generation in excess of 1 mW for a volume of 240 mm<sup>3</sup> at a vibration frequency of 320 Hz was obtained [19] .</p> 
+<p class="E-Title1">4. Electrostatic Generators</p> 
+<p>An electrostatic generator, shown in <a href="#f4" target="_self">Figure 4</a>, work on the principle of electrostatic induction and the basis of</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-7701629x8.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. The electromagnetic generator proposed by El-Hami [19] .</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-7701629x9.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Simple circuit representation for an electrostatic converter.</p> 
+</div> 
+<p>electrostatic energy conversion is the variable capacitor. The variable capacitance structure, which will be fabricated with MEMS technology, is driven by mechanical vibrations and oscillates between a maximum capacitance (Cmax) and a minimum capacitance (Cmin). If the charge on the capacitor is constrained, the voltage will increase as the capacitance decreases. If the voltage across the capacitor is constrained, charge will move from the capacitor to a storage device or to the load as the capacitance decreases. In either case, mechanical kinetic energy is converted to electrical energy [20] . Meninger [21] gives a good explanation of the merits of charge constrained conversion versus voltage constrained conversion. A summary characteristic of various electrostatic generators is given in <a href="#t1" target="_self">Table 1</a>.</p> 
+<p class="E-Title1">5. Piezoelectric Generators</p> 
+<p>Piezoelectric generators have been used for many years to convert mechanical energy into electrical energy. The following sections describe the range of piezoelectric generators described in the literature to date. For the purposes of this review, piezoelectric generators have been classified by its size, power output, voltage and its applications on both macro scale and micro scale It begins with a brief description of piezoelectric theory in order to appreciate the different types of generator and the relevant piezoelectric material properties.</p> 
+<p class="E-Title2">5.1. Piezoelectricity</p> 
+<p>Piezoelectric generator works on the principle of piezoelectricity or piezoelectric effect developed by Pierre Curie brothers in 1880 which describes a relationship between stress and voltage. Piezoelectric materials can becomes electrically polarized or undergoes a change in polarization when subjected to a stress, as shown in <a href="#f5" target="_self">Figure 5</a>, because the slight change in the dimension of a piezoelectric material results in the variation in bond length between cations and anions caused by stress. Conversely, a piezoelectric material will have a change in dimension when it is exposed in an electric field. This inverse mechanism is called electrostriction. Those devices utilizing the piezoelectric effect to convert mechanical strains into electricity are called piezoelectric generators [25] .</p> 
+<p class="E-Title2">5.2. Generator Design</p> 
+<p>Size constraints play an important role in the selection of a piezoelectric generator configuration. Hence, it is necessary to specify the size first while selecting a configuration. A bending element is considered as the basis for a generator because of two reasons: a) low resonance frequency and b) can attained higher strains. A bending element can be mounted in several ways to form a generator; a cantilever structure having piezoelectric material attached to the top and bottom surfaces along with a center shim layer is an attractive geometry for harvesting energy from mechanical vibrations. This configuration of a generator has been chosen for two reasons: a) cantilever configuration provides highest possible strain and the power output is directly proportional to the strain and b) cantilever configuration results in low resonance frequency which is essential for low frequency target vibrations. Roundy [26] developed a piezoelectric cantilever beam generator as shown in <a href="#f6" target="_self">Figure 6</a>, where the cantilever used was of constant width which simplifies the modeling and fabrication of the beam but results in an unequal distribution of strain along the length of the generator. A prototype generator was fabricated by attaching a</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-7701629x10.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Schematic diagrams of piezoelectric effect [26] .</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-7701629x11.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Cantilever based piezoelectric generator developed by Roundy [26] .</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_6-7701629_1.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Summary of electrostatic generators.</p> 
+</div> 
+<p>PZT-5A shim to each side of a steel center beam with a cubic mass made from an alloy of tin and bismuth was attached to the end of the generator and allowed to resonate at 120 Hz, it was shown that the prototype produced a maximum power output of nearly 80 &micro;W with 2.5 m/s<sup>2</sup> input acceleration. Lee [27] presented the development of two piezoelectric MEMS generators “31” mode and “33” mode for scavenging mechanical energy of ambient vibrations and converting it into the useful electrical energy. The two piezoelectric MEMS generators were of cantilever type made by a silicon process and can transform mechanical energy into electrical energy through its piezoelectric PZT layers. A PZT deposition machine was developed which uses an aerosol deposition method to fabricate the high quality PZT thin film efficiently. The result shows that “31” mode generator possesses a maximum open circuit voltage of 2.675 V<sub>p-p</sub> and a maximum output power of 2.765 &micro;W with 1.792 V<sub>p-p</sub> output voltage excited at a resonant frequency of 255.9 Hz under a 2.5 g acceleration level and the “33” mode device possessed a maximum open circuit output voltage of 4.127 V<sub>p-p</sub> and a maximum output power of 1.288 &micro;W with 2.292 V<sub>p-p</sub> output voltage at its resonant frequency of 214 Hz at a 2 g acceleration.</p> 
+<p>Junhui [28] proposed a piezoelectric generator to increase its vibration energy harvesting capability based on a cantilever beam which not only uses the strain change of piezoelectric components bonded on a cantilever beam but also employs the weight at the tip of the cantilever beam to hit piezoelectric components located on the two sides of weights. It shows that the piezoelectric components operating in the hit mode can substantially enhance the energy harvesting of the piezoelectric generator based on a cantilever beam. Two methods were suggested for increasing vibration energy harvesting capability of a piezoelectric generator. In one of them the DC voltages from rectifiers are connected in series and hence the total DC voltage is applied to a capacitor. As a result it was found that 22.3% of the harvested energy is wasted in case of series connection but in another connection, the DC voltage from each group is applied to different capacitors and in this case the total output electric energy could be 43 nJ for one vibration excitation applied by spring with initial vibration amplitude of 18 mm and frequency of 18.5 Hz.</p> 
+<p>White [29] presented an approach for modeling and designing of vibration generator, in which a thick film micro generator was described and the corresponding test was performed. In this paper, the micro generator used is a resonant mechanical structure based on a cantilever beam design, seismic mass and piezoelectric ceramic PZT-5H. It was shown that the proposed generator produces the maximum power output of about 2 &micro;W which is too small for actual applications F Lu presented a simple design modeling and analysis of the “31” transverse mode type piezoelectric micro generator for MEMS applications. The output power and energy conversion efficiency of laminated type micro-generators using PZT-PIC 255 and single crystal PZN-8% PT was tested for comparison. It was found that optimal external resistance gives the maximum output power. Furthermore, increasing the frequency of the vibration can improve the output power. While beyond a certain value, further improvement cannot be achieved by simply increasing the vibration frequency. At the higher frequency, single crystal PZN-8% can achieve much higher output power in comparison to piezoelectric material PZT-PIC 255. The performance of PZN-8% PT was more sensitive to operational frequency and that of PZT-PIC 255 was more sensitive to external resistance [30] .</p> 
+<p class="E-Title2">5.3. Coupling Mode</p> 
+<p>Coupling modes employed for piezoelectric generators, as shown in <a href="#f7" target="_self">Figure 7</a> are of two types: a) “31” coupling</p> 
+<p>mode and b) “33” coupling mode. “31” coupling mode implies that the direction of the applied force or strain is perpendicular to the polarization axis whereas “33” coupling mode indicates that the direction of the applied force or strain is parallel to the polarization axis. Conventionally, the “31” mode has been the most commonly used coupling mode. Baker [31] shows that “31” mode has a lower coupling coefficient as compared to “33” mode (<a href="#t2" target="_self">Table 2</a>). By comparing a piezoelectric stack operating in “33” mode to a cantilever beam operating in “31” mode, it was observed that, although the stack was more robust and had a higher coupling coefficient, the cantilever produced more power when subjected to the same force. It was concluded that in a small force environment “31” mode proved most efficient, but in a high force environment “33” mode would be more durable and produce useful energy., Yang et al. [32] have shown that analytically, for a piezoelectric plate operating in the “33” mode, the power output is directly proportional to the coupling coefficient as well as dielectric constant. It means that the devices with higher coupling coefficient will produce more power Roundy [26] concluded that the resonant frequency of a system operating in “31” mode is much lower, making the system more likely to be driven at resonance in a natural environment, thus providing more power.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-7701629x12.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. “33” and “31” coupling mode [33] .</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_6-7701629_2.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Summary of various piezoelectric geometries investigated.</p> 
+</div> 
+<p class="E-Title2">5.4. Commonly Used Vibration Sources for Piezoelectric Generator</p> 
+<p>Commonly used vibration sources, as given in <a href="#t3" target="_self">Table 3</a> include the casing of a microwave oven, base of a milling machine, drilling machine, bearing test bed, A/C compressor, washing machine, cloth dryer etc. Other vibration sources measured include a notebook computer casing, cooling ducts, large exterior windows, mobile phones, the floor in high traffic areas of office buildings, and several household appliances.</p> 
+<p class="E-Title2">5.5. Summary of Piezoelectric Generators</p> 
+<p><a href="#t4" target="_self">Table 4</a> summarizes the dimension, material used, configuration, coupling mode, etc. of different piezoelectric vibration harvesters, reported in literature.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_6-7701629_3.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t3" id="t3"><span class="cs_fig_con">Table 3</span></a>. Vibration sources withmaximum acceleration and frequency [33] .</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_6-7701629_4.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t4" id="t4"><span class="cs_fig_con">Table 4</span></a>. Summary of piezoelectric vibration harvesters.</p> 
+</div>     
+<p class="E-Title1">NOTES</p>  
+<p><sup>*</sup>Corresponding author.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576964' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Roundy, S., Steingart, D., Frechette, L., Wright, P. and Rabaey, J. (2004) Power Sources for Wireless Sensor Networks Wirel. 1st European Wireless Sensor Networks Workshop, 2920, 1-17. <br/>http://dx.doi.org/10.1007/978-3-540-24606-0_1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576965' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Roundy, S., Leland, E.S., Baker, J., Carleton, E., Reilly, E., Lai, E., Otis, B., Rabaey, J.M., Wright, P.K. and Sundararajan, V. (2005) Improving Power Output for Vibration-Based Energy Scavengers. IEEE Pervasive Computing, 4, 28- 36. <br/>http://dx.doi.org/10.1109/MPRV.2005.14
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576966' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Sodano, H.A. (2004) A Reviews of Power Harvesting from Vibration Using Piezoelectric Materials. Shock & Vibration Digest, 36, 197.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576967' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Roundy, S., Wright, P.K. and Pister, K.S.J. (2002) Micro-Electrostatic Vibration to Electricity Converters. ASME International Mechanical Engineering Congress & Exposition, November, 17-22.  <br/>http://dx.doi.org/10.1115/imece2002-39309
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576968' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Glynne-Jones, P., Tudor, M.J., Beeby, S.P. and White, N.M. (2004) An Electromagnetic, Vibration-Powered Generator for Intelligent Sensor Systems. Sensors Actuators A, 110, 344-349. <br/>http://dx.doi.org/10.1016/j.sna.2003.09.045
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576969' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Mitcheson, P.D., Miao, P., Stark, B.H., Yeatman, E.M., Holmes, A.S. and Green, T.C. (2004) MEMS Electrostatic Micro-Power Generator for Low Frequency Operation. Sensors Actuators A, 115, 523-529. <br/>http://dx.doi.org/10.1016/j.sna.2004.04.026
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576970' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Roundy, S. and Wright, P.K. (2004) A Piezoelectric Vibration Based Generator for Wireless Electronics. Smart Materials and Structures, 13, 1131-1142. <br/>http://dx.doi.org/10.1088/0964-1726/13/5/018
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576971' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Tadigadapa, S. and Mateti, K. (2009) Piezoelectric MEMS Sensors: State-of-the-Art and Perspectives. Measurement Science and Technology, 20, Article ID: 092001. <br/>http://dx.doi.org/10.1088/0957-0233/20/9/092001
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576972' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Beeby, S.P., Tudor, M.J. and White, N.M. (2006) Energy Harvesting Vibration Sources for Microsystems Applications. Measurement Science and Technology, 17, R175-R195. <br/>http://dx.doi.org/10.1088/0957-0233/17/12/r01
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576973' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        (2015) What Is an Electromagnetic Generator  <br/>http://www.wisegeek.com/what-is-an-electromagnetic-generator.htm
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576974' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Hatipoglu, G. and Urey, H. (2009) FR4 Based Electromagnetic Energy Harvesters for Wireless Sensor Nodes. Smart Materials and Structures, 19, Article ID: 015022.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576975' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Kim, S.H., Ji, C.H., Galle, P., Herrault, F., Wu, X., Lee, J.H., Choi, C.A. and Allen, M.G. (2009) An Electromagnetic Energy Scavenger from Direct Airflow. Journal of Micromechanics and Microengineering, 19, Article ID: 094010.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576976' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Meninger, S., Mur-Miranda, J.O., Amirtharajah, R., Chandrakasan, A.P. and Lang, J.H. (2001) Vibration-to-Electric Energy Conversion. IEEE Transactions on Very Large Scale Integration, 9, 64-76. <br/>http://dx.doi.org/10.1109/92.920820
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576977' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Roundy, S., Wright, P.K., Kristofer, S. and Pister, J. (2002) Micro-Electrostatic Vibration to Electricity Converters. Proceedings of the ASME International Mechanical Engineering Congress and Exposition, New Orleans, 17-22 November 2002.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576978' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        http://en.wikipedia.org/wiki/Electrostatic_generator
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576979' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        https://www.americanpiezo.com/piezo-theory/generators.html
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576980' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Beeby, S.P., Tudor, M.J. and White, N.M. (2006) Energy Harvesting Vibration Sources for Microsystems Applications. Measurement Science and Technology, 17, R175-R195. <br/>http://dx.doi.org/10.1088/0957-0233/17/12/R01
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576981' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Williams, C.B., Woods, R.C. and Yates, R.B. (1996) Feasibility of a Vibration Powered Micro-Electric Generator. Proceedings of the IEE Colloquium on Compact Power Sources, London, 8 May 1996, 7/1-7/3.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576982' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Shearwood, C. and Yates, R.B. (1997) Development of an Electromagnetic Micro-Generator. Electronics Letters, 33, 1883-1884. <br/>http://dx.doi.org/10.1049/el:19971262
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576983' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Roundy, S., Wright, P.K., Kristofer, S. and Pister, J. (2002) Micro-Electrostatic Vibration to Electricity Converters. Proceedings of the ASME International Mechanical Engineering Congress and Exposition, New Orleans, 17-22 November 2002.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576984' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Meninger, S., Mur-Miranda, J.O., Amirtharajah, R., Chandrakasan, A.P. and Lang, J.H. (2001) Vibration-to-Electric Energy Conversion. IEEE Transactions on Very Large Scale Integration, 9, 64-76. <br/>http://dx.doi.org/10.1109/92.920820
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576985' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Tashiro, R., Kabei, N., Katayama, K., Tsuboi, F. and Tsuchiya, K. (2002) Development of an Electrostatic Generator for a Cardiac Pacemaker That Harnesses the Ventricular Wall Motion. Journal of Artificial Organs, 5, 239-245. <br/>http://dx.doi.org/10.1007/s100470200045
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576986' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Arakawa, Y., Suzuki, Y. and Kasagi, N. (2004) Micro Seismic Power Generator Using Electret Polymer Film. Proceedings of the Power MEMS Conference, Kyoto, 28-30 November 2004, 187-190.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576987' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Mitcheson, P., Stark, B., Miao, P., Yeatman, E., Holmes, A. and Green, T. (2003) Analysis and Optimization of MEMS On-Chip Power Supply for Self-Powering of Slow Moving Sensors. Proceedings of the Eurosensors XVII, Guimaraes, 21-24 September 2003, 30-31.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576988' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        http://en.wikipedia.org/wiki/Piezoelectricity
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576989' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Roundy, S., Wright, P.K. and Rabaye, J. (2003) A Study of Low Level Vibrations as a Power Source for Wireless Sensor Nodes. Computer and Communications, 26, 1131-1144. <br/>http://dx.doi.org/10.1016/S0140-3664(02)00248-7
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576990' target='_blank'>27</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref27" id="ref27"></a>
+                                        Lee, B.S., Lin, S.C., Wu, W.J., Wang, X.Y., Chang, P.Z. and Lee, C.K. (2009) Piezoelectric MEMS Generators Fabricated with an Aerosol Deposition PZT Thin Film. Journal of Micromechanics and Microengineering, 19, Article ID: 065014.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576991' target='_blank'>28</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref28" id="ref28"></a>
+                                        Hu, J., Jong, J. and Zhao, C. (2010) Vibration Energy Harvesting Based on Integrated Piezoelectric Components Operating in Different Modes. IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control, 57, 386-394.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576992' target='_blank'>29</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref29" id="ref29"></a>
+                                        White, N.M., Glynne-Jones, P. and Beeby, S.P. (2001) A Novel Thick-Film Piezoelectric Micro-Generator Technical Note. Smart Materials and Structures, 10, 850-852. <br/>http://dx.doi.org/10.1088/0964-1726/10/4/403
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576993' target='_blank'>30</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref30" id="ref30"></a>
+                                        Lu, F., Lee, H.P. and Lim, S.P. (2004) Modeling and Analysis of Micro Piezoelectric Power Generators for Micro- Electromechanical Systems Applications. Smart Materials and Structures, 13, 57-63. <br/>http://dx.doi.org/10.1088/0964-1726/13/1/007
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576994' target='_blank'>31</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref31" id="ref31"></a>
+                                        Baker, J., Roundy, S. and Wright, P. (2005) Alternative Geometries for Increasing Power Density in Vibration Energy Scavenging for Wireless Sensor Networks. Proceedings of the 3rd International Energy Conversion Engineering Conference, San Francisco, 15-18 August 2005, 959-970.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576995' target='_blank'>32</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref32" id="ref32"></a>
+                                        Yang, J., Zhao, H., Hu, Y. and Jiang, Q. (2005) Performance of a Piezoelectric Harvester in Thickness-Stretch Mode of a Plate. IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control, 52, 1872-1876. <br/>http://dx.doi.org/10.1109/TUFFC.2005.1561644
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576996' target='_blank'>33</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref33" id="ref33"></a>
+                                        Gao, R. and Cui, Y. (2005) Vibration Based Sensor Powering for Manufacturing Process Monitoring. Transactions of the North American Manufacturing Research Institution, Society of Manufacturing Engineers, 33, 335-342.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576997' target='_blank'>34</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref34" id="ref34"></a>
+                                        Mateu, L. and Moll, F. (2005) Optimum Piezoelectric Bending Beam Structures for Energy Harvesting Using Shoe Inserts. Journal of Intelligent Material Systems and Structures, 16, 835-845. <br/>http://dx.doi.org/10.1177/1045389X05055280
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576998' target='_blank'>35</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref35" id="ref35"></a>
+                                        Roundy, S. and Zhang, Y. (2005) Toward Self-Tuning Adaptive Vibration Based Micro-Generators. Proceedings of SPIE, 5649, 373-384.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576999' target='_blank'>36</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref36" id="ref36"></a>
+                                        Lu, F., Lee, H.P. and Lim, S.P. (2004) Modeling and Analysis of Micro Piezoelectric Power Generators for Micro- Electromechanical Systems Applications. Smart Materials and Structures, 13, 57-63. <br/>http://dx.doi.org/10.1088/0964-1726/13/1/007
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577000' target='_blank'>37</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref37" id="ref37"></a>
+                                        Erturk, A. and Inman, D.J. (2008) A Distributed Parameter Electromechanical Model for Cantilevered Piezoelectric Energy Harvesters. Journal of Vibration and Acoustics, 130, Article ID: 041002. <br/>http://dx.doi.org/10.1115/1.2890402
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577001' target='_blank'>38</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref38" id="ref38"></a>
+                                        Lee, B.S., Lin, S.C., Wu, W.J., Wang, X.Y., Chang, P.Z. and Lee, C.K. (2009) Piezoelectric MEMS Generators Fabricated with an Aerosol Deposition PZT Thin Film. Journal of Micromechanics and Microengineering, 19, Article ID: 065014.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577002' target='_blank'>39</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref39" id="ref39"></a>
+                                        Kim, S.H., Ji, C.H., Galle, P., Herrault, F., Wu, X., Lee, J.H., Choi, C.A. and Allen, M.G. (2009) An Electromagnetic Energy Scavenger from Direct Airflow. Journal of Micromechanics and Microengineering, 19, Article ID: 094010.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=174" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=174" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=174" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=174" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=174"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=174"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=174" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=174" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=174" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=174" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=174" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=174"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=174"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=174" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=174&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=174&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=174" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=174" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=174" target="_blank">MSA
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=174" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=174" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=174" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=174" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=174" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=174" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=174" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/msa.2015.69084" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60025 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +174 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +174 +"&paperid=" +60025 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

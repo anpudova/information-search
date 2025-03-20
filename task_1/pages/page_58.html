@@ -1,0 +1,1468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Tumor Segmentation on 18F FDG-PET Images Using Graph Cut and Local Spatial Information
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/OJMI_2015092916101563.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60058" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60058.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60058" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60058" />
+<meta property="og:title" content="Tumor Segmentation on 18F FDG-PET Images Using Graph Cut and Local Spatial Information" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/OJMI2024061316494959.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/OJMI2024061316494959.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Tumor Segmentation on 18F FDG-PET Images Using Graph Cut and Local Spatial Information" />
+<meta name="keywords" content="Image Segmentation,FDG-PET,Graph Cut" />
+<meta name="description" content="Developing a methodology for accurate tumor segmentation on FDG PET images using graph cut and LCRF. Significant improvement over other techniques. Read now!" />
+<meta name="citation_journal_title" content="Open Journal of Medical Imaging" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Mizuho Nishio;Atsushi K. Kono;Kazuhiro Kubo;Hisanobu Koyama;Tatsuya Nishii;Kazuro Sugimura" />
+<meta name="citation_author" content="Mizuho Nishio" />
+<meta name="citation_author" content="Atsushi K. Kono" />
+<meta name="citation_author" content="Kazuhiro Kubo" />
+<meta name="citation_author" content="Hisanobu Koyama" />
+<meta name="citation_author" content="Tatsuya Nishii" />
+<meta name="citation_author" content="Kazuro Sugimura" />
+<meta name="citation_title" content="Tumor Segmentation on 18F FDG-PET Images Using Graph Cut and Local Spatial Information" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-08-31" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ojmi.2015.53022" />
+<meta name="citation_issnPrint" content="2164-2788" />
+<meta name="citation_issnOnline" content="2164-2796" />
+<meta name="citation_abstract" content="The purpose of this study was to develop methodology to segment tumors on 18F-fluorodeoxyg- lucose (FDG) positron emission tomography (PET) images. Sixty-four metastatic bone tumors were included. Graph cut was used for tumor segmentation, with segmentation energy divided into unary and pairwise terms. Locally connected conditional random fields (LCRF) were proposed for the pairwise term. In LCRF, three-dimensional cubic window with length L was set for each voxel, and voxels within the window were considered for the pairwise term. Three other types of segmentation were applied: region-growing based on 35%, 40%, and 45% of the tumor maximum standardized uptake value (RG35, RG40, and RG45, respectively), SLIC superpixels (SS), and region-based active contour models (AC). To validate the tumor segmentation accuracy, dice similarity coefficients (DSC) were calculated between the result of each technique and manual segmentation. Differences in DSC were tested using the Wilcoxon signed-rank test. Mean DSCs for LCRF at L = 3, 5, 7, and 9 were 0.784, 0.801, 0.809, and 0.812, respectively. Mean DSCs for the other techniques were: RG35, 0.633; RG40, 0.675; RG45, 0.689; SS, 0.709; and AC, 0.758. The DSC differences between LCRF and other techniques were statistically significant (p &lt; 0.05). Tumor segmentation was reliably performed with LCRF." />
+<meta name="citation_publication_date" content="2015/8/31" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/OJMI_2015092916101563.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/OJMI_2015092916101563.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60058" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60058" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60058" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60058.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60058.xml" />
+<meta name="citation_issue" content="3" />
+<meta name="citation_online_date" content="2015/8/31" />
+<meta name="citation_firstpage" content="174" />
+<meta name="citation_lastpage" content="181" />
+
+<meta name="dc.title" content="Tumor Segmentation on 18F FDG-PET Images Using Graph Cut and Local Spatial Information" />
+
+<meta name="dc.creator" content="Mizuho Nishio" />
+<meta name="dc.creator" content="Atsushi K. Kono" />
+<meta name="dc.creator" content="Kazuhiro Kubo" />
+<meta name="dc.creator" content="Hisanobu Koyama" />
+<meta name="dc.creator" content="Tatsuya Nishii" />
+<meta name="dc.creator" content="Kazuro Sugimura" /><meta name="dcterms.issued" content="2015-08-31" />
+<meta name="dc.description" content="The purpose of this study was to develop methodology to segment tumors on 18F-fluorodeoxyg- lucose (FDG) positron emission tomography (PET) images. Sixty-four metastatic bone tumors were included. Graph cut was used for tumor segmentation, with segmentation energy divided into unary and pairwise terms. Locally connected conditional random fields (LCRF) were proposed for the pairwise term. In LCRF, three-dimensional cubic window with length L was set for each voxel, and voxels within the window were considered for the pairwise term. Three other types of segmentation were applied: region-growing based on 35%, 40%, and 45% of the tumor maximum standardized uptake value (RG35, RG40, and RG45, respectively), SLIC superpixels (SS), and region-based active contour models (AC). To validate the tumor segmentation accuracy, dice similarity coefficients (DSC) were calculated between the result of each technique and manual segmentation. Differences in DSC were tested using the Wilcoxon signed-rank test. Mean DSCs for LCRF at L = 3, 5, 7, and 9 were 0.784, 0.801, 0.809, and 0.812, respectively. Mean DSCs for the other techniques were: RG35, 0.633; RG40, 0.675; RG45, 0.689; SS, 0.709; and AC, 0.758. The DSC differences between LCRF and other techniques were statistically significant (p &lt; 0.05). Tumor segmentation was reliably performed with LCRF." />
+<meta name="dc.source" content="Open Journal of Medical Imaging" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-08-31" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ojmi.2015.53022" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-08-31" />
+<meta name="prism.issnPrint" content="2164-2788" />
+<meta name="prism.issnOnline" content="2164-2796" />
+<meta name="prism.publicationName" content="Open Journal of Medical Imaging" />
+<meta name="prism.publicationDate" content="2015-08-31" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="3" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="174" />
+<meta name="prism.doi" content="10.4236/ojmi.2015.53022" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60058" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAmEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA4LTMxZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXgBTxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9TWl6dWhvKytOaXNoaW8mc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5NaXp1aG8gIE5pc2hpbzwvYT48c3VwPjEsMio8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9QXRzdXNoaStLLisrS29ubyZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkF0c3VzaGkgSy4gIEtvbm88L2E+PHN1cD4zPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUthenVoaXJvKytLdWJvJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+S2F6dWhpcm8gIEt1Ym88L2E+PHN1cD40PC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUhpc2Fub2J1KytLb3lhbWEmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5IaXNhbm9idSAgS295YW1hPC9hPjxzdXA+Mzwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1UYXRzdXlhKytOaXNoaWkmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5UYXRzdXlhICBOaXNoaWk8L2E+PHN1cD4zPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUthenVybysrU3VnaW11cmEmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5LYXp1cm8gIFN1Z2ltdXJhPC9hPjxzdXA+Mzwvc3VwPiBkAgIPZBYCZg8WAh8EBbwJPHN1cD4xPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1DbGluaWNhbCtQRVQrQ2VudGVyJTJjK0luc3RpdHV0ZStvZitCaW9tZWRpY2FsK1Jlc2VhcmNoK2FuZCtJbm5vdmF0aW9uJTJjK0tvYmUlMmMrSmFwYW4mc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5DbGluaWNhbCBQRVQgQ2VudGVyLCBJbnN0aXR1dGUgb2YgQmlvbWVkaWNhbCBSZXNlYXJjaCBhbmQgSW5ub3ZhdGlvbiwgS29iZSwgSmFwYW48L2E+LjxiciAvPjxzdXA+Mjwvc3VwPjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RGl2aXNpb24rb2YrRnVuY3Rpb25hbCthbmQrRGlhZ25vc3RpYytJbWFnaW5nK1Jlc2VhcmNoJTJjK0RlcGFydG1lbnQrb2YrUmFkaW9sb2d5JTJjK0tvYmUrVW5pdmVyc2l0eStHcmFkdWF0ZStTY2hvb2wrb2YrTWVkaWNpbmUlMmMrS29iZSUyYytKYXBhbiZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkRpdmlzaW9uIG9mIEZ1bmN0aW9uYWwgYW5kIERpYWdub3N0aWMgSW1hZ2luZyBSZXNlYXJjaCwgRGVwYXJ0bWVudCBvZiBSYWRpb2xvZ3ksIEtvYmUgVW5pdmVyc2l0eSBHcmFkdWF0ZSBTY2hvb2wgb2YgTWVkaWNpbmUsIEtvYmUsIEphcGFuPC9hPi48YnIgLz48c3VwPjM8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURpdmlzaW9uK29mK1JhZGlvbG9neSUyYytEZXBhcnRtZW50K29mK1JhZGlvbG9neSUyYytLb2JlK1VuaXZlcnNpdHkrR3JhZHVhdGUrU2Nob29sK29mK01lZGljaW5lJTJjK0tvYmUlMmMrSmFwYW4mc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5EaXZpc2lvbiBvZiBSYWRpb2xvZ3ksIERlcGFydG1lbnQgb2YgUmFkaW9sb2d5LCBLb2JlIFVuaXZlcnNpdHkgR3JhZHVhdGUgU2Nob29sIG9mIE1lZGljaW5lLCBLb2JlLCBKYXBhbjwvYT4uPGJyIC8+PHN1cD40PC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1DZW50ZXIrZm9yK1JhZGlvbG9neSthbmQrUmFkaWF0aW9uK09uY29sb2d5JTJjK0tvYmUrVW5pdmVyc2l0eStIb3NwaXRhbCUyYytLb2JlJTJjK0phcGFuJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+Q2VudGVyIGZvciBSYWRpb2xvZ3kgYW5kIFJhZGlhdGlvbiBPbmNvbG9neSwgS29iZSBVbml2ZXJzaXR5IEhvc3BpdGFsLCBLb2JlLCBKYXBhbjwvYT4uPGJyIC8+ZAIFDxYCHwQFBTMsNjE1ZAIGDxYCHwQFBTQsNzA0ZAIHDxYCHwMFD0Rpc3BsYXk6aW5saW5lO2QCCA9kFgICAQ8WAh8EBbcCPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1JbWFnZStTZWdtZW50YXRpb24mc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5JbWFnZSBTZWdtZW50YXRpb248L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStGREctUEVUJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEZERy1QRVQ8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStHcmFwaCtDdXQmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gR3JhcGggQ3V0PC9hPiBkAgoPFgIfBAXxAk5pc2hpbywgTS4gLCBLb25vLCBBLiAsIEt1Ym8sIEsuICwgS295YW1hLCBILiAsIE5pc2hpaSwgVC4gIGFuZCBTdWdpbXVyYSwgSy4gICAoMjAxNSkgVHVtb3IgU2VnbWVudGF0aW9uIG9uIDxzdXA+MTg8L3N1cD5GIEZERy1QRVQgSW1hZ2VzIFVzaW5nIEdyYXBoIEN1dCBhbmQgTG9jYWwgU3BhdGlhbCBJbmZvcm1hdGlvbi4gPGk+T3BlbiBKb3VybmFsIG9mIE1lZGljYWwgSW1hZ2luZzwvaT4sIDxiPjU8L2I+LCAxNzQtMTgxLiBkb2k6IDxhIGhyZWY9J2h0dHA6Ly9keC5kb2kub3JnLzEwLjQyMzYvb2ptaS4yMDE1LjUzMDIyJyB0YXJnZXQ9J19ibGFuaycgb25jbGljaz0nU2V0TnVtKDYwMDU4KSc+MTAuNDIzNi9vam1pLjIwMTUuNTMwMjI8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50AhQWKGYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkwNCcgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATHqAUZvc3RlciwgQi4sIEJhZ2NpLCBVLiwgTWFuc29vciwgQS4sIFh1LCBaLiBhbmQgTW9sbHVyYSwgRC5KLiAoMjAxNCkgQSBSZXZpZXcgb24gU2VnbWVudGF0aW9uIG9mIFBvc2l0cm9uIEVtaXNzaW9uIFRvbW9ncmFwaHkgSW1hZ2VzLiBDb21wdXRlcnMgaW4gQmlvbG9neSBhbmQgTWVkaWNpbmUsIDUwLCA3Ni05Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouY29tcGJpb21lZC4yMDE0LjA0LjAxNGQCAQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTA1JyB0YXJnZXQ9J19ibGFuayc+MjwvYT5dATIBMssCRGliYmxlLCBFLkguLCBBbHZhcmV6LCBBLkMuLCBUcnVvbmcsIE0uVC4sIE1lcmNpZXIsIEcuLCBDb29rLCBFLkYuIGFuZCBTdWJyYW1hbmlhbSwgUi5NLiAoMjAxMikgMThGLUZERyBNZXRhYm9saWMgVHVtb3IgVm9sdW1lIGFuZCBUb3RhbCBHbHljb2x5dGljIEFjdGl2aXR5IG9mIE9yYWwgQ2F2aXR5IGFuZCBPcm9waGFyeW5nZWFsIFNxdWFtb3VzIENlbGwgQ2FuY2VyOiBBZGRpbmcgVmFsdWUgdG8gQ2xpbmljYWwgU3RhZ2luZy4gSm91cm5hbCBvZiBOdWNsZWFyIE1lZGljaW5lLCA1MywgNzA5LTcxNS4gaHR0cDovL2R4LmRvaS5vcmcvMTAuMjk2Ny9qbnVtZWQuMTExLjA5OTUzMWQCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTA2JyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM80CUGFpZHBhbGx5LCBWLiwgQ2hpcmluZGVsLCBBLiwgQ2h1bmcsIEMuSC4sIFJpY2htb24sIEouLCBLb2NoLCBXLiwgUXVvbiwgSC4sIGV0IGFsLiAoMjAxNCkgRkRHIFZvbHVtZXRyaWMgUGFyYW1ldGVycyBhbmQgU3Vydml2YWwgT3V0Y29tZXMgYWZ0ZXIgRGVmaW5pdGl2ZSBDaGVtb3JhZGlvdGhlcmFweSBpbiBQYXRpZW50cyB3aXRoIFJlY3VycmVudCBIZWFkIGFuZCBOZWNrIFNxdWFtb3VzIENlbGwgQ2FyY2lub21hLiBBbWVyaWNhbiBKb3VybmFsIG9mIFJvZW50Z2Vub2xvZ3ksIDIwMywgVzEzOS1XMTQ1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjIyMTQvYWpyLjEzLjExNjU0ZAIDD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc5MDcnIHRhcmdldD0nX2JsYW5rJz40PC9hPl0BNAE0wwJBbGx1cmksIEsuQy4sIFRhaGFyaSwgQS5LLiwgV2FobCwgUi5MLiwgS29jaCwgVy4sIENodW5nLCBDLkguIGFuZCBTdWJyYW1hbmlhbSwgUi5NLiAoMjAxNCkgUHJvZ25vc3RpYyBWYWx1ZSBvZiBGREcgUEVUIE1ldGFib2xpYyBUdW1vciBWb2x1bWUgaW4gSHVtYW4gUGFwaWxsb21hdmlydXMtUG9zaXRpdmUgU3RhZ2UgSUlJIGFuZCBJViBPcm9waGFyeW5nZWFsIFNxdWFtb3VzIENlbGwgQ2FyY2lub21hLiBBbWVyaWNhbiBKb3VybmFsIG9mIFJvZW50Z2Vub2xvZ3ksIDIwMywgODk3LTkwMy4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4yMjE0L0FKUi4xNC4xMjQ5N2QCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTA4JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNccBWmFpZGksIEguLCBWZWVzLCBILiBhbmQgV2lzc21leWVyLCBNLiAoMjAwOSkgTW9sZWN1bGFyIFBFVC9DVCBJbWFnaW5nLUd1aWRlZCBSYWRpYXRpb24gVGhlcmFweSBUcmVhdG1lbnQgUGxhbm5pbmcuIEFjYWRlbWljIFJhZGlvbG9neSwgMTYsIDExMDgtMTEzMy4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouYWNyYS4yMDA5LjAyLjAxNGQCBQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTA5JyB0YXJnZXQ9J19ibGFuayc+NjwvYT5dATYBNoYCWmFpZGksIEguIGFuZCBFbCBOYXFhLCBJLiAoMjAxMCkgUEVULUd1aWRlZCBEZWxpbmVhdGlvbiBvZiBSYWRpYXRpb24gVGhlcmFweSBUcmVhdG1lbnQgVm9sdW1lczogQSBTdXJ2ZXkgb2YgSW1hZ2UgU2VnbWVudGF0aW9uIFRlY2huaXF1ZXMuIEV1cm9wZWFuIEpvdXJuYWwgb2YgTnVjbGVhciBNZWRpY2luZSBhbmQgTW9sZWN1bGFyIEltYWdpbmcsIDM3LCAyMTY1LTIxODcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy9zMDAyNTktMDEwLTE0MjMtM2QCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTEwJyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN7wBQm95a292LCBZLiBhbmQgRnVua2EtTGVhLCBHLiAoMjAwNikgR3JhcGggQ3V0cyBhbmQgRWZmaWNpZW50IE4tRCBJbWFnZSBTZWdtZW50YXRpb24uIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBDb21wdXRlciBWaXNpb24sIDcwLCAxMDktMTMxLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvczExMjYzLTAwNi03OTM0LTVkAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkxMScgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4ATj2AVpoYW5nLCBLLiwgWmhhbmcsIEwuLCBTb25nLCBILiBhbmQgWmhvdSwgVy4gKDIwMTApIEFjdGl2ZSBDb250b3VycyB3aXRoIFNlbGVjdGl2ZSBMb2NhbCBvciBHbG9iYWwgU2VnbWVudGF0aW9uOiBBIE5ldyBGb3JtdWxhdGlvbiBhbmQgTGV2ZWwgU2V0IE1ldGhvZC4gSW1hZ2UgYW5kIFZpc2lvbiBDb21wdXRpbmcsIDI4LCA2NjjigJM2NzYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLmltYXZpcy4yMDA5LjEwLjAwOWQCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTEyJyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBOYABQWNoYW50YSwgUi4sIFNoYWppLCBBLiwgU21pdGgsIEsuLCBMdWNjaGksIEEuLCBGdWEsIFAuIGFuZCBTw7xzc3RydW5rLCBTLiAoMjAxMCkgU0xJQyBTdXBlcnBpeGVscy4gRVBGTCBUZWNobmljYWwgUmVwb3J0IDE0OTMwMC5kAgkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkxMycgdGFyZ2V0PSdfYmxhbmsnPjEwPC9hPl0CMTACMTC7AU5pc2hpbyBNLiBLb25vLCBBLksuLCBLb3lhbWEsIEguLCBOaXNoaWksIFQuIGFuZCBTdWdpbXVyYSwgSy4gKDIwMTUpIFR1bW9yIFNlZ21lbnRhdGlvbiBvbiBGREctUEVUOiBVc2VmdWxuZXNzIG9mIExvY2FsbHkgQ29ubmVjdGVkIENvbmRpdGlvbmFsIFJhbmRvbSBGaWVsZHMuIFNQSUUgUHJvY2VlZGluZ3MsIDk0MTMsIDYgcC5kAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkxNCcgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTGpAk1hc3NvcHRpZXIsIEwuIGFuZCBDYXNjaWFybywgUy4gKDIwMDcpIEZ1bGx5IEF1dG9tYXRpYyBMaXZlciBTZWdtZW50YXRpb24gdGhyb3VnaCBHcmFwaC1DdXQgVGVjaG5pcXVlLiBQcm9jZWVkaW5ncyBvZiAyOXRoIEFubnVhbCBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb2YgdGhlIElFRUUgRW5naW5lZXJpbmcgaW4gTWVkaWNpbmUgYW5kIEJpb2xvZ3kgU29jaWV0eSwgTHlvbiwgMjItMjYgQXVndXN0IDIwMDcsIDUyNDMtNTI0Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5L2llbWJzLjIwMDcuNDM1MzUyNGQCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTE1JyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMtEBSGVybmFuZG8sIEQuLCBLZWxsbWFuLCBQLiwgSGFsZGFyLCBKLlAuIGFuZCBMaWFuZywgWi5QLiAoMjAxMCkgUm9idXN0IFdhdGVyL0ZhdCBTZXBhcmF0aW9uIGluIHRoZSBQcmVzZW5jZSBvZiBMYXJnZSBGaWVsZCBJbmhvbW9nZW5laXRpZXMgVXNpbmcgYSBHcmFwaCBDdXQgQWxnb3JpdGhtLiBNYWduZXRpYyBSZXNvbmFuY2UgaW4gTWVkaWNpbmUsIDYzLCA3OS05MC5kAgwPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkxNicgdGFyZ2V0PSdfYmxhbmsnPjEzPC9hPl0CMTMCMTPIAkNoZW4sIFMuRi4sIENhbywgTC5MLiwgTGl1LCBKLlouIGFuZCBUYW5nLCBYLk8uICgyMDA2KSBBdXRvbWF0aWMgU2VnbWVudGF0aW9uIG9mIEx1bmcgRmllbGRzIGZyb20gUmFkaW9ncmFwaGljIEltYWdlcyBvZiBTQVJTIFBhdGllbnRzIFVzaW5nIGEgTmV3IEdyYXBoIEN1dHMgQWxnb3JpdGhtLiBQcm9jZWVkaW5ncyBvZiAxOHRoIEludGVybmF0aW9uYWwgQ29uZmVyZW5jZSBvbiBQYXR0ZXJuIFJlY29nbml0aW9uIChJQ1BSKSwgSG9uZyBLb25nLCAyMC0yNCBBdWd1c3QgMjAwNiwgMjcxLTI3NC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5L0lDUFIuMjAwNi4zMDRkAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkxNycgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTTqAUJhbGxhbmdhbiwgQy4sIFdhbmcsIFguLCBGdWxoYW0sIE0uLCBFYmVybCwgUy4gYW5kIEZlbmcsIEQuRC4gKDIwMTMpIEx1bmcgVHVtb3IgU2VnbWVudGF0aW9uIGluIFBFVCBJbWFnZXMgVXNpbmcgR3JhcGggQ3V0cy4gQ29tcHV0ZXIgTWV0aG9kcyBhbmQgUHJvZ3JhbXMgaW4gQmlvbWVkaWNpbmUsIDEwOSwgMjYwLTI2OC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouY21wYi4yMDEyLjEwLjAwOWQCDg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTE4JyB0YXJnZXQ9J19ibGFuayc+MTU8L2E+XQIxNQIxNdgCSGFuLCBELiwgQmF5b3V0aCwgSi4sIFNvbmcsIFEuLCBUYXVyYW5pLCBBLiwgU29ua2EsIE0uLCBCdWF0dGksIEouLCBldCBhbC4gKDIwMTEpIEdsb2JhbGx5IE9wdGltYWwgVHVtb3IgU2VnbWVudGF0aW9uIGluIFBFVC1DVCBJbWFnZXM6IEEgR3JhcGgtQmFzZWQgQ28tU2VnbWVudGF0aW9uIE1ldGhvZC4gSW46IFN6w6lrZWx5LCBHLiBhbmQgSGFobiwgSC5LLiwgRWRzLiwgSW5mb3JtYXRpb24gUHJvY2Vzc2luZyBpbiBNZWRpY2FsIEltYWdpbmcsIENoYXAuIDIyLCBTcHJpbmdlciwgQmVybGluLCAyNDUtMjU2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvOTc4LTMtNjQyLTIyMDkyLTBfMjFkAg8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkxOScgdGFyZ2V0PSdfYmxhbmsnPjE2PC9hPl0CMTYCMTa2AU90c3UsIE4uICgxOTc5KSBBIFRocmVzaG9sZCBTZWxlY3Rpb24gTWV0aG9kIGZyb20gR3JheS1MZXZlbCBIaXN0b2dyYW1zLiBJRUVFIFRyYW5zYWN0aW9ucyBvbiBTeXN0ZW1zLCBNYW4gYW5kIEN5YmVybmV0aWNzLCA5LCA2Mi02Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5L1RTTUMuMTk3OS40MzEwMDc2ZAIQD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc5MjAnIHRhcmdldD0nX2JsYW5rJz4xNzwvYT5dAjE3AjE34wFMZWUsIEouQS4gKDIwMTApIFNlZ21lbnRhdGlvbiBvZiBQb3NpdHJvbiBFbWlzc2lvbiBUb21vZ3JhcGh5IEltYWdlczogU29tZSBSZWNvbW1lbmRhdGlvbnMgZm9yIFRhcmdldCBEZWxpbmVhdGlvbiBpbiBSYWRpYXRpb24gT25jb2xvZ3kuIFJhZGlvdGhlcmFweSBhbmQgT25jb2xvZ3ksIDk2LCAzMDItMzA3Ljxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLnJhZG9uYy4yMDEwLjA3LjAwM2QCEQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTIxJyB0YXJnZXQ9J19ibGFuayc+MTg8L2E+XQIxOAIxOOYCVG9yaWdpYW4sIEQuQS4sIExvcGV6LCBSLkYuLCBBbGFwYXRpLCBTLiwgQm9kYXBhdGksIEcuLCBIb2ZoZWlueiwgRi4sIHZhbiBkZW4gSG9mZiwgSi4sIGV0IGFsLiAoMjAxMSkgRmVhc2liaWxpdHkgYW5kIFBlcmZvcm1hbmNlIG9mIE5vdmVsIFNvZnR3YXJlIHRvIFF1YW50aWZ5IE1ldGFib2xpY2FsbHkgQWN0aXZlIFZvbHVtZXMgYW5kIDNEIFBhcnRpYWwgVm9sdW1lIENvcnJlY3RlZCBTVVYgYW5kIE1ldGFib2xpYyBWb2x1bWV0cmljIFByb2R1Y3RzIG9mIFNwaW5hbCBCb25lIE1hcnJvdyBNZXRhc3Rhc2VzIG9uIDE4Ri1GREctUEVUL0NULiBIZWxsZW5pYyBTb2NpZXR5IG9mIE51Y2xlYXIgTWVkaWNpbmUsIDE0LCA4LTE0LmQCEg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3OTIyJyB0YXJnZXQ9J19ibGFuayc+MTk8L2E+XQIxOQIxOdEBS2lyb3YsIEEuUy4gYW5kIEZhbmNob24sIEwuTS4gKDIwMTQpIFBhdGhvbG9neS1WYWxpZGF0ZWQgUEVUIEltYWdlIERhdGEgU2V0cyBhbmQgVGhlaXIgUm9sZSBpbiBQRVQgU2VnbWVudGF0aW9uLiBDbGluaWNhbCBhbmQgVHJhbnNsYXRpb25hbCBJbWFnaW5nLCAyLCAyNTMtMjY3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvczQwMzM2LTAxNC0wMDY4LTlkAhMPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzkyMycgdGFyZ2V0PSdfYmxhbmsnPjIwPC9hPl0CMjACMjCWAlNyaWRoYXIsIFAuLCBNZXJjaWVyLCBHLiwgVGFuLCBKLiwgVHJ1b25nLCBNLlQuLCBEYWx5LCBCLiBhbmQgU3VicmFtYW5pYW0sIFIuTS4gKDIwMTQpIEZERyBQRVQgTWV0YWJvbGljIFR1bW9yIFZvbHVtZSBTZWdtZW50YXRpb24gYW5kIFBhdGhvbG9naWMgVm9sdW1lIG9mIFByaW1hcnkgSHVtYW4gU29saWQgVHVtb3JzLiBBbWVyaWNhbiBKb3VybmFsIG9mIFJvZW50Z2Vub2xvZ3ksIDIwMiwgMTExNC0xMTE5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjIyMTQvQUpSLjEzLjExNDU2ZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pTVAVPSlNUQQRPSlRSBE9KVFMDT0pVBE9KVk0DT1BKA1BPUwJQUANQU1QFUFNZQ0gDU0FSA1NDRARTR1JFAlNNAlNOA1NOTARTb2Z0AlNTA1RFTAJUSQRVT0FKAlZQA1dFVANXSkEEV0pDRAVXSkNNUARXSkNTBFdKRVQDV0pNBFdKTlMFV0pOU0UFV0pOU1QDV0pWA1dTTgJZTRWAAgEwAzczNwQxNDA4BDE0MDYEMTAwMgQyNDIzAzE2NAM2MTEEMTQ3OAM0NzMDNDkyBDE1NzkEMjQzNwQyNDQyBDI0NDQEMjQyNgQyMzE2AzgwMwQxMDAwAzQ3NgMyMDMEMjQyMgQxMzA0AzUzNQM4ODQDNTMyAzUyOQMyMDcDOTk2BDE1MTcEMjMxNwMxNjADNDc3AzY3NQQxNTczBDE1NzQDNzQzAzUxMwQxNTc1BDI0NDUDMTkxAzgxMgMyNjAEMjQ1NQMxMzYEMjA3NAQxNDkzAzEyMgM5ODkCOTIEMjAzMwMxNzMEMTQ5MgQyNDM4BDE1MTgEMjQ1NAQyNDU3AjY0AjkzBDEzMTEEMjMxNQMyMDgEMjQzMgQyNDYyAzU0MQQxNjkwAzUxMgI2NQMxMDMDMTc2AzExMQM0OTAEMjQ0OQQxMzkxAzIwMgE0AzIwOQQyNDI4Azc0NwQxMjYxBDE1NzgEMTUxOQM1MjcEMTQ3NwQxMjk4BDE5ODAEMjQzNgM1MjUDNDc1BDI0NDMCMzAEMjQzNQMyMzADMTYyBDI0MzEDNTMwAzUyNgMxMjUEMjQyNQM0NzkDNTMxAzY5MQIyOQMxNDQEMTk4NgQxMzk1AzExNAQyNDYxBDI0MjEEMTQxMQMxMDIDMTc1AzY0OAMzOTcEMTc1MwMxNzIEMjQzMwM1OTEDOTkwAjQ1AzU0MwMzMzkEMjQzMAIyOAM0NzgEMjQzOQQyNDYwAzM1NwI0NgMyMTAEMTQ4NQMxNjMDNzg3Azc4NgM5MTcDODE1BDI0NDEEMTQ4NwQxNTc2AzE3NAQyNDM0AzUyOAMyMDUDMTkyAjY5BDI0NTkEMjQ2MwQyNDUzAzczOAQxNDgwBDE1OTADODE0BDE0MDcEMTQ3OQQxMDAzBDI0NDYDNjAxAzgwNgM3ODUEMjQ0NwQyNDUyAzk5NwM2MDYDNzg4Azc5MgQxOTc3AzgxMAM1ODYDNjE0BDE1NzcEMjQ1NgM4MTEDODE2BDE5NzkDNzM2BDEwMDQDNTg3AzgxNwM2MTMDNjAyAzU5MgM1OTMDNzkzBDExODYDNTg4Azc5MAM3ODQDNzM5AzgyMAM2MTIDNzQyAzk5OQM4MjIDOTk4AzU5NgQyNDI0AzYwNQM4MjEDODA0AzYwNAQyNDY0BDE5NzgDODA1Azc5NAM4MjMDODEzAzU4OQM3OTEDNjA5AzYxMAM3NDEDNzQ0AzYwMwM4MDcDNzg5AzgyNAQxMzk0AzU5MAM3MzUDNjAwAzYwNwQxNDg2BDI0NDgDODA4AzUwOQQxMDAxAzU0NwI3MQMyMDYEMjQ0MAMxNDgEMjQ1MAM1MzMDMTM1AzQ3NAQxNTg5AzQ5MQQyMDM0AzIwNAM2NjYDMTA0BDE0MDUEMjQ1OAMxNDYDNTExAzgxOAM1MDIDODA5BDI0NTEDNTA2AzYxNQM0OTMDNTM0AzUxMAI0MQQyNDY1FCsDgAJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkElR+mAL2AOnRfuBXUsXauhomO9zaYI6vXJ/PH9PnLTs=" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=820" title="Open Journal of Medical Imaging">
+                    Open Journal of Medical Imaging</a> &gt; <a href="home?issueid=6902#60058">Vol.5 No.3, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Tumor Segmentation on <sup>18</sup>F FDG-PET Images Using Graph Cut and Local Spatial Information <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Mizuho++Nishio&searchfield=authors&page=1' target='_blank'>Mizuho  Nishio</a><sup>1,2*</sup>, <a href='articles?searchcode=Atsushi+K.++Kono&searchfield=authors&page=1' target='_blank'>Atsushi K.  Kono</a><sup>3</sup>, <a href='articles?searchcode=Kazuhiro++Kubo&searchfield=authors&page=1' target='_blank'>Kazuhiro  Kubo</a><sup>4</sup>, <a href='articles?searchcode=Hisanobu++Koyama&searchfield=authors&page=1' target='_blank'>Hisanobu  Koyama</a><sup>3</sup>, <a href='articles?searchcode=Tatsuya++Nishii&searchfield=authors&page=1' target='_blank'>Tatsuya  Nishii</a><sup>3</sup>, <a href='articles?searchcode=Kazuro++Sugimura&searchfield=authors&page=1' target='_blank'>Kazuro  Sugimura</a><sup>3</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Clinical+PET+Center%2c+Institute+of+Biomedical+Research+and+Innovation%2c+Kobe%2c+Japan&searchfield=affs&page=1' target='_blank'>Clinical PET Center, Institute of Biomedical Research and Innovation, Kobe, Japan</a>.<br /><sup>2</sup><a href='articles?searchcode=Division+of+Functional+and+Diagnostic+Imaging+Research%2c+Department+of+Radiology%2c+Kobe+University+Graduate+School+of+Medicine%2c+Kobe%2c+Japan&searchfield=affs&page=1' target='_blank'>Division of Functional and Diagnostic Imaging Research, Department of Radiology, Kobe University Graduate School of Medicine, Kobe, Japan</a>.<br /><sup>3</sup><a href='articles?searchcode=Division+of+Radiology%2c+Department+of+Radiology%2c+Kobe+University+Graduate+School+of+Medicine%2c+Kobe%2c+Japan&searchfield=affs&page=1' target='_blank'>Division of Radiology, Department of Radiology, Kobe University Graduate School of Medicine, Kobe, Japan</a>.<br /><sup>4</sup><a href='articles?searchcode=Center+for+Radiology+and+Radiation+Oncology%2c+Kobe+University+Hospital%2c+Kobe%2c+Japan&searchfield=affs&page=1' target='_blank'>Center for Radiology and Radiation Oncology, Kobe University Hospital, Kobe, Japan</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ojmi.2015.53022"
+                    target="_blank" onclick='SetNum(60058)'>10.4236/ojmi.2015.53022</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/OJMI_2015092916101563.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60058)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60058' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60058.xml' target='_blank' onclick='SetNum(60058)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    3,615</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    4,704</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60058&JournalID=820' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">The purpose of this study was to develop methodology to segment tumors on <sup>18</sup>F-fluorodeoxyg- lucose (FDG) positron emission tomography (PET) images. Sixty-four metastatic bone tumors were included. Graph cut was used for tumor segmentation, with segmentation energy divided into unary and pairwise terms. Locally connected conditional random fields (LCRF) were proposed for the pairwise term. In LCRF, three-dimensional cubic window with length L was set for each voxel, and voxels within the window were considered for the pairwise term. Three other types of segmentation were applied: region-growing based on 35%, 40%, and 45% of the tumor maximum standardized uptake value (RG35, RG40, and RG45, respectively), SLIC superpixels (SS), and region-based active contour models (AC). To validate the tumor segmentation accuracy, dice similarity coefficients (DSC) were calculated between the result of each technique and manual segmentation. Differences in DSC were tested using the Wilcoxon signed-rank test. Mean DSCs for LCRF at L = 3, 5, 7, and 9 were 0.784, 0.801, 0.809, and 0.812, respectively. Mean DSCs for the other techniques were: RG35, 0.633; RG40, 0.675; RG45, 0.689; SS, 0.709; and AC, 0.758. The DSC differences between LCRF and other techniques were statistically significant (p < 0.05). Tumor segmentation was reliably performed with LCRF.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Image+Segmentation&searchfield=keyword&page=1' target='_blank'>Image Segmentation</a>, <a href='articles?searchcode=+FDG-PET&searchfield=keyword&page=1' target='_blank'> FDG-PET</a>, <a href='articles?searchcode=+Graph+Cut&searchfield=keyword&page=1' target='_blank'> Graph Cut</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Nishio, M. , Kono, A. , Kubo, K. , Koyama, H. , Nishii, T.  and Sugimura, K.   (2015) Tumor Segmentation on <sup>18</sup>F FDG-PET Images Using Graph Cut and Local Spatial Information. <i>Open Journal of Medical Imaging</i>, <b>5</b>, 174-181. doi: <a href='http://dx.doi.org/10.4236/ojmi.2015.53022' target='_blank' onclick='SetNum(60058)'>10.4236/ojmi.2015.53022</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p><sup>18</sup>F-fluorodeoxyglucose (FDG) positron emission tomography (PET) is widely used for the diagnosis and staging of malignant tumors. In addition, FDG-PET can be used to plan radiation therapy and assess treatment effectiveness. More than 1,700,000 clinical PET and positron emission tomography/computed tomography (PET/CT) studies were performed in the USA in 2011 [1] .</p> 
+<p>Visual assessment and quantitative measurements based on region of interest, such as maximum standardized uptake value (SUVmax), have been clinically used to diagnose and stage malignant tumors using FDG-PET. FDG uptake has been studied thoroughly to allow its use as an imaging biomarker in oncology. One such application is tumor segmentation on FDG-PET images to quantify cancer aggressiveness. For example, it has been reported that metabolic tumor volume and total lesion glycolysis, based on functional tumor volume assessed from FDG- PET images, were more reliable predictors of tumor prognosis than SUVmax [2] - [4] . Recent advances in radiation therapy have enabled the precise delivery of a high dose to the target tumor; FDG-PET is the main imaging modality allowing definition of the target tumor based on its metabolic properties [5] . For such oncological applications of FDG-PET, accurate tumor segmentation and estimation of the functional tumor volume are essential.</p> 
+<p>There are several problems for tumor segmentation on FDG-PET images. Although manual segmentation was often used because of its simplicity, it was time-consuming and susceptible to window level settings, and intra- and inter-observer variability [1] [6] . To overcome these problems, automatic and semi-automatic tumor segmentations have been studied, and several methods have been proposed. Zaidi et al. divided these techniques into four categories: 1) image thresholding methods, 2) variational approaches, 3) learning methods, and 4) stochastic modeling-based techniques [6] . Although using these techniques allowed the tumor to be segmented more accurately than with manual segmentation, they suffered from some problems specific to PET. For example, the lower resolution of PET relative to CT renders segmentation challenging, reducing the contrast between objects, with boundaries between the objects in PET images often being unclear. Another problem relates to image processing and smoothing filters. Noise is inherently high in PET images, and thus, image processing and smoothing filters are commonly utilized to reduce it. However, these can obscure tumor boundaries and make it difficult to segment the tumor accurately.</p> 
+<p>To overcome these PET issues, this study proposes a new method of image segmentation based on graph cut [7] . The proposed method efficiently utilizes local spatial information to construct the segmentation energy of graph cut, enabling accurate tumor segmentation. For comparison, three other techniques were also evaluated: region- growing based on 35%, 40%, and 45% of the tumor SUVmax, a region-based active contour model [8] , and simple linear iterative clustering (SLIC) superpixels [9] . The present paper was based on our previous study presented at SPIE medical imaging 2015 [10] .</p> 
+<p class="E-Title1">2. Material and Methods</p> 
+<p>This retrospective study was approved by the institutional review board of our institution. The acquisition of informed consent was waived by the review board.</p> 
+<p class="E-Title2">2.1. Patients and FDG-PET Images</p> 
+<p>Sixty-four bone tumors from 17 patients (11 men and 6 women; mean age, 61 years; range, 21 - 88 years) were included in this study. These bone tumors were clinically suspected to be metastases, and could be detected on FDG-PET images.</p> 
+<p>For each patient, whole body FDG-PET/CT images from the ear to the midthigh were acquired with a combined PET/CT scanner (Discovery 690; GE Healthcare, Waukesha, WI, USA). The PET component of the scanner can acquire 47 transaxial PET images in one bed position, with the following parameters: matrix size, 192 &times; 192 pixels; interslice spacing, 3.27 mm. The technical parameters for the CT component were: 16-detector row helical CT scanner; CT image matrix size, 512 &times; 512 pixels; interslice spacing, 3.27 mm. Patients received an intravenous injection of 160 - 320 MBq of FDG after at least 4 hours of fasting. About 60 minutes after the injection, low-dose CT was performed at a normal expiration position for attenuation correction of PET images. Then, an emission PET scan was performed at 2-min acquisition per bed position using a 3-D acquisition mode and time of flight method. Attenuation-corrected PET images were reconstructed with a 3-D ordered-subset expectation maximization reconstruction algorithm. In this study, only the PET images were analyzed.</p> 
+<p class="E-Title2">2.2. Ground Truth for the Tumor Segmentation</p> 
+<p>To obtain the ground truth for the tumor segmentation, each bone tumor was manually delineated by a consensus between two board-certified radiologists (MN and AKK), who were also certified in diagnostic nuclear medicine. To reduce the computational cost, a 3-D bounding box surrounding the entire tumor was manually set by the radiologists. The radiologists evaluated the SUVmax of the tumor and the coordinates of the voxel where SUVmax was obtained (“the SUVmax voxel”). The FDG-PET images inside the bounding box, the SUVmax of the tumor, and the SUVmax voxel were used in the tumor segmentation. Pre- and post-processing were not utilized.</p> 
+<p class="E-Title2">2.3. Graph Cut and Locally Connected Conditional Random Fields</p> 
+<p>In graph cut, image segmentation is performed via energy minimization [7] . One advantage of graph cut is that the characteristics of images and the target tumor can easily be incorporated into the segmentation energy. Another advantage is that graph cut can be applied to N-dimensional images. In our study, 3-D FDG-PET images were analyzed using graph cut. The segmentation results from graph cut are robust to noise; hence, in the medical field, this technique has been applied to the segmentation of anatomical structures [11] - [13] and to tumor segmentation with FDG-PET [14] [15] .</p> 
+<p>Generally, the segmentation energy of graph cut is divided into two terms, the unary term and the pairwise term. The energy E of the graph cut is represented as follows:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/9-2060167x6.png" /><span class="bracketMark">(1)</span></p> 
+<p>where k is a constant that controls the balance between the unary and pairwise terms; V is the set of all voxels within the PET images; l is a label (0 represents non-tumor and 1 represents tumor); U(v, l) is the unary energy term when assigning a label l to voxel v; N(v) is the set of neighborhood voxels around voxel v; and P(v, w) is the pairwise energy term, which is small when the similarity between voxel v and w is high. Using graph cut, the segmentation energy E can be minimized and labels can be assigned to the set of voxels V.</p> 
+<p>In grid conditional random fields (CRF), a 6- or 26-connected neighborhood is commonly used as N(v), and the segmentation energy represented by Equation (1) can be minimized by using graph cut. In this study, locally connected CRF (LCRF) was proposed as the pairwise term. Compared with the 6- or 26-connected neighborhood, LCRF incorporates local spatial information into the segmentation energy more widely, allowing more reliable tumor segmentation. In LCRF, a 3-D cubic window with length L was set for each voxel, and voxels within the window were considered for the pairwise term. The N(v) of LCRF was represented as the following equation:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/9-2060167x7.png" /><span class="bracketMark"></span></p> 
+<p>where <img src="//html.scirp.org/file/9-2060167x8.png" class="200" /> because L is assumed to be odd, and x<sub>v</sub>, y<sub>v</sub>, z<sub>v</sub> and x<sub>w</sub>, y<sub>w</sub>, z<sub>w</sub> are the x, y, and z-axis coordinates of voxels v and w, respectively. <a href="#f1" target="_self">Figure 1</a> shows a schematic illustration of the set of neighborhood voxels, N(v), used in the pairwise term. As P(v, w), the commonly used energy function was used as follows:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/9-2060167x9.png" /><span class="bracketMark">,</span></p> 
+<p>where I<sub>v</sub> and I<sub>w</sub> are the SUV of voxel v and w, and dist(v, w) is the Euclidean distance between voxel v and w.</p> 
+<p>For the unary term, an adaptive threshold was used. First, the Otsu threshold [16] was applied to the PET images, and each voxel was classified as either a foreground voxel or background voxel on the basis of the Otsu threshold results. Next, an adaptive threshold for the unary term was calculated according to the following equation:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/9-2060167x10.png" /><span class="bracketMark">,</span></p> 
+<p>where A is a parameter; and the mean(foreground_SUV) and mean(background_SUV) are the SUV means for the foreground and background voxels. The unary term U(v, l) is then defined as follows:</p> 
+<p> <img src="//html.scirp.org/file/9-2060167x11.png" class="200" /></p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/9-2060167x13.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/9-2060167x12.png" />(a) (b)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/9-2060167x14.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/9-2060167x15.png" />(c) (d)</p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Schematic illustration of the set of neighborhood voxels for the pairwise term of graph cut. When using graph cut, the neighborhood voxels, N(v), are determined in each voxel v. A 6- or 26-connected neighborhood is commonly used as N(v) in graph cut: (a) shows the 6-connected neighborhood; (b)-(d) show the n(v) of locally connected conditional random fields (LCRF) at L = 3, 5, and 7, respectively. The 26-connected neighborhood is identical to the LCRF when L = 3. In (a)-(d), 6, 26, 124, and 342 pairs are considered for the pairwise term, respectively.</p> 
+</div> 
+<p class="E-Title2">2.4. Other Segmentation Methods</p> 
+<p>To compare the LCRF, three other types of segmentation methods were also applied: region-growing based on 35%, 40%, and 45% of the tumor’s SUVmax (RG35, RG40, and RG45, respectively), a region-based active contour model [8] , and simple linear iterative clustering (SLIC) superpixels [9] .</p> 
+<p class="E-Title2">2.5. Region Growing</p> 
+<p>Region growing was performed for tumor segmentation using the SUVmax of the tumor and the SUVmax voxel as inputs. The seed point for region growing was the SUVmax voxel. The voxels were considered as candidates to be segmented if the SUV value of the voxel was greater than a lower threshold defined as a given percentage of SUVmax (in this study 35%, 40%, or 45%).</p> 
+<p class="E-Title2">2.6. Region-Based Active Contour Model</p> 
+<p>Several methods have been suggested as a region-based active contour (AC) model. In our study, the Selective Binary and Gaussian Filtering Regularized Level Set method was used, which can efficiently determine the contours even if the boundary of the tumor is weak or blurred [8] . In addition, when using this method, the boundaries of a tumor can be detected automatically wherever the initial contour is located in the image. In our study, the initial contour was set at the SUVmax voxel.</p> 
+<p class="E-Title2">2.7. SLIC Superpixels</p> 
+<p>Using SLIC superpixels (SS), sets of pixels can be divided into superpixels, which represent meaningful local structures [9] . Originally, SS used the 5-D space defined by the values L, A, and B of the CIELAB color space and the x and y pixel coordinates. In our study, 4-D space defined by the value of SUV and the x, y, and z voxel coordinates was used, and 3-D FDG-PET images were divided into several superpixels (supervoxels). After performing SS, the supervoxel that included the SUVmax voxel was regarded as the tumor segmentation. Merging of supervoxels was not performed in our study.</p> 
+<p class="E-Title2">2.8. Parameters for the Segmentation Methods</p> 
+<p>In the current study, the following parameters were used for the segmentation methods:</p> 
+<p>1) RG35, RG40, and RG45 have no parameters.</p> 
+<p>2) SS has two parameters: superpixel compactness and the desired number of superpixels. Superpixel compactness ranged from 1 to 10, and the desired number of superpixels ranged from 1 to 20.</p> 
+<p>3) AC has two parameters: standard deviation of the Gaussian ﬁlter and the increase ratio of the level set function when solving the differential equation numerically. The standard deviation of the Gaussian ﬁlter ranged from 0.01 to 0.5. The increase ratio of the level set function ranged from 5 to 35.</p> 
+<p>4) In LCRF, there are three parameters: A of the unary term, L of the pairwise term, and k for controlling the unary term and pairwise term. The range of A was 0.3 - 0.7; that of L was 3 - 9; and that of k was 1 - 50.</p> 
+<p class="E-Title2">2.9. Statistical Analysis</p> 
+<p>To validate the accuracy of tumor segmentation, a Dice similarity coefficient (DSC) was calculated between the manual segmentation and the result of each technique. DSC is one of the most widelyused quantitative metrics to evaluate segmentation accuracy [17] . DSC is defined as<img src="//html.scirp.org/file/9-2060167x16.png" class="200" />, where P is the result of manual segmentation and Q is that of the segmentation technique. The DSC ranges in value from 0 to 1, with 0 indicating no spatial overlap and 1 indicating a complete overlap between the two sets. Differences in DSC were tested using the Wilcoxon signed-rank test. R-3.0.3, a language and environment for statistical computing (available at http://www.R-project.org), was used to perform all statistical analyses. The significance level was set at p ≤ 0.05.</p> 
+<p class="E-Title1">3. Results</p> 
+<p>The DSCs of the segmentation techniques are shown in <a href="#t1" target="_self">Table 1</a>. In each method, the optimal DSC value was selected from the combinations of the parameters. <a href="#t1" target="_self">Table 1</a> also presents the results of the Wilcoxon signed-rank test comparing the LCRF at L = 9 with each other method. As shown, the best mean DSC (DSC = 0.812) was obtained with LCRF at L = 9. The DSC difference between LCRF at L = 9 and LCRF at L = 3 was statistically significant (p = 0.0151). Because LCRF at L = 3 is identical to the grid CRF with a 26-connected neighborhood, this result demonstrates that the DSC of the LCRF was better than that of the conventional grid CRF. <a href="#t1" target="_self">Table 1</a> also shows that LCRF at L = 9 was significantly superior to the other methods: RG35, RG40, RG45, AC, and SS. Representative FDG-PET image and tumor segmentation results are shown in <a href="#f2" target="_self">Figure 2</a>, which demonstrates that the bone tumor was reliably segmented using LCRF at L = 9.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_9-2060167_1.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Dice similarity coefficients between each type of image segmentation method and the manual segmentation, given as a mean and standard deviation across the 64 tumors.</p> 
+</div> 
+<p>Notes: p-values were results obtained from the Wilcoxon signed-rank test between LCRF at L = 9 and each of the other methods.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/9-2060167x17.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. FDG-PET image and tumor segmentation results for an 84-year-old man with a metastatic bone tumor of the right ischium. (a) FDG-PET image, (b) manual segmentation, (c) LCRF at L = 9, (d) AC, (e) SS, (f) RG40. Abbreviations: LCRF: locally connected conditional random field; AC: region- based active contour model; SS: SLIC superpixels; RG40: region-growing based on 40% of the tumor maximum standard uptake value.</p> 
+</div> 
+<p class="E-Title1">4. Discussion</p> 
+<p>In this study, we proposed a new segmentation method for FDG-PET images based on graph cut. This method was applied to the clinical FDG-PET images of patients with metastatic bone tumors. The results of our study show that tumor segmentation was reliably performed using LCRF, and that the performance of LCRF was better than those of the other segmentation methods. In LCRF, the local spatial information was efficiently incorporated into the pairwise term of the segmentation energy, which led to accurate tumor segmentation.</p> 
+<p>Tumor segmentation and the determination of the tumor boundary on FDG-PET images are needed for quantitative evaluation of FDG-PET and guidance for localized cancer therapies (such as radiation therapy and interventional radiology procedures). Apart from manual segmentation, thresholding methods were the most widely used approach in clinical practice for delineating tumors on FDG-PET images. However, sensitivity to noise and inability to handle intensity variations made it difficult to perform tumor segmentation robustly in clinical cases using thresholding methods [16] . A number of alternative methods have been proposed. Among them, Ballangan et al. used graph cut to segment lung cancer on FDG-PET images [14] . Compared with the previous method, the novel advantage of our method was that LCRF can, at least potentially, be combined with any form of U(v, l) and P(v, w), such as the downhill SUV feature proposed by Ballangan et al.</p> 
+<p><a href="#t1" target="_self">Table 1</a> shows that LCRF at L = 9 was superior to that of the grid CRF with 26-connected neighborhood for tumor segmentation (which is identical to LCRF at L = 3). Because U(v, l) and P(v, w) in Equation (1) are identical in both LCRF at L = 9 and the grid CRF with 26-connected neighborhood, the difference in the performance was due to the number of neighborhood voxels incorporated into the pairwise term of the equation. This result suggests that local spatial relationship is useful for accurate tumor segmentation. In contrast to LCRF, the use of local spatial information was limited in the segmentation processes RG35, RG40, RG45, and AC. In RG35, RG40, and RG45, tumor segmentation was affected by the connectivity to the seed point. In AC, the output of the level set function is affected by the image gradient and the means of all tumor and non-tumor voxels. We speculate that the segmentation result of LCRF is better than those of RG35, RG40, RG45, and AC because the local spatial information could be utilized efficiently in LCRF.</p> 
+<p>SS generates superpixels based on clustering of the local neighborhood [9] . Thus, both SS and LCRF utilize local spatial information for image segmentation. However, the distance measure for clustering in SS does not reflect the image feature specific to FDG-PET images because it has been designed for general purpose. Because the unary and pairwise terms of LCRF can be specialized in the segmentation on FDG-PET images, LCRF surpassed SS for tumor segmentation on FDG-PET images.</p> 
+<p>The transition from the tumor to background can be gradual on FDG-PET images, which makes it difficult to segment a tumor accurately. AC, SS, and LCRF can handle this problem by using local or global information from PET images. However, when the SUV distribution of tumor was heterogeneous, the segmentation results using LCRF were more accurate than those of AC and SS, as shown in <a href="#f2" target="_self">Figure 2</a>. This demonstrates that tumor segmentation with LCRF was more robust than with AC and SS.</p> 
+<p>The use of automatic or semi-automatic tumor segmentation has rarely been studied in bone tumor. To our knowledge, only Torigian et al. have evaluated the thresholding methods to segment spinal bone metastases on FDG-PET images [18] . In the current study, the segmentation targets were not limited to spinal bone, and the advanced segmentation technique was applied to clinical FDG-PET images. In metastatic bone tumor, heterogeneity in tumor SUV can frequently be observed because osteolytic and osteoplastic lesions can be combined in one tumor. In addition, the shape of a metastatic bone tumor is often not spherical as metastatic bone tumor invades surrounding tissue along the shape of the bone. Because of these two points, it is difficult to segment a metastatic bone tumor accurately, and the number of studies using automatic or semi-automatic segmentation on FDG-PET images is limited. Because metastatic bone tumors are often treated with radiation therapy, the segmentation of bone tumors will be important for PET-guided radiation therapy.</p> 
+<p>There are several limitations to the current study. First, the numbers of patients and tumors included in this study were small or moderate. For further study, it is necessary to confirm the robustness and applicability of our segmentation method in a clinical setting by using a larger cohort of patients. Second, a widespread major problem for validating an image segmentation method is construction of the ground truth, and this problem was also found in the current study. Although it is highly desirable to validate the segmentation methods with pathology-based ground truth [19] [20] , errors are often introduced due to changes in tissue morphology during excision, ﬁxation, and slicing [19] . In addition, metastatic bone tumor is often diagnosed clinically without pathological evaluation. Therefore, at present it is difficult to use pathology-based ground truth for validation of bone tumor segmentation. If precisely co-registered PET images and pathological images become available, we will validate our segmentation method using the pathology-validated PET images. Third, we did not apply our methodology to co-seg- mentation in PET/CT images. Han et al. [15] used graph cut in order to segment head and neck cancer on FDG- PET/CT images, and segmentation accuracy was improved compared to the graph cuts method solely based on PET images by using both the PET and the CT information. We expect that LCRF can be applied to co-seg- mentation in PET/CT images and improve accuracy in the co-segmentation method.</p> 
+<p class="E-Title1">5. Conclusion</p> 
+<p>A new segmentation method based on graph cut was proposed for FDG-PET images. By using LCRF, local spatial information was efficiently incorporated into the segmentation energy of graph cut. Our results demonstrated that the results of LCRF surpassed those of conventional grid CRF, and that a tumor was more reliably segmented with LCRF than with other techniques.</p>     
+<p class="E-Title1">NOTES</p>  
+<p><sup>*</sup>Corresponding author.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577904' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Foster, B., Bagci, U., Mansoor, A., Xu, Z. and Mollura, D.J. (2014) A Review on Segmentation of Positron Emission Tomography Images. Computers in Biology and Medicine, 50, 76-96. <br/>http://dx.doi.org/10.1016/j.compbiomed.2014.04.014
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577905' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Dibble, E.H., Alvarez, A.C., Truong, M.T., Mercier, G., Cook, E.F. and Subramaniam, R.M. (2012) 18F-FDG Metabolic Tumor Volume and Total Glycolytic Activity of Oral Cavity and Oropharyngeal Squamous Cell Cancer: Adding Value to Clinical Staging. Journal of Nuclear Medicine, 53, 709-715. http://dx.doi.org/10.2967/jnumed.111.099531
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577906' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Paidpally, V., Chirindel, A., Chung, C.H., Richmon, J., Koch, W., Quon, H., et al. (2014) FDG Volumetric Parameters and Survival Outcomes after Definitive Chemoradiotherapy in Patients with Recurrent Head and Neck Squamous Cell Carcinoma. American Journal of Roentgenology, 203, W139-W145. <br/>http://dx.doi.org/10.2214/ajr.13.11654
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577907' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Alluri, K.C., Tahari, A.K., Wahl, R.L., Koch, W., Chung, C.H. and Subramaniam, R.M. (2014) Prognostic Value of FDG PET Metabolic Tumor Volume in Human Papillomavirus-Positive Stage III and IV Oropharyngeal Squamous Cell Carcinoma. American Journal of Roentgenology, 203, 897-903. <br/>http://dx.doi.org/10.2214/AJR.14.12497
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577908' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Zaidi, H., Vees, H. and Wissmeyer, M. (2009) Molecular PET/CT Imaging-Guided Radiation Therapy Treatment Planning. Academic Radiology, 16, 1108-1133. <br/>http://dx.doi.org/10.1016/j.acra.2009.02.014
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577909' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Zaidi, H. and El Naqa, I. (2010) PET-Guided Delineation of Radiation Therapy Treatment Volumes: A Survey of Image Segmentation Techniques. European Journal of Nuclear Medicine and Molecular Imaging, 37, 2165-2187. <br/>http://dx.doi.org/10.1007/s00259-010-1423-3
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577910' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Boykov, Y. and Funka-Lea, G. (2006) Graph Cuts and Efficient N-D Image Segmentation. International Journal of Computer Vision, 70, 109-131. <br/>http://dx.doi.org/10.1007/s11263-006-7934-5
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577911' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Zhang, K., Zhang, L., Song, H. and Zhou, W. (2010) Active Contours with Selective Local or Global Segmentation: A New Formulation and Level Set Method. Image and Vision Computing, 28, 668–676. <br/>http://dx.doi.org/10.1016/j.imavis.2009.10.009
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577912' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Achanta, R., Shaji, A., Smith, K., Lucchi, A., Fua, P. and Süsstrunk, S. (2010) SLIC Superpixels. EPFL Technical Report 149300.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577913' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Nishio M. Kono, A.K., Koyama, H., Nishii, T. and Sugimura, K. (2015) Tumor Segmentation on FDG-PET: Usefulness of Locally Connected Conditional Random Fields. SPIE Proceedings, 9413, 6 p.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577914' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Massoptier, L. and Casciaro, S. (2007) Fully Automatic Liver Segmentation through Graph-Cut Technique. Proceedings of 29th Annual International Conference of the IEEE Engineering in Medicine and Biology Society, Lyon, 22-26 August 2007, 5243-5246. <br/>http://dx.doi.org/10.1109/iembs.2007.4353524
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577915' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Hernando, D., Kellman, P., Haldar, J.P. and Liang, Z.P. (2010) Robust Water/Fat Separation in the Presence of Large Field Inhomogeneities Using a Graph Cut Algorithm. Magnetic Resonance in Medicine, 63, 79-90.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577916' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Chen, S.F., Cao, L.L., Liu, J.Z. and Tang, X.O. (2006) Automatic Segmentation of Lung Fields from Radiographic Images of SARS Patients Using a New Graph Cuts Algorithm. Proceedings of 18th International Conference on Pattern Recognition (ICPR), Hong Kong, 20-24 August 2006, 271-274. <br/>http://dx.doi.org/10.1109/ICPR.2006.304
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577917' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Ballangan, C., Wang, X., Fulham, M., Eberl, S. and Feng, D.D. (2013) Lung Tumor Segmentation in PET Images Using Graph Cuts. Computer Methods and Programs in Biomedicine, 109, 260-268. <br/>http://dx.doi.org/10.1016/j.cmpb.2012.10.009
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577918' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Han, D., Bayouth, J., Song, Q., Taurani, A., Sonka, M., Buatti, J., et al. (2011) Globally Optimal Tumor Segmentation in PET-CT Images: A Graph-Based Co-Segmentation Method. In: Székely, G. and Hahn, H.K., Eds., Information Processing in Medical Imaging, Chap. 22, Springer, Berlin, 245-256. <br/>http://dx.doi.org/10.1007/978-3-642-22092-0_21
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577919' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Otsu, N. (1979) A Threshold Selection Method from Gray-Level Histograms. IEEE Transactions on Systems, Man and Cybernetics, 9, 62-66. <br/>http://dx.doi.org/10.1109/TSMC.1979.4310076
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577920' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Lee, J.A. (2010) Segmentation of Positron Emission Tomography Images: Some Recommendations for Target Delineation in Radiation Oncology. Radiotherapy and Oncology, 96, 302-307.<br/>http://dx.doi.org/10.1016/j.radonc.2010.07.003
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577921' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Torigian, D.A., Lopez, R.F., Alapati, S., Bodapati, G., Hofheinz, F., van den Hoff, J., et al. (2011) Feasibility and Performance of Novel Software to Quantify Metabolically Active Volumes and 3D Partial Volume Corrected SUV and Metabolic Volumetric Products of Spinal Bone Marrow Metastases on 18F-FDG-PET/CT. Hellenic Society of Nuclear Medicine, 14, 8-14.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577922' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Kirov, A.S. and Fanchon, L.M. (2014) Pathology-Validated PET Image Data Sets and Their Role in PET Segmentation. Clinical and Translational Imaging, 2, 253-267. <br/>http://dx.doi.org/10.1007/s40336-014-0068-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577923' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Sridhar, P., Mercier, G., Tan, J., Truong, M.T., Daly, B. and Subramaniam, R.M. (2014) FDG PET Metabolic Tumor Volume Segmentation and Pathologic Volume of Primary Human Solid Tumors. American Journal of Roentgenology, 202, 1114-1119. <br/>http://dx.doi.org/10.2214/AJR.13.11456
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=820" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=820" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=820" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=820" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=820"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=820"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=820" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=820" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=820" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=820" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=820" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=820"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=820"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=820" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=820&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=820&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=820" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=820" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=820" target="_blank">OJMI
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=820" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=820" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=820" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=820" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=820" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=820" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=820" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ojmi.2015.53022" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60058 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +820 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +820 +"&paperid=" +60058 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

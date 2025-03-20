@@ -1,0 +1,1571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Exciton Condensates and Superconductors-Technical Differences and Physical Similarities
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JAMP_2015093011264055.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60077" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60077.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60077" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60077" />
+<meta property="og:title" content="Exciton Condensates and Superconductors-Technical Differences and Physical Similarities" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JAMP2025010216191219.png" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JAMP2025010216191219.png" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Exciton Condensates and Superconductors-Technical Differences and Physical Similarities" />
+<meta name="keywords" content="Exciton Condensate,Entanglement,Coupled Bilayer,Laser Illuminated,Bardeen-Cooper-Schrieffer,Solar Cells" />
+<meta name="description" content="Explore recent theoretical and experimental findings on exciton condensates, including advances in studying layers and coupled bilayers. Discover the Bardeen-Cooper-Schrieffer-like phase and its similarities to superconductors. Learn about measuring different phases of superconductors and the potential for future technical applications." />
+<meta name="citation_journal_title" content="Journal of Applied Mathematics and Physics" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Henning Soller" />
+<meta name="citation_author" content="Henning Soller" />
+<meta name="citation_title" content="Exciton Condensates and Superconductors-Technical Differences and Physical Similarities" />
+<meta name="citation_volume" content="3" />
+<meta name="citation_date" content="2015-09-04" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jamp.2015.39149" />
+<meta name="citation_issnPrint" content="2327-4352" />
+<meta name="citation_issnOnline" content="2327-4379" />
+<meta name="citation_abstract" content="We review several recent theoretical and experimental results in the study of exciton condensates. This includes the present experimental advances in the study of exciton condensates both using layers and coupled bilayers. We will shortly illustrate the different phases of exciton condensates. We focus especially on the Bardeen-Cooper-Schrieffer-like phase and illustrate the similarities to superconductors. Afterwards, we want to illustrate several recent advances and proposals for measuring the different phases of superconductors. In the remainder of this short review, we will provide an outlook for the possibilities and complications for future technical applications of exciton condensates." />
+<meta name="citation_publication_date" content="2015/9/4" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JAMP_2015093011264055.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JAMP_2015093011264055.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60077" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60077" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60077" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60077.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60077.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/4" />
+<meta name="citation_firstpage" content="1218" />
+<meta name="citation_lastpage" content="1225" />
+
+<meta name="dc.title" content="Exciton Condensates and Superconductors-Technical Differences and Physical Similarities" />
+
+<meta name="dc.creator" content="Henning Soller" /><meta name="dcterms.issued" content="2015-09-04" />
+<meta name="dc.description" content="We review several recent theoretical and experimental results in the study of exciton condensates. This includes the present experimental advances in the study of exciton condensates both using layers and coupled bilayers. We will shortly illustrate the different phases of exciton condensates. We focus especially on the Bardeen-Cooper-Schrieffer-like phase and illustrate the similarities to superconductors. Afterwards, we want to illustrate several recent advances and proposals for measuring the different phases of superconductors. In the remainder of this short review, we will provide an outlook for the possibilities and complications for future technical applications of exciton condensates." />
+<meta name="dc.source" content="Journal of Applied Mathematics and Physics" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-04" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jamp.2015.39149" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-04" />
+<meta name="prism.issnPrint" content="2327-4352" />
+<meta name="prism.issnOnline" content="2327-4379" />
+<meta name="prism.publicationName" content="Journal of Applied Mathematics and Physics" />
+<meta name="prism.publicationDate" content="2015-09-04" />
+<meta name="prism.volume" content="3" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="1218" />
+<meta name="prism.doi" content="10.4236/jamp.2015.39149" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60077" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAk0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTA0ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAV5PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1IZW5uaW5nKytTb2xsZXImc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5IZW5uaW5nICBTb2xsZXI8L2E+PHN1cD4qPC9zdXA+IGQCAg9kFgJmDxYCHwQF/AE8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUluc3RpdHV0K2YlYzMlYmNyK1RoZW9yZXRpc2NoZStQaHlzaWslMmMrVW5pdmVyc2l0dCtIZWlkZWxiZXJnJTJjK0hlaWRlbGJlcmclMmMrR2VybWFueSZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkluc3RpdHV0IGbDvHIgVGhlb3JldGlzY2hlIFBoeXNpaywgVW5pdmVyc2l0JiMyMjg7dCBIZWlkZWxiZXJnLCBIZWlkZWxiZXJnLCBHZXJtYW55PC9hPi48YnIgLz5kAgUPFgIfBAUFMiw4MjFkAgYPFgIfBAUFNCwyNjlkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFrQU8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUV4Y2l0b24rQ29uZGVuc2F0ZSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkV4Y2l0b24gQ29uZGVuc2F0ZTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0VudGFuZ2xlbWVudCZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBFbnRhbmdsZW1lbnQ8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStDb3VwbGVkK0JpbGF5ZXImc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gQ291cGxlZCBCaWxheWVyPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rTGFzZXIrSWxsdW1pbmF0ZWQmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gTGFzZXIgSWxsdW1pbmF0ZWQ8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStCYXJkZWVuLUNvb3Blci1TY2hyaWVmZmVyJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEJhcmRlZW4tQ29vcGVyLVNjaHJpZWZmZXI8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStTb2xhcitDZWxscyZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBTb2xhciBDZWxsczwvYT4gZAIKDxYCHwQFsgJTb2xsZXIsIEguICAgKDIwMTUpIEV4Y2l0b24gQ29uZGVuc2F0ZXMgYW5kIFN1cGVyY29uZHVjdG9ycy1UZWNobmljYWwgRGlmZmVyZW5jZXMgYW5kIFBoeXNpY2FsIFNpbWlsYXJpdGllcy4gPGk+Sm91cm5hbCBvZiBBcHBsaWVkIE1hdGhlbWF0aWNzIGFuZCBQaHlzaWNzPC9pPiwgPGI+MzwvYj4sIDEyMTgtMTIyNS4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2phbXAuMjAxNS4zOTE0OScgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDA3NyknPjEwLjQyMzYvamFtcC4yMDE1LjM5MTQ5PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIdFjpmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg0OTgnIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQExzwFMb3pvdmlrLCBZLkUuIGFuZCBCZXJtYW4sIE8uTC4gKDE5OTYpIFBoYXNlIFRyYW5zaXRpb25zIGluIGEgU3lzdGVtIG9mIFR3byBDb3VwbGVkIFF1YW50dW0gV2VsbHMuIEpvdXJuYWwgb2YgRXhwZXJpbWVudGFsIGFuZCBUaGVvcmV0aWNhbCBQaHlzaWNzIExldHRlcnMsIDY0LCA1NzMtNTc5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMzQvMS41NjcyNjRkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODQ5OScgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATKLAUJvc2UsIFMuTi4gKDE5MjQpIFBsYW5ja3MgR2VzZXR6IHVuZCBMaWNodHF1YW50ZW5oeXBvdGhlc2UuIFplaXRzY2hyaWZ0IGbDvHIgUGh5c2lrLCAyNiwgMTc4LTE4MS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDA3L0JGMDEzMjczMjZkAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUwMCcgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATPEAUJyZXllbCwgRC4sIFNjaG1pZHQsIFQuTC4gYW5kIEtvbW5paywgQS4gKDIwMTIpIFJ5ZGJlcmcgQ3J5c3RhbGxpemF0aW9uIERldGVjdGlvbiBieSBTdGF0aXN0aWNhbCBNZWFucy4gUGh5c2ljYWwgUmV2aWV3IEEsIDg2LCBBcnRpY2xlIElEOiAwMjM0MDUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2QS44Ni4wMjM0MDVkAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUwMScgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATThAVJvYmljaGVhdXgsIEYuLCBIZXJuw6FuZGV6LCBKLlYuLCBUb3AmIzIzMTt1LCBULiBhbmQgTm9vcmRhbSwgTC5ELiAoMjAwNCkgU2ltdWxhdGlvbiBvZiBDb2hlcmVudCBJbnRlcmFjdGlvbnMgYmV0d2VlbiBSeWRiZXJnIEF0b21zLiBQaHlzaWNhbCBSZXZpZXcgQSwgNzAsIEFydGljbGUgSUQ6IDA0MjcwMy4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXZBLjcwLjA0MjcwM2QCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NTAyJyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNZ4BQmFyZGVlbiwgSi4sIENvb3BlciwgTC5OLiBhbmQgU2NocmllZmZlciwgSi5SLiAoMTk1NykgVGhlb3J5IG9mIFN1cGVyY29uZHVjdGl2aXR5LiBQaHlzaWNhbCBSZXZpZXcsIDEwOCwgMTE3NS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXYuMTA4LjExNzVkAgUPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUwMycgdGFyZ2V0PSdfYmxhbmsnPjY8L2E+XQE2ATZxT25uZXMsIEguSy4gKDE5MTEpIFRoZSBSZXNpc3RhbmNlIG9mIFB1cmUgTWVyY3VyeSBhdCBIZWxpdW0gVGVtcGVyYXR1cmVzLiBDb21tdW4uIFBoeXMuIExhYi4gVW5pdi4gTGVpZGVuLCAxMiwgMS5kAgYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUwNCcgdGFyZ2V0PSdfYmxhbmsnPjc8L2E+XQE3ATeOAUtpdGFldiwgQS5ZLiAoMjAwMSkgVW5wYWlyZWQgTWFqb3JhbmEgRmVybWlvbnMgaW4gUXVhbnR1bSBXaXJlcy4gUGh5c2ljcy1Vc3Bla2hpLCA0NCwgMTMxLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwNzAvMTA2My03ODY5LzQ0LzEwUy9TMjlkAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUwNScgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4ATjIAUFsdGxhbmQsIEEuIGFuZCBaaXJuYmF1ZXIsIE0uUi4gKDE5OTcpIE5vbnN0YW5kYXJkIFN5bW1ldHJ5IENsYXNzZXMgaW4gTWVzb3Njb3BpYyBOb3JtYWwtU3VwZXJjb25kdWN0aW5nIEh5YnJpZCBTdHJ1Y3R1cmVzLiBQaHlzaWNhbCBSZXZpZXcgQiwgNTUsIDExNDIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2Qi41NS4xMTQyZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg1MDYnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5zgFTb2xsZXIsIEguIGFuZCBCcmV5ZWwsIEQuICgyMDEzKSBTaWduYXR1cmVzIGluIHRoZSBDb25kdWN0YW5jZSBmb3IgUGhhc2UgVHJhbnNpdGlvbnMgaW4gRXhjaXRvbmljIFN5c3RlbXMuIE1vZGVybiBQaHlzaWNzIExldHRlcnMgQiwgMjcsIEFydGljbGUgSUQ6IDEzNTAxODUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE0Mi9TMDIxNzk4NDkxMzUwMTg1NmQCCQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NTA3JyB0YXJnZXQ9J19ibGFuayc+MTA8L2E+XQIxMAIxMLwBU2VyYWRqZWgsIEIuICgyMDEyKSBNYWpvcmFuYSBFZGdlIE1vZGVzIG9mIFRvcG9sb2dpY2FsIEV4Y2l0b24gQ29uZGVuc2F0ZSB3aXRoIFN1cGVyY29uZHVjdG9ycy4gUGh5c2ljYWwgUmV2aWV3IEIsIDg2LCBBcnRpY2xlIElEOiAxMjExMDEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9waHlzcmV2Yi44Ni4xMjExMDFkAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUwOCcgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTHxAUJ1ZGljaCwgSi5DLiwgVHJhdXpldHRlbCwgQi4gYW5kIE1pY2hldHRpLCBQLiAoMjAxNCkgVGltZSBSZXZlcnNhbCBTeW1tZXRyaWMgVG9wb2xvZ2ljYWwgRXhjaXRvbiBDb25kZW5zYXRlIGluIEJpbGF5ZXIgSGdUZSBRdWFudHVtIFdlbGxzLiBQaHlzaWNhbCBSZXZpZXcgTGV0dGVycywgMTEyLCBBcnRpY2xlIElEOiAxNDY0MDUuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXZMZXR0LjExMi4xNDY0MDVkAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUwOScgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTKOAVNub2tlLCBELiAoMjAwMikgU3BvbnRhbmVvdXMgQm9zZSBDb2hlcmVuY2Ugb2YgRXhjaXRvbnMgYW5kIFBvbGFyaXRvbnMuIFNjaWVuY2UsIDI5OCwgMTM2OC0xMzcyLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEyNi9zY2llbmNlLjEwNzgwODJkAgwPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUxMCcgdGFyZ2V0PSdfYmxhbmsnPjEzPC9hPl0CMTMCMTOJAkcmIzIyODtydG5lciwgQS4sIFByZWNodGVsLCBMLiwgU2NodWgsIEQuLCBIb2xsZWl0bmVyLCBBLlcuIGFuZCBLb3R0aGF1cywgSi5QLiAoMjAwNykgTWljcm9wYXR0ZXJuZWQgRWxlY3Ryb3N0YXRpYyBUcmFwcyBmb3IgSW5kaXJlY3QgRXhjaXRvbnMgaW4gQ291cGxlZCBHYUFzIFF1YW50dW0gV2VsbHMuIFBoeXNpY2FsIFJldmlldyBCLCA3NiwgQXJ0aWNsZSBJRDogMDg1MzA0Ljxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2Qi43Ni4wODUzMDRkAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUxMScgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTTxAUNvbXRlLCBDLiBhbmQgTm96aWVyZXMsIFAuICgxOTgyKSBFeGNpdG9uIEJvc2UgQ29uZGVuc2F0aW9uOiBUaGUgR3JvdW5kIFN0YXRlIG9mIGFuIEVsZWN0cm9uLUhvbGUgR2FzLUkuIE1lYW4gRmllbGQgRGVzY3JpcHRpb24gb2YgYSBTaW1wbGlmaWVkIE1vZGVsLiBKb3VybmFsIGRlIFBoeXNpcXVlLCA0MywgMTA2OS0xMDgxLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA1MS9qcGh5czowMTk4MjAwNDMwNzAxMDY5MDBkAg4PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUxMicgdGFyZ2V0PSdfYmxhbmsnPjE1PC9hPl0CMTUCMTXPAUhpZ2gsIEEuQS4sIExlb25hcmQsIEouUi4sIEhhbW1hY2ssIEEuVC4sIEZvZ2xlciwgTS5NLiwgQnV0b3YsIEwuVi4sIEthdm9raW4sIEEuVi4sIGV0IGFsLiAoMjAxMikgU3BvbnRhbmVvdXMgQ29oZXJlbmNlIGluIGEgQ29sZCBFeGNpdG9uIEdhcy4gTmF0dXJlLCA0ODMsIDU4NC01ODguIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAzOC9uYXR1cmUxMDkwM2QCDw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NTEzJyB0YXJnZXQ9J19ibGFuayc+MTY8L2E+XQIxNgIxNooCWndpZXJsZWluLCBNLlcuLCBTdGFuLCBDLkEuLCBTY2h1bmNrLCBDLkguLCBSYXVwYWNoLCBTLk0uRi4sIEtlcm1hbiwgQS5KLiBhbmQgS2V0dGVybGUsIFcuICgyMDA0KSBDb25kZW5zYXRpb24gb2YgUGFpcnMgb2YgRmVybWlvbmljIEF0b21zIG5lYXIgYSBGZXNoYmFjaCBSZXNvbmFuY2UuIFBoeXNpY2FsIFJldmlldyBMZXR0ZXJzLCA5MiwgQXJ0aWNsZSBJRDogMTIwNDAzLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2TGV0dC45Mi4xMjA0MDNkAhAPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUxNCcgdGFyZ2V0PSdfYmxhbmsnPjE3PC9hPl0CMTcCMTf2AUdvcmJhY2hldiwgUi5WLiwgR2VpbSwgQS5LLiwgS2F0c25lbHNvbiwgTS5JLiwgTm92b3NlbG92LCBLLlMuLCBUdWRvcm92c2tpeSwgVC4sIEdyaWdvcmlldmEsIEkuVi4sIGV0IGFsLiAoMjAxMikgU3Ryb25nIENvdWxvbWIgRHJhZyBhbmQgQnJva2VuIFN5bW1ldHJ5IGluIERvdWJsZS1MYXllciBHcmFwaGVuZS4gTmF0dXJlIFBoeXNpY3MsIDgsIDg5Ni05MDEuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDM4L25waHlzMjQ0MWQCEQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NTE1JyB0YXJnZXQ9J19ibGFuayc+MTg8L2E+XQIxOAIxOO8BQXN0cmFraGFyY2hpaywgRy5FLiwgQm9yb25hdCwgSi4sIEt1cmJha292LCBJLkwuIGFuZCBMb3pvdmlrLCBZLkUuICgyMDA3KSBRdWFudHVtIFBoYXNlIFRyYW5zaXRpb24gaW4gYSBUd28tRGltZW5zaW9uYWwgU3lzdGVtIG9mIERpcG9sZXMuIFBoeXNpY2FsIFJldmlldyBMZXR0ZXJzLCA5OCwgQXJ0aWNsZSBJRDogMDYwNDA1Ljxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2TGV0dC45OC4wNjA0MDVkAhIPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUxNicgdGFyZ2V0PSdfYmxhbmsnPjE5PC9hPl0CMTkCMTnKAUJyZXllbCwgRC4sIFNvbGxlciwgSC4sIFNjaG1pZHQsIFQuTC4gYW5kIEtvbW5paywgQS4gKDIwMTQpIERldGVjdGluZyBhbiBFeGNpdG9uIENyeXN0YWwgYnkgU3RhdGlzdGljYWwgTWVhbnMuIFBoeXNpY2EgQjogQ29uZGVuc2VkIE1hdHRlciwgNDQxLCAzMy0zNi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucGh5c2IuMjAxNC4wMS4wNDJkAhMPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUxNycgdGFyZ2V0PSdfYmxhbmsnPjIwPC9hPl0CMjACMjCWAVN1LCBKLkouIGFuZCBNYWNEb25hbGQsIEEuSC4gKDIwMDgpIEhvdyB0byBNYWtlIGEgQmlsYXllciBFeGNpdG9uIENvbmRlbnNhdGUgRmxvdy4gTmF0dXJlIFBoeXNpY3MsIDQsIDc5OS04MDIuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDM4L25waHlzMTA1NWQCFA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NTE4JyB0YXJnZXQ9J19ibGFuayc+MjE8L2E+XQIyMQIyMc4BTWluLCBILiwgQmlzdHJpdHplciwgUi4sIFN1LCBKLkouIGFuZCBNYWNEb25hbGQsIEEuSC4gKDIwMDgpIFJvb20tVGVtcGVyYXR1cmUgU3VwZXJmbHVpZGl0eSBpbiBHcmFwaGVuZSBCaWxheWVycy4gUGh5c2ljYWwgUmV2aWV3IEIsIDc4LCBBcnRpY2xlIElEOiAxMjE0MDEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2Qi43OC4xMjE0MDFkAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUxOScgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjLVAUtoYXJpdG9ub3YsIE0uWS4gYW5kIEVmZXRvdiwgSy5CLiAoMjAwOCkgRWxlY3Ryb24gU2NyZWVuaW5nIGFuZCBFeGNpdG9uaWMgQ29uZGVuc2F0aW9uIGluIERvdWJsZS1MYXllciBHcmFwaGVuZSBTeXN0ZW1zLiBQaHlzaWNhbCBSZXZpZXcgQiwgNzgsIEFydGljbGUgSUQ6IDI0MTQwMS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXZCLjc4LjI0MTQwMWQCFg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NTIwJyB0YXJnZXQ9J19ibGFuayc+MjM8L2E+XQIyMwIyM8ABTmFuZGksIEQuLCBGaW5jaywgQS5ELksuLCBFaXNlbnN0ZWluLCBKLlAuLCBQZmVpZmZlciwgTC5OLiBhbmQgV2VzdCwgSy5XLiAoMjAxMikgRXhjaXRvbiBDb25kZW5zYXRpb24gYW5kIFBlcmZlY3QgQ291bG9tYiBEcmFnLiBOYXR1cmUsIDQ4OCwgNDgxLTQ4NC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDM4L25hdHVyZTExMzAyZAIXD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg1MjEnIHRhcmdldD0nX2JsYW5rJz4yNDwvYT5dAjI0AjI0jQJEb2xjaW5pLCBGLiwgUmFpbmlzLCBELiwgVGFkZGVpLCBGLiwgUG9saW5pLCBNLiwgRmF6aW8sIFIuIGFuZCBNYWNEb25hbGQsIEEuSC4gKDIwMTApIEJsb2NrYWRlIGFuZCBDb3VudGVyZmxvdyBTdXBlcmN1cnJlbnQgaW4gRXhjaXRvbi1Db25kZW5zYXRlIEpvc2VwaHNvbiBKdW5jdGlvbnMuIFBoeXNpY2FsIFJldmlldyBMZXR0ZXJzLCAxMDQsIEFydGljbGUgSUQ6IDAyNzAwNC48YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDMvUGh5c1JldkxldHQuMTA0LjAyNzAwNGQCGA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NTIyJyB0YXJnZXQ9J19ibGFuayc+MjU8L2E+XQIyNQIyNd0BU29sbGVyLCBILiwgRG9sY2luaSwgRi4gYW5kIEtvbW5paywgQS4gKDIwMTIpIE5hbm90cmFuc2Zvcm1hdGlvbiBhbmQgQ3VycmVudCBGbHVjdHVhdGlvbnMgaW4gRXhjaXRvbiBDb25kZW5zYXRlIEp1bmN0aW9ucy4gUGh5c2ljYWwgUmV2aWV3IExldHRlcnMsIDEwOCwgQXJ0aWNsZSBJRDogMTU2NDAxLiBodHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXZMZXR0LjEwOC4xNTY0MDFkAhkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUyMycgdGFyZ2V0PSdfYmxhbmsnPjI2PC9hPl0CMjYCMjbZAVNvbGxlciwgSC4gYW5kIEtvbW5paywgQS4gKDIwMTMpIEN1cnJlbnQgTm9pc2UgYW5kIEhpZ2hlciBPcmRlciBGbHVjdHVhdGlvbnMgaW4gU2VtaWNvbmR1Y3RpbmcgQmlsYXllciBTeXN0ZW1zLiBGbHVjdHVhdGlvbiBhbmQgTm9pc2UgTGV0dGVycywgMTIsIEFydGljbGUgSUQ6IDEzNDAwMDE0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExNDIvUzAyMTk0Nzc1MTM0MDAwMTRkAhoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODUyNCcgdGFyZ2V0PSdfYmxhbmsnPjI3PC9hPl0CMjcCMjfRAU9yZWcsIFkuLCBSZWZhZWwsIEcuIGFuZCB2b24gT3BwZW4sIEYuICgyMDEwKSBIZWxpY2FsIExpcXVpZHMgYW5kIE1ham9yYW5hIEJvdW5kIFN0YXRlcyBpbiBRdWFudHVtIFdpcmVzLiBQaHlzaWNhbCBSZXZpZXcgTGV0dGVycywgMTA1LCBBcnRpY2xlIElEOiAxNzcwMDIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2TGV0dC4xMDUuMTc3MDAyZAIbD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg1MjUnIHRhcmdldD0nX2JsYW5rJz4yODwvYT5dAjI4AjI45QFHYW5nYWRoYXJhaWFoLCBTLiwgQnJhdW5lY2tlciwgQi4sIFNpbW9uLCBQLiBhbmQgTG9zcywgRC4gKDIwMTEpIE1ham9yYW5hIEVkZ2UgU3RhdGVzIGluIEludGVyYWN0aW5nIE9uZS1EaW1lbnNpb25hbCBTeXN0ZW1zLiBQaHlzaWNhbCBSZXZpZXcgTGV0dGVycywgMTA3LCBBcnRpY2xlIElEOiAwMzY4MDEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2TGV0dC4xMDcuMDM2ODAxZAIcD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg1MjYnIHRhcmdldD0nX2JsYW5rJz4yOTwvYT5dAjI5AjI53QFTb2xsZXIsIEguIGFuZCBLb21uaWssIEEuICgyMDE0KSBDaGFyZ2UgVHJhbnNmZXIgU3RhdGlzdGljcyBvZiBUcmFuc3BvcnQgdGhyb3VnaCBNYWpvcmFuYSBCb3VuZCBTdGF0ZXMuIFBoeXNpY2EgRTogTG93LURpbWVuc2lvbmFsIFN5c3RlbXMgYW5kIE5hbm9zdHJ1Y3R1cmVzLCA2MywgOTktMTA0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5waHlzZS4yMDE0LjA1LjAyMGQCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJEB09KQklQSFkET0pCTQNPSkMET0pDQgRPSkNEBE9KQ0UET0pDTQNPSkQFT0pEZXIET0pETQNPSkUET0pFRQRPSkVNBU9KRU1EBU9KRXBpBE9KRVIDT0pGBE9KRkQDT0pHBU9KR2FzBU9KR2VuA09KSQRPSklDBE9KSU0FT0pJTk0DT0pMA09KTQRPSk1DB09KTWV0YWwET0pNSARPSk1JBU9KTUlQBE9KTUwET0pNTQRPSk1OBE9KTVAET0pNUwVPSk1TaQNPSk4GT0pOZXBoA09KTwRPSk9HBk9KT0dhcwRPSk9wBU9KT3BoBU9KT1BNBU9KT1RTC09KUGF0aG9sb2d5BE9KUEMHT0pQQ2hlbQVPSlBlZARPSlBNBE9KUFAET0pQUwdPSlBzeWNoBE9KUkEFT0pSYWQET0pSRARPSlJNA09KUwRPSlNTBU9KU1NUBE9KU1QFT0pTVEEET0pUUgRPSlRTA09KVQRPSlZNA09QSgNQT1MCUFADUFNUBVBTWUNIA1NBUgNTQ0QEU0dSRQJTTQJTTgNTTkwEU29mdAJTUwNURUwCVEkEVU9BSgJWUANXRVQDV0pBBFdKQ0QFV0pDTVAEV0pDUwRXSkVUA1dKTQRXSk5TBVdKTlNFBVdKTlNUA1dKVgNXU04CWU0VgAIBMAM3MzcEMTQwOAQxNDA2BDEwMDIEMjQyMwMxNjQDNjExBDE0NzgDNDczAzQ5MgQxNTc5BDI0MzcEMjQ0MgQyNDQ0BDI0MjYEMjMxNgM4MDMEMTAwMAM0NzYDMjAzBDI0MjIEMTMwNAM1MzUDODg0AzUzMgM1MjkDMjA3Azk5NgQxNTE3BDIzMTcDMTYwAzQ3NwM2NzUEMTU3MwQxNTc0Azc0MwM1MTMEMTU3NQQyNDQ1AzE5MQM4MTIDMjYwBDI0NTUDMTM2BDIwNzQEMTQ5MwMxMjIDOTg5AjkyBDIwMzMDMTczBDE0OTIEMjQzOAQxNTE4BDI0NTQEMjQ1NwI2NAI5MwQxMzExBDIzMTUDMjA4BDI0MzIEMjQ2MgM1NDEEMTY5MAM1MTICNjUDMTAzAzE3NgMxMTEDNDkwBDI0NDkEMTM5MQMyMDIBNAMyMDkEMjQyOAM3NDcEMTI2MQQxNTc4BDE1MTkDNTI3BDE0NzcEMTI5OAQxOTgwBDI0MzYDNTI1AzQ3NQQyNDQzAjMwBDI0MzUDMjMwAzE2MgQyNDMxAzUzMAM1MjYDMTI1BDI0MjUDNDc5AzUzMQM2OTECMjkDMTQ0BDE5ODYEMTM5NQMxMTQEMjQ2MQQyNDIxBDE0MTEDMTAyAzE3NQM2NDgDMzk3BDE3NTMDMTcyBDI0MzMDNTkxAzk5MAI0NQM1NDMDMzM5BDI0MzACMjgDNDc4BDI0MzkEMjQ2MAMzNTcCNDYDMjEwBDE0ODUDMTYzAzc4NwM3ODYDOTE3AzgxNQQyNDQxBDE0ODcEMTU3NgMxNzQEMjQzNAM1MjgDMjA1AzE5MgI2OQQyNDU5BDI0NjMEMjQ1MwM3MzgEMTQ4MAQxNTkwAzgxNAQxNDA3BDE0NzkEMTAwMwQyNDQ2AzYwMQM4MDYDNzg1BDI0NDcEMjQ1MgM5OTcDNjA2Azc4OAM3OTIEMTk3NwM4MTADNTg2AzYxNAQxNTc3BDI0NTYDODExAzgxNgQxOTc5AzczNgQxMDA0AzU4NwM4MTcDNjEzAzYwMgM1OTIDNTkzAzc5MwQxMTg2AzU4OAM3OTADNzg0AzczOQM4MjADNjEyAzc0MgM5OTkDODIyAzk5OAM1OTYEMjQyNAM2MDUDODIxAzgwNAM2MDQEMjQ2NAQxOTc4AzgwNQM3OTQDODIzAzgxMwM1ODkDNzkxAzYwOQM2MTADNzQxAzc0NAM2MDMDODA3Azc4OQM4MjQEMTM5NAM1OTADNzM1AzYwMAM2MDcEMTQ4NgQyNDQ4AzgwOAM1MDkEMTAwMQM1NDcCNzEDMjA2BDI0NDADMTQ4BDI0NTADNTMzAzEzNQM0NzQEMTU4OQM0OTEEMjAzNAMyMDQDNjY2AzEwNAQxNDA1BDI0NTgDMTQ2AzUxMQM4MTgDNTAyAzgwOQQyNDUxAzUwNgM2MTUDNDkzAzUzNAM1MTACNDEEMjQ2NRQrA4ACZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkZNElsS21aNCW3JRoRghXdVAm2sdw5tgmAc3EcmFtfUgI" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=2436" title="Journal of Applied Mathematics and Physics">
+                    Journal of Applied Mathematics and Physics</a> &gt; <a href="home?issueid=6929#60077">Vol.3 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Exciton Condensates and Superconductors-Technical Differences and Physical Similarities <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Henning++Soller&searchfield=authors&page=1' target='_blank'>Henning  Soller</a><sup>*</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Institut+f%c3%bcr+Theoretische+Physik%2c+Universitt+Heidelberg%2c+Heidelberg%2c+Germany&searchfield=affs&page=1' target='_blank'>Institut für Theoretische Physik, Universit&#228;t Heidelberg, Heidelberg, Germany</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jamp.2015.39149"
+                    target="_blank" onclick='SetNum(60077)'>10.4236/jamp.2015.39149</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JAMP_2015093011264055.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60077)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60077' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60077.xml' target='_blank' onclick='SetNum(60077)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    2,821</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    4,269</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60077&JournalID=2436' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">We review several recent theoretical and experimental results in the study of exciton condensates. This includes the present experimental advances in the study of exciton condensates both using layers and coupled bilayers. We will shortly illustrate the different phases of exciton condensates. We focus especially on the Bardeen-Cooper-Schrieffer-like phase and illustrate the similarities to superconductors. Afterwards, we want to illustrate several recent advances and proposals for measuring the different phases of superconductors. In the remainder of this short review, we will provide an outlook for the possibilities and complications for future technical applications of exciton condensates.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Exciton+Condensate&searchfield=keyword&page=1' target='_blank'>Exciton Condensate</a>, <a href='articles?searchcode=+Entanglement&searchfield=keyword&page=1' target='_blank'> Entanglement</a>, <a href='articles?searchcode=+Coupled+Bilayer&searchfield=keyword&page=1' target='_blank'> Coupled Bilayer</a>, <a href='articles?searchcode=+Laser+Illuminated&searchfield=keyword&page=1' target='_blank'> Laser Illuminated</a>, <a href='articles?searchcode=+Bardeen-Cooper-Schrieffer&searchfield=keyword&page=1' target='_blank'> Bardeen-Cooper-Schrieffer</a>, <a href='articles?searchcode=+Solar+Cells&searchfield=keyword&page=1' target='_blank'> Solar Cells</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Soller, H.   (2015) Exciton Condensates and Superconductors-Technical Differences and Physical Similarities. <i>Journal of Applied Mathematics and Physics</i>, <b>3</b>, 1218-1225. doi: <a href='http://dx.doi.org/10.4236/jamp.2015.39149' target='_blank' onclick='SetNum(60077)'>10.4236/jamp.2015.39149</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>Excitons represent one of the most interesting composite particles in modern condensed matter physics. In its simplest form, it is a bound state of an electron and a hole and thus has bosonic properties [1] .</p>
+<p>Such bosonic systems have shown a huge variety of different phases including a Bose-Einstein condensate [2] , the Wigner crystal [3] [4] , superconductivity [5] [6] , a gas of particles [1] and even topological phases in reduced dimensions [7] [8] .</p>
+<p>In this short review, we want to provide an overview of the recent advances in the generation of exciton condensates and their phase structure. We will especially focus on the superconductor-like phase [1] which allows to generate topological phases [9] -[11] .</p>
+<p>We will shortly review the recent experimental advances and results in Section 2 and provide an overview of the different phases of an exciton condensate in Section 3. Section 4 will concentrate on techniques and theoretical proposals for measuring the different phases of an exciton condensate and Section 5 will discuss possible technical applications of exciton condensates in nanoelectronics. We will conclude in Section 6.</p>
+<p class="E-Title1">2. Recent Advances in the Generation of Exciton Condensates</p>
+<p>An exciton is bound pair of an electron and a vacancy (hole) and thus may occur in various circumstances that allow the close proximity of many electrons and holes with some mechanism to forbid immediate recombination [12] [13] . The type of condensation depends on the density [14] : for low densities a Bose-Einstein condensate (BEC) is observed [15] whereas for high densities exciton condensates are assumed to be Barden-Cooper- Schrieffer (BCS) condensates [1] with a density given by</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/17-1720345x5.png" /><span class="bracketMark">(1)</span></p>
+<p>where n is the electronic density, T is the temperature and m is the electron mass.</p>
+<p>The BEC phase emerges at low densities and low enough temperatures, where the key obstacle is to cool down the excitons to a temperature below the critical temperature [16] . So far this has only been achieved via the generation of indirect excitons in a coupled quantum well structure (AlGaAs). Recombination of the excitons allowed to measure the first order coherence function [15] via a Mach-Zehnder measurement as the proof of condensation in space.</p>
+<p>The requirement for BCS condensation being high density and a relatively long lifetime is challenging since typically electron-hole pairs have a very short lifetime [12] . Technically the generation of excitons with long lifetimes in semiconductor heterostructures so far proceeds via three relatively distinct ways:</p>
+<p>First, one may use materials for which the direct (dipole) transition for the annihilation of the electron-hole pair is forbidden. The most promising candidate in this respect has been CuO<sub>2</sub>. In such a setup it is possible to create both direct (electron and vacancy in the same layer) and indirect excitons (electron and vacancy in different layers). However, in spite of several promising results [12] the typical lifetimes of excitons in such materials are still too short to observe the phase structure.</p>
+<p>Second, one may use physically separated coupled bilayers which are illuminated by laser at a given frequency. In this case the excitons generated in the separate layers (indirect excitons) have a very long lifetime due to the spatial separation of the layers but have to be generated externally by a laser field. The massively increased lifetime of indirect excitons in layered semiconductor structures and the possible confinement of the electrons in those structures [13] has triggered interest in this specific realization of excitons.</p>
+<p>The third candidate are again coupled bilayers which are insulated from each other (e.g. Boroncarbide-hete- rostructure) but still close enough so that the electron and hole can feel their mutual Coulomb interaction. In this case an exciton condensate may emerge without the presence of an applied laser field due to the presence of electrons and holes in both layers very similar to the appearance of superconductivity.</p>
+<p>Recently, systems of two graphene layers separated by boron nitride have been realized [17] where two graphene layers are embedded in a boron nitride crystal. The carrier densities in the top and bottom layer can be tunes by top gates and a chemical potential<img src="//html.scirp.org/file/17-1720345x6.png" class="200" />. Drag measurements were performed by applying a drive current in one layer and measuring the induced voltage in the second layer (see <a href="#f1" target="_self">Figure 1</a>).</p>
+<p>These experimental realizations are compatible with the prediction of the possibility of room-temperature superfluidity in layered graphene systems [18] -[21] and render the assumptions in similar works [22] not adequate for realistic systems.</p>
+<p>First results for counterflow transport measurements in a range where condensation is expected have been performed in typical drag configurations, where two Corbino disks are confined in a GaAs/AlGaAs double quantum well structure [23] . The two Corbino disks serve as top and bottom layer of the exciton condensate. In the top Corbino disk a current is induced via a voltage and the induced current in the bottom Corbino disk is measured.</p>
+<p>As the first-order coherence function has been shown to be accessible experimentally and shows the typical behavior of a BEC condensate one of the primary theoretical research directions has been to find ways how to</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/17-1720345x7.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Exciton condensate with two chemical potentials on the different layers and an applied drive-current on the upper layer. A drag voltage can be measured in the lower layer of the two separated layers with a distance d.</p>
+</div>
+<p>investigate the behavior on the BCS side in a similar way.</p>
+<p class="E-Title1">3. Phases of an Exciton Condensate</p>
+<p>Typically we expect to observe a Bose-Einstein condensate (BEC) for low densities whereas for high densities exciton BCS condensates are expected. However, two key characteristics of exciton condensates allow for a richer phase structure.</p>
+<p>The first characteristic is the presence of parallel electric dipole moments of indirect excitons due to the separation and different charges of the electron and the vacancy. These become important at intermediate densities. In this case, the electrons can be excited to form excitons but the excitons also feel the repulsion due to the dipole-interaction</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/17-1720345x8.png" /><span class="bracketMark">(2)</span></p>
+<p>We therefore observe a cubic dependence on the inter-exciton distance r.</p>
+<p>This inter-exciton exchange leads to the fact that excitons may form Wigner crystals [18] [19] as electrons or Rydberg atoms do [3] .</p>
+<p>If the excitons can be observed on a timescale small enough in order to assume that they are fixed in space we should expect the formation of an emergent long-range order of Wigner-crystal type [18] [19] .</p>
+<p>The second characteristic is the BCS phase itself. If we discuss one-dimensional systems two topological phases are possible either with all pairs bound or with two particles at the ends being present unpaired [10] [20] . The topological phase can only be reached under certain conditions when the overall systems behaves as the Kitaev model that we will investigate in more detail later [7] .</p>
+<p class="E-Title1">4. Possible Experiments to Investigate the Phase Structure of Exciton Condensates</p>
+<p>Whereas the BEC phase of excitons has been detected the BCS and intermediary phases still remain to be explored experimentally. The more we move away from the BEC phase the less adequate it will become to investigate excitons only in space but we will need to move to transport measurements.</p>
+<p>First, transport measurements of excitons did not seem to be an adequate mean to explore excitons since these are neutral particles and therefore will not move once localized in space.</p>
+<p>However, as discovered by Su and MacDonald [21] the BCS phase allows the vacancies and electrons to move in separate directions if contacted separately as they are only localized in momentum space [16] . The possibility of superfluid counterflow is a clear prediction to be searched for experimentally.</p>
+<p>Theoretically all important features in this BCS-condensed situation are captured by applying an effectively one-dimensional model for an exciton condensate extending from <img src="//html.scirp.org/file/17-1720345x9.png" class="200" /> to <img src="//html.scirp.org/file/17-1720345x10.png" class="200" /> [23]</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/17-1720345x11.png" /><span class="bracketMark">(3)</span></p>
+<p>where <img src="//html.scirp.org/file/17-1720345x12.png" class="200" /> is the two-layer spinor and <img src="//html.scirp.org/file/17-1720345x13.png" class="200" /> describes the electron (vacancy) single-particle term of the top/ bottom layer. The interlayer interaction is described by an exciton order parameter ∆.</p>
+<p>The first and most intriguing prediction from this model is that for voltages below the gap of the exciton condensate the top-current <img src="//html.scirp.org/file/17-1720345x14.png" class="200" /> is equal and opposite to the bottom-current [21] [24] . This feature is remarkably stable upon finite temperature [25] . In spite of the fact that the electron and the vacancy represent a two-particle system the fact that both particles dwell in separate layers gives rise to the fact that the Johnson-Nyquist and shot noise only show one-particle behavior. However, the noise in this configuration is equal and opposite to the cross-correlation of the two currents which again reveals their closely connected nature [25] .</p>
+<p>The theory described in Equation (3) has also been checked by comparison to the experimental data in [23] and acceptable agreement has been obtained indicating that the experiment in [23] has indeed realized a BCS condensate of excitons [26] .</p>
+<p>The investigation of the non-BCS phases becomes less trivial due to the special nature both of the Kitaev phase and the crystalline phase.</p>
+<p>The crystalline phase emerges as a consequence of the dipole interaction of excitons. It can be detected in three ways: either by modern spectroscopic techniques measuring the distribution function of generated excitons or the pair correlation function or by a transport measurement using the photoelectric effect.</p>
+<p>We will first discuss the two possibilities to measure the phase transition by modern spectroscopic techniques. In this case one focusses on physically separated bilayers and extremely short laser pulses and experimental of τ &lt; 0.1 ns so that the movement of the excitons can be neglected [19] . In this case, the electrons of the underlying system can be effectively regarded as a two-level system (the first level corresponding to typical electrons and the second level corresponding to excitons) [19] in accordance with previous studies of Rydberg atoms [4]</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/17-1720345x15.png" /><span class="bracketMark">(4)</span></p>
+<p>where <img src="//html.scirp.org/file/17-1720345x16.png" class="200" /> refers to the transition frequency between the electronic and the exciton state, <img src="//html.scirp.org/file/17-1720345x17.png" class="200" />is the Rabi frequency of the system and <img src="//html.scirp.org/file/17-1720345x18.png" class="200" /> is the dipole interaction strength. The Pauli matrices act on the two-level system of each of the N electrons and <img src="//html.scirp.org/file/17-1720345x19.png" class="200" /> refers to the coordinates of the electron.</p>
+<p>The Hamiltonian in Equation (4) can be numerically simulated for a finite system of size L. In this case, the correlation function clearly shows the transition from a liquid to a crystalline phase. For weak interactions (blue curve in <a href="#f2" target="_self">Figure 2</a>) almost no correlation of the excitons can be observed whereas for strong interaction the system exhibits clear crystalline correlations (red curve in <a href="#f2" target="_self">Figure 2</a>). It also exhibits a radius around every electron where no exciton can be formed due to interaction, known as blockade radius due to the repulsive interaction.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/17-1720345x20.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Illustrative correlation function in an excitonic bilayer system of size L described by the Hamiltonian in Equation (4). The blue curve refers to weakly interacting excitons and the red curve refers to strongly interacting excitons.</p>
+</div>
+<p>The same behavior can also be extracted by exploring the distribution function or respectively the corresponding moments of the number of excitons. The number of excitons drops by increasing interaction but the variance first increases with increasing interaction whereas for the interaction being larger than a critical value it sharply drops. This change can be associated to the formation of crystalline order [19] .</p>
+<p>However, the crystalline phase cannot just be observed by spectroscopic measurements, but also by exploring the photoelectric effect in an exciton bilayer.</p>
+<p>If we assume no interaction the Hamiltonian in Equation (4) becomes exactly solvable and the number density of excitons is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/17-1720345x21.png" /><span class="bracketMark">(5)</span></p>
+<p>with <img class="200" data-original="//html.scirp.org/file/17-1720345x22.png" /> being the electron density in the semiconducting material where the exciton condensate is located. This implies that (as the current in the exiton bilayer for voltages below the gap can only be due to excitons) that the current in the top layer is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/17-1720345x23.png" /><span class="bracketMark">(6)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/17-1720345x24.png" /> is the voltage in the top layer, <img class="200" data-original="//html.scirp.org/file/17-1720345x25.png" />is the carrier mobility, W is the width of the bilayer and l is the length. If we do not connect the top layer to an outer voltage source but to the bottom layer there could be stable finite voltage solution corresponding to</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/17-1720345x26.png" /><span class="bracketMark">(7)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/17-1720345x27.png" /> corresponds to the bottom current solution for the system in Equation (3).</p>
+<p>Indeed Equation (7) allows always for the trivial solution (<img class="200" data-original="//html.scirp.org/file/17-1720345x28.png" />) but for specific parameter sets also non-trivial solutions (<img class="200" data-original="//html.scirp.org/file/17-1720345x29.png" />) exist which are then the stable solutions and allow for a photoelectric effect [20] .</p>
+<p>If we move to crystalline order the excitons are fixed in space due to their mutual interaction and therefore a photoelectric effect will disappear.</p>
+<p>If we therefore find a solution for which the excitons show a photoelectric effect and vary the interaction in order to suppress it, we have clearly shown the transition to the crystalline phase via a transport measurement.</p>
+<p>Finally, we want to investigate the Kitaev phase. Typically the Kitaev model can be easily realized in a system involving spin-orbit coupled nanowires coupled to superconductors in a magnetic field or ferromagnetic nanowires coupled to superconductors [27] -[29] .</p>
+<p>In the case of exciton condensates, we may also mimick the Kitaev model via coupling a 2D exciton condensate to two p-wave superconductors as shown in <a href="#f3" target="_self">Figure 3</a>. The 2D exciton condensate is then proximity-coupled to the p-wave superconductor.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/17-1720345x30.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Setup for creation of Majorana fermions in an exciton condensate. The exciton condensate is coupled to four metallic leads and two p-wave superconductors.</p>
+</div>
+<p>In this case, the simplest Hamiltonian describing the exciton condensate in the presence of the p-wave super- conductors is given by [9]</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/17-1720345x31.png" /><span class="bracketMark">(8)</span></p>
+<p>where the states a four-spinors <img class="200" data-original="//html.scirp.org/file/17-1720345x32.png" /> and the <img class="200" data-original="//html.scirp.org/file/17-1720345x33.png" /> and <img class="200" data-original="//html.scirp.org/file/17-1720345x34.png" /> matrices operate in particle-hole</p>
+<p>and top-bottom space respectively.</p>
+<p>The spectrum can be revaled by squaring Equation (8) twice [28] [29] which yields the exciton energies dependent on the momentum. The gap near p = 0 is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/17-1720345x35.png" /><span class="bracketMark">(9)</span></p>
+<p>Consequently, we will observe a level-crossing at <img class="200" data-original="//html.scirp.org/file/17-1720345x36.png" /> and for <img class="200" data-original="//html.scirp.org/file/17-1720345x37.png" /> we will observe an exchange-field dominated gap so that the exciton condensate will host Majorana fermions. Since the transition corresponds to a transition out of the topological phase the Majorana fermions will be localised at the ends of the exciton condensate. Also, due to bottom-top symmetry there will be four Majorana fermions at the LB, RB, LT, LB (see <a href="#f3" target="_self">Figure 3</a>) instead of two in the superconducting case [27] [28] . The situation is slightly different when dis- cussing topological exciton condensates [11] .</p>
+<p>The appearance of this phase can be easily observed as the Majorana fermions at the ends of the exciton condensate will open perfectly conducting transmitting channels either through the top or bottom part of the exciton condensate. As the top and bottom part will therefore be perfectly conducting transconductance between the layers has to vanish due to unitarity [9] . The vanishing transconductance is therefore the indicator for the topological phase transition.</p>
+<p>After this investigation of the different phases of exciton condensates, we want to investigate possible technological applications.</p>
+<p class="E-Title1">5. Technical Applications of Exciton Condensates in Nanoelectronics</p>
+<p>Studying technical applicatios of exciton condensates two properties are of high relevance: the existence of superconducting counterflow and the possibility to excite excitons with light.</p>
+<p>The counterflow as such may be used for transformation of current on the nanoscale. In order to do so, one layer of the exciton condensate should not be connected to an outer voltage source but to a nanoelectronical system itself. This means that e.g. the lower layer may directly couple to systems such as quantum point contacts or quantum dots coupled to phonons. Due to the coupling to an additional system the voltage characteristics of the lower layer are changed and the system may be used to transform voltage on the nanoscale [25] .</p>
+<p>Furthermore, the availability of a photoelectric effect allows the usage of exciton condensates as solar cells (see <a href="#f4" target="_self">Figure 4</a>). However, several shortcomings need to be overcome in order to make exciton condensates a future solar cell. The availability of superconducting counterflow in the layers is a clear advantage compared to traditional silicon-based solar cells. However, the contact resistance remains. Also, here we have only shown solar cells to be applicable for light of a single frequency, whereas sunlight has a wide spectrum of frequencies. Therefore, work remains to be done in order to demonstrate the possibility of exciton-condensate based solar cells with better technical capabilities than silicon-based solar cells.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/17-1720345x38.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Exciton condensate illuminated by a laser field.</p>
+</div>
+<p>Finally, the existence of a Kitaev phase and the possible existence of Majorana fermions allow to use exciton condensates as future building blocks of topological quantum computers as discussed in [7] .</p>
+<p class="E-Title1">6. Conclusions</p>
+<p>To conclude, we have reviewed several of the recent experimental and theoretical results for exciton condensates. After the theoretical and experimental exploration of the BEC phase of exciton condensates, the BCS and crystalline phases have attained increasing attention in the last years.</p>
+<p>Especially, the possibility of superconducting counterflow in the top and bottom layer starts to be verified experimentally and will in the future be enhanced by the study of the high-order cumulants and cross-correla- tions. Likewise, the study of exciton condensates illuminated by laser light allows to observe crystalline order as in a Wigner crystal and the photoelectric effect in contacted exciton condensates.</p>
+<p>Finally, the existence that a rich phase structure allows for several future technological applications of exciton condensates includes the usage in nanotransformers, solar cells and topological quantum computers, which provides a promising future path to explore for exciton condensates.</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>The author would like to thank A. Komnik, S. Maier and D. Breyel for numerous discussions.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578498' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Lozovik, Y.E. and Berman, O.L. (1996) Phase Transitions in a System of Two Coupled Quantum Wells. Journal of Experimental and Theoretical Physics Letters, 64, 573-579. <br/>http://dx.doi.org/10.1134/1.567264
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578499' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Bose, S.N. (1924) Plancks Gesetz und Lichtquantenhypothese. Zeitschrift für Physik, 26, 178-181. <br/>http://dx.doi.org/10.1007/BF01327326
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578500' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Breyel, D., Schmidt, T.L. and Komnik, A. (2012) Rydberg Crystallization Detection by Statistical Means. Physical Review A, 86, Article ID: 023405. <br/>http://dx.doi.org/10.1103/PhysRevA.86.023405
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578501' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Robicheaux, F., Hernández, J.V., Top&#231;u, T. and Noordam, L.D. (2004) Simulation of Coherent Interactions between Rydberg Atoms. Physical Review A, 70, Article ID: 042703. <br/>http://dx.doi.org/10.1103/PhysRevA.70.042703
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578502' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Bardeen, J., Cooper, L.N. and Schrieffer, J.R. (1957) Theory of Superconductivity. Physical Review, 108, 1175. <br/>http://dx.doi.org/10.1103/PhysRev.108.1175
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578503' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Onnes, H.K. (1911) The Resistance of Pure Mercury at Helium Temperatures. Commun. Phys. Lab. Univ. Leiden, 12, 1.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578504' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Kitaev, A.Y. (2001) Unpaired Majorana Fermions in Quantum Wires. Physics-Uspekhi, 44, 131. <br/>http://dx.doi.org/10.1070/1063-7869/44/10S/S29
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578505' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Altland, A. and Zirnbauer, M.R. (1997) Nonstandard Symmetry Classes in Mesoscopic Normal-Superconducting Hybrid Structures. Physical Review B, 55, 1142. <br/>http://dx.doi.org/10.1103/PhysRevB.55.1142
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578506' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Soller, H. and Breyel, D. (2013) Signatures in the Conductance for Phase Transitions in Excitonic Systems. Modern Physics Letters B, 27, Article ID: 1350185. <br/>http://dx.doi.org/10.1142/S0217984913501856
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578507' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Seradjeh, B. (2012) Majorana Edge Modes of Topological Exciton Condensate with Superconductors. Physical Review B, 86, Article ID: 121101. <br/>http://dx.doi.org/10.1103/physrevb.86.121101
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578508' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Budich, J.C., Trauzettel, B. and Michetti, P. (2014) Time Reversal Symmetric Topological Exciton Condensate in Bilayer HgTe Quantum Wells. Physical Review Letters, 112, Article ID: 146405.<br/>http://dx.doi.org/10.1103/PhysRevLett.112.146405
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578509' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Snoke, D. (2002) Spontaneous Bose Coherence of Excitons and Polaritons. Science, 298, 1368-1372.<br/>http://dx.doi.org/10.1126/science.1078082
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578510' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        G&#228;rtner, A., Prechtel, L., Schuh, D., Holleitner, A.W. and Kotthaus, J.P. (2007) Micropatterned Electrostatic Traps for Indirect Excitons in Coupled GaAs Quantum Wells. Physical Review B, 76, Article ID: 085304.<br/>http://dx.doi.org/10.1103/PhysRevB.76.085304
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578511' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Comte, C. and Nozieres, P. (1982) Exciton Bose Condensation: The Ground State of an Electron-Hole Gas-I. Mean Field Description of a Simplified Model. Journal de Physique, 43, 1069-1081.<br/>http://dx.doi.org/10.1051/jphys:019820043070106900
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578512' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        High, A.A., Leonard, J.R., Hammack, A.T., Fogler, M.M., Butov, L.V., Kavokin, A.V., et al. (2012) Spontaneous Coherence in a Cold Exciton Gas. Nature, 483, 584-588. <br/>http://dx.doi.org/10.1038/nature10903
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578513' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Zwierlein, M.W., Stan, C.A., Schunck, C.H., Raupach, S.M.F., Kerman, A.J. and Ketterle, W. (2004) Condensation of Pairs of Fermionic Atoms near a Feshbach Resonance. Physical Review Letters, 92, Article ID: 120403.<br/>http://dx.doi.org/10.1103/PhysRevLett.92.120403
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578514' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Gorbachev, R.V., Geim, A.K., Katsnelson, M.I., Novoselov, K.S., Tudorovskiy, T., Grigorieva, I.V., et al. (2012) Strong Coulomb Drag and Broken Symmetry in Double-Layer Graphene. Nature Physics, 8, 896-901.<br/>http://dx.doi.org/10.1038/nphys2441
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578515' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Astrakharchik, G.E., Boronat, J., Kurbakov, I.L. and Lozovik, Y.E. (2007) Quantum Phase Transition in a Two-Dimensional System of Dipoles. Physical Review Letters, 98, Article ID: 060405.<br/>http://dx.doi.org/10.1103/PhysRevLett.98.060405
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578516' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Breyel, D., Soller, H., Schmidt, T.L. and Komnik, A. (2014) Detecting an Exciton Crystal by Statistical Means. Physica B: Condensed Matter, 441, 33-36. <br/>http://dx.doi.org/10.1016/j.physb.2014.01.042
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578517' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Su, J.J. and MacDonald, A.H. (2008) How to Make a Bilayer Exciton Condensate Flow. Nature Physics, 4, 799-802.<br/>http://dx.doi.org/10.1038/nphys1055
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578518' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Min, H., Bistritzer, R., Su, J.J. and MacDonald, A.H. (2008) Room-Temperature Superfluidity in Graphene Bilayers. Physical Review B, 78, Article ID: 121401. <br/>http://dx.doi.org/10.1103/PhysRevB.78.121401
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578519' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Kharitonov, M.Y. and Efetov, K.B. (2008) Electron Screening and Excitonic Condensation in Double-Layer Graphene Systems. Physical Review B, 78, Article ID: 241401. <br/>http://dx.doi.org/10.1103/PhysRevB.78.241401
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578520' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Nandi, D., Finck, A.D.K., Eisenstein, J.P., Pfeiffer, L.N. and West, K.W. (2012) Exciton Condensation and Perfect Coulomb Drag. Nature, 488, 481-484. <br/>http://dx.doi.org/10.1038/nature11302
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578521' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Dolcini, F., Rainis, D., Taddei, F., Polini, M., Fazio, R. and MacDonald, A.H. (2010) Blockade and Counterflow Supercurrent in Exciton-Condensate Josephson Junctions. Physical Review Letters, 104, Article ID: 027004.<br/>http://dx.doi.org/10.1103/PhysRevLett.104.027004
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578522' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        Soller, H., Dolcini, F. and Komnik, A. (2012) Nanotransformation and Current Fluctuations in Exciton Condensate Junctions. Physical Review Letters, 108, Article ID: 156401. http://dx.doi.org/10.1103/PhysRevLett.108.156401
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578523' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Soller, H. and Komnik, A. (2013) Current Noise and Higher Order Fluctuations in Semiconducting Bilayer Systems. Fluctuation and Noise Letters, 12, Article ID: 13400014. <br/>http://dx.doi.org/10.1142/S0219477513400014
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578524' target='_blank'>27</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref27" id="ref27"></a>
+                                        Oreg, Y., Refael, G. and von Oppen, F. (2010) Helical Liquids and Majorana Bound States in Quantum Wires. Physical Review Letters, 105, Article ID: 177002. <br/>http://dx.doi.org/10.1103/PhysRevLett.105.177002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578525' target='_blank'>28</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref28" id="ref28"></a>
+                                        Gangadharaiah, S., Braunecker, B., Simon, P. and Loss, D. (2011) Majorana Edge States in Interacting One-Dimensional Systems. Physical Review Letters, 107, Article ID: 036801. <br/>http://dx.doi.org/10.1103/PhysRevLett.107.036801
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578526' target='_blank'>29</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref29" id="ref29"></a>
+                                        Soller, H. and Komnik, A. (2014) Charge Transfer Statistics of Transport through Majorana Bound States. Physica E: Low-Dimensional Systems and Nanostructures, 63, 99-104. <br/>http://dx.doi.org/10.1016/j.physe.2014.05.020
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2436" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2436" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2436" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2436" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2436"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2436"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2436" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2436" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2436" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2436" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2436" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2436"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2436"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2436" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=2436&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=2436&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=2436" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=2436" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=2436" target="_blank">JAMP
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=2436" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=2436" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=2436" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=2436" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=2436" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=2436" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=2436" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jamp.2015.39149" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60077 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +2436 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +2436 +"&paperid=" +60077 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,1468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Economic Load Dispatch Based on Efficient Population Utilization Strategy for Particle Swarm Optimization
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/IJCNS_2015092914332169.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60032" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60032.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60032" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60032" />
+<meta property="og:title" content="Economic Load Dispatch Based on Efficient Population Utilization Strategy for Particle Swarm Optimization" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/IJCNS2016071311394172.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/IJCNS2016071311394172.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Economic Load Dispatch Based on Efficient Population Utilization Strategy for Particle Swarm Optimization" />
+<meta name="keywords" content="Economic Load Dispatch,Efficient Population Utilization Strategy,Particle Swarm Optimization,Power System,Valve Point Effect" />
+<meta name="description" content="Discover EPUSPSO, an efficient population utilization strategy for particle swarm optimization, solving power system&#39;s economic load dispatch problem. Improved accuracy and speed, tested in various cases, outperforming other algorithms. Find optimal solutions effectively and avoid local optima." />
+<meta name="citation_journal_title" content="International Journal of Communications, Network and System Sciences" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Lei Wu;Haiming Li;Zhengyang Wu;Chenbin Wu" />
+<meta name="citation_author" content="Lei Wu" />
+<meta name="citation_author" content="Haiming Li" />
+<meta name="citation_author" content="Zhengyang Wu" />
+<meta name="citation_author" content="Chenbin Wu" />
+<meta name="citation_title" content="Economic Load Dispatch Based on Efficient Population Utilization Strategy for Particle Swarm Optimization" />
+<meta name="citation_volume" content="8" />
+<meta name="citation_date" content="2015-09-02" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ijcns.2015.89035" />
+<meta name="citation_issnPrint" content="1913-3715" />
+<meta name="citation_issnOnline" content="1913-3723" />
+<meta name="citation_abstract" content="In this paper, the efficient population
+utilization strategy for particle swarm optimization (EPUSPSO) is proposed to
+solve the economic load dispatch (ELD) problem of power system. This algorithm
+improves the accuracy and the speed of its convergence by changing the number
+of particles effectively, and improving the velocity equation and position
+equation. In order to verify the effectiveness of the algorithm, this
+algorithm is tested in three different ELD cases of power system include IEEE
+3-unit case, 13-unit case, and 40-unit case, and the obtained results are
+compared with those obtained from other algorithms using the same system
+parameters. The compared results show that the algorithm can find the optimal
+solution effectively and accurately, and avoid falling into the local optimal
+problem; meanwhile, faster speed can be ensured in the case." />
+<meta name="citation_publication_date" content="2015/9/2" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/IJCNS_2015092914332169.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/IJCNS_2015092914332169.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60032" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60032" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60032" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60032.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60032.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/2" />
+<meta name="citation_firstpage" content="367" />
+<meta name="citation_lastpage" content="373" />
+
+<meta name="dc.title" content="Economic Load Dispatch Based on Efficient Population Utilization Strategy for Particle Swarm Optimization" />
+
+<meta name="dc.creator" content="Lei Wu" />
+<meta name="dc.creator" content="Haiming Li" />
+<meta name="dc.creator" content="Zhengyang Wu" />
+<meta name="dc.creator" content="Chenbin Wu" /><meta name="dcterms.issued" content="2015-09-02" />
+<meta name="dc.description" content="In this paper, the efficient population
+utilization strategy for particle swarm optimization (EPUSPSO) is proposed to
+solve the economic load dispatch (ELD) problem of power system. This algorithm
+improves the accuracy and the speed of its convergence by changing the number
+of particles effectively, and improving the velocity equation and position
+equation. In order to verify the effectiveness of the algorithm, this
+algorithm is tested in three different ELD cases of power system include IEEE
+3-unit case, 13-unit case, and 40-unit case, and the obtained results are
+compared with those obtained from other algorithms using the same system
+parameters. The compared results show that the algorithm can find the optimal
+solution effectively and accurately, and avoid falling into the local optimal
+problem; meanwhile, faster speed can be ensured in the case." />
+<meta name="dc.source" content="International Journal of Communications, Network and System Sciences" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-02" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ijcns.2015.89035" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-02" />
+<meta name="prism.issnPrint" content="1913-3715" />
+<meta name="prism.issnOnline" content="1913-3723" />
+<meta name="prism.publicationName" content="International Journal of Communications, Network and System Sciences" />
+<meta name="prism.publicationDate" content="2015-09-02" />
+<meta name="prism.volume" content="8" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="367" />
+<meta name="prism.doi" content="10.4236/ijcns.2015.89035" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60032" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlkPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTAyZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAW/AzxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9TGVpKytXdSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkxlaSAgV3U8L2E+PHN1cD48L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SGFpbWluZysrTGkmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5IYWltaW5nICBMaTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1aaGVuZ3lhbmcrK1d1JnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+Wmhlbmd5YW5nICBXdTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1DaGVuYmluKytXdSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkNoZW5iaW4gIFd1PC9hPjxzdXA+PC9zdXA+IGQCAg9kFgJmDxYCHwQFwgE8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVNoYW5naGFpK1VuaXZlcnNpdHkrb2YrRWxlY3RyaWMrUG93ZXIlMmMrU2hhbmdoYWklMmMrQ2hpbmEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5TaGFuZ2hhaSBVbml2ZXJzaXR5IG9mIEVsZWN0cmljIFBvd2VyLCBTaGFuZ2hhaSwgQ2hpbmE8L2E+LjxiciAvPmQCBQ8WAh8EBQUyLDM2N2QCBg8WAh8EBQUzLDIzNGQCBw8WAh8DBQ9EaXNwbGF5OmlubGluZTtkAggPZBYCAgEPFgIfBAWHBTxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RWNvbm9taWMrTG9hZCtEaXNwYXRjaCZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkVjb25vbWljIExvYWQgRGlzcGF0Y2g8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStFZmZpY2llbnQrUG9wdWxhdGlvbitVdGlsaXphdGlvbitTdHJhdGVneSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBFZmZpY2llbnQgUG9wdWxhdGlvbiBVdGlsaXphdGlvbiBTdHJhdGVneTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1BhcnRpY2xlK1N3YXJtK09wdGltaXphdGlvbiZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBQYXJ0aWNsZSBTd2FybSBPcHRpbWl6YXRpb248L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStQb3dlcitTeXN0ZW0mc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gUG93ZXIgU3lzdGVtPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rVmFsdmUrUG9pbnQrRWZmZWN0JnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFZhbHZlIFBvaW50IEVmZmVjdDwvYT4gZAIKDxYCHwQF+AJXdSwgTC4gLCBMaSwgSC4gLCBXdSwgWi4gIGFuZCBXdSwgQy4gICAoMjAxNSkgRWNvbm9taWMgTG9hZCBEaXNwYXRjaCBCYXNlZCBvbiBFZmZpY2llbnQgUG9wdWxhdGlvbiBVdGlsaXphdGlvbiBTdHJhdGVneSBmb3IgUGFydGljbGUgU3dhcm0gT3B0aW1pemF0aW9uLiA8aT5JbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgQ29tbXVuaWNhdGlvbnMsIE5ldHdvcmsgYW5kIFN5c3RlbSBTY2llbmNlczwvaT4sIDxiPjg8L2I+LCAzNjctMzczLiBkb2k6IDxhIGhyZWY9J2h0dHA6Ly9keC5kb2kub3JnLzEwLjQyMzYvaWpjbnMuMjAxNS44OTAzNScgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDAzMiknPjEwLjQyMzYvaWpjbnMuMjAxNS44OTAzNTwvYT4uZAILDxYCHwQFLVRoZSBhdXRob3JzIGRlY2xhcmUgbm8gY29uZmxpY3RzIG9mIGludGVyZXN0LmQCDQ8WAh4LXyFJdGVtQ291bnQCDxYeZg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDgwJyB0YXJnZXQ9J19ibGFuayc+MTwvYT5dATEBMcgBRGF2aWQsIEMuVy4gYW5kIEdlcmFsZCwgQi5TLiAoMTk5MykgR2VuZXRpYyBBbGdvcml0aG0gU29sdXRpb24gb2YgRWNvbm9taWMgRGlzcGF0Y2ggd2l0aCBWYWx2ZSBQb2ludCBMb2FkaW5nLiBJRUVFIFRyYW5zYWN0aW9ucyBvbiBQb3dlciBTeXN0ZW1zLCA4LCAxMzI1LTEzMzIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS81OS4yNjA4NjFkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzA4MScgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATLOAVdoZWltaW4sIEwuLCBGdXNoZW5nLCBDLiBhbmQgTWluZ3RvbmcsIFQuICgyMDAxKSBOb24tQ29udmV4IEVjb25vbWljIERpc3BhdGNoIGJ5IEludGVncmF0ZWQgQXJ0aWZpY2lhbCBJbnRlbGxpZ2VuY2UuIElFRUUgVHJhbnNhY3Rpb25zIG9uIFBvd2VyIFN5c3RlbXMsIDE2LCAzMDctMzExLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvNTkuOTE4MzAzZAICD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwODInIHRhcmdldD0nX2JsYW5rJz4zPC9hPl0BMwEz+gFIb3UsIFkuSC4sIEx1LCBMLkouLCBYaW9uZywgWC5ZLiwgZXQgYWwuICgyMDA0KSBBcHBsaWNhdGlvbiBvZiBHZW5lcmFsaXplZCBBbnQgQ29sb255IE9wdGltaXphdGlvbiBBbGdvcml0aG0gSW50ZWdyYXRlZCB3aXRoIFBhcnRpY2xlIFN3YXJtIE9wdGltaXphdGlvbiBBbGdvcml0aG0gaW4gRWNvbm9taWMgRGlzcGF0Y2ggb2YgUG93ZXIgU3lzdGVtcy4gUG93ZXIgU3lzdGVtIFRlY2hub2xvZ3ksIDI4LCAzNC0zOC4gKEluIENoaW5lc2UpZAIDD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwODMnIHRhcmdldD0nX2JsYW5rJz40PC9hPl0BNAE0b1Jvc3MsIEQuVy4gYW5kIEtpbSwgUy4gKDE5ODApIER5bmFtaWMgRWNvbm9taWMgRGlzcGF0Y2ggb2YgR2VuZXJhdGlvbi4gSUVFRSBUcmFuc2FjdGlvbnMgb24gUEFTLCA5OSwgMjA2MC0yMDY4LmQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDg0JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNeoBUmFiaW4sIEEuSi4sIEFsdW4sIEguQy4gYW5kIEJyaWFuLCBKLkMuICgyMDAwKSBBIEhvbW9nZW5vdXMgTGluZWFyIFByb2dyYW1taW5nIEFsZ29yaXRobSBmb3IgdGhlIFNlY3VyaXR5IENvbnN0cmFpbmVkIEVjb25vbWljIERpc3BhdGNoIFByb2JsZW0uIElFRUUgVHJhbnNhY3Rpb25zIG9uIFBvd2VyIFN5c3RlbXMsIDE1LCA5MzAtOTM2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvNTkuODcxNzE1ZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwODUnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2sQFaaGFuZywgWC5XLiBhbmQgTGksIFkuSi4gKDIwMDYpIFNlbGYtQWRqdXN0ZWQgUGFydGljbGUgU3dhcm0gT3B0aW1pemF0aW9uIEFsZ29yaXRobSBCYXNlZCBFY29ub21pYyBMb2FkIERpc3BhdGNoIG9mIFBvd2VyIFN5c3RlbS4gUG93ZXIgU3lzdGVtIFRlY2hub2xvZ3ksIDMwLCA4LTEzLiAoSW4gQ2hpbmVzZSlkAgYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzA4NicgdGFyZ2V0PSdfYmxhbmsnPjc8L2E+XQE3ATe4AVhpdSwgQy5CLiBhbmQgTHUsIEwuRi4gKDIwMTApIENoYW9zIE9wdGltaXphdGlvbiBBbGdvcml0aG0gYW5kIEl0cyBBcHBsaWNhdGlvbiBpbiBFY29ub21pYyBMb2FkIERpc3BhdGNoIG9uIFBvd2VyIFN5c3RlbS4gUG93ZXIgU3lzdGVtIFByb3RlY3Rpb24gYW5kIENvbnRyb2wsIDM4LCAxMDktMTEyLiAoSW4gQ2hpbmVzZSlkAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzA4NycgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4ATi+AUtlbm5lZHksIEouIGFuZCBFYmVyaGFydCwgUi5DLiAoMTk5NSkgQSBOZXcgT3B0aW1pemVyIFVzaW5nIFBhcnRpY2xlIFN3YXJtLiBQcm9jZWVkaW5nIG9mIHRoZSA2dGggSW50ZXJuYXRpb25hbCBTeW1wb3NpdW0gb24gTWljcm8gTWFjaGluZSBhbmQgSHVtYW4gU2NpZW5jZSwgTmFnb3lhLCA0LTYgT2N0b2JlciAxOTk1LCAzOS00My5kAggPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzA4OCcgdGFyZ2V0PSdfYmxhbmsnPjk8L2E+XQE5ATnaAVNoZW5ndGEsIEguLCBUc3VuZ3lpbmcsIFMuLCBMaXUsIEMuQy4gYW5kIFRzYWksIFMuSi4gKDIwMDkpIEVmZmljaWVudCBQb3B1bGF0aW9uIFV0aWxpemF0aW9uIFN0cmF0ZWd5IGZvciBQYXJ0aWNsZSBTd2FybSBPcHRpbWl6ZXIuIElFRUUgVHJhbnNhY3Rpb25zIG9uIFN5c3RlbXMsIE1hbiwgYW5kIEN5YmVybmV0aWNz4oCUUGFydCBCOiBDeWJlcm5ldGljcywgMzksIDQ0NC00NTYuZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwODknIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEw4gFTaW5oYSwgTi4sIENoYWtyYWJhcnRpLCBSLiBhbmQgQ2hhdHRvcGFkaHlheSwgUC5LLiAoMjAwMykgRXZvbHV0aW9uYXJ5IFByb2dyYW1taW5nIFRlY2huaXF1ZXMgZm9yIEVjb25vbWljIExvYWQgRGlzcGF0Y2guIElFRUUgVHJhbnNhY3Rpb25zIG9uIEV2b2x1dGlvbmFyeSBDb21wdXRhdGlvbiwgNywgODMtOTQuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9URVZDLjIwMDIuODA2Nzg4ZAIKD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwOTAnIHRhcmdldD0nX2JsYW5rJz4xMTwvYT5dAjExAjEx1QFMaSwgWC5CLiBhbmQgWmh1LCBRLkouICgyMDEwKSBBcHBsaWNhdGlvbiBvZiBJbXByb3ZlZCBQYXJ0aWNsZSBTd2FybSBPcHRpbWl6YXRpb24gQWxnb3JpdGhtIHRvIE11bHRpLU9iamVjdGl2ZSBSZWFjdGl2ZSBQb3dlciBPcHRpbWl6YXRpb24uIFRyYW5zYWN0aW9ucyBvZiBDaGluYSBFbGVjdHJvdGVjaG5pY2FsIFNvY2lldHksIDI1LCAxMzctMTQzLiAoSW4gQ2hpbmVzZSlkAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzA5MScgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTLmAVlhbywgWS5ILiwgV2FuZywgWi5QLiwgR3VvLCBLLlkuLCBldCBhbC4gKDIwMTQpIERpc3RyaWJ1dGlvbiBOZXR3b3JrIFNlcnZpY2UgUmVzdG9yYXRpb24gVXNpbmcgYSBNdWx0aS1PYmplY3RpdmUgQmluYXJ5IFBhcnRpY2xlIFN3YXJtIE9wdGltaXphdGlvbiBCYXNlZCBvbiBFLURvbWluYW5jZS4gUG93ZXIgU3lzdGVtIFByb3RlY3Rpb24gYW5kIENvbnRyb2wsIDQyLCA3Ni04MS4gKEluIENoaW5lc2UpZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcwOTInIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEz2wFMaW5nLCBTLkguLCBMYW0sIEguSy4sIExldW5nLCBGLkguRi4gYW5kIExlZSwgWS5TLiAoMjAwMykgSW1wcm92ZWQgR2VuZXRpYyBBbGdvcml0aG0gZm9yIEVjb25vbWljIExvYWQgRGlzcGF0Y2ggd2l0aCBWYWx2ZS1Qb2ludCBMb2FkaW5ncy4gVGhlIDI5IEFubnVhbCBDb25mZXJlbmNlIG9mIHRoZSBJRUVFIEluZHVzdHJpYWwgRWxlY3Ryb25pY3MgU29jaWV0eSwgMSwgNDQyLTQ0Ny5kAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzA5MycgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTTSAVBhcmssIEouLUIuLCBMZWUsIEsuLVMuLCBTaGluLCBKLi1SLiBhbmQgTGVlLCBLLlkuICgyMDAzKSBFY29ub21pYyBMb2FkIERpc3BhdGNoIGZvciBOb24tU21vb3RoIENvc3QgRnVuY3Rpb25zIFVzaW5nIFBhcnRpY2xlIFN3YXJtIE9wdGltaXphdGlvbi4gMjAwMyBJRUVFIFBvd2VyIEVuZ2luZWVyaW5nIFNvY2lldHkgR2VuZXJhbCBNZWV0aW5nLCAyLCA5MzgtOTQzLmQCDg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MDk0JyB0YXJnZXQ9J19ibGFuayc+MTU8L2E+XQIxNQIxNc8BWW9yaW5vLCBOLiwgSGFmaXosIEguTS4sIFNhc2FraSwgWS4gYW5kIFpva2EsIFkuICgyMDEyKSBIaWdoLVNwZWVkIFJlYWwtVGltZSBEeW5hbWljIEVjb25vbWljIExvYWQgRGlzcGF0Y2guIElFRUUgVHJhbnNhY3Rpb25zIG9uIFBvd2VyIFN5c3RlbXMsIDI3LCA2MjEtNjMwLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvVFBXUlMuMjAxMS4yMTY5Mjg1ZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pT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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=4" title="International Journal of Communications, Network and System Sciences">
+                    International Journal of Communications, Network and System Sciences</a> &gt; <a href="home?issueid=6923#60032">Vol.8 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Economic Load Dispatch Based on Efficient Population Utilization Strategy for Particle Swarm Optimization <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Lei++Wu&searchfield=authors&page=1' target='_blank'>Lei  Wu</a><sup></sup>, <a href='articles?searchcode=Haiming++Li&searchfield=authors&page=1' target='_blank'>Haiming  Li</a><sup></sup>, <a href='articles?searchcode=Zhengyang++Wu&searchfield=authors&page=1' target='_blank'>Zhengyang  Wu</a><sup></sup>, <a href='articles?searchcode=Chenbin++Wu&searchfield=authors&page=1' target='_blank'>Chenbin  Wu</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Shanghai+University+of+Electric+Power%2c+Shanghai%2c+China&searchfield=affs&page=1' target='_blank'>Shanghai University of Electric Power, Shanghai, China</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ijcns.2015.89035"
+                    target="_blank" onclick='SetNum(60032)'>10.4236/ijcns.2015.89035</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/IJCNS_2015092914332169.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60032)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60032' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60032.xml' target='_blank' onclick='SetNum(60032)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    2,367</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    3,234</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60032&JournalID=4' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">In this paper, the efficient population
+utilization strategy for particle swarm optimization (EPUSPSO) is proposed to
+solve the economic load dispatch (ELD) problem of power system. This algorithm
+improves the accuracy and the speed of its convergence by changing the number
+of particles effectively, and improving the velocity equation and position
+equation. In order to verify the effectiveness of the algorithm, this
+algorithm is tested in three different ELD cases of power system include IEEE
+3-unit case, 13-unit case, and 40-unit case, and the obtained results are
+compared with those obtained from other algorithms using the same system
+parameters. The compared results show that the algorithm can find the optimal
+solution effectively and accurately, and avoid falling into the local optimal
+problem; meanwhile, faster speed can be ensured in the case.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Economic+Load+Dispatch&searchfield=keyword&page=1' target='_blank'>Economic Load Dispatch</a>, <a href='articles?searchcode=+Efficient+Population+Utilization+Strategy&searchfield=keyword&page=1' target='_blank'> Efficient Population Utilization Strategy</a>, <a href='articles?searchcode=+Particle+Swarm+Optimization&searchfield=keyword&page=1' target='_blank'> Particle Swarm Optimization</a>, <a href='articles?searchcode=+Power+System&searchfield=keyword&page=1' target='_blank'> Power System</a>, <a href='articles?searchcode=+Valve+Point+Effect&searchfield=keyword&page=1' target='_blank'> Valve Point Effect</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Wu, L. , Li, H. , Wu, Z.  and Wu, C.   (2015) Economic Load Dispatch Based on Efficient Population Utilization Strategy for Particle Swarm Optimization. <i>International Journal of Communications, Network and System Sciences</i>, <b>8</b>, 367-373. doi: <a href='http://dx.doi.org/10.4236/ijcns.2015.89035' target='_blank' onclick='SetNum(60032)'>10.4236/ijcns.2015.89035</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>Economic load dispatch is one of the important fundamental issues in power systems operation and planning. From solving that problem, fuel cost can be reduced and the reliability of the power system can be improved. The fundamental objective of the optimization problem is to minimize the cost of power generation by determine the output power of generating units with satisfying the load demand, operational requirement and other constraints. From past researches, we can know that due to the existing of valve point effect [1] , the unit input-output curves of generators is with characteristics of non-linear, non-convex and non-derivable. Taking the distribution network transmission capacity constraints and system stability requirements into account, the formula of ELD problems turns non-differentiable and non-derivable [2] . What’s more, there are a larger number of units in distribution system, and making the input-output function of units has higher dimension and lots of local optimization solutions [3] . Therefore, in order to maintain multidimensional and high accuracy, the classical assignment optimization algorithm, such as Dynamic Programming [4] , Linear Programming [5] etc, have already been unable to solve ELD optimization problems well.</p>
+<p>In recent years, various kinds of intelligent algorithms are widely used in ELD optimization because of their good global convergence and non-restricting by the object function, which include ant colony algorithm, simulated annealing algorithm, chaos algorithm and so on (Thesis [3] considers the constrained optimization of the non-convex nonlinear system, which can apply the generalized ant colony algorithm to the problem of ELD optimization successfully, and proves the convergence of the algorithm. Thesis [6] applies self-adjusting particle swarm optimization algorithm to ELD optimization problems, overcomes the premature convergence of PSO and improves the accuracy of the optimal solution. Thesis [7] introduces the chaos optimization method to the ELD optimization problem).</p>
+<p>Particle swarm optimization (PSO) was a biological evolution method which was proposed by Kennedy and Eberhart in 1995 [8] . It has many advantages that include the fast speed of convergence, and the need for the parameters is less and easy to achieve. However, when PSO is applied to the multidimensional and complex optimization problem, it will be easy to converge and fall into local optima. For this reason, significant researches have been conducted on PSO and many improved algorithms have been proposed. In this paper, we propose to use an EPUSPSO to solve the ELD problem which has the advantages in global convergence, making the particles to be effective in locating the optimal point, and better convergence effect. It is proved successfully in comparing with other PSO optimization under different dimensional conditions and simulating of IEEE 3, 13 and 40 units system with considering of valve point effect.</p>
+<p class="E-Title1">2. Economic Load Dispatch Problem Formulation</p>
+<p>In power systems, Economic load dispatch (ELD) is a method to schedule the power generator outputs with respect to the system constraints. Power system has to be optimized in such a way that it finally supplies all the loads with minimum fuel costs. Mathematically, the economic load dispatch problem function can be summarized as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-9702019x5.png" /><span class="bracketMark">(1)</span></p>
+<p>where,</p>
+<p>F = total fuel cost;</p>
+<p><img src="//html.scirp.org/file/4-9702019x6.png" class="200" />= the number of generators in the system;</p>
+<p><img src="//html.scirp.org/file/4-9702019x7.png" class="200" />= the output active power of i-th generator;</p>
+<p><img src="//html.scirp.org/file/4-9702019x8.png" class="200" />= the cost function of i-th generator.</p>
+<p>In the unit “heat run” testing stage, the cost function of single generator can be obtained, which can be presented by a quadratic cost function as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-9702019x9.png" /><span class="bracketMark">(2)</span></p>
+<p>where<img src="//html.scirp.org/file/4-9702019x10.png" class="200" />, <img src="//html.scirp.org/file/4-9702019x11.png" class="200" />and <img src="//html.scirp.org/file/4-9702019x12.png" class="200" /> denote the cost coefficients of the i-th generator.</p>
+<p>When the turbine admission valve at low level starts to open, the effect of wire drawing produce a rippling effect on the unit, this is called the valve point effect. If the valve point effect is neglected, there will be significantly affect the accuracy of the solution. When taking the ripples to valve point effect into consideration, the cost function becomes:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-9702019x13.png" /><span class="bracketMark">(3)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-9702019x14.png" /><span class="bracketMark">(4)</span></p>
+<p>where,</p>
+<p><img src="//html.scirp.org/file/4-9702019x15.png" class="200" />= the change influenced by valve point effect;</p>
+<p><img src="//html.scirp.org/file/4-9702019x16.png" class="200" />, <img src="//html.scirp.org/file/4-9702019x17.png" class="200" />= cost coefficients of i-th generator corresponding to valve point loading;</p>
+<p><img src="//html.scirp.org/file/4-9702019x18.png" class="200" />= the minimum operating output of i-th generator.</p>
+<p>Generator capacity should be satisfied:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-9702019x19.png" /><span class="bracketMark">(5)</span></p>
+<p>where, <img src="//html.scirp.org/file/4-9702019x20.png" class="200" />and <img class="200" data-original="//html.scirp.org/file/4-9702019x21.png" /> are the minimum and maximum power outputs of unit i.</p>
+<p>The power balance must meet the constraints as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x22.png" /><span class="bracketMark">(6)</span></p>
+<p>where,</p>
+<p><img class="200" data-original="//html.scirp.org/file/4-9702019x23.png" />= the transmission loss; <img class="200" data-original="//html.scirp.org/file/4-9702019x24.png" />= the system load demand.</p>
+<p>In this paper, distribution network in the power system are concentrated, so the transmission losses can be neglected. As the system is a multi-unit power system with high dimension in this paper, the constraint can be simplified as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x25.png" /><span class="bracketMark">(7)</span></p>
+<p class="E-Title1">3. EPUSPSO Approach</p>
+<p class="E-Title2">3.1. PSO</p>
+<p>Particle swarm optimization (PSO) is a biological evolution method inspired by the social behavior of animals (flock of birds), PSO is based on the concept of swarms and their intelligence and movement. A swam of particles represent a potential solution to the optimization problem. In the iterative process, each particle adjusts its position in term of its own experience, and the experience of its neighborhood particles at each time step. In other words, in PSO algorithm, particles can share information among individuals, start with a random population initialization and end with fast convergence to acceptable solution in the search space.</p>
+<p class="E-Title2">3.2. EPUSPSO</p>
+<p>Efficient population utilization strategy for particle swarm optimization (EPUSPSO) [9] is a kind of enhanced particle swarm optimization by using variable particles in swarms to strength the searching ability. In this paper, the EPUSPSO is proposed to solve the ELD problems in power system. In order to overcome the difficulties of different ELD problems the appropriate adjustments and improvements are done in the programming. The algorithm begins by initializing a group of random particles (random solutions), and then find the optimal solution through an iterative process. In every step of iteration, each particle adjusts its position according to two extreme values. One optimal solution find by its own experience, which is called Pbest. The other optimal solution got by experience of its neighborhood particles, which is called Gbest.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x26.png" /><span class="bracketMark">(8)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x27.png" /><span class="bracketMark">(9)</span></p>
+<p>where, x means the current position of individuals, and v means the current velocity of individuals. i and j mean the j-th dimension of the i-th particle. s and w are set as the current number of iterations and the weight parameter respectively, c is set as the learning factor and r is a random number between 0 and 1.</p>
+<p>Equation (8) is the speed function, it means that each particle in the iterative process in accordance with two extreme values of the optimal solution to update their own pace. Equation (9) is the location function, by which particles update their location and got the optimal solution after numbers of iteration.</p>
+<p>Although the PSO algorithm can solve multi-variable optimization problem, but it is easy to fall into local optima in solving problems of high complexity, usually in later iterations, ordinary particle swarm algorithm can’t obtain a faster convergence effect. But the EPUSPSO can finish good optimization without these problems.</p>
+<p>EPUSPSO algorithm is an enhanced particle swarm algorithm using variable particles and the biggest improvement is to change the number of particles effectively by changing global optimization values. This method is called solution-sharing strategy. Content rules are as follows:</p>
+<p>1) If the fitness value of global optimal solution has not been updated in two consecutive generations, then add a particle in the population.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x28.png" /><span class="bracketMark">(10)</span></p>
+<p>Coefficient <img class="200" data-original="//html.scirp.org/file/4-9702019x29.png" /> and <img class="200" data-original="//html.scirp.org/file/4-9702019x30.png" /> are the serial number of the two particles selected from the current population randomly.</p>
+<p>2) If the fitness value of global optimal solution is updated in two consecutive generations. It means the existing particles are enough to handle the current solution searching procedures and then remove the particle from swarm population which has lower fitness value.</p>
+<p>In addition, the algorithm adopts searching range sharing strategy and solution sharing strategy. In order to prevent the particles from falling into the local minimum, the activation probability of the search range sharing strategy could be defined as Pr(s) and the formula is as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x31.png" /><span class="bracketMark">(11)</span></p>
+<p>where, iteration in the formula means the maximum iteration.</p>
+<p>The search range sharing strategy is used to reset all dimensions of individual particles’ current positions in the solution space. It can be divided into two different kinds of patterns according to the different searching space, that is the global pattern and the local pattern. In the global pattern, particles are restricted in the search boundary as (x<sub>min</sub>, x<sub>max</sub>) initially. In the local pattern, searching space boundary is restricted in past best solution (Pbest<sub>min</sub>, Pbest<sub>max</sub>). Selected from the individual optimal solution, Pbest<sub>max</sub> is the maximum solution and the Pbest<sub>min</sub> is the minimal solution.</p>
+<p>At the same time, the singularity the existing particle velocity update process has improved by the setting of solution sharing strategy and the calculation formula is as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x32.png" /><span class="bracketMark">(12)</span></p>
+<p>In the formula, coefficient a represents a random serial number of a particle from the population and rand is a random number between 0 and 1. The formula Ps<sub>i</sub> is as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/4-9702019x33.png" /><span class="bracketMark">(13)</span></p>
+<p>where, D is the dimension of the particle.</p>
+<p class="E-Title1">4. Numerical Results</p>
+<p>For evaluating the advantages and applicability of the proposed EPUSPSO method in dealing with different- dimensional, non-convex, non-conducting and multi-constrained optimization problems, tests are made through three different dimensions of typical ELD problems. Of all the test cases, valve-point loading effect of the ripple curve is considered and the transmission loss is neglected. For this work, MATLAB R2013a is used, all parameter of generators in cases below can be obtained in reference [10] , and every result of the cases will be compared with other intelligent algorithms [11] [12] , such as IGA [13] , MPSO [14] , and CEP [10] [15] . The algorithm are tested 100 times separately under the same condition in the different ELD cases, the maximum cost (F<sub>max</sub>), the minimum cost (F<sub>min</sub>), and the average cost (F<sub>mean</sub>) are acquired from the tests, and the results from other algorithms can be acquired from the references.</p>
+<p>Case 1: The first test system consists of 3 thermal generating units with 6 bus bars by simulation. The expected load demand for this test case is 850 MW. The value of population size is 64. The dimension of the test is set to 3. Different methods are tested on the same system. Comparison of cost and the convergence characteristics are illustrated in <a href="#f1" target="_self">Figure 1</a> and <a href="#t1" target="_self">Table 1</a>.</p>
+<p>In <a href="#f1" target="_self">Figure 1</a>, we can see that the EPUSPSO converges faster when deals with 3-generator ELD problem. In <a href="#t1" target="_self">Table 1</a>, EPUSPSO cost less compared to other intelligent algorithms, indicating that the algorithm have at an optimal solution on solving low-dimensional problems.</p>
+<p>Case 2: The proposed method is also tested on the 13-unit system. The difference is that the expected load demand for this test case is 1800 MW, and the dimension is 13. Other parameters are the same as Case 1. The comparison of the convergence characteristics of various methods is demonstrated as follow, simulation results are shown in <a href="#f2" target="_self">Figure 2</a>, and different methods tested on the same system are also compared and illustrated in <a href="#t2" target="_self">Table 2</a>.</p>
+<p>It can be seen in <a href="#t2" target="_self">Table 2</a>, the convergence rate of EPUSPSO algorithm is faster than other algorithms when the dimension is higher. Comparison of the data in <a href="#t2" target="_self">Table 2</a> reveals that the optimal solution is better and reliability of EPUSPSO algorithm is higher.</p>
+<p>Case 3: In this section, EPUSPSO method is applied to a 40-generator system. The expected load demand for this test case is equal to 10,500 MW, and the dimension is 40. Other parameters are the same as Case 1. <a href="#f3" target="_self">Figure 3</a> presented the convergence characteristics and <a href="#t3" target="_self">Table 3</a> demonstrates the solutions in comparison with the other approaches available in references.</p>
+<p>The data in <a href="#f3" target="_self">Figure 3</a> shows that the ability of the EPUSPSO in finding the optimization solution is more efficient. The comparison in <a href="#t3" target="_self">Table 3</a> reveals that EPUSPSO performed better, and can be applied to engineering projects.</p>
+<p>From three cases above, we can see that EPUSPSO outperformed both accuracy and convergence speed of solution. No matter the dimension is lower or higher, EPUSPSO has good stability. With its advantages, the EPUSPSO algorithm is suitable for solving the optimization problems of ELD in large power systems.</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-9702019_1.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Results comparison of Case 1.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-9702019_2.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Results comparison of Case 2.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-9702019_3.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t3" id="t3"><span class="cs_fig_con">Table 3</span></a>. Results comparison of Case 3.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-9702019x43.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Convergence comparison of EPUSPSO and PSO in this Case 1.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-9702019x44.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Convergence comparison of EPUSPSO and PSO in this Case 2.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-9702019x45.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Convergence comparison of EPUSPSO and PSO in this Case 3.</p>
+</div>
+<p class="E-Title1">5. Conclusion</p>
+<p>In this paper, we use EPUSPSO to solve different-dimensional and non-convex and nonlinear constraints problems in ELD. Compare with the traditional PSO, the algorithm overcomes the shortcomings of PSO algorithm that is easy to fall into local optima and the global optimal solution can be found in the optimization problem to a large extent. In the meantime, EPUSPSO has the faster speed of convergence, the higher accuracy and it is easy to achieve. Then we put this algorithm in an actual ELD problem to simulation which is considered the valve point effect, line capacity constraint and system stability constraints of generator units and the results demonstrate the feasibility and effectiveness of the proposed algorithm. We can also use this algorithm to other complex optimization problems in virtue of its universal property.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577080' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        David, C.W. and Gerald, B.S. (1993) Genetic Algorithm Solution of Economic Dispatch with Valve Point Loading. IEEE Transactions on Power Systems, 8, 1325-1332. <br/>http://dx.doi.org/10.1109/59.260861
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577081' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Wheimin, L., Fusheng, C. and Mingtong, T. (2001) Non-Convex Economic Dispatch by Integrated Artificial Intelligence. IEEE Transactions on Power Systems, 16, 307-311. <br/>http://dx.doi.org/10.1109/59.918303
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577082' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Hou, Y.H., Lu, L.J., Xiong, X.Y., et al. (2004) Application of Generalized Ant Colony Optimization Algorithm Integrated with Particle Swarm Optimization Algorithm in Economic Dispatch of Power Systems. Power System Technology, 28, 34-38. (In Chinese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577083' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Ross, D.W. and Kim, S. (1980) Dynamic Economic Dispatch of Generation. IEEE Transactions on PAS, 99, 2060-2068.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577084' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Rabin, A.J., Alun, H.C. and Brian, J.C. (2000) A Homogenous Linear Programming Algorithm for the Security Constrained Economic Dispatch Problem. IEEE Transactions on Power Systems, 15, 930-936. <br/>http://dx.doi.org/10.1109/59.871715
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577085' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Zhang, X.W. and Li, Y.J. (2006) Self-Adjusted Particle Swarm Optimization Algorithm Based Economic Load Dispatch of Power System. Power System Technology, 30, 8-13. (In Chinese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577086' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Xiu, C.B. and Lu, L.F. (2010) Chaos Optimization Algorithm and Its Application in Economic Load Dispatch on Power System. Power System Protection and Control, 38, 109-112. (In Chinese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577087' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Kennedy, J. and Eberhart, R.C. (1995) A New Optimizer Using Particle Swarm. Proceeding of the 6th International Symposium on Micro Machine and Human Science, Nagoya, 4-6 October 1995, 39-43.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577088' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Shengta, H., Tsungying, S., Liu, C.C. and Tsai, S.J. (2009) Efficient Population Utilization Strategy for Particle Swarm Optimizer. IEEE Transactions on Systems, Man, and Cybernetics—Part B: Cybernetics, 39, 444-456.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577089' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Sinha, N., Chakrabarti, R. and Chattopadhyay, P.K. (2003) Evolutionary Programming Techniques for Economic Load Dispatch. IEEE Transactions on Evolutionary Computation, 7, 83-94. <br/>http://dx.doi.org/10.1109/TEVC.2002.806788
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577090' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Li, X.B. and Zhu, Q.J. (2010) Application of Improved Particle Swarm Optimization Algorithm to Multi-Objective Reactive Power Optimization. Transactions of China Electrotechnical Society, 25, 137-143. (In Chinese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577091' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Yao, Y.H., Wang, Z.P., Guo, K.Y., et al. (2014) Distribution Network Service Restoration Using a Multi-Objective Binary Particle Swarm Optimization Based on E-Dominance. Power System Protection and Control, 42, 76-81. (In Chinese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577092' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Ling, S.H., Lam, H.K., Leung, F.H.F. and Lee, Y.S. (2003) Improved Genetic Algorithm for Economic Load Dispatch with Valve-Point Loadings. The 29 Annual Conference of the IEEE Industrial Electronics Society, 1, 442-447.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577093' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Park, J.-B., Lee, K.-S., Shin, J.-R. and Lee, K.Y. (2003) Economic Load Dispatch for Non-Smooth Cost Functions Using Particle Swarm Optimization. 2003 IEEE Power Engineering Society General Meeting, 2, 938-943.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577094' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Yorino, N., Hafiz, H.M., Sasaki, Y. and Zoka, Y. (2012) High-Speed Real-Time Dynamic Economic Load Dispatch. IEEE Transactions on Power Systems, 27, 621-630. <br/>http://dx.doi.org/10.1109/TPWRS.2011.2169285
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=4" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=4" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=4" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=4" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=4"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=4"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=4" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=4" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=4" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=4" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=4" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=4"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=4"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=4" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=4&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=4&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=4" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=4" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=4" target="_blank">IJCNS
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=4" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=4" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=4" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=4" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=4" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=4" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=4" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ijcns.2015.89035" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60032 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +4 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +4 +"&paperid=" +60032 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

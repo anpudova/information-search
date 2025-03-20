@@ -1,0 +1,1571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	A Practical and Automated Hall Magnetometer for Characterization of Magnetic Materials
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/MI_2015092911393504.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60022" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60022.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60022" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60022" />
+<meta property="og:title" content="A Practical and Automated Hall Magnetometer for Characterization of Magnetic Materials" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/MI2016101908561522.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/MI2016101908561522.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="A Practical and Automated Hall Magnetometer for Characterization of Magnetic Materials" />
+<meta name="keywords" content="Practical Magnetometer,Hall Sensor,Characterization of Magnetic Materials" />
+<meta name="description" content="Discover a versatile and cost-effective Hall magnetometer for precise measurements of magnetic properties in bulk materials and nanoparticles. Achieve high sensitivity and compare results to commercial devices. Perfect for research purposes." />
+<meta name="citation_journal_title" content="Modern Instrumentation" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Jefferson F. D. F. Araujo;Joao M. B. Pereira" />
+<meta name="citation_author" content="Jefferson F. D. F. Araujo" />
+<meta name="citation_author" content="Joao M. B. Pereira" />
+<meta name="citation_title" content="A Practical and Automated Hall Magnetometer for Characterization of Magnetic Materials" />
+<meta name="citation_volume" content="4" />
+<meta name="citation_date" content="2015-09-29" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/mi.2015.44005" />
+<meta name="citation_issnPrint" content="2165-9257" />
+<meta name="citation_issnOnline" content="2165-9273" />
+<meta name="citation_abstract" content="A versatile Hall magnetometer has been developed, manufactured, calibrated, and turned operational for measurements of the magnetic properties of bulk materials and magnetic micro- and nanoparticles. The magnetometer was constructed from the combination of various equipments, which was usually available in most laboratories, such as a Hall effect sensor, an electromagnet, a current source, and a linear actuator. The achieved sensitivity to the magnetic moment was approximately 10-8 Am2. The results were compared to measurements performed with commercial vibrating-sample magnetometers and superconductor quantum interference devices (SQUID) and showed errors of around 1.7% and a standard deviation of 1.2% in relation to measures themselves. The constructed Hall magnetometer records a magnetic hysteresis loop of up to 1.2 T at room temperature. This magnetometer is cost-effective, versatile, and suitable for research." />
+<meta name="citation_publication_date" content="2015/9/29" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/MI_2015092911393504.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/MI_2015092911393504.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60022" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60022" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60022" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60022.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60022.xml" />
+<meta name="citation_issue" content="4" />
+<meta name="citation_online_date" content="2015/9/29" />
+<meta name="citation_firstpage" content="43" />
+<meta name="citation_lastpage" content="53" />
+
+<meta name="dc.title" content="A Practical and Automated Hall Magnetometer for Characterization of Magnetic Materials" />
+
+<meta name="dc.creator" content="Jefferson F. D. F. Araujo" />
+<meta name="dc.creator" content="Joao M. B. Pereira" /><meta name="dcterms.issued" content="2015-09-29" />
+<meta name="dc.description" content="A versatile Hall magnetometer has been developed, manufactured, calibrated, and turned operational for measurements of the magnetic properties of bulk materials and magnetic micro- and nanoparticles. The magnetometer was constructed from the combination of various equipments, which was usually available in most laboratories, such as a Hall effect sensor, an electromagnet, a current source, and a linear actuator. The achieved sensitivity to the magnetic moment was approximately 10-8 Am2. The results were compared to measurements performed with commercial vibrating-sample magnetometers and superconductor quantum interference devices (SQUID) and showed errors of around 1.7% and a standard deviation of 1.2% in relation to measures themselves. The constructed Hall magnetometer records a magnetic hysteresis loop of up to 1.2 T at room temperature. This magnetometer is cost-effective, versatile, and suitable for research." />
+<meta name="dc.source" content="Modern Instrumentation" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-29" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/mi.2015.44005" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-29" />
+<meta name="prism.issnPrint" content="2165-9257" />
+<meta name="prism.issnOnline" content="2165-9273" />
+<meta name="prism.publicationName" content="Modern Instrumentation" />
+<meta name="prism.publicationDate" content="2015-09-29" />
+<meta name="prism.volume" content="4" />
+<meta name="prism.number" content="4" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="43" />
+<meta name="prism.doi" content="10.4236/mi.2015.44005" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60022" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTI5ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAWUAjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SmVmZmVyc29uK0YuK0QuK0YuKytBcmF1am8mc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5KZWZmZXJzb24gRi4gRC4gRi4gIEFyYXVqbzwvYT48c3VwPjEsMio8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9Sm9hbytNLitCLisrUGVyZWlyYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkpvYW8gTS4gQi4gIFBlcmVpcmE8L2E+PHN1cD4zPC9zdXA+IGQCAg9kFgJmDxYCHwQF3AY8c3VwPjE8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURlcGFydG1lbnQrb2YrUGh5c2ljcyUyYytQb250aWYlYzMlYWRjaWErVW5pdmVyc2lkYWRlK0NhdCVjMyViM2xpY2ErZG8rUmlvK2RlK0phbmVpcm8lMmMrUmlvK2RlK0phbmVpcm8lMmMrQnJhemlsJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RGVwYXJ0bWVudCBvZiBQaHlzaWNzLCBQb250aWbDrWNpYSBVbml2ZXJzaWRhZGUgQ2F0w7NsaWNhIGRvIFJpbyBkZSBKYW5laXJvLCBSaW8gZGUgSmFuZWlybywgQnJhemlsPC9hPi48YnIgLz48c3VwPjI8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURlcGFydG1lbnQrb2YrRWFydGglMmMrQXRtb3NwaGVyaWMlMmMrYW5kK1BsYW5ldGFyeStTY2llbmNlcyUyYytNYXNzYWNodXNldHRzK0luc3RpdHV0ZStvZitUZWNobm9sb2d5JTJjK0NhbWJyaWRnZSUyYytVU0Emc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5EZXBhcnRtZW50IG9mIEVhcnRoLCBBdG1vc3BoZXJpYywgYW5kIFBsYW5ldGFyeSBTY2llbmNlcywgTWFzc2FjaHVzZXR0cyBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neSwgQ2FtYnJpZGdlLCBVU0E8L2E+LjxiciAvPjxzdXA+Mzwvc3VwPjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9Q2VudHJvK0JyYXNpbGVpcm8rZGUrUGVzcXVpc2FzK0YlYzMlYWRzaWNhcyUyYytSaW8rZGUrSmFuZWlybyUyYytCcmF6aWwmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5DZW50cm8gQnJhc2lsZWlybyBkZSBQZXNxdWlzYXMgRsOtc2ljYXMsIFJpbyBkZSBKYW5laXJvLCBCcmF6aWw8L2E+LjxiciAvPmQCBQ8WAh8EBQU2LDQwMmQCBg8WAh8EBQU3LDg3N2QCBw8WAh8DBQ9EaXNwbGF5OmlubGluZTtkAggPZBYCAgEPFgIfBAWBAzxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9UHJhY3RpY2FsK01hZ25ldG9tZXRlciZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlByYWN0aWNhbCBNYWduZXRvbWV0ZXI8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStIYWxsK1NlbnNvciZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBIYWxsIFNlbnNvcjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0NoYXJhY3Rlcml6YXRpb24rb2YrTWFnbmV0aWMrTWF0ZXJpYWxzJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IENoYXJhY3Rlcml6YXRpb24gb2YgTWFnbmV0aWMgTWF0ZXJpYWxzPC9hPiBkAgoPFgIfBAWmAkFyYXVqbywgSi4gIGFuZCBQZXJlaXJhLCBKLiAgICgyMDE1KSBBIFByYWN0aWNhbCBhbmQgQXV0b21hdGVkIEhhbGwgTWFnbmV0b21ldGVyIGZvciBDaGFyYWN0ZXJpemF0aW9uIG9mIE1hZ25ldGljIE1hdGVyaWFscy4gPGk+TW9kZXJuIEluc3RydW1lbnRhdGlvbjwvaT4sIDxiPjQ8L2I+LCA0My01My4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L21pLjIwMTUuNDQwMDUnIHRhcmdldD0nX2JsYW5rJyBvbmNsaWNrPSdTZXROdW0oNjAwMjIpJz4xMC40MjM2L21pLjIwMTUuNDQwMDU8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50AhoWNGYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg2OCcgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATHIAkZpc2xpLCBBLiwgWXVzdWYsIFMuLCBSaWR3YW4sIEtyaXNuYW5kaSwgWS5LLiBhbmQgR3VubGF6dWFyZGksIEouICgyMDE0KSBQcmVwYXJhdGlvbiBhbmQgQ2hhcmFjdGVyaXphdGlvbiBvZiBNYWduZXRpdGUtU2lsaWNhIE5hbm8tQ29tcG9zaXRlIGFzIEFkc29yYmVudHMgZm9yIFJlbW92YWwgb2YgTWV0aHlsZW5lIEJsdWUgRHllcyBmcm9tIEVudmlyb25tZW50YWwgV2F0ZXIgU2FtcGxlcy4gQWR2YW5jZWQgTWF0ZXJpYWxzIFJlc2VhcmNoLCA4OTYsIDUyNS01MzEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuNDAyOC93d3cuc2NpZW50aWZpYy5uZXQvQU1SLjg5Ni41MjVkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg2OScgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATK+AUJyb3duLCBELlIuLCBIYW4sIEsuIGFuZCBTaWVncmlzdCwgVC4gKDIwMTQpIEhhcmQgTWFnbmV0aWMgUHJvcGVydGllcyBPYnNlcnZlZCBpbiBCdWxrIE1uMS14R2F4LiBKb3VybmFsIG9mIEFwcGxpZWQgUGh5c2ljcywgMTE1LCBBcnRpY2xlIElEOiAxN0E3MjMuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA2My8xLjQ4NjQxNDFkAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg3MCcgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATPoAlNhYXJpLCBNLk0uLCBTYWthaSwgSy4sIEtpd2EsIFQuLCBTYXNheWFtYSwgVC4sIFlvc2hpZGEsIFQuIGFuZCBUc3VrYWRhLCBLLiAoMjAxNSkgQ2hhcmFjdGVyaXphdGlvbiBvZiB0aGUgTWFnbmV0aWMgTW9tZW50IERpc3RyaWJ1dGlvbiBpbiBMb3ctQ29uY2VudHJhdGlvbiBTb2x1dGlvbnMgb2YgSXJvbiBPeGlkZSBOYW5vcGFydGljbGVzIGJ5IGEgSGlnaC1UYyBTdXBlcmNvbmR1Y3RpbmcgUXVhbnR1bSBJbnRlcmZlcmVuY2UgRGV2aWNlIE1hZ25ldG9tZXRlci4gSm91cm5hbCBvZiBBcHBsaWVkIFBoeXNpY3MsIDExNywgQXJ0aWNsZSBJRDogMTdCMzIxLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDYzLzEuNDkxOTA0M2QCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2ODcxJyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNJkCTW9yZWxsbywgQS4sIEFuZ2VuZW50LCBXLkcuSi4sIEZyb3NzYXRpLCBHLiBhbmQgSm9uZ2gsIEwuSi4gKDIwMDUpIEF1dG9tYXRlZCBhbmQgVmVyc2F0aWxlIFNRVUlEIE1hZ25ldG9tZXRlciBmb3IgdGhlIE1lYXN1cmVtZW50IG9mIE1hdGVyaWFscyBQcm9wZXJ0aWVzIGF0IE1pbGxpa2VsdmluIFRlbXBlcmF0dXJlcy4gUmV2aWV3IG9mIFNjaWVudGlmaWMgSW5zdHJ1bWVudHMsIDc2LCBBcnRpY2xlIElEOiAwMjM5MDIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA2My8xLjE4NDE4MzFkAgQPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg3MicgdGFyZ2V0PSdfYmxhbmsnPjU8L2E+XQE1ATWeAUZvbmVyLCBTLiAoMTk1OSkgVmVyc2F0aWxlIGFuZCBTZW5zaXRpdmUgVmlicmF0aW5n4oCUU2FtcGxlIE1hZ25ldG9tZXRlci4gUmV2aWV3IG9mIFNjaWVudGlmaWMgSW5zdHJ1bWVudHMsIDMwLCA1NDguDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwNjMvMS4xNzE2Njc5ZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4NzMnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE22QFMaW0sIEouVC4gYW5kIEtpbSwgQy5TLiAoMjAxNCkgTWFnbmV0aWMgUHJvcGVydGllcyBvZiBabiBEb3BlZCBDbzJZIEhleGFmZXJyaXRlIGJ5IFVzaW5nIEhpZ2gtRmllbGQgTW9zc2JhdWVyIFNwZWN0cm9zY29weS4gSm91cm5hbCBvZiBBcHBsaWVkIFBoeXNpY3MsIDExNSwgQXJ0aWNsZSBJRDogMTdBNTE2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwNjMvMS40ODY1ODc5ZAIGD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4NzQnIHRhcmdldD0nX2JsYW5rJz43PC9hPl0BNwE39AJUZWl4ZWlyYSwgSi5NLiwgTHVzY2hlLCBSLiwgVmVudHVyYSwgSi4sIEZlcm1lbnRvLCBSLiwgQ2FycGludGVpcm8sIEYuLCBBcmF1am8sIEouUC4sIFNvdXNhLCBKLkIuLCBDYXJkb2RvLCBTLiBhbmQgRnJlaXRhcywgUC5QLiAoMjAxMSkgVmVyc2F0aWxlLCBIaWdoIFNlbnNpdGl2aXR5LCBhbmQgQXV0b21hdGl6ZWQgQW5ndWxhciBEZXBlbmRlbnQgVmVjdG9yaWFsIEtlcnIgTWFnbmV0b21ldGVyIGZvciB0aGUgQW5hbHlzaXMgb2YgTmFub3N0cnVjdHVyZWQgTWF0ZXJpYWxzLiBSZXZpZXcgb2YgU2NpZW50aWZpYyBJbnN0cnVtZW50cywgODIsIEFydGljbGUgSUQ6IDA0MzkwMi4NCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA2My8xLjM1Nzk0OTdkAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg3NScgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4ATiZAUJ5cm5lcywgVy5TLiBhbmQgQ3Jhd2ZvcmQsIFIuRy4gKDE5NTgpIEltcHJvdmVkIFRvcnF1ZSBNYWduZXRvbWV0ZXIuIFJldmlldyBvZiBTY2llbnRpZmljIEluc3RydW1lbnRzLCAyOSwgNDkzLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDYzLzEuMTcyMzE5NWQCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2ODc2JyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBOfkBR2VyaGFyZHRlciwgRi4sIExpLCBZLiBhbmQgQmFiZXJzY2hrZSwgSy4gKDE5OTMpIFRlbXBlcmF0dXJlLURlcGVuZGVudCBGZXJyb21hZ25ldGljLVJlc29uYW5jZSBTdHVkeSBpbiBVbHRyYWhpZ2ggVmFjdXVtOiBNYWduZXRpYyBBbmlzb3Ryb3BpZXMgb2YgVGhpbiBJcm9uIEZpbG1zLiBQaHlzaWNhbCBSZXZpZXcgQiwgNDcsIDExMjA0LTExMjEwLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXZCLjQ3LjExMjA0ZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4NzcnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwmAJNYXN0aSwgTS4sIExlaHRvbmVuLCBKLiwgUGVyYWxhLCBSLiwgTWlra29uZW4sIFIuLCBTb2Rlcmx1bmQsIEwuIGFuZCBTZXBwYWxhLCBQLiAoMjAwNSkgSGFsbCBTZW5zb3IgTWFnbmV0b21ldGVyIGZvciBBYyBDaGFyYWN0ZXJpemF0aW9uIG9mIEhpZ2ggVGVtcGVyYXR1cmUgU3VwZXJjb25kdWN0aW5nIFRhcGVzLiBNZWFzdXJlbWVudCBTY2llbmNlIGFuZCBUZWNobm9sb2d5LCAxNiwgMTA5Mi0xMDk4LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwODgvMDk1Ny0wMjMzLzE2LzUvMDA3ZAIKD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4NzgnIHRhcmdldD0nX2JsYW5rJz4xMTwvYT5dAjExAjExkAFWaWVobWFubiwgVy4gKDE5NjIpIE1hZ25ldG9tZXRlciBCYXNlZCBvbiB0aGUgSGFsbCBFZmZlY3QuIFJldmlldyBvZiBTY2llbnRpZmljIEluc3RydW1lbnRzLCAzMywgNTM3LiANCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA2My8xLjE3MTc5MTFkAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg3OScgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTKEAktlbnQsIEEuRC4sIFZvbiBNb2xuYXIsIFMuLCBHaWRlciwgUy4gYW5kIEF3c2NoYWxvbSwgRC5ELiAoMTk5NCkgUHJvcGVydGllcyBhbmQgTWVhc3VyZW1lbnQgb2YgU2Nhbm5pbmcgVHVubmVsaW5nIE1pY3Jvc2NvcGUgRmFicmljYXRlZCBGZXJyb21hZ25ldGljIFBhcnRpY2xlIEFycmF5cyAoSW52aXRlZCkuIEpvdXJuYWwgb2YgQXBwbGllZCBQaHlzaWNzLCA3NiwgNjY1Ni02NjYwLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDYzLzEuMzU4MTYwZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4ODAnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEz5AFMaSwgWS4sIFhpb25nLCBQLiwgTW9sbmFyLCBTLiwgT2hubywgWS4gYW5kIE9obm8sIEguICgyMDAzKSBNYWduZXRpemF0aW9uIFJldmVyc2FsIG9mIElyb24gTmFub3BhcnRpY2xlcyBTdHVkaWVkIGJ5IFN1Ym1pY3JvbiBIYWxsIE1hZ25ldG9tZXRyeS4gSm91cm5hbCBvZiBBcHBsaWVkIFBoeXNpY3MsIDkzLCA3OTEyLTc5MTQuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA2My8xLjE1NTc4MjdkAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg4MScgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTTFAVBpbnRvLCBKLkYuLCBNYWNoYWRvLCBGLkwuQS4gYW5kIFJvZHJpZ3VlcywgQS5SLiAoMjAxMikgSGFsbCBNYWduZXRvbWV0cnkgaW4gYSBDbG9zZWQtQ3ljbGUgUmVmcmlnZXJhdG9yLiBSZXZpc3RhIE1leGljYW5hIGRlIGZpc2ljYSwgNTgsIDI0NS0yNDguIDxici8+aHR0cDovL3JtZi5zbWYubXgvcGRmL3JtZi1zLzU4LzIvNThfMl8yNDUucGRmZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4ODInIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE1aEFLTSBVc2VyIE1hbnVhbCwgTW9kZWwgSEctMTY2QS4gPGJyLz5odHRwOi8vd3d3Lmdtdy5jb20vbWFnbmV0aWNfc2Vuc29ycy9hc2FoaS9kb2N1bWVudHMvaGctMTY2YV9nbXcucGRmZAIPD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4ODMnIHRhcmdldD0nX2JsYW5rJz4xNjwvYT5dAjE2AjE2KUtlaXRobGV5IFVzZXIgTWFudWFsLCBNb2RlbDogNjIyMC4gKDIwMDUpZAIQD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4ODQnIHRhcmdldD0nX2JsYW5rJz4xNzwvYT5dAjE3AjE3OEtlaXRobGV5IFVzZXIgTWFudWFsLCBNb2RlbDogMjE4MkEgTmFub3ZvbHRtZXRlci4gKDIwMDQpZAIRD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4ODUnIHRhcmdldD0nX2JsYW5rJz4xODwvYT5dAjE4AjE48AFPcm5lbGFzLCBQLkguLCBCcnVubywgQS5DLiwgQmFyYm9zYSwgQy5ILiwgTGltYSwgRS5BLiBhbmQgUmliZWlybywgUC5DLiAoMjAwMikgQSBTdXJ2ZXkgb2YgQ2FsaWJyYXRpb24gUHJvY2VkdXJlcyBmb3IgU1FVSUQgR3JhZGlvbWV0ZXJzLiBTdXBlcmNvbmR1Y3RvciBTY2llbmNlIGFuZCBUZWNobm9sb2d5LCAxNiwgNDI3LTQzMS4NCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA4OC8wOTUzLTIwNDgvMTYvNC8zMDFkAhIPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg4NicgdGFyZ2V0PSdfYmxhbmsnPjE5PC9hPl0CMTkCMTlnR3JpZmZpdGhzLCBELkouICgxOTk5KSBJbnRyb2R1Y3Rpb24gdG8gRWxlY3Ryb2R5bmFtaWNzLiAzdGggRWRpdGlvbiwgUHJlbnRpY2UgSGFsbCwgVXBwZXIgU2FkZGxlIFJpdmVyLmQCEw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2ODg3JyB0YXJnZXQ9J19ibGFuayc+MjA8L2E+XQIyMAIyMEJCbGFkZWwsIEouVi4gKDE5NjQpIEVsZWN0cm9tYWduZXRpYyBGaWVsZHMuIE1jR3Jhdy1IaWxsLCBOZXcgWW9yay5kAhQPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg4OCcgdGFyZ2V0PSdfYmxhbmsnPjIxPC9hPl0CMjECMjHkAUNyYW5nbGUsIEouIGFuZCBHb29kbWFuIEcuTS4gKDE5NzEpIFRoZSBNYWduZXRpemF0aW9uIG9mIFB1cmUgSXJvbiBhbmQgTmlja2VsLiBQcm9jZWVkaW5ncyBvZiB0aGUgUm95YWwgU29jaWV0eSBvZiBMb25kb24uIFNlcmllcyBBLCBNYXRoZW1hdGljYWwgYW5kIFBoeXNpY2FsIFNjaWVuY2VzLCAzMjEsIDQ3Ny00OTEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA5OC9yc3BhLjE5NzEuMDA0NGQCFQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2ODg5JyB0YXJnZXQ9J19ibGFuayc+MjI8L2E+XQIyMgIyMnZCb3pvcnRoLCBSLk0uICgxOTkzKSBGZXJyb21hZ25ldGlzbS4gSUVFRSBNYWduZXRpY3MgU29jaWV0eSwgUGlzY2F0YXdheS4NCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS85NzgwNDcwNTQ0NjI0ZAIWD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4OTAnIHRhcmdldD0nX2JsYW5rJz4yMzwvYT5dAjIzAjIzrwJMYXVyZW50LCBTLiwgRm9yZ2UsIEQuLCBQb3J0LCBNLiwgUm9jaCwgQS4sIFJvYmljLCBDLiwgRWxzdCwgTC5WLiBhbmQgTXVsbGVyLCBSLk4uICgyMDA4KSBNYWduZXRpYyBJcm9uIE94aWRlIE5hbm9wYXJ0aWNsZXM6IFN5bnRoZXNpcywgU3RhYmlsaXphdGlvbiwgVmVjdG9yaXphdGlvbiwgUGh5c2ljb2NoZW1pY2FsIENoYXJhY3Rlcml6YXRpb25zLCBhbmQgQmlvbG9naWNhbCBBcHBsaWNhdGlvbnMuIENoZW1pY2FsIFJldmlldywgMTA4LCAyMDY0LTIxMTAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAyMS9jcjA2ODQ0NWVkAhcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg5MScgdGFyZ2V0PSdfYmxhbmsnPjI0PC9hPl0CMjQCMjSzAlZheXNzacOocmVzLCBMLiwgQ2hhbsOpYWMsIEMuLCBUcm9uYywgRS4gYW5kIEpvbGl2ZXQsIEouUC4gKDE5OTgpIFNpemUgVGFpbG9yaW5nIG9mIE1hZ25ldGl0ZSBQYXJ0aWNsZXMgRm9ybWVkIGJ5IEFxdWVvdXMgUHJlY2lwaXRhdGlvbjogQW4gRXhhbXBsZSBvZiBUaGVybW9keW5hbWljIFN0YWJpbGl0eSBvZiBOYW5vbWV0cmljIE94aWRlIFBhcnRpY2xlcy4gSm91cm5hbCBvZiBDb2xsb2lkIGFuZCBJbnRlcmZhY2UgU2NpZW5jZSwgMjA1LCAyMDUtMjEyLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDYvamNpcy4xOTk4LjU2MTRkAhgPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Njg5MicgdGFyZ2V0PSdfYmxhbmsnPjI1PC9hPl0CMjUCMjWuAkNhcnVhbmFhLCBMLiwgQ29zdGEsIEEuTC4sIENhc3NhbmksIE0uQy4sIFJhbXBhenpvLCBFLiwgUHJvZGksIEwuIGFuZCBaYWNjaGVyb25pLCBOLiAoMjAxMikgVGFpbG9yZWQgU2lPMiBCYXNlZCBDb2F0aW5ncyBmb3IgRHllIERvcGVkIFN1cGVycGFyYW1hZ25ldGljIE5hbm9jb21wb3NpdGVzLiBDb2xsb2lkcyBhbmQgU3VyZmFjZXMgQTogUGh5c2ljb2NoZW1pY2FsIGFuZCBFbmdpbmVlcmluZyBBc3BlY3RzLCA0MTAsIDExMS0xMTguIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLmNvbHN1cmZhLjIwMTIuMDYuMDI3ZAIZD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY4OTMnIHRhcmdldD0nX2JsYW5rJz4yNjwvYT5dAjI2AjI2hgJHcmVlbiwgRC5MLiwgTGluLCBKLlMuLCBMYW0sIFkuLCBIdSwgTS4sIFNoYWVmZXIsIEQuVy4gYW5kIEhhcnJpcywgTS5ULiAoMjAwMykgU2l6ZSwgVm9sdW1lIEZyYWN0aW9uLCBhbmQgTnVjbGVhdGlvbiBvZiBTdCZvdW1sYmVyIFNpbGljYSBOYW5vcGFydGljbGVzLiBKb3VybmFsIG9mIENvbGxvaWQgYW5kIEludGVyZmFjZSBTY2llbmNlLCAyNjYsIDM0Ni0zNTguDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvUzAwMjEtOTc5NygwMykwMDYxMC02ZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9K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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAIYCrXxeHIhWjli2hbBnJhyvNsxO15cYiUM4G9ciXBy5rRbTxQn0wurVpykN++S3qsY9gqm4NhJKbhUsb9qOzDz5+BaQ51Lu9YTI5y+UD8ReCXYCCq5883RYOyuQBDQdgBKJQ9NYSepAvxIHsUIEBszIF9kVAw+OtKpSo2nY0L5TS7pjZcI4a2ubz4FZUJ/qeIscQNjFFetjMQu+gPAKi1cuu0dXATu8ZTMsEIKUEeEK3+aBofovXqmNNgBwrJCAFSq2Co/mvvaNFGqy28nyI+vv6yf3gTw51pjuwP3t6rjAvP5x1lbHcKM5M/ROzquUHr9lNeWWklFj9cK1TFZpQdUnWziPR3qwNn0ScFNmZAws/jpBm80jcsuZv9XDBeU2KB136TAPmetewitSt9wGNYTIY9UJhFPM+0hDu7cwMKVpp+mmnD8+pMa1yHYRYzLQxH5n1Q/qqDptM9kfJbC1I4q9xL93cbaAMQ4tG4BJWGCzAW6vtR3JnRPdbQo4gA4sZaXer04IxUa3arSwCxRuEDIYFbblwRpneYEy3rzwScqJxuezOuEOjOptTX9AYvM9jKmAypI8kdyyyB4CNN3pFGdOk4mu/WExNjWQ5X01rKdDbeJN4TzreHSTLkh+d4B8EihhF81TpqgKTnD/fd/yNWGbO9zMdjKdAolzLesxJOG2bR2t4ae94pZJoUOvCEPRLh7u5h+HR1RXp8jKz3XyrzwGq5ViD0Fyb+qhGFHNfa6dxzK0n1qu2d9hzAGJ1ZdEzFgVObshVy2ouP3umau52TJFwKhqohqorHyJZt7h54jbR7oXke9kR+ABe996RxzCmx1L/42I3la9AkYiuUmh4mE9Rk5DdY/KiLlE+29svjthmIPNdKgZlA9dvwpjASVteCo/ksy0uMaOE+alzU72eZ1rlvR6C3RGA9Jmsr/oit2h5HWYxsN1nFXBqJbgXwz0iYh7JCUYpOW+jbALhRmLv9UpsX2EI+d3W02YqShNDct3I94Sq9enXMFtuVRPWGCF1oN1TlM8aQC+B45LfHfFCnZz6KlRuP6GvEqI8VDdi+sTnM71Jn53VrlKa3UuXcRuCcAe+GQxyfHfD/wZ+ergvp+hsx48VT9Xih8PA4vj1aNtQlLCsXezalJjXjgEl/cAa7arjDkAIe6rJDf9KPGPMwoKLWIBVM9nLqRvTn4xs2uCHsZiAOZ8Y5IAuKZeArneMeYK8+pLRvERCDkGURuCyuXbsR59h/AAdaKvPM2BT4SSKNj0Us/NQU9+MI9hDNgMZowy9xCOwBNddniKd5JiX1iETIuSWSu2galT3CZ4MpRQGqIfvz80X8fuyGyFF2wHP/HcdHP4x0OBSCxdPk53jUQtAQ6g8akcdK7Kr4deoDeUynf9l1Y6lbf6JC8NoSbMA+vc8O8QqrB2tS2vv8gSiSoIhJ/70GOmod2HPYumgEmpn8vgLAz5ccZUA7bkVUoObyVZV/Zm1Uh4Ozw57X6RDPtK9aubBoko1p5gcjMIWvm4T+T41pjKCycN70aK5E4MwFc6qbRpzIzeaUUIv5qiWg3dZvXV/9M9IwoMUAdYUH5UMA5AJDCfNUkJ1q+n5sIsxUCB6Nq0yAoqoFwFjOj8ZbQjUP5/q/DGUJDHtaZDExzq62tLwfe18PsgWsDuILbV32BFX07jDSTdc2CHO2xi6fhORGg5L0lBgRl4s0zp6Bc/YgBEniC2eneyWSDQ2iw5NhVKu3HJAuZnur70V7iwzDcGwQI2IDR/+2+ZDAfID+MM8+0XNaUlaIgX8fsjMqD2JWDxa8kn7ReZiPgMqAmE7acxyMlKdMtk6XhHjwc25wp4AlleDWbzVGzQLtuUmBfLRhb1duIXiNLsi/yRLp4WZPUJ27df65bU1anG4WItJ4LM9y1kFgUPkaZCD7G3W6HUl/HynBFJ9UbqeGaq8vaK1/YQfFvpLYGg0bJLmJIb7I1VBtGRefxiocvIkjuBnFbKIG1Bvp3bdqOCotobzRhTIfJPz1ybr2D6/DEvFCV2tebkdleZKtgLobZ6iejVWuu1VZxJWsflUf5AhdWNPs78Mu7xVHmmifThhNhHXVuTcjWgOc0+ha7t+FzBP9w8kasJY44yZnpObyYDO1ZdBcb+9I3REzEpeEvJizUogox2uLy8cRq3yp6lmmMvyTt1q1wGJKr3RN2vrp1bz9IC1X58ObtB/5VtKrLwiwYTZ4JczAShm49AkZfwZHQTZLyjY3qS4jbPi09pGNXw+uGS3Hu4tDXabra7UmIrVTJ6nt2BS+IV2oARGuf8d10+bFGE4Rxb8X5OWr9o8NP/NkSmCAkxIVC+Aj7EdIJsmLDnfzTIbDsJUtH/K7KPeiLbFjhDUrnAx6wO2/9ofSkwJg74y7KTIDV/ngs3MovqY+DwVzncJ9d75iLyCizSur2z/AoWxQnguyVJbTVltsvXYae72/GCovpvEoLWlmf4Sg6Yu4BBu5RYruCk5N7MezxIv1QQ8tjDdhoGXqAbWrRFFDWx3FK4oHDCvJJHjmn4y1G1QBsNDvWkIszuXW6E1KUz6dtoSwPj0wA0Ssong9DXWhtYuS9jtH4StM1ZT+6tqYvxtAJndAQ0NFNV1597E/y6Lte1J3ZP1twzvBpB/f0YxWaTDHZ72u7NlSVoCSjnWeNWCBfpptecl27SJO0njN9e8jHgDwmPC2NlIgGmq46k97juUD2lSjIB/+AeyDUaBy5oIhTdg6INeWTgkUTzyXC34fsOvEb0hxwmbeOjctVaE3x0pTijWTsKmSeGzIda8uoJkZcuTbWHVoRB6h5Dc72rcIz1lA5hJghfGLyFGxD6b7ArQwZHjISLbPwxJYkFbxLsCrMOEMVNCcxGdx56w146VqqjCImkPDvKFHUQ/jY9+FyVc120CiMOMieHjy4dyVomOSf6gPMkkPd4ClcsQoipAxZgLTxG67FCpcEH/ewS/egbmWx04V1w9x54+T8GkfQObxizPwQZQvPeZm6KLBvrmvLYp1CaHAQxp15ZTATs7okf7S5ePo2gUI6UpzRPUgMetACnXOfa/MSurf56LkzDvZSlRprJXfFcpjnNRle7ZhR+nzipiAi6t6fJxRB4sYqEuxZikZ0sS/pn76iye8xM0q+tFJNR5AEEH/rcf8wyXJ1I9n+HN9S0Q60NH0z6qdFkKcgxGmbQ8xoxIk8T5csYyuHHJ8T3qv4mAA1kgwWmcUBQcbF5yr4YQxwmztMkcCEMt6aAvfC8f6toJF0YzyYX6qP1l6BNvsoSTEoNJmHhXQ9HjrS4USE6yCYyzwmeO12MO4U1xeipGR+e8TLpQ6CqXnairBPYGsz+glJyTODudGLzInafKtakhjlbm2TNMFfJb+9E3OOHfsq+2OJbTt6ZXJufxbbdOy1pecKV+u7JTFDadGMONSTueBvDAHypkesyjW4yuwX56tldt764R/77OW2TjDwb0ccJpLN4gZuPJdFGPDo8zpRNpCEOepOJcfUo9I8zG9qwVzTuTYjxDFDg2EFzwz1hep69FpxYJxedOu96B/Dnw5jBPjdr2PsTL/fVgG4rRrihebOjXHUfqiglDXkf85mvQfywWRzIsCAYnsAqHdzBwJuSxhofmDKZ6kAcIU59NL+2Ji/ZlNfEKQgjenXIkOQXcybyFgFk6H+fsgvXkF6guW0mK/96yfu7+n2DpGArzAn8Ug7zyAfpekzLtWT6UsgXZRNiIa8gkid6xp0spp/D5y5u2oeDBhSnXl6da309+kboqvL0EZR7RebudBufyINEOSNkpXst+LCzHcoZXcZBkagLrxGz5Lr3OmrcaZrIzlq5X4ZeFENOm92bbMpLQVD4IMoZREdVKbJIoaDV/CJq5z9wEVDB/cC79FvrePkFE4bul1aFFPyyi0kOKqg/hxo/OJaXSW+9WIG+vrsJvPgrum9ZyyaHkmzelazeN+yHPLxy1zNV9jyZToogsZf6RZ3nFRpnXxmMlVnH0OVgW+2Mohtqfe2KKfX/VnF0jyp37UjD6+NIz5zrn96FS+VMJNGWR2O5842Lmw660AZaYl38EWqjS11SHbcorNwflYBLGOSBhYCgfIyVLGUTbPYfzEgNQqTHnxA1GPsHqBrOtCWMEkB/uzd4oi1XWCyepKSG7lNpxxFzdDjX98Oc6FzbVsmLIEUldUkJbRhZrvplfZYEL0HEIrr0hA25YbbMqPgsadaNs2L0PL6NJIUvaBZj+4WJDzg+qXCxGdKNlUbGu4DHu5jY9jggQ/M+bLYw70SYQesq8eoufw0gVy+VJXLOb/8y4R0wEYH7yRWOc8vTOLrzSGCW44GJlYyDbnWEuvxMiv+ao715+CTPTCKoBBsIcfS54DwjalRqX/tdios6c/R4l8RBx+bEs2I/OhFPcGy16UdcBobgA6MDXqDiN8qHUE5edBy836NpfClbftFfnfyfCIoNo/LoLepzD03QezF7mHekW07wckU6+7Q9YdIbSVVhYrVWNy4V9SLNt9rDNP2lL0qzP3/u+7FCVXpVsepRRHoAuuwZCqIEy9pj8H80hp7qY3PsWfym5PFwPDpDrw5btVy0nYXPzmSU7Uq1R+xlIyX8GjtJduBVZ8wbk6aTUuK/MPWJrZBr6wJdTeGfZt62TS2PvUX8Bszn2XYFWa+KC0AGHhHOlm+2AJHVPZlyUq17Cl5102dlAYHzK+0AG32kPT2GuoyTOE8BIy6ZumGISrsX9PtvrJQT973r7tutrOJdmSsuzZmet4ka9s4KBh2pnNpSnp5KKvbJBe/2u8kjranZVADkNkEKOEXepq4YzpMaSxC3MlYLFhnFkgI5ZVRMzmO+OO/YgsPyT8yRPxZINEKJmxVfR6o2/dlXAveRG+kmgscPVzG2fU+7RYWdJ6A7dYUqm+3QeXKaM60OaCxssNom3YyO27eklt3YlQIip36uoWBxadwhW6Xr4hpzG+fVoqWHCOB4W0tkB4Ys2fVx/u4hWeNar3onUwWIr3qyzShdQuq1yLoOGDw62HfXCpHg+2MgPzx0D30ZvvTRWoyLCT5KXRfbhCHc0ft6eEqaV2Bsm1PQ1adRpxas+YKl6OM0XfBYI7e+D/PTCV8kGkiBFjju03VDE4za5rygA5Hlm2Nw7Z/jwlgzZu+xnq4r5sKXwqO2GiO0Yz0phNMal/uj9jQH01r6jZOWZdGYv25HB18pD1BnnheFvgIBd4A+Yzzd4445ZYYBPi1KjUxhWknmQ3xMtk+VekEsyt5OsRToo3sdsrHlF0S3wBO8PMh2hXpztV0Nul20IZOgLNZXnw69o2KVsiPg3L1Ov2ccetI/l78hqpSial79UDetTUKR6jdST7RI/tNxHgqa2VZpA6vgUwhJt7/J+BSGBMS8EJAsf/9j8QXzOPuANANF9n6qx9M8VFm3znHUngYh/toDPhEifiWmFe8/WqO48axLW568ANtWdjn5DflrdMhUJcxSKlMY6hfUROf4lKD2WVzMrBGUEyM1i/IioLJF4GlMlIJPWPw9wKGpav4okyiSNWyQxlltAoA50ScVI3orHMZwfosp1huw/AZY81iQ2w5g07s7Nd1y8K5gjHHQyvDDAfOa9Uhob6FFUMD5KPqzgvKjub+AS58u07ldQ/y973lQE5nyalZs5rm2" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=787" title="Modern Instrumentation">
+                    Modern Instrumentation</a> &gt; <a href="home?issueid=7016#60022">Vol.4 No.4, October 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                A Practical and Automated Hall Magnetometer for Characterization of Magnetic Materials <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Jefferson+F.+D.+F.++Araujo&searchfield=authors&page=1' target='_blank'>Jefferson F. D. F.  Araujo</a><sup>1,2*</sup>, <a href='articles?searchcode=Joao+M.+B.++Pereira&searchfield=authors&page=1' target='_blank'>Joao M. B.  Pereira</a><sup>3</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Department+of+Physics%2c+Pontif%c3%adcia+Universidade+Cat%c3%b3lica+do+Rio+de+Janeiro%2c+Rio+de+Janeiro%2c+Brazil&searchfield=affs&page=1' target='_blank'>Department of Physics, Pontifícia Universidade Católica do Rio de Janeiro, Rio de Janeiro, Brazil</a>.<br /><sup>2</sup><a href='articles?searchcode=Department+of+Earth%2c+Atmospheric%2c+and+Planetary+Sciences%2c+Massachusetts+Institute+of+Technology%2c+Cambridge%2c+USA&searchfield=affs&page=1' target='_blank'>Department of Earth, Atmospheric, and Planetary Sciences, Massachusetts Institute of Technology, Cambridge, USA</a>.<br /><sup>3</sup><a href='articles?searchcode=Centro+Brasileiro+de+Pesquisas+F%c3%adsicas%2c+Rio+de+Janeiro%2c+Brazil&searchfield=affs&page=1' target='_blank'>Centro Brasileiro de Pesquisas Físicas, Rio de Janeiro, Brazil</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/mi.2015.44005"
+                    target="_blank" onclick='SetNum(60022)'>10.4236/mi.2015.44005</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/MI_2015092911393504.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60022)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60022' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60022.xml' target='_blank' onclick='SetNum(60022)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    6,402</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    7,877</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60022&JournalID=787' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">A versatile Hall magnetometer has been developed, manufactured, calibrated, and turned operational for measurements of the magnetic properties of bulk materials and magnetic micro- and nanoparticles. The magnetometer was constructed from the combination of various equipments, which was usually available in most laboratories, such as a Hall effect sensor, an electromagnet, a current source, and a linear actuator. The achieved sensitivity to the magnetic moment was approximately 10<sup>-8</sup> Am<sup>2</sup>. The results were compared to measurements performed with commercial vibrating-sample magnetometers and superconductor quantum interference devices (SQUID) and showed errors of around 1.7% and a standard deviation of 1.2% in relation to measures themselves. The constructed Hall magnetometer records a magnetic hysteresis loop of up to 1.2 T at room temperature. This magnetometer is cost-effective, versatile, and suitable for research.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Practical+Magnetometer&searchfield=keyword&page=1' target='_blank'>Practical Magnetometer</a>, <a href='articles?searchcode=+Hall+Sensor&searchfield=keyword&page=1' target='_blank'> Hall Sensor</a>, <a href='articles?searchcode=+Characterization+of+Magnetic+Materials&searchfield=keyword&page=1' target='_blank'> Characterization of Magnetic Materials</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Araujo, J.  and Pereira, J.   (2015) A Practical and Automated Hall Magnetometer for Characterization of Magnetic Materials. <i>Modern Instrumentation</i>, <b>4</b>, 43-53. doi: <a href='http://dx.doi.org/10.4236/mi.2015.44005' target='_blank' onclick='SetNum(60022)'>10.4236/mi.2015.44005</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p>During the last decade, scientific research on the diverse magnetic properties of bulk materials, particles, microparticles, and nanoparticles has been adequately supported by various new and sophisticated characterization techniques. Properties like the Curie temperature, saturation magnetization, coercivity, magnetic anisotropy, and polarization rotation are some of the most important parameters for magnetic materials that guarantee their applications [1] -[3] . Various techniques, such as superconducting quantum interference device (SQUID), vibrating sample magnetometer (VSM), M&ouml;ssbauer spectroscopy, magneto-optic Kerr effect (MOKE), torque magnetometers, ferromagnetic resonance and Hall magnetometer, have been used successfully to study magnetic materials in the bulk form and magnetic nanoparticles [4] -[10] .</p> 
+<p>Among the sensing technologies used, the one based on the Hall effect has played an important role owing to its ability to measure dc fields (i.e., constant in time), large frequency bandwidth, non-hysteretic behavior, operation at high magnetic fields, reliability, and low cost. Traditionally, Hall magnetometry has been performed without the use of moving parts [11] -[14] .</p> 
+<p>In this paper, we present a different approach to measuring magnetization curves: a Hall magnetometer built from various equipment that is usually available in most laboratories, such as a Hall effect sensor, a small electromagnet, a current source, a voltmeter, and a linear actuator. One advantage of this magnetometer is its easy assembly and customization. The nucleus of the magnetometer consists of a small acrylic camera, which works as an electric device for the electromagnet poles, and it is built with a path to guide the sample. We used a low- cost GaAs Hall effect sensor as a magnetic sensor. A model that considered the geometry of the sample was developed in order to increase the precision of the obtained magnetic moment. The magnetometer resolution was limited by the employed Hall sensor to 10<sup>−8</sup> Am<sup>2</sup> and recorded the magnetic hysteresis loop up to 1 T at room temperature. The device was calibrated independently and its performance was compared to that of commercial VSM (LakeShore, model 7400) and SQUID (Quantum Design, MPMS-XL) magnetometers, showing errors smaller than 1.7% in the magnetization obtained for various samples. All the equipments involved in the operation of magnetometers were controlled using LabVIEW<sup>&reg;</sup>.</p> 
+<p class="E-Title1">2. The Hall Magnetometer</p> 
+<p class="E-Title2">2.1. Structure</p> 
+<p>In VSM magnetometers, the sample vibrates at a specific position, in contrast with this type of magnetometer. The Hall magnetometer must move the sample during the measurement; for this purpose, it requires a track from the sample to move in constant form, and the reading is simultaneously acquired by the Hall effect sensor. The configuration of the magnetometer is illustrated schematically in Figures 1(a)-(d).</p> 
+<p>Thus, the first restriction is to ensure the homogeneity of the magnetic field applied by the electromagnet (GMW 3470). In order to achieve at least 0.1% homogeneity, the employed electromagnet (with poles of 40 mm in diameter) has a distance of 5.3 mm between the poles to allow the displacement of the sample, which is approximately mm from the center of the poles along its diameter (see <a href="#f1" target="_self">Figure 1</a>(a)).</p> 
+<p>A Hall effect sensor (model HG-166A) with dimensions 2.5 mm &times; 1.5 mm &times; 0.7 mm is located on the holder with its plane perpendicular to the shaft fastening. According to the direction z shown in <a href="#f1" target="_self">Figure 1</a>(b), to measure the magnetic field applied by the electromagnet we used a Gauss meter (F. W. Bell, model 5080) to obtain the calibration curve in units of T/A; this approach relates the magnetic field in the region between the poles of the electromagnet to the current applied by the source. The electromagnet is supplied by a programmed power supply configured in current mode (Agilent 6654A), which can supply positive current outputs up to 9 A with steps of 3 mA in its smaller scale. A threshold current of 5 A was used to ensure a safe margin for the operation of the electromagnet. At the sides of the sample holder, two holes of 45 mm in diameter accommodate the electromagnet poles. At the front, a groove of 5.3 mm functions as a track to guide the sample holder. At one of the ends of this sample holder, there is a cylindrical cavity with its axis aligned with the x axis of another cavity, which is located at the other end of the z axis (<a href="#f1" target="_self">Figure 1</a>(c)). The cylindrical cavity is filled with magnetic material and is placed a few millimeters away from one of its ends in the positive direction of the axis (<a href="#f1" target="_self">Figure 1</a>(d)), in order to maximize the flux induced by the Hall effect sensor.</p> 
+<p>The Hall sensor has a magnetic field resolution of 600 nT and an active area of approximately 1.26 10<sup>−7</sup> m<sup>2</sup> [15] , which is located 0.25 mm away from the bottom of the package sensor. The sample holder is pushed and pulled by a linear actuator in 0.5 mm steps. Small steps are possible; however, this would increase the total measurement time. A single digitization operation is performed for each value of the magnetic field in about 10 s by the reading system.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x6.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. (a) Shematic of the Hall magnetometer. (b) Top view of the track and sample holder. (c) Lateral view of the track and sample holder. (d) perspective view of the Hall magnetometer.</p> 
+</div> 
+<p class="E-Title2">2.2. Reading System of the Magnetic Field</p> 
+<p>To optimize the Hall sensor for readings of the magnetic field induced in the sample, we must determine the feeding current sensor. We conducted a study of the behavior of the signal noise of the sensor for various values of applied current (<a href="#f2" target="_self">Figure 2</a>(a)) using a spectrum analyzer. We applied a known magnetic signal (70 &micro;T at 4 Hz) and supplied the Hall sensor with four different currents: 1.0 mA, 2.5 mA, 5.0 mA, and 7.0 mA. The measured spectrum verified that below 1 Hz, the lowest-intensity noise corresponded to a current of 5.0 mA. In this case, the reading of the spectrum analyzer was approximately 0.63 &micro;T.</p> 
+<p>Tests were performed in the presence of magnetic fields. The results of one of these tests (Hall sensor measurement in the presence of a magnetic field of 335 mT), displayed in <a href="#f2" target="_self">Figure 2</a>(b), demonstrated that the sensor was sensitive to the applied magnetic field, even with its axis of sensitivity perpendicularly aligned with the electromagnet axis. However, the applied magnetic field did not significantly degrade the performance of the sensor. Its sensitivity was only reduced in approximately 5% for an applied field of 335 mT. In <a href="#f2" target="_self">Figure 2</a>(c), we demonstrate that the Hall sensor has negligible hysteresis.</p> 
+<p>A current of 5 mA was then applied to the Hall sensor using a programmable current source (Keithley, model 6220) for the reading of the detected magnetic field. This source has a precision of 0.05% and a resolution of 100 nA in the range from 2 mA to 10 mA [16] . The response of the sensor to this current was measured by a voltmeter with two channels for different band readings. Channel 1, which was used to measure in the 100-mV full scale, has a resolution of 10 nV And can read continuous and alternating voltages in the band from 3 Hz to 500 Hz [17] .</p> 
+<p>Therefore, the reading system consisted of a current source and a voltmeter that were integrated in a system called Delta Mode and communicated with each other using an RS-232 connection and a trigger signal.</p> 
+<p>The current source applied a square wave of pre-defined amplitude (&plusmn;5 mA) to the sensor with a frequency of 100 Hz and provided a nanovoltmeter with the timing information of the signal through the trigger. After reading the signals from several consecutive cycles, the nanovoltmeter calculated the mean and communicated the</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x7.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. (a) Measurement results demonstrating the relation between the signal noise of the Hall sensor and the applied current; (b) Hall sensor response in the presence of a 335-mT magnetic field; (c) Magnification of <a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>(b) near the zero field.</p> 
+</div> 
+<p>result to the current source through the RS-232 connection, which sent this information to the computer via GPIB.</p> 
+<p class="E-Title1">3. Calibration Procedure</p> 
+<p>Although the VSM magnetometer can also be used for absolute measurements, in practice, it is typically implemented for calibrations through the comparison with the magnetization patterns measured for a nickel sphere in a high field. The SQUID magnetometer usually needs to be calibrated by the final user [18] .</p> 
+<p>In the constructed Hall magnetometer, we used 99% pure nickel spheres with a 3 mm diameter in order to perform the calibration independently from the other magnetometers. The magnetization results were compared to values obtained using the same spheres in the two commercial magnetometers. In this case, we used a magnetic dipole model placed at the center of the sphere, which coincided with the center of the sample holder. Before obtaining the value of magnetization, we used the spatial dependency of the magnetic dipole model to determine the distance between the center of the sample holder and the center of the Hall sensor. According to <a href="#f1" target="_self">Figure 1</a>(a), the induced magnetic moment is oriented along the x direction and the component of the magnetic field is measured along the z direction.</p> 
+<p>The proposed model for the calibration of the nickel sphere was a magnetic dipole located at the origin of the system of coordinates, with a magnetic moment m<sub>x</sub> pointing to the positive direction of the x axis. The center of the sensor was at the position (x, y, z) = xi, yj, zk.</p> 
+<p>The equation that represents the magnetic field produced by the point magnetic dipole is:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x8.png" /><span class="bracketMark">(1)</span></p> 
+<p>Because the magnetic moment was oriented in the direction of the x axis: m = m<sub>x</sub> i. Simplifying Equation (1), the equation used for the construction of this model is:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x9.png" /><span class="bracketMark">(2)</span></p> 
+<p>The magnetic flux from the z component of the magnetic field of a dipole through an area π&sup2; is given by [19] :</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x10.png" /><span class="bracketMark">(3)</span></p> 
+<p>where x, y, z represent the coordinates of the sensor in relation to the dipole. The dipole is located exactly in the region between the poles of the electromagnet, thus defining the sphere to be analyzed.</p> 
+<p>This sphere is displaced in the y direction (negative), the greatest intensity of the magnetic field occurs when the sample passes by the sensor, out of its center. According to Equation (2), the unknown values are x, y, z, and m<sub>x</sub>. The value of y<sub>max</sub> can be determined through the region of maximum intensity of the magnetic field read by the sensor.</p> 
+<p>We can substitute the integral calculation in Equation (3) using the reciprocity principle, which estimates the <img src="//html.scirp.org/file/1-1870054x11.png" class="200" /> flux produced by the magnetic moment of the dipole that passes through the area of the Hall sensor by:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x12.png" /><span class="bracketMark">(4)</span></p> 
+<p>where <img src="//html.scirp.org/file/1-1870054x13.png" class="200" /> is equal to the field produced at the position of the dipole by a fictitious coil with its center located at (x, y, z), the center of sensor, and with a radius equal to that of the coil when excited by a unit current; m is the dipole magnetic moment. We only needed to calculate B<sub>r</sub>, which can be written in terms of complete elliptic integrals of the first and second kind (K and E, respectively) [20] .</p> 
+<p>where <img src="//html.scirp.org/file/1-1870054x14.png" class="200" /> and a<sub>s</sub> represents the radius of the fictitious coil,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x15.png" /><span class="bracketMark">and</span></p> 
+<p>Because only m<sub>x</sub> differs from zero, we can calculate B<sub>x</sub> as:</p> 
+<p><sup> <img src="//html.scirp.org/file/1-1870054x17.png" class="200" /> </sup>(5)</p> 
+<p>The magnetic flux of the x-component of the magnetic field of a dipole through an area is given by:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x18.png" /><span class="bracketMark">(6)</span></p> 
+<p>The calibration process of the Hall magnetometer begins by obtaining the distance from the center of the sample holder to the center of the Hall sensor. These values are subsequently used to determine the desired magnetic moment. The values of x<sub>0</sub> and z<sub>0</sub> used in the dipole model (Equation (6)) represent the horizontal and vertical distance, respectively, from the center of the sensor to the center of the sample.</p> 
+<p>To determine x<sub>0</sub> and z<sub>0</sub>, we used a sample holder with two cylindrical cavities, where we two nickel spheres of equal mass (126 &times; 10<sup>−6</sup> kg) were placed. These were positioned at a distance of 22.5 mm in relation to the other (minimum distance required to avoid influencing each other’s induced magnetic fields, see <a href="#f3" target="_self">Figure 3</a>). They were placed in different positions, x<sub>0</sub> and z<sub>0</sub>, in relation to the center of the sensor.</p> 
+<p>Since the examined magnetization value is independent from the spatial dependence of the field induced in the spheres, we can normalize the measured magnetic field and only consider the relative distances between the spheres and the sensor. If we measure precisely the values of dz<sub>1</sub>, dz<sub>2,</sub> and dx<sub>2</sub>, we have a system of two equa-</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x19.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Sample holder used in the calibration.</p> 
+</div> 
+<p>tions, corresponding to the two measures, and two variables, the distances x<sub>0</sub> and z<sub>0</sub>.</p> 
+<p>Analyzing this sample holder in an optical microscope we can determine the values of dz<sub>1</sub> and dx<sub>2</sub> (Figures 4(a)-(d)). Once the relative distances are obtained, we denormalize the measures and obtain the desired magnetic moment. In this study, we repeated this procedure many times and obtained the average values x<sub>0</sub> = 1.63 mm and z<sub>0</sub> = 3.02 mm. It must be noted that these values were obtained considering the flux through the area of the sensor.</p> 
+<p>In the literature, the saturation magnetization of nickel occurs approximately at 0.5 T and has the value 55.18 Am<sup>2</sup>/kg at room temperature [21] [22] . This saturation value is for pure nickel; however, the nickel used in our calibration process was 99% pure.</p> 
+<p><a href="#f5" target="_self">Figure 5</a> shows a comparison of the magnetization measurement results obtained with the Hall magnetometer (circles), the SQUID magnetometer (red solid lines), and the VSM device (black solid lines) for the same nickel sphere as a function of the applied field.</p> 
+<p>For the maximum field, 1 T, the Hall magnetometer obtained a magnetization of 55.38 Am<sup>2</sup>/kg. For the same field, the VSM device measured 54.94 Am<sup>2</sup>/kg and the SQUID magnetometer 54.42 Am<sup>2</sup>/kg.</p> 
+<p>The difference in the magnetization curves was 0.8% and 1.7% in relation to the values obtained by the VSM and the SQUID magnetometers, respectively.</p> 
+<p>It is worth noting that our result was obtained independently from the measurements with the other magnetometers. Regarding the precision of our magnetometer, after repeated many times measurements performed during several months, we noticed that the standard deviation was 1.2%.</p> 
+<p>The automation of the Hall magnetometer was achieved using a LABVIEW program (<a href="#f6" target="_self">Figure 6</a>), which acquired and analyzed the data transferred from the reading systems to a computer via the GPIB interface.</p> 
+<p class="E-Title1">4. Experimental Results</p> 
+<p class="E-Title2">4.1. Nickel Microparticles</p> 
+<p>After the sample holder calibration, we removed the nickel sphere and placed the magnetic material in the cylindrical cavity located at the end of the sample holder.</p> 
+<p>We can observe in <a href="#f1" target="_self">Figure 1</a>(c) that this cavity is near the sensor, which prevents the use of the dipole model. For the calculation of the magnetic moment of the sample, it is therefore necessary to apply a different theoretical model, which should be adapted to the geometric characteristics of the system. Since the cavity of the sample holder is cylindrical, we used a current cylinder as a model of the sample. To express the component z of the corresponding magnetic field, we first analyzed the simplest case, which is a current ring located at the center of the cartesian coordinate system. We have:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x20.png" /><span class="bracketMark">(7)</span></p> 
+<p>According to Equation (7), the B<sub>z</sub> component for a cylinder of length L is:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/1-1870054x21.png" /><span class="bracketMark">(8)</span></p> 
+<p>After establishing the geometric parameters, we need to determine the magnetic moment m of Equation (8), which adjusts the model to the experimental measurements. Using the data acquisition program developed with LabVIEW<sup>&reg;</sup> (<a href="#f6" target="_self">Figure 6</a>), we can measure the response of the induced field of the nickel microparticles (this was obtained from a NiO reduction process). To each magnetic field values, the sample percure a fixed distance and</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x22.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. (a) Optical microscope measurement of the distance dz<sub>2</sub>; (b) Measurement of the distance dx<sub>2</sub>; (c) Measurement of the distance dz<sub>1</sub>; (d) Figure indicating the position of the sensor and the first cylindrical cavity with a nickel sphere.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x23.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Comparison of the magnetization data for a nickel sphere obtained with the Hall magnetometer (circles), the VSM device (black solid lines), and the SQUID magnetometer (red solid lines).</p> 
+</div> 
+<p>generates an induced field curve versus distance traveled, where each curve was optimized by the cylindrical model. By adjusting each of these curves, we can obtain the magnetic moment of the sample for each applied magnetic field.</p> 
+<p>As an example of the application of the cylindrical model, <a href="#f7" target="_self">Figure 7</a> shows the lowest measured magnetic moment for the nickel sample, which was 2.12 &times; 10<sup>−5</sup> Am<sup>2</sup>. <a href="#f7" target="_self">Figure 7</a> compares the magnetization results obtained with the Hall magnetometer (blue circles) for 11.9 mg of nickel and those measured with the SQUID magnetometer using 2.2 mg of the same sample (red solid lines). By comparing the two magnetization curves, we obtained a mean square error of 0.43%; this is in accordance with the predicted magnetic moment measurement error for this sample holder.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x27.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>.LABVIEW program used for the automation of the Hall magnetometer.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x24.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Comparison of the data acquired with the Hall sensor magnetometer using nickel microparticles (circles) and the current cylinder model with the results obtained with the SQUID magnetometer (red solid lines).</p> 
+</div> 
+<p class="E-Title2">4.2. Cobalt Ferrite Nanoparticles</p> 
+<p>Nanoparticles are important tools used in medicine, both in diagnosis and for the treatment of various diseases. Their sizes can be controlled, varying from tens up to hundreds of nanometers, making their dimensions smaller or comparable to those of cells, bacteria, or viruses.</p> 
+<p>In <a href="#f8" target="_self">Figure 8</a>, we present the magnetization results for cobalt ferrite nanoparticles. Using a sample mass of 15.1 mg, we performed measurements with the Hall magnetometer (blue circles) and the SQUID magnetometer (red solid lines). Comparing the two magnetization curves, we obtained a mean square error of 1.1%. Using the</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x25.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Comparison of the data acquired with the Hall sensor magnetometer using nanoparticles of cobalt ferrite (circles) and the current cylinder model to the results obtained with the SQUID magnetometer (red solid lines).</p> 
+</div> 
+<p>magnetization values obtained with the Hall magnetometer for fields above 1 T, we traced a curve M x 1/H. Extrapolating to 1/H equals zero, we estimated the saturation magnetization of cobalt ferrite to be 6 Am<sup>2</sup>/kg. By analyzing the data, we found a remanent magnetization of approximately 0.29 Am<sup>2</sup>/kg and a coercivity near 5.5 mT. The lowest magnetic moment detected in the cobalt ferrite was 3.74 &times; 10<sup>−6</sup> Am<sup>2</sup>, which is the lowest measured value to date. The same sample was analyzed with an atomic force microscope from Puc-Rio. In the upper corner of <a href="#f8" target="_self">Figure 8</a>, we display the smallest observed particle of cobalt ferrite.</p> 
+<p class="E-Title3">Magnetite Coated with Silica Using the St&ouml;ber Method</p> 
+<p>We manufactured magnetic nanoparticles of magnetite using the co-precipitation method. This method is quick and versatile and allows the fabrication of a large variety of magnetic nanoparticles with a great number of advantages, such as short time of reaction, particles with small agglomeration, low cost, and large quantities. The technique allows us to control the size and distribution of the obtained nanoparticles by varying parameters like the pH [23] [24] .</p> 
+<p>Samples of these nanoparticles were prepared from magnetite coated with silica using the St&ouml;ber method. The St&ouml;ber method is a coating process that involves hydrolysis and condensation of metal alkoxides and inorganic salts [25] . This process is more widely known as sol-gel [26] .</p> 
+<p>According to the results shown in <a href="#f9" target="_self">Figure 9</a>, we can verify the magnetization of nanoparticles of magnitude coated with silica from measurements using the Hall magnetometer (blue circles). We used a sample mass of 16.7 mg. The same sample was measured with a VSM device (model 4500, EG &amp; G Instruments) (black solid lines). Comparing the two magnetization curves, we obtained a mean quadratic error of 1.3%. By analyzing the magnetization curve, we determined a magnetization remanence of 0.4 Am<sup>2</sup>/kg and a coercivity of 0.6 mT.</p> 
+<p class="E-Title1">5. Conclusion</p> 
+<p>We designed, manufactured, and calibrated a magnetometer using autonomous and low-cost instruments available in laboratories and a low-cost GaAs Hall effect sensor. The magnetometer was calibrated independently using two nickel spheres of 99% purity. Its performance was compared to that of commercial VSM and SQUID magnetometers, exhibiting magnetization errors smaller than 1.7%. Owing to the proximity of the Hall sensor to the sample, which had a cylindrical geometry, we used a model of a current cylinder to obtain its magnetic moment. The magnetometer proved to be effective for the characterization of magnetic nanoparticles, obtaining complete magnetization curves and reaching sensitivity of the order of 10<sup>−8</sup> Am<sup>2</sup>, depending on the employed sensor. It was also demonstrated to measure the magnetostriction and magneto-crystalline anisotropy of magnetic materials, not only particles but also in the form of bulk. This configuration is cost-effective but versa-</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-1870054x26.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. Magnetization curves of the nanoparticles, considering only the mass of the magnetic material in the sample holder, acquired at room temperature with Plutonic F127 coating.</p> 
+</div> 
+<p>tile and will be adequate for research and educational purposes.</p> 
+<p class="E-Title1">Acknowledgements</p> 
+<p>This work was financed in part by the Brazilian agencies CNPq and FAPERJ. We would like to thank Professors R. L. Sommer from CBPF, N. Massalani, and M. A. Novak from UFRJ for the measurements with the VSM and SQUID magnetometers. We would like to thank Professor Antonio Carlos Bruno for lengthy discussions on the Hall magnetometer.</p>     
+<p class="E-Title1">NOTES</p>  
+<p><sup>*</sup>Corresponding author.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576868' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Fisli, A., Yusuf, S., Ridwan, Krisnandi, Y.K. and Gunlazuardi, J. (2014) Preparation and Characterization of Magnetite-Silica Nano-Composite as Adsorbents for Removal of Methylene Blue Dyes from Environmental Water Samples. Advanced Materials Research, 896, 525-531. <br/>http://dx.doi.org/10.4028/www.scientific.net/AMR.896.525
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576869' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Brown, D.R., Han, K. and Siegrist, T. (2014) Hard Magnetic Properties Observed in Bulk Mn1-xGax. Journal of Applied Physics, 115, Article ID: 17A723. <br/>http://dx.doi.org/10.1063/1.4864141
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576870' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Saari, M.M., Sakai, K., Kiwa, T., Sasayama, T., Yoshida, T. and Tsukada, K. (2015) Characterization of the Magnetic Moment Distribution in Low-Concentration Solutions of Iron Oxide Nanoparticles by a High-Tc Superconducting Quantum Interference Device Magnetometer. Journal of Applied Physics, 117, Article ID: 17B321.
+<br/>http://dx.doi.org/10.1063/1.4919043
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576871' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Morello, A., Angenent, W.G.J., Frossati, G. and Jongh, L.J. (2005) Automated and Versatile SQUID Magnetometer for the Measurement of Materials Properties at Millikelvin Temperatures. Review of Scientific Instruments, 76, Article ID: 023902. <br/>http://dx.doi.org/10.1063/1.1841831
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576872' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Foner, S. (1959) Versatile and Sensitive Vibrating—Sample Magnetometer. Review of Scientific Instruments, 30, 548.
+<br/>http://dx.doi.org/10.1063/1.1716679
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576873' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Lim, J.T. and Kim, C.S. (2014) Magnetic Properties of Zn Doped Co2Y Hexaferrite by Using High-Field Mossbauer Spectroscopy. Journal of Applied Physics, 115, Article ID: 17A516. <br/>http://dx.doi.org/10.1063/1.4865879
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576874' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Teixeira, J.M., Lusche, R., Ventura, J., Fermento, R., Carpinteiro, F., Araujo, J.P., Sousa, J.B., Cardodo, S. and Freitas, P.P. (2011) Versatile, High Sensitivity, and Automatized Angular Dependent Vectorial Kerr Magnetometer for the Analysis of Nanostructured Materials. Review of Scientific Instruments, 82, Article ID: 043902.
+<br/>http://dx.doi.org/10.1063/1.3579497
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576875' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Byrnes, W.S. and Crawford, R.G. (1958) Improved Torque Magnetometer. Review of Scientific Instruments, 29, 493.
+<br/>http://dx.doi.org/10.1063/1.1723195
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576876' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Gerhardter, F., Li, Y. and Baberschke, K. (1993) Temperature-Dependent Ferromagnetic-Resonance Study in Ultrahigh Vacuum: Magnetic Anisotropies of Thin Iron Films. Physical Review B, 47, 11204-11210.
+<br/>http://dx.doi.org/10.1103/PhysRevB.47.11204
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576877' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Masti, M., Lehtonen, J., Perala, R., Mikkonen, R., Soderlund, L. and Seppala, P. (2005) Hall Sensor Magnetometer for Ac Characterization of High Temperature Superconducting Tapes. Measurement Science and Technology, 16, 1092-1098. <br/>http://dx.doi.org/10.1088/0957-0233/16/5/007
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576878' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Viehmann, W. (1962) Magnetometer Based on the Hall Effect. Review of Scientific Instruments, 33, 537. 
+<br/>http://dx.doi.org/10.1063/1.1717911
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576879' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Kent, A.D., Von Molnar, S., Gider, S. and Awschalom, D.D. (1994) Properties and Measurement of Scanning Tunneling Microscope Fabricated Ferromagnetic Particle Arrays (Invited). Journal of Applied Physics, 76, 6656-6660.
+<br/>http://dx.doi.org/10.1063/1.358160
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576880' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Li, Y., Xiong, P., Molnar, S., Ohno, Y. and Ohno, H. (2003) Magnetization Reversal of Iron Nanoparticles Studied by Submicron Hall Magnetometry. Journal of Applied Physics, 93, 7912-7914. <br/>http://dx.doi.org/10.1063/1.1557827
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576881' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Pinto, J.F., Machado, F.L.A. and Rodrigues, A.R. (2012) Hall Magnetometry in a Closed-Cycle Refrigerator. Revista Mexicana de fisica, 58, 245-248. <br/>http://rmf.smf.mx/pdf/rmf-s/58/2/58_2_245.pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576882' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        AKM User Manual, Model HG-166A. <br/>http://www.gmw.com/magnetic_sensors/asahi/documents/hg-166a_gmw.pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576883' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Keithley User Manual, Model: 6220. (2005)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576884' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Keithley User Manual, Model: 2182A Nanovoltmeter. (2004)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576885' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Ornelas, P.H., Bruno, A.C., Barbosa, C.H., Lima, E.A. and Ribeiro, P.C. (2002) A Survey of Calibration Procedures for SQUID Gradiometers. Superconductor Science and Technology, 16, 427-431.
+<br/>http://dx.doi.org/10.1088/0953-2048/16/4/301
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576886' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Griffiths, D.J. (1999) Introduction to Electrodynamics. 3th Edition, Prentice Hall, Upper Saddle River.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576887' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Bladel, J.V. (1964) Electromagnetic Fields. McGraw-Hill, New York.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576888' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Crangle, J. and Goodman G.M. (1971) The Magnetization of Pure Iron and Nickel. Proceedings of the Royal Society of London. Series A, Mathematical and Physical Sciences, 321, 477-491. <br/>http://dx.doi.org/10.1098/rspa.1971.0044
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576889' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Bozorth, R.M. (1993) Ferromagnetism. IEEE Magnetics Society, Piscataway.
+<br/>http://dx.doi.org/10.1109/9780470544624
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576890' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Laurent, S., Forge, D., Port, M., Roch, A., Robic, C., Elst, L.V. and Muller, R.N. (2008) Magnetic Iron Oxide Nanoparticles: Synthesis, Stabilization, Vectorization, Physicochemical Characterizations, and Biological Applications. Chemical Review, 108, 2064-2110. <br/>http://dx.doi.org/10.1021/cr068445e
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576891' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Vayssières, L., Chanéac, C., Tronc, E. and Jolivet, J.P. (1998) Size Tailoring of Magnetite Particles Formed by Aqueous Precipitation: An Example of Thermodynamic Stability of Nanometric Oxide Particles. Journal of Colloid and Interface Science, 205, 205-212. <br/>http://dx.doi.org/10.1006/jcis.1998.5614
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576892' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        Caruanaa, L., Costa, A.L., Cassani, M.C., Rampazzo, E., Prodi, L. and Zaccheroni, N. (2012) Tailored SiO2 Based Coatings for Dye Doped Superparamagnetic Nanocomposites. Colloids and Surfaces A: Physicochemical and Engineering Aspects, 410, 111-118. <br/>http://dx.doi.org/10.1016/j.colsurfa.2012.06.027
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576893' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Green, D.L., Lin, J.S., Lam, Y., Hu, M., Shaefer, D.W. and Harris, M.T. (2003) Size, Volume Fraction, and Nucleation of St&oumlber Silica Nanoparticles. Journal of Colloid and Interface Science, 266, 346-358.
+<br/>http://dx.doi.org/10.1016/S0021-9797(03)00610-6
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=787" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=787" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=787" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=787" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=787"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=787"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=787" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=787" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=787" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=787" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=787" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=787"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=787"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=787" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=787&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=787&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=787" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=787" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=787" target="_blank">MI
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=787" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=787" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=787" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=787" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=787" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=787" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=787" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/mi.2015.44005" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60022 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +787 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +787 +"&paperid=" +60022 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

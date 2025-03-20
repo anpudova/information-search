@@ -1,0 +1,1586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Formalized Operators with Phase Encoding
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JQIS_2015093011430216.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60083" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60083.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60083" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60083" />
+<meta property="og:title" content="Formalized Operators with Phase Encoding" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JQIS2016062314311043.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JQIS2016062314311043.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Formalized Operators with Phase Encoding" />
+<meta name="keywords" content="Quantum Operators,Rotations,Phasespace,Quantum Circuit" />
+<meta name="description" content="Discover the power of phase encoding/decoding in analyzing Deutsch&#39;s algorithm. Explore formalizations and realizations with Raychev&#39;s operators in this insightful article." />
+<meta name="citation_journal_title" content="Journal of Quantum Information Science" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Nikolay Raychev" />
+<meta name="citation_author" content="Nikolay Raychev" />
+<meta name="citation_title" content="Formalized Operators with Phase Encoding" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-09-02" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jqis.2015.53014" />
+<meta name="citation_issnPrint" content="2162-5751" />
+<meta name="citation_issnOnline" content="2162-576X" />
+<meta name="citation_abstract" content="In this article the concept of phase encoding/decoding is used to analyze and formalize a simple quantum algorithm—the Deutsch’s algorithm. The algorithm is formalized in two different ways through an analysis, based on phase encoding/decoding, carried out by the formalized elementary operators developed by the author of this article. Concrete examples of different possible realizations of the formalized with Raychev’s operators Deutsch’s algorithms are offered." />
+<meta name="citation_publication_date" content="2015/9/2" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JQIS_2015093011430216.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JQIS_2015093011430216.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60083" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60083" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60083" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60083.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60083.xml" />
+<meta name="citation_issue" content="3" />
+<meta name="citation_online_date" content="2015/9/2" />
+<meta name="citation_firstpage" content="114" />
+<meta name="citation_lastpage" content="126" />
+
+<meta name="dc.title" content="Formalized Operators with Phase Encoding" />
+
+<meta name="dc.creator" content="Nikolay Raychev" /><meta name="dcterms.issued" content="2015-09-02" />
+<meta name="dc.description" content="In this article the concept of phase encoding/decoding is used to analyze and formalize a simple quantum algorithm—the Deutsch’s algorithm. The algorithm is formalized in two different ways through an analysis, based on phase encoding/decoding, carried out by the formalized elementary operators developed by the author of this article. Concrete examples of different possible realizations of the formalized with Raychev’s operators Deutsch’s algorithms are offered." />
+<meta name="dc.source" content="Journal of Quantum Information Science" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-02" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jqis.2015.53014" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-02" />
+<meta name="prism.issnPrint" content="2162-5751" />
+<meta name="prism.issnOnline" content="2162-576X" />
+<meta name="prism.publicationName" content="Journal of Quantum Information Science" />
+<meta name="prism.publicationDate" content="2015-09-02" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="3" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="114" />
+<meta name="prism.doi" content="10.4236/jqis.2015.53014" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60083" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAk0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTAyZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAV7PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1OaWtvbGF5KytSYXljaGV2JnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+Tmlrb2xheSAgUmF5Y2hldjwvYT48c3VwPio8L3N1cD4gZAICD2QWAmYPFgIfBAXgATxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9U2Nob29sK29mK0NvbXB1dGluZyUyYytWYXJuYStVbml2ZXJzaXR5K29mK01hbmFnZW1lbnQlMmMrVmFybmElMmMrQnVsZ2FyaWEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5TY2hvb2wgb2YgQ29tcHV0aW5nLCBWYXJuYSBVbml2ZXJzaXR5IG9mIE1hbmFnZW1lbnQsIFZhcm5hLCBCdWxnYXJpYTwvYT4uPGJyIC8+ZAIFDxYCHwQFBTMsNjc1ZAIGDxYCHwQFBTQsNjc2ZAIHDxYCHwMFD0Rpc3BsYXk6aW5saW5lO2QCCA9kFgICAQ8WAh8EBasDPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1RdWFudHVtK09wZXJhdG9ycyZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlF1YW50dW0gT3BlcmF0b3JzPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rUm90YXRpb25zJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFJvdGF0aW9uczwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1BoYXNlc3BhY2Umc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gUGhhc2VzcGFjZTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1F1YW50dW0rQ2lyY3VpdCZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBRdWFudHVtIENpcmN1aXQ8L2E+IGQCCg8WAh8EBf4BUmF5Y2hldiwgTi4gICAoMjAxNSkgRm9ybWFsaXplZCBPcGVyYXRvcnMgd2l0aCBQaGFzZSBFbmNvZGluZy4gPGk+Sm91cm5hbCBvZiBRdWFudHVtIEluZm9ybWF0aW9uIFNjaWVuY2U8L2k+LCA8Yj41PC9iPiwgMTE0LTEyNi4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2pxaXMuMjAxNS41MzAxNCcgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDA4MyknPjEwLjQyMzYvanFpcy4yMDE1LjUzMDE0PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIYFjBmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MDknIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQExzAFTaG9yLCBQLiAoMTk5NykgUG9seW5vbWlhbC1UaW1lIEFsZ29yaXRobXMgZm9yIFByaW1lIEZhY3Rvcml6YXRpb24gYW5kIERpc2NyZXRlIExvZ2FyaXRobXMgb24gYSBRdWFudHVtIENvbXB1dGVyLiBTSUFNIEpvdXJuYWwgb24gQ29tcHV0aW5nLCAyNiwgMTQ4NC0xNTA5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMzcvUzAwOTc1Mzk3OTUyOTMxNzJkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYxMCcgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATLaAUNoaWxkcywgQS5NLiwgTGFuZGFobCwgQS5KLiBhbmQgUGFycmlsbywgUC5BLiAoMjAwNykgUXVhbnR1bSBBbGdvcml0aG0gZm9yIE9yZGVyZWQgU2VhcmNoIFByb2JsZW0gdmlhIFNlbWlkZW5pdGUgUHJvZ3JhbW1pbmcuIFBoeXNpY2FsIFJldmlldyBBLCA3NSwgQXJ0aWNsZSBJRDogMDMyMzM1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDMvUGh5c1JldkEuNzUuMDMyMzM1ZAICD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MTEnIHRhcmdldD0nX2JsYW5rJz4zPC9hPl0BMwEz+AFGYXJoaSwgRS4sIEdvbGRzdG9uZSwgSi4sIEd1dG1hbm4sIFMuLCBMYXBhbiwgSi4sIEx1bmRncmVuLCBBLiBhbmQgUHJlZGEsIEQuICgyMDAxKSBBIFF1YW50dW0gQWRpYWJhdGljIEV2b2x1dGlvbiBBbGdvcml0aG0gQXBwbGllZCB0byBSYW5kb20gSW5zdGFuY2VzIG9mIGFuIE5QLUNvbXBsZXRlIFByb2JsZW0uIFNjaWVuY2UsIDI5MiwgNDcyLTQ3NS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMTA1NzcyNmQCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjEyJyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNLcBSGFycm93LCBBLlcuLCBIYXNzaWRpbSwgQS4gYW5kIExsb3lkLCBTLiAoMjAwOSkgUXVhbnR1bSBBbGdvcml0aG0gZm9yIExpbmVhciBTeXN0ZW1zIG9mIEVxdWF0aW9ucy4gUGh5cy4gUmV2LiBMZXR0LiwgMTAzLCAxNTA1MDIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2TGV0dC4xMDMuMTUwNTAyZAIED2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MTMnIHRhcmdldD0nX2JsYW5rJz41PC9hPl0BNQE1X0JhY29uLCBELiBhbmQgdmFuIERhbSwgVy4gKDIwMTApIFJlY2VudCBQcm9ncmVzcyBpbiBRdWFudHVtIEFsZ29yaXRobXMuIENvbW11bi4gQUNNLCA1MywgODQtOTMuZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MTQnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2yQFUb2Zmb2xpLCBULiAoMTk4MCkgUmV2ZXJzaWJsZSBDb21wdXRpbmcuIEluOiBQcm9jZWVkaW5ncyBvZiB0aGUgN3RoIENvbGxvcXVpdW0gb24gQXV0b21hdGEsIExhbmd1YWdlcyBhbmQgUHJvZ3JhbW1pbmcsIFNwcmluZ2VyLVZlcmxhZywgTG9uZG9uLCA2MzItNjQ0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvMy01NDAtMTAwMDMtMl8xMDRkAgYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYxNScgdGFyZ2V0PSdfYmxhbmsnPjc8L2E+XQE3ATeVAUJlbm5ldHQsIEMuSC4gKDE5ODkpIFRpbWUvU3BhY2UgVHJhZGUtT2ZmcyBmb3IgUmV2ZXJzaWJsZSBDb21wdXRhdGlvbi4gU0lBTSBKb3VybmFsIG9uIENvbXB1dGluZywgMTgsIDc2Ni03NzYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEzNy8wMjE4MDUzZAIHD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MTYnIHRhcmdldD0nX2JsYW5rJz44PC9hPl0BOAE4mgFEZXV0c2NoLCBELiAoMTk4OSkgUXVhbnR1bSBDb21wdXRhdGlvbmFsIE5ldHdvcmtzLiBQcm9jZWVkaW5ncyBvZiB0aGUgUm95YWwgU29jaWV0eSBvZiBMb25kb24gQSwgNDI1LCA3My05MC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDk4L3JzcGEuMTk4OS4wMDk5ZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MTcnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5f0JhcmVuY28sIEEuICgxOTk1KSBBIFVuaXZlcnNhbCBUd28tQml0IEdhdGUgZm9yIFF1YW50dW0gQ29tcHV0YXRpb24uIFByb2NlZWRpbmdzIG9mdGhlIFJveWFsIFNvY2lldHkgb2YgTG9uZG9uIEEsIDQ0OSwgNjc5LTY4My5kAgkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYxOCcgdGFyZ2V0PSdfYmxhbmsnPjEwPC9hPl0CMTACMTDoAURldXRzY2gsIEQuLCBCYXJlbmNvLCBBLiBhbmQgRWtlcnQsIEEuICgxOTk1KSBVbml2ZXJzYWxpdHkgaW4gUXVhbnR1bSBDb21wdXRhdGlvbi4gUHJvY2VlZGluZ3Mgb2YgdGhlIFJveWFsIFNvY2lldHkgb2YgTG9uZG9uLiBTZXJpZXMgQTogTWF0aGVtYXRpY2FsIGFuZCBQaHlzaWNhbCBTY2llbmNlcywgNDQ5LCA2NjktNjc3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwOTgvcnNwYS4xOTk1LjAwNjVkAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYxOScgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTGeAURpIFZpbmNlbnpvLCBELlAuICgxOTk1KSBUd28tQml0IEdhdGVzIEFyZSBVbml2ZXJzYWwgZm9yIFF1YW50dW0gQ29tcHV0YXRpb24uIFBoeXNpY2FsIFJldmlldyBBLCA1MSwgMTAxNS0xMDIyLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2QS41MS4xMDE1ZAILD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MjAnIHRhcmdldD0nX2JsYW5rJz4xMjwvYT5dAjEyAjEykwFMbG95ZCwgUy4gKDE5OTUpIEFsbW9zdCBBbnkgUXVhbnR1bSBMb2dpYyBHYXRlIElzIFVuaXZlcnNhbC4gUGh5c2ljYWwgUmV2aWV3IExldHRlcnMsIDc1LCAzNDYtMzQ5Ljxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9waHlzcmV2bGV0dC43NS4zNDZkAgwPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYyMScgdGFyZ2V0PSdfYmxhbmsnPjEzPC9hPl0CMTMCMTNzTmllbHNlbiwgTS4gYW5kIENodWFuZywgSS4gKDIwMDMpIFF1YW50dW0gQ29tcHV0aW5nIGFuZCBRdWFudHVtIEluZm9ybWF0aW9uLiBDYW1icmlkZ2UgVW5pdmVyc2l0eSBQcmVzcywgQ2FtYnJpZGdlLmQCDQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjIyJyB0YXJnZXQ9J19ibGFuayc+MTQ8L2E+XQIxNAIxNG5QaGlsbGlwIEtheWUsIFIuTC4gYW5kIE1vc2NhLCBNLiAoMjAwNykgQW4gSW50cm9kdWN0aW9uIHRvIFF1YW50dW0gQ29tcHV0aW5nLiBPeGZvcmQgVW5pdmVyc2l0eSBQcmVzcywgT3hmb3JkLmQCDg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjIzJyB0YXJnZXQ9J19ibGFuayc+MTU8L2E+XQIxNQIxNYMBUmllZmZlbCwgRS4gYW5kIFBvbGFrLCBXLiAoMTk5OCkgQW4gSW50cm9kdWN0aW9uIHRvIFF1YW50dW0gQ29tcHV0aW5nIGZvciBOb24tUGh5c2ljaXN0cy48YnIvPmh0dHA6Ly9hcnhpdi5vcmcvYWJzL3F1YW50LXBoLzk4MDkwMTZkAg8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYyNCcgdGFyZ2V0PSdfYmxhbmsnPjE2PC9hPl0CMTYCMTbJAVJheWNoZXYsIE4uICgyMDE1KSBVbml0YXJ5IENvbWJpbmF0aW9ucyBvZiBGb3JtYWxpemVkIENsYXNzZXMgaW4gUXViaXQgU3BhY2UuIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBTY2llbnRpZmljIGFuZCBFbmdpbmVlcmluZyBSZXNlYXJjaCwgNiwgMzk1LTM5OC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xNDI5OS9panNlci4yMDE1LjA0LjAwM2QCEA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjI1JyB0YXJnZXQ9J19ibGFuayc+MTc8L2E+XQIxNwIxN7sBUmF5Y2hldiwgTi4gKDIwMTUpIEZ1bmN0aW9uYWwgQ29tcG9zaXRpb24gb2YgUXVhbnR1bSBGdW5jdGlvbnMuIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBTY2llbnRpZmljIGFuZCBFbmdpbmVlcmluZyBSZXNlYXJjaCwgNiwgNDEzLTQxNS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xNDI5OS9panNlci4yMDE1LjA0LjAwNGQCEQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjI2JyB0YXJnZXQ9J19ibGFuayc+MTg8L2E+XQIxOAIxOLEBUmF5Y2hldiwgTi4gKDIwMTUpIExvZ2ljYWwgU2V0cyBvZiBRdWFudHVtIE9wZXJhdG9ycy4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIFNjaWVudGlmaWMgYW5kIEVuZ2luZWVyaW5nIFJlc2VhcmNoLCA2LCAzOTEtMzk0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjE0Mjk5L2lqc2VyLjIwMTUuMDQuMDAyZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MjcnIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5sQFSYXljaGV2LCBOLiAoMjAxNSkgQ29udHJvbGxlZCBGb3JtYWxpemVkIE9wZXJhdG9ycy4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIFNjaWVudGlmaWMgYW5kIEVuZ2luZWVyaW5nIFJlc2VhcmNoLCA2LCAxNDY3LTE0NjkuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTQyOTkvaWpzZXIuMjAxNS4wNS4wMDNkAhMPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYyOCcgdGFyZ2V0PSdfYmxhbmsnPjIwPC9hPl0CMjACMjDMAVJheWNoZXYsIE4uICgyMDE1KSBDb250cm9sbGVkIEZvcm1hbGl6ZWQgT3BlcmF0b3JzIHdpdGggTXVsdGlwbGUgQ29udHJvbCBCaXRzLiBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgU2NpZW50aWZpYyBhbmQgRW5naW5lZXJpbmcgUmVzZWFyY2gsIDYsIDE0NzAtMTQ3My4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xNDI5OS9panNlci4yMDE1LjA1LjAwMWQCFA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjI5JyB0YXJnZXQ9J19ibGFuayc+MjE8L2E+XQIyMQIyMbkBUmF5Y2hldiwgTi4gKDIwMTUpIENvbm5lY3RpbmcgU2V0cyBvZiBGb3JtYWxpemVkIE9wZXJhdG9ycy4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIFNjaWVudGlmaWMgYW5kIEVuZ2luZWVyaW5nIFJlc2VhcmNoLCA2LCAxNDc0LTE0NzYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTQyOTkvaWpzZXIuMjAxNS4wNS4wMDJkAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODYzMCcgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjKPAVJheWNoZXYsIE4uICgyMDE1KSBJbmRleGVkIEZvcm1hbGl6ZWQgT3BlcmF0b3JzIGZvciBOLUJpdCBDaXJjdWl0cy4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIFNjaWVudGlmaWMgYW5kIEVuZ2luZWVyaW5nIFJlc2VhcmNoLCA2LCAxNDc3LTE0ODAuZAIWD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzg2MzEnIHRhcmdldD0nX2JsYW5rJz4yMzwvYT5dAjIzAjIzrQFSYXljaGV2LCBOLiAoMjAxNSkgVW5pdmVyc2FsIFF1YW50dW0gT3BlcmF0b3JzLiBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgU2NpZW50aWZpYyBhbmQgRW5naW5lZXJpbmcgUmVzZWFyY2gsIDYsIDEzNjktMTM3MS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xNDI5OS9panNlci4yMDE1LjA2LjAwNWQCFw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4NjMyJyB0YXJnZXQ9J19ibGFuayc+MjQ8L2E+XQIyNAIyNN8BUmF5Y2hldiwgTi4gKDIwMTUpIEVuY29kaW5nIGFuZCBEZWNvZGluZyBvZiBBZGRpdGlvbmFsIExvZ2ljIGluIHRoZSBQaGFzZSBTcGFjZSBvZiBBbGwgT3BlcmF0b3JzLiBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgU2NpZW50aWZpYyBhbmQgRW5naW5lZXJpbmcgUmVzZWFyY2gsIDYsIDEzNTYtMTM2Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xNDI5OS9panNlci4yMDE1LjA3LjAwM2QCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJEB09KQklQSFkET0pCTQNPSkMET0pDQgRPSkNEBE9KQ0UET0pDTQNPSkQFT0pEZXIET0pETQNPSkUET0pFRQRPSkVNBU9KRU1EBU9KRXBpBE9KRVIDT0pGBE9KRkQDT0pHBU9KR2FzBU9KR2VuA09KSQRPSklDBE9KSU0FT0pJTk0DT0pMA09KTQRPSk1DB09KTWV0YWwET0pNSARPSk1JBU9KTUlQBE9KTUwET0pNTQRPSk1OBE9KTVAET0pNUwVPSk1TaQNPSk4GT0pOZXBoA09KTwRPSk9HBk9KT0dhcwRPSk9wBU9KT3BoBU9KT1BNBU9KT1RTC09KUGF0aG9sb2d5BE9KUEMHT0pQQ2hlbQVPSlBlZARPSlBNBE9KUFAET0pQUwdPSlBzeWNoBE9KUkEFT0pSYWQET0pSRARPSlJNA09KUwRPSlNTBU9KU1NUBE9KU1QFT0pTVEEET0pUUgRPSlRTA09KVQRPSlZNA09QSgNQT1MCUFADUFNUBVBTWUNIA1NBUgNTQ0QEU0dSRQJTTQJTTgNTTkwEU29mdAJTUwNURUwCVEkEVU9BSgJWUANXRVQDV0pBBFdKQ0QFV0pDTVAEV0pDUwRXSkVUA1dKTQRXSk5TBVdKTlNFBVdKTlNUA1dKVgNXU04CWU0VgAIBMAM3MzcEMTQwOAQxNDA2BDEwMDIEMjQyMwMxNjQDNjExBDE0NzgDNDczAzQ5MgQxNTc5BDI0MzcEMjQ0MgQyNDQ0BDI0MjYEMjMxNgM4MDMEMTAwMAM0NzYDMjAzBDI0MjIEMTMwNAM1MzUDODg0AzUzMgM1MjkDMjA3Azk5NgQxNTE3BDIzMTcDMTYwAzQ3NwM2NzUEMTU3MwQxNTc0Azc0MwM1MTMEMTU3NQQyNDQ1AzE5MQM4MTIDMjYwBDI0NTUDMTM2BDIwNzQEMTQ5MwMxMjIDOTg5AjkyBDIwMzMDMTczBDE0OTIEMjQzOAQxNTE4BDI0NTQEMjQ1NwI2NAI5MwQxMzExBDIzMTUDMjA4BDI0MzIEMjQ2MgM1NDEEMTY5MAM1MTICNjUDMTAzAzE3NgMxMTEDNDkwBDI0NDkEMTM5MQMyMDIBNAMyMDkEMjQyOAM3NDcEMTI2MQQxNTc4BDE1MTkDNTI3BDE0NzcEMTI5OAQxOTgwBDI0MzYDNTI1AzQ3NQQyNDQzAjMwBDI0MzUDMjMwAzE2MgQyNDMxAzUzMAM1MjYDMTI1BDI0MjUDNDc5AzUzMQM2OTECMjkDMTQ0BDE5ODYEMTM5NQMxMTQEMjQ2MQQyNDIxBDE0MTEDMTAyAzE3NQM2NDgDMzk3BDE3NTMDMTcyBDI0MzMDNTkxAzk5MAI0NQM1NDMDMzM5BDI0MzACMjgDNDc4BDI0MzkEMjQ2MAMzNTcCNDYDMjEwBDE0ODUDMTYzAzc4NwM3ODYDOTE3AzgxNQQyNDQxBDE0ODcEMTU3NgMxNzQEMjQzNAM1MjgDMjA1AzE5MgI2OQQyNDU5BDI0NjMEMjQ1MwM3MzgEMTQ4MAQxNTkwAzgxNAQxNDA3BDE0NzkEMTAwMwQyNDQ2AzYwMQM4MDYDNzg1BDI0NDcEMjQ1MgM5OTcDNjA2Azc4OAM3OTIEMTk3NwM4MTADNTg2AzYxNAQxNTc3BDI0NTYDODExAzgxNgQxOTc5AzczNgQxMDA0AzU4NwM4MTcDNjEzAzYwMgM1OTIDNTkzAzc5MwQxMTg2AzU4OAM3OTADNzg0AzczOQM4MjADNjEyAzc0MgM5OTkDODIyAzk5OAM1OTYEMjQyNAM2MDUDODIxAzgwNAM2MDQEMjQ2NAQxOTc4AzgwNQM3OTQDODIzAzgxMwM1ODkDNzkxAzYwOQM2MTADNzQxAzc0NAM2MDMDODA3Azc4OQM4MjQEMTM5NAM1OTADNzM1AzYwMAM2MDcEMTQ4NgQyNDQ4AzgwOAM1MDkEMTAwMQM1NDcCNzEDMjA2BDI0NDADMTQ4BDI0NTADNTMzAzEzNQM0NzQEMTU4OQM0OTEEMjAzNAMyMDQDNjY2AzEwNAQxNDA1BDI0NTgDMTQ2AzUxMQM4MTgDNTAyAzgwOQQyNDUxAzUwNgM2MTUDNDkzAzUzNAM1MTACNDEEMjQ2NRQrA4ACZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkZE6vHpBs8S4OjiFwALG8aDwI0nqYZ2VTk2wpDSdv20MS" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=591" title="Journal of Quantum Information Science">
+                    Journal of Quantum Information Science</a> &gt; <a href="home?issueid=6920#60083">Vol.5 No.3, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Formalized Operators with Phase Encoding <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Nikolay++Raychev&searchfield=authors&page=1' target='_blank'>Nikolay  Raychev</a><sup>*</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=School+of+Computing%2c+Varna+University+of+Management%2c+Varna%2c+Bulgaria&searchfield=affs&page=1' target='_blank'>School of Computing, Varna University of Management, Varna, Bulgaria</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jqis.2015.53014"
+                    target="_blank" onclick='SetNum(60083)'>10.4236/jqis.2015.53014</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JQIS_2015093011430216.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60083)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60083' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60083.xml' target='_blank' onclick='SetNum(60083)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    3,675</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    4,676</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60083&JournalID=591' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">In this article the concept of phase encoding/decoding is used to analyze and formalize a simple quantum algorithm—the Deutsch’s algorithm. The algorithm is formalized in two different ways through an analysis, based on phase encoding/decoding, carried out by the formalized elementary operators developed by the author of this article. Concrete examples of different possible realizations of the formalized with Raychev’s operators Deutsch’s algorithms are offered.
+</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Quantum+Operators&searchfield=keyword&page=1' target='_blank'>Quantum Operators</a>, <a href='articles?searchcode=+Rotations&searchfield=keyword&page=1' target='_blank'> Rotations</a>, <a href='articles?searchcode=+Phasespace&searchfield=keyword&page=1' target='_blank'> Phasespace</a>, <a href='articles?searchcode=+Quantum+Circuit&searchfield=keyword&page=1' target='_blank'> Quantum Circuit</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Raychev, N.   (2015) Formalized Operators with Phase Encoding. <i>Journal of Quantum Information Science</i>, <b>5</b>, 114-126. doi: <a href='http://dx.doi.org/10.4236/jqis.2015.53014' target='_blank' onclick='SetNum(60083)'>10.4236/jqis.2015.53014</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p>Quantum computers can be useful in solving many important and complex issues such as solving many fundamental and complex problems such as integer factorization [1] , database search [2] , global binary optimization [3] , linear equation solving [4] , and so on [5] . The reversible computation and reversible universal logic operator was first proposed by Toffoli [6] . Based on the work of Toffoli, Bennett first implement efficient algorithm with reversiblelogic [7] . Based on the work of Toffoli and Bennett, Deutsch defines a three-qubit operator [8] . As a result of the Deutsch’s work, a plurality of other universal operators [9] - [12] were found. On this basis in recent years several other complex surveys have been created [13] - [15] . This report described an approach for encoding and decoding of discrete information about basic states at the input of operators in the phase of their outputs. The decoding is viewed as a special case of interference with four different decoding forms that reflect the identity classes and negation operators. The formalized qubit operator developed by the authors [16] - [24] , which is described in this research, uses the decomposition of the phase/amplitude, which characterizes the operators, presented in the report. The formalized operator permits operation with single qubit operators as linear combinations of the identity operator and the negation operator. In such case, a single qubit operator either negates, identifies, or performs partial identity/negation. If an operator decodes another one, it is able to read the information encoded in the phase space, and reduce the encoded bits to a state or its negation. Relationships of decoding have been developed both as regards to the operator parameters and in terms of Boolean functions encoding. This in addition leads to an increase in the abstraction level. The proposed system approach is different from previous discussions for phase encoding, making the encoding a substantial part of all operators so that the correct encoded information can be determined from the operators parameters.</p> 
+<p>Both Identity<sub>1</sub> and Negation<sub>1</sub> classes are analogous to the classic operators and therefore the formalization of single qubit operators with these classes, acting as main operators, ensures means for primitive operators operation, set out in the classical concepts for calculations. The main goal is the parts of the state phase to be separated from those of the amplitude in such a way that should be set out as the key models at the interference, generated by the operators. This interference is a key to the quantum calculations and the quantum algorithms development. In addition, the separation permits the strict characterization of the consequences from a change of the phase as the binary information encoding in a phase space and thus permits the characterization in terms of Boolean functions. This report will consider the necessary and sufficient conditions for combining operators from Identity<sub>1</sub> and Negation<sub>1</sub> for formation of unitary operators and provision of an abstraction on the relative weights of the base operators. The logical formalization of the main operators will be addressed as regards to their phases and phase changes, which they carry out, on the states, to which they are applied. Whereas this approach to elementary controlled operators is elementary, the formalized system for designing of quantum circuits algorithmic models offers a second approach, which unites the elementary controlled operations with another important aspect of multitude of quantum algorithms, the Oracle operators. In the quantum algorithms design a standard technique is the use of an Oracle operator to enact a phase-kickback operation. Herein an arbitrary, probably irreversible function <img src="//html.scirp.org/file/5-1300172x5.png" class="200" /> is encoded into an n = m + l qubit operator<img src="//html.scirp.org/file/5-1300172x6.png" class="200" />, such that<img src="//html.scirp.org/file/5-1300172x7.png" class="200" />, where<img src="//html.scirp.org/file/5-1300172x8.png" class="200" />, and<img src="//html.scirp.org/file/5-1300172x9.png" class="200" />. Usually higher degree bits for x and with a lower degree for y shall be used. The same could be performed vice versa where<img src="//html.scirp.org/file/5-1300172x10.png" class="200" />. In both cases <img src="//html.scirp.org/file/5-1300172x11.png" class="200" /> acts as an Oracle for f. Such operations are accepted as the controlled application of l qubit operator<img src="//html.scirp.org/file/5-1300172x12.png" class="200" />, where x acts as a control bit, and y as a target bit. The phase kick-back happens when the target qubits are set to an own state<img src="//html.scirp.org/file/5-1300172x13.png" class="200" />, and the value of f(x) is encoded into the resulting state phase. It is possible this conception for the controlled operations to be applied to an elementary, two qubit controlled operators, which will provide a new means for viewing the elementary controlled operations behavior and the interference patterns that they generate. In order to generalize the behavior of a <img src="//html.scirp.org/file/5-1300172x14.png" class="200" />-type operator, the option to occur phase shifts in addition to the main changes must be enabled. In 1985 Deutsch offers a probabilistic algorithm [5] , which allows for Oracle function g: In &reg; B to be calculated <img src="//html.scirp.org/file/5-1300172x15.png" class="200" /> with a probability of 1/2, using only 1 application of G: If G: <img src="//html.scirp.org/file/5-1300172x16.png" class="200" />is a two qubit oracle operator, realizing the boolean oracle function g: In &reg; B. The register x will contain the value <img src="//html.scirp.org/file/5-1300172x17.png" class="200" /> each time, when 1 is measured in y, which in turn occurs in 50% of the cases. Although strictly speaking this does not provide an acceleration relative to the classical case, if it is taken into account that on average 2 trials are needed for the actual measurement<img src="//html.scirp.org/file/5-1300172x18.png" class="200" />, then the Deutsch’s algorithm is the first evidence that the quantum computers are capable of computations in ways impossible for the classical computers. As a whole, in order to achieve any acceleration relative to the classical algorithms, it is necessary to be used the unique characteristics of the quantum computations, namely</p> 
+<p>・ Superposition (step 2)</p> 
+<p>・ Quantum parallelism (step 3)</p> 
+<p>・ Interference (step 4)</p> 
+<p>Deutsch’s algorithm has been explored many times [3] [4] . In this paper we want to focus mainly on the phase encoding and decoding with formalized Raychev’s operators.</p> 
+<p>The Deutsch’s algorithm points out the basic principles of the quantum algorithms, while requiring a small and relatively easy to understand circuit. Here it will be studied anew through the prism of the phase encoding and decoding and will be given more common characteristic of the algorithm. First, let’s recall the algorithm and its standard presentation. The problem of Deutsch is to determine if a single bit boolean function is in BAL or CONST at given quantum external source of information, black box, to that function. It requires a single query of the source, where a classical approach would require two. <a href="#f1" target="_self">Figure 1</a> gives the standard circuit for Deutsch’s algorithm. The Deutsch’s algorithm is a key element of the introduction to the quantum computations and has been analyzed many times [3] [4] . Specifically this analysis is focused mainly on the phase encoding and decoding relationships in an attempt to generalize the construction of the circuit.</p> 
+<p>Particular attention will be paid to three elements of the Deutsch’s algorithm, as it is presented in <a href="#f1" target="_self">Figure 1</a>.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1300172x19.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Algorithm of Deutsch.</p> 
+</div> 
+<p>1) The Hadamard operator H, which is applied to <img src="//html.scirp.org/file/5-1300172x20.png" class="200" /> at the start and end of the algorithm, is its own identity decoder. Thus the effect of the initial and final <img class="200" data-original="//html.scirp.org/file/5-1300172x21.png" /> can be considered as encoding and decoding of the initial state of<img class="200" data-original="//html.scirp.org/file/5-1300172x22.png" />.</p> 
+<p>2) The composition of <img class="200" data-original="//html.scirp.org/file/5-1300172x23.png" /> with an oracle operator forms an <img class="200" data-original="//html.scirp.org/file/5-1300172x24.png" /> degree <img class="200" data-original="//html.scirp.org/file/5-1300172x25.png" /> operator.</p> 
+<p>3) The selection of an initial state of the working qubit plays a role in the result of the algorithm. The conditions for the initial state of the working qubits can be expressed and explained in respect of the encoding/de- coding results.</p> 
+<p class="E-Title1">2. Formalizations of the Deutsch’s Algorithms</p> 
+<p>To examine the conclusions from these observations isproposed the three-part decomposition.</p> 
+<p>The algorithm is divided into three logical steps: the application of<img class="200" data-original="//html.scirp.org/file/5-1300172x26.png" />, followed by the Oracle operator VC, and finally the application of <img class="200" data-original="//html.scirp.org/file/5-1300172x27.png" /> (<a href="#f2" target="_self">Figure 2</a>). The analysis will begin by passing through the algorithm in order to examine the state of the system with respect to the operator parameters.</p> 
+<p>If<img class="200" data-original="//html.scirp.org/file/5-1300172x28.png" />, then<img class="200" data-original="//html.scirp.org/file/5-1300172x29.png" />, where</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x30.png" /><span class="bracketMark"></span></p> 
+<p>If <img class="200" data-original="//html.scirp.org/file/5-1300172x31.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x32.png" />, where <img class="200" data-original="//html.scirp.org/file/5-1300172x33.png" /> and <img class="200" data-original="//html.scirp.org/file/5-1300172x34.png" /> such that</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x35.png" /><span class="bracketMark">.</span></p> 
+<p>Similar formulation of V allows the phase changes to be introduced by the Oracle operator in addition to the conditional basis changes. By Theorem 1 VC is α degree <img class="200" data-original="//html.scirp.org/file/5-1300172x36.png" /> operator. If <img class="200" data-original="//html.scirp.org/file/5-1300172x37.png" /></p> 
+<p>and <img class="200" data-original="//html.scirp.org/file/5-1300172x38.png" /> denotes the phase function of <img class="200" data-original="//html.scirp.org/file/5-1300172x39.png" /> when<img class="200" data-original="//html.scirp.org/file/5-1300172x40.png" />, and vice versa<img class="200" data-original="//html.scirp.org/file/5-1300172x41.png" />, when<img class="200" data-original="//html.scirp.org/file/5-1300172x42.png" />.</p> 
+<p>In this analysis the two operators of O are effectively indexed via the function f. In a similar way, the amplitude parameter of O can be indexed. If <img class="200" data-original="//html.scirp.org/file/5-1300172x43.png" /> denotes<img class="200" data-original="//html.scirp.org/file/5-1300172x44.png" />, when<img class="200" data-original="//html.scirp.org/file/5-1300172x45.png" />, and<img class="200" data-original="//html.scirp.org/file/5-1300172x46.png" />, when<img class="200" data-original="//html.scirp.org/file/5-1300172x47.png" />.</p> 
+<p>Then <img class="200" data-original="//html.scirp.org/file/5-1300172x48.png" /> is such that,</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x49.png" /> (1)</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1300172x50.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Formalized three-partdecomposition.</p> 
+</div> 
+<p>The final step of the algorithm generates interference between the operator A and B. If<img class="200" data-original="//html.scirp.org/file/5-1300172x51.png" />, then<img class="200" data-original="//html.scirp.org/file/5-1300172x52.png" />. The final state of the circuit, is given in Equation (2). The formulas are rearranged, in such way that the results of the operators, generating the interference, are next to each other.</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x53.png" /><span class="bracketMark">(2)</span></p> 
+<p>If the general formulas for the probability amplitude of each basis state shown in Equation (2) are given, the Deutsch’s algorithm can be generalized in the context of the formalized Raychev’s operators. The general character of the output data will be maintained in such way that the final state should leave <img class="200" data-original="//html.scirp.org/file/5-1300172x54.png" /> unchanged, if f is constant, and change it if f is balanced. The first observation is that the final operator of the Deutsch’s algorithm is a decoder of the initial operator. The decoding connections may be outlined in terms of the phase numbers, as shown in <a href="#t1" target="_self">Table 1</a>.</p> 
+<p>Until now the decoding was limited to the conditions under which the two operators are combined in order to form a certain basis operator. The requirements for the parameters are shown in <a href="#t2" target="_self">Table 2</a>.</p> 
+<p>This is done within the limits of the formalized Raychev’s operators. More common structure of the decoding operators occurs when calling the main matrix formulation of the operators.</p> 
+<p>When B is a decoder of A, can be found the interference pattern, generated by B, from <a href="#t1" target="_self">Table 1</a>. More specifically, if В is a decoder of A, then there exists some <img class="200" data-original="//html.scirp.org/file/5-1300172x55.png" /> such that <img class="200" data-original="//html.scirp.org/file/5-1300172x56.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x57.png" />. When B is an identity decoder, g characterizes the phase change in the states that identify<img class="200" data-original="//html.scirp.org/file/5-1300172x58.png" />, i.e. the states left after the decoding operation, and the functions h and k determine the interference generated in the states, where <img class="200" data-original="//html.scirp.org/file/5-1300172x59.png" /> is with a negative value. Furthermore, when В is an identity decoder of A, then the amplitude parameter <img class="200" data-original="//html.scirp.org/file/5-1300172x60.png" /> is equivalent to<img class="200" data-original="//html.scirp.org/file/5-1300172x61.png" />. From here, when B is an identity decoder of A, Equation (2) can be simplified to Equation (3).</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_5-1300172_1.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. The negation decoding by phase number γιη.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_5-1300172_2.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. The decoding operators.</p> 
+</div> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x67.png" /><span class="bracketMark">(3)</span></p> 
+<p>If an attention is paid to the Oracle operator and how f controls its impact on the development of the system. If f is a constant function, then <img class="200" data-original="//html.scirp.org/file/5-1300172x68.png" /> and Equation (3) can be further simplified, as this means that only one of the two subspace operators, <img class="200" data-original="//html.scirp.org/file/5-1300172x69.png" />and <img class="200" data-original="//html.scirp.org/file/5-1300172x70.png" /> will be used by the Oracle operator.</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x71.png" /><span class="bracketMark">(4)</span></p> 
+<p>In Equation (4) is seen that the encoding, performed by the Oracle operator, in each term of the sum of the probability amplitudes is the same. Thus, no interference is generated by the Oracle operator and the final state of the circuit is reduces down to the decoding interaction between A and B. The intervention carried out relative</p> 
+<p>to the states <img class="200" data-original="//html.scirp.org/file/5-1300172x72.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x73.png" />, obviously leads to zero probability amplitudes when f is constant. Thus leaving</p> 
+<p>the state in a superposition of <img class="200" data-original="//html.scirp.org/file/5-1300172x74.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x75.png" />. It is worth noting that achieving the interference necessary to leave <img class="200" data-original="//html.scirp.org/file/5-1300172x76.png" /> unchanged at f constant, is independent from the initial state of the system. Now the impact of the Oracle operator will be considered when f is balanced. As mentioned earlier, the goal is to create a system in which the value of <img class="200" data-original="//html.scirp.org/file/5-1300172x77.png" /> has changed. If f is balanced, both operators <img class="200" data-original="//html.scirp.org/file/5-1300172x78.png" /> and <img class="200" data-original="//html.scirp.org/file/5-1300172x79.png" /> will be used by the Oracle operator. This is implied by the fact that<img class="200" data-original="//html.scirp.org/file/5-1300172x80.png" />. Under the given <img class="200" data-original="//html.scirp.org/file/5-1300172x81.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x82.png" />, if <img class="200" data-original="//html.scirp.org/file/5-1300172x83.png" /> is the amplitude of<img class="200" data-original="//html.scirp.org/file/5-1300172x84.png" />, then the amplitude of <img class="200" data-original="//html.scirp.org/file/5-1300172x85.png" /> must be<img class="200" data-original="//html.scirp.org/file/5-1300172x86.png" />. This means that <img class="200" data-original="//html.scirp.org/file/5-1300172x87.png" /> and allows us to further simplify Equation (3).</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x88.png" /><span class="bracketMark">(5)</span></p> 
+<p>If the goal is the probability amplitudes of <img class="200" data-original="//html.scirp.org/file/5-1300172x89.png" /> and <img class="200" data-original="//html.scirp.org/file/5-1300172x90.png" /> to become zero when f is balanced, then it is</p> 
+<p>clear that <img class="200" data-original="//html.scirp.org/file/5-1300172x91.png" /> should be established such that <img class="200" data-original="//html.scirp.org/file/5-1300172x92.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x93.png" />. This will make the</p> 
+<p>terms of the probability amplitude sums in <img class="200" data-original="//html.scirp.org/file/5-1300172x94.png" /> and <img class="200" data-original="//html.scirp.org/file/5-1300172x95.png" /> equivalent and will enable the interference to reduce the final probability amplitudes to zero. From Equation (9.5) it is seen that, when</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x96.png" />and <img class="200" data-original="//html.scirp.org/file/5-1300172x97.png" /> then the entire necessary interference</p> 
+<p>will occur; the probability amplitudes of <img class="200" data-original="//html.scirp.org/file/5-1300172x98.png" /> and <img class="200" data-original="//html.scirp.org/file/5-1300172x99.png" /> will be inverse to each other, and all other probability amplitudes will constructively interfere. What was determined is that the desire to have <img class="200" data-original="//html.scirp.org/file/5-1300172x100.png" /> and</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x101.png" />destructively interfere sets many of the requirements for correctness of the algorithm. The desired inter-</p> 
+<p>ference can be guaranteed regardless of the value of<img class="200" data-original="//html.scirp.org/file/5-1300172x102.png" />, if an Oracle operator O is defined such that</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x103.png" />. This construction is not intuitive, as it requires the Oracle operator V</p> 
+<p>to be defined not as the <img class="200" data-original="//html.scirp.org/file/5-1300172x104.png" /> Oracle typical for the Deutsch’s algorithm, but as an operator in<img class="200" data-original="//html.scirp.org/file/5-1300172x105.png" />, which carries out a global phase shift that is conditionally upon the function f. The conditional phase shifts are used in the Grover’s algorithm and therefore this particular operator is not something new in the quantum computations [5] .</p> 
+<p class="E-Title2">2.1. Formalized Deutsch’s Algorithm: Version 1</p> 
+<p>Problem: Upon given Oracle like operator<img class="200" data-original="//html.scirp.org/file/5-1300172x106.png" />, to be determined whether <img class="200" data-original="//html.scirp.org/file/5-1300172x107.png" /> is constant or balanced.</p> 
+<p>Preconditions:</p> 
+<p>1) To be defined В and А such that <img class="200" data-original="//html.scirp.org/file/5-1300172x108.png" /> and the amplitude parameter of A is<img class="200" data-original="//html.scirp.org/file/5-1300172x109.png" />.</p> 
+<p>2) <img class="200" data-original="//html.scirp.org/file/5-1300172x110.png" /></p> 
+<p>Result: If the function f is balanced<img class="200" data-original="//html.scirp.org/file/5-1300172x111.png" />, and otherwise, i.e. when f is constant, then <img class="200" data-original="//html.scirp.org/file/5-1300172x112.png" /> (<a href="#f3" target="_self">Figure 3</a>).</p> 
+<p>For Boolean function<img class="200" data-original="//html.scirp.org/file/5-1300172x113.png" />, where m &lt; n, the generalized controlled operator can be used to represent operators<img class="200" data-original="//html.scirp.org/file/5-1300172x114.png" />, as well as <img class="200" data-original="//html.scirp.org/file/5-1300172x115.png" /> degree version of these operators. Theorem 1 describes the construction of an operator in the set <img class="200" data-original="//html.scirp.org/file/5-1300172x116.png" /> whereas Theorem 2 shows the construction of an <img class="200" data-original="//html.scirp.org/file/5-1300172x117.png" /> degree version of a <img class="200" data-original="//html.scirp.org/file/5-1300172x118.png" /> operator.</p> 
+<p>Theorem 1 If operator <img class="200" data-original="//html.scirp.org/file/5-1300172x119.png" /> is such that A &Icirc; The set of the identity formalized Raychev’s operators, B &Icirc; The set of the negation formalized Raychev’s operators and<img class="200" data-original="//html.scirp.org/file/5-1300172x120.png" />, where m &lt; n. Then</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x121.png" /><span class="bracketMark">.</span></p> 
+<p>Proof. If it is assumed that A &Icirc; The set of the identity formalized Raychev’s operators and B &Icirc; The set of the negation formalized Raychev’s operators, therefore for each n qubit basis<img class="200" data-original="//html.scirp.org/file/5-1300172x122.png" />,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x123.png" /><span class="bracketMark">(6)</span></p> 
+<p>Theorem 2 If operator <img class="200" data-original="//html.scirp.org/file/5-1300172x124.png" /> is such that <img class="200" data-original="//html.scirp.org/file/5-1300172x125.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x126.png" />. Then V is an <img class="200" data-original="//html.scirp.org/file/5-1300172x127.png" /> degree<img class="200" data-original="//html.scirp.org/file/5-1300172x128.png" />.</p> 
+<p>Proof. If it is assumed that <img class="200" data-original="//html.scirp.org/file/5-1300172x129.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x130.png" />. Then, for each n qubit basis<img class="200" data-original="//html.scirp.org/file/5-1300172x131.png" />,</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1300172x132.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Formalized Deutsch’s algorithm: Version 1.</p> 
+</div> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x133.png" /><span class="bracketMark">(7)</span></p> 
+<p>Theorem 1 leads to general means for constructing of <img class="200" data-original="//html.scirp.org/file/5-1300172x134.png" /> degree <img class="200" data-original="//html.scirp.org/file/5-1300172x135.png" /> operators from an elementary indexed operator and an operator in<img class="200" data-original="//html.scirp.org/file/5-1300172x136.png" />.</p> 
+<p>Theorem 3 If V is an n qubit <img class="200" data-original="//html.scirp.org/file/5-1300172x137.png" /> operator with target bit t and <img class="200" data-original="//html.scirp.org/file/5-1300172x138.png" /> is indexed, formalized operator with</p> 
+<p>an amplitude parameter<img class="200" data-original="//html.scirp.org/file/5-1300172x139.png" />, such that<img class="200" data-original="//html.scirp.org/file/5-1300172x140.png" />. Then the operator VA is <img class="200" data-original="//html.scirp.org/file/5-1300172x141.png" /> degree <img class="200" data-original="//html.scirp.org/file/5-1300172x142.png" /> operator.</p> 
+<p>Proof. The proof follows from theorems 1 and 2, by noting that when<img class="200" data-original="//html.scirp.org/file/5-1300172x143.png" />, then <img class="200" data-original="//html.scirp.org/file/5-1300172x144.png" />.</p> 
+<p>Theorem 3 is important because, it captures a common occurrence in the quantum algorithms: setting the target bit of an Oracle operator to a superposition and then applying the oracle operator. In the formalized system for designing of algorithmic models for quantum circuits this can be addressed in the context of an α degree <img class="200" data-original="//html.scirp.org/file/5-1300172x145.png" /> operator.</p> 
+<p>The composition of random formalized operators with main operators can be expressed in terms of the transformations of parameters.</p> 
+<p>Formal prerequisite 1 If the operator<img class="200" data-original="//html.scirp.org/file/5-1300172x146.png" />. Then</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x147.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x148.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x149.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x150.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x151.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x152.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x153.png" /><span class="bracketMark">(8)</span></p> 
+<p>Proof. If A is a base operator. Then</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x154.png" /><span class="bracketMark"></span></p> 
+<p>If the consideration is limited only to the original formulation of the problem, i.e. <img class="200" data-original="//html.scirp.org/file/5-1300172x155.png" />Oracle only, then the problem of Deutsch still can be solved deterministically, by choosing an appropriate starting value for<img class="200" data-original="//html.scirp.org/file/5-1300172x156.png" />, the</p> 
+<p>target big of <img class="200" data-original="//html.scirp.org/file/5-1300172x157.png" /> and C. The amplitude parameter of C can be set to<img class="200" data-original="//html.scirp.org/file/5-1300172x158.png" />. By Theorem 3, the oracle operator</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x159.png" />is combined with C, to form an <img class="200" data-original="//html.scirp.org/file/5-1300172x160.png" /> Oracle. At <img class="200" data-original="//html.scirp.org/file/5-1300172x161.png" /> the subspace oper-</p> 
+<p>ators of the composite operator <img class="200" data-original="//html.scirp.org/file/5-1300172x162.png" /> are <img class="200" data-original="//html.scirp.org/file/5-1300172x163.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x164.png" />. The exact phase of <img class="200" data-original="//html.scirp.org/file/5-1300172x165.png" /></p> 
+<p>and <img class="200" data-original="//html.scirp.org/file/5-1300172x166.png" /> is determined through Theorem 4.</p> 
+<p>Remark The generalization of the Deutsch’s algorithm given in <a href="#f2" target="_self">Figure 2</a>, also covers the case when are used classical, i.e. without a phase change, oracle operators of the form <img class="200" data-original="//html.scirp.org/file/5-1300172x167.png" /> as the ones used in the standard version of the Deutsch’s algorithm. Then the precondition for the value of <img class="200" data-original="//html.scirp.org/file/5-1300172x168.png" /> is limited to a condition on the phase of operator C and the initial value of <img class="200" data-original="//html.scirp.org/file/5-1300172x169.png" /> only.</p> 
+<p class="E-Title2">2.2. Formalized Deutsch’s Algorithm: Version 2</p> 
+<p>Problem: Upon given Oracle operator<img class="200" data-original="//html.scirp.org/file/5-1300172x170.png" />, should be determined whether <img class="200" data-original="//html.scirp.org/file/5-1300172x171.png" /> is constant or balanced.</p> 
+<p>Preconditions:</p> 
+<p>1) To be defined В and А such that <img class="200" data-original="//html.scirp.org/file/5-1300172x172.png" /> and the amplitude parameter of A is<img class="200" data-original="//html.scirp.org/file/5-1300172x173.png" />.</p> 
+<p>2) <img class="200" data-original="//html.scirp.org/file/5-1300172x174.png" /></p> 
+<p>3) For operators <img class="200" data-original="//html.scirp.org/file/5-1300172x175.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x176.png" />, should be chosen initial value for <img class="200" data-original="//html.scirp.org/file/5-1300172x177.png" /> such that</p> 
+<p class="imgPCss"> <img class="200" data-original="//html.scirp.org/file/5-1300172x178.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x179.png" />. </p> 
+<p>Result: If the function f is balanced<img class="200" data-original="//html.scirp.org/file/5-1300172x180.png" />, and otherwise, i.e. when f is constant, then <img class="200" data-original="//html.scirp.org/file/5-1300172x181.png" /> (<a href="#f4" target="_self">Figure 4</a>).</p> 
+<p>If<img class="200" data-original="//html.scirp.org/file/5-1300172x182.png" />. Then should be chosen <img class="200" data-original="//html.scirp.org/file/5-1300172x183.png" /> such that <img class="200" data-original="//html.scirp.org/file/5-1300172x184.png" /> and</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x185.png" /><span class="bracketMark">.</span></p> 
+<p>Two generalized algorithms for solving the Deutsch’s problem are developed, by re-examining anew the standard formulation of the Deutsch’s algorithm. In both cases are used the specific phase encoding and decoding ideas, realized by the developed by the author of the report formalized operators. Both algorithms set the initial state to be equal to a superposition of all possible two qubit states and in this way set the working bit <img class="200" data-original="//html.scirp.org/file/5-1300172x186.png" /> to</p> 
+<p>an own state of the Oracle operator. Furthermore, the use of Hadamard-like gates with amplitude parameters <img class="200" data-original="//html.scirp.org/file/5-1300172x187.png" /> is, in general, a requirement of the algorithm if deterministic results are sought.</p> 
+<p>Finally, the formalizations of the Deutsch’s algorithm, given in <a href="#f3" target="_self">Figure 3</a> and <a href="#f4" target="_self">Figure 4</a>, are reduced to the ability to work in many different phases, possible within the quantum computations. Perhaps the most interesting result of the analysis, based on the phase decoding, is the reaching to formalization of the algorithm in <a href="#f1" target="_self">Figure 1</a> in the style of Grover. This version will lead to results, which would be expected upon solving the Deutsch’s algorithm, independently of its input data, but requires an Oracle operator for phase shifting as opposed to the traditional formulation of the Oracle operator in the Deutsch’s problem. The result is inherited by the explicit characterization of the behavior upon phase encoding / decoding of the operators, based on their formalization.</p> 
+<p class="E-Title2">2.3. Examples of Formalized Algorithm for Solving the Deutsch’s Problem</p> 
+<p>The first example deals with a slight variation of the traditional Deutsch’s algorithm.</p> 
+<p>Let operator <img class="200" data-original="//html.scirp.org/file/5-1300172x188.png" /> with identity decoder <img class="200" data-original="//html.scirp.org/file/5-1300172x189.png" /> such that<img class="200" data-original="//html.scirp.org/file/5-1300172x190.png" />. If defines Oracle operator<img class="200" data-original="//html.scirp.org/file/5-1300172x191.png" />, where <img class="200" data-original="//html.scirp.org/file/5-1300172x192.png" /> and<img class="200" data-original="//html.scirp.org/file/5-1300172x193.png" />. When the target qubit<img class="200" data-original="//html.scirp.org/file/5-1300172x194.png" />, O and</p> 
+<p>preparation of target qubit are equivalent to traditional Deutsch’s algorithm. From Equation (2) can determine the final state of the system, if the input data are given for the traditional algorithm<img class="200" data-original="//html.scirp.org/file/5-1300172x195.png" />.</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x196.png" /></p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-1300172x197.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Formalized Deutsch’s algorithm: Version 2.</p> 
+</div> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x198.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x199.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x200.png" /><span class="bracketMark"></span></p> 
+<p>When f is constant, then the phase encoding executed by Oracle operator is the same in both terms of any amount. Without loss of generality, let us assume that<img class="200" data-original="//html.scirp.org/file/5-1300172x201.png" />, then<img class="200" data-original="//html.scirp.org/file/5-1300172x202.png" />. Thus is obtained the following result</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x203.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x204.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x205.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x206.png" /><span class="bracketMark"></span></p> 
+<p>When f is balanced then<img class="200" data-original="//html.scirp.org/file/5-1300172x207.png" />, with encoding function<img class="200" data-original="//html.scirp.org/file/5-1300172x208.png" />, is applied when<img class="200" data-original="//html.scirp.org/file/5-1300172x209.png" />, and</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x210.png" />, with encoding function <img class="200" data-original="//html.scirp.org/file/5-1300172x211.png" /> is applied when<img class="200" data-original="//html.scirp.org/file/5-1300172x212.png" />. It should be noted</p> 
+<p>that for <img class="200" data-original="//html.scirp.org/file/5-1300172x213.png" /> and preconditions are met. Thus, when<img class="200" data-original="//html.scirp.org/file/5-1300172x214.png" />,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x215.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x216.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x217.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x218.png" /><span class="bracketMark"></span></p> 
+<p>If we consider the example of the algorithm represented in <a href="#f1" target="_self">Figure 1</a>. Let operator <img class="200" data-original="//html.scirp.org/file/5-1300172x219.png" /> with identity decoder <img class="200" data-original="//html.scirp.org/file/5-1300172x220.png" /> such that<img class="200" data-original="//html.scirp.org/file/5-1300172x221.png" />. If it defines such Oracle operator<img class="200" data-original="//html.scirp.org/file/5-1300172x222.png" />, such that for each operator<img class="200" data-original="//html.scirp.org/file/5-1300172x223.png" />,<img class="200" data-original="//html.scirp.org/file/5-1300172x224.png" />. It is seen that for any</p> 
+<p>input <img class="200" data-original="//html.scirp.org/file/5-1300172x225.png" /> this algorithm will have the same result as Deutsch’s Algorithm.</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x226.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x227.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x228.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x229.png" /><span class="bracketMark"></span></p> 
+<p>Without loss of generality, let us assume that for a balanced <img class="200" data-original="//html.scirp.org/file/5-1300172x230.png" /> and</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-1300172x231.png" />such that they correspond to the phases of C and ?С, respectively Oracle subspace operators. That leaves the following final state.</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x232.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x233.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x234.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/5-1300172x235.png" /><span class="bracketMark"></span></p> 
+<p>In the case where f is a constant, there is the same overall result as the standard formulation of the Deutch’s algorithm; the Oracle operator makes no interference between the subspace and the calculation is reduced to the decoding effect B has on A.</p> 
+<p class="E-Title1">3. Conclusions</p> 
+<p><a href="#f1" target="_self">Figure 1</a> and <a href="#f2" target="_self">Figure 2</a> present two formalizations of the Deutsch’s algorithms. The first requires Oracle operators, oriented to phase change, while the second formalization effectively establishes, how different operator phases can be used in the context of the standard structure of the Deutsch’s algorithm. The analysis which leads to the Formalizations, strongly leans to the close relationships and properties of the boolean encoding functions of the formalized Raychev’s operators, included in the algorithm.</p> 
+<p>The first version of formalized algorithm uses phase change operations where the second version demonstrates how different phases might be used in the context of the conventional Deutsch’s algorithm.</p> 
+<p>The formalized Raychev’s operators separate the parts of phase and amplitude and allow for expression of amplitude in terms of probabilities as opposed to more general probability amplitudes. This formalization is further improved by the characterization of classes with defined relations and incarnation of formalized logic parameter γ on the global phase. Under the needed and sufficient conditions to construct a unitary, in this case orthogonal operators are incorporated into the formalization.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578609' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Shor, P. (1997) Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer. SIAM Journal on Computing, 26, 1484-1509. <br/>http://dx.doi.org/10.1137/S0097539795293172
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578610' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Childs, A.M., Landahl, A.J. and Parrilo, P.A. (2007) Quantum Algorithm for Ordered Search Problem via Semidenite Programming. Physical Review A, 75, Article ID: 032335. <br/>http://dx.doi.org/10.1103/PhysRevA.75.032335
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578611' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Farhi, E., Goldstone, J., Gutmann, S., Lapan, J., Lundgren, A. and Preda, D. (2001) A Quantum Adiabatic Evolution Algorithm Applied to Random Instances of an NP-Complete Problem. Science, 292, 472-475. <br/>http://dx.doi.org/10.1126/science.1057726
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578612' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Harrow, A.W., Hassidim, A. and Lloyd, S. (2009) Quantum Algorithm for Linear Systems of Equations. Phys. Rev. Lett., 103, 150502. <br/>http://dx.doi.org/10.1103/PhysRevLett.103.150502
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578613' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Bacon, D. and van Dam, W. (2010) Recent Progress in Quantum Algorithms. Commun. ACM, 53, 84-93.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578614' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Toffoli, T. (1980) Reversible Computing. In: Proceedings of the 7th Colloquium on Automata, Languages and Programming, Springer-Verlag, London, 632-644. <br/>http://dx.doi.org/10.1007/3-540-10003-2_104
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578615' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Bennett, C.H. (1989) Time/Space Trade-Offs for Reversible Computation. SIAM Journal on Computing, 18, 766-776. <br/>http://dx.doi.org/10.1137/0218053
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578616' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Deutsch, D. (1989) Quantum Computational Networks. Proceedings of the Royal Society of London A, 425, 73-90. <br/>http://dx.doi.org/10.1098/rspa.1989.0099
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578617' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Barenco, A. (1995) A Universal Two-Bit Gate for Quantum Computation. Proceedings ofthe Royal Society of London A, 449, 679-683.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578618' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Deutsch, D., Barenco, A. and Ekert, A. (1995) Universality in Quantum Computation. Proceedings of the Royal Society of London. Series A: Mathematical and Physical Sciences, 449, 669-677. <br/>http://dx.doi.org/10.1098/rspa.1995.0065
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578619' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Di Vincenzo, D.P. (1995) Two-Bit Gates Are Universal for Quantum Computation. Physical Review A, 51, 1015-1022.<br/>http://dx.doi.org/10.1103/PhysRevA.51.1015
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578620' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Lloyd, S. (1995) Almost Any Quantum Logic Gate Is Universal. Physical Review Letters, 75, 346-349.<br/>http://dx.doi.org/10.1103/physrevlett.75.346
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578621' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Nielsen, M. and Chuang, I. (2003) Quantum Computing and Quantum Information. Cambridge University Press, Cambridge.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578622' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Phillip Kaye, R.L. and Mosca, M. (2007) An Introduction to Quantum Computing. Oxford University Press, Oxford.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578623' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Rieffel, E. and Polak, W. (1998) An Introduction to Quantum Computing for Non-Physicists.<br/>http://arxiv.org/abs/quant-ph/9809016
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578624' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Raychev, N. (2015) Unitary Combinations of Formalized Classes in Qubit Space. International Journal of Scientific and Engineering Research, 6, 395-398. <br/>http://dx.doi.org/10.14299/ijser.2015.04.003
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578625' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Raychev, N. (2015) Functional Composition of Quantum Functions. International Journal of Scientific and Engineering Research, 6, 413-415. <br/>http://dx.doi.org/10.14299/ijser.2015.04.004
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578626' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Raychev, N. (2015) Logical Sets of Quantum Operators. International Journal of Scientific and Engineering Research, 6, 391-394. <br/>http://dx.doi.org/10.14299/ijser.2015.04.002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578627' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Raychev, N. (2015) Controlled Formalized Operators. International Journal of Scientific and Engineering Research, 6, 1467-1469. <br/>http://dx.doi.org/10.14299/ijser.2015.05.003
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578628' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Raychev, N. (2015) Controlled Formalized Operators with Multiple Control Bits. International Journal of Scientific and Engineering Research, 6, 1470-1473. <br/>http://dx.doi.org/10.14299/ijser.2015.05.001
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578629' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Raychev, N. (2015) Connecting Sets of Formalized Operators. International Journal of Scientific and Engineering Research, 6, 1474-1476. <br/>http://dx.doi.org/10.14299/ijser.2015.05.002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578630' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Raychev, N. (2015) Indexed Formalized Operators for N-Bit Circuits. International Journal of Scientific and Engineering Research, 6, 1477-1480.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578631' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Raychev, N. (2015) Universal Quantum Operators. International Journal of Scientific and Engineering Research, 6, 1369-1371. <br/>http://dx.doi.org/10.14299/ijser.2015.06.005
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578632' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Raychev, N. (2015) Encoding and Decoding of Additional Logic in the Phase Space of All Operators. International Journal of Scientific and Engineering Research, 6, 1356-1366. <br/>http://dx.doi.org/10.14299/ijser.2015.07.003
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=591" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=591" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=591" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=591" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=591"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=591"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=591" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=591" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=591" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=591" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=591" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=591"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=591"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=591" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=591&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=591&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=591" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=591" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=591" target="_blank">JQIS
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=591" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=591" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=591" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=591" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=591" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=591" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=591" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jqis.2015.53014" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60083 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +591 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +591 +"&paperid=" +60083 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

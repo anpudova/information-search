@@ -1,0 +1,1643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Mass Transfer in Binary Stellar Evolution and Its Stability
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/IJAA_2015093011045823.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60070" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60070.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60070" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60070" />
+<meta property="og:title" content="Mass Transfer in Binary Stellar Evolution and Its Stability" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/IJAA2024060714271380.PNG" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/IJAA2024060714271380.PNG" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Mass Transfer in Binary Stellar Evolution and Its Stability" />
+<meta name="keywords" content="Mass Transfer,Binary Star,Stellar Evolution,Stability,Instability" />
+<meta name="description" content="Explore the stability and mass transfer in binary star systems through mathematical derivations and numerical solutions. Discover the impact of material exchange and Roche lobe overflow on the evolution of these systems. Compare our findings with previous studies." />
+<meta name="citation_journal_title" content="International Journal of Astronomy and Astrophysics" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Seblu Humne Negu;Solomon Belay Tessema" />
+<meta name="citation_author" content="Seblu Humne Negu" />
+<meta name="citation_author" content="Solomon Belay Tessema" />
+<meta name="citation_title" content="Mass Transfer in Binary Stellar Evolution and Its Stability" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-08-27" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ijaa.2015.53026" />
+<meta name="citation_issnPrint" content="2161-4717" />
+<meta name="citation_issnOnline" content="2161-4725" />
+<meta name="citation_abstract" content="The evolution of a binary star system by various analytical and numerical approximations of mass transfer rate normalized to the equilibrium rate and its stability conditions are investigated. We present results from investigations of mass transfer and stability in close binary star systems using the different orbital parameters. The stability and instability of mass transfer in binary star evolution depends on the exchange of material which the response of the binary to the initial Roche lobe overflow causes the donor to loose even more material. Our work is mainly focused on basic mathematical derivations, analytical and numerical solutions in order to explain the mass transfer system in different orbital parameters as well as the results are compared with previous studies in both cases. Mass transfer is usually stable, as long as the winds specific angular momentum does not exceed the angular momentum per reduced mass of the system. This holds for both dynamical and thermal time scales. Those systems which are not stable will usually transfer mass on the thermal time scale. The variation of Roche lobe radius with mass ratio in the binary, for various orbital parameters in the conservative and non-conservative mass transfer, as well as the evolution equations, orbital angular momentum of the binary system and the corresponding analytical and numerical solutions for different cases, under certain restrictive approximations is derived, simulated and discussed." />
+<meta name="citation_publication_date" content="2015/8/27" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/IJAA_2015093011045823.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/IJAA_2015093011045823.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60070" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60070" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60070" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60070.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60070.xml" />
+<meta name="citation_issue" content="3" />
+<meta name="citation_online_date" content="2015/8/27" />
+<meta name="citation_firstpage" content="222" />
+<meta name="citation_lastpage" content="241" />
+
+<meta name="dc.title" content="Mass Transfer in Binary Stellar Evolution and Its Stability" />
+
+<meta name="dc.creator" content="Seblu Humne Negu" />
+<meta name="dc.creator" content="Solomon Belay Tessema" /><meta name="dcterms.issued" content="2015-08-27" />
+<meta name="dc.description" content="The evolution of a binary star system by various analytical and numerical approximations of mass transfer rate normalized to the equilibrium rate and its stability conditions are investigated. We present results from investigations of mass transfer and stability in close binary star systems using the different orbital parameters. The stability and instability of mass transfer in binary star evolution depends on the exchange of material which the response of the binary to the initial Roche lobe overflow causes the donor to loose even more material. Our work is mainly focused on basic mathematical derivations, analytical and numerical solutions in order to explain the mass transfer system in different orbital parameters as well as the results are compared with previous studies in both cases. Mass transfer is usually stable, as long as the winds specific angular momentum does not exceed the angular momentum per reduced mass of the system. This holds for both dynamical and thermal time scales. Those systems which are not stable will usually transfer mass on the thermal time scale. The variation of Roche lobe radius with mass ratio in the binary, for various orbital parameters in the conservative and non-conservative mass transfer, as well as the evolution equations, orbital angular momentum of the binary system and the corresponding analytical and numerical solutions for different cases, under certain restrictive approximations is derived, simulated and discussed." />
+<meta name="dc.source" content="International Journal of Astronomy and Astrophysics" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-08-27" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ijaa.2015.53026" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-08-27" />
+<meta name="prism.issnPrint" content="2161-4717" />
+<meta name="prism.issnOnline" content="2161-4725" />
+<meta name="prism.publicationName" content="International Journal of Astronomy and Astrophysics" />
+<meta name="prism.publicationDate" content="2015-08-27" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="3" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="222" />
+<meta name="prism.doi" content="10.4236/ijaa.2015.53026" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60070" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA4LTI3ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAWEAjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9U2VibHUrSHVtbmUrK05lZ3Umc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5TZWJsdSBIdW1uZSAgTmVndTwvYT48c3VwPio8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9U29sb21vbitCZWxheSsrVGVzc2VtYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlNvbG9tb24gQmVsYXkgIFRlc3NlbWE8L2E+PHN1cD48L3N1cD4gZAICD2QWAmYPFgIfBAW8AjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9QXN0cm9ub215K2FuZCtBc3Ryb3BoeXNpY3MrUmVzZWFyY2grRGl2aXNpb24lMmMrRW50b3RvK09ic2VydmF0b3J5K2FuZCtSZXNlYXJjaCtDZW50ZXIrKEVPUkMpJTJjK0FkZGlzK0FiYWJhJTJjK0V0aGlvcGlhJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+QXN0cm9ub215IGFuZCBBc3Ryb3BoeXNpY3MgUmVzZWFyY2ggRGl2aXNpb24sIEVudG90byBPYnNlcnZhdG9yeSBhbmQgUmVzZWFyY2ggQ2VudGVyIChFT1JDKSwgQWRkaXMgQWJhYmEsIEV0aGlvcGlhPC9hPi48YnIgLz5kAgUPFgIfBAUFOCw1MzVkAgYPFgIfBAUGMTAsNjc2ZAIHDxYCHwMFD0Rpc3BsYXk6aW5saW5lO2QCCA9kFgICAQ8WAh8EBZEEPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1NYXNzK1RyYW5zZmVyJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+TWFzcyBUcmFuc2ZlcjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0JpbmFyeStTdGFyJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEJpbmFyeSBTdGFyPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rU3RlbGxhcitFdm9sdXRpb24mc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU3RlbGxhciBFdm9sdXRpb248L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStTdGFiaWxpdHkmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU3RhYmlsaXR5PC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rSW5zdGFiaWxpdHkmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gSW5zdGFiaWxpdHk8L2E+IGQCCg8WAh8EBawCTmVndSwgUy4gIGFuZCBUZXNzZW1hLCBTLiAgICgyMDE1KSBNYXNzIFRyYW5zZmVyIGluIEJpbmFyeSBTdGVsbGFyIEV2b2x1dGlvbiBhbmQgSXRzIFN0YWJpbGl0eS4gPGk+SW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIEFzdHJvbm9teSBhbmQgQXN0cm9waHlzaWNzPC9pPiwgPGI+NTwvYj4sIDIyMi0yNDEuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9pamFhLjIwMTUuNTMwMjYnIHRhcmdldD0nX2JsYW5rJyBvbmNsaWNrPSdTZXROdW0oNjAwNzApJz4xMC40MjM2L2lqYWEuMjAxNS41MzAyNjwvYT4uZAILDxYCHwQFLVRoZSBhdXRob3JzIGRlY2xhcmUgbm8gY29uZmxpY3RzIG9mIGludGVyZXN0LmQCDQ8WAh4LXyFJdGVtQ291bnQCDxYeZg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzE5JyB0YXJnZXQ9J19ibGFuayc+MTwvYT5dATEBMaEBU2hvcmUsIFMuTi4gKDE5OTQpIE9ic2VydmF0aW9ucyBhbmQgUGh5c2ljYWwgUHJvY2Vzc2VzIGluIEludGVyYWN0aW5nIEJpbmFyaWVzLiBTcHJpbmdlciwgQmVybGluIEhlaWRlbGJlcmcsIDEtMTMzLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy8zLTU0MC0zMTYyNi00XzFkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODMyMCcgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATKrAVNvYmVybWFuLCBHLkUuLCBQaGlubmV5LCBFLlMuIGFuZCB2YW4gZGVuIEhldXZlbCwgRS5QLkouICgxOTk3KSBTdGFiaWxpdHkgQ3JpdGVyaWEgZm9yIE1hc3MgVHJhbnNmZXIgaW4gQmluYXJ5IFN0ZWxsYXIgRXZvbHV0aW9uLiBBc3Ryb25vbXkgYW5kIEFzdHJvcGh5c2ljcywgMzI3LCA2MjAtNjM1LmQCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzIxJyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM2pLb25zdGFudGluLCBBLlAuICgyMDE0KSBUaGUgRXZvbHV0aW9uIG9mIENvbXBhY3QgQmluYXJ5IFN0YXIgU3lzdGVtcy4gTGl2aW5nIFJldmlld3MgaW4gUmVsYXRpdml0eSwgMTcsIDMuZAIDD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzMjInIHRhcmdldD0nX2JsYW5rJz40PC9hPl0BNAE0oQFQZW5uaW5ndG9uLCBSLigxOTg1KSBJbnRlcmFjdGluZyBCaW5hcnkgU3RhcnMuIFByaW5nbGUsIEouRS4gYW5kIFdhZGUsIFIuQS4sIEVkcy4sIENhbWJyaWRnZSBBc3Ryb3BoeXNpY3MgU2VyaWVzLCBDYW1icmlkZ2UgVW5pdmVyc2l0eSBQcmVzcywgQ2FtYnJpZGdlLCAxOTctMTk5LmQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzIzJyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNcQBSGplbGxtaW5nLCBNLlMuIGFuZCBXZWJiaW5rLCBSLkYuICgxOTg3KSBUaHJlc2hvbGRzIGZvciByYXBpZCBtYXNzIHRyYW5zZmVyIGluIGJpbmFyeSBzeXN0ZW1zLiBJ4oCUUG9seXRyb3BpYyBNb2RlbHMuIFRoZSBBc3Ryb3BoeXNpY2FsIEpvdXJuYWwsIDMxOCwgNzk0LTgwOC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDg2LzE2NTQxMmQCBQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzI0JyB0YXJnZXQ9J19ibGFuayc+NjwvYT5dATYBNnhSdWRlcm1hbiwgTS4sIFNoYWhhbSwgSi4gYW5kIFRhdmFuaSwgTS4gKDE5ODkpIEFjY3JldGlvbiBQb3dlcmVkIGJ5IENvbXBhY3QgQmluYXJpZXMuIFRoZSBBc3Ryb3BoeXNpY2FsIEpvdXJuYWwsIDMsIDUwNy5kAgYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODMyNScgdGFyZ2V0PSdfYmxhbmsnPjc8L2E+XQE3ATe6AVRlc3NlbWEsIFMuQi4gKDIwMTQpIFN0YWJpbGl0eSBvZiBBY2NyZXRpb24gRGlzY3MgYXJvdW5kIE1hZ25ldGl6ZWQgU3RhcnMuIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBBc3Ryb25vbXkgYW5kIEFzdHJvcGh5c2ljcywgNCwgMzE5LTMzMS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2lqYWEuMjAxNC40MjAyNmQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzI2JyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOIkBTGlnaHRtYW4sIEEuUC4gYW5kIEVhcmRsZXksIEQuTS4gKDE5NzQpIEJsYWNrIEhvbGVzIGluIEJpbmFyeSBTeXN0ZW1zOiBJbnN0YWJpbGl0eSBvZiBEaXNjIEFjY3JldGlvbi4gVGhlIEFzdHJvcGh5c2ljYWwgSm91cm5hbCwgMTg3LCBMMS5kAggPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODMyNycgdGFyZ2V0PSdfYmxhbmsnPjk8L2E+XQE5ATnUAUdoYXJhbWksIFAuLCBHaG9zaCwgSy4gYW5kIFJhaGFtYW4sIEYuICgyMDE0KSBBIFRoZW9yZXRpY2FsIE1vZGVsIG9mIE5vbi1Db25zZXJ2YXRpdmUgTWFzcyBUcmFuc2ZlciB3aXRoIE5vbi1Vbmlmb3JtIE1hc3MgQWNjcmV0aW9uIFJhdGUgaW4gQ2xvc2UgQmluYXJ5IFN0YXJzLiBHZW5lcmFsIFJlbGF0aXZpdHkgYW5kIFF1YW50dW0gQ29zbW9sb2d5LCAzNjYsIDE1MTEuZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzMjgnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwlgFQbGF2ZWMsIEEuIGFuZCBQYWN6eW5za2ksIEIuICgxOTcxKSBOdW1lcmljYWwgU2ltdWxhdGlvbnMgb2YgRHluYW1pY2FsIE1hc3MgVHJhbnNmZXIgaW4gQmluYXJpZXMuIEFubnVhbCBSZXZpZXcgb2YgQXN0cm9ub215IGFuZCBBc3Ryb3BoeXNpY3MsIDksIDE4My5kAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODMyOScgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTGlAUxham9pZSwgQy4tUC4gYW5kIFNpbGxzLCBBLiAoMjAxMCkgTWFzcyBUcmFuc2ZlciBpbiBCaW5hcnkgU3RhcnMgVXNpbmcgU21vb3RoZWQgUGFydGljbGUgaHlkcm9keW5hbWljcy4gSUkuIEVjY2VudHJpYyBCaW5hcmllcy4gVGhlIEFzdHJvcGh5c2ljYWwgSm91cm5hbCwgNzI2LCAxMyBwLmQCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzMwJyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMosBVHN1Z2F3YSwgTS4gYW5kIE9zYWtpLCBZLiAoMTk5NykgRGlzayBJbnN0YWJpbGl0eSBNb2RlbCBmb3IgdGhlIEFNIENhbnVtIFZlbmF0aWNvcnVtIFN0YXJzLiBQQVNKOiBQdWJsLiBBc3Ryb24uIFNvYy4gSmFwYW4sIFZvbC4gNDksIDc1LTg0LmQCDA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzMxJyB0YXJnZXQ9J19ibGFuayc+MTM8L2E+XQIxMwIxM3NQYWN6eW5za2ksIEIuIGFuZCBTaWVua2lld2ljeiwgUi4gKDE5NzIpIE1hc3MgVHJhbnNmZXIgRWZmZWN0cyBpbiBCaW5hcnkgU3RhciBFdm9sdXRpb24uIEFjdGEgQXN0cm9uYXV0aWNhLCAyMiwgNzMuZAIND2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzMzInIHRhcmdldD0nX2JsYW5rJz4xNDwvYT5dAjE0AjE0a1ZheXVqZWV0LCBHLiAoMjAwNykgTWFzcyBUcmFuc2ZlciBhbmQgRXZvbHV0aW9uIG9mIENvbXBhY3QgQmluYXJ5IFN0YXJzLiBBc3Ryb25vbXkgJiBBc3Ryb3BoeXNpY3MsIDIwMiwgOTMuZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzMzMnIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE1yAFJenphcmQsIFIuRy4sIGRlIE1pbmssIFMuRS4sIE9ubm8sIFJQLiwgTGFuZ2VyLCBOLiwgU2FuYSwgSC4gYW5kIGRlIEtvdGVyLCBBLiAoMjAxMykgTWFzc2l2ZSBCaW5hcnkgU3RhcnMgYW5kIFNlbGYtRW5yaWNobWVudCBvZiBHbG9idWxhciBDbHVzdGVycy4gTWVtb3JpZSBkZWxsYSBTb2NpZXTDoCBBc3Ryb25vbWljYSBJdGFsaWFuYSwgMSwgMS00LmQCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJEB09KQklQSFkET0pCTQNPSkMET0pDQgRPSkNEBE9KQ0UET0pDTQNPSkQFT0pEZXIET0pETQNPSkUET0pFRQRPSkVNBU9KRU1EBU9KRXBpBE9KRVIDT0pGBE9KRkQDT0pHBU9KR2FzBU9KR2VuA09KSQRPSklDBE9KSU0FT0pJTk0DT0pMA09KTQRPSk1DB09KTWV0YWwET0pNSARPSk1JBU9KTUlQBE9KTUwET0pNTQRPSk1OBE9KTVAET0pNUwVPSk1TaQNPSk4GT0pOZXBoA09KTwRPSk9HBk9KT0dhcwRPSk9wBU9KT3BoBU9KT1BNBU9KT1RTC09KUGF0aG9sb2d5BE9KUEMHT0pQQ2hlbQVPSlBlZARPSlBNBE9KUFAET0pQUwdPSlBzeWNoBE9KUkEFT0pSYWQET0pSRARPSlJNA09KUwRPSlNTBU9KU1NUBE9KU1QFT0pTVEEET0pUUgRPSlRTA09KVQRPSlZNA09QSgNQT1MCUFADUFNUBVBTWUNIA1NBUgNTQ0QEU0dSRQJTTQJTTgNTTkwEU29mdAJTUwNURUwCVEkEVU9BSgJWUANXRVQDV0pBBFdKQ0QFV0pDTVAEV0pDUwRXSkVUA1dKTQRXSk5TBVdKTlNFBVdKTlNUA1dKVgNXU04CWU0VgAIBMAM3MzcEMTQwOAQxNDA2BDEwMDIEMjQyMwMxNjQDNjExBDE0NzgDNDczAzQ5MgQxNTc5BDI0MzcEMjQ0MgQyNDQ0BDI0MjYEMjMxNgM4MDMEMTAwMAM0NzYDMjAzBDI0MjIEMTMwNAM1MzUDODg0AzUzMgM1MjkDMjA3Azk5NgQxNTE3BDIzMTcDMTYwAzQ3NwM2NzUEMTU3MwQxNTc0Azc0MwM1MTMEMTU3NQQyNDQ1AzE5MQM4MTIDMjYwBDI0NTUDMTM2BDIwNzQEMTQ5MwMxMjIDOTg5AjkyBDIwMzMDMTczBDE0OTIEMjQzOAQxNTE4BDI0NTQEMjQ1NwI2NAI5MwQxMzExBDIzMTUDMjA4BDI0MzIEMjQ2MgM1NDEEMTY5MAM1MTICNjUDMTAzAzE3NgMxMTEDNDkwBDI0NDkEMTM5MQMyMDIBNAMyMDkEMjQyOAM3NDcEMTI2MQQxNTc4BDE1MTkDNTI3BDE0NzcEMTI5OAQxOTgwBDI0MzYDNTI1AzQ3NQQyNDQzAjMwBDI0MzUDMjMwAzE2MgQyNDMxAzUzMAM1MjYDMTI1BDI0MjUDNDc5AzUzMQM2OTECMjkDMTQ0BDE5ODYEMTM5NQMxMTQEMjQ2MQQyNDIxBDE0MTEDMTAyAzE3NQM2NDgDMzk3BDE3NTMDMTcyBDI0MzMDNTkxAzk5MAI0NQM1NDMDMzM5BDI0MzACMjgDNDc4BDI0MzkEMjQ2MAMzNTcCNDYDMjEwBDE0ODUDMTYzAzc4NwM3ODYDOTE3AzgxNQQyNDQxBDE0ODcEMTU3NgMxNzQEMjQzNAM1MjgDMjA1AzE5MgI2OQQyNDU5BDI0NjMEMjQ1MwM3MzgEMTQ4MAQxNTkwAzgxNAQxNDA3BDE0NzkEMTAwMwQyNDQ2AzYwMQM4MDYDNzg1BDI0NDcEMjQ1MgM5OTcDNjA2Azc4OAM3OTIEMTk3NwM4MTADNTg2AzYxNAQxNTc3BDI0NTYDODExAzgxNgQxOTc5AzczNgQxMDA0AzU4NwM4MTcDNjEzAzYwMgM1OTIDNTkzAzc5MwQxMTg2AzU4OAM3OTADNzg0AzczOQM4MjADNjEyAzc0MgM5OTkDODIyAzk5OAM1OTYEMjQyNAM2MDUDODIxAzgwNAM2MDQEMjQ2NAQxOTc4AzgwNQM3OTQDODIzAzgxMwM1ODkDNzkxAzYwOQM2MTADNzQxAzc0NAM2MDMDODA3Azc4OQM4MjQEMTM5NAM1OTADNzM1AzYwMAM2MDcEMTQ4NgQyNDQ4AzgwOAM1MDkEMTAwMQM1NDcCNzEDMjA2BDI0NDADMTQ4BDI0NTADNTMzAzEzNQM0NzQEMTU4OQM0OTEEMjAzNAMyMDQDNjY2AzEwNAQxNDA1BDI0NTgDMTQ2AzUxMQM4MTgDNTAyAzgwOQQyNDUxAzUwNgM2MTUDNDkzAzUzNAM1MTACNDEEMjQ2NRQrA4ACZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkZKzpkFVTU8cCKUQCbmoxSWnjK+Rz//oy2l8HcjDqayl3" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAIYCWvU0Kc7W8gwDxywJNa9o4MxO15cYiUM4G9ciXBy5rRbTxQn0wurVpykN++S3qsY9gqm4NhJKbhUsb9qOzDz5+BaQ51Lu9YTI5y+UD8ReCXYCCq5883RYOyuQBDQdgBKJQ9NYSepAvxIHsUIEBszIF9kVAw+OtKpSo2nY0L5TS7pjZcI4a2ubz4FZUJ/qeIscQNjFFetjMQu+gPAKi1cuu0dXATu8ZTMsEIKUEeEK3+aBofovXqmNNgBwrJCAFSq2Co/mvvaNFGqy28nyI+vv6yf3gTw51pjuwP3t6rjAvP5x1lbHcKM5M/ROzquUHr9lNeWWklFj9cK1TFZpQdUnWziPR3qwNn0ScFNmZAws/jpBm80jcsuZv9XDBeU2KB136TAPmetewitSt9wGNYTIY9UJhFPM+0hDu7cwMKVpp+mmnD8+pMa1yHYRYzLQxH5n1Q/qqDptM9kfJbC1I4q9xL93cbaAMQ4tG4BJWGCzAW6vtR3JnRPdbQo4gA4sZaXer04IxUa3arSwCxRuEDIYFbblwRpneYEy3rzwScqJxuezOuEOjOptTX9AYvM9jKmAypI8kdyyyB4CNN3pFGdOk4mu/WExNjWQ5X01rKdDbeJN4TzreHSTLkh+d4B8EihhF81TpqgKTnD/fd/yNWGbO9zMdjKdAolzLesxJOG2bR2t4ae94pZJoUOvCEPRLh7u5h+HR1RXp8jKz3XyrzwGq5ViD0Fyb+qhGFHNfa6dxzK0n1qu2d9hzAGJ1ZdEzFgVObshVy2ouP3umau52TJFwKhqohqorHyJZt7h54jbR7oXke9kR+ABe996RxzCmx1L/42I3la9AkYiuUmh4mE9Rk5DdY/KiLlE+29svjthmIPNdKgZlA9dvwpjASVteCo/ksy0uMaOE+alzU72eZ1rlvR6C3RGA9Jmsr/oit2h5HWYxsN1nFXBqJbgXwz0iYh7JCUYpOW+jbALhRmLv9UpsX2EI+d3W02YqShNDct3I94Sq9enXMFtuVRPWGCF1oN1TlM8aQC+B45LfHfFCnZz6KlRuP6GvEqI8VDdi+sTnM71Jn53VrlKa3UuXcRuCcAe+GQxyfHfD/wZ+ergvp+hsx48VT9Xih8PA4vj1aNtQlLCsXezalJjXjgEl/cAa7arjDkAIe6rJDf9KPGPMwoKLWIBVM9nLqRvTn4xs2uCHsZiAOZ8Y5IAuKZeArneMeYK8+pLRvERCDkGURuCyuXbsR59h/AAdaKvPM2BT4SSKNj0Us/NQU9+MI9hDNgMZowy9xCOwBNddniKd5JiX1iETIuSWSu2galT3CZ4MpRQGqIfvz80X8fuyGyFF2wHP/HcdHP4x0OBSCxdPk53jUQtAQ6g8akcdK7Kr4deoDeUynf9l1Y6lbf6JC8NoSbMA+vc8O8QqrB2tS2vv8gSiSoIhJ/70GOmod2HPYumgEmpn8vgLAz5ccZUA7bkVUoObyVZV/Zm1Uh4Ozw57X6RDPtK9aubBoko1p5gcjMIWvm4T+T41pjKCycN70aK5E4MwFc6qbRpzIzeaUUIv5qiWg3dZvXV/9M9IwoMUAdYUH5UMA5AJDCfNUkJ1q+n5sIsxUCB6Nq0yAoqoFwFjOj8ZbQjUP5/q/DGUJDHtaZDExzq62tLwfe18PsgWsDuILbV32BFX07jDSTdc2CHO2xi6fhORGg5L0lBgRl4s0zp6Bc/YgBEniC2eneyWSDQ2iw5NhVKu3HJAuZnur70V7iwzDcGwQI2IDR/+2+ZDAfID+MM8+0XNaUlaIgX8fsjMqD2JWDxa8kn7ReZiPgMqAmE7acxyMlKdMtk6XhHjwc25wp4AlleDWbzVGzQLtuUmBfLRhb1duIXiNLsi/yRLp4WZPUJ27df65bU1anG4WItJ4LM9y1kFgUPkaZCD7G3W6HUl/HynBFJ9UbqeGaq8vaK1/YQfFvpLYGg0bJLmJIb7I1VBtGRefxiocvIkjuBnFbKIG1Bvp3bdqOCotobzRhTIfJPz1ybr2D6/DEvFCV2tebkdleZKtgLobZ6iejVWuu1VZxJWsflUf5AhdWNPs78Mu7xVHmmifThhNhHXVuTcjWgOc0+ha7t+FzBP9w8kasJY44yZnpObyYDO1ZdBcb+9I3REzEpeEvJizUogox2uLy8cRq3yp6lmmMvyTt1q1wGJKr3RN2vrp1bz9IC1X58ObtB/5VtKrLwiwYTZ4JczAShm49AkZfwZHQTZLyjY3qS4jbPi09pGNXw+uGS3Hu4tDXabra7UmIrVTJ6nt2BS+IV2oARGuf8d10+bFGE4Rxb8X5OWr9o8NP/NkSmCAkxIVC+Aj7EdIJsmLDnfzTIbDsJUtH/K7KPeiLbFjhDUrnAx6wO2/9ofSkwJg74y7KTIDV/ngs3MovqY+DwVzncJ9d75iLyCizSur2z/AoWxQnguyVJbTVltsvXYae72/GCovpvEoLWlmf4Sg6Yu4BBu5RYruCk5N7MezxIv1QQ8tjDdhoGXqAbWrRFFDWx3FK4oHDCvJJHjmn4y1G1QBsNDvWkIszuXW6E1KUz6dtoSwPj0wA0Ssong9DXWhtYuS9jtH4StM1ZT+6tqYvxtAJndAQ0NFNV1597E/y6Lte1J3ZP1twzvBpB/f0YxWaTDHZ72u7NlSVoCSjnWeNWCBfpptecl27SJO0njN9e8jHgDwmPC2NlIgGmq46k97juUD2lSjIB/+AeyDUaBy5oIhTdg6INeWTgkUTzyXC34fsOvEb0hxwmbeOjctVaE3x0pTijWTsKmSeGzIda8uoJkZcuTbWHVoRB6h5Dc72rcIz1lA5hJghfGLyFGxD6b7ArQwZHjISLbPwxJYkFbxLsCrMOEMVNCcxGdx56w146VqqjCImkPDvKFHUQ/jY9+FyVc120CiMOMieHjy4dyVomOSf6gPMkkPd4ClcsQoipAxZgLTxG67FCpcEH/ewS/egbmWx04V1w9x54+T8GkfQObxizPwQZQvPeZm6KLBvrmvLYp1CaHAQxp15ZTATs7okf7S5ePo2gUI6UpzRPUgMetACnXOfa/MSurf56LkzDvZSlRprJXfFcpjnNRle7ZhR+nzipiAi6t6fJxRB4sYqEuxZikZ0sS/pn76iye8xM0q+tFJNR5AEEH/rcf8wyXJ1I9n+HN9S0Q60NH0z6qdFkKcgxGmbQ8xoxIk8T5csYyuHHJ8T3qv4mAA1kgwWmcUBQcbF5yr4YQxwmztMkcCEMt6aAvfC8f6toJF0YzyYX6qP1l6BNvsoSTEoNJmHhXQ9HjrS4USE6yCYyzwmeO12MO4U1xeipGR+e8TLpQ6CqXnairBPYGsz+glJyTODudGLzInafKtakhjlbm2TNMFfJb+9E3OOHfsq+2OJbTt6ZXJufxbbdOy1pecKV+u7JTFDadGMONSTueBvDAHypkesyjW4yuwX56tldt764R/77OW2TjDwb0ccJpLN4gZuPJdFGPDo8zpRNpCEOepOJcfUo9I8zG9qwVzTuTYjxDFDg2EFzwz1hep69FpxYJxedOu96B/Dnw5jBPjdr2PsTL/fVgG4rRrihebOjXHUfqiglDXkf85mvQfywWRzIsCAYnsAqHdzBwJuSxhofmDKZ6kAcIU59NL+2Ji/ZlNfEKQgjenXIkOQXcybyFgFk6H+fsgvXkF6guW0mK/96yfu7+n2DpGArzAn8Ug7zyAfpekzLtWT6UsgXZRNiIa8gkid6xp0spp/D5y5u2oeDBhSnXl6da309+kboqvL0EZR7RebudBufyINEOSNkpXst+LCzHcoZXcZBkagLrxGz5Lr3OmrcaZrIzlq5X4ZeFENOm92bbMpLQVD4IMoZREdVKbJIoaDV/CJq5z9wEVDB/cC79FvrePkFE4bul1aFFPyyi0kOKqg/hxo/OJaXSW+9WIG+vrsJvPgrum9ZyyaHkmzelazeN+yHPLxy1zNV9jyZToogsZf6RZ3nFRpnXxmMlVnH0OVgW+2Mohtqfe2KKfX/VnF0jyp37UjD6+NIz5zrn96FS+VMJNGWR2O5842Lmw660AZaYl38EWqjS11SHbcorNwflYBLGOSBhYCgfIyVLGUTbPYfzEgNQqTHnxA1GPsHqBrOtCWMEkB/uzd4oi1XWCyepKSG7lNpxxFzdDjX98Oc6FzbVsmLIEUldUkJbRhZrvplfZYEL0HEIrr0hA25YbbMqPgsadaNs2L0PL6NJIUvaBZj+4WJDzg+qXCxGdKNlUbGu4DHu5jY9jggQ/M+bLYw70SYQesq8eoufw0gVy+VJXLOb/8y4R0wEYH7yRWOc8vTOLrzSGCW44GJlYyDbnWEuvxMiv+ao715+CTPTCKoBBsIcfS54DwjalRqX/tdios6c/R4l8RBx+bEs2I/OhFPcGy16UdcBobgA6MDXqDiN8qHUE5edBy836NpfClbftFfnfyfCIoNo/LoLepzD03QezF7mHekW07wckU6+7Q9YdIbSVVhYrVWNy4V9SLNt9rDNP2lL0qzP3/u+7FCVXpVsepRRHoAuuwZCqIEy9pj8H80hp7qY3PsWfym5PFwPDpDrw5btVy0nYXPzmSU7Uq1R+xlIyX8GjtJduBVZ8wbk6aTUuK/MPWJrZBr6wJdTeGfZt62TS2PvUX8Bszn2XYFWa+KC0AGHhHOlm+2AJHVPZlyUq17Cl5102dlAYHzK+0AG32kPT2GuoyTOE8BIy6ZumGISrsX9PtvrJQT973r7tutrOJdmSsuzZmet4ka9s4KBh2pnNpSnp5KKvbJBe/2u8kjranZVADkNkEKOEXepq4YzpMaSxC3MlYLFhnFkgI5ZVRMzmO+OO/YgsPyT8yRPxZINEKJmxVfR6o2/dlXAveRG+kmgscPVzG2fU+7RYWdJ6A7dYUqm+3QeXKaM60OaCxssNom3YyO27eklt3YlQIip36uoWBxadwhW6Xr4hpzG+fVoqWHCOB4W0tkB4Ys2fVx/u4hWeNar3onUwWIr3qyzShdQuq1yLoOGDw62HfXCpHg+2MgPzx0D30ZvvTRWoyLCT5KXRfbhCHc0ft6eEqaV2Bsm1PQ1adRpxas+YKl6OM0XfBYI7e+D/PTCV8kGkiBFjju03VDE4za5rygA5Hlm2Nw7Z/jwlgzZu+xnq4r5sKXwqO2GiO0Yz0phNMal/uj9jQH01r6jZOWZdGYv25HB18pD1BnnheFvgIBd4A+Yzzd4445ZYYBPi1KjUxhWknmQ3xMtk+VekEsyt5OsRToo3sdsrHlF0S3wBO8PMh2hXpztV0Nul20IZOgLNZXnw69o2KVsiPg3L1Ov2ccetI/l78hqpSial79UDetTUKR6jdST7RI/tNxHgqa2VZpA6vgUwhJt7/J+BSGBMS8EJAsf/9j8QXzOPuANANF9n6qx9M8VFm3znHUngYh/toDPhEifiWmFe8/WqO48axLW568ANtWdjn5DflrdMhUJcxSKlMY6hfUROf4lKD2WVzMrBGUEyM1i/IioLJF4GlMlIJPWPw9wKGpav4okyiSNWyQxlltAoA50ScVI3orHMZwfosp1huw/AZY81iQ2w5g07s7Nd1y8K5gjHHQyvDDAfOa9Uhob6FFUGqz5M0+ziMJsE8SINRWgUZu9l/uWGw0nRPwPG/QkZC9" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=490" title="International Journal of Astronomy and Astrophysics">
+                    International Journal of Astronomy and Astrophysics</a> &gt; <a href="home?issueid=6892#60070">Vol.5 No.3, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Mass Transfer in Binary Stellar Evolution and Its Stability <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Seblu+Humne++Negu&searchfield=authors&page=1' target='_blank'>Seblu Humne  Negu</a><sup>*</sup>, <a href='articles?searchcode=Solomon+Belay++Tessema&searchfield=authors&page=1' target='_blank'>Solomon Belay  Tessema</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Astronomy+and+Astrophysics+Research+Division%2c+Entoto+Observatory+and+Research+Center+(EORC)%2c+Addis+Ababa%2c+Ethiopia&searchfield=affs&page=1' target='_blank'>Astronomy and Astrophysics Research Division, Entoto Observatory and Research Center (EORC), Addis Ababa, Ethiopia</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ijaa.2015.53026"
+                    target="_blank" onclick='SetNum(60070)'>10.4236/ijaa.2015.53026</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/IJAA_2015093011045823.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60070)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60070' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60070.xml' target='_blank' onclick='SetNum(60070)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    8,535</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    10,676</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60070&JournalID=490' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">The evolution of a binary star system by various analytical and numerical approximations of mass transfer rate normalized to the equilibrium rate and its stability conditions are investigated. We present results from investigations of mass transfer and stability in close binary star systems using the different orbital parameters. The stability and instability of mass transfer in binary star evolution depends on the exchange of material which the response of the binary to the initial Roche lobe overflow causes the donor to loose even more material. Our work is mainly focused on basic mathematical derivations, analytical and numerical solutions in order to explain the mass transfer system in different orbital parameters as well as the results are compared with previous studies in both cases. Mass transfer is usually stable, as long as the winds specific angular momentum does not exceed the angular momentum per reduced mass of the system. This holds for both dynamical and thermal time scales. Those systems which are not stable will usually transfer mass on the thermal time scale. The variation of Roche lobe radius with mass ratio in the binary, for various orbital parameters in the conservative and non-conservative mass transfer, as well as the evolution equations, orbital angular momentum of the binary system and the corresponding analytical and numerical solutions for different cases, under certain restrictive approximations is derived, simulated and discussed.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Mass+Transfer&searchfield=keyword&page=1' target='_blank'>Mass Transfer</a>, <a href='articles?searchcode=+Binary+Star&searchfield=keyword&page=1' target='_blank'> Binary Star</a>, <a href='articles?searchcode=+Stellar+Evolution&searchfield=keyword&page=1' target='_blank'> Stellar Evolution</a>, <a href='articles?searchcode=+Stability&searchfield=keyword&page=1' target='_blank'> Stability</a>, <a href='articles?searchcode=+Instability&searchfield=keyword&page=1' target='_blank'> Instability</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Negu, S.  and Tessema, S.   (2015) Mass Transfer in Binary Stellar Evolution and Its Stability. <i>International Journal of Astronomy and Astrophysics</i>, <b>5</b>, 222-241. doi: <a href='http://dx.doi.org/10.4236/ijaa.2015.53026' target='_blank' onclick='SetNum(60070)'>10.4236/ijaa.2015.53026</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>The dominant feature in the evolution of stars is in closed binaries, and the one which distinguishes it from the evolution of single stars is the presence of various forms of mass transfer between the two stars. Mass transfer occurs in many different types of systems, to widely varying effects [1] . Contamination of the envelope of a less evolved star with chemically processed elements, as in Barium stars [2] , and catastrophic mass transfer, by common envelope phase, as in W UMa systems; or a slow, steady mass transfer by Roche lobe overflow [2] .</p>
+<p>Close binary stars consisting of two compact stellar remnants (white dwarfs (WDs), neutron stars (NSs), or black holes (BHs)) are considered as primary targets of the forthcoming field of gravitational wave (GW) astronomy [3] since their orbital evolution has entirely controlled by the emission of gravitational waves and leads to ultimate coalescence (merger) of the components. GW emission is the sole factor responsible for the change of orbital parameters of a pair of compact (degenerate) stars. However, at the early stages of binary evolution, it is the mass transfer between the components and the loss of matter and its orbital angular momentum that play a dominant dynamical role.</p>
+<p>Mass transfer is particularly interesting if one considers the evolution of a system with at least one degenerate star. In these cases, mass transfer produces spectacular effects, resulting in part from the intense magnetic and gravitational fields of the compact objects, pulsed X-ray emission, nuclear burning, novae outbursts, and so on. Also, since the mass transfer rates can be high and orbital period measurements accurate, one may see the dynamical effects of mass transfer on the binary orbit, as in Cygnus X-3 [4] .</p>
+<p>In the case of cataclysmic variables (CVs) and low mass X-ray binary system (LMXBs), one has a highly evolved, compact star (CVs and LMXBs contain white dwarfs and neutron stars, respectively) and a less evolved main sequence or red giant star. Mass transfer usually proceeds by accretion onto the compact object, and is secularly stable. Most of these objects involve one component filling its Roche lobe (the donor or secondary), trans- ferring mass to a compact star (the accretor or primary) and the mass leaking out of the inner Lagrangian point forms an accretion disk around the accretor. A binary system starts out as detached [4] [5] , with both stars in hydrostatic equilibrium and filling an equipotential surface inside their Roche lobes. In a binary, both stars (e1 and e2 can fill their Roche lobes at subsequent evolutionary stages). We use the convention which e1 denotes the primary star, and e2 denotes the secondary star of the binary. In this convention, the mass ratio is<img src="//html.scirp.org/file/10-4500465x5.png" class="200" />. During phases of mass transfer, we denote the mass-losing star, the “donor”, with subscript “d” and the companion star, the “accretor”, with subscript “a”. The transfer will be accompanied by a stellar wind from the mass-losing star, or ejection of matter from the accretor, as in novae and galactic jet sources.</p>
+<p>There are various unanswered questions in the evolution of LMXBs into low mass binary pulsars (LMBPs, in which a millisecond radio pulsar is in a binary with a low mass white dwarf companion) and of CVs. Among these are the problem of the disparate birthrates of the LMXBs and the LMBPs (Kulkarni and Narayan1988), estimation of the strength of X-ray heating induced winds from the donor star.</p>
+<p>Now, if a star is a member of a binary star system, then it is possible that as the components evolving, one of them (or both) can fill up its Roche lobe. Thomas (1977) classified mass transferring binaries on the basis of what state of evolution the donor is in as follows:</p>
+<p>Case A: If the orbital separation is small enough (usually a few days), the star can fill its Roche lobe during its slow expansion through the main-sequence phase while still burning hydrogen in its core.</p>
+<p>Case B: If the orbital period is less than about 100 days, but longer than a few days, the star will fill its Roche lobe during the rapid expansion to a red giant with a helium core. If the helium core ignites during this phase and the transfer is interrupted, the mass transfer is Case B.</p>
+<p>Case C: If the orbital period is above 100 days, the star can evolve to the red supergiant phase before it fills its Roche lobe. In this case, the star may have a CO or ONe core.</p>
+<p>Case A mass transfer occurs during the slow growth, Case B during the first rapid expansion, and Case C du- ring the final expansion phase. The nature of the remnant depends upon the state of the primary during the onset of RLOF and the orbital properties of the resultant binary depend upon the details of the mass transfer.</p>
+<p>The problem of mass transfer in binaries by Roche lobe overflow has received a good deal of attention in the literature over the past few decades, typically in investigations of one aspect or another of orbital evolution or stability. [6] examined mass transfer by isotropic winds and accretion, in investigating the evolution of short period binary X-ray sources with extreme mass ratios, and developed models with accretion and (typically) isotropic re-emission of transferred matter, in the context of the period gap in cataclysmic variables.</p>
+<p>Stability has become an important in many area of astrophysical research. Many authors has been studied the stability in different models (for example, [7] [8] ). Both authers didn’t address stability and mass transfer in binary stellar evolution. [1] [2] [4] were tried to study stability criteria for mass transfer in binary stellar evolution using limits of pure models of mass transfer and extreme mass ratio. The present study will address the mass transfer in binary stellar evolution using analytical and numerical methods which will give brief relations about stability and mass transfer.</p>
+<p>The aim of this paper is to study mass transfer in binary stellar evolution behavior using mass transfer and different orbital parameters. This will be used to study stability properties of binary stars using analytical and numerical solutions. We calculate the rate of change of orbital angular momentum, orbital periods, angular speed and stability analysis of mass transfer rates, with relevant evolution in general form.</p>
+<p>The paper is organized as follows:</p>
+<p>In Section (2), we derive basic equations of mass transfer, mass transfer and evolution of orbital parameters, conservative and non-conservative mass transfer and evolution equations; in Section (3), stability analysis of mass transfer and its rate will be determined; in Section (4), analytical and numerical solutions will be presented. Finally our main conclusions are summarized in Section (5).</p>
+<p class="E-Title1">2. Basic Equations of Mass Transfer</p>
+<p class="E-Title2">2.1. Mass Transfer and the Evolution of Orbital Parameters</p>
+<p>In this section, expressions for the variation of orbital parameters with loss of mass from one of the stars are derived. In what follows, the two stars will be referred to as <img src="//html.scirp.org/file/10-4500465x6.png" class="200" /> and<img src="//html.scirp.org/file/10-4500465x7.png" class="200" />, with the latter the mass losing star.</p>
+<p>The angular momentum (AM) of binary component i in a circular orbit is expressed as:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/10-4500465x8.png" /><span class="bracketMark">(1)</span></p>
+<p>where <img src="//html.scirp.org/file/10-4500465x9.png" class="200" /> is the velocity of accretor and donor star; “i” stands for the accretor “a” and donor “d” stars respectively, <img src="//html.scirp.org/file/10-4500465x10.png" class="200" />is the position of the accretor and donor star, and <img src="//html.scirp.org/file/10-4500465x11.png" class="200" /> is the orbital angular spin frequency.</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/10-4500465x12.png" /><span class="bracketMark"></span></p>
+<p>Roche geometry changes are governed by the total orbital angular momentum J of the system which is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/10-4500465x13.png" /><span class="bracketMark">(2)</span></p>
+<p>where <img src="//html.scirp.org/file/10-4500465x14.png" class="200" /> are the distance of the two stars from the center of mass (semi major-axis), <img src="//html.scirp.org/file/10-4500465x15.png" class="200" />is the reduced mass, <img src="//html.scirp.org/file/10-4500465x16.png" class="200" />is the total mass, and the mass ratio is<img src="//html.scirp.org/file/10-4500465x17.png" class="200" />. Throughout this paper, we consider an eccentricity e will be zero.</p>
+<p>The period “P”, the semi major axis “a” and the total mass transfer related through Kepler’s law as:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/10-4500465x18.png" /><span class="bracketMark">(3)</span></p>
+<p>which implies that the orbital angular momentum J can be written as:</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/10-4500465x19.png" /><span class="bracketMark">(4)</span></p>
+<p>The angular momentum for binary component “i” is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/10-4500465x20.png" /><span class="bracketMark">(5)</span></p>
+<p>and the specific angular momentum for binary component “i” can be written as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x21.png" /><span class="bracketMark">(6)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x22.png" /> is mass of the accretor and donor and <img class="200" data-original="//html.scirp.org/file/10-4500465x23.png" /> is specific angular momentum of the accretor and donor star, respectively.</p>
+<p>From Kepler’s <img class="200" data-original="//html.scirp.org/file/10-4500465x24.png" /> we relate orbital evolution as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x25.png" /><span class="bracketMark">(7)</span></p>
+<p>Hence from Equation (4) the orbital angular momentum J of a binary star is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x26.png" /><span class="bracketMark">(8)</span></p>
+<p>In many cases the angular momentum stored in the rotation of the two stars is negligible compared to the orbital angular momentum, so that Equation (8) also represents the orbital angular momentum of the binary, to good approximation. By differentiating this expression we obtain a general equation for the evolution of orbital parameters:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x27.png" /><span class="bracketMark">(9)</span></p>
+<p>and</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x28.png" /><span class="bracketMark">(10)</span></p>
+<p>In Equation (10), e is a parameter that determines the amount by which its orbit around another body deviates from a perfect circle. From Equation (7) and Equation (10) the rate of change of orbital period, semi major axis, and total mass transfer can be written as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x29.png" /><span class="bracketMark"></span></p>
+<p>or</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x30.png" /><span class="bracketMark">(11)</span></p>
+<p>which depends on time “t”.</p>
+<p>By integrating Equation (11) we obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x31.png" /><span class="bracketMark">(12)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x32.png" /> are initial orbital period, semi major axis, and total mass transfer of the binary stars, respectively.</p>
+<p>In the case of Roche lobe overflow in an already circularized binary, the last term is zero. The <img class="200" data-original="//html.scirp.org/file/10-4500465x33.png" /> term re- presents angular momentum loss from the binary, which can be due to spontaneous processes (such as gravitational wave radiation) or it can be associated with mass loss from the binary as a whole or from the component stars.</p>
+<p class="E-Title2">2.2. Conservative Mass Transfer</p>
+<p>When no ejected matter leaves a binary system, the mass transfer is said to be conservative. During conservative mass transfer, the orbital elements of the binary can change due to transfer of angular momentum from one star to the companion. Consider a system with a total mass<img class="200" data-original="//html.scirp.org/file/10-4500465x34.png" />, semi-major axis, a, eccentricity, e, and the total orbital angular momentum, J is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x35.png" /><span class="bracketMark">(13)</span></p>
+<p>will also be conserved, where G, is universal gravitational constant.</p>
+<p>We first consider conservative mass transfer, in which the total mass and orbital angular momentum of the binary are conserved. In that case we can set as:</p>
+<p>In circular, <img class="200" data-original="//html.scirp.org/file/10-4500465x36.png" />and conservative mass exchange, <img class="200" data-original="//html.scirp.org/file/10-4500465x37.png" />and<img class="200" data-original="//html.scirp.org/file/10-4500465x38.png" />, then from Equation (13) we have:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x39.png" /><span class="bracketMark">(14)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/10-4500465x40.png" />, is a constant. Hence from Equation (10) we obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x41.png" /><span class="bracketMark">(15)</span></p>
+<p>Using the Kepler’s third law in Equation (15), the period variation with time <img class="200" data-original="//html.scirp.org/file/10-4500465x42.png" /> due to mass transfer can be written as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x43.png" /><span class="bracketMark">(16)</span></p>
+<p>and integrating Equation (16) which leads us</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x44.png" /><span class="bracketMark">(17)</span></p>
+<p>An explicit relation between the separation and the masses can be found by integrating Equation (15) with<img class="200" data-original="//html.scirp.org/file/10-4500465x45.png" />; <img class="200" data-original="//html.scirp.org/file/10-4500465x46.png" />= constant.</p>
+<p>Applying Kepler’s law we obtain similar relation between the rate of change of the orbital period <img class="200" data-original="//html.scirp.org/file/10-4500465x47.png" /> and the rate of mass transfer<img class="200" data-original="//html.scirp.org/file/10-4500465x48.png" />, and between the period and masses directly from Equation (15):</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x49.png" /><span class="bracketMark">(18)</span></p>
+<p>The importance of Equation (15) and Equation (18) is that it allows to determine the mass transfer rate of observed semi-detached binaries, if the masses and the period derivative can be measured. This is complicated by the fact that many binaries show short-term period fluctuations, while for the long-term average of the period derivative, the trend has been determined with reasonable conditions as follows:</p>
+<p>If<img class="200" data-original="//html.scirp.org/file/10-4500465x50.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x51.png" />, mass transfer from the less massive star to the more massive one will cause the orbit to enlarge.</p>
+<p>If<img class="200" data-original="//html.scirp.org/file/10-4500465x52.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x53.png" />, mass transfer from the more massive star to the less massive one will cause the orbit to shrink.</p>
+<p class="E-Title2">2.3. Non-Conservative Mass Transfer</p>
+<p>In case of non-conservative mass transfer both mass and angular momentum can be removed from the system. Following [9] Orbital Angular Momentum (OAM) of a two body system is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x54.png" /><span class="bracketMark">(19)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x55.png" /> is moment of inertia, and <img class="200" data-original="//html.scirp.org/file/10-4500465x56.png" /> is the angular frequency of the binary.</p>
+<p>Assuming isotropic mass loss from the surface of the components, then, we have the rate of angular momentum:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x57.png" /><span class="bracketMark">(20)</span></p>
+<p>Since the dynamics of a two body system obey Kepler’s third law therefore one expects transfer of mass would change the, a, P and M accordingly</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x58.png" /><span class="bracketMark">(21)</span></p>
+<p>Assume q as a constant, differentiating Equation (19) with respect to time gives:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x59.png" /><span class="bracketMark">(22)</span></p>
+<p>Substituting Equation (21) into Equation (22) we get the following two equations:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x60.png" /><span class="bracketMark">(23)</span></p>
+<p>and</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x61.png" /><span class="bracketMark">(24)</span></p>
+<p>Therefore, the two equations tell us how the loss of OAM and mass are caused the orbital period, P, and orbital radius, a, to change. The isotropic mass loss implies:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x62.png" /><span class="bracketMark">(25)</span></p>
+<p>This equation implies that the only source of OAM loss is mass loss, which were assumed to be isotropic. Substituting <img class="200" data-original="//html.scirp.org/file/10-4500465x63.png" /> from equation Equation (25) into Equation (23) will give:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x64.png" /><span class="bracketMark">(26)</span></p>
+<p>In Equation (26), since the <img class="200" data-original="//html.scirp.org/file/10-4500465x65.png" /> is measurable observationally, therefore, <img class="200" data-original="//html.scirp.org/file/10-4500465x66.png" />can be calculated from Equation (26).</p>
+<p>Now if we use the following equations taken from Stepien (1995) to calculate relative angular momentum lost from a system as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x67.png" /><span class="bracketMark">(27)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x68.png" /><span class="bracketMark">(28)</span></p>
+<p>and hence the relative OAM lost only by magnetized star wind:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x69.png" /><span class="bracketMark">(29)</span></p>
+<p>where</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x70.png" /><span class="bracketMark">(30)</span></p>
+<p>This equation (Equation (30)) tells us the total rate of change of the orbital angular frequency of the binary related to the mass lost from the system.</p>
+<p class="E-Title2">2.4. Evolution Equations</p>
+<p>Now we have to enumerate some of the physical mechanisms that can influence the evolution of a binary, we can proceed to derive mathematical expressions in order to quantify these effects. To reiterate, we work under the following assumptions:</p>
+<p>i) Roche potential describes the gravitational field;</p>
+<p>ii) Kepler’s laws are valid, and that the stars orbit around their common center of mass in circular orbits;</p>
+<p>iii) the spin and orbit axes are all parallel to one another and;</p>
+<p>iv) tidal effects are included even though we ignore the effects of the distortion of the stars, i.e. we assume spherically symmetric stars.</p>
+<p>Now, the total angular momentum of the system is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x71.png" /><span class="bracketMark">(31)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x72.png" /> is dimensionless constants depending on the internal structure of the the angular spin frequencies(<img class="200" data-original="//html.scirp.org/file/10-4500465x73.png" />), and <img class="200" data-original="//html.scirp.org/file/10-4500465x74.png" /> are the spins of the accretor and donor respectively. The first term in Equation (31) represents the orbital angular momentum of the components, and the two other terms represent the spin angular momenta of the stars.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x75.png" /><span class="bracketMark">(32)</span></p>
+<p>The rate of change of the spin momenta can be given as the sum of a consequential angular momentum term and a tidal term as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x76.png" /><span class="bracketMark">(33)</span></p>
+<p>where, <img class="200" data-original="//html.scirp.org/file/10-4500465x77.png" />and <img class="200" data-original="//html.scirp.org/file/10-4500465x78.png" /> indicate the specific angular momenta of the matter arriving at the accretor and the matter leaving the donor respectively.</p>
+<p>The second term in the Equation (33) represents the tidal term, which is a function of the degree of <img class="200" data-original="//html.scirp.org/file/10-4500465x79.png" /> and the tidal time scale <img class="200" data-original="//html.scirp.org/file/10-4500465x80.png" /> is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x81.png" /><span class="bracketMark">(34)</span></p>
+<p>Substituting Equation (33) and Equation (34) into Equation (31).</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x82.png" /><span class="bracketMark">(35)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/10-4500465x83.png" />, then we have<img class="200" data-original="//html.scirp.org/file/10-4500465x84.png" />.</p>
+<p>Accordingly, from Equation (35) the rate of change of the orbital separation is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x85.png" /><span class="bracketMark">(36)</span></p>
+<p>which we re-write for the convenience as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x86.png" /><span class="bracketMark">(37)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x87.png" /><span class="bracketMark">(38)</span></p>
+<p>The sign of the terms on the right hand side of Equation (37) determines if the orbit is shrinking or expanding. <img class="200" data-original="//html.scirp.org/file/10-4500465x88.png" />represents the net effect of the consequential transfer of angular momentum. In the absence of mass transfer, the orbit shrinks as a result of the systemic angular momentum loss.</p>
+<p>If <img class="200" data-original="//html.scirp.org/file/10-4500465x89.png" /> then the binary continues to shrink. On the other hand, for systems with<img class="200" data-original="//html.scirp.org/file/10-4500465x90.png" />, mass transfer leads to the orbit expanding or least not shrinking as rapidly as it would in the absence of mass transfer.</p>
+<p>The tidal terms have a more complicated behavior because the sign of the tidal torque <img class="200" data-original="//html.scirp.org/file/10-4500465x91.png" /> is a function of the difference in the spin frequencies and the orbital frequency,<img class="200" data-original="//html.scirp.org/file/10-4500465x92.png" />. If the spin frequency of a given component is higher than the orbital frequency, tides will tend to pump angular momentum into the orbit and thus help increase the separation. Conversely, if the orbital frequency is higher than the spins, it can lead to a runaway instability since the tides will tend to suck more angular momentum out from the orbit which in turn will increase the orbital frequency even more.</p>
+<p>We now determine how the depth of contact evolves to complete the set of equations we need to specify the evolution of the binary system. We can write equation of the Roche lobe size as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x93.png" /><span class="bracketMark">(39)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/10-4500465x94.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x95.png" />are the Roche lobe radius and the rate of change of the Roche Lobe radius and <img class="200" data-original="//html.scirp.org/file/10-4500465x96.png" /> is the logarithmic derivative of <img class="200" data-original="//html.scirp.org/file/10-4500465x97.png" /> with respect to<img class="200" data-original="//html.scirp.org/file/10-4500465x98.png" />. Thus we have:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x99.png" /><span class="bracketMark">(40)</span></p>
+<p>Symbolically, generalizing the meaning of the symbols introduced by [5]</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x100.png" /><span class="bracketMark">(41)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x101.png" /><span class="bracketMark">(42)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x102.png" /><span class="bracketMark">(43)</span></p>
+<p>where the symbol <img class="200" data-original="//html.scirp.org/file/10-4500465x103.png" /> stands for driving terms and <img class="200" data-original="//html.scirp.org/file/10-4500465x104.png" /> denotes logarithmic derivatives with respect to donor mass. We write the logarithmic time derivative of the donor radius <img class="200" data-original="//html.scirp.org/file/10-4500465x105.png" /> as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x106.png" /><span class="bracketMark">(44)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x107.png" /> represents the rate of change of the donor radius due to intrinsic processes such as thermal relaxation and nuclear evolution, whereas <img class="200" data-original="//html.scirp.org/file/10-4500465x108.png" /> usually describes changes resulting from adiabatic variations of <img class="200" data-original="//html.scirp.org/file/10-4500465x109.png" /> as described in Equation (44). We derive here a simple analytic approximation to the effective mass-radius exponent when the response of the donor is a combination of the adiabatic and thermal adjustments to mass loss. from Equation (44).</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x110.png" /><span class="bracketMark">(45)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x111.png" /> is the effective mass-radius exponent and <img class="200" data-original="//html.scirp.org/file/10-4500465x112.png" /> stands for the thermal radial reaction rate, and <img class="200" data-original="//html.scirp.org/file/10-4500465x113.png" /> is here the purely adiabatic mass-radius exponent. As a consequence of mass loss, the donors radius <img class="200" data-original="//html.scirp.org/file/10-4500465x114.png" /> will differ from the equilibrium radius corresponding to its instantaneous mass<img class="200" data-original="//html.scirp.org/file/10-4500465x115.png" />. With these definitions we write:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x116.png" /><span class="bracketMark">(46)</span></p>
+<p>The secular evolution of the binary takes place on the mass transfer time scale<img class="200" data-original="//html.scirp.org/file/10-4500465x117.png" />. Differentiating Equation (46) with respect to time, we get:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x118.png" /><span class="bracketMark">(47)</span></p>
+<p>Thus,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x119.png" /><span class="bracketMark">(48)</span></p>
+<p>Finally, setting <img class="200" data-original="//html.scirp.org/file/10-4500465x120.png" /> in Equation (47), and solving for<img class="200" data-original="//html.scirp.org/file/10-4500465x121.png" />, we obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x122.png" /><span class="bracketMark">(49)</span></p>
+<p>This expression shows that if the evolution is much slower than the thermal relaxation (<img class="200" data-original="//html.scirp.org/file/10-4500465x123.png" />), the donor radius follows the equilibrium radius closely, whereas if mass transfer occurs rapidly, the donor reacts adiabatically. Equations ((34), (36), (40), and (44)) referred to as “the evolution equations”.</p>
+<p class="E-Title1">3. Stability Analysis of Mass Transfer</p>
+<p class="E-Title2">Mass Transfer Rate</p>
+<p>Mass transfer will proceed on a time-scale which depends critically on the changes in the radius of the donor star and that of its Roche lobe in response to the mass loss; if the star expands faster than its Roche lobe or shrinks less rapidly than its Roche lobe for a prolonged time, mass transfer will be unstable and the donor star may disintegrate. If the donor star expands less rapidly or shrinks faster than its Roche lobe, mass transfer will generally be stable and may continue for a long time.</p>
+<p>We now introduce the concept of the equilibrium mass transfer rate, which is the mass transfer rate that a stable, semi-detached binary undergoes for a given rate of driving. The equilibrium mass transfer rate is a function of the driving rate, the consequential angular momentum loss mechanisms and the value of the mass ratio q. The mass transfer rate can be written generally as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x124.png" /><span class="bracketMark">(50)</span></p>
+<p>Under the assumption that <img class="200" data-original="//html.scirp.org/file/10-4500465x125.png" /> is a function of the binary parameters, whilst f is a strong function of the depth of contact<img class="200" data-original="//html.scirp.org/file/10-4500465x126.png" />, we can write:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x127.png" /><span class="bracketMark">(51)</span></p>
+<p>For equilibrium mass transfer, we let<img class="200" data-original="//html.scirp.org/file/10-4500465x128.png" />, i.e. the mass transfer rate itself does not evolve very fast. Thus, using the evolution equations and Equation (46) we have:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x129.png" /><span class="bracketMark">(52)</span></p>
+<p>where,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x130.png" /><span class="bracketMark">(53)</span></p>
+<p>is the critical mass ratio for stability of mass transfer. For example, for a polytropic donor with <img class="200" data-original="//html.scirp.org/file/10-4500465x131.png" /> (which is representative of a white dwarf donor)<img class="200" data-original="//html.scirp.org/file/10-4500465x132.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x133.png" />and so<img class="200" data-original="//html.scirp.org/file/10-4500465x134.png" />.</p>
+<p>In general one can write from Equation (51).</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x135.png" /><span class="bracketMark">(54)</span></p>
+<p>when<img class="200" data-original="//html.scirp.org/file/10-4500465x136.png" />, the pre-factor on the right hand side of Equation (54) is negative and thus the mass transfer rate tends toward the equilibrium value implying that the mass transfer is stable. On the other hand, when<img class="200" data-original="//html.scirp.org/file/10-4500465x137.png" />, we can see that the system cannot reach the equilibrium value and this implies that the mass transfer is unstable. It is possible during the course of the evolution that a system that initially has <img class="200" data-original="//html.scirp.org/file/10-4500465x138.png" /> can evolve into a system with<img class="200" data-original="//html.scirp.org/file/10-4500465x139.png" />.</p>
+<p>One of the components of the binary gets into contact with its Roche lobe either due to the expansion of the star (the donor) and/or due to shrinking of the Roche lobe as a result of angular momentum loss by GWR. In order to determine exactly when a binary with given total mass and mass ratio q becomes semi-detached, one needs to specify the radii of the component stars and their corresponding Roche lobes. The condition for stability can be expressed as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x140.png" /><span class="bracketMark">(55)</span></p>
+<p>which simply states that the donors radius must shrink at least as fast as its Roche lobe or that the donor can expand no faster than its Roche lobe expands.</p>
+<p>The first factor we will consider is the change in the orbital separation resulting from a mass transfer event. The orbital angular momentum, <img class="200" data-original="//html.scirp.org/file/10-4500465x141.png" />for a binary composed of two point masses is given by Equation (2). We can use Kepler’s third law:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x142.png" /><span class="bracketMark">(56)</span></p>
+<p>to eliminate the angular frequency from Equation (2) to obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x143.png" /><span class="bracketMark">(57)</span></p>
+<p>If we logarithmically differentiate Equation (57) with respect to time and from Equation (10) with<img class="200" data-original="//html.scirp.org/file/10-4500465x144.png" />, we obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x145.png" /><span class="bracketMark">(58)</span></p>
+<p>From Equation (15), Equation (58) becomes</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x146.png" /><span class="bracketMark">(59)</span></p>
+<p>We can then see that if the donor is the more massive star (q &gt; 1), the orbital separation will shrink upon mass transfer. Conversely, if q &lt; 1, a will increase.</p>
+<p>From Roche lobe geometry and following [10] , the Roche lobe radius <img class="200" data-original="//html.scirp.org/file/10-4500465x147.png" /> can be crudely approximated as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x148.png" /><span class="bracketMark">(60)</span></p>
+<p>A more accurate approximation for the Roche lobe radius was determined by Eggleton (1983) and is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x149.png" /><span class="bracketMark">(61)</span></p>
+<p>for <img class="200" data-original="//html.scirp.org/file/10-4500465x150.png" /> Eggleton (1983). Differentiating Equation (60) with respect to time, we obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x151.png" /><span class="bracketMark">(62)</span></p>
+<p>Combining Equation (62) with Equation (58) we arrive at</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x152.png" /><span class="bracketMark">(63)</span></p>
+<p>which implies</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x153.png" /><span class="bracketMark">(64)</span></p>
+<p>For conservative mass transfer Equation (64) becomes</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x154.png" /><span class="bracketMark">(65)</span></p>
+<p>which parametrized as:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x155.png" /><span class="bracketMark">(66)</span></p>
+<p>In the conservative case Equation (65) indicates that if <img class="200" data-original="//html.scirp.org/file/10-4500465x156.png" /> the donor Roche lobe will be contract</p>
+<p>upon mass loss as <img class="200" data-original="//html.scirp.org/file/10-4500465x157.png" /> is negative.</p>
+<p>Finally, we consider the response of the donors radius to change in its mass. For stars like the sun it is well known that the mass and radius are approximately proportional to one another. Using the expression of (66), the mass radius relation for solar type stars implies</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x158.png" /><span class="bracketMark">(67)</span></p>
+<p>If we substitute Equation (65) and Equation (67) into Equation (55) we obtain a limiting stable mass ratio for the binary star.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x159.png" /><span class="bracketMark">(68)</span></p>
+<p>If the mass ratio exceed this values the Roche lobe will be shrink faster than the star can contract and mass</p>
+<p>transfer will proceed on a dynamical time scale. If <img class="200" data-original="//html.scirp.org/file/10-4500465x160.png" /> the star will, on a time scale set by the mass transfer</p>
+<p>rate detach from is Roche lobe. From Equation (64) any mechanism Schutz (1990) that removes orbital angular momentum from the binary will cause the Roche lobe of the donor to contract.</p>
+<p class="E-Title1">4. Analytical and Numerical Solutions</p>
+<p class="E-Title2">4.1. Analytical Solutions</p>
+<p>Before we proceed upon studying the complete numerical solutions for the evolution of orbital parameters and the evolution equations we derived in Section (2) for different astrophysical scenarios, we obtain analytic solutions for the time evolution of the geometry of mass transfer rate. We can do this only on the assumption that most of the parameters characterizing the binary remain constant or evolve slowly as compared to the evolution of the mass transfer rate. [5] was among the first to attempt such analysis and following them, we generalize their results to an arbitrary polytropic index and to isothermal atmospheres. Analytic solutions are useful in providing physical insights into the expected behaviour of the binary system in the limit where the assumptions imposed to obtain the analytic solutions are valid approximately. To make Equations ((60), (61) and (68)), the two figures are plotted for different values of the mass ratio <img class="200" data-original="//html.scirp.org/file/10-4500465x161.png" /> for comparison in <a href="#f1" target="_self">Figure 1</a> and <a href="#f2" target="_self">Figure 2</a>.</p>
+<p>The simple form of Equation (60) is a reasonable approximation to the more accurate Eggleton [11] formula for mass ratios<img class="200" data-original="//html.scirp.org/file/10-4500465x162.png" />. Thus we see that the Roche lobe radius is directly proportional to the separation for a fixed mass ratio. Given Roche geometry and the structure of the star, we can now specify the mass transfer rate. In general, we expect the mass transfer to be a strong function of the “depth of contact”, defined as the amount by which the donor overflows its Roche lobe <img class="200" data-original="//html.scirp.org/file/10-4500465x163.png" /> and of the structure of the star, which can be described in different ways depending on the problem at hand.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x164.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Comparison of [10] (Eq. (60), blue curve) and [11] (Eq. (61)) formulae for the Roche radius, normalized to the binary separation vs. mass ratio<img class="200" data-original="//html.scirp.org/file/10-4500465x165.png" />.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x166.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Change in the orbital angular momentum of the binary system with time.</p>
+</div>
+<p>Thus if <img class="200" data-original="//html.scirp.org/file/10-4500465x167.png" /> which implies that the orbit will be enlarge and if <img class="200" data-original="//html.scirp.org/file/10-4500465x168.png" /> that the</p>
+<p>orbit will be shirk. This means the radius of a Roche lobe filling star depends only on the binary separation and the mass ratio. The blue curve shows that the stable conservative mass transfer while the green one is the unstable mass transfer.</p>
+<p>In <a href="#f2" target="_self">Figure 2</a>, we have plotted the equilibrium angular momentum values for a range of binary system with a time and for a mass ratio q = 1, taking the mass of the black hole<img class="200" data-original="//html.scirp.org/file/10-4500465x169.png" />. We here produce analytical solutions for the non conservative mass transfer in close binary system taking the initial masses of the primary and secondary as <img class="200" data-original="//html.scirp.org/file/10-4500465x170.png" /> and<img class="200" data-original="//html.scirp.org/file/10-4500465x171.png" />.</p>
+<p>The change in mass for both the accretion and donor as well as the changing of the orbital angular frequency with time are derived in Equation (21) within the pre-assigned time scale of mass exchange as <img class="200" data-original="//html.scirp.org/file/10-4500465x172.png" /> (years) and period p = 100 (days), the orbital angular momentum J continues to show a steady decreasing with the increasing time in <a href="#f3" target="_self">Figure 3</a> and <a href="#f4" target="_self">Figure 4</a>.</p>
+<p>Considering an interacting double degenerate system with initial masses of donor and accretor <img class="200" data-original="//html.scirp.org/file/10-4500465x173.png" /> and <img class="200" data-original="//html.scirp.org/file/10-4500465x174.png" /> (dotted line) and a “semi-degenerate” low-mass helium star donor plus white dwarf accretor of the same initial masses (dash or blue line), and the periods (P = 2, 3, 4) from Roche lobe overflow; lower limits of the disk is equilibrium instability region according to [12] for <img class="200" data-original="//html.scirp.org/file/10-4500465x175.png" /> and conventional evolutionary computations may be not adequate for description of mass transfer process.</p>
+<p>From Equation (18), the change of orbital period is proportional to the change in<img class="200" data-original="//html.scirp.org/file/10-4500465x176.png" />. Prolonged, conservative mass transfer is obtained when the initial mass of donor star is more massive, and the period decreases; hence star move close together.</p>
+<p class="E-Title2">4.2. The Binary Parameters</p>
+<p>It is worthwhile to describe the binary parameters used by [4] [5] in their pioneering analysis in some detail, since we are using it as a comparison to our numerical solutions in Section (4.4). We shall thus obtain analytic as well as numerical solutions for a general polytropic index n to compare our results with those obtained from a full numerical evolution. The mass transfer rate for a polytropic donor is given by Jedrzejec (1969) assuming laminar flow, quoted by Paczynski &amp; Sienkiewicz (1972) and from Equations. ((51)-(54)) we obtain:</p>
+<p><img class="200" data-original="//html.scirp.org/file/10-4500465x177.png" /> (69)</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x178.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Orbital period (<img class="200" data-original="//html.scirp.org/file/10-4500465x179.png" />) versus <img class="200" data-original="//html.scirp.org/file/10-4500465x180.png" /> for “typical” AM CVn-stars.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x181.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. The total rate of change of the orbital angular frequency of the binary (Eq. (30)) related to the mass lost from the system of two point masses which will coalesce due to gravitational wave emission in a time interval shorter than 10<sup>10</sup> yr, as a function of the donor mass in solar unit<img class="200" data-original="//html.scirp.org/file/10-4500465x182.png" />. As we go from top to bottom on the right side; the lines (curves) are calculated for magenta (<img class="200" data-original="//html.scirp.org/file/10-4500465x183.png" />) which corresponds to an initial <img class="200" data-original="//html.scirp.org/file/10-4500465x184.png" /> donor whose central hydrogen abundance is 0.005 at the onset of mass transfer, green (<img class="200" data-original="//html.scirp.org/file/10-4500465x185.png" />) corresponds to a donor whose central hydrogen abundance has just reached zero at the onset of mass transfer, the red curve (line) is the analytical value of the rate of change of the orbital angular frequency versus donor mass in solar unit (the analytical value of those compact objects) and cyan (<img class="200" data-original="//html.scirp.org/file/10-4500465x186.png" />) corresponds to the case for which the donor has developed a <img class="200" data-original="//html.scirp.org/file/10-4500465x187.png" /> helium core.</p>
+</div>
+<p>Raising both sides of the Equation (69) to the power <img class="200" data-original="//html.scirp.org/file/10-4500465x188.png" /> and differentiating, we obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x189.png" /><span class="bracketMark">(70)</span></p>
+<p>where we have set the factor <img class="200" data-original="//html.scirp.org/file/10-4500465x190.png" /> to unity, given that in most situations<img class="200" data-original="//html.scirp.org/file/10-4500465x191.png" />.</p>
+<p>Defining a positive dimensionless mass transfer<img class="200" data-original="//html.scirp.org/file/10-4500465x192.png" />, and a characteristic time scale<img class="200" data-original="//html.scirp.org/file/10-4500465x193.png" />, Equation (70) becomes</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x194.png" /><span class="bracketMark">(71)</span></p>
+<p>The solution can be easily inverted to yield</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x195.png" /><span class="bracketMark">(72)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x196.png" /> is the initial mass transfer rate, normalized as Equation (72).</p>
+<p>Returning now to Equation (70), with the same definitions as Equation (72) for X and τ, we obtain for the general case in which driving is present</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x197.png" /><span class="bracketMark">(73)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x198.png" /> is the equilibrium value normalized to<img class="200" data-original="//html.scirp.org/file/10-4500465x199.png" />. Note that in the stable case, this value is positive; while it is negative in the unstable case. Before we attempt to solve the above differential equation, it is clear from its form and the signs just discussed, that it describes a stable solution in which <img class="200" data-original="//html.scirp.org/file/10-4500465x200.png" /> when<img class="200" data-original="//html.scirp.org/file/10-4500465x201.png" />. if, however, <img class="200" data-original="//html.scirp.org/file/10-4500465x202.png" />, the right had side of Equation (73) is positive even if the mass transfer vanishes initially, and it just gets bigger as the mass transfer grows. Since X diverges for the non driving case in a finite time, the driven case diverges even sooner.</p>
+<p>Considering Equation (70) again we define<img class="200" data-original="//html.scirp.org/file/10-4500465x203.png" />, and<img class="200" data-original="//html.scirp.org/file/10-4500465x204.png" />.</p>
+<p>The differential equation for the evolution of mass transfer now becomes</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x205.png" /><span class="bracketMark">(74)</span></p>
+<p>Thus, for the stable case (<img class="200" data-original="//html.scirp.org/file/10-4500465x206.png" />, while (<img class="200" data-original="//html.scirp.org/file/10-4500465x207.png" />for the unstable case, and <img class="200" data-original="//html.scirp.org/file/10-4500465x208.png" /> is defined positive). The ge- neral analytic solution comprising both the stable and the unstable case can be given in terms of the hyper geometric function, as follows:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x209.png" /><span class="bracketMark">(75)</span></p>
+<p>Though it is not possible to invert this general solution to obtain the mass transfer rate X as a function of time, particular solutions for specific values of n can be inverted to obtain simple solutions. For example, n = 3/2 yields the [5] solution:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x210.png" /><span class="bracketMark">(76)</span></p>
+<p>where, <img class="200" data-original="//html.scirp.org/file/10-4500465x211.png" />,<img class="200" data-original="//html.scirp.org/file/10-4500465x212.png" />.</p>
+<p>Likewise, n = 1/2 yields<img class="200" data-original="//html.scirp.org/file/10-4500465x213.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x214.png" />unstable and<img class="200" data-original="//html.scirp.org/file/10-4500465x215.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x216.png" />stable.</p>
+<p class="E-Title2">4.3. Isothermal Atmospheres</p>
+<p>In case of isothermal atmospheres, the mass transfer rate [13] [14] is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x217.png" /><span class="bracketMark">(77)</span></p>
+<p>where, α is the scale height. This form of the mass transfer equation is much simpler to integrate than the one for the polytropes considered above. With the same approximations and notation as in the steps leading to Equation (73), and defining<img class="200" data-original="//html.scirp.org/file/10-4500465x218.png" />, we obtain:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x219.png" /><span class="bracketMark">(78)</span></p>
+<p>This is easily integrable and invertible to get the following:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x220.png" /><span class="bracketMark">(79)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/10-4500465x221.png" /> is the time scale required for the driving to change the depth of contact by<img class="200" data-original="//html.scirp.org/file/10-4500465x222.png" />, and <img class="200" data-original="//html.scirp.org/file/10-4500465x223.png" /> is the initial value, always positive for physically meaningful cases. In the stable case<img class="200" data-original="//html.scirp.org/file/10-4500465x224.png" />, and<img class="200" data-original="//html.scirp.org/file/10-4500465x225.png" />, while <img class="200" data-original="//html.scirp.org/file/10-4500465x226.png" /> for the unstable case and X diverges in a finite time<img class="200" data-original="//html.scirp.org/file/10-4500465x227.png" />. If no driving is present, we may set <img class="200" data-original="//html.scirp.org/file/10-4500465x228.png" /> and integrate Equation (78) for an isothermal donor.</p>
+<p>The result is again simple and instructive.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/10-4500465x229.png" /><span class="bracketMark">(80)</span></p>
+<p>In the stable case, for any initial mass transfer, the system will detach and mass transfer will tend to zero. In the unstable case, any non-zero initial mass transfer will grow and diverge in a finite time.</p>
+<p>We specify the parameters of the binary at its initial state;<img class="200" data-original="//html.scirp.org/file/10-4500465x230.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x231.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x232.png" />, <img class="200" data-original="//html.scirp.org/file/10-4500465x233.png" />, and <img class="200" data-original="//html.scirp.org/file/10-4500465x234.png" /> and for the binary, it turns out that the adiabatic coefficients <img class="200" data-original="//html.scirp.org/file/10-4500465x235.png" /></p>
+<p>and <img class="200" data-original="//html.scirp.org/file/10-4500465x236.png" /> are related to Equations ((72), (73), (75), and (76)). We notice that since<img class="200" data-original="//html.scirp.org/file/10-4500465x237.png" />; the ra-</p>
+<p>dius of the star increases at a rate faster than the Roche lobe radius, and the resulting mass transfer is unstable.</p>
+<p>The analytic solutions, both the stable and the unstable, are shown in <a href="#f5" target="_self">Figure 5</a>.</p>
+<p>Note that initially, the stable and the unstable solutions in <a href="#f5" target="_self">Figure 5</a> almost exactly overlap. This is true as long as the system is either detached or the depth of contact is relatively small. As soon as the binary evolves to deeper contact, the unstable solution diverges rapidly and blows up in a finite time. This outcome is predicted by the unstable analytic solution which has been obtained by assuming that the basic primary parameters: the mass ratio q, driving rate <img class="200" data-original="//html.scirp.org/file/10-4500465x238.png" /> and the masses of the components do not change during the evolution. This is obviously not true, especially in the unstable case, since by definition in the unstable case these parameters are evolving rather rapidly (<a href="#f5" target="_self">Figure 5</a>).</p>
+<p class="E-Title2">4.4. Numerical Solutions</p>
+<p>In Section (4.2 and 4.3), we have derived the basic evolution equations; Equations ((72), (73), (75), and (76)) from Equations ((51)-(54)) in Section (3.1) that for the numerical results and the corresponding analytic solutions for different cases, under certain restrictive approximations. These analytic solutions are a useful reference to compare our numerical results to, since in the limit that the assumptions used to derive the analytic solution are met, the numerical solutions should approach the analytic ones. However, in general, the analytic solutions cannot explain the behavior of a given system accurately and especially when the system evolves rapidly, solving the evolution equations numerically leads to a different outcome than what one would expect analytically.</p>
+<p class="E-Title3">Limitations of the Analytic Solutions</p>
+<p>The analytic solutions of equations in Section (4.2 and 4.3) from Section (2.4) and through Section (3.1) are obtained under the following assumptions:</p>
+<p>1) The driving rate given by <img class="200" data-original="//html.scirp.org/file/10-4500465x239.png" /> is constant throughout the evolution.</p>
+<p>2) The separation “a” of the binary is effectively constant even though the mass transfer rate changes, which is not true for “a” “real system” (see Equation (36)).</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x240.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. The solutions for the stable (dotted line) and unstable cases.</p>
+</div>
+<p>3) The tidal effects are effectively ignored.</p>
+<p>4) A system that is initially unstable (<img class="200" data-original="//html.scirp.org/file/10-4500465x241.png" />), remains so throughout the evolution, since q is assumed to be the same throughout and it is possible for an initially unstable system to evolve to a stable configuration.</p>
+<p>In order to overcome some of these shortcomings one has to numerically integrate the evolution equations in a self consistent way. In particular, in what follows, we allow for the changes in the masses of the components assuming conservative mass transfer (and hence the mass ratio q), allow the binary separation to change as a result of any driving present, and compute the values of <img class="200" data-original="//html.scirp.org/file/10-4500465x242.png" /> and <img class="200" data-original="//html.scirp.org/file/10-4500465x243.png" /> as they evolve. The values of <img class="200" data-original="//html.scirp.org/file/10-4500465x244.png" /> depend on the adopted mass-radius relationship for the donor. To calculate<img class="200" data-original="//html.scirp.org/file/10-4500465x245.png" />, we need to specify how the mass and angular momentum are redistributed in the binary during mass transfer which depends on the particular case at hand. For example, it depends on whether the stream impacts the accretor or if an accretion disk is present; if the mass transfer is sub-critical and conservative, or if mass and angular momentum are being ejected from the system following supercritical mass transfer (Figures 6-8).</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x246.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Numerical and Analytic Solutions for Polytropes. Comparison of numerical integrations with the analytic solution in Section (4.2). The mass transfer rate in solar mass normalized to the initial equilibrium rate as a function of time in units of the initial τ: analytic (red curve) and numerical- green (q = 0.985), blue (q = 0.875), magenta (q = 0.816), cyan (q = 0.656 same as [5] ), Darkred (q = 0.625) and orange (q = 0.416).</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x247.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Comparison of numerical integrations with the analytic solutions for isothermal atmospheres. The natural logarithm of the mass transfer rate normalized to the initial equilibrium rate for the case with q = 0.663, is shown as a function of time in units of<img class="200" data-original="//html.scirp.org/file/10-4500465x248.png" />: analytic (black curve) and numerical green (q = 0.985), orange (0.613), cyan (q = 0.656 same as [5] ), blue (0.875), magenta (0.816) and red (0.416).</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/10-4500465x249.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Loss of orbital angular momentum and decrease in the mass of the secondary with time (in year).</p>
+</div>
+<p>We simulate exactly the same initial conditions as the ones assumed to derive the analytic solution, a constant driving rate and the same mass-radius relationship. We then relax the constraints and let the system evolve in a self-consistent manner for different values of the mass ratio q. We observe that initially all the curves overlap, but as the depth of contact increases, the mass transfer rate increases. As the system evolves, the orbital separation, which is decreasing initially, begins to increase as per Equation (36) which in turn decreases the driving rate. At some point during the evolution q becomes less than <img class="200" data-original="//html.scirp.org/file/10-4500465x250.png" /> and the system evolves to stable mass transfer rates. From our analysis in Section (4.2), we expect the systems with <img class="200" data-original="//html.scirp.org/file/10-4500465x251.png" /> to be unstable, and the higher the mass ratio, the more unstable the system is. This is indeed what we observe in the numerical solutions. The numerical solutions reach a peak in the mass transfer rate in a finite time, but turn around and a stable mass transfer is established. In any case, our results suggest and demonstrate that at least some of the binaries that start off unstable do survive the mass transfer instability and evolve into systems like AM CVn―evolving to higher separations and diminishing mass transfer rates. This result, which is not predicted by the analytic solution, has important consequences for population synthesis, understanding AM CVn type systems.</p>
+<p>In <a href="#f7" target="_self">Figure 7</a>, we plot the analytic and numerical solutions for an isothermal donor for different values of the mass ratio. Unlike the polytropic donor case, which has a fixed reference point where the donor fills its Roche lobe (<img class="200" data-original="//html.scirp.org/file/10-4500465x252.png" />), the isothermal case does not have a fixed reference point to which we can normalize our results. We, rather arbitrarily start the integrations when the depth of contact is<img class="200" data-original="//html.scirp.org/file/10-4500465x253.png" />, corresponding to an initial mass transfer rate of 10<sup>−5</sup> of the reference rate. The behavior of the systems is qualitatively the same as the polytropic donors. Note that the y-axis in <a href="#f7" target="_self">Figure 7</a> is the natural logarithm of x which from Section (4.3), is just the depth of contact <img class="200" data-original="//html.scirp.org/file/10-4500465x254.png" /> in units of the pressure scale height α, normalized to the reference depth corresponding to the equilibrium rate for q = 0.663.</p>
+<p>Thus we here produce a numerical analysis for the rate of change of orbital angular momentum(green line), the rate of change of mass of the secondary star (blue line), and Increase in the mass of the primary with time (in year) in a close binary system taking the initial masses of the primary as <img class="200" data-original="//html.scirp.org/file/10-4500465x255.png" /> and<img class="200" data-original="//html.scirp.org/file/10-4500465x256.png" />. For the present calculation, we consider the values of the parameters as<img class="200" data-original="//html.scirp.org/file/10-4500465x257.png" />, p = 30 (per year) and q = 0.8. But afterwards as the mass accretion rate by the primary varies slowly and consequently <img class="200" data-original="//html.scirp.org/file/10-4500465x258.png" /> shows a very weak variation with time, the orbital angular momentum <img class="200" data-original="//html.scirp.org/file/10-4500465x259.png" /> continues to slow as steady decreasing with the decreasing in<img class="200" data-original="//html.scirp.org/file/10-4500465x260.png" />.</p>
+<p class="E-Title1">5. Conclusions</p>
+<p>We have presented a simple, analytical and numerical approach to describe the mass transfer in the evolution of binary star systems in which we track the mass of each component, the total mass of the system, the orbital angular momentum and the spin angular momenta of each component. We have included the effects of mass and angular momentum loss from the system and also the exchange of mass and angular momentum between the components of the binary.</p>
+<p>The main reason why many binary systems transfer matter at some stage of their evolutionary lifetimes is during the system evolution. One of the stars in a binary system may increase in radius filling its Roche lobe, or the binary separation may shrink because orbital angular momentum is being lost from the system as a consequence of stellar wind mass loss, or gravitational radiation.</p>
+<p>There are two general mechanisms for the transferring angular momentum out of the system: First, binary systems emit gravitational radiation, which carries away angular momentum. The rate of angular momentum loss increases as the orbital separation decreases, but it decreases as the total mass of the system decreases. Because both the secondary mass and the orbital separation decrease as CV systems evolving, the net effect is a loss mechanism that does not depend strongly on the orbital period.</p>
+<p>Our investigation indicates that the stability of the mass transfer processes depends on: how the radius of the donor star responds to the mass loss, how the orbit responds to mass transfer, and how the mass-gainer responds to the matter that is being dumped on it.</p>
+<p>The Roche lobe of the mass donor shrinks as a consequence of its mass loss, increasing the rate at which it loses mass is referred to unstable mass transfer and the Roche lobe of the mass donor grows as a consequence of its mass loss, stopping the mass transfer is referred to stable mass transfer.</p>
+<p>In this paper we have made an effort to find a numerical and analytical solutions for conservative and non-conservative mass transfer in close binary systems which can address the gradually reducing rate of the mass accretion by the accretor from the donor with respect to time as well as with respect to the increase in mass of the accretor [15] . In view of this we have presented the time dependent profiles of the masses of both the component stars in a close binary as well as the orbital angular momentum of the system. Our analytical solutions shows for the non-conservative mass transfer in close binary system taking the initial masses of the primary and secondary as <img class="200" data-original="//html.scirp.org/file/10-4500465x261.png" /> and <img class="200" data-original="//html.scirp.org/file/10-4500465x262.png" /> with <img class="200" data-original="//html.scirp.org/file/10-4500465x263.png" /> (in years) and p = 100 (in days), and <img class="200" data-original="//html.scirp.org/file/10-4500465x264.png" /> which corresponds to an initial <img class="200" data-original="//html.scirp.org/file/10-4500465x265.png" /> donor whose central hydrogen abundance is 0.005 at the onset of mass transfer, <img class="200" data-original="//html.scirp.org/file/10-4500465x266.png" />corresponds to a donor whose central hydrogen abundance has just reached zero at the onset of mass transfer and <img class="200" data-original="//html.scirp.org/file/10-4500465x267.png" /> corresponds to the case for which the donor has developed a <img class="200" data-original="//html.scirp.org/file/10-4500465x268.png" /> helium core (see <a href="#f4" target="_self">Figure 4</a>), the orbital angular momentum J continues to show a steady decreasing with the increasing time (see <a href="#f2" target="_self">Figure 2</a>).</p>
+<p>In conservative mass transfer and from Equation (15); if <img class="200" data-original="//html.scirp.org/file/10-4500465x269.png" /> is the mass losing star, <img class="200" data-original="//html.scirp.org/file/10-4500465x270.png" />will be negative, therefore we conclude that if the mass donor star is more massive, then the orbit will shrink and hence period decreases. But if the mass donor is less massive than the accretor component then orbit will be widened and period increases.</p>
+<p>We have also presented a new finding (analytic and numeric solutions) for the evolution of binary systems, generalizing the results of [4] to binaries with any polytropic index and to binaries with isothermal atmospheres. The analytic solutions always predict that if a binary attains contact when the mass ratio q is such that the ensuing mass transfer is unstable, the binary merges in a finite time. On the other hand, the numerical solutions predict that a binary that undergoes unstable mass transfer at initial contact can evolve to a state of stable mass transfer, survive and evolve into an AM CVn type system. Moreover, the analytic solutions also discussed here assume that the driving rates <img class="200" data-original="//html.scirp.org/file/10-4500465x271.png" /> and <img class="200" data-original="//html.scirp.org/file/10-4500465x272.png" /> in Equation (70) remain constant while the depth of contact changes. This is only approximately true; and a self-consistent solution will require numerical integrations. This is a situation we encounter in some large-scale hydrodynamic simulations of mass transfer in poly tropic binaries. We note that from Equations ((54), and (72)) in the stable case, <img class="200" data-original="//html.scirp.org/file/10-4500465x273.png" />, the mass transfer decays</p>
+<p>asymptotically to zero over a characteristic time<img class="200" data-original="//html.scirp.org/file/10-4500465x274.png" />, it will blow up in finite</p>
+<p>time equal to<img class="200" data-original="//html.scirp.org/file/10-4500465x275.png" />. Thus, the essence of the stability of mass transfer in a binary is already contained in the simple case of no driving. The presence of driving exacerbates the natural instability or, in the stable case, it settles asymptotically to a non-zero stable mass transfer, which we have been observed in AM CVns, CVs and LMXBs. In our study numerical solutions indicates more physical descriptions than analytical (Figures 1-5) one as shown in Figures 6-8.</p>
+<p>Finally, the most useful thing, is that if one assumes only accretion and wind-like mass transfer, then most every binary in which mass is transferred from the less massive star is stable on both dynamical and thermal time scales. If the mass donor has a radiative envelope (not treated here), it will shrink in response to mass loss, and lose mass stable. If the donor has a convective envelope, a modestly sized core will stabilize it sufficiently to prevent mass loss on the dynamical time scale.</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>We thank Entoto Observatory and Research Center for supporting this research. Negu, thanks Jigjiga University for giving study leave. This research has made use of NASA’s Astrophysical Data System.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578319' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Shore, S.N. (1994) Observations and Physical Processes in Interacting Binaries. Springer, Berlin Heidelberg, 1-133.<br/>http://dx.doi.org/10.1007/3-540-31626-4_1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578320' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Soberman, G.E., Phinney, E.S. and van den Heuvel, E.P.J. (1997) Stability Criteria for Mass Transfer in Binary Stellar Evolution. Astronomy and Astrophysics, 327, 620-635.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578321' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Konstantin, A.P. (2014) The Evolution of Compact Binary Star Systems. Living Reviews in Relativity, 17, 3.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578322' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Pennington, R.(1985) Interacting Binary Stars. Pringle, J.E. and Wade, R.A., Eds., Cambridge Astrophysics Series, Cambridge University Press, Cambridge, 197-199.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578323' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Hjellming, M.S. and Webbink, R.F. (1987) Thresholds for rapid mass transfer in binary systems. I—Polytropic Models. The Astrophysical Journal, 318, 794-808. <br/>http://dx.doi.org/10.1086/165412
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578324' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Ruderman, M., Shaham, J. and Tavani, M. (1989) Accretion Powered by Compact Binaries. The Astrophysical Journal, 3, 507.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578325' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Tessema, S.B. (2014) Stability of Accretion Discs around Magnetized Stars. International Journal of Astronomy and Astrophysics, 4, 319-331. <br/>http://dx.doi.org/10.4236/ijaa.2014.42026
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578326' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Lightman, A.P. and Eardley, D.M. (1974) Black Holes in Binary Systems: Instability of Disc Accretion. The Astrophysical Journal, 187, L1.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578327' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Gharami, P., Ghosh, K. and Rahaman, F. (2014) A Theoretical Model of Non-Conservative Mass Transfer with Non-Uniform Mass Accretion Rate in Close Binary Stars. General Relativity and Quantum Cosmology, 366, 1511.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578328' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Plavec, A. and Paczynski, B. (1971) Numerical Simulations of Dynamical Mass Transfer in Binaries. Annual Review of Astronomy and Astrophysics, 9, 183.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578329' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Lajoie, C.-P. and Sills, A. (2010) Mass Transfer in Binary Stars Using Smoothed Particle hydrodynamics. II. Eccentric Binaries. The Astrophysical Journal, 726, 13 p.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578330' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Tsugawa, M. and Osaki, Y. (1997) Disk Instability Model for the AM Canum Venaticorum Stars. PASJ: Publ. Astron. Soc. Japan, Vol. 49, 75-84.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578331' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Paczynski, B. and Sienkiewicz, R. (1972) Mass Transfer Effects in Binary Star Evolution. Acta Astronautica, 22, 73.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578332' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Vayujeet, G. (2007) Mass Transfer and Evolution of Compact Binary Stars. Astronomy & Astrophysics, 202, 93.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578333' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Izzard, R.G., de Mink, S.E., Onno, RP., Langer, N., Sana, H. and de Koter, A. (2013) Massive Binary Stars and Self-Enrichment of Globular Clusters. Memorie della Società Astronomica Italiana, 1, 1-4.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=490" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=490" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=490" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=490" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=490"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=490"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=490" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=490" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=490" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=490" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=490" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=490"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=490"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=490" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=490&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=490&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=490" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=490" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=490" target="_blank">IJAA
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=490" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=490" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=490" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=490" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=490" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=490" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=490" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ijaa.2015.53026" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60070 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +490 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +490 +"&paperid=" +60070 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

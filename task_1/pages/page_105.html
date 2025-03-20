@@ -1,0 +1,1679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Local Particle-Ghost Symmetry
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JMP_2015093014580106.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60105" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60105.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60105" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60105" />
+<meta property="og:title" content="Local Particle-Ghost Symmetry" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JMP2024060314222254.png" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JMP2024060314222254.png" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Local Particle-Ghost Symmetry" />
+<meta name="keywords" content="Fermionic Symmetry,BRST Quantization,Quartet Mechanism" />
+<meta name="description" content="Explore the quantization of systems with local particle-ghost symmetries. Discover new fermionic symmetries between ordinary particles and their ghost partners. Uncover the potential to explain elementary particle phenomena at a fundamental level. Achieve consistent formulation and unitarity in our systems for a realistic fundamental theory." />
+<meta name="citation_journal_title" content="Journal of Modern Physics" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Yoshiharu Kawamura" />
+<meta name="citation_author" content="Yoshiharu Kawamura" />
+<meta name="citation_title" content="Local Particle-Ghost Symmetry" />
+<meta name="citation_volume" content="6" />
+<meta name="citation_date" content="2015-09-30" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jmp.2015.612174" />
+<meta name="citation_issnPrint" content="2153-1196" />
+<meta name="citation_issnOnline" content="2153-120X" />
+<meta name="citation_abstract" content="We study the quantization of systems with local particle-ghost symmetries. The systems contain ordinary particles including gauge bosons and their counterparts obeying different statistics. The particle-ghost symmetries are new type of fermionic symmetries between ordinary particles and their ghost partners, different from the space-time supersymmetry and the BRST symmetry. There is a possibility that they are useful to explain phenomena of elementary particles at a more fundamental level, by extension of our systems. We show that our systems are formulated consistently or subsidiary conditions on states guarantee the unitarity of systems, as the first step towards the construction of a realistic fundamental theory." />
+<meta name="citation_publication_date" content="2015/9/30" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JMP_2015093014580106.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JMP_2015093014580106.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60105" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60105" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60105" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60105.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60105.xml" />
+<meta name="citation_issue" content="12" />
+<meta name="citation_online_date" content="2015/9/30" />
+<meta name="citation_firstpage" content="1721" />
+<meta name="citation_lastpage" content="1736" />
+
+<meta name="dc.title" content="Local Particle-Ghost Symmetry" />
+
+<meta name="dc.creator" content="Yoshiharu Kawamura" /><meta name="dcterms.issued" content="2015-09-30" />
+<meta name="dc.description" content="We study the quantization of systems with local particle-ghost symmetries. The systems contain ordinary particles including gauge bosons and their counterparts obeying different statistics. The particle-ghost symmetries are new type of fermionic symmetries between ordinary particles and their ghost partners, different from the space-time supersymmetry and the BRST symmetry. There is a possibility that they are useful to explain phenomena of elementary particles at a more fundamental level, by extension of our systems. We show that our systems are formulated consistently or subsidiary conditions on states guarantee the unitarity of systems, as the first step towards the construction of a realistic fundamental theory." />
+<meta name="dc.source" content="Journal of Modern Physics" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-30" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jmp.2015.612174" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-30" />
+<meta name="prism.issnPrint" content="2153-1196" />
+<meta name="prism.issnOnline" content="2153-120X" />
+<meta name="prism.publicationName" content="Journal of Modern Physics" />
+<meta name="prism.publicationDate" content="2015-09-30" />
+<meta name="prism.volume" content="6" />
+<meta name="prism.number" content="12" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="1721" />
+<meta name="prism.doi" content="10.4236/jmp.2015.612174" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60105" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAk0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTMwZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAWBATxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9WW9zaGloYXJ1KytLYXdhbXVyYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPllvc2hpaGFydSAgS2F3YW11cmE8L2E+PHN1cD4qPC9zdXA+IGQCAg9kFgJmDxYCHwQFzgE8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURlcGFydG1lbnQrb2YrUGh5c2ljcyUyYytTaGluc2h1K1VuaXZlcnNpdHklMmMrTWF0c3Vtb3RvJTJjK0phcGFuJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RGVwYXJ0bWVudCBvZiBQaHlzaWNzLCBTaGluc2h1IFVuaXZlcnNpdHksIE1hdHN1bW90bywgSmFwYW48L2E+LjxiciAvPmQCBQ8WAh8EBQUyLDMxNGQCBg8WAh8EBQUyLDk1OGQCBw8WAh8DBQ1EaXNwbGF5Ok5vbmU7ZAIID2QWAgIBDxYCHwQF2wI8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUZlcm1pb25pYytTeW1tZXRyeSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkZlcm1pb25pYyBTeW1tZXRyeTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0JSU1QrUXVhbnRpemF0aW9uJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEJSU1QgUXVhbnRpemF0aW9uPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rUXVhcnRldCtNZWNoYW5pc20mc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gUXVhcnRldCBNZWNoYW5pc208L2E+IGQCCg8WAh8EBekBS2F3YW11cmEsIFkuICAgKDIwMTUpIExvY2FsIFBhcnRpY2xlLUdob3N0IFN5bW1ldHJ5LiA8aT5Kb3VybmFsIG9mIE1vZGVybiBQaHlzaWNzPC9pPiwgPGI+NjwvYj4sIDE3MjEtMTczNi4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2ptcC4yMDE1LjYxMjE3NCcgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDEwNSknPjEwLjQyMzYvam1wLjIwMTUuNjEyMTc0PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIYFjBmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MTMnIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQExdU5ldmV1LCBBLiBhbmQgU2Nod2FyeiwgSi5ILiAoMTk3MSkgTnVjbGVhciBQaHlzaWNzIEIsIDMxLCA4Ni0xMTIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wNTUwLTMyMTMoNzEpOTA0NDgtMmQCAQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzE0JyB0YXJnZXQ9J19ibGFuayc+MjwvYT5dATIBMmFSYW1vbmQsIFAuICgxOTcxKSBQaHlzaWNhbCBSZXZpZXcgRCwgMywgMjQxNS0yNDE4LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDMvUGh5c1JldkQuMy4yNDE1ZAICD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MTUnIHRhcmdldD0nX2JsYW5rJz4zPC9hPl0BMwEzhAFBaGFyb25vdiwgWS4sIENhc2hlciwgQS4gYW5kIFN1c3NraW5kLCBMLiAoMTk3MSkgUGh5c2ljcyBMZXR0ZXJzIEIsIDM1LCA1MTItNTE0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvMDM3MC0yNjkzKDcxKTkwMzg2LThkAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcxNicgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATR3R2VydmFpcywgSi5MLiBhbmQgU2FraXRhLCBCLiAoMTk3MSkgTnVjbGVhciBQaHlzaWNzIEIsIDM0LCA2MzItNjM5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvMDU1MC0zMjEzKDcxKTkwMzUxLThkAgQPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcxNycgdGFyZ2V0PSdfYmxhbmsnPjU8L2E+XQE1ATWJAUJlY2NoaSwgQy4sIFJvdWV0LCBBLiBhbmQgU3RvcmEsIFIuICgxOTc1KSBDb21tdW5pY2F0aW9ucyBpbiBNYXRoZW1hdGljYWwgUGh5c2ljcywgNDIsIDEyNy0xNjIuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy9CRjAxNjE0MTU4ZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MTgnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2fkJlY2NoaSwgQy4sIFJvdWV0LCBBLiBhbmQgU3RvcmEsIFIuICgxOTc2KSBBbm5hbHMgb2YgUGh5c2ljcywgOTgsIDI4Ny0zMjEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wMDAzLTQ5MTYoNzYpOTAxNTYtMWQCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzE5JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN6QBVHl1dGluLCBWLiAoMTk3NSkgR2F1Z2UgSW52YXJpYW5jZSBpbiBGaWVsZCBUaGVvcnkgYW5kIFN0YXRpc3RpY2FsIFBoeXNpY3MgaW4gT3BlcmF0b3IgRm9ybWFsaXNtLiBMZWJlZGV2IFBoeXNpY2FsIEluc3RpdHV0ZSBSZXBvcnQgTm8uMzksIGFyWGl2OjA4MTIuMDU4MCBbaGVwLXRoXS5kAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcyMCcgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4AThwV2VzcywgSi4gYW5kIFp1bWlubywgQi4gKDE5NzQpIE51Y2xlYXIgUGh5c2ljcyBCLCA3MCwgMzktNTAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wNTUwLTMyMTMoNzQpOTAzNTUtMWQCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzIxJyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBOXJXZXNzLCBKLiBhbmQgQmFnZ2VyLCBKLiAoMTk5MSkgU3VwZXJzeW1tZXRyeSBhbmQgU3VwZXJncmF2aXR5LiAybmQgRWRpdGlvbi4gUHJpbmNldG9uIFVuaXZlcnNpdHkgUHJlc3MsIFByaW5jZXRvbi5kAgkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcyMicgdGFyZ2V0PSdfYmxhbmsnPjEwPC9hPl0CMTACMTB0U2FsYW0sIEEuIGFuZCBTdHJhdGhkZWUsIEouICgxOTc1KSBQaHlzaWNhbCBSZXZpZXcgRCwgMTEsIDE1MjEtMTUzNS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL1BoeXNSZXZELjExLjE1MjFkAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcyMycgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTGGAUhhYWcsIFIuLCBMb3B1c3phxYRza2ksIEouVC4gYW5kIFNvaG5pdXMsIE0uICgxOTc1KSBOdWNsZWFyIFBoeXNpY3MgQiwgODgsIDI1Ny0yNzQuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzA1NTAtMzIxMyg3NSk5MDI3OS01ZAILD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MjQnIHRhcmdldD0nX2JsYW5rJz4xMjwvYT5dAjEyAjEydEZhZGRlZXYsIEwuRC4gYW5kIFBvcG92LCBOLiAoMTk2NykgUGh5c2ljcyBMZXR0ZXJzIEIsIDI1LCAyOS0zMC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzAzNzAtMjY5Myg2Nyk5MDA2Ny02ZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MjUnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEzcUt1Z28sIFQuIGFuZCBPamltYSwgSS4gKDE5NzgpIFBoeXNpY3MgTGV0dGVycyBCLCA3MywgNDU5LTQ2Mi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzAzNzAtMjY5Myg3OCk5MDc2NS03ZAIND2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MjYnIHRhcmdldD0nX2JsYW5rJz4xNDwvYT5dAjE0AjE0fEt1Z28sIFQuIGFuZCBPamltYSwgSS4gKDE5NzkpIFByb2dyZXNzIG9mIFRoZW9yZXRpY2FsIFBoeXNpY3MgU3VwcGxlbWVudCwgNjYsIDEtMTMwLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE0My9QVFBTLjY2LjFkAg4PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcyNycgdGFyZ2V0PSdfYmxhbmsnPjE1PC9hPl0CMTUCMTWIAUthd2FtdXJhLCBZLiAoMjAxNSkgSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIE1vZGVybiBQaHlzaWNzIEEsIDMwLCBBcnRpY2xlIElEOiAxNTUwMTUzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExNDIvUzAyMTc3NTFYMTU1MDE1MzVkAg8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcyOCcgdGFyZ2V0PSdfYmxhbmsnPjE2PC9hPl0CMTYCMTZPS2F3YW11cmEsIFkuICgyMDE0KSBGZXJtaW9uaWMgU2NhbGFyIEZpZWxkLiA8YnIvPmh0dHA6Ly9hcnhpdi5vcmcvYWJzLzE0MDYuNjE1NWQCEA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzI5JyB0YXJnZXQ9J19ibGFuayc+MTc8L2E+XQIxNwIxN4cBS2F3YW11cmEsIFkuICgyMDE1KSBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgTW9kZXJuIFBoeXNpY3MgQSwgMzAsIEFydGljbGUgSUQ6IDE1NTAwNTYuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTQyL1MwMjE3NzUxWDE1NTAwNTY2ZAIRD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MzAnIHRhcmdldD0nX2JsYW5rJz4xODwvYT5dAjE4AjE4aEthd2FtdXJhLCBZLiAoMjAxNSkgUXVhbnRpemF0aW9uIG9mIFN5c3RlbXMgd2l0aCBPU3AoMnwyKSBTeW1tZXRyeS4gPGJyLz5odHRwOi8vYXJ4aXYub3JnL2Ficy8xNTAyLjAwNzUxZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MzEnIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5ekdpZGRpbmdzLCBTLiBhbmQgU3Ryb21pbmdlciwgQS4gKDE5ODgpIE51Y2xlYXIgUGh5c2ljcyBCLCAzMDYsIDg5MC05MDcuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzA1NTAtMzIxMyg4OCk5MDQ0Ni00ZAITD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MzInIHRhcmdldD0nX2JsYW5rJz4yMDwvYT5dAjIwAjIweVBhcmlzaSwgRy4gYW5kIFNvdXJsYXMsIE4uICgxOTc5KSBQaHlzaWNhbCBSZXZpZXcgTGV0dGVycywgNDMsIDc0NC03NDUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwMy9QaHlzUmV2TGV0dC40My43NDRkAhQPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTczMycgdGFyZ2V0PSdfYmxhbmsnPjIxPC9hPl0CMjECMjFAV2l0dGVuLCBFLiAoMTk4MikgSm91cm5hbCBvZiBEaWZmZXJlbnRpYWwgR2VvbWV0cnksIDE3LCA2NjEtNjkyLmQCFQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzM0JyB0YXJnZXQ9J19ibGFuayc+MjI8L2E+XQIyMgIyMocBS2F3YW11cmEsIFkuICgyMDE1KSBJbnRlcm5hdGlvbmFsIEpvdXJuYWwgb2YgTW9kZXJuIFBoeXNpY3MgQSwgMzAsIEFydGljbGUgSUQ6IDE1NTAxMDkuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTQyL1MwMjE3NzUxWDE1NTAxMDkyZAIWD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MzUnIHRhcmdldD0nX2JsYW5rJz4yMzwvYT5dAjIzAjIzTU9rdWRhLCBULiBhbmQgVGFrYXlhbmFnaSwgVC4gKDIwMDYpIEpvdXJuYWwgb2YgSGlnaCBFbmVyZ3kgUGh5c2ljcywgMjAwNiwgNjIuZAIXD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MzYnIHRhcmdldD0nX2JsYW5rJz4yNDwvYT5dAjI0AjI0PlRlcmFzaGltYSwgUy4gKDIwMDYpIEpvdXJuYWwgb2YgSGlnaCBFbmVyZ3kgUGh5c2ljcywgMjAwNiwgNjcuZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pTVAVPSlNUQQRPSlRSBE9KVFMDT0pVBE9KVk0DT1BKA1BPUwJQUANQU1QFUFNZQ0gDU0FSA1NDRARTR1JFAlNNAlNOA1NOTARTb2Z0AlNTA1RFTAJUSQRVT0FKAlZQA1dFVANXSkEEV0pDRAVXSkNNUARXSkNTBFdKRVQDV0pNBFdKTlMFV0pOU0UFV0pOU1QDV0pWA1dTTgJZTRWAAgEwAzczNwQxNDA4BDE0MDYEMTAwMgQyNDIzAzE2NAM2MTEEMTQ3OAM0NzMDNDkyBDE1NzkEMjQzNwQyNDQyBDI0NDQEMjQyNgQyMzE2AzgwMwQxMDAwAzQ3NgMyMDMEMjQyMgQxMzA0AzUzNQM4ODQDNTMyAzUyOQMyMDcDOTk2BDE1MTcEMjMxNwMxNjADNDc3AzY3NQQxNTczBDE1NzQDNzQzAzUxMwQxNTc1BDI0NDUDMTkxAzgxMgMyNjAEMjQ1NQMxMzYEMjA3NAQxNDkzAzEyMgM5ODkCOTIEMjAzMwMxNzMEMTQ5MgQyNDM4BDE1MTgEMjQ1NAQyNDU3AjY0AjkzBDEzMTEEMjMxNQMyMDgEMjQzMgQyNDYyAzU0MQQxNjkwAzUxMgI2NQMxMDMDMTc2AzExMQM0OTAEMjQ0OQQxMzkxAzIwMgE0AzIwOQQyNDI4Azc0NwQxMjYxBDE1NzgEMTUxOQM1MjcEMTQ3NwQxMjk4BDE5ODAEMjQzNgM1MjUDNDc1BDI0NDMCMzAEMjQzNQMyMzADMTYyBDI0MzEDNTMwAzUyNgMxMjUEMjQyNQM0NzkDNTMxAzY5MQIyOQMxNDQEMTk4NgQxMzk1AzExNAQyNDYxBDI0MjEEMTQxMQMxMDIDMTc1AzY0OAMzOTcEMTc1MwMxNzIEMjQzMwM1OTEDOTkwAjQ1AzU0MwMzMzkEMjQzMAIyOAM0NzgEMjQzOQQyNDYwAzM1NwI0NgMyMTAEMTQ4NQMxNjMDNzg3Azc4NgM5MTcDODE1BDI0NDEEMTQ4NwQxNTc2AzE3NAQyNDM0AzUyOAMyMDUDMTkyAjY5BDI0NTkEMjQ2MwQyNDUzAzczOAQxNDgwBDE1OTADODE0BDE0MDcEMTQ3OQQxMDAzBDI0NDYDNjAxAzgwNgM3ODUEMjQ0NwQyNDUyAzk5NwM2MDYDNzg4Azc5MgQxOTc3AzgxMAM1ODYDNjE0BDE1NzcEMjQ1NgM4MTEDODE2BDE5NzkDNzM2BDEwMDQDNTg3AzgxNwM2MTMDNjAyAzU5MgM1OTMDNzkzBDExODYDNTg4Azc5MAM3ODQDNzM5AzgyMAM2MTIDNzQyAzk5OQM4MjIDOTk4AzU5NgQyNDI0AzYwNQM4MjEDODA0AzYwNAQyNDY0BDE5NzgDODA1Azc5NAM4MjMDODEzAzU4OQM3OTEDNjA5AzYxMAM3NDEDNzQ0AzYwMwM4MDcDNzg5AzgyNAQxMzk0AzU5MAM3MzUDNjAwAzYwNwQxNDg2BDI0NDgDODA4AzUwOQQxMDAxAzU0NwI3MQMyMDYEMjQ0MAMxNDgEMjQ1MAM1MzMDMTM1AzQ3NAQxNTg5AzQ5MQQyMDM0AzIwNAM2NjYDMTA0BDE0MDUEMjQ1OAMxNDYDNTExAzgxOAM1MDIDODA5BDI0NTEDNTA2AzYxNQM0OTMDNTM0AzUxMAI0MQQyNDY1FCsDgAJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkadTzlkPV41XkLxiDgi+Izn0ibOUqEQav+PzGOOUcDRc=" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAIYCNSoe6gS7Fv6vg4R54OmFB8xO15cYiUM4G9ciXBy5rRbTxQn0wurVpykN++S3qsY9gqm4NhJKbhUsb9qOzDz5+BaQ51Lu9YTI5y+UD8ReCXYCCq5883RYOyuQBDQdgBKJQ9NYSepAvxIHsUIEBszIF9kVAw+OtKpSo2nY0L5TS7pjZcI4a2ubz4FZUJ/qeIscQNjFFetjMQu+gPAKi1cuu0dXATu8ZTMsEIKUEeEK3+aBofovXqmNNgBwrJCAFSq2Co/mvvaNFGqy28nyI+vv6yf3gTw51pjuwP3t6rjAvP5x1lbHcKM5M/ROzquUHr9lNeWWklFj9cK1TFZpQdUnWziPR3qwNn0ScFNmZAws/jpBm80jcsuZv9XDBeU2KB136TAPmetewitSt9wGNYTIY9UJhFPM+0hDu7cwMKVpp+mmnD8+pMa1yHYRYzLQxH5n1Q/qqDptM9kfJbC1I4q9xL93cbaAMQ4tG4BJWGCzAW6vtR3JnRPdbQo4gA4sZaXer04IxUa3arSwCxRuEDIYFbblwRpneYEy3rzwScqJxuezOuEOjOptTX9AYvM9jKmAypI8kdyyyB4CNN3pFGdOk4mu/WExNjWQ5X01rKdDbeJN4TzreHSTLkh+d4B8EihhF81TpqgKTnD/fd/yNWGbO9zMdjKdAolzLesxJOG2bR2t4ae94pZJoUOvCEPRLh7u5h+HR1RXp8jKz3XyrzwGq5ViD0Fyb+qhGFHNfa6dxzK0n1qu2d9hzAGJ1ZdEzFgVObshVy2ouP3umau52TJFwKhqohqorHyJZt7h54jbR7oXke9kR+ABe996RxzCmx1L/42I3la9AkYiuUmh4mE9Rk5DdY/KiLlE+29svjthmIPNdKgZlA9dvwpjASVteCo/ksy0uMaOE+alzU72eZ1rlvR6C3RGA9Jmsr/oit2h5HWYxsN1nFXBqJbgXwz0iYh7JCUYpOW+jbALhRmLv9UpsX2EI+d3W02YqShNDct3I94Sq9enXMFtuVRPWGCF1oN1TlM8aQC+B45LfHfFCnZz6KlRuP6GvEqI8VDdi+sTnM71Jn53VrlKa3UuXcRuCcAe+GQxyfHfD/wZ+ergvp+hsx48VT9Xih8PA4vj1aNtQlLCsXezalJjXjgEl/cAa7arjDkAIe6rJDf9KPGPMwoKLWIBVM9nLqRvTn4xs2uCHsZiAOZ8Y5IAuKZeArneMeYK8+pLRvERCDkGURuCyuXbsR59h/AAdaKvPM2BT4SSKNj0Us/NQU9+MI9hDNgMZowy9xCOwBNddniKd5JiX1iETIuSWSu2galT3CZ4MpRQGqIfvz80X8fuyGyFF2wHP/HcdHP4x0OBSCxdPk53jUQtAQ6g8akcdK7Kr4deoDeUynf9l1Y6lbf6JC8NoSbMA+vc8O8QqrB2tS2vv8gSiSoIhJ/70GOmod2HPYumgEmpn8vgLAz5ccZUA7bkVUoObyVZV/Zm1Uh4Ozw57X6RDPtK9aubBoko1p5gcjMIWvm4T+T41pjKCycN70aK5E4MwFc6qbRpzIzeaUUIv5qiWg3dZvXV/9M9IwoMUAdYUH5UMA5AJDCfNUkJ1q+n5sIsxUCB6Nq0yAoqoFwFjOj8ZbQjUP5/q/DGUJDHtaZDExzq62tLwfe18PsgWsDuILbV32BFX07jDSTdc2CHO2xi6fhORGg5L0lBgRl4s0zp6Bc/YgBEniC2eneyWSDQ2iw5NhVKu3HJAuZnur70V7iwzDcGwQI2IDR/+2+ZDAfID+MM8+0XNaUlaIgX8fsjMqD2JWDxa8kn7ReZiPgMqAmE7acxyMlKdMtk6XhHjwc25wp4AlleDWbzVGzQLtuUmBfLRhb1duIXiNLsi/yRLp4WZPUJ27df65bU1anG4WItJ4LM9y1kFgUPkaZCD7G3W6HUl/HynBFJ9UbqeGaq8vaK1/YQfFvpLYGg0bJLmJIb7I1VBtGRefxiocvIkjuBnFbKIG1Bvp3bdqOCotobzRhTIfJPz1ybr2D6/DEvFCV2tebkdleZKtgLobZ6iejVWuu1VZxJWsflUf5AhdWNPs78Mu7xVHmmifThhNhHXVuTcjWgOc0+ha7t+FzBP9w8kasJY44yZnpObyYDO1ZdBcb+9I3REzEpeEvJizUogox2uLy8cRq3yp6lmmMvyTt1q1wGJKr3RN2vrp1bz9IC1X58ObtB/5VtKrLwiwYTZ4JczAShm49AkZfwZHQTZLyjY3qS4jbPi09pGNXw+uGS3Hu4tDXabra7UmIrVTJ6nt2BS+IV2oARGuf8d10+bFGE4Rxb8X5OWr9o8NP/NkSmCAkxIVC+Aj7EdIJsmLDnfzTIbDsJUtH/K7KPeiLbFjhDUrnAx6wO2/9ofSkwJg74y7KTIDV/ngs3MovqY+DwVzncJ9d75iLyCizSur2z/AoWxQnguyVJbTVltsvXYae72/GCovpvEoLWlmf4Sg6Yu4BBu5RYruCk5N7MezxIv1QQ8tjDdhoGXqAbWrRFFDWx3FK4oHDCvJJHjmn4y1G1QBsNDvWkIszuXW6E1KUz6dtoSwPj0wA0Ssong9DXWhtYuS9jtH4StM1ZT+6tqYvxtAJndAQ0NFNV1597E/y6Lte1J3ZP1twzvBpB/f0YxWaTDHZ72u7NlSVoCSjnWeNWCBfpptecl27SJO0njN9e8jHgDwmPC2NlIgGmq46k97juUD2lSjIB/+AeyDUaBy5oIhTdg6INeWTgkUTzyXC34fsOvEb0hxwmbeOjctVaE3x0pTijWTsKmSeGzIda8uoJkZcuTbWHVoRB6h5Dc72rcIz1lA5hJghfGLyFGxD6b7ArQwZHjISLbPwxJYkFbxLsCrMOEMVNCcxGdx56w146VqqjCImkPDvKFHUQ/jY9+FyVc120CiMOMieHjy4dyVomOSf6gPMkkPd4ClcsQoipAxZgLTxG67FCpcEH/ewS/egbmWx04V1w9x54+T8GkfQObxizPwQZQvPeZm6KLBvrmvLYp1CaHAQxp15ZTATs7okf7S5ePo2gUI6UpzRPUgMetACnXOfa/MSurf56LkzDvZSlRprJXfFcpjnNRle7ZhR+nzipiAi6t6fJxRB4sYqEuxZikZ0sS/pn76iye8xM0q+tFJNR5AEEH/rcf8wyXJ1I9n+HN9S0Q60NH0z6qdFkKcgxGmbQ8xoxIk8T5csYyuHHJ8T3qv4mAA1kgwWmcUBQcbF5yr4YQxwmztMkcCEMt6aAvfC8f6toJF0YzyYX6qP1l6BNvsoSTEoNJmHhXQ9HjrS4USE6yCYyzwmeO12MO4U1xeipGR+e8TLpQ6CqXnairBPYGsz+glJyTODudGLzInafKtakhjlbm2TNMFfJb+9E3OOHfsq+2OJbTt6ZXJufxbbdOy1pecKV+u7JTFDadGMONSTueBvDAHypkesyjW4yuwX56tldt764R/77OW2TjDwb0ccJpLN4gZuPJdFGPDo8zpRNpCEOepOJcfUo9I8zG9qwVzTuTYjxDFDg2EFzwz1hep69FpxYJxedOu96B/Dnw5jBPjdr2PsTL/fVgG4rRrihebOjXHUfqiglDXkf85mvQfywWRzIsCAYnsAqHdzBwJuSxhofmDKZ6kAcIU59NL+2Ji/ZlNfEKQgjenXIkOQXcybyFgFk6H+fsgvXkF6guW0mK/96yfu7+n2DpGArzAn8Ug7zyAfpekzLtWT6UsgXZRNiIa8gkid6xp0spp/D5y5u2oeDBhSnXl6da309+kboqvL0EZR7RebudBufyINEOSNkpXst+LCzHcoZXcZBkagLrxGz5Lr3OmrcaZrIzlq5X4ZeFENOm92bbMpLQVD4IMoZREdVKbJIoaDV/CJq5z9wEVDB/cC79FvrePkFE4bul1aFFPyyi0kOKqg/hxo/OJaXSW+9WIG+vrsJvPgrum9ZyyaHkmzelazeN+yHPLxy1zNV9jyZToogsZf6RZ3nFRpnXxmMlVnH0OVgW+2Mohtqfe2KKfX/VnF0jyp37UjD6+NIz5zrn96FS+VMJNGWR2O5842Lmw660AZaYl38EWqjS11SHbcorNwflYBLGOSBhYCgfIyVLGUTbPYfzEgNQqTHnxA1GPsHqBrOtCWMEkB/uzd4oi1XWCyepKSG7lNpxxFzdDjX98Oc6FzbVsmLIEUldUkJbRhZrvplfZYEL0HEIrr0hA25YbbMqPgsadaNs2L0PL6NJIUvaBZj+4WJDzg+qXCxGdKNlUbGu4DHu5jY9jggQ/M+bLYw70SYQesq8eoufw0gVy+VJXLOb/8y4R0wEYH7yRWOc8vTOLrzSGCW44GJlYyDbnWEuvxMiv+ao715+CTPTCKoBBsIcfS54DwjalRqX/tdios6c/R4l8RBx+bEs2I/OhFPcGy16UdcBobgA6MDXqDiN8qHUE5edBy836NpfClbftFfnfyfCIoNo/LoLepzD03QezF7mHekW07wckU6+7Q9YdIbSVVhYrVWNy4V9SLNt9rDNP2lL0qzP3/u+7FCVXpVsepRRHoAuuwZCqIEy9pj8H80hp7qY3PsWfym5PFwPDpDrw5btVy0nYXPzmSU7Uq1R+xlIyX8GjtJduBVZ8wbk6aTUuK/MPWJrZBr6wJdTeGfZt62TS2PvUX8Bszn2XYFWa+KC0AGHhHOlm+2AJHVPZlyUq17Cl5102dlAYHzK+0AG32kPT2GuoyTOE8BIy6ZumGISrsX9PtvrJQT973r7tutrOJdmSsuzZmet4ka9s4KBh2pnNpSnp5KKvbJBe/2u8kjranZVADkNkEKOEXepq4YzpMaSxC3MlYLFhnFkgI5ZVRMzmO+OO/YgsPyT8yRPxZINEKJmxVfR6o2/dlXAveRG+kmgscPVzG2fU+7RYWdJ6A7dYUqm+3QeXKaM60OaCxssNom3YyO27eklt3YlQIip36uoWBxadwhW6Xr4hpzG+fVoqWHCOB4W0tkB4Ys2fVx/u4hWeNar3onUwWIr3qyzShdQuq1yLoOGDw62HfXCpHg+2MgPzx0D30ZvvTRWoyLCT5KXRfbhCHc0ft6eEqaV2Bsm1PQ1adRpxas+YKl6OM0XfBYI7e+D/PTCV8kGkiBFjju03VDE4za5rygA5Hlm2Nw7Z/jwlgzZu+xnq4r5sKXwqO2GiO0Yz0phNMal/uj9jQH01r6jZOWZdGYv25HB18pD1BnnheFvgIBd4A+Yzzd4445ZYYBPi1KjUxhWknmQ3xMtk+VekEsyt5OsRToo3sdsrHlF0S3wBO8PMh2hXpztV0Nul20IZOgLNZXnw69o2KVsiPg3L1Ov2ccetI/l78hqpSial79UDetTUKR6jdST7RI/tNxHgqa2VZpA6vgUwhJt7/J+BSGBMS8EJAsf/9j8QXzOPuANANF9n6qx9M8VFm3znHUngYh/toDPhEifiWmFe8/WqO48axLW568ANtWdjn5DflrdMhUJcxSKlMY6hfUROf4lKD2WVzMrBGUEyM1i/IioLJF4GlMlIJPWPw9wKGpav4okyiSNWyQxlltAoA50ScVI3orHMZwfosp1huw/AZY81iQ2w5g07s7Nd1y8K5gjHHQyvDDAfOa9Uhob6FFUC12YBIu2PUvFXPYpcn9eK0t0CCt3lgmiZeojs7/Z3+S" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=172" title="Journal of Modern Physics">
+                    Journal of Modern Physics</a> &gt; <a href="home?issueid=7027#60105">Vol.6 No.12, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Local Particle-Ghost Symmetry <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Yoshiharu++Kawamura&searchfield=authors&page=1' target='_blank'>Yoshiharu  Kawamura</a><sup>*</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Department+of+Physics%2c+Shinshu+University%2c+Matsumoto%2c+Japan&searchfield=affs&page=1' target='_blank'>Department of Physics, Shinshu University, Matsumoto, Japan</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jmp.2015.612174"
+                    target="_blank" onclick='SetNum(60105)'>10.4236/jmp.2015.612174</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JMP_2015093014580106.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60105)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60105' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60105.xml' target='_blank' onclick='SetNum(60105)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    2,314</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    2,958</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:None;"><a href='papercitationdetails?paperid=60105&JournalID=172' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">We study the quantization of systems with local particle-ghost symmetries. The systems contain ordinary particles including gauge bosons and their counterparts obeying different statistics. The particle-ghost symmetries are new type of fermionic symmetries between ordinary particles and their ghost partners, different from the space-time supersymmetry and the BRST symmetry. There is a possibility that they are useful to explain phenomena of elementary particles at a more fundamental level, by extension of our systems. We show that our systems are formulated consistently or subsidiary conditions on states guarantee the unitarity of systems, as the first step towards the construction of a realistic fundamental theory.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Fermionic+Symmetry&searchfield=keyword&page=1' target='_blank'>Fermionic Symmetry</a>, <a href='articles?searchcode=+BRST+Quantization&searchfield=keyword&page=1' target='_blank'> BRST Quantization</a>, <a href='articles?searchcode=+Quartet+Mechanism&searchfield=keyword&page=1' target='_blank'> Quartet Mechanism</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Kawamura, Y.   (2015) Local Particle-Ghost Symmetry. <i>Journal of Modern Physics</i>, <b>6</b>, 1721-1736. doi: <a href='http://dx.doi.org/10.4236/jmp.2015.612174' target='_blank' onclick='SetNum(60105)'>10.4236/jmp.2015.612174</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>Graded Lie algebras or Lie superalgebras have been frequently used to formulate theories and construct models in particle physics. Typical examples are supersymmetry (SUSY) [1] -[4] and BRST symmetry [5] - [7] .</p>
+<p>The space-time SUSY [8] [9] is a symmetry between ordinary particles with integer spin and those with half- integer spin, and the generators called supercharges are space-time spinors that obey the anti-commutation relations [10] [11] .</p>
+<p>The BRST symmetry is a symmetry concerning unphysical modes in gauge fields and abnormal fields called Faddeev-Popov ghost fields [12] . Though both gauge fields and abnormal fields contain negative norm states, theories become unitary on the physical subspace, thanks to the BRST invariance [13] [14] . The BRST and anti-BRST charges are anti-commuting space-time scalars.</p>
+<p>Recently, models that contain both ordinary particles with a positive norm and their counterparts obeying different statistics have been constructed and those features have been studied [15] - [18] . Models have fermionic symmetries different from the space-time SUSY and the BRST symmetry. We refer to this type of novel symmetries as “particle-ghost symmetries”.</p>
+<p>The particle-ghost symmetries have been introduced as global symmetries, but we do not need to restrict them to the global ones. Rather, it would be meaningful to examine systems with local particle-ghost symmetries from following reasons. It is known that any global continuous symmetries can be broken down by the effect of quantum gravity such as a wormhole [19] . Then, it is expected that a fundamental theory possesses local symmetries, and global continuous symmetries can appear as accidental ones in lower-energy scale. In the system with global particle-ghost symmetries, the unitarity holds by imposing subsidiary conditions on states by hand. In contrast, there is a possibility that the conditions are realized as remnants of local symmetries in a specific situation. Hence, it is interesting to investigate features of particle-ghost symmetries more closely and widely, and to apply them on a microscopic theory beyond the standard model.</p>
+<p>In this paper, we study the quantization of systems with local particle-ghost symmetries. The systems contain ordinary particles including gauge bosons and their counterparts obeying different statistics. We show that our systems are formulated consistently or subsidiary conditions on states guarantee the unitarity of systems, as the first step towards the construction of a realistic fundamental theory. The conditions can be originated from constraints in case that gauge fields have no dynamical degrees of freedom.</p>
+<p>The contents of this paper are as follows. We construct models with local fermionic symmetries in Section 2, and carry out the quantization of the system containing scalar and gauge fields in Section 3. Section 4 is devoted to conclusions and discussions on applications of particle-ghost symmetries. In the Appendix Section, we study the system that gauge fields are auxiliary ones.</p>
+<p class="E-Title1">2. Systems with Local Fermionic Symmetries</p>
+<p class="E-Title2">2.1. Scalar Fields with Local Fermionic Symmetries</p>
+<p>Recently, the system described by the following Lagrangian density has been studied [15] -[18] ,</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/1-7502313x5.png" /><span class="bracketMark">(1)</span></p>
+<p>where <img src="//html.scirp.org/file/1-7502313x6.png" class="200" /> is an ordinary complex scalar field and <img src="//html.scirp.org/file/1-7502313x7.png" class="200" /> is the fermionic counterpart obeying the anti-commu- tation relations. The system has a global <img src="//html.scirp.org/file/1-7502313x8.png" class="200" /> symmetry that consists of U(1) and fermionic symmetries. The unitarity holds by imposing suitable subsidiary conditions relating the conserved charges on states.</p>
+<p>Starting from (1), the model with the local <img src="//html.scirp.org/file/1-7502313x9.png" class="200" /> symmetry is constructed by introducing gauge fields. The resultant Lagrangian density is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/1-7502313x10.png" /><span class="bracketMark">(2)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/1-7502313x11.png" /><span class="bracketMark">(3)</span></p>
+<p>where <img src="//html.scirp.org/file/1-7502313x12.png" class="200" /> and <img src="//html.scirp.org/file/1-7502313x13.png" class="200" /> are the gauge fields relating the (diagonal) U(1) symmetries, <img src="//html.scirp.org/file/1-7502313x14.png" class="200" />and <img src="//html.scirp.org/file/1-7502313x15.png" class="200" /> are gauge fields relating the fermionic symmetries, and g is the gauge coupling constant. The quantized fields of <img src="//html.scirp.org/file/1-7502313x16.png" class="200" /> obey the anti-commutation relations.</p>
+<p>The <img src="//html.scirp.org/file/1-7502313x17.png" class="200" /> is invariant under the local U(1) transformations,</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/1-7502313x18.png" /><span class="bracketMark">(4)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/1-7502313x19.png" /><span class="bracketMark">(5)</span></p>
+<p>and the local fermionic transformations,</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/1-7502313x20.png" /><span class="bracketMark">(6)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x21.png" /><span class="bracketMark">(7)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x22.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x23.png" /> are infinitesimal real functions of x, and <img class="200" data-original="//html.scirp.org/file/1-7502313x24.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x25.png" /> are Grassmann-valued functions of x.</p>
+<p>The <img class="200" data-original="//html.scirp.org/file/1-7502313x26.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x27.png" /> are simply written as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x28.png" /><span class="bracketMark">(8)</span></p>
+<p>respectively. In<img class="200" data-original="//html.scirp.org/file/1-7502313x29.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x30.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x31.png" /> are the covariant derivative and the doublet of fermionic transformation defined by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x32.png" /><span class="bracketMark">(9)</span></p>
+<p>respectively. In<img class="200" data-original="//html.scirp.org/file/1-7502313x33.png" />, Str is the supertrace defined by <img class="200" data-original="//html.scirp.org/file/1-7502313x34.png" /> where M is the 2 &times; 2 matrix given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x35.png" /><span class="bracketMark">(10)</span></p>
+<p>The <img class="200" data-original="//html.scirp.org/file/1-7502313x36.png" /> is defined by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x37.png" /><span class="bracketMark">(11)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/1-7502313x38.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x39.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x40.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x41.png" /> are the field strengths given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x42.png" /><span class="bracketMark">(12)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x43.png" /><span class="bracketMark">(13)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x44.png" /><span class="bracketMark">(14)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x45.png" /><span class="bracketMark">(15)</span></p>
+<p>Under the transformations (4)-(7), the field strengths are transformed as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x46.png" /><span class="bracketMark">(16)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x47.png" /><span class="bracketMark">(17)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x48.png" /><span class="bracketMark">(18)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x49.png" /><span class="bracketMark">(19)</span></p>
+<p>Using the global fermionic transformations,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x50.png" /><span class="bracketMark">(20)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x51.png" /><span class="bracketMark">(21)</span></p>
+<p><img class="200" data-original="//html.scirp.org/file/1-7502313x52.png" />is rewritten as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x53.png" /><span class="bracketMark">(22)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x54.png" /> is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x55.png" /><span class="bracketMark">(23)</span></p>
+<p class="E-Title2">2.2. Spinor Fields with Local Fermionic Symmetries</p>
+<p>For spinor fields, we consider the Lagrangian density,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x56.png" /><span class="bracketMark">(24)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x57.png" /> is an ordinary spinor field and <img class="200" data-original="//html.scirp.org/file/1-7502313x58.png" /> is its bosonic counterpart obeying commutation relations. This system also has global U(1) and fermionic symmetries, and the unitarity holds by imposing suitable subsidiary conditions on states.</p>
+<p>Starting from (24), the Lagrangian density with local symmetries is constructed as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x59.png" /><span class="bracketMark">(25)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x60.png" /> is given by (3), <img class="200" data-original="//html.scirp.org/file/1-7502313x61.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x62.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x63.png" /> are the <img class="200" data-original="//html.scirp.org/file/1-7502313x64.png" /> matrices satisfying<img class="200" data-original="//html.scirp.org/file/1-7502313x65.png" />. The <img class="200" data-original="//html.scirp.org/file/1-7502313x66.png" /> is rewritten as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x67.png" /><span class="bracketMark">(26)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x68.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x69.png" /> are the extension of <img class="200" data-original="//html.scirp.org/file/1-7502313x70.png" />-matrices and the doublet of fermionic transformation defined by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x71.png" /><span class="bracketMark">(27)</span></p>
+<p>respectively.</p>
+<p>The <img class="200" data-original="//html.scirp.org/file/1-7502313x72.png" /> is invariant under the local U(1) transformations,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x73.png" /><span class="bracketMark">(28)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x74.png" /><span class="bracketMark">(29)</span></p>
+<p>and the local fermionic transformations,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x75.png" /><span class="bracketMark">(30)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x76.png" /><span class="bracketMark">(31)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x77.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x78.png" /> are infinitesimal real functions of x, and <img class="200" data-original="//html.scirp.org/file/1-7502313x79.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x80.png" /> are Grassmann-valued functions of x.</p>
+<p>Using the global fermionic transformations,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x81.png" /><span class="bracketMark">(32)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x82.png" /><span class="bracketMark">(33)</span></p>
+<p><img class="200" data-original="//html.scirp.org/file/1-7502313x83.png" />is rewritten as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x84.png" /><span class="bracketMark">(34)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x85.png" /> is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x86.png" /><span class="bracketMark">(35)</span></p>
+<p class="E-Title1">3. Quantization</p>
+<p>We carry out the quantization of the system with scalar and gauge fields described by<img class="lazy 100" data-original="//html.scirp.org/file/1-7502313x87.png" />.</p>
+<p class="E-Title2">3.1. Canonical Quantization</p>
+<p>Based on the formulation with the property that the hermitian conjugate of canonical momentum for a variable is just the canonical momentum for the hermitian conjugate of the variable [16] , the conjugate momenta are given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x88.png" /><span class="bracketMark">(36)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x89.png" /><span class="bracketMark">(37)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x90.png" /><span class="bracketMark">(38)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x91.png" /><span class="bracketMark">(39)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x92.png" /><span class="bracketMark">(40)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x93.png" /><span class="bracketMark">(41)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/1-7502313x94.png" />, and R and L stand for the right-differentiation and the left-differentiation, respectively. From (40) and (41), we obtain the primary constraints,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x95.png" /><span class="bracketMark">(42)</span></p>
+<p>Using the Legendre transformation, the Hamiltonian density is obtained as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x96.png" /><span class="bracketMark">(43)</span></p>
+<p>where Roman indices i and j denote the spatial components and run from 1 to 3, <img class="200" data-original="//html.scirp.org/file/1-7502313x97.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x98.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x99.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x100.png" /> are Lagrange multipliers, and<img class="200" data-original="//html.scirp.org/file/1-7502313x101.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x102.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x103.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x104.png" /> are rewritten as<img class="200" data-original="//html.scirp.org/file/1-7502313x105.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x106.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x107.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x108.png" /> in the final expression.</p>
+<p>Secondary constraints are obtained as follows,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x109.png" /><span class="bracketMark">(44)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x110.png" /><span class="bracketMark">(45)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x111.png" /><span class="bracketMark">(46)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x112.png" /><span class="bracketMark">(47)</span></p>
+<p>where H is the Hamiltonian <img class="200" data-original="//html.scirp.org/file/1-7502313x113.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x114.png" /> is the Poisson bracket. The Poisson bracket for the</p>
+<p>system with canonical variables <img class="200" data-original="//html.scirp.org/file/1-7502313x115.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x116.png" /> is defined by [16]</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x117.png" /><span class="bracketMark">(48)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x118.png" /> is the number representing the Grassmann parity of<img class="200" data-original="//html.scirp.org/file/1-7502313x119.png" />, i.e., <img class="200" data-original="//html.scirp.org/file/1-7502313x120.png" />for the Grassmann odd <img class="200" data-original="//html.scirp.org/file/1-7502313x121.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x122.png" /> for the Grassmann even<img class="200" data-original="//html.scirp.org/file/1-7502313x123.png" />. There appear no other constraints, and all constraints are first class ones and generate local transformations.</p>
+<p>We take the gauge fixing conditions,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x124.png" /><span class="bracketMark">(49)</span></p>
+<p>The system is quantized by regarding variables as operators and imposing the following relations on the canonical pairs,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x125.png" /><span class="bracketMark">(50)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x126.png" /><span class="bracketMark">(51)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x127.png" /><span class="bracketMark">(52)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x128.png" /><span class="bracketMark">(53)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x129.png" /><span class="bracketMark">(54)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x130.png" /><span class="bracketMark">(55)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/1-7502313x131.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x132.png" />, and only the non-vanishing ones are denoted. Here, we define the Dirac bracket using the first class constraints and the gauge fixing conditions, and replace the bracket with the commutator or the anti-commutator.</p>
+<p>On the reduced phase space, the conserved U(1) charges <img class="200" data-original="//html.scirp.org/file/1-7502313x133.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x134.png" /> and the conserved fermionic charges <img class="200" data-original="//html.scirp.org/file/1-7502313x135.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x136.png" /> are constructed as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x137.png" /><span class="bracketMark">(56)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x138.png" /><span class="bracketMark">(57)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x139.png" /><span class="bracketMark">(58)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x140.png" /><span class="bracketMark">(59)</span></p>
+<p>The following algebraic relations hold:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x141.png" /><span class="bracketMark">(60)</span></p>
+<p>The above charges are generators of global U(1) and fermionic transformations such that</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x142.png" /><span class="bracketMark">(61)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x143.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x144.png" /> are real parameters, and <img class="200" data-original="//html.scirp.org/file/1-7502313x145.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x146.png" /> are Grassmann parameters. Note that <img class="200" data-original="//html.scirp.org/file/1-7502313x147.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x148.png" /></p>
+<p>in (20) and (21) are related to <img class="200" data-original="//html.scirp.org/file/1-7502313x149.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x150.png" /> as<img class="200" data-original="//html.scirp.org/file/1-7502313x151.png" />,<img class="200" data-original="//html.scirp.org/file/1-7502313x152.png" />.</p>
+<p>The system contains negative norm states originated from<img class="200" data-original="//html.scirp.org/file/1-7502313x153.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x154.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x155.png" />. In the presence of negative norm states, the probability interpretation cannot be endured. To formulate our model in a consistent manner, we use a feature that conserved charges can be, in general, set to be zero as subsidiary conditions. We impose the following subsidiary conditions on states by hand,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x156.png" /><span class="bracketMark">(62)</span></p>
+<p>In the Appendix, we point out that subsidiary conditions corresponding to (62) can be realized as remnants of local symmetries in a specific case.</p>
+<p class="E-Title2">3.2. Unitarity</p>
+<p>Let us study the unitarity of physical S matrix in our system, using the Lagrangian density of free fields,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x157.png" /><span class="bracketMark">(63)</span></p>
+<p>where the gauge fixing conditions (49) are imposed on. The <img class="200" data-original="//html.scirp.org/file/1-7502313x158.png" /> describes the behavior of asymptotic fields of Heisenberg operators in<img class="200" data-original="//html.scirp.org/file/1-7502313x159.png" />.</p>
+<p>From (63), free field equations for<img class="200" data-original="//html.scirp.org/file/1-7502313x160.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x161.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x162.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x163.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x164.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x165.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x166.png" /> are derived. By solving the Klein- Gordon equations, we obtain the solutions</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x167.png" /><span class="bracketMark">(64)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x168.png" /><span class="bracketMark">(65)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x169.png" /><span class="bracketMark">(66)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x170.png" /><span class="bracketMark">(67)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x171.png" /><span class="bracketMark">(68)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x172.png" /><span class="bracketMark">(69)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x173.png" /><span class="bracketMark">(70)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x174.png" /><span class="bracketMark">(71)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x175.png" /> and<img class="200" data-original="//html.scirp.org/file/1-7502313x176.png" />.</p>
+<p>In the same way, by solving the free Maxwell equations, we obtain the solutions,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x177.png" /><span class="bracketMark">(72)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x178.png" /><span class="bracketMark">(73)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x179.png" /><span class="bracketMark">(74)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x180.png" /><span class="bracketMark">(75)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x181.png" /><span class="bracketMark">(76)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x182.png" /><span class="bracketMark">(77)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x183.png" /><span class="bracketMark">(78)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x184.png" /><span class="bracketMark">(79)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x185.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x186.png" /> are polarization vectors satisfying the relations,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x187.png" /><span class="bracketMark">(80)</span></p>
+<p>The index <img class="200" data-original="//html.scirp.org/file/1-7502313x188.png" /> represents the helicity of gauge fields.</p>
+<p>By imposing the same type of relations as (50) - (55), we have the relations,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x189.png" /><span class="bracketMark">(81)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x190.png" /><span class="bracketMark">(82)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x191.png" /><span class="bracketMark">(83)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x192.png" /><span class="bracketMark">(84)</span></p>
+<p>and others are zero.</p>
+<p>The states in the Fock space are constructed by acting the creation operators<img class="200" data-original="//html.scirp.org/file/1-7502313x193.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x194.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x195.png" />,</p>
+<p><img class="200" data-original="//html.scirp.org/file/1-7502313x196.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x197.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x198.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x199.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x200.png" /> on the vacuum state<img class="200" data-original="//html.scirp.org/file/1-7502313x201.png" />, where <img class="200" data-original="//html.scirp.org/file/1-7502313x202.png" /> is defined by the conditions<img class="200" data-original="//html.scirp.org/file/1-7502313x203.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x204.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x205.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x206.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x207.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x208.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x209.png" /></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x210.png" /><span class="bracketMark">.</span></p>
+<p>We impose the following subsidiary conditions on states to select physical states,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x211.png" /><span class="bracketMark">(85)</span></p>
+<p>Note that <img class="200" data-original="//html.scirp.org/file/1-7502313x212.png" /> means<img class="200" data-original="//html.scirp.org/file/1-7502313x213.png" />. We find that all states, except for the vacuum state, are unphysical because they do not satisfy (85). This feature is understood as a counterpart of the quartet mechanism [13] [14] . The projection operator <img class="200" data-original="//html.scirp.org/file/1-7502313x214.png" /> on the states with n particles is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x215.png" /><span class="bracketMark">(86)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x216.png" /> and we omit<img class="200" data-original="//html.scirp.org/file/1-7502313x217.png" />, for simplicity. Using the transformation properties,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x218.png" /><span class="bracketMark">(87)</span></p>
+<p><img class="200" data-original="//html.scirp.org/file/1-7502313x219.png" />is written in a simple form as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x220.png" /><span class="bracketMark">(88)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x221.png" /> is given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x222.png" /><span class="bracketMark">(89)</span></p>
+<p>From (88), we find that any state with <img class="200" data-original="//html.scirp.org/file/1-7502313x223.png" /> is unphysical from<img class="200" data-original="//html.scirp.org/file/1-7502313x224.png" />. Then, we understand that every field becomes unphysical, and only <img class="200" data-original="//html.scirp.org/file/1-7502313x225.png" /> remains as the physical state. This is also regarded as a field theoretical version of the Parisi-Sourlas mechanism [20] .</p>
+<p>The system is also formulated using hermitian fermionic charges defined by <img class="200" data-original="//html.scirp.org/file/1-7502313x226.png" /> and<img class="200" data-original="//html.scirp.org/file/1-7502313x227.png" />. They satisfy the relations<img class="200" data-original="//html.scirp.org/file/1-7502313x228.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x229.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x230.png" />. Though Q<sub>1</sub>, Q<sub>2</sub> and <img class="200" data-original="//html.scirp.org/file/1-7502313x231.png" /> form elements of the <img class="200" data-original="//html.scirp.org/file/1-7502313x232.png" /> (quantum mechanical) SUSY algebra [21] , our system does not possess the space-time SUSY because <img class="200" data-original="//html.scirp.org/file/1-7502313x233.png" /> is not our Hamiltonian but the U(1) charge<img class="200" data-original="//html.scirp.org/file/1-7502313x234.png" />. Only the vacuum state is selected as the physical states by imposing the following subsidiary conditions on states, in place of (85),</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x235.png" /><span class="bracketMark">(90)</span></p>
+<p>It is also understood that our fermionic symmetries are different from the space-time SUSY, from the fact that Q<sub>1</sub> and Q<sub>2</sub> are scalar charges. They are also different from the BRST symmetry, as seen from the algebraic relations among charges.</p>
+<p>The system with spinor and gauge fields described by <img class="200" data-original="//html.scirp.org/file/1-7502313x236.png" /> is also quantized, in a similar way. We find that the theory becomes harmless but empty leaving the vacuum state alone as the physical state, after imposing subsidiary conditions corresponding to (62).</p>
+<p class="E-Title2">3.3. BRST Symmetry</p>
+<p>Our system has local symmetries, and it is quantized by the Faddeev-Popov (FP) method. In order to add the gauge fixing conditions to the Lagrangian, several fields corresponding to FP ghost and anti-ghost fields and auxiliary fields called Nakanishi-Lautrup (NL) fields are introduced. Then, the system is described on the extended phase space and has a global symmetry called the BRST symmetry. We present the gauge-fixed Lagrangian density and study the BRST transformation properties.</p>
+<p>According to the usual procedure, the Lagrangian density containing the gauge fixing terms and FP ghost terms is constructed as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x237.png" /><span class="bracketMark">(91)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x238.png" /><span class="bracketMark">(92)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/1-7502313x239.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x240.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x241.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x242.png" /> are FP ghosts, <img class="200" data-original="//html.scirp.org/file/1-7502313x243.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x244.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x245.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x246.png" /> are FP anti-ghosts, <img class="200" data-original="//html.scirp.org/file/1-7502313x247.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x248.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x249.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x250.png" /> are NL fields, and <img class="200" data-original="//html.scirp.org/file/1-7502313x251.png" /> is a gauge parameter. These fields are scalar fields.<img class="200" data-original="//html.scirp.org/file/1-7502313x252.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x253.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x254.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x255.png" /> are fermionic, and <img class="200" data-original="//html.scirp.org/file/1-7502313x256.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x257.png" /> are bosonic. In contrast, <img class="200" data-original="//html.scirp.org/file/1-7502313x258.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x259.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x260.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x261.png" /> are bosonic, and <img class="200" data-original="//html.scirp.org/file/1-7502313x262.png" /> and <img class="200" data-original="//html.scirp.org/file/1-7502313x263.png" /> are fermionic because the relevant symmetries are fermionic.</p>
+<p>The <img class="200" data-original="//html.scirp.org/file/1-7502313x264.png" /> is invariant under the BRST transformation,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x265.png" /><span class="bracketMark">(93)</span></p>
+<p>where the transformations for<img class="200" data-original="//html.scirp.org/file/1-7502313x266.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x267.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x268.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x269.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x270.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x271.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x272.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x273.png" /> are obtained by regarding the sum of transformations <img class="200" data-original="//html.scirp.org/file/1-7502313x274.png" /> as <img class="200" data-original="//html.scirp.org/file/1-7502313x275.png" /> and replacing<img class="200" data-original="//html.scirp.org/file/1-7502313x276.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x277.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x278.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x279.png" /> with<img class="200" data-original="//html.scirp.org/file/1-7502313x280.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x281.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x282.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x283.png" />, and those for<img class="200" data-original="//html.scirp.org/file/1-7502313x284.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x285.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x286.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x287.png" /> are determined by the requirement that <img class="200" data-original="//html.scirp.org/file/1-7502313x288.png" /> has a nilpotency property, i.e.,<img class="200" data-original="//html.scirp.org/file/1-7502313x289.png" />.</p>
+<p>The sum of the gauge fixing terms and FP ghost terms is simply written as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x290.png" /><span class="bracketMark">(94)</span></p>
+<p>According to the Noether procedure, the BRST current <img class="200" data-original="//html.scirp.org/file/1-7502313x291.png" /> and the BRST charge <img class="200" data-original="//html.scirp.org/file/1-7502313x292.png" /> are obtained as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x293.png" /><span class="bracketMark">(95)</span></p>
+<p>and</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x294.png" /><span class="bracketMark">(96)</span></p>
+<p>respectively. Here we use the field equations. The BRST charge is a conserved charge (<img class="200" data-original="//html.scirp.org/file/1-7502313x295.png" />), and it has the nilpotency property such as<img class="200" data-original="//html.scirp.org/file/1-7502313x296.png" />.</p>
+<p>By imposing the following subsidiary condition on states,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x297.png" /><span class="bracketMark">(97)</span></p>
+<p>it is shown that any negative norm states originated from time and longitudinal components of gauge fields as well as FP ghost and anti-ghost fields and NL fields do not appear on the physical subspace, through the quartet mechanism. There still exist negative norm states come from<img class="200" data-original="//html.scirp.org/file/1-7502313x298.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x299.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x300.png" />, and it is necessary to impose additional conditions corresponding to (62) on states in order to project out such harmful states.</p>
+<p class="E-Title1">4. Conclusions and Discussions</p>
+<p>We have studied the quantization of systems with local particle-ghost symmetries. The systems contain ordinary particles including gauge bosons and their counterparts obeying different statistics. There exist negative norm states come from fermionic scalar fields (or bosonic spinor fields) and transverse components of fermionic gauge fields, even after reducing the phase space due to the first class constraints and the gauge fixing conditions or imposing the subsidiary condition concerning the BRST charge on states. By imposing additional subsidiary conditions on states, such negative norm states are projected out on the physical subspace and the unitarity of systems hold. The additional conditions can be originated from constraints in case that gauge fields have no dynamical degrees of freedom.</p>
+<p>The systems considered are unrealistic if this goes on, because they are empty leaving the vacuum state alone as the physical state. Then, one might think that it is better not to get deeply involved them. Although they are still up in the air at present, there is a possibility that a formalism or concept itself is basically correct and is useful to explain phenomena of elementary particles at a more fundamental level. It is necessary to fully understand features of our particle-ghost symmetries, in order to appropriately apply them on a more microscopic system.</p>
+<p>We make conjectures on some applications. We suppose that particle-ghost symmetries exist and the system contains only a few states including the vacuum as physical states at an ultimate level. Most physical particles might be released from unphysical doublets that consist of particles and their ghost partners. A release mechanism has been proposed based on the dimensional reduction by orbifolding [17] .</p>
+<p>After the appearance of physical fields, <img class="200" data-original="//html.scirp.org/file/1-7502313x301.png" />-singlets and <img class="200" data-original="//html.scirp.org/file/1-7502313x302.png" />-doublets coexist with exact fermionic symmetries. The Lagrangian density is, in general, written in the form as<img class="200" data-original="//html.scirp.org/file/1-7502313x303.png" />. Here, <img class="200" data-original="//html.scirp.org/file/1-7502313x304.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x305.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x306.png" /> stand for the Lagrangian density for Q<sub>F</sub>-singlets, Q<sub>F</sub>-doublets and interactions between Q<sub>F</sub>-singlets and Q<sub>F</sub>-doublets. Under the subsidiary conditions<img class="200" data-original="//html.scirp.org/file/1-7502313x307.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x308.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x309.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x310.png" /> on states, all <img class="200" data-original="//html.scirp.org/file/1-7502313x311.png" />-doublets become unphysical and would not give any physical effects on <img class="200" data-original="//html.scirp.org/file/1-7502313x312.png" /> singlets. Because <img class="200" data-original="//html.scirp.org/file/1-7502313x313.png" /> singlets would not receive any radiative corrections from Q<sub>F</sub> doublets, the theory is free from the gauge hierarchy problem if all heavy fields form Q<sub>F</sub> doublets [15] .</p>
+<p>The system seems to be same as that described by <img class="200" data-original="//html.scirp.org/file/1-7502313x314.png" /> alone, and to be impossible to show the existence of Q<sub>F</sub>-doublets. However, in a very special case, an indirect proof would be possible through fingerprints left by symmetries in a fundamental theory. The fingerprints are specific relations among parameters such as a unification of coupling constants, reflecting on underlying symmetries [15] [22] .</p>
+<p>In most cases, our ghost fields require non-local interactions [15] and the change of degrees of freedom can occur in systems with infinite numbers of fields [17] . Then, they might suggest that fundamental objects are not point particles but extended objects such as strings and membranes. Hence, it would be interesting to explore systems with particle-ghost symmetries and their applications in the framework of string theories1.</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>The author thanks the Editor and the referee for their comments. This work was supported in part by scientific grants from the Ministry of Education, Culture, Sports, Science and Technology under Grant No. 22540272.</p>
+<p class="E-Title1">Appendix</p>
+<p class="E-Title2">A1. System with Auxiliary Gauge Fields</p>
+<p>Let us study the system without <img class="200" data-original="//html.scirp.org/file/1-7502313x316.png" /> described by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x317.png" /><span class="bracketMark">(98)</span></p>
+<p>In this case, gauge fields do not have any dynamical degrees of freedom, and are regarded as auxiliary fields. The conjugate momenta of<img class="200" data-original="//html.scirp.org/file/1-7502313x318.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x319.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x320.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x321.png" /> are same as those obtained in (36) - (39). The conjugate momenta of<img class="200" data-original="//html.scirp.org/file/1-7502313x322.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x323.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x324.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x325.png" /> become constraints,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x326.png" /><span class="bracketMark">(99)</span></p>
+<p>Using the Legendre transformation, the Hamiltonian density is obtained as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x327.png" /><span class="bracketMark">(100)</span></p>
+<p>where<img class="200" data-original="//html.scirp.org/file/1-7502313x328.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x329.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x330.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x331.png" /> are Lagrange multipliers.</p>
+<p>Secondary constraints are obtained as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x332.png" /><span class="bracketMark">(101)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x333.png" /><span class="bracketMark">(102)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x334.png" /><span class="bracketMark">(103)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x335.png" /><span class="bracketMark">(104)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x336.png" /> is the Hamiltonian<img class="200" data-original="//html.scirp.org/file/1-7502313x337.png" />, and<img class="200" data-original="//html.scirp.org/file/1-7502313x338.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x339.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x340.png" />and <img class="200" data-original="//html.scirp.org/file/1-7502313x341.png" /> are the currents of U(1) and fermionic symmetries given by</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x342.png" /><span class="bracketMark">(105)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x343.png" /><span class="bracketMark">(106)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x344.png" /><span class="bracketMark">(107)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x345.png" /><span class="bracketMark">(108)</span></p>
+<p>In the same way, tertiary constraints are obtained as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x346.png" /><span class="bracketMark">(109)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x347.png" /><span class="bracketMark">(110)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x348.png" /><span class="bracketMark">(111)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x349.png" /><span class="bracketMark">(112)</span></p>
+<p>from the invariance under the time evolution of<img class="200" data-original="//html.scirp.org/file/1-7502313x350.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x351.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x352.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x353.png" />. On the other hand,</p>
+<p>the conditions<img class="200" data-original="//html.scirp.org/file/1-7502313x354.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x355.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x356.png" />and</p>
+<p><img class="200" data-original="//html.scirp.org/file/1-7502313x357.png" />are not new constraints but the relations to determine<img class="200" data-original="//html.scirp.org/file/1-7502313x358.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x359.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x360.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x361.png" />. Fur-</p>
+<p>thermore, new constraints do not appear from the conditions<img class="200" data-original="//html.scirp.org/file/1-7502313x362.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x363.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x364.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x365.png" />.</p>
+<p>The constraints are classified into the first class ones</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x366.png" /><span class="bracketMark">(113)</span></p>
+<p>and the second class ones</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x367.png" /><span class="bracketMark">(114)</span></p>
+<p>The determinant of Poisson bracket between second class ones does not vanish on constraints.</p>
+<p>Using<img class="200" data-original="//html.scirp.org/file/1-7502313x368.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x369.png" />, <img class="200" data-original="//html.scirp.org/file/1-7502313x370.png" />and<img class="200" data-original="//html.scirp.org/file/1-7502313x371.png" />, the conserved U(1) and fermionic charges are constructed as</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x372.png" /><span class="bracketMark">(115)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x373.png" /><span class="bracketMark">(116)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x374.png" /><span class="bracketMark">(117)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x375.png" /><span class="bracketMark">(118)</span></p>
+<p>The same algebraic relations hold as those in (60).</p>
+<p>The above charges are conserved and generators of global U(1) and fermionic transformations for scalar fields. They satisfy the relations,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x376.png" /><span class="bracketMark">(119)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/1-7502313x377.png" /> are first class constraints (113) and the Hamiltonian<img class="200" data-original="//html.scirp.org/file/1-7502313x378.png" />. From (101) - (104) and (119), following relations can be considered as first class constraints,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x379.png" /><span class="bracketMark">(120)</span></p>
+<p>After taking the following gauge fixing conditions for the first class ones (113),</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x380.png" /><span class="bracketMark">(121)</span></p>
+<p>the system is quantized by regarding variables as operators and imposing the same type of relations (50) and (51) on the canonical pairs. From (120), it is reasonable to impose the following subsidiary conditions on states,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/1-7502313x381.png" /><span class="bracketMark">(122)</span></p>
+<p>Then, they guarantee the unitarity of our system, though it contains negative norm states originated from <img class="200" data-original="//html.scirp.org/file/1-7502313x382.png" /> and<img class="200" data-original="//html.scirp.org/file/1-7502313x383.png" />.</p>
+<p class="E-Title1">NOTES</p>
+<p><sup>1</sup>Objects called ghost D-branes have been introduced as an extension of D-brane and their properties have been studied [23] [24] .</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579713' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Neveu, A. and Schwarz, J.H. (1971) Nuclear Physics B, 31, 86-112. <br/>http://dx.doi.org/10.1016/0550-3213(71)90448-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579714' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Ramond, P. (1971) Physical Review D, 3, 2415-2418. <br/>http://dx.doi.org/10.1103/PhysRevD.3.2415
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579715' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Aharonov, Y., Casher, A. and Susskind, L. (1971) Physics Letters B, 35, 512-514. <br/>http://dx.doi.org/10.1016/0370-2693(71)90386-8
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579716' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Gervais, J.L. and Sakita, B. (1971) Nuclear Physics B, 34, 632-639. <br/>http://dx.doi.org/10.1016/0550-3213(71)90351-8
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579717' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Becchi, C., Rouet, A. and Stora, R. (1975) Communications in Mathematical Physics, 42, 127-162. <br/>http://dx.doi.org/10.1007/BF01614158
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579718' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Becchi, C., Rouet, A. and Stora, R. (1976) Annals of Physics, 98, 287-321. <br/>http://dx.doi.org/10.1016/0003-4916(76)90156-1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579719' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Tyutin, V. (1975) Gauge Invariance in Field Theory and Statistical Physics in Operator Formalism. Lebedev Physical Institute Report No.39, arXiv:0812.0580 [hep-th].
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579720' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Wess, J. and Zumino, B. (1974) Nuclear Physics B, 70, 39-50. <br/>http://dx.doi.org/10.1016/0550-3213(74)90355-1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579721' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Wess, J. and Bagger, J. (1991) Supersymmetry and Supergravity. 2nd Edition. Princeton University Press, Princeton.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579722' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Salam, A. and Strathdee, J. (1975) Physical Review D, 11, 1521-1535. <br/>http://dx.doi.org/10.1103/PhysRevD.11.1521
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579723' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Haag, R., Lopuszański, J.T. and Sohnius, M. (1975) Nuclear Physics B, 88, 257-274.<br/>http://dx.doi.org/10.1016/0550-3213(75)90279-5
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579724' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Faddeev, L.D. and Popov, N. (1967) Physics Letters B, 25, 29-30. <br/>http://dx.doi.org/10.1016/0370-2693(67)90067-6
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579725' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Kugo, T. and Ojima, I. (1978) Physics Letters B, 73, 459-462. <br/>http://dx.doi.org/10.1016/0370-2693(78)90765-7
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579726' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Kugo, T. and Ojima, I. (1979) Progress of Theoretical Physics Supplement, 66, 1-130.<br/>http://dx.doi.org/10.1143/PTPS.66.1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579727' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Kawamura, Y. (2015) International Journal of Modern Physics A, 30, Article ID: 1550153. <br/>http://dx.doi.org/10.1142/S0217751X15501535
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579728' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Kawamura, Y. (2014) Fermionic Scalar Field. <br/>http://arxiv.org/abs/1406.6155
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579729' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Kawamura, Y. (2015) International Journal of Modern Physics A, 30, Article ID: 1550056.<br/>http://dx.doi.org/10.1142/S0217751X15500566
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579730' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Kawamura, Y. (2015) Quantization of Systems with OSp(2|2) Symmetry. <br/>http://arxiv.org/abs/1502.00751
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579731' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Giddings, S. and Strominger, A. (1988) Nuclear Physics B, 306, 890-907.<br/>http://dx.doi.org/10.1016/0550-3213(88)90446-4
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579732' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Parisi, G. and Sourlas, N. (1979) Physical Review Letters, 43, 744-745. <br/>http://dx.doi.org/10.1103/PhysRevLett.43.744
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579733' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Witten, E. (1982) Journal of Differential Geometry, 17, 661-692.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579734' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Kawamura, Y. (2015) International Journal of Modern Physics A, 30, Article ID: 1550109.<br/>http://dx.doi.org/10.1142/S0217751X15501092
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579735' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Okuda, T. and Takayanagi, T. (2006) Journal of High Energy Physics, 2006, 62.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579736' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Terashima, S. (2006) Journal of High Energy Physics, 2006, 67.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=172" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=172" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=172" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=172" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=172"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=172"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=172" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=172" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=172" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=172" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=172" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=172"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=172"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=172" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=172&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=172&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=172" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=172" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=172" target="_blank">JMP
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=172" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=172" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=172" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=172" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=172" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=172" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=172" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jmp.2015.612174" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60105 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +172 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +172 +"&paperid=" +60105 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

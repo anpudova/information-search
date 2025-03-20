@@ -1,0 +1,1545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Development of Three Dimensional Automatic Body Fat Measurement Software from CT, and Its Validation and Evaluation
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JBiSE_2015092915584202.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60054" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60054.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60054" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60054" />
+<meta property="og:title" content="Development of Three Dimensional Automatic Body Fat Measurement Software from CT, and Its Validation and Evaluation" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JBiSE2024080115310582.png" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JBiSE2024080115310582.png" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Development of Three Dimensional Automatic Body Fat Measurement Software from CT, and Its Validation and Evaluation" />
+<meta name="keywords" content="Abdominal Obesity,Visceral Adipose Tissue (VAT),Subcutaneous Adipose Tissue (SAT),Computer-Aided Diagnosis (CAD),Computed Tomography (CT)" />
+<meta name="description" content="Discover how automated measurement software can accurately differentiate and measure visceral and subcutaneous abdominal fat. Validate its reliability and viability through comparative evaluations with manual measurements such as BMI and waist circumference. Improve clinical research with objective VAT data from CT scans." />
+<meta name="citation_journal_title" content="Journal of Biomedical Science and Engineering" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Young Jae Kim;Jun Yong Jeong;Su Youn Nam;Min Ju Kim;Jae Hwan Oh;Kwang Gi Kim;Dae Kyung Sohn" />
+<meta name="citation_author" content="Young Jae Kim" />
+<meta name="citation_author" content="Jun Yong Jeong" />
+<meta name="citation_author" content="Su Youn Nam" />
+<meta name="citation_author" content="Min Ju Kim" />
+<meta name="citation_author" content="Jae Hwan Oh" />
+<meta name="citation_author" content="Kwang Gi Kim" />
+<meta name="citation_author" content="Dae Kyung Sohn" />
+<meta name="citation_title" content="Development of Three Dimensional Automatic Body Fat Measurement Software from CT, and Its Validation and Evaluation" />
+<meta name="citation_volume" content="8" />
+<meta name="citation_date" content="2015-09-29" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jbise.2015.810063" />
+<meta name="citation_issnPrint" content="1937-6871" />
+<meta name="citation_issnOnline" content="1937-688X" />
+<meta name="citation_abstract" content="Abdominal obesity describes the accumulation of excessive fat in the abdomen. It is known that depending on its distribution, visceral obesity presents a greater danger to health than subcutaneous obesity. To properly prevent and treat visceral obesity, accurate evaluation methods are necessary, and hence quantitative VAT estimation is extremely important. CT scans are the most accurate method for estimating VAT, but it requires a great deal of time and effort, limiting its use in studying or evaluating obesity in patients. This paper proposed automatic measurement software that could quickly differentiate between and measure VAT and SAT. The method was verified using a total of 100 abdominal CT data values; this paper measured the SAT and VAT in the entire abdomen using the automatic measurement software. Additionally, through a comparative evaluation between the automated measurements and manual measurements such as BMI and waist circumference, clinical reliability and viability were validated and evaluated. Between automated measurements and manual measurements, the TAT (r = 0.995, p = 0.01), SAT (r = 0.987, p = 0.01) and VAT (r = 0.993, p = 0.01) showed high correlation. Using BMI as the main metric, the TAT for automated measurements (r = 0.674, p = 0.01) and the TAT for manual measurements (r = 0.703, p = 0.01) showed the strongest correlation. When using waist circumference, the VAT for automated measurements (r = 0.826, p = 0.01) and the VAT for manual measurements (r = 0.822, p = 0.01) showed the strongest correlation. With these results, the reliability and viability of the automatic measurement software were confirmed. The software is expected to help greatly in reducing the time and in providing objective data of VAT measurements from CT scans for clinical research." />
+<meta name="citation_publication_date" content="2015/9/29" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JBiSE_2015092915584202.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JBiSE_2015092915584202.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60054" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60054" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60054" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60054.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60054.xml" />
+<meta name="citation_issue" content="10" />
+<meta name="citation_online_date" content="2015/9/29" />
+<meta name="citation_firstpage" content="665" />
+<meta name="citation_lastpage" content="673" />
+
+<meta name="dc.title" content="Development of Three Dimensional Automatic Body Fat Measurement Software from CT, and Its Validation and Evaluation" />
+
+<meta name="dc.creator" content="Young Jae Kim" />
+<meta name="dc.creator" content="Jun Yong Jeong" />
+<meta name="dc.creator" content="Su Youn Nam" />
+<meta name="dc.creator" content="Min Ju Kim" />
+<meta name="dc.creator" content="Jae Hwan Oh" />
+<meta name="dc.creator" content="Kwang Gi Kim" />
+<meta name="dc.creator" content="Dae Kyung Sohn" /><meta name="dcterms.issued" content="2015-09-29" />
+<meta name="dc.description" content="Abdominal obesity describes the accumulation of excessive fat in the abdomen. It is known that depending on its distribution, visceral obesity presents a greater danger to health than subcutaneous obesity. To properly prevent and treat visceral obesity, accurate evaluation methods are necessary, and hence quantitative VAT estimation is extremely important. CT scans are the most accurate method for estimating VAT, but it requires a great deal of time and effort, limiting its use in studying or evaluating obesity in patients. This paper proposed automatic measurement software that could quickly differentiate between and measure VAT and SAT. The method was verified using a total of 100 abdominal CT data values; this paper measured the SAT and VAT in the entire abdomen using the automatic measurement software. Additionally, through a comparative evaluation between the automated measurements and manual measurements such as BMI and waist circumference, clinical reliability and viability were validated and evaluated. Between automated measurements and manual measurements, the TAT (r = 0.995, p = 0.01), SAT (r = 0.987, p = 0.01) and VAT (r = 0.993, p = 0.01) showed high correlation. Using BMI as the main metric, the TAT for automated measurements (r = 0.674, p = 0.01) and the TAT for manual measurements (r = 0.703, p = 0.01) showed the strongest correlation. When using waist circumference, the VAT for automated measurements (r = 0.826, p = 0.01) and the VAT for manual measurements (r = 0.822, p = 0.01) showed the strongest correlation. With these results, the reliability and viability of the automatic measurement software were confirmed. The software is expected to help greatly in reducing the time and in providing objective data of VAT measurements from CT scans for clinical research." />
+<meta name="dc.source" content="Journal of Biomedical Science and Engineering" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-29" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jbise.2015.810063" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-29" />
+<meta name="prism.issnPrint" content="1937-6871" />
+<meta name="prism.issnOnline" content="1937-688X" />
+<meta name="prism.publicationName" content="Journal of Biomedical Science and Engineering" />
+<meta name="prism.publicationDate" content="2015-09-29" />
+<meta name="prism.volume" content="8" />
+<meta name="prism.number" content="10" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="665" />
+<meta name="prism.doi" content="10.4236/jbise.2015.810063" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60054" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAmUPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTI5ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXABjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9WW91bmcrSmFlKytLaW0mc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Zb3VuZyBKYWUgIEtpbTwvYT48c3VwPjEsMjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1KdW4rWW9uZysrSmVvbmcmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5KdW4gWW9uZyAgSmVvbmc8L2E+PHN1cD4zPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVN1K1lvdW4rK05hbSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPlN1IFlvdW4gIE5hbTwvYT48c3VwPjQ8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9TWluK0p1KytLaW0mc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5NaW4gSnUgIEtpbTwvYT48c3VwPjM8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SmFlK0h3YW4rK09oJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+SmFlIEh3YW4gIE9oPC9hPjxzdXA+NTwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1Ld2FuZytHaSsrS2ltJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+S3dhbmcgR2kgIEtpbTwvYT48c3VwPjEqPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURhZStLeXVuZysrU29obiZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkRhZSBLeXVuZyAgU29objwvYT48c3VwPjEsNTwvc3VwPiBkAgIPZBYCZg8WAh8EBd4KPHN1cD4xPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1CaW9tZWRpY2FsK0VuZ2luZWVyaW5nK0JyYW5jaCUyYytEaXZpc2lvbitvZitDb252ZXJnZW5jZStUZWNobm9sb2d5JTJjK1Jlc2VhcmNoK0luc3RpdHV0ZSUyYytOYXRpb25hbCtDYW5jZXIrQ2VudGVyJTJjK0dveWFuZyUyYytLb3JlYSZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkJpb21lZGljYWwgRW5naW5lZXJpbmcgQnJhbmNoLCBEaXZpc2lvbiBvZiBDb252ZXJnZW5jZSBUZWNobm9sb2d5LCBSZXNlYXJjaCBJbnN0aXR1dGUsIE5hdGlvbmFsIENhbmNlciBDZW50ZXIsIEdveWFuZywgS29yZWE8L2E+LjxiciAvPjxzdXA+Mjwvc3VwPjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RGVwYXJ0bWVudCtvZitQbGFzbWErQmlvK0Rpc3BsYXklMmMrS3dhbmd3b29uK1VuaXZlcnNpdHklMmMrU2VvdWwlMmMrS29yZWEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5EZXBhcnRtZW50IG9mIFBsYXNtYSBCaW8gRGlzcGxheSwgS3dhbmd3b29uIFVuaXZlcnNpdHksIFNlb3VsLCBLb3JlYTwvYT4uPGJyIC8+PHN1cD4zPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1EZXBhcnRtZW50K29mK1JhZGlvbG9neSUyYytIb3NwaXRhbCUyYytOYXRpb25hbCtDYW5jZXIrQ2VudGVyJTJjK0dveWFuZyUyYytLb3JlYSZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkRlcGFydG1lbnQgb2YgUmFkaW9sb2d5LCBIb3NwaXRhbCwgTmF0aW9uYWwgQ2FuY2VyIENlbnRlciwgR295YW5nLCBLb3JlYTwvYT4uPGJyIC8+PHN1cD40PC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1DZW50ZXIrZm9yK0NhbmNlcitQcmV2ZW50aW9uK2FuZCtEZXRlY3Rpb24lMmMrSG9zcGl0YWwlMmMrTmF0aW9uYWwrQ2FuY2VyK0NlbnRlciUyYytHb3lhbmclMmMrS29yZWEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5DZW50ZXIgZm9yIENhbmNlciBQcmV2ZW50aW9uIGFuZCBEZXRlY3Rpb24sIEhvc3BpdGFsLCBOYXRpb25hbCBDYW5jZXIgQ2VudGVyLCBHb3lhbmcsIEtvcmVhPC9hPi48YnIgLz48c3VwPjU8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUNlbnRlcitmb3IrQ29sb3JlY3RhbCtDYW5jZXIlMmMrSG9zcGl0YWwlMmMrTmF0aW9uYWwrQ2FuY2VyK0NlbnRlciUyYytHb3lhbmclMmMrS29yZWEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5DZW50ZXIgZm9yIENvbG9yZWN0YWwgQ2FuY2VyLCBIb3NwaXRhbCwgTmF0aW9uYWwgQ2FuY2VyIENlbnRlciwgR295YW5nLCBLb3JlYTwvYT4uPGJyIC8+ZAIFDxYCHwQFBTQsNzI1ZAIGDxYCHwQFBTUsNzgzZAIHDxYCHwMFD0Rpc3BsYXk6aW5saW5lO2QCCA9kFgICAQ8WAh8EBaMFPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1BYmRvbWluYWwrT2Jlc2l0eSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkFiZG9taW5hbCBPYmVzaXR5PC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rVmlzY2VyYWwrQWRpcG9zZStUaXNzdWUrKFZBVCkmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gVmlzY2VyYWwgQWRpcG9zZSBUaXNzdWUgKFZBVCk8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStTdWJjdXRhbmVvdXMrQWRpcG9zZStUaXNzdWUrKFNBVCkmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU3ViY3V0YW5lb3VzIEFkaXBvc2UgVGlzc3VlIChTQVQpPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rK0NvbXB1dGVyLUFpZGVkK0RpYWdub3NpcysoQ0FEKSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiAgQ29tcHV0ZXItQWlkZWQgRGlhZ25vc2lzIChDQUQpPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rQ29tcHV0ZWQrVG9tb2dyYXBoeSsoQ1QpJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IENvbXB1dGVkIFRvbW9ncmFwaHkgKENUKTwvYT4gZAIKDxYCHwQFkQNLaW0sIFkuICwgSmVvbmcsIEouICwgTmFtLCBTLiAsIEtpbSwgTS4gLCBPaCwgSi4gLCBLaW0sIEsuICBhbmQgU29obiwgRC4gICAoMjAxNSkgRGV2ZWxvcG1lbnQgb2YgVGhyZWUgRGltZW5zaW9uYWwgQXV0b21hdGljIEJvZHkgRmF0IE1lYXN1cmVtZW50IFNvZnR3YXJlIGZyb20gQ1QsIGFuZCBJdHMgVmFsaWRhdGlvbiBhbmQgRXZhbHVhdGlvbi4gPGk+Sm91cm5hbCBvZiBCaW9tZWRpY2FsIFNjaWVuY2UgYW5kIEVuZ2luZWVyaW5nPC9pPiwgPGI+ODwvYj4sIDY2NS02NzMuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qYmlzZS4yMDE1LjgxMDA2MycgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDA1NCknPjEwLjQyMzYvamJpc2UuMjAxNS44MTAwNjM8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50AhsWNmYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Nzg1NicgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATHjAUZvcmQsIEUuLCBMaSwgQy4sIFpoYW8sIEcuIGFuZCBUc2FpLCBKLiAoMjAxMSkgVHJlbmRzIGluIE9iZXNpdHkgYW5kIEFiZG9taW5hbCBPYmVzaXR5IGFtb25nIEFkdWx0cyBpbiB0aGUgVW5pdGVkIFN0YXRlcyBmcm9tIDE5OTktMjAwOC4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIE9iZXNpdHksIDM1LCA3MzYtNzQzLiBoPGJyLz50dHA6Ly9keC5kb2kub3JnLzEwLjEwMzgvaWpvLjIwMTAuMTg2ZAIBD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NTcnIHRhcmdldD0nX2JsYW5rJz4yPC9hPl0BMgEytwFEZXNwcsOpcywgSi5QLiAoMTk5MSkgT2Jlc2l0eSBhbmQgTGlwaWQgTWV0YWJvbGlzbTogUmVsZXZhbmNlIG9mIEJvZHkgRmF0IERpc3RyaWJ1dGlvbi4gQ3VycmVudCBPcGluaW9uIGluIExpcGlkb2xvZ3ksIDIsIDUtMTUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA5Ny8wMDA0MTQzMy0xOTkxMDIwMDAtMDAwMDNkAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Nzg1OCcgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATOWAkZ1amlva2EsIFMuLCBNYXRzdXphd2EsIFkuLCBUb2t1bmFnYSwgSy4gYW5kIFRhcnVpLCBTLiAoMTk4NykgQ29udHJpYnV0aW9uIG9mIEludHJhLUFiZG9taW5hbCBGYXQgQWNjdW11bGF0aW9uIHRvIHRoZSBJbXBhaXJtZW50IG9mIEdsdWNvc2UgYW5kIExpcGlkIE1ldGFib2xpc20gaW4gSHVtYW4gT2Jlc2l0eS4gTWV0YWJvbGlzbS1DbGluaWNhbCBhbmQgRXhwZXJpbWVudGFsLCAzNiwgNTQtNTkuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzAwMjYtMDQ5NSg4Nyk5MDA2My0xZAIDD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NTknIHRhcmdldD0nX2JsYW5rJz40PC9hPl0BNAE0zgJaYW1ib25pLCBNLiwgQXJtZWxsaW5pLCBGLiwgU2hlaWJhbiwgSS4sIERlIE1hcmNoaSwgTS4sIFRvZGVzY28sIFQuLCBCZXJnYW1vLUFuZHJlaXMsIEkuLCBDb21pbmFjaW5pLCBMLiBhbmQgQm9zZWxsbywgTy4gKDE5OTIpIFJlbGF0aW9uIG9mIEJvZHkgRmF0IERpc3RyaWJ1dGlvbiBpbiBNZW4gYW5kIERlLWdyZWUgb2YgQ29yb25hcnkgTmFycm93aW5ncyBpbiBDb3JvbmFyeSBBcnRlcnkgRGlzZWFzZS4gVGhlIEFtZXJpY2FuIEpvdXJuYWwgb2YgQ2FyZGlvbG9neSwgNzAsIDExMzUtMTEzOC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzAwMDItOTE0OSg5Mik5MDA0My1YZAIED2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NjAnIHRhcmdldD0nX2JsYW5rJz41PC9hPl0BNQE1vgFKYWNrc29uLCBBLiwgUG9sbG9jaywgTS5MLiwgR3JhdmVzLCBKLkUuIGFuZCBNYWhhciwgTS4gKDE5ODgpIFJlbGlhYmlsaXR5IGFuZCBWYWxpZGl0eSBvZiBCaW9lbGVjdHJpY2FsIEltcGVkYW5jZSBpbiBEZXRlcm1pbmluZyBCb2R5IENvbXBvc2l0aW9uLiBKb3VybmFsIG9mIEFwcGxpZWQgUGh5c2lvbG9neSwgNjQsIDUyOS01MzQuZAIFD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NjEnIHRhcmdldD0nX2JsYW5rJz42PC9hPl0BNgE2yAJEb25uZWxseSwgTC5GLiwgT+KAmUJyaWVuLCBLLkouLCBEYXJkemluc2tpLCBCLkouLCBQb2UsIFMuQS4sIEJlYW4sIEouQS4sIEhvbGxhbmQsIFMuSy4gYW5kIERhbmllbHMsIFMuUi4gKDIwMDMpIFVzaW5nIGEgUGhhbnRvbSB0byBDb21wYXJlIE1SIFRlY2huaXF1ZXMgZm9yIERldGVybWluaW5nIHRoZSBSYXRpbyBvZiBJbnRyYS1BYmRvbWluYWwgdG8gU3ViY3V0YW5lb3VzIEFkaXBvc2UgVGlzc3VlLiBBbWVyaWNhbiBKb3VybmFsIG9mIFJvZW50Z2Vub2xvZ3ksIDE4MCwgOTkzLTk5OC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4yMjE0L2Fqci4xODAuNC4xODAwOTkzZAIGD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NjInIHRhcmdldD0nX2JsYW5rJz43PC9hPl0BNwE39AFTZWlkZWxsLCBKLkMuLCBCYWtrZXIsIEMuIGFuZCB2YW4gZGVyIEtvb3ksIEsuICgxOTkwKSBJbWFnaW5nIFRlY2huaXF1ZXMgZm9yIE1lYXN1cmluZyBBZGlwb3NlLVRpc3N1ZSBEaXN0cmlidXRpb27igJRBIENvbXBhcmlzb24gYmV0d2VlbiBDb21wdXRlZCBUb21vZ3JhcGh5IGFuZCAxLjUtVCBNYWduZXRpYyBSZXNvbmFuY2UuIFRoZSBBbWVyaWNhbiBKb3VybmFsIG9mIENsaW5pY2FsIE51dHJpdGlvbiwgNTEsIDk1My05NTcuZAIHD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NjMnIHRhcmdldD0nX2JsYW5rJz44PC9hPl0BOAE4uAFUb2t1bmFnYSwgSy4sIE1hdHN1emF3YSwgWS4sIElzaGlrYXdhLCBLLiBhbmQgVGFydWksIFMuICgxOTgyKSBBIE5vdmVsIFRlY2huaXF1ZSBmb3IgdGhlIERldGVybWluYXRpb24gb2YgQm9keSBGYXQgYnkgQ29tcHV0ZWQgVG9tb2dyYXBoeS4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIE9iZXNpdHksIDcsIDQzNy00NDUuZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NjQnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5oQJZb3NoaXp1bWksIFQuLCBOYWthbXVyYSwgVC4sIFlhbWFuZSwgTS4sIElzbGFtLCBBLkguTS5XLiwgTWVuanUsIE0uLCBZYW1hc2FraSwgSy4sIEFyYWksIFQuLCBLb3RhbmksIEsuLCBGdW5haGFzaGksIFQuIGFuZCBZYW1hc2hpdGEsIFMuICgxOTk5KSBBYi1kb21pbmFsIEZhdDogU3RhbmRhcmRpemVkIFRlY2huaXF1ZSBmb3IgTWVhc3VyZW1lbnQgYXQgQ1QxLiBSYWRpb2xvZ3ksIDIxMSwgMjgzLTI4Ni4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTQ4L3JhZGlvbG9neS4yMTEuMS5yOTlhcDE1MjgzZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NjUnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwlgJOYW0sIFMuWS4sIENob2ksIEkuSi4sIFJ5dSwgSy5ILiwgUGFyaywgQi5KLiwgS2ltLCBILkIuIGFuZCBOYW0sIEIuSC4gKDIwMTApIEFiZG9taW5hbCBWaXNjZXJhbCBBZGlwb3NlIFRpc3N1ZSBWb2x1bWUgSXMgQXNzb2NpYXRlZCB3aXRoIEluY3JlYXNlZCBSaXNrIG9mIEVyb3NpdmUgRXNvcGhhZ2l0aXMgaW4gTWVuIGFuZCBXb21lbi4gR2FzdHJvZW50ZXJvbG9neSwgMTM5LCAxOTAyLTE5MTEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA1My9qLmdhc3Ryby4yMDEwLjA4LjAxOWQCCg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3ODY2JyB0YXJnZXQ9J19ibGFuayc+MTE8L2E+XQIxMQIxMfgBR2Fycm91c3RlLU9yZ2VhcywgTS4sIFRyb2Now6ksIEcuLCBBem91bGF5LCBFLiwgQ2F1YmVsLCBBLiwgTGFzc2VuY2UsIEEuLCBDaGV2YWwsIEMuLCBNb250ZXNpbm8sIEwuLCBUaHVvbmcsIE0uLCBWaW5jZW50LCBGLiBhbmQgQ29oZW4sIFkuICgyMDA0KSBCb2R5IE1hc3MgSW5kZXguIEludGVuc2l2ZSBDYXJlIE1lZGljaW5lLCAzMCwgNDM3LTQ0My48YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvczAwMTM0LTAwMy0yMDk1LTJkAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Nzg2NycgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTL/AUVuemksIEcuLCBHYXNwYXJvLCBNLiwgQmlvbmRldHRpLCBQLlIuLCBGaW9yZSwgRC4sIFNlbWlzYSwgTS4gYW5kIFp1cmxvLCBGLiAoMTk4NikgU3ViY3V0YW5lb3VzIGFuZCBWaXNjZXJhbCBGYXQgRGlzdHJpYnV0aW9uIEFjY29yZGluZyB0byBTZXgsIEFnZSwgYW5kIE92ZXJ3ZWlnaHQsIEV2YWx1YXRlZCBieSBDb21wdXRlZCBUb21vZ3JhcGh5LiBUaGUgQW1lcmljYW4gSm91cm5hbCBvZiBDbGluaWNhbCBOdXRyaXRpb24sIDQ0LCA3MzktNzQ2LmQCDA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3ODY4JyB0YXJnZXQ9J19ibGFuayc+MTM8L2E+XQIxMwIxM7ICTWFjb3IsIEMuLCBSdWdnZXJpLCBBLiwgTWF6em9uZXR0bywgUC4sIEZlZGVyc3BpbCwgRy4sIENvYmVsbGksIEMuIGFuZCBWZXR0b3IsIFIuICgxOTk3KSBWaXNjZXJhbCBBZGlwb3NlIFRpc3N1ZSBJbXBhaXJzIEluc3VsaW4gU2VjcmV0aW9uIGFuZCBJbnN1bGluIFNlbnNpdGl2aXR5IGJ1dCBOb3QgRW5lcmd5IEV4cGVuZGl0dXJlIGluIE9iZXNpdHkuIE1ldGFib2xpc206IENsaW5pY2FsIGFuZCBFeHBlcmltZW50YWwsIDQ2LCAxMjMtMTI5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvUzAwMjYtMDQ5NSg5Nyk5MDI4OC0yZAIND2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NjknIHRhcmdldD0nX2JsYW5rJz4xNDwvYT5dAjE0AjE0+AFIYW4sIFQuLCBWYW4gTGVlciwgRS4sIFNlaWRlbGwsIEouIGFuZCBMZWFuLCBNLiAoMTk5NSkgV2Fpc3QgQ2lyY3VtZmVyZW5jZSBBY3Rpb24gTGV2ZWxzIGluIHRoZSBJZGVudGlmaWNhdGlvbiBvZiBDYXJkaW92YXNjdWxhciBSaXNrIEZhY3RvcnM6IFByZXZhbGVuY2UgU3R1ZHkgaW4gYSBSYW5kb20gU2FtcGxlLiBCTUosIDMxMSwgMTQwMS0xNDA1Ljxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEzNi9ibWouMzExLjcwMTcuMTQwMWQCDg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3ODcwJyB0YXJnZXQ9J19ibGFuayc+MTU8L2E+XQIxNQIxNfUBQXNod2VsbCwgTS4sIENvbGUsIFQuSi4gYW5kIERpeG9uLCBBLksuICgxOTg1KSBPYmVzaXR5OiBOZXcgSW5zaWdodCBpbnRvIHRoZSBBbnRocm9wb21ldHJpYyBDbGFzc2lmaWNhdGlvbiBvZiBGYXQgRGlzdHJpYnV0aW9uIFNob3duIGJ5IENvbXB1dGVkIFRvbW9ncmFwaHkuIEJyaXRpc2ggTWVkaWNhbCBKb3VybmFsLCAyOTAsIDE2OTItMTY5NC48YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMzYvYm1qLjI5MC42NDgzLjE2OTJkAg8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Nzg3MScgdGFyZ2V0PSdfYmxhbmsnPjE2PC9hPl0CMTYCMTazAUtpbSwgQy5ILiBhbmQgSnVuZywgSi5JLiAoMjAwNikgU3R1ZHkgZm9yIEhvdW5zZmllbGQgVW5pdHMgaW4gQ29tcHV0ZWQgVG9tb2dyYW0gd2l0aCBKYXcgTGVzaW9uLiBKb3VybmFsIG9mIHRoZSBLb3JlYW4gQXNzb2NpYXRpb24gb2YgT3JhbCBhbmQgTWF4aWxsb2ZhY2lhbCBTdXJnZW9ucywgMzIsIDM5MS0zOTYuZAIQD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NzInIHRhcmdldD0nX2JsYW5rJz4xNzwvYT5dAjE3AjE33QFDaGFuZywgRi4sIENoZW4sIEMuSi4gYW5kIEx1LCBDLkouICgyMDA0KSBBIExpbmVhci1UaW1lIENvbXBvbmVudC1MYWJlbGluZyBBbGdvcml0aG0gVXNpbmcgQ29udG91ciBUcmFjaW5nIFRlY2huaXF1ZS4gQ29tcHV0ZXIgVmlzaW9uIGFuZCBJbWFnZSBVbmRlcnN0YW5kaW5nLCA5MywgMjA2LTIyMC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouY3ZpdS4yMDAzLjA5LjAwMmQCEQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3ODczJyB0YXJnZXQ9J19ibGFuayc+MTg8L2E+XQIxOAIxOOUBRGkgU3RlZmFubywgTC4gYW5kIEJ1bGdhcmVsbGksIEEuICgxOTk5KSBBIFNpbXBsZSBhbmQgRWZmaWNpZW50IENvbm5lY3RlZCBDb21wb25lbnRzIExhYmVsaW5nIEFsZ29yaXRobS4gSUVFRTogSW1hZ2UgQW5hbHlzaXMgYW5kIFByb2Nlc3NpbmcsIFZlbmljZSwgMjctMjkgU2VwdGVtYmVyIDE5OTksIDMyMi0zMjcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9pY2lhcC4xOTk5Ljc5NzYxNWQCEg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3ODc0JyB0YXJnZXQ9J19ibGFuayc+MTk8L2E+XQIxOQIxOY8CQmFuZGVrYXIsIEEuTi4sIE5hZ2hhdmksIE0uIGFuZCBLYWthZGlhcmlzLCBJLkEuICgyMDA2KSBBdXRvbWF0ZWQgUGVyaWNhcmRpYWwgRmF0IFF1YW50aWZpY2F0aW9uIGluIENUIERhdGEuIElFRUUtRU1CUyAyMDA2LiAyOHRoIEFubnVhbCBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb2YgdGhlIElFRUUsIE5ldyBZb3JrLCAzMCBBdWd1c3QtMyBTZXB0ZW1iZXIgMjAwNiwgOTMyLSA5MzUuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9pZW1icy4yMDA2LjI1OTI1OWQCEw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3ODc1JyB0YXJnZXQ9J19ibGFuayc+MjA8L2E+XQIyMAIyMKsBR3JhaGFtLCBSLkwuIGFuZCBGcmFuY2VzIFlhbywgRi4gKDE5ODMpIEZpbmRpbmcgdGhlIENvbnZleCBIdWxsIG9mIGEgU2ltcGxlIFBvbHlnb24uIEpvdXJuYWwgb2YgQWxnb3JpdGhtcywgNCwgMzI0LTMzMS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzAxOTYtNjc3NCg4Myk5MDAxMy01ZAIUD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NzYnIHRhcmdldD0nX2JsYW5rJz4yMTwvYT5dAjIxAjIx0AFCZW5lc3R5LCBKLiwgQ2hlbiwgSi4sIEh1YW5nLCBZLiBhbmQgQ29oZW4sIEkuICgyMDA5KSBQZWFyc29uIENvcnJlbGF0aW9uIENvZWZmaWNpZW50LiBJbjogTm9pc2UgUmVkdWN0aW9uIGluIFNwZWVjaCBQcm9jZXNzaW5nLCBTcHJpbmdlciwgSGVpZGVsYmVyZywgMzctNDAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwNy85NzgtMy02NDItMDAyOTYtMF81ZAIVD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4NzcnIHRhcmdldD0nX2JsYW5rJz4yMjwvYT5dAjIyAjIyzgFNYXJ0aW4gQmxhbmQsIEouIGFuZCBBbHRtYW4sIEQuICgxOTg2KSBTdGF0aXN0aWNhbCBNZXRob2RzIGZvciBBc3Nlc3NpbmcgQWdyZWVtZW50IGJldHdlZW4gVHdvIE1ldGhvZHMgb2YgQ2xpbmljYWwgTWVhc3VyZW1lbnQuIFRoZSBMYW5jZXQsIDMyNywgMzA3LTMxMC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L1MwMTQwLTY3MzYoODYpOTA4MzctOGQCFg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3ODc4JyB0YXJnZXQ9J19ibGFuayc+MjM8L2E+XQIyMwIyM7wBQmxhbmQsIEouTS4gYW5kIEFsdG1hbiwgRC5HLiAoMTk5OSkgTWVhc3VyaW5nIEFncmVlbWVudCBpbiBNZXRob2QgQ29tcGFyaXNvbiBTdHVkaWVzLiBTdGF0aXN0aWNhbCBNZXRob2RzIGluIE1lZGljYWwgUmVzZWFyY2gsIDgsIDEzNS0xNjAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTE5MS8wOTYyMjgwOTk2NzM4MTkyNzJkAhcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Nzg3OScgdGFyZ2V0PSdfYmxhbmsnPjI0PC9hPl0CMjQCMjS4AURvaSwgSy4gKDIwMDUpIEN1cnJlbnQgU3RhdHVzIGFuZCBGdXR1cmUgUG90ZW50aWFsIG9mIENvbXB1dGVyLUFpZGVkIERpYWdub3NpcyBpbiBNZWRpY2FsIEltYWdpbmcuIEJyaXRpc2ggSm91cm5hbCBvZiBSYWRpb2xvZ3ksIDc4LCBzMy1zMTkuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTI1OS9ianIvODI5MzMzNDNkAhgPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3Nzg4MCcgdGFyZ2V0PSdfYmxhbmsnPjI1PC9hPl0CMjUCMjWZAkJhbmRla2FyLCBBLk4uLCBOYWdoYXZpLCBNLiBhbmQgS2FrYWRpYXJpcywgSS5BLiAoMjAwNSkgUGVyZm9ybWFuY2UgRXZhbHVhdGlvbiBvZiBBYmRvbWluYWwgRmF0IEJ1cmRlbiBRdWFudGlmaWNhdGlvbiBpbiBDVC4gSUVFRS1FTUJTIDIwMDUuIDI3dGggQW5udWFsIEludGVybmF0aW9uYWwgQ29uZmVyZW5jZSBvZiB0aGUgSUVFRSwgU2hhbmdoYWksIDE3LTE4IEphbnVhcnkgMjAwNSwgMzI4MC0zMjgzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvaWVtYnMuMjAwNS4xNjE3MTc3ZAIZD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4ODEnIHRhcmdldD0nX2JsYW5rJz4yNjwvYT5dAjI2AjI2hgJLdWxsYmVyZywgSi4sIEFobHN0cm9tLCBILiwgSm9oYW5zc29uLCBMLiBhbmQgRnJpbW1lbCwgSC4gKDIwMDcpIEF1dG9tYXRlZCBhbmQgUmVwcm9kdWNpYmxlIFNlZ21lbnRhdGlvbiBvZiBWaXNjZXJhbCBhbmQgU3ViY3V0YW5lb3VzIEFkaXBvc2UgVGlzc3VlIGZyb20gQWJkb21pbmFsIE1SSS4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIE9iZXNpdHksIDMxLCAxODA2LTE4MTcuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDM4L3NqLmlqby4wODAzNjcxZAIaD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc4ODInIHRhcmdldD0nX2JsYW5rJz4yNzwvYT5dAjI3AjI38AFLaW0sIFkuSi4sIExlZSwgUy5ILiwgS2ltLCBULlkuLCBQYXJrLCBKLlkuLCBDaG9pLCBTLkguIGFuZCBLaW0sIEsuRy4gKDIwMTMpIEJvZHkgRmF0IEFzc2Vzc21lbnQgTWV0aG9kIFVzaW5nIENUIEltYWdlcyB3aXRoIFNlcGFyYXRpb24gTWFzayBBbGdvcml0aG0uIEpvdXJuYWwgb2YgRGlnaXRhbCBJbWFnaW5nLCAyNiwgMTU1LTE2Mi48YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvczEwMjc4LTAxMi05NDg4LTBkAggPZBYEAgcPFgIfAwUNRGlzUGxheTpOb25lO2QCCA8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAILD2QWAmYPFgIeB1Zpc2libGVnZAIMD2QWAgIBD2QWAgIBD2QWAgIDDxAPFgYeDURhdGFUZXh0RmllbGQFCVNob3J0TmFtZR4ORGF0YVZhbHVlRmllbGQFCUpvdXJuYWxJRB4LXyFEYXRhQm91bmRnZBAVgAIOU2VsZWN0IEpvdXJuYWwCQUEDQUFEA0FBUgZBQVNvY2kEQUFTVANBQkIDQUJDBEFCQ1IEQUNFUwNBQ1MDQUNUAkFEA0FEUgJBRQNBRVIDQUhTA0FJRANBaU0DQUlUBEFKQUMDQUpDBEFKQ0MEQUpDTQVBSklCTQRBSk1CBEFKT1IEQUpQUwVBTEFNVANBTEMDQUxTAkFNA0FNSQRBTVBDA0FOUANBUEQDQVBFA0FQTQNBUlMFQVJTY2kCQVMDQVNNA0JMUgJDQwJDRQdDZWxsQmlvBkNoblN0ZAJDTQNDTUICQ04EQ1JDTQJDUwRDU1RBA0NVUwVDV0VFRQlEZXRlY3Rpb24ERU1BRQNFTkcDRVBFBEVUU04ERk1BUgNGTlMDR0VQA0dJUwJHTQhHcmFwaGVuZQNHU0MGSGVhbHRoAklCA0lDQQNJSU0ESUpBQQZJSkFNU0MFSUpDQ0UESUpDTQVJSkNOUwNJSkcFSUpJRFMESUpJUwZJSk1OVEEISUpNUENFUk8ESUpOTQRJSk9DBklKT0hOUwtJbmZyYU1hdGljcwVKQUNFTgRKQU1QBUpBU01JBEpCQlMFSkJDUFIFSkJpU0UDSkJNBEpCTkIESkJQQwNKQ0MFSkNEU0EESkNQVANKQ1QFSkRBSVADSkRNBEpFQVMFSkVDVEMFSkVNQUEDSkVQBUpGQ01WBEpGUk0ESkdJUwZKSEVQR0MFSkhSU1MGSklCVFZBBUpJTFNBA0pJUwNKTUYGSk1HQk5EBUpNTUNFA0pNUARKUEVFBEpRSVMESlNCUwRKU0VBBkpTRU1BVARKU0lQA0pTUwRKU1NNA0pTVANKVFIESlRTVARKVFRzBUpXQVJQA0xDRQJNQwJNRQJNSQNNTUUFTU5TTVMDTVBTAk1SA01SQwNNUkkDTVNBBE1TQ0UETkpHQwJOTQJOUgJOUwVPQUxpYgZPQUxpYkoET0RFTQNPSkEET0pBQgZPSkFjY3QGT0pBbmVzBE9KQVAFT0pBcG8GT0pBcHBTBU9KQVByBE9KQVMET0pCRAdPSkJJUEhZBE9KQk0DT0pDBE9KQ0IET0pDRARPSkNFBE9KQ00DT0pEBU9KRGVyBE9KRE0DT0pFBE9KRUUET0pFTQVPSkVNRAVPSkVwaQRPSkVSA09KRgRPSkZEA09KRwVPSkdhcwVPSkdlbgNPSkkET0pJQwRPSklNBU9KSU5NA09KTANPSk0ET0pNQwdPSk1ldGFsBE9KTUgET0pNSQVPSk1JUARPSk1MBE9KTU0ET0pNTgRPSk1QBE9KTVMFT0pNU2kDT0pOBk9KTmVwaANPSk8ET0pPRwZPSk9HYXMET0pPcAVPSk9waAVPSk9QTQVPSk9UUwtPSlBhdGhvbG9neQRPSlBDB09KUENoZW0FT0pQZWQET0pQTQRPSlBQBE9KUFMHT0pQc3ljaARPSlJBBU9KUmFkBE9KUkQET0pSTQNPSlMET0pTUwVPSlNTVARPSlNUBU9KU1RBBE9KVFIET0pUUwNPSlUET0pWTQNPUEoDUE9TAlBQA1BTVAVQU1lDSANTQVIDU0NEBFNHUkUCU00CU04DU05MBFNvZnQCU1MDVEVMAlRJBFVPQUoCVlADV0VUA1dKQQRXSkNEBVdKQ01QBFdKQ1MEV0pFVANXSk0EV0pOUwVXSk5TRQVXSk5TVANXSlYDV1NOAllNFYACATADNzM3BDE0MDgEMTQwNgQxMDAyBDI0MjMDMTY0AzYxMQQxNDc4AzQ3MwM0OTIEMTU3OQQyNDM3BDI0NDIEMjQ0NAQyNDI2BDIzMTYDODAzBDEwMDADNDc2AzIwMwQyNDIyBDEzMDQDNTM1Azg4NAM1MzIDNTI5AzIwNwM5OTYEMTUxNwQyMzE3AzE2MAM0NzcDNjc1BDE1NzMEMTU3NAM3NDMDNTEzBDE1NzUEMjQ0NQMxOTEDODEyAzI2MAQyNDU1AzEzNgQyMDc0BDE0OTMDMTIyAzk4OQI5MgQyMDMzAzE3MwQxNDkyBDI0MzgEMTUxOAQyNDU0BDI0NTcCNjQCOTMEMTMxMQQyMzE1AzIwOAQyNDMyBDI0NjIDNTQxBDE2OTADNTEyAjY1AzEwMwMxNzYDMTExAzQ5MAQyNDQ5BDEzOTEDMjAyATQDMjA5BDI0MjgDNzQ3BDEyNjEEMTU3OAQxNTE5AzUyNwQxNDc3BDEyOTgEMTk4MAQyNDM2AzUyNQM0NzUEMjQ0MwIzMAQyNDM1AzIzMAMxNjIEMjQzMQM1MzADNTI2AzEyNQQyNDI1AzQ3OQM1MzEDNjkxAjI5AzE0NAQxOTg2BDEzOTUDMTE0BDI0NjEEMjQyMQQxNDExAzEwMgMxNzUDNjQ4AzM5NwQxNzUzAzE3MgQyNDMzAzU5MQM5OTACNDUDNTQzAzMzOQQyNDMwAjI4AzQ3OAQyNDM5BDI0NjADMzU3AjQ2AzIxMAQxNDg1AzE2MwM3ODcDNzg2AzkxNwM4MTUEMjQ0MQQxNDg3BDE1NzYDMTc0BDI0MzQDNTI4AzIwNQMxOTICNjkEMjQ1OQQyNDYzBDI0NTMDNzM4BDE0ODAEMTU5MAM4MTQEMTQwNwQxNDc5BDEwMDMEMjQ0NgM2MDEDODA2Azc4NQQyNDQ3BDI0NTIDOTk3AzYwNgM3ODgDNzkyBDE5NzcDODEwAzU4NgM2MTQEMTU3NwQyNDU2AzgxMQM4MTYEMTk3OQM3MzYEMTAwNAM1ODcDODE3AzYxMwM2MDIDNTkyAzU5MwM3OTMEMTE4NgM1ODgDNzkwAzc4NAM3MzkDODIwAzYxMgM3NDIDOTk5AzgyMgM5OTgDNTk2BDI0MjQDNjA1AzgyMQM4MDQDNjA0BDI0NjQEMTk3OAM4MDUDNzk0AzgyMwM4MTMDNTg5Azc5MQM2MDkDNjEwAzc0MQM3NDQDNjAzAzgwNwM3ODkDODI0BDEzOTQDNTkwAzczNQM2MDADNjA3BDE0ODYEMjQ0OAM4MDgDNTA5BDEwMDEDNTQ3AjcxAzIwNgQyNDQwAzE0OAQyNDUwAzUzMwMxMzUDNDc0BDE1ODkDNDkxBDIwMzQDMjA0AzY2NgMxMDQEMTQwNQQyNDU4AzE0NgM1MTEDODE4AzUwMgM4MDkEMjQ1MQM1MDYDNjE1AzQ5MwM1MzQDNTEwAjQxBDI0NjUUKwOAAmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZGSauuPs1xPMh6EIHtRE9GwuE3ouef+MzlXw0mRyQXv3YQ==" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=30" title="Journal of Biomedical Science and Engineering">
+                    Journal of Biomedical Science and Engineering</a> &gt; <a href="home?issueid=7019#60054">Vol.8 No.10, October 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Development of Three Dimensional Automatic Body Fat Measurement Software from CT, and Its Validation and Evaluation <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Young+Jae++Kim&searchfield=authors&page=1' target='_blank'>Young Jae  Kim</a><sup>1,2</sup>, <a href='articles?searchcode=Jun+Yong++Jeong&searchfield=authors&page=1' target='_blank'>Jun Yong  Jeong</a><sup>3</sup>, <a href='articles?searchcode=Su+Youn++Nam&searchfield=authors&page=1' target='_blank'>Su Youn  Nam</a><sup>4</sup>, <a href='articles?searchcode=Min+Ju++Kim&searchfield=authors&page=1' target='_blank'>Min Ju  Kim</a><sup>3</sup>, <a href='articles?searchcode=Jae+Hwan++Oh&searchfield=authors&page=1' target='_blank'>Jae Hwan  Oh</a><sup>5</sup>, <a href='articles?searchcode=Kwang+Gi++Kim&searchfield=authors&page=1' target='_blank'>Kwang Gi  Kim</a><sup>1*</sup>, <a href='articles?searchcode=Dae+Kyung++Sohn&searchfield=authors&page=1' target='_blank'>Dae Kyung  Sohn</a><sup>1,5</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Biomedical+Engineering+Branch%2c+Division+of+Convergence+Technology%2c+Research+Institute%2c+National+Cancer+Center%2c+Goyang%2c+Korea&searchfield=affs&page=1' target='_blank'>Biomedical Engineering Branch, Division of Convergence Technology, Research Institute, National Cancer Center, Goyang, Korea</a>.<br /><sup>2</sup><a href='articles?searchcode=Department+of+Plasma+Bio+Display%2c+Kwangwoon+University%2c+Seoul%2c+Korea&searchfield=affs&page=1' target='_blank'>Department of Plasma Bio Display, Kwangwoon University, Seoul, Korea</a>.<br /><sup>3</sup><a href='articles?searchcode=Department+of+Radiology%2c+Hospital%2c+National+Cancer+Center%2c+Goyang%2c+Korea&searchfield=affs&page=1' target='_blank'>Department of Radiology, Hospital, National Cancer Center, Goyang, Korea</a>.<br /><sup>4</sup><a href='articles?searchcode=Center+for+Cancer+Prevention+and+Detection%2c+Hospital%2c+National+Cancer+Center%2c+Goyang%2c+Korea&searchfield=affs&page=1' target='_blank'>Center for Cancer Prevention and Detection, Hospital, National Cancer Center, Goyang, Korea</a>.<br /><sup>5</sup><a href='articles?searchcode=Center+for+Colorectal+Cancer%2c+Hospital%2c+National+Cancer+Center%2c+Goyang%2c+Korea&searchfield=affs&page=1' target='_blank'>Center for Colorectal Cancer, Hospital, National Cancer Center, Goyang, Korea</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jbise.2015.810063"
+                    target="_blank" onclick='SetNum(60054)'>10.4236/jbise.2015.810063</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JBiSE_2015092915584202.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60054)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60054' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60054.xml' target='_blank' onclick='SetNum(60054)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    4,725</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    5,783</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60054&JournalID=30' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">Abdominal obesity describes the accumulation of excessive fat in the abdomen. It is known that depending on its distribution, visceral obesity presents a greater danger to health than subcutaneous obesity. To properly prevent and treat visceral obesity, accurate evaluation methods are necessary, and hence quantitative VAT estimation is extremely important. CT scans are the most accurate method for estimating VAT, but it requires a great deal of time and effort, limiting its use in studying or evaluating obesity in patients. This paper proposed automatic measurement software that could quickly differentiate between and measure VAT and SAT. The method was verified using a total of 100 abdominal CT data values; this paper measured the SAT and VAT in the entire abdomen using the automatic measurement software. Additionally, through a comparative evaluation between the automated measurements and manual measurements such as BMI and waist circumference, clinical reliability and viability were validated and evaluated. Between automated measurements and manual measurements, the TAT (r = 0.995, <em>p</em> = 0.01), SAT (r = 0.987,<em> p</em> = 0.01) and VAT (r = 0.993, <em>p</em> = 0.01) showed high correlation. Using BMI as the main metric, the TAT for automated measurements (r = 0.674, <em>p</em> = 0.01) and the TAT for manual measurements (r = 0.703, <em>p</em> = 0.01) showed the strongest correlation. When using waist circumference, the VAT for automated measurements (r = 0.826, <em>p</em> = 0.01) and the VAT for manual measurements (r = 0.822, <em>p</em> = 0.01) showed the strongest correlation. With these results, the reliability and viability of the automatic measurement software were confirmed. The software is expected to help greatly in reducing the time and in providing objective data of VAT measurements from CT scans for clinical research.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Abdominal+Obesity&searchfield=keyword&page=1' target='_blank'>Abdominal Obesity</a>, <a href='articles?searchcode=+Visceral+Adipose+Tissue+(VAT)&searchfield=keyword&page=1' target='_blank'> Visceral Adipose Tissue (VAT)</a>, <a href='articles?searchcode=+Subcutaneous+Adipose+Tissue+(SAT)&searchfield=keyword&page=1' target='_blank'> Subcutaneous Adipose Tissue (SAT)</a>, <a href='articles?searchcode=++Computer-Aided+Diagnosis+(CAD)&searchfield=keyword&page=1' target='_blank'>  Computer-Aided Diagnosis (CAD)</a>, <a href='articles?searchcode=+Computed+Tomography+(CT)&searchfield=keyword&page=1' target='_blank'> Computed Tomography (CT)</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Kim, Y. , Jeong, J. , Nam, S. , Kim, M. , Oh, J. , Kim, K.  and Sohn, D.   (2015) Development of Three Dimensional Automatic Body Fat Measurement Software from CT, and Its Validation and Evaluation. <i>Journal of Biomedical Science and Engineering</i>, <b>8</b>, 665-673. doi: <a href='http://dx.doi.org/10.4236/jbise.2015.810063' target='_blank' onclick='SetNum(60054)'>10.4236/jbise.2015.810063</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p>Abdominal obesity refers to the excessive accumulation of adipose tissue in the abdomen, and is defined by waist circumferences over 102 cm for Caucasian males and 88 cm for Caucasian females [1] . Depending on the distribution, total adipose tissue (TAT) can be further divided into subcutaneous adipose tissue (SAT) and visceral adipose tissue (VAT). Studies have reported that a high amount of VAT buildup, or visceral obesity, presents a greater health risk than subcutaneous obesity. Despres et al. reported a high correlation between VAT and hypertension, an increase in neutral fat concentration, a decrease in high-density lipoprotein cholesterol concentration, and an increase in hyperlipidemia, while Fujioka et al. discussed that VAT as the source of insulin concentration increased insulin resistance and reduced glucose tolerance [2] [3] . Also, though most patients with visceral obesity are aware of their condition, severe cases of VAT accumulation can occur in physically thin patients as well, which are more difficult for the patient to detect, possibly placing them in greater danger [4] . To effectively prevent and treat visceral obesity, it must be precisely evaluated, and this requires a quantitative method of estimating VAT.</p> 
+<p>Current methods capable of estimating VAT clinically are bioelectric impedance analysis (BIA), magnetic resonance imaging (MRI), and computed tomography (CT) scanning. BIA sends a weak current through the body and measures the bioelectric impedance to estimate body fat, and uses an internally developed regression equation to calculate the area of VAT [5] . The method is simple and has accordingly seen widespread clinical practice, but there are few cases supporting that its estimations are accurate. MRI provides tissue cross-section images that can be used to measure VAT without exposure to radiation, but is expensive and time-consuming and has been reported to be less accurate in detecting adipose tissue (AT) than CT, thus decreasing the frequency of its actual use [6] [7] . CT images, much like MRI, are cross-section images of patient tissue, and can clearly discern adipose tissue from the surrounding tissue. CT scans provide the greatest accuracy and are widely used as a standard measurement method [8] . However, they accompany the issue of radiation exposure. Furthermore, since all cross section images must be differentiated, it is difficult to use practically, and is costly and time- consuming [9] . Due to these issues, despite its accuracy, CT scans are used little in practice.</p> 
+<p>This paper aims to resolve the issue regarding inefficiencies in CT measurement by using computer image processing methods. Novel software which can automatically identify and measure SAT and VAT from CT scan data is developed and its accuracy and reliability are validated by comparing the results with the manual evaluation of two experts.</p> 
+<p class="E-Title1">2. Materials and Method</p> 
+<p class="E-Title2">2.1. Research Target</p> 
+<p>The CT data used in this paper were taken from a 2010 study by Nam et al. that looked into the relationship between abdominal VAT and colorectal adenoma. Abdominal CT data and manual measurement results were referenced from this paper [10] . The CT data were compiled from 100 patients at the National Cancer Institute, of which 53 were male and 47 were female. Patient age ranged from 29 to 76. CT scan were performed with all subjects in the supine position using Brilliance 64 (Philips, Netherlands; matrix of 512 &times; 512, slice thickness of 5 mm, 120 kVp, 150 mA). Discharge levels of the abdomen were composed of 24 CT slices (a total of 120 mm). Patients’ privacy information was discarded and managed using anonymous numbers.</p> 
+<p class="E-Title2">2.2. Body Mass Index (BMI)</p> 
+<p>BMI is simple to calculate and widely used as a standard for obesity, and it has been reported that there is a correlation between CT and simple obesity indicators [11] . Macor et al. established that BMI and TAT (r = 0.86, p &lt; 0.0001) are related, and Enzi et al. also found links between TAT (r = 0.876, p &lt; 0.001), SAT (r = 0.871, p &lt; 0.001), and VAT (r = 0.503, p &lt; 0.001) [12] [13] .</p> 
+<p class="E-Title2">2.3. Waist Circumference (WC)</p> 
+<p>Waist circumference, another simple indicator of obesity, is used as an indicator of cardiovascular disease [14] . It is also correlated to VAT, and reflects VAT more effectively than the waist-to-hip ratio [15] . This paper measured waist circumference using CT, and following WHO guidelines, performing the measurement between the lowest region of the ribs and the middle of the pelvic iliac crest.</p> 
+<p class="E-Title2">2.4. Manual Measurement</p> 
+<p>This study used manual measurement results from Nam et al. [10] . Nam et al. used the Extended Brilliance Workspace (Version 3.5, Phillips Medical System, NT) software in making manual measurements. The observer outlined the TAT excluding the skin and spinal regions, and abdominal VAT as areas of interest, from which adipose tissue volume was computed within the attenuation value range. The SAT was defined as the difference between the TAT and VAT volumes.</p> 
+<p class="E-Title2">2.5. Automatic Measurement</p> 
+<p>The automatic measurement software which we developed was used to automatically measure the SAT and VAT within the abdomen. Microsoft Visual Studio (Ver. 2005, Microsoft, Redmond, USA) was used for the development of algorithms and software, and ITK (Ver. 3.14.0, Kitware, USA) and VTK (Ver. 5.10.0, Kitware, USA) were used as libraries. This software uses a pre-processing and mask separation method to differentiate the different types of adipose tissue and evaluate them. <a href="#f1" target="_self">Figure 1</a> is a flowchart of the process.</p> 
+<p>This paper, to enhance the processing speed of the algorithm and prevent detection error, pre-processed the CT image such that it only contains the abdomen region of the body. This eliminates unnecessary elements such as the bed or sheets from the search region, thereby increasing accuracy. By limiting the region to be processed, the efficiency of the algorithm also is increased [16] . Within the abdomen region, areas with values less than 1000 HU, which correspond to air, are deemed below the threshold and deleted, while the rest of the region is labeled in 3-dimensions, of which the largest region is labeled as the body [17] [18] .</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-9102191x6.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Algorithm flowchart.</p> 
+</div> 
+<p>Once the pre-processing stage is completed, the narrowed down region is divided and processed for adipose tissue. Once all of the TAT within the region is detected, a separation mask divides the SAT and VAT. TAT was detected by setting the range threshold between −30 and −190 HU [19] . The separation mask generates TAT within the abdominal region excluding the organs. Anatomically, the abdominal cavity, due to being surrounded by muscle and bone, is the most suitable organ to differentiate SAT and VAT. Additionally, among the organs excluding the adipose tissue, muscle and bone are located near the outer regions, making SAT and VAT differentiation possible by creating a separation mask using the outermost outline of the organ region. In this study the organ region excluding TAT was detected, and the Convex Hull algorithm was used to obtain the outermost closed path fully encompassing the organ region. The Convex Hull algorithm calculates the smallest possible convex polygon, and the shortest closed path containing this polygon can be found [20] . However, error does occur as the closed path and organ regions do not always match, and this may affect the quantitative results. Closed path adjustments were thus performed by translating the coordinates such that it matched the organ region. All closed path coordinates not close to the organ region were translated laterally or vertically such that they adhered to the organ region. Once all adjustments were completed, any point is taken as the starting point and is sequentially connected to its next closest closed path point. Using this method, once all connections have been completed, an adjusted closed path such as that in <a href="#f2" target="_self">Figure 2</a>(b) can be seen, and the closed path’s interior is defined by the separation mask.</p> 
+<p>In this study a difference operation on the separation mask region of the detected TAT region was used to detect the SAT region, and an operation to detect the VAT region was separately used.</p> 
+<p>The Pearson’s correlation analysis was conducted using the manual and automatic measurement results and the simple obesity indicators [21] . For the measured results, TAT, SAT, VAT, and VSR, the ratio between VAT and SAT, which is known to have a close relationship with abdominal obesity, were set as the items to be used, while for the simple obesity indicators, BMI and waist circumference were set as items. The level of significance α was set to 0.01.</p> 
+<p class="E-Title1">3. Results</p> 
+<p>A separation mask was defined based on the organ region of the abdominal CT, and it was used to differentiate and detect SAT and VAT. <a href="#f3" target="_self">Figure 3</a> and <a href="#f4" target="_self">Figure 4</a> show the developed automatic adipose tissue measurement software and its results.</p> 
+<p>In order to validate the performance of the developed software and evaluate its clinical viability, a correlation analysis and a consistency evaluation were performed using manual measurement results and simple obesity indicators as comparisons. The simple obesity indicators used were BMI and waist circumference and the data values used in this experiment are listed in <a href="#t1" target="_self">Table 1</a>. The mean BMI was 23.54 &plusmn; 2.81 kg/m<sup>2</sup>, and the mean waist circumference was 80.53 &plusmn; 8.49 cm. Also, the first manual measurer’s results were, TAT at 2512.43 &plusmn; 723.56 ml, SAT at 1614.22 &plusmn; 432.65 ml, and VAT at 898.21 &plusmn; 455.78 ml. The second measurer recorded TAT of 2512.27 &plusmn; 724.02 ml, SAT of 1612.51 &plusmn; 431.19 ml, and VAT of 899.76 &plusmn; 459.28 ml. This paper took the means of these values. The automatic measurement software produced the following results: TAT of 3007.17 &plusmn; 846.94 ml, SAT of 1815.84 &plusmn; 545.76 ml, and VAT of 1191.33 &plusmn; 502.47 ml.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-9102191x7.png" />(a) (b) (c)</p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Process of automatic adipose tissue detection. (a) Result of convex hull; (b) Result of adjusted closed path; (c) Result of separation mask.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-9102191x8.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Automatic body fat measurement software.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-9102191x9.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Automatic body fat separation and detection results.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_1-9102191_1.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Obesity indicators measurment values compare with experties and in-house developed software (n = 100).</p> 
+</div> 
+<p>A consistency evaluation of the results were conducted with a Bland-Altman plot analysis for SAT and VAT. Analysis indicated that all data were distributed within a 95% reliability range, and this is illustrated in <a href="#f5" target="_self">Figure 5</a> and <a href="#f6" target="_self">Figure 6</a> [22] [23] .</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-9102191x10.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Assessment of the degree of agreement between automatic measurements and manual measurements using the Bland-Altman plot on SAT.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-9102191x11.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Assessment of the degree of agreement between automatic measurements and manual measurements using the Bland-Altman plot on VAT.</p> 
+</div> 
+<p>Using Pearson’s correlation coefficient (<a href="#t2" target="_self">Table 2</a>), the correlations between the automated measurements and manual measurements are as follows; TAT (r = 0.995, p = 0.01), SAT (r = 0.987, p = 0.01), VAT (r = 0.993, p = 0.01). The comparison between BMI and manual measurements shows a strong correlation in SAT (r = 0.502, p = 0.01) and VAT (r = 0.639, p = 0.01). Also, a strong correlation was noticed in SAT (r = 0.465, p = 0.01) and VAT (r = 0.639, p = 0.01) between the BMI and automated measurements. Further analysis was conducted using waist circumference measurement. It was found that waist circumference showed high correlations with the SAT (r = 0.502, p = 0.01) and VAT (r = 0.639, p = 0.01) obtained using the manual measurements. Also, strong correlations were noted between waist circumference and the automatic measurement results, in SAT (r = 0.465, p = 0.01) and VAT (r = 0.639, p = 0.01).</p> 
+<p>Also, to further evaluate the performance of the software proposed in this study, the running time of the software was measured. Only the duration for separating and measuring AT were considered, and it was found that the software required the average of 3 seconds to process 24 CT slices.</p> 
+<p class="E-Title1">4. Discussion</p> 
+<p>By automating the identification and measurement processes for SAT and VAT using computer image pro- cessing methods, quick and simple measurements become possible, and objective quantitative measurements can offer reliable results [24] . These types of automated adipose tissue measurement methods are being</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_1-9102191_2.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Pearson’s correlation matrix among the manual and automatic measurement results and the simple obesity indicators (n = 100).</p> 
+</div> 
+<p><sup>*</sup>p = 0.01, significant correlation.</p> 
+<p>researched by numerous teams around the world; an example is the Active Shape Model (ASM) method and Fuzzy affinity applied Automatic Fat Analysis in Computed Tomography (AFACT) method developed by Bandekar et al. This method differentiates between SAT and VAT, and was evaluated by comparing accuracy and sensitivity with manual measurements performed by experts. Results show high accuracy for both SAT, at 98.29% &plusmn; 0.62%, and VAT, at 97.66% &plusmn; 0.98% [25] . Kullberg used histograms of MRI images to create AT masks and SAT masks to differentiate between adipose tissue, and created a pelvis model and vertebra model to establish the range of detected tissue. Applying the algorithm to discharge (L4-L5) volumes, the true positive detection results based on the manual measurement results showed VAT of 90 &plusmn; 6.5 and SAT of 96 &plusmn; 2.3, from a total of 17 data points [26] . All of the research mentioned above exhibited high accuracy, but Bandekar et al. only performed measurements on cross-section images, limiting the reliability of their results. This paper, working from the assumption that the accuracy of adipose tissue measurement of DEXA has been validated, uses CT volume (r = 0.812, p &lt; 0.01) rather than CT cross-sections (r = 0.058, p &lt; 0.01) [27] . It is shown that to achieve high reliability, measurements must be taken over a discharge volume instead of taking a single image. Additionally, the literature presents only limited experimental data and makes comparisons to manually produced results, limiting their clinical reliability. This paper developed software that can automatically measure adipose tissue using abdominal CT, and by comparing results with examination results of two different doctors and various abdominal adipose tissue measurement guidelines, the software’s performance and clinical viability were evaluated.</p> 
+<p>A consistency evaluation using a Bland-Altman plot showed that 95% of the automatic and manual measurement results differences were within &plusmn;1.96 SD, presenting high consistency. Using Pearson’s correlation to perform the correlation analysis, TAT (r = 0.995, p = 0.01), SAT (r = 0.987, p = 0.01), VAT (r = 0.993, p = 0.01), VSR (r = 0.962, p = 0.01) all showed significant results. These results indicate that the automatic measurement method produces similar results to measurements taken by professionals, and that the software provides high reliability.</p> 
+<p>In comparing automatic measurement results with BMI, TAT (r = 0.674, p = 0.01) showed the highest correlation, while SAT (r = 0.465, p = 0.01), VAT (r = 0.639, p = 0.01), VSR (r = 0.308, p = 0.01) also showed notable results. BMI and manual measurement results showed that TAT (r = 0.703, p = 0.01), SAT (r = 0.502, p = 0.01), VAT (r = 0.639, p = 0.01), VSR (r = 0.389, p = 0.01), exhibiting an identical trend to the automatic results. Additionally, the analysis of CT and BMI correlation done by Macor et al. showed correlation for TAT (r = 0.86, p &lt; 0.0001), while Enzi et al. reported that TAT (r = 0.876, p &lt; 0.001) showed the strongest correlation, which corresponds to the correlation trends between the automated results and BMI [16] .</p> 
+<p>The automatic measurement data showed significant correlation with waist circumference as well, with VAT (r = 0.826, p = 0.01) the highest value, and TAT (r = 0.765, p = 0.01) also showing a high correlation. On the other hand, SAT (r = 0.430, p = 0.01), and VSR (r = 0.513, p = 0.01) showed a comparatively low correlation, and this trend is identical to that of the manual results as follows: TAT (r = 0.804, p = 0.01), VAT (r = 0.822, p = 0.01), SAT (r = 0.478, p = 0.01), VSR (r = 0.584, p = 0.01). This signifies a close relationship between automatic and manual measurement. Also, this coincides with previous research stating that VAT and waist circumference are related due to the high correlation exhibited by the VAT values [18] .</p> 
+<p>The time for the automatic measurement software to produce 24 CT slides was only 3 seconds on the average, which is hundreds to thousands of times faster than the current manual method. Comprehensively considering the correlation analysis and consistency evaluation results, as well as the processing time mentioned above, there can be a convincing argument for the clinical viability of automatic measurement. However, it should be noted that the result of the automatic measurement varies with the chosen HU range. In this study, the HU range was set to −30 - −190 HU; many other studies use −25 - −175 HU. In this study, the correlation between the two HU ranges was analyzed. However, additional studies to evaluate the clinical accuracy of the two HU ranges are desired.</p> 
+<p>The speed at which measurements are completed, compared to its performance, also reinforce the superior viability of the automatic measurement software. Before the proposed software is introduced clinically, there are limitations in radiation exposure, cost, and CT filming time that should be considered. However, some of these issues can be resolved by taking measures such as the use of low-dose CT, or reusing CT scans from different examinations. CT scans are considered the gold standard and are used not only in obesity evaluation, but for other research pursuits, and the automatic measurement software is expected to provide a means of rapidly providing objective and reliable data.</p> 
+<p class="E-Title1">5. Conclusion</p> 
+<p>In conclusion, when to measure abdominal adipose tissue either for research purposes or clinical need, the highly viable and reliable automatic measurement software presented in this paper should be useful and can be an effective alternative to previous manual measurement.</p> 
+<p class="E-Title1">Acknowledgements</p> 
+<p>This study was supported by a grant of the Korea Health technology R&amp;D Project, Ministry of Health &amp; Welfare, Republic of Korea (HI13C12830100) and support by NCC grant (1410590-2).</p>     
+<p class="E-Title1">NOTES</p>  
+<p><sup>*</sup>Co-first authors. Both authors contributed equally to this work.</p> 
+<p><sup>#</sup>Corresponding author.</p> 
+<p><sup>†</sup>Both authors contributed equally to this work.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577856' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Ford, E., Li, C., Zhao, G. and Tsai, J. (2011) Trends in Obesity and Abdominal Obesity among Adults in the United States from 1999-2008. International Journal of Obesity, 35, 736-743. h<br/>ttp://dx.doi.org/10.1038/ijo.2010.186
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577857' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Després, J.P. (1991) Obesity and Lipid Metabolism: Relevance of Body Fat Distribution. Current Opinion in Lipidology, 2, 5-15. <br/>http://dx.doi.org/10.1097/00041433-199102000-00003
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577858' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Fujioka, S., Matsuzawa, Y., Tokunaga, K. and Tarui, S. (1987) Contribution of Intra-Abdominal Fat Accumulation to the Impairment of Glucose and Lipid Metabolism in Human Obesity. Metabolism-Clinical and Experimental, 36, 54-59.<br/>http://dx.doi.org/10.1016/0026-0495(87)90063-1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577859' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Zamboni, M., Armellini, F., Sheiban, I., De Marchi, M., Todesco, T., Bergamo-Andreis, I., Cominacini, L. and Bosello, O. (1992) Relation of Body Fat Distribution in Men and De-gree of Coronary Narrowings in Coronary Artery Disease. The American Journal of Cardiology, 70, 1135-1138. <br/>http://dx.doi.org/10.1016/0002-9149(92)90043-X
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577860' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Jackson, A., Pollock, M.L., Graves, J.E. and Mahar, M. (1988) Reliability and Validity of Bioelectrical Impedance in Determining Body Composition. Journal of Applied Physiology, 64, 529-534.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577861' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Donnelly, L.F., O’Brien, K.J., Dardzinski, B.J., Poe, S.A., Bean, J.A., Holland, S.K. and Daniels, S.R. (2003) Using a Phantom to Compare MR Techniques for Determining the Ratio of Intra-Abdominal to Subcutaneous Adipose Tissue. American Journal of Roentgenology, 180, 993-998. <br/>http://dx.doi.org/10.2214/ajr.180.4.1800993
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577862' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Seidell, J.C., Bakker, C. and van der Kooy, K. (1990) Imaging Techniques for Measuring Adipose-Tissue Distribution—A Comparison between Computed Tomography and 1.5-T Magnetic Resonance. The American Journal of Clinical Nutrition, 51, 953-957.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577863' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Tokunaga, K., Matsuzawa, Y., Ishikawa, K. and Tarui, S. (1982) A Novel Technique for the Determination of Body Fat by Computed Tomography. International Journal of Obesity, 7, 437-445.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577864' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Yoshizumi, T., Nakamura, T., Yamane, M., Islam, A.H.M.W., Menju, M., Yamasaki, K., Arai, T., Kotani, K., Funahashi, T. and Yamashita, S. (1999) Ab-dominal Fat: Standardized Technique for Measurement at CT1. Radiology, 211, 283-286. <br/>http://dx.doi.org/10.1148/radiology.211.1.r99ap15283
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577865' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Nam, S.Y., Choi, I.J., Ryu, K.H., Park, B.J., Kim, H.B. and Nam, B.H. (2010) Abdominal Visceral Adipose Tissue Volume Is Associated with Increased Risk of Erosive Esophagitis in Men and Women. Gastroenterology, 139, 1902-1911. <br/>http://dx.doi.org/10.1053/j.gastro.2010.08.019
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577866' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Garrouste-Orgeas, M., Troché, G., Azoulay, E., Caubel, A., Lassence, A., Cheval, C., Montesino, L., Thuong, M., Vincent, F. and Cohen, Y. (2004) Body Mass Index. Intensive Care Medicine, 30, 437-443.<br/>http://dx.doi.org/10.1007/s00134-003-2095-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577867' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Enzi, G., Gasparo, M., Biondetti, P.R., Fiore, D., Semisa, M. and Zurlo, F. (1986) Subcutaneous and Visceral Fat Distribution According to Sex, Age, and Overweight, Evaluated by Computed Tomography. The American Journal of Clinical Nutrition, 44, 739-746.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577868' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Macor, C., Ruggeri, A., Mazzonetto, P., Federspil, G., Cobelli, C. and Vettor, R. (1997) Visceral Adipose Tissue Impairs Insulin Secretion and Insulin Sensitivity but Not Energy Expenditure in Obesity. Metabolism: Clinical and Experimental, 46, 123-129. <br/>http://dx.doi.org/10.1016/S0026-0495(97)90288-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577869' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Han, T., Van Leer, E., Seidell, J. and Lean, M. (1995) Waist Circumference Action Levels in the Identification of Cardiovascular Risk Factors: Prevalence Study in a Random Sample. BMJ, 311, 1401-1405.<br/>http://dx.doi.org/10.1136/bmj.311.7017.1401
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577870' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Ashwell, M., Cole, T.J. and Dixon, A.K. (1985) Obesity: New Insight into the Anthropometric Classification of Fat Distribution Shown by Computed Tomography. British Medical Journal, 290, 1692-1694.<br/>http://dx.doi.org/10.1136/bmj.290.6483.1692
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577871' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Kim, C.H. and Jung, J.I. (2006) Study for Hounsfield Units in Computed Tomogram with Jaw Lesion. Journal of the Korean Association of Oral and Maxillofacial Surgeons, 32, 391-396.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577872' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Chang, F., Chen, C.J. and Lu, C.J. (2004) A Linear-Time Component-Labeling Algorithm Using Contour Tracing Technique. Computer Vision and Image Understanding, 93, 206-220. <br/>http://dx.doi.org/10.1016/j.cviu.2003.09.002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577873' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Di Stefano, L. and Bulgarelli, A. (1999) A Simple and Efficient Connected Components Labeling Algorithm. IEEE: Image Analysis and Processing, Venice, 27-29 September 1999, 322-327. <br/>http://dx.doi.org/10.1109/iciap.1999.797615
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577874' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Bandekar, A.N., Naghavi, M. and Kakadiaris, I.A. (2006) Automated Pericardial Fat Quantification in CT Data. IEEE-EMBS 2006. 28th Annual International Conference of the IEEE, New York, 30 August-3 September 2006, 932- 935. <br/>http://dx.doi.org/10.1109/iembs.2006.259259
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577875' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Graham, R.L. and Frances Yao, F. (1983) Finding the Convex Hull of a Simple Polygon. Journal of Algorithms, 4, 324-331. <br/>http://dx.doi.org/10.1016/0196-6774(83)90013-5
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577876' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Benesty, J., Chen, J., Huang, Y. and Cohen, I. (2009) Pearson Correlation Coefficient. In: Noise Reduction in Speech Processing, Springer, Heidelberg, 37-40. <br/>http://dx.doi.org/10.1007/978-3-642-00296-0_5
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577877' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Martin Bland, J. and Altman, D. (1986) Statistical Methods for Assessing Agreement between Two Methods of Clinical Measurement. The Lancet, 327, 307-310. <br/>http://dx.doi.org/10.1016/S0140-6736(86)90837-8
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577878' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Bland, J.M. and Altman, D.G. (1999) Measuring Agreement in Method Comparison Studies. Statistical Methods in Medical Research, 8, 135-160. <br/>http://dx.doi.org/10.1191/096228099673819272
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577879' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Doi, K. (2005) Current Status and Future Potential of Computer-Aided Diagnosis in Medical Imaging. British Journal of Radiology, 78, s3-s19. <br/>http://dx.doi.org/10.1259/bjr/82933343
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577880' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        Bandekar, A.N., Naghavi, M. and Kakadiaris, I.A. (2005) Performance Evaluation of Abdominal Fat Burden Quantification in CT. IEEE-EMBS 2005. 27th Annual International Conference of the IEEE, Shanghai, 17-18 January 2005, 3280-3283. <br/>http://dx.doi.org/10.1109/iembs.2005.1617177
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577881' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Kullberg, J., Ahlstrom, H., Johansson, L. and Frimmel, H. (2007) Automated and Reproducible Segmentation of Visceral and Subcutaneous Adipose Tissue from Abdominal MRI. International Journal of Obesity, 31, 1806-1817.<br/>http://dx.doi.org/10.1038/sj.ijo.0803671
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577882' target='_blank'>27</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref27" id="ref27"></a>
+                                        Kim, Y.J., Lee, S.H., Kim, T.Y., Park, J.Y., Choi, S.H. and Kim, K.G. (2013) Body Fat Assessment Method Using CT Images with Separation Mask Algorithm. Journal of Digital Imaging, 26, 155-162.<br/>http://dx.doi.org/10.1007/s10278-012-9488-0
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=30" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=30" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=30" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=30" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=30"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=30"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=30" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=30" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=30" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=30" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=30" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=30"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=30"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=30" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=30&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=30&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=30" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=30" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=30" target="_blank">JBiSE
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=30" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=30" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=30" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=30" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=30" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=30" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=30" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jbise.2015.810063" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60054 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +30 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +30 +"&paperid=" +60054 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

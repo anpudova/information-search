@@ -1,0 +1,1706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Biological Inspiration—Theoretical Framework Mitosis Artificial Neural Networks Unsupervised Algorithm
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/IJCNS_2015093014554430.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60104" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60104.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60104" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60104" />
+<meta property="og:title" content="Biological Inspiration—Theoretical Framework Mitosis Artificial Neural Networks Unsupervised Algorithm" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/IJCNS2016071311394172.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/IJCNS2016071311394172.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Biological Inspiration—Theoretical Framework Mitosis Artificial Neural Networks Unsupervised Algorithm" />
+<meta name="keywords" content="Mitosis,Artificial Neuron,Node,Structural Analysis,Neural Networks,Output,Layer,Simulation" />
+<meta name="description" content="Discover a modified approach to Artificial Neural Networks (ANN) for structural analysis. This innovative system solves complex problems using biology-based simulation algorithms. Explore the possibilities of Neural Topologies for Structural Analysis (NTSA) and its unique features." />
+<meta name="citation_journal_title" content="International Journal of Communications, Network and System Sciences" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Lácides Pinto Mindiola;Gelvis Melo Freile;Carlos Socarras Bertiz" />
+<meta name="citation_author" content="Lácides Pinto Mindiola" />
+<meta name="citation_author" content="Gelvis Melo Freile" />
+<meta name="citation_author" content="Carlos Socarras Bertiz" />
+<meta name="citation_title" content="Biological Inspiration—Theoretical Framework Mitosis Artificial Neural Networks Unsupervised Algorithm" />
+<meta name="citation_volume" content="8" />
+<meta name="citation_date" content="2015-09-02" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ijcns.2015.89036" />
+<meta name="citation_issnPrint" content="1913-3715" />
+<meta name="citation_issnOnline" content="1913-3723" />
+<meta name="citation_abstract" content="The modified approach to conventional
+Artificial Neural Networks (ANN) described in this paper represents an essential
+departure from the conventional techniques of structural analysis. It has four
+main distinguishing features: 1) it introduces a new simulation algorithm based
+on the biology; 2) it performs relatively simple arithmetic as massively
+parallel, during analysis of a structure; 3) it shows that it is possible to
+use the application of the modified approach to conventional ANN to solve
+problems of any complexity in the field of structural analysis; 4) the Neural
+Topologies for Structural Analysis (NTSA) system are recurrent networks and its
+outputs are connected to its inputs [1] and [2]. In NTSA system the DNA of the
+neuron mother and daughters would be defined by: 1) the same entry, from the
+corresponding neuron in the previous layer; 2) the same trend vector; 3) the
+same transfer function (purelin). The mother’s neuron and her daughter’s neuron
+differ only in the connection weight and its output signal." />
+<meta name="citation_publication_date" content="2015/9/2" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/IJCNS_2015093014554430.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/IJCNS_2015093014554430.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60104" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60104" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60104" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60104.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60104.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/2" />
+<meta name="citation_firstpage" content="374" />
+<meta name="citation_lastpage" content="398" />
+
+<meta name="dc.title" content="Biological Inspiration—Theoretical Framework Mitosis Artificial Neural Networks Unsupervised Algorithm" />
+
+<meta name="dc.creator" content="Lácides Pinto Mindiola" />
+<meta name="dc.creator" content="Gelvis Melo Freile" />
+<meta name="dc.creator" content="Carlos Socarras Bertiz" /><meta name="dcterms.issued" content="2015-09-02" />
+<meta name="dc.description" content="The modified approach to conventional
+Artificial Neural Networks (ANN) described in this paper represents an essential
+departure from the conventional techniques of structural analysis. It has four
+main distinguishing features: 1) it introduces a new simulation algorithm based
+on the biology; 2) it performs relatively simple arithmetic as massively
+parallel, during analysis of a structure; 3) it shows that it is possible to
+use the application of the modified approach to conventional ANN to solve
+problems of any complexity in the field of structural analysis; 4) the Neural
+Topologies for Structural Analysis (NTSA) system are recurrent networks and its
+outputs are connected to its inputs [1] and [2]. In NTSA system the DNA of the
+neuron mother and daughters would be defined by: 1) the same entry, from the
+corresponding neuron in the previous layer; 2) the same trend vector; 3) the
+same transfer function (purelin). The mother’s neuron and her daughter’s neuron
+differ only in the connection weight and its output signal." />
+<meta name="dc.source" content="International Journal of Communications, Network and System Sciences" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-02" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ijcns.2015.89036" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-02" />
+<meta name="prism.issnPrint" content="1913-3715" />
+<meta name="prism.issnOnline" content="1913-3723" />
+<meta name="prism.publicationName" content="International Journal of Communications, Network and System Sciences" />
+<meta name="prism.publicationDate" content="2015-09-02" />
+<meta name="prism.volume" content="8" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="374" />
+<meta name="prism.doi" content="10.4236/ijcns.2015.89036" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60104" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlUPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTAyZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAWYAzxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9TCVjMyVhMWNpZGVzK1BpbnRvKytNaW5kaW9sYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkzDoWNpZGVzIFBpbnRvICBNaW5kaW9sYTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1HZWx2aXMrTWVsbysrRnJlaWxlJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+R2VsdmlzIE1lbG8gIEZyZWlsZTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1DYXJsb3MrU29jYXJyYXMrK0JlcnRpeiZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkNhcmxvcyBTb2NhcnJhcyAgQmVydGl6PC9hPjxzdXA+PC9zdXA+IGQCAg9kFgJmDxYCHwQFsAE8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVVuaXZlcnNpZGFkK2RlK0xhK0d1YWppcmElMmMrUmlvaGFjaGElMmMrQ29sb21iaWEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Vbml2ZXJzaWRhZCBkZSBMYSBHdWFqaXJhLCBSaW9oYWNoYSwgQ29sb21iaWE8L2E+LjxiciAvPmQCBQ8WAh8EBQU1LDY4NGQCBg8WAh8EBQU3LDAzOGQCBw8WAh8DBQ9EaXNwbGF5OmlubGluZTtkAggPZBYCAgEPFgIfBAWzBjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9TWl0b3NpcyZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPk1pdG9zaXM8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStBcnRpZmljaWFsK05ldXJvbiZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBBcnRpZmljaWFsIE5ldXJvbjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K05vZGUmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gTm9kZTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1N0cnVjdHVyYWwrQW5hbHlzaXMmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU3RydWN0dXJhbCBBbmFseXNpczwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K05ldXJhbCtOZXR3b3JrcyZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBOZXVyYWwgTmV0d29ya3M8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStPdXRwdXQmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gT3V0cHV0PC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rTGF5ZXImc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gTGF5ZXI8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStTaW11bGF0aW9uJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFNpbXVsYXRpb248L2E+IGQCCg8WAh8EBfwCTWluZGlvbGEsIEwuICwgRnJlaWxlLCBHLiAgYW5kIEJlcnRpeiwgQy4gICAoMjAxNSkgQmlvbG9naWNhbCBJbnNwaXJhdGlvbuKAlFRoZW9yZXRpY2FsIEZyYW1ld29yayBNaXRvc2lzIEFydGlmaWNpYWwgTmV1cmFsIE5ldHdvcmtzIFVuc3VwZXJ2aXNlZCBBbGdvcml0aG0uIDxpPkludGVybmF0aW9uYWwgSm91cm5hbCBvZiBDb21tdW5pY2F0aW9ucywgTmV0d29yayBhbmQgU3lzdGVtIFNjaWVuY2VzPC9pPiwgPGI+ODwvYj4sIDM3NC0zOTguIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9pamNucy4yMDE1Ljg5MDM2JyB0YXJnZXQ9J19ibGFuaycgb25jbGljaz0nU2V0TnVtKDYwMTA0KSc+MTAuNDIzNi9pamNucy4yMDE1Ljg5MDM2PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIMFhhmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MDEnIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQEx6AFQaW50bywgTC5SLiBhbmQgWmFtYnJhbm8sIEEuUi4gKDIwMTQpIFVuc3VwZXJ2aXNlZCBOZXVyYWwgTmV0d29yayBBcHByb2FjaCB0byBGcmFtZSBBbmFseXNpcyBvZiBDb252ZW50aW9uYWwgQnVpbGRpbmdzLiBJbnQuIEouIENvbW11bmljYXRpb25zLCBOZXR3b3JrIGFuZCBTeXN0ZW1zIFNjaWVuY2VzLCA3LCAyMDMtMjExLjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9pamNucy4yMDE0Ljc3MDIyZAIBD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MDInIHRhcmdldD0nX2JsYW5rJz4yPC9hPl0BMgEylANSaXZlcm8tQW5nZWxlcywgRi5KLiwgR29tZXotUmFtaXJleiwgRS4sIEdvbWV6LUdvbnphbGV6LCBCLiBhbmQgR2FycmlkbywgUi4gKDIwMDUpIEZhdWx0IERldGVjdGlvbiBpbiBTaGVhciBCdWlsZGluZ3MgU3ViamVjdCB0byBFYXJ0aHF1YWtlcyBVc2luZyBhIE5ldXJhbCBOZXR3b3JrLiBQcm9jZWVkaW5nIG9mIHRoZSBFaWdodGggSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlIG9uIHRoZSBBcHBsaWNhdGlvbiBvZiBBcnRpZmljaWFsIEludGVsbGlnZW5jZSB0byBDaXZpbCwgU3RydWN0dXJhbCBhbmQgRW52aXJvbm1lbnRhbCBFbmdpbmVlcmluZywgRWRpdGVkIGJ5IEIuIEguIFYuIFRvcHBpbmcsIDEwNywgSVNCTiAxLTkwNTA4OC0wMy0wNS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC40MjAzL2NjcC44MmQCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzAzJyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM1tQaW50bywgTC4gKDIwMDgpIFRlc2lzIERvY3RvcmFsOiBBRVROIEFuYWxpc2lzIGRlIEVzdHJ1Y3R1cmFzIE1lZGlhbnRlIFRvcG9sb2fDrWEgTmV1cm9uYWwuZAIDD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MDQnIHRhcmdldD0nX2JsYW5rJz40PC9hPl0BNAE01wFEQVJQQSAoMTk4Ny0xOTg4KSBOZXVyYWwgTmV0d29yayBTdHVkeSAoVS5TLikuIFB1Ymxpc2hlZCBieSBBRkNFQSBJbnRlcm5hdGlvbmFsIFByZXNzLCBhIERpdmlzaW9uIG9mIHRoZSBBcm1lZCBGb3JjZXMgQ29tbXVuaWNhdGlvbnMgYW5kIEVsZWN0cm9uaWNzIEFzc29jaWF0aW9uIDQ0MDYgRmFpciBMYWtlcyBDb3VydCBGYWlyZmF4IFZpcmdpbmlhIDIyMDMzLTM4OTkgVVNBLmQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzA1JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNV9CZWFsZSwgTS4sIEhhZ2FuLCBNLlQuIGFuZCBEZW11dGgsIEguQi4gKDE5OTUpIE5ldXJhbCBOZXR3b3JrIERlc2lnbi4gVGhvbXNvbiBMZWFybmluZywgQm9zdG9uLmQCBQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzA2JyB0YXJnZXQ9J19ibGFuayc+NjwvYT5dATYBNpkBRWF0b24sIEwuSy4gKDIwMDEpIEhhcmR5IENyb3NzIGFuZCB0aGUg4oCcTW9tZW50IERpc3RyaWJ1dGlvbiBNZXRob2TigJ0uIE5leHVzIE5ldHdvcmsgSm91cm5hbCwgMywgMTUtMjQuPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDA3L3MwMDAwNC0wMDEtMDAyMC15ZAIGD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MDcnIHRhcmdldD0nX2JsYW5rJz43PC9hPl0BNwE3ZkhvZmZtYW5uLCBGLiBCaW9sb2dpY2FsIFRoZXJhcGllcyBhbmQgQ2FuY2VyLiBQcm9kdWNlZCB0aHJvdWdoIGFuIGVkdWNhdGlvbmFsIGdyYW50IGZyb20gTGEgUm9jaGUgTHRkLmQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzA4JyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOFBCaW9sb2dpY2FsIEZvdW5kYXRpb25z4oCUTmV1cm9uIENvbW11bmljYXRpb24uIDxici8+d3d3LnN0dWR5Ymx1ZS5jb20vbm90ZXMvbm90ZWQCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc5NzA5JyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBOYwBS2FuaSwgRy4gKDE5NTUpIEPDoWxjdWxvIGRlIFDDs3J0aWNvcyBkZSBWYXJpb3MgUGlzb3MuIEluOiBSZXZlcnRlLCBTLkEuLCBFZC4sIDE5NzgtMTk3OSwgUHJpbnRlZCBpbiBTcGFpbiwgSVNCTi04NC0yOTEtMjA1MS02LCAxOS0yMC0yMS0yMi5kAgkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3OTcxMCcgdGFyZ2V0PSdfYmxhbmsnPjEwPC9hPl0CMTACMTCcAkJvc28sIEQuLCBMZWZpaywgTS4gYW5kIFNjaG5lZmxlciwgQi4gKDIwMDUpIEpvaW50IEZpbml0ZSBFbGVtZW50OiBBcnRpZmljaWFsIE5ldXJhbCBOZXR3b3JrIE51bWVyaWNhbCBBbmFseXNpcyBvZiBNdWx0aWxldmVsIENvbXBvc2l0ZXMgQXJ0aWZpY2lhbCBJbnRlbGxpZ2VuY2UgdG8gQ2l2aWwsIFN0cnVjdHVyYWwgYW5kIEVudmlyb25tZW50YWwgRW5naW5lZXJpbmcuIEVkaXRlZCBieSBCLiBILiBWLiBUb3BwaW5nLCBDaXZpbCBDb21wLiBMdGQuLCAxMDEsIElTQk4gMS05MDUwODgtMDMtMDUuZAIKD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MTEnIHRhcmdldD0nX2JsYW5rJz4xMTwvYT5dAjExAjEx0AFMdSwgWS4sIFJveWNob3dkaHVyeSwgVi4gYW5kIFZhbmRlcmJlcmdoZSwgTC4gKDIwMDcpIERpc3RyaWJ1dGVkIFBhcmFsbGVsIFN1cHBvcnQgVmVjdG9yIE1hY2hpbmVzIGluIFN0cm9uZ2x5IENvbm5lY3RlZCBOZXR3b3Jrcy4gTmV1cmFsIE5ldHdvcmtzLiBBIFB1YmxpY2F0aW9uIG9mIHRoZSBJRUVFIENvbXB1dGF0aW9uYWwgSW50ZWxsaWdlbmNlIFNvY2lldHkuZAILD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzk3MTInIHRhcmdldD0nX2JsYW5rJz4xMjwvYT5dAjEyAjEyWUJlYmJhaGFuaSwgUy4gYW5kIE5hc3JhYmFkaSwgQS5NLiAoMjAwOSkgQXBwbGljYXRpb24gb2YgU29tIE5ldXJhbCBOZXR3b3JrIGluIENsdXN0ZXJpbmcuZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pTVAVPSlNUQQRPSlRSBE9KVFMDT0pVBE9KVk0DT1BKA1BPUwJQUANQU1QFUFNZQ0gDU0FSA1NDRARTR1JFAlNNAlNOA1NOTARTb2Z0AlNTA1RFTAJUSQRVT0FKAlZQA1dFVANXSkEEV0pDRAVXSkNNUARXSkNTBFdKRVQDV0pNBFdKTlMFV0pOU0UFV0pOU1QDV0pWA1dTTgJZTRWAAgEwAzczNwQxNDA4BDE0MDYEMTAwMgQyNDIzAzE2NAM2MTEEMTQ3OAM0NzMDNDkyBDE1NzkEMjQzNwQyNDQyBDI0NDQEMjQyNgQyMzE2AzgwMwQxMDAwAzQ3NgMyMDMEMjQyMgQxMzA0AzUzNQM4ODQDNTMyAzUyOQMyMDcDOTk2BDE1MTcEMjMxNwMxNjADNDc3AzY3NQQxNTczBDE1NzQDNzQzAzUxMwQxNTc1BDI0NDUDMTkxAzgxMgMyNjAEMjQ1NQMxMzYEMjA3NAQxNDkzAzEyMgM5ODkCOTIEMjAzMwMxNzMEMTQ5MgQyNDM4BDE1MTgEMjQ1NAQyNDU3AjY0AjkzBDEzMTEEMjMxNQMyMDgEMjQzMgQyNDYyAzU0MQQxNjkwAzUxMgI2NQMxMDMDMTc2AzExMQM0OTAEMjQ0OQQxMzkxAzIwMgE0AzIwOQQyNDI4Azc0NwQxMjYxBDE1NzgEMTUxOQM1MjcEMTQ3NwQxMjk4BDE5ODAEMjQzNgM1MjUDNDc1BDI0NDMCMzAEMjQzNQMyMzADMTYyBDI0MzEDNTMwAzUyNgMxMjUEMjQyNQM0NzkDNTMxAzY5MQIyOQMxNDQEMTk4NgQxMzk1AzExNAQyNDYxBDI0MjEEMTQxMQMxMDIDMTc1AzY0OAMzOTcEMTc1MwMxNzIEMjQzMwM1OTEDOTkwAjQ1AzU0MwMzMzkEMjQzMAIyOAM0NzgEMjQzOQQyNDYwAzM1NwI0NgMyMTAEMTQ4NQMxNjMDNzg3Azc4NgM5MTcDODE1BDI0NDEEMTQ4NwQxNTc2AzE3NAQyNDM0AzUyOAMyMDUDMTkyAjY5BDI0NTkEMjQ2MwQyNDUzAzczOAQxNDgwBDE1OTADODE0BDE0MDcEMTQ3OQQxMDAzBDI0NDYDNjAxAzgwNgM3ODUEMjQ0NwQyNDUyAzk5NwM2MDYDNzg4Azc5MgQxOTc3AzgxMAM1ODYDNjE0BDE1NzcEMjQ1NgM4MTEDODE2BDE5NzkDNzM2BDEwMDQDNTg3AzgxNwM2MTMDNjAyAzU5MgM1OTMDNzkzBDExODYDNTg4Azc5MAM3ODQDNzM5AzgyMAM2MTIDNzQyAzk5OQM4MjIDOTk4AzU5NgQyNDI0AzYwNQM4MjEDODA0AzYwNAQyNDY0BDE5NzgDODA1Azc5NAM4MjMDODEzAzU4OQM3OTEDNjA5AzYxMAM3NDEDNzQ0AzYwMwM4MDcDNzg5AzgyNAQxMzk0AzU5MAM3MzUDNjAwAzYwNwQxNDg2BDI0NDgDODA4AzUwOQQxMDAxAzU0NwI3MQMyMDYEMjQ0MAMxNDgEMjQ1MAM1MzMDMTM1AzQ3NAQxNTg5AzQ5MQQyMDM0AzIwNAM2NjYDMTA0BDE0MDUEMjQ1OAMxNDYDNTExAzgxOAM1MDIDODA5BDI0NTEDNTA2AzYxNQM0OTMDNTM0AzUxMAI0MQQyNDY1FCsDgAJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkjGOjaeogZXHxgtV+TwSkwyYIBPYKQSgcz85KKeotOnc=" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAIYCRvsoeBZrdkOV9v87yICT18xO15cYiUM4G9ciXBy5rRbTxQn0wurVpykN++S3qsY9gqm4NhJKbhUsb9qOzDz5+BaQ51Lu9YTI5y+UD8ReCXYCCq5883RYOyuQBDQdgBKJQ9NYSepAvxIHsUIEBszIF9kVAw+OtKpSo2nY0L5TS7pjZcI4a2ubz4FZUJ/qeIscQNjFFetjMQu+gPAKi1cuu0dXATu8ZTMsEIKUEeEK3+aBofovXqmNNgBwrJCAFSq2Co/mvvaNFGqy28nyI+vv6yf3gTw51pjuwP3t6rjAvP5x1lbHcKM5M/ROzquUHr9lNeWWklFj9cK1TFZpQdUnWziPR3qwNn0ScFNmZAws/jpBm80jcsuZv9XDBeU2KB136TAPmetewitSt9wGNYTIY9UJhFPM+0hDu7cwMKVpp+mmnD8+pMa1yHYRYzLQxH5n1Q/qqDptM9kfJbC1I4q9xL93cbaAMQ4tG4BJWGCzAW6vtR3JnRPdbQo4gA4sZaXer04IxUa3arSwCxRuEDIYFbblwRpneYEy3rzwScqJxuezOuEOjOptTX9AYvM9jKmAypI8kdyyyB4CNN3pFGdOk4mu/WExNjWQ5X01rKdDbeJN4TzreHSTLkh+d4B8EihhF81TpqgKTnD/fd/yNWGbO9zMdjKdAolzLesxJOG2bR2t4ae94pZJoUOvCEPRLh7u5h+HR1RXp8jKz3XyrzwGq5ViD0Fyb+qhGFHNfa6dxzK0n1qu2d9hzAGJ1ZdEzFgVObshVy2ouP3umau52TJFwKhqohqorHyJZt7h54jbR7oXke9kR+ABe996RxzCmx1L/42I3la9AkYiuUmh4mE9Rk5DdY/KiLlE+29svjthmIPNdKgZlA9dvwpjASVteCo/ksy0uMaOE+alzU72eZ1rlvR6C3RGA9Jmsr/oit2h5HWYxsN1nFXBqJbgXwz0iYh7JCUYpOW+jbALhRmLv9UpsX2EI+d3W02YqShNDct3I94Sq9enXMFtuVRPWGCF1oN1TlM8aQC+B45LfHfFCnZz6KlRuP6GvEqI8VDdi+sTnM71Jn53VrlKa3UuXcRuCcAe+GQxyfHfD/wZ+ergvp+hsx48VT9Xih8PA4vj1aNtQlLCsXezalJjXjgEl/cAa7arjDkAIe6rJDf9KPGPMwoKLWIBVM9nLqRvTn4xs2uCHsZiAOZ8Y5IAuKZeArneMeYK8+pLRvERCDkGURuCyuXbsR59h/AAdaKvPM2BT4SSKNj0Us/NQU9+MI9hDNgMZowy9xCOwBNddniKd5JiX1iETIuSWSu2galT3CZ4MpRQGqIfvz80X8fuyGyFF2wHP/HcdHP4x0OBSCxdPk53jUQtAQ6g8akcdK7Kr4deoDeUynf9l1Y6lbf6JC8NoSbMA+vc8O8QqrB2tS2vv8gSiSoIhJ/70GOmod2HPYumgEmpn8vgLAz5ccZUA7bkVUoObyVZV/Zm1Uh4Ozw57X6RDPtK9aubBoko1p5gcjMIWvm4T+T41pjKCycN70aK5E4MwFc6qbRpzIzeaUUIv5qiWg3dZvXV/9M9IwoMUAdYUH5UMA5AJDCfNUkJ1q+n5sIsxUCB6Nq0yAoqoFwFjOj8ZbQjUP5/q/DGUJDHtaZDExzq62tLwfe18PsgWsDuILbV32BFX07jDSTdc2CHO2xi6fhORGg5L0lBgRl4s0zp6Bc/YgBEniC2eneyWSDQ2iw5NhVKu3HJAuZnur70V7iwzDcGwQI2IDR/+2+ZDAfID+MM8+0XNaUlaIgX8fsjMqD2JWDxa8kn7ReZiPgMqAmE7acxyMlKdMtk6XhHjwc25wp4AlleDWbzVGzQLtuUmBfLRhb1duIXiNLsi/yRLp4WZPUJ27df65bU1anG4WItJ4LM9y1kFgUPkaZCD7G3W6HUl/HynBFJ9UbqeGaq8vaK1/YQfFvpLYGg0bJLmJIb7I1VBtGRefxiocvIkjuBnFbKIG1Bvp3bdqOCotobzRhTIfJPz1ybr2D6/DEvFCV2tebkdleZKtgLobZ6iejVWuu1VZxJWsflUf5AhdWNPs78Mu7xVHmmifThhNhHXVuTcjWgOc0+ha7t+FzBP9w8kasJY44yZnpObyYDO1ZdBcb+9I3REzEpeEvJizUogox2uLy8cRq3yp6lmmMvyTt1q1wGJKr3RN2vrp1bz9IC1X58ObtB/5VtKrLwiwYTZ4JczAShm49AkZfwZHQTZLyjY3qS4jbPi09pGNXw+uGS3Hu4tDXabra7UmIrVTJ6nt2BS+IV2oARGuf8d10+bFGE4Rxb8X5OWr9o8NP/NkSmCAkxIVC+Aj7EdIJsmLDnfzTIbDsJUtH/K7KPeiLbFjhDUrnAx6wO2/9ofSkwJg74y7KTIDV/ngs3MovqY+DwVzncJ9d75iLyCizSur2z/AoWxQnguyVJbTVltsvXYae72/GCovpvEoLWlmf4Sg6Yu4BBu5RYruCk5N7MezxIv1QQ8tjDdhoGXqAbWrRFFDWx3FK4oHDCvJJHjmn4y1G1QBsNDvWkIszuXW6E1KUz6dtoSwPj0wA0Ssong9DXWhtYuS9jtH4StM1ZT+6tqYvxtAJndAQ0NFNV1597E/y6Lte1J3ZP1twzvBpB/f0YxWaTDHZ72u7NlSVoCSjnWeNWCBfpptecl27SJO0njN9e8jHgDwmPC2NlIgGmq46k97juUD2lSjIB/+AeyDUaBy5oIhTdg6INeWTgkUTzyXC34fsOvEb0hxwmbeOjctVaE3x0pTijWTsKmSeGzIda8uoJkZcuTbWHVoRB6h5Dc72rcIz1lA5hJghfGLyFGxD6b7ArQwZHjISLbPwxJYkFbxLsCrMOEMVNCcxGdx56w146VqqjCImkPDvKFHUQ/jY9+FyVc120CiMOMieHjy4dyVomOSf6gPMkkPd4ClcsQoipAxZgLTxG67FCpcEH/ewS/egbmWx04V1w9x54+T8GkfQObxizPwQZQvPeZm6KLBvrmvLYp1CaHAQxp15ZTATs7okf7S5ePo2gUI6UpzRPUgMetACnXOfa/MSurf56LkzDvZSlRprJXfFcpjnNRle7ZhR+nzipiAi6t6fJxRB4sYqEuxZikZ0sS/pn76iye8xM0q+tFJNR5AEEH/rcf8wyXJ1I9n+HN9S0Q60NH0z6qdFkKcgxGmbQ8xoxIk8T5csYyuHHJ8T3qv4mAA1kgwWmcUBQcbF5yr4YQxwmztMkcCEMt6aAvfC8f6toJF0YzyYX6qP1l6BNvsoSTEoNJmHhXQ9HjrS4USE6yCYyzwmeO12MO4U1xeipGR+e8TLpQ6CqXnairBPYGsz+glJyTODudGLzInafKtakhjlbm2TNMFfJb+9E3OOHfsq+2OJbTt6ZXJufxbbdOy1pecKV+u7JTFDadGMONSTueBvDAHypkesyjW4yuwX56tldt764R/77OW2TjDwb0ccJpLN4gZuPJdFGPDo8zpRNpCEOepOJcfUo9I8zG9qwVzTuTYjxDFDg2EFzwz1hep69FpxYJxedOu96B/Dnw5jBPjdr2PsTL/fVgG4rRrihebOjXHUfqiglDXkf85mvQfywWRzIsCAYnsAqHdzBwJuSxhofmDKZ6kAcIU59NL+2Ji/ZlNfEKQgjenXIkOQXcybyFgFk6H+fsgvXkF6guW0mK/96yfu7+n2DpGArzAn8Ug7zyAfpekzLtWT6UsgXZRNiIa8gkid6xp0spp/D5y5u2oeDBhSnXl6da309+kboqvL0EZR7RebudBufyINEOSNkpXst+LCzHcoZXcZBkagLrxGz5Lr3OmrcaZrIzlq5X4ZeFENOm92bbMpLQVD4IMoZREdVKbJIoaDV/CJq5z9wEVDB/cC79FvrePkFE4bul1aFFPyyi0kOKqg/hxo/OJaXSW+9WIG+vrsJvPgrum9ZyyaHkmzelazeN+yHPLxy1zNV9jyZToogsZf6RZ3nFRpnXxmMlVnH0OVgW+2Mohtqfe2KKfX/VnF0jyp37UjD6+NIz5zrn96FS+VMJNGWR2O5842Lmw660AZaYl38EWqjS11SHbcorNwflYBLGOSBhYCgfIyVLGUTbPYfzEgNQqTHnxA1GPsHqBrOtCWMEkB/uzd4oi1XWCyepKSG7lNpxxFzdDjX98Oc6FzbVsmLIEUldUkJbRhZrvplfZYEL0HEIrr0hA25YbbMqPgsadaNs2L0PL6NJIUvaBZj+4WJDzg+qXCxGdKNlUbGu4DHu5jY9jggQ/M+bLYw70SYQesq8eoufw0gVy+VJXLOb/8y4R0wEYH7yRWOc8vTOLrzSGCW44GJlYyDbnWEuvxMiv+ao715+CTPTCKoBBsIcfS54DwjalRqX/tdios6c/R4l8RBx+bEs2I/OhFPcGy16UdcBobgA6MDXqDiN8qHUE5edBy836NpfClbftFfnfyfCIoNo/LoLepzD03QezF7mHekW07wckU6+7Q9YdIbSVVhYrVWNy4V9SLNt9rDNP2lL0qzP3/u+7FCVXpVsepRRHoAuuwZCqIEy9pj8H80hp7qY3PsWfym5PFwPDpDrw5btVy0nYXPzmSU7Uq1R+xlIyX8GjtJduBVZ8wbk6aTUuK/MPWJrZBr6wJdTeGfZt62TS2PvUX8Bszn2XYFWa+KC0AGHhHOlm+2AJHVPZlyUq17Cl5102dlAYHzK+0AG32kPT2GuoyTOE8BIy6ZumGISrsX9PtvrJQT973r7tutrOJdmSsuzZmet4ka9s4KBh2pnNpSnp5KKvbJBe/2u8kjranZVADkNkEKOEXepq4YzpMaSxC3MlYLFhnFkgI5ZVRMzmO+OO/YgsPyT8yRPxZINEKJmxVfR6o2/dlXAveRG+kmgscPVzG2fU+7RYWdJ6A7dYUqm+3QeXKaM60OaCxssNom3YyO27eklt3YlQIip36uoWBxadwhW6Xr4hpzG+fVoqWHCOB4W0tkB4Ys2fVx/u4hWeNar3onUwWIr3qyzShdQuq1yLoOGDw62HfXCpHg+2MgPzx0D30ZvvTRWoyLCT5KXRfbhCHc0ft6eEqaV2Bsm1PQ1adRpxas+YKl6OM0XfBYI7e+D/PTCV8kGkiBFjju03VDE4za5rygA5Hlm2Nw7Z/jwlgzZu+xnq4r5sKXwqO2GiO0Yz0phNMal/uj9jQH01r6jZOWZdGYv25HB18pD1BnnheFvgIBd4A+Yzzd4445ZYYBPi1KjUxhWknmQ3xMtk+VekEsyt5OsRToo3sdsrHlF0S3wBO8PMh2hXpztV0Nul20IZOgLNZXnw69o2KVsiPg3L1Ov2ccetI/l78hqpSial79UDetTUKR6jdST7RI/tNxHgqa2VZpA6vgUwhJt7/J+BSGBMS8EJAsf/9j8QXzOPuANANF9n6qx9M8VFm3znHUngYh/toDPhEifiWmFe8/WqO48axLW568ANtWdjn5DflrdMhUJcxSKlMY6hfUROf4lKD2WVzMrBGUEyM1i/IioLJF4GlMlIJPWPw9wKGpav4okyiSNWyQxlltAoA50ScVI3orHMZwfosp1huw/AZY81iQ2w5g07s7Nd1y8K5gjHHQyvDDAfOa9Uhob6FFUHbBh8V/NUp358vJG2ztaI6jVmQM/XysFDR1IWvZ+EGZ" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=4" title="International Journal of Communications, Network and System Sciences">
+                    International Journal of Communications, Network and System Sciences</a> &gt; <a href="home?issueid=6923#60104">Vol.8 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Biological Inspiration—Theoretical Framework Mitosis Artificial Neural Networks Unsupervised Algorithm <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=L%c3%a1cides+Pinto++Mindiola&searchfield=authors&page=1' target='_blank'>Lácides Pinto  Mindiola</a><sup></sup>, <a href='articles?searchcode=Gelvis+Melo++Freile&searchfield=authors&page=1' target='_blank'>Gelvis Melo  Freile</a><sup></sup>, <a href='articles?searchcode=Carlos+Socarras++Bertiz&searchfield=authors&page=1' target='_blank'>Carlos Socarras  Bertiz</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Universidad+de+La+Guajira%2c+Riohacha%2c+Colombia&searchfield=affs&page=1' target='_blank'>Universidad de La Guajira, Riohacha, Colombia</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ijcns.2015.89036"
+                    target="_blank" onclick='SetNum(60104)'>10.4236/ijcns.2015.89036</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/IJCNS_2015093014554430.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60104)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60104' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60104.xml' target='_blank' onclick='SetNum(60104)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    5,684</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    7,038</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60104&JournalID=4' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">The modified approach to conventional
+Artificial Neural Networks (ANN) described in this paper represents an essential
+departure from the conventional techniques of structural analysis. It has four
+main distinguishing features: 1) it introduces a new simulation algorithm based
+on the biology; 2) it performs relatively simple arithmetic as massively
+parallel, during analysis of a structure; 3) it shows that it is possible to
+use the application of the modified approach to conventional ANN to solve
+problems of any complexity in the field of structural analysis; 4) the Neural
+Topologies for Structural Analysis (NTSA) system are recurrent networks and its
+outputs are connected to its inputs [1] and [2]. In NTSA system the DNA of the
+neuron mother and daughters would be defined by: 1) the same entry, from the
+corresponding neuron in the previous layer; 2) the same trend vector; 3) the
+same transfer function (purelin). The mother’s neuron and her daughter’s neuron
+differ only in the connection weight and its output signal.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Mitosis&searchfield=keyword&page=1' target='_blank'>Mitosis</a>, <a href='articles?searchcode=+Artificial+Neuron&searchfield=keyword&page=1' target='_blank'> Artificial Neuron</a>, <a href='articles?searchcode=+Node&searchfield=keyword&page=1' target='_blank'> Node</a>, <a href='articles?searchcode=+Structural+Analysis&searchfield=keyword&page=1' target='_blank'> Structural Analysis</a>, <a href='articles?searchcode=+Neural+Networks&searchfield=keyword&page=1' target='_blank'> Neural Networks</a>, <a href='articles?searchcode=+Output&searchfield=keyword&page=1' target='_blank'> Output</a>, <a href='articles?searchcode=+Layer&searchfield=keyword&page=1' target='_blank'> Layer</a>, <a href='articles?searchcode=+Simulation&searchfield=keyword&page=1' target='_blank'> Simulation</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Mindiola, L. , Freile, G.  and Bertiz, C.   (2015) Biological Inspiration—Theoretical Framework Mitosis Artificial Neural Networks Unsupervised Algorithm. <i>International Journal of Communications, Network and System Sciences</i>, <b>8</b>, 374-398. doi: <a href='http://dx.doi.org/10.4236/ijcns.2015.89036' target='_blank' onclick='SetNum(60104)'>10.4236/ijcns.2015.89036</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>The ADALINE network is a fairly well known ANN and is very similar to the perceptron except that its transfer function is linear. Since its invention by Bernard Widrow and his graduate student Marcian Hoff in 1960, we have considered a lineal ANN of several layers with simple processors also called “neuron”, “node”, and “pro- cessing elements”. Each layer has its own weight matrix W, its own bias vector b (the bias is much like a weight except that it has a constant input of 1), a net input vector n and a output vector a<img src="//html.scirp.org/file/5-9702009x5.png" class="200" />. Note that the scalar input p is multiplied by the scalar weight w to form wp.</p>
+<p>A NTSA is an information processing system which operates on inputs to extract information, and produces outputs corresponding to the extracted information. NTSA means that the “distribution factors” in the nodes of the structures are the components of the input vector to the first layer. After a complete presentation of the training data, a new set of weights and biases are obtained, and new outputs are again evaluated in a feed-forward manner until a specific tolerance for error is obtained. Unsupervised training uses unlabeled training data and requires no external teaching.</p>
+<p>A NTSA model is composed of simple processors, each having a local memory. Processing elements are con- nected by unidirectional links that carry discriminating data; the linear feed-forward net has been found to be a suitable one for training techniques. Outputs of neurons in one layer are transferred to their corresponding neuron in another layer through a link that amplifies or inhibits such outputs through weighting factors [3] .</p>
+<p>This paper evaluates a neural network approach on frame analysis using an unsupervised algorithm. The results are obtained programming the entire formulation of the algorithm using MATLAB. The aim of the study is to estimate the rotational end moment.</p>
+<p>The modified neuronal structural analysis requires the addition of a set of new concepts but simple addition of traditional, also called classic. All of them eventually make themselves the nature of a new approach, whose theoretical and conceptual frameworks then present them in a concise form, but as clear as possible, so that it is accessible to all and everyone disposing of the basic conceptual tools tries to address that this new theoretical method is practical.</p>
+<p>Artificial Neural Networks (ANN) is able to perform relatively simple arithmetic as massively parallel, during analysis of a structure. To this end, an urgent need is to define the terms: matrices and vectors weights trends, using the parameters derived from the physical and mechanical members.</p>
+<p>We do not intend here to discuss the basic principles of analysis of statically indeterminate structures, nor the plausibility of traditional approaches. We simply want to show that it is possible to use the application of the modified approach or conventional artificial neural networks to solve problems of any complexity in the field of structural analysis.</p>
+<p>Electronic neural networks generally exist as computer simulations. And that they are typically designed as very large. The ability to simulate is limited by the speed and storage capacity of digital computers available. Some researchers have developed hardware in order to increase processing speed, but conditions are not given to facilitate this event parallel [4] . However, there are two key similarities between biological and artificial neural networks. Firstly, the building blocks of the two kinds of networks are simple computational devices, although artificial neurons are much simpler, so that biological neurons are highly interconnected. Secondly, the connection among the processing elements determines the function of the network. The main objective of this paper is to determine the application of the modified approach or conventional ANN to solve problems of any complexity in the field of structural analysis. The work elaborated the building of the NTSA models as well as its features with the appropriate connections to solve particular problems [1] .</p>
+<p>Notation and Terminology</p>
+<p>In this work, figures, mathematical equations and text discussing both figures and mathematical equations will use the following notation.</p>
+<p>Basic Concepts</p>
+<p>Scalars: Small italic letters a, b, c</p>
+<p>Vectors: Small bold nonitalic letters a, b, c</p>
+<p>Matrices: Capital bold nonitalic letters A, B, C</p>
+<p>A. Structures</p>
+<p>We append the number of the layer as a superscript to the rotational moments. Thus, the rotational for the first layer and node four on the right end of the beam is written as<img src="//html.scirp.org/file/5-9702009x6.png" class="200" />, and the rotational moment for the second layer and node five on the bottom column is written as<img src="//html.scirp.org/file/5-9702009x7.png" class="200" />. <a href="#f1" target="_self">Figure 1</a> and <a href="#f2" target="_self">Figure 2</a> show this notation.</p>
+<p>End Moments</p>
+<p>End Rotational Moments</p>
+<p><img src="//html.scirp.org/file/5-9702009x8.png" class="200" /></p>
+<p>L―layer, n―node, sub―viz, vd, cs, ci</p>
+<p>Viz―left beam</p>
+<p>Vd―right beam</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x9.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Primitive structure.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x10.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Structure―notation.</p>
+</div>
+<p>Cs―top column</p>
+<p>Ci―bottom column</p>
+<p>Horizontal Displacements</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/5-9702009x11.png" /><span class="bracketMark"></span></p>
+<p><img src="//html.scirp.org/file/5-9702009x12.png" class="200" />―horizontal displacement, i―top column, j―bottom column</p>
+<p>Moments of Perfect Embedding</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/5-9702009x13.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/5-9702009x14.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/5-9702009x15.png" /><span class="bracketMark">―Extremes</span></p>
+<p>Sum of the Moments of Perfect Embedding</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/5-9702009x16.png" /><span class="bracketMark"></span></p>
+<p>B. Neural Networks Model</p>
+<p>We need to introduce some additional notation concerning the network architectures. See <a href="#f3" target="_self">Figure 3</a> and <a href="#f4" target="_self">Figure 4</a>.</p>
+<p>Weight Matrices:</p>
+<p>Scalar Element</p>
+<p><img src="//html.scirp.org/file/5-9702009x17.png" class="200" /></p>
+<p>i―row, j―column, L―layer</p>
+<p>Matrix</p>
+<p><img src="//html.scirp.org/file/5-9702009x18.png" class="200" /></p>
+<p>Column Vector</p>
+<p><img src="//html.scirp.org/file/5-9702009x19.png" class="200" /></p>
+<p>Row Vector</p>
+<p><img src="//html.scirp.org/file/5-9702009x20.png" class="200" /></p>
+<p>Bias Vector:</p>
+<p>Scalar Element</p>
+<p><img class="200" data-original="//html.scirp.org/file/5-9702009x21.png" /></p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x22.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Biological inspiration NTSA system primitive.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x23.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Single-input neuron.</p>
+</div>
+<p>Vector</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x24.png" /><span class="bracketMark"></span></p>
+<p>Input Vector:</p>
+<p>Scalar Element</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x25.png" /><span class="bracketMark"></span></p>
+<p>Net Input Vector:</p>
+<p>Scalar Element</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x26.png" /><span class="bracketMark"></span></p>
+<p>Vector</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x27.png" /><span class="bracketMark"></span></p>
+<p>Output Vector:</p>
+<p>Scalar Element</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x28.png" /><span class="bracketMark"></span></p>
+<p>Vector</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x29.png" /><span class="bracketMark"></span></p>
+<p>Transfer Function</p>
+<p>Scalar Element</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x30.png" /><span class="bracketMark"></span></p>
+<p>Vector</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x31.png" /><span class="bracketMark"></span></p>
+<p>Multi Layers of Neural networks</p>
+<p>Layers Superscript</p>
+<p>Input Vector: p</p>
+<p>Output Vector: a</p>
+<p>Bias Vector: b</p>
+<p>Net input Vector: n</p>
+<p>Weight Matrix: W</p>
+<p>Input Number: R</p>
+<p>Neuron Numbers for Layer: S</p>
+<p class="E-Title1">2. General Architecture NTSA</p>
+<p>A NTSA is an information processing system which operates on inputs to extract information, and produces outputs corresponding to the extracted information. NTSA model is composed of simple processors, each having a local memory. Processing elements are connected by unidirectional links that carry discriminating data the linear feed-forward net has been found to be a suitable one for training techniques. Outputs of neurons in one layer are transferred to their corresponding neuron in another layer through a link that amplifies or inhibits such outputs through weighting factors. Except for the processing elements of the input layer, the input of each neuron is the sum of the weighted outputs of the node in the prior layer and a bias. Each neuron is activated according to its input, transfer function, and threshold value [5] .</p>
+<p>There exist a variety of ANN models and learning procedures. Feed-forward networks are well known approaches for prediction and database processing applications. In this type (NTSA), the weighted and biases links feed activation functions from the input layer to the output layer in forward direction.</p>
+<p><a href="#f3" target="_self">Figure 3</a> shows the general feed-forward multilayer networks model, including two hidden layers. The “distribution factors” beams [6] , of the input layer constitutes the neurons inputs in layer (L<sub>1</sub>), representing a set of variables.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x32.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x33.png" /><span class="bracketMark"></span></p>
+<p>A single-input neuron is shown in <a href="#f2" target="_self">Figure 2</a>. The scalar input p is multiplied by the scalar weight w to form wp, one of the terms that are sent to the summer. The neuron has a bias b, which is summed with the weighted input to form the net input n, goes into transfer function f (linear function), which produces the scalar neuron output a.</p>
+<p>If we related this simple model of the neuron with biological neuron, then the weight w corresponds to the strength of a synapse, the neuron body is represented by the summation and the transfer function, and the neuron output a represents the signal on the axon [5] .</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x34.png" /><span class="bracketMark">.</span></p>
+<p>The inputs and outputs for the <img class="200" data-original="//html.scirp.org/file/5-9702009x35.png" /> neuron are:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x36.png" /><span class="bracketMark">(1)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x37.png" /><span class="bracketMark">(2)</span></p>
+<p>where f<sub>i</sub> constitutes an activation function linear, its behavior is that of a threshold function, in which the output of the neuron is generated if a threshold level, is reached. The net input and output o the j<sub>th</sub> neuron are similarity treated as in (1) and (2).</p>
+<p>Typically, the “activation function” (purelin) is chosen by the designer and then the parameters w and b will be adjusted by some learning algorithm so that the neuron input/output relationship meets some specific goal.</p>
+<p class="E-Title2">2.1. Multiple Layers of Neuron</p>
+<p>Generally, one neuron with many inputs may not be sufficient. We might need three, four or seven, operating in parallel, in what we will call a layer. Yet, can be considered a network with several layers. Each layer has its own weight matrix<img class="200" data-original="//html.scirp.org/file/5-9702009x38.png" />, its own bias vector<img class="200" data-original="//html.scirp.org/file/5-9702009x39.png" />, a net vector <img class="200" data-original="//html.scirp.org/file/5-9702009x40.png" /> and an output vector<img class="200" data-original="//html.scirp.org/file/5-9702009x41.png" />.</p>
+<p>The first layer has <img class="200" data-original="//html.scirp.org/file/5-9702009x42.png" /> neurons, <img class="200" data-original="//html.scirp.org/file/5-9702009x43.png" />neurons in the second layer, etc. As noted, different layers can have different numbers of neurons. Thus, the weight matrix for the first layer is written as<img class="200" data-original="//html.scirp.org/file/5-9702009x44.png" />, and the weight matrix for the second layer is written as<img class="200" data-original="//html.scirp.org/file/5-9702009x45.png" />. This notation is used in all network models of the NTSA system. The outputs of the layers one, two, and three are the inputs for layers two, three and four. Thus, layer three can be viewed as a one-layer network with <img class="200" data-original="//html.scirp.org/file/5-9702009x46.png" /> inputs.</p>
+<p>There is, one correspondence between the <img class="200" data-original="//html.scirp.org/file/5-9702009x47.png" /> neurons of the first layer, <img class="200" data-original="//html.scirp.org/file/5-9702009x48.png" />of the second layer neurons, the neurons <img class="200" data-original="//html.scirp.org/file/5-9702009x49.png" /> of the third layer as long as <img class="200" data-original="//html.scirp.org/file/5-9702009x50.png" /> and so on, so that the output of a neuron of the first layer is the input to the corresponding neuron in the second layer and so on, that is, the output of the <img class="200" data-original="//html.scirp.org/file/5-9702009x51.png" /> layer or output layer is <img class="200" data-original="//html.scirp.org/file/5-9702009x52.png" /> vector:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x53.png" /><span class="bracketMark">,</span></p>
+<p>A layer whose output is the network output is called an output layer. The others layers are called “hidden layers”. The network of <a href="#f3" target="_self">Figure 3</a> has an output (layer 4) and three hidden layers (layers 1, 2, and 3).</p>
+<p class="E-Title2">2.2. Recurrent Networks</p>
+<p>The NTSA system is a recurrent network with feedback; some of its outputs are connected to the inputs subsequent network, put it in some way. This is quite different from the networks models that we have studied thus far, which were strictly feed-forward with no backward connection. The NTSA is of the forward-backward class by the system architecture.</p>
+<p class="E-Title1">3. Artificial Neural Mitosis (ANM)</p>
+<p>In general, natural biological organisms are much more complicated than the automatic devices. However, some peculiarities that we observe in the organization of the first and the way they perform certain operations or behavior can serve as a reference to the inspiration of an approach required to solve a family of common problems in real life. The set of experiences and difficulties we face when we operate certain automatic devices can be the source of the interpretations of the physiological systems, mainly human and some vertebrate in particular.</p>
+<p>The man has been inspired by the central nervous system of humans, which is actually the most difficult of all; which it has been the source of a biological inspiration that led to the creation of some automatic devices such as artificial neural networks. Such devices sometimes have certain limitations in its design and operation, when it comes to solve a certain class of problems. Consequently, we could ensure that such systems are still evolving. This means that the system is open to change, or equivalently; network models support new paradigms; without this, it’s essential, such as learning and massive parallelism goals are violated.</p>
+<p>The central nervous system of humans is of unlimited complexity. For their study, it is taken to biological neurons as independent units. Thus, it is isolated as the first stage of the problem; the structure and workings of such individual elemental processing units. The second part of the problem aims to understand how neurons are organized into a whole; and how that operation of all expressed, starting logically based on these individual ele- ments of information processing.</p>
+<p>Neuron is considered as automatic physiological devices as a “black box”, which react to the presence of certain stimuli and issues a response as independent functional units. They have clearly defined characteristics, i.e., neurons that receive signals can be of two types excitatory or inhibitory. To stimulate a neuron is necessary that this receive excitatory stimuli. After a certain time, the neuron will issue “one and only one” output pulse (signal).</p>
+<p>What would you do if a neuron of the output layer of a network, like a node of a structure, had to pass over a different signal to other neurons or to the outside world? Another question, why, if the artificial neuron is a real operation of a biological neuron very large simplification, cannot inspire and create an artificial neuron that go further; and generate neurons daughters with the same DNA? The DNA of the neuron mother and daughters would be defined by: 1) the same entry, from the corresponding neuron in the previous layer; 2) the same trend vector; 3) the same transfer function. The mother and her daughter’s neuron differ only in the connection weight and its output signal.</p>
+<p>In this evolutionary scenario, it is another question. Is it possible to think of a neuronal structure and function, to incorporate the concept of neuronal multiplication? Yes, it’s a positive response. Then, the artificial neural mitosis could be a feature attributable to the artificial neurons, though, does not share this property essentially biological equivalent.</p>
+<p>There are a variety of kinds of designs and learning techniques that are enriched with its own peculiarities, which can generate or manufacture under its own power users and meeting their own needs. Let us not forget that the field of neural networks is in the throes of evolution and growth; and therefore, for their development, much remains to be done.</p>
+<p>The synthesis of biological neurons is important and difficult because it is born the human brain. In it, we were inspired to produce electronic devices or artificial neural networks, which are the synthesis of artificial neurons. Artificial neural networks are characterized by their autonomy and logic flexibility. Running, at least part of the functions of the central nervous system [3] .</p>
+<p><a href="#f5" target="_self">Figure 5</a>(a) and <a href="#f5" target="_self">Figure 5</a>(b) illustrate about the kinds of biological cells, which serve as inspiration to neuro- structural analysis. The first is a biological neuron. The second is a cell of the class that forms the intestinal epithelium and the epidermis. The latter cells are able to multiply, to generate through a stem cell mitosis two or more identical to the mother daughters cells genetically. In other words, mitosis is a process of equitable sharing of genetic material, DNA [7] .</p>
+<p>Figures 6(c)-(e) show different versions of what could be the “mitosis of an artificial neuron” nodes in different frame structure. It can be seen at the bottom of the typical node scheme, a multilevel cross linked structure. Each node needs to transmit, two, three, four signals. Only after acceptance of the phenomenon of artificial neural mitosis, which replaces the neuron could meet the demand of the number of required signals.</p>
+<p>If we accept the above approach, then we have met the expectations of the first part of the expansion of the framework of our theory, where the DNA of the neuron mother and her daughter’s neurons is: DNA = Common entrance, from the corresponding neuron of the previous layer, as trend vector, same linear transfer function.</p>
+<p>If a neuron of the output layer of a network, like a node of a structure had to transmit over a different signal to the external world. We say that is not possible, because, you’re right is currently denied. However, in another scenario, as it, the available cells of the epidermis and corresponding to the intestinal epithelium, it would appear, through a biologically inspired by modifying the structure and neuronal functioning, so that the attribute Property neuronal multiplication (mitosis neuronal) is assigned to the artificial neuron. This would be debatable,</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x55.png" />https://www.studyblue.com/notes/note/n/biological-foundations-neuron-communication-/deck/1025438 [8]</p>
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Biological cell mitosis.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x56.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Artificial neural mitosis in the nodes of a structure.</p>
+</div>
+<p>but viable. Let’s concede now, this transcendental to artificial neuron, as a result of biological inspiration derived from some special cells, such as the class of the above named property. Consequently, the Artificial Neural Mitosis (MNA), will become a feature attributable to the artificial neurons, though, this essentially not share with their biological equivalent.</p>
+<p class="E-Title1">4. General Architecture of Proposed Network</p>
+<p>To bring about the first artificial neural network, a neuron is placed on each node of the network structure proposal. Thus, we have a one to one correspondence between nodes and gantry neurons of the various layers of the neural network thus formed [8] . To generate further models neural networks, neuro-structural model primitive neuro be divided into sub-models derived (sub-domains). This is achieved by eliminating successively, the last model obtained, and the layer of the right to illustrate the statement above with <a href="#f7" target="_self">Figure 7</a>.</p>
+<p>The process of building the sub-neural network models starts with the artificial mitosis, the last layer in the first model (original model). The remaining sub-models of neuro-structural derivatives, network obtained after removal of the respective output layer network model precedent, then, produce mitosis of the output layer of the new sub-model.</p>
+<p>All neuro-network models thus obtained operate in a massively parallel and have as output vector, the ends rotational moments associated with the nodes of the output layer. The calculation process is iterative and each network will be implemented through successive approximations; and the same, will be controlled by the learning algorithm. Thus, we can know the outputs of the hidden layers of the original multi-cross-linked network. It is important to note that each network model will shed their own results. Values are retained as data, to operate the following neuro-network model. Finally, the matrix of the results of total rotational moments at the ends of all members of the structure is obtained.</p>
+<p>All neuro-derived models have the same input vector.</p>
+<p><img class="200" data-original="//html.scirp.org/file/5-9702009x57.png" />. An exception, the derivative of neuro-layer model, whose components of the input vector are all factors of rotation of the ends of the rods, which contribute to the nodes of the first layer, that is,</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x58.png" /><span class="bracketMark"></span></p>
+<p class="E-Title2">4.1. Division of Neuronal Structure Substructures―Mitosis 1</p>
+<p>The “artificial neural network model primitive” or “original model” constitutes the basic network for the development of neural approach “structural analysis with artificial mitosis”. This network represents the inspiring model, from which we will aim to get a set of “sub-derived models of neural networks”. See the original structural model of <a href="#f7" target="_self">Figure 7</a>.</p>
+<p>If you look closely, the output layer plane gantry N levels and L layers of <a href="#f7" target="_self">Figure 7</a>, we realize that the layer required on each node, as many outlets as members concur in it. <a href="#f8" target="_self">Figure 8</a> shows an overview of artificial neural network model derived mitosis 1, which has the same architecture ANN primitive, but differs from this only in the number of neurons in the output layer. Mitotic neurons are locally attached Model 1, with unidirectional connections except the output layer. The model is a back-forward whose learning algorithm is self-supervised; and therefore will not require a supervisor, and that by itself, it will run internal monitoring to monitor network performance, with a linear transfer function (purelin). This algorithm is also used by the other models derived, with operating in series. It has been proven that the network model is an effective and autonomous system that enables processing of the structural physical parameters, entering the network from an input vector whose components are the distribution factors, which belong to the beams of the first layer. These factors are clearly part of certain characteristics of the original structure [9] [10] .</p>
+<p>The outputs of the hidden layer neurons any, are transferred to corresponding processing elements of the back</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x59.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Primitive structure―artificial neural network primitive.</p>
+</div>
+<p>Layer 1 Layer 2 Layer Q Layer (L-1) Output Layer Layer L</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x60.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Model mitosis 1.</p>
+</div>
+<p>layer, through local connections, after balancing the weight factors. Except for the processing elements of the input layer neurons and output layer, the input of each neuron is the sum of the weighted outputs of the nodes (neurons) in the previous layer plus the corresponding trend.</p>
+<p>Each neuron or processing element is activated in accordance with the input into the neuron activation function and the value node trend or threshold of the neuron. L<sub>e</sub> input layer consists of an arrangement of <img class="200" data-original="//html.scirp.org/file/5-9702009x61.png" /> neurons, an output layer, containing <img class="200" data-original="//html.scirp.org/file/5-9702009x62.png" /> processing elements. Between layers of input and output L<sub>e</sub> and L<sub>o</sub> are (L - 2) hidden layers. Each layer has its own matrix of weights W your own trend vector b, a vector of net input n and a vector output a.</p>
+<p class="E-Title2">4.2. Sub-Models Derived by Sectioning</p>
+<p>For rotational moments at the ends of the members who attend nodes in the hidden layers, the neuro-structural model primitive neuro be divided into sub-models derived (sub-domains). This is achieved by removing successively each time the original model, a layer neuron from right to left. This process begins immediately after, the mitosis 1 generated by the first sub-model derived. The (L - 1) sub-models of neuro-derived remaining structural network are obtained after each respective switching and mitosis of the output layer of the new sub-model</p>
+<p class="E-Title2">4.3. Sectioning to Mitosis 2</p>
+<p>For rotational moments at the ends of the members of the hidden layers of a structure, primitive neuro-structural model must be divided into sub-models derived neuro (sub-domains). This is achieved by removing successively each time the original model, a layer neuron from right to left. The key partitioning process of primitive neuro- structural model sequentially, to give rise to sub domains or neuro-substructures, lies in the fact that the nodes of the new output layer are predominantly high connectivity; and the same, are assigned to processors distributed memory which leads to an iterative application of massively parallel processing, with the support of the neural mitosis [11] . This process is solved the problem of determination sub-end rotational moments of hidden layers of the structure.</p>
+<p class="E-Title2">4.4. Neuronal Architecture Mitosis Model</p>
+<p>The model derived mitosis 2 is a network fed forward (back-forward) whose learning algorithm is self-super- vised; and therefore did not require a supervisor, and that by itself, it will run internal monitoring to monitor network performance, with a linear transfer function.</p>
+<p>The outputs of the neurons of a layer are transferred to the next layer corresponding through local connections excite or inhibit such exits through weighting factors. Except for the processing elements of the input layer neurons and output layer.</p>
+<p>The input of each neuron is the sum of the weighted outputs of the neurons in the previous layer plus the corresponding trend. Each neuron or processing element is activated in accordance with the input into the neuron activation function and knot trend value or threshold of the neuron. In <a href="#f9" target="_self">Figure 9</a> the mitosis neuronal model 2, which is composed of L - 1 layers shown, namely, having a layer unless the original model and the ANN mito-</p>
+<p>Layer 1 Layer 2 Layer Q Output Layer</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x63.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. Mitosis artificial 2.</p>
+</div>
+<p>sis 1. The input layer L<sub>e</sub> is an arrangement of <img class="200" data-original="//html.scirp.org/file/5-9702009x64.png" /> neurons; the output layer <img class="200" data-original="//html.scirp.org/file/5-9702009x65.png" /> contains <img class="200" data-original="//html.scirp.org/file/5-9702009x66.png" /> processing elements. Between layers of input <img class="200" data-original="//html.scirp.org/file/5-9702009x67.png" /> and output <img class="200" data-original="//html.scirp.org/file/5-9702009x68.png" /> are (L - 2) hidden layers. Each layer has its own matrix of weights W, its own trend vector b, a vector of net input n and a vector output a.</p>
+<p>For rotational moments at the ends of the members attending the nodes of the Q-th hidden layer of the structure, primitive neuro-structural model will be severing all layers to the right of the Q-th layer sequentially one to one.</p>
+<p class="E-Title2">4.5. Neuronal Architecture Model Q-th Artificial Mitosis</p>
+<p>Then in <a href="#f10" target="_self">Figure 10</a> an overview, the artificial neural network model built with simple processing elements shown, which have a local memory. Neurons are connected with unidirectional connections, except the output layer. The model is a self-supervised back forward network, the algorithm is similar to the other models that operates in series and therefore will not require a supervisor and that by it will run internal monitoring, to monitor the performance network, with a linear transfer function.</p>
+<p>Between layers of input <img class="200" data-original="//html.scirp.org/file/5-9702009x69.png" /> and output<img class="200" data-original="//html.scirp.org/file/5-9702009x70.png" />, are (Q - 1) hidden layers, which generally own N neurons. Each layer has its own matrix of weights W, its own trend vector b, a vector of net input n and a vector output a.</p>
+<p class="E-Title2">4.6. Sectioning of the L-th Artificial Mitosis</p>
+<p>To bring the last sub-model derived corresponding to the L-th neural mitosis to run the L-th isolation of primitive neural model accompanied the final process of neural mitosis. Precisely, this sub-model is the only one with a different input vector with R = (3N - 1) components.</p>
+<p class="E-Title2">4.7. Layer Neural Architecture Model: L-th Artificial Mitosis</p>
+<p><a href="#f11" target="_self">Figure 11</a> shows a general scheme, the L-th neural network model derived from a layer with <img class="200" data-original="//html.scirp.org/file/5-9702009x71.png" /> neurons which have a small local memory. The input vector to the network has R = (3N - 1) components.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x72.png" /><span class="bracketMark"></span></p>
+<p>It has been found that the L-th network model derivative, L-th mitosis is an effective and independent system, which enables processing of the structural physical parameters, entering the network from an input vector whose components distribution are factors that belong to the beams and columns that meet in the first layer of the structure. These factors are clearly part of the original structure certain physical characteristics.</p>
+<p>In <a href="#f11" target="_self">Figure 11</a> the neural model of a layer, is composed of neurons<img class="200" data-original="//html.scirp.org/file/5-9702009x73.png" />. The layer has its own array of weights W<sup>1</sup>, its own vector b<sup>1</sup> trend; net input vector n<sup>1</sup> a component input vector <img class="200" data-original="//html.scirp.org/file/5-9702009x74.png" /> component and a vector output a<sup>1</sup>.</p>
+<p>Layer 1 Layer 2 Output Layer (Q-th Mitosis Artificial) Layer (L-1) Layer L</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x75.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f10" id="f10"><span class="cs_fig_con">Figure 10</span></a>. Mitosis artificial Q-th.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x76.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f11" id="f11"><span class="cs_fig_con">Figure 11</span></a>. First layer mitosis artificial.</p>
+</div>
+<p class="E-Title1">5. Sequence of Neuro-Structural Models</p>
+<p>The sequential division of neuro-structural primitive, together model with artificial neural mitosis is a mechanism by which a system of hybrid neural sub-models, capable of giving rise to a registration process, input, processing, and storage is generated and output information from internal and external means of a flat lattice structure of several levels. <a href="#f12" target="_self">Figure 12</a> is shown in simplified form.</p>
+<p>The first sub-model derived neuronal differs from sub-neuro-structural model primitive, just in the number of neurons in the output layer. From this differentiation, each model differs from the previous derivative in chronological order; and having a layer of neurons unless this; and possibly the number of neuron of the output layer.</p>
+<p>All neural models like its primitive have the same input vector. An exception, the model derived from a layer, which has an input vector with a number of components equal to the number of neurons of a layer model.</p>
+<p class="E-Title2">System Networks</p>
+<p>The neuro-structural analysis is a new alternative, which is based on two strategies: the division of the porch in</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x77.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f12" id="f12"><span class="cs_fig_con">Figure 12</span></a>. Neural system sub-models series.</p>
+</div>
+<p>sub-structures or sub-domains and artificial mitosis of the output layer, the primitive model.</p>
+<p>The first sub-model derived is called NTSA-I (artificial mitosis 1) shown in <a href="#f7" target="_self">Figure 7</a>. NTSA-I calculated rotational moments at the ends of the members which contribute to the final layer of nodes of the output layer structure or network. The sub-model-II ANN (artificial mitosis 2) calculates the rotational moment at the ends, which contribute to the nodes of the penultimate layer, or output layer of the network; and so on, until the sub- model simulation of NTSA-L (sub-neural network model of a single layer), which calculates the rotational moments at the ends of the members who attend at the nodes of the first layer original structure</p>
+<p>A macro program called mitosis generates artificial series of calls to all derivatives sub-models; and then the resulting NTSA-I sub-model calls the NTSA-II and so on, until the call of the NTSA-L, to complete the implementation of the series.</p>
+<p class="E-Title1">6. The Procedure</p>
+<p>The procedure of the NTSA system depends on the solution of three problems for the determination of member constants on fixed end moments, the stiffness at each end of member, and of the over-carry factor distribution factors <img class="200" data-original="//html.scirp.org/file/5-9702009x78.png" /> for the rotational end moments and distribution factors <img class="200" data-original="//html.scirp.org/file/5-9702009x79.png" /> for the lateral displacement moments at each end for each member of the frame under consideration. The determination of these values is not a part of the presented approach.</p>
+<p>The NTSA model has four layer, three inputs and five output values. The ‘function network’ of the Toolbox of the Matlab creates the net, which generates the first layer weights matrices and biases vectors for the four linear layers required for this problem. These weights and biases can now be trained incrementally using the algorithm. The network must be trained in order to obtain first layer weights and biases. For the second, third and fourth layers, the weights and biases are modified in response to network’s inputs and will lead to the correct output vector. There are not target outputs available. The linear network was able to adapt very quickly to the change in the outputs. The fact that it takes only seven iterations for the network to learn the input pattern is quite an impressive accomplishment [1] [2] .</p>
+<p>The scheme for entering the calculations systematically is shown in <a href="#f13" target="_self">Figure 13</a>. The procedure explained above, is best illustrated by solving the structure in <a href="#f13" target="_self">Figure 13</a>, which is loaded in a rather complex fashion. The distribution factors for nodes 1, 2, and 3 constitute the net’s input vector.</p>
+<p>The fixed end moments for the different loaded members are calculated by using the standard formula available in any structural handbook. Having completed these preliminary calculations, the training can be initiated. The network was set up with the three parameters (distribution factors of the beam) as the input, and the rota-</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x80.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f13" id="f13"><span class="cs_fig_con">Figure 13</span></a>. Example of application.</p>
+</div>
+<p>tional end moments due to rotation as the outputs determined by the first layer [3] .</p>
+<p>The calculation starts in the input layer and continues from one layer to the next. Such calculation is carried out quickly. After 6 or 7 iterations have been performed, as explained earlier, it will be noted that there is little or no change in the values of two consecutive sets of calculations. The calculations are now stopped and the values of the last iteration are taken as the correct ones, with the previous values being ignored. For the sake of clarity, these final values have been indicated separately [9] .</p>
+<p>The architecture of the ANN will be designed with the “Network Toolbox function of the Artificial Neural Networks” and simulations will be performed using the “Sim tool”, both belonging to the Matlab environment. This algorithm, through multiple interactions with the application of the method of the successive approximations, achieves the learning object models “artificial mitosis” [11] .</p>
+<p>The first ANN model derived or “artificial mitosis 1”, allows us to obtain the rotational moments at all ends of the members who concur in the nodes of the fourth layer and output layer, see <a href="#f15" target="_self">Figure 15</a>. The second network model “artificial mitosis 2” gives as results the rotational moments at all ends of the bars that come together in the nodes of the output layer (third layer). The third neural network model of the application is the “artificial mitosis 3”, which calculates the rotational moments at the ends of rods in either concurrent nodes of the second layer counted from left to right these.</p>
+<p>Finally, the fourth model derived or “artificial mitosis 4” consists of a single layer of neurons. This network allows us to calculate the rotational moments, partners at all ends of the members (beams and columns) that access to the nodes of the first layer, the artificial neural network model primitive (Ben Mark) [9] .</p>
+<p>The primitive neural network model consists of four layers of neurons, three hidden layers including the input layer and the output layer. We adopt the type of diagram shown in <a href="#f14" target="_self">Figure 14</a>, which allows us to write the successive values at the ends of each member. And also it facilitates the systematic income calculations. Show of the numerical calculations will to be performed later, including distribution factors and moments of perfect embedding at the ends of the members.</p>
+<p>The model of multi-gantry plane lattice structure will be used as a source of direct inspiration for the design of primitive neural network model. The analogy between models allows the following procedure: Repeat, i.e. double the structural network model, putting in place of each node of a neuron structural model. During the transformation of the structural model in neural model, columns connections between nodes are removed. Thus, the two models differ in the connectivity leading columns. But we should not worry about this, because, associated with each of the layers of primitive neural model and all possible models derived from it, the vectors trends of each layer, taking into account actions that produce connections columns that disappear in the primitive model and its derivatives. In this way, the equivalence between models remains.</p>
+<p>The primitive neural network model is shown in <a href="#f15" target="_self">Figure 15</a>, this network is back forward. The network consists of simple processing elements, each of which has a local memory. These neurons are connected by unidirectional connections that transfer data from one neuron to the next corresponding layer. The model is a network whose self-supervised algorithm does not require a supervisor, and that by itself, it will run internal monitoring</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x81.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f14" id="f14"><span class="cs_fig_con">Figure 14</span></a>. Distribution factors and fixed-end moments.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x82.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f15" id="f15"><span class="cs_fig_con">Figure 15</span></a>. Neuronal model primitive.</p>
+</div>
+<p>to monitor network performance, using a linear transfer function (purelin). The input vector components are factors corresponding to the beam ends that meet in the input layer to the distribution network [12] .</p>
+<p>Here are the original network model inspired by the structural model, keeping one correspondence between nodes in the structural model and the model of primitive neurons network.</p>
+<p class="E-Title2">6.1. Primitive Neural Network</p>
+<p>The model consists of four layers of neurons. Each layer has its own matrix of weights W, its own trend vector b, a vector of net inflow n and a vector output a. Following established notation the first, second, third and fourth layer respectively as will matrices W<sup>1</sup>W<sup>2</sup>W<sup>3</sup>W<sup>4</sup>.</p>
+<p>Artificial neural networks are intelligent tools which are extremely useful in situations, for which the rules are not clear enough or are difficult to establish artificial neural networks are robust and fault tolerant. You can calculate a function without a mathematical description of how the output function is operatively associated with the input. She learns to approximate functions even when its form cannot be specified accurately.</p>
+<p class="E-Title2">6.2. Artificial Mitosis 1 Model</p>
+<p>It is an artificial neural network with four layers. The first three layers of “mitosis Model 1” are similar to the original model. The input layer is <img class="200" data-original="//html.scirp.org/file/5-9702009x83.png" /> neurons. Each neuron is connected locally to its corresponding vector component ƿ input components<img class="200" data-original="//html.scirp.org/file/5-9702009x84.png" />. The input vector components are key values, called “distribution factors” [2] . The matrix of the weights of the second layer (hidden) W<sup>2</sup> is a diagonal matrix and its elements are the distribution factors of the left ends of the beams are located between the second and third layer of nodes. While the trend vector b<sup>2</sup> of the second layer has as fastening components moments belonging to each node of the layer, the moments due to horizontal displacement of the ends of columns and the rotational moments of the opposite ends of the beams and columns which contribute to the knot or processing unit [1] .</p>
+<p>The second layer is <img class="200" data-original="//html.scirp.org/file/5-9702009x85.png" /> neurons. Each neuron is connected locally to the unit of processing of the previous layer. The outputs of the layers one and two are the inputs to the layers two and three. Thus, layer two can be seen as a network of a layer with <img class="200" data-original="//html.scirp.org/file/5-9702009x86.png" /> inputs, <img class="200" data-original="//html.scirp.org/file/5-9702009x87.png" />neurons and an array of weights W<sup>2</sup> diagonal<img class="200" data-original="//html.scirp.org/file/5-9702009x88.png" />. The input to the layer two is the vector a<sup>1</sup>, and a<sup>2</sup> is output vector [10] .</p>
+<p>The matrix of the weights of the third layer (hidden) W^3 is a diagonal matrix whose elements are also the (non-adjustable) “distribution factors” left ends of the beams are between the third and fourth layer of neurons. While the bias vector associated b<sup>3</sup> third layer has components similar to the other bias nature. This layer has S<sup>3</sup> neurons. As with the second layer, this is locally connected through the vector a<sup>2</sup> to the next layer. The output layer is also the output of the network; this layer has an array of weights W<sup>4</sup> and <img class="200" data-original="//html.scirp.org/file/5-9702009x89.png" /> neurons. The matrix of weights has the elements to “factors of distribution” of all the ends of the members attending the nodes of the output layer [1]</p>
+<p><a href="#f16" target="_self">Figure 16</a> shows the network model after suffering the first mitosis the output layer of the original model, taking into account the number of required outputs node double edge and one edge node.</p>
+<p class="E-Title3">Mitosis Neuronal Architecture Model 1</p>
+<p>net =</p>
+<p>Neural Network object: numInputs: 1</p>
+<p>numLayers: 4 biasConnect: [1; 1; 1; 1]</p>
+<p>inputConnect: [1; 0; 0; 0] layerConnect: [4 &times; 4 boolean]</p>
+<p>Figures 17-20 show codes (mitosis 1, mitosis 2, mitosis 3 and mitosis 4) and explained as the neural network of the program Matlab toolbox organises the simulation of networks. MATLAB writes and reads many file during a typical NTSA system analysis.</p>
+<p class="E-Title2">6.3. Artificial Mitosis 2 Model</p>
+<p>It is a neural network model composed of three layers of neurons. The first two layers of Mitosis model 2 are</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x90.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f16" id="f16"><span class="cs_fig_con">Figure 16</span></a>. Mitosis model 1―fourth layer output.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x91.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f17" id="f17"><span class="cs_fig_con">Figure 17</span></a>. Mitosis 1 code-1.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x92.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f18" id="f18"><span class="cs_fig_con">Figure 18</span></a>. Mitosis 2 code-2.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x93.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f19" id="f19"><span class="cs_fig_con">Figure 19</span></a>. Mitosis 3 code-3.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x94.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f20" id="f20"><span class="cs_fig_con">Figure 20</span></a>. Mitosis 4 code-4.</p>
+</div>
+<p>equal to the first two layers of the original model and the two of “mitosis Model 1”. Each layer of the model has its own matrix respectively weights: W<sup>1</sup>, W<sup>2</sup>, W<sup>3</sup> and their delivery trend: b<sup>1</sup>, b<sup>2</sup>, b<sup>3</sup>. The parameters that characterize matrices and vectors weights trends continue thus in the primitive model, as in each of the models subject to mitosis except for its output layer. In <a href="#f21" target="_self">Figure 21</a>, the mitosis model 2 wherein the penultimate layer of primitive object model is a mitosis, considering the inherent connections to each of the nodes in the proposed structure is presented.</p>
+<p class="E-Title2">6.4. Artificial Mitosis 3 Model</p>
+<p>Derived network model two layer is sectioning product and artificial mitosis of the second layer of primitive neural network model. Weights matrices and vectors associated trends to the two layers of the neural network</p>
+<p>Layer 1 Layer 2 Layer 3 Layer 4</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x95.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f21" id="f21"><span class="cs_fig_con">Figure 21</span></a>. Mitosis model 2―third layer output.</p>
+</div>
+<p>model are derived respectively: W<sup>1</sup>, W<sup>2</sup> and b<sup>1</sup>, b<sup>2</sup>. Weights matrix and vector trend corresponding to the first layer of the neural network model remain primitive. See <a href="#f22" target="_self">Figure 22</a>:</p>
+<p class="E-Title2">6.5. Artificial Mitosis 4 Model</p>
+<p>This is a neural network model of a layer with eight (8) neurons and an input vector p of eight (8) components. In general, the number of components of the input vector to the layer is different from the number of neurons, ie, R ≠ S. But in this particular case, the number of components of the input vector (R = 8) is equal and corresponds to S = 8 number of neurons of the input layer. Each component of the input vector p is connected to the corresponding neuron through the matrix of weights W, which is a diagonal matrix whose elements are the rightmost rotational moments of the beams are between the first and second layer columns or nodes. See <a href="#f23" target="_self">Figure 23</a>. Each i-th neuron has a tendency b<sub>i</sub>, an adder block, linear transfer function and output a<sub>i</sub>. Artificial neurons belonging to artificial neural mitosis 4 model are directly connected with the outside world; and in no case with other neurons [12] . Input vector:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x96.png" /><span class="bracketMark"></span></p>
+<p>It has components distribution factors of the rotational moments of the members present in the first layer. This model has many components as vector has the layer neurons.</p>
+<p class="E-Title2">6.6. Results</p>
+<p>The results of the simulation are presented in <a href="#f24" target="_self">Figure 24</a>.</p>
+<p>The results matrix “all” showed above presents the values of the rotational moments at the ends of the various members who access the different layers of flat porch under discussion. The system of neuronal sub-types: mitosis1, mitosis 2, mitosis 3 and mitosis 4 result in a serial process that ends with the mitosis4, during which he lead to the recording, input, processing, storage and output of information from the media internal and external to the portal frame cross-linked multilevel flat. The neuro-structural analysis relies on two strategies: the neural mitosis and sectioning of the portal frame composed of layers.</p>
+<p>Finally, a program called mitosis macro generates a series of sequential calls to the respective sub-models derivatives mitosis 3 mitosis 1…mitosis 4 mitosis 2; and thus, the execution of the series is completed. <a href="#f25" target="_self">Figure 25</a> shows the final results of total extreme rotational moments of the portal frame members.</p>
+<p class="E-Title3">6.6.1. Verification of Results</p>
+<p>Refer to example. One way of checking for the validity of our findings is to arbitrarily cut a node and apply the static equilibrium conditions, for node i, as in the Accompanying illustration, <a href="#f22" target="_self">Figure 22</a>. In all, the end moment can be written as follow:</p>
+<p><img class="200" data-original="//html.scirp.org/file/5-9702009x97.png" /></p>
+<p>where,</p>
+<p>Layer 1 Layer 2 Layer 3 Layer 4</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x98.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f22" id="f22"><span class="cs_fig_con">Figure 22</span></a>. Mitosis model 3―out of the second layer.</p>
+</div>
+<p>Layer 1 Layer 2 Layer 3 Layer 4</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x99.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f23" id="f23"><span class="cs_fig_con">Figure 23</span></a>. Mitosis model 4―output first layer.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x100.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f24" id="f24"><span class="cs_fig_con">Figure 24</span></a>. Results―rotational moments at the ends of the members.</p>
+</div>
+<p><img class="200" data-original="//html.scirp.org/file/5-9702009x101.png" />: are the end known as the end moment and exerted by the node i, and k on the corresponding ends of the element,<img class="200" data-original="//html.scirp.org/file/5-9702009x102.png" />: are fixed end moments induced at the ends,<img class="200" data-original="//html.scirp.org/file/5-9702009x103.png" />: is termed as the near end rota-</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x104.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f25" id="f25"><span class="cs_fig_con">Figure 25</span></a>. Rotational moments ends in the porch.</p>
+</div>
+<p>tional moment, and<img class="200" data-original="//html.scirp.org/file/5-9702009x105.png" />: as the far end rotational end moment.</p>
+<p>Applying the static equilibrium equations we have: <img class="200" data-original="//html.scirp.org/file/5-9702009x106.png" /></p>
+<p>Considering the node i of the of the structure, <a href="#f26" target="_self">Figure 26</a>, of the structure, located between the three layer and level two, shown in <a href="#f19" target="_self">Figure 19</a>, where the members:<img class="200" data-original="//html.scirp.org/file/5-9702009x107.png" />:</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x108.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x109.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x110.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x111.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/5-9702009x112.png" /><span class="bracketMark"></span></p>
+<p>The validity of the computed the static equilibrium conditions, for node i is verified.</p>
+<p class="E-Title3">6.6.2. Comparison with Kani’s Method</p>
+<p>A comparison between the presented NTSA model and Kani’s Method was performed on the same example, and</p>
+<p>it can be shown in <a href="#f25" target="_self">Figure 25</a> and <a href="#f26" target="_self">Figure 26</a>. A discrepancy ratio <img class="200" data-original="//html.scirp.org/file/5-9702009x113.png" /> was used for comparison, where <img class="200" data-original="//html.scirp.org/file/5-9702009x114.png" /></p>
+<p>the rotational moment (output network) or total end moment and <img class="200" data-original="//html.scirp.org/file/5-9702009x115.png" /> is Kani’s result. The mean value was performed e comparison is shown in <a href="#t1" target="_self">Table 1</a> and <a href="#t2" target="_self">Table 2</a>. From looking at the table, one may conclude that the presented model gives a better agreement with Kani’s Method. A group of 15 nodes was used for verification. <a href="#f27" target="_self">Figure 27</a> and <a href="#f28" target="_self">Figure 28</a> show the nodes of the structure under study, and also the members who access the</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x116.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f26" id="f26"><span class="cs_fig_con">Figure 26</span></a>. Node i and 1, 2, 3 and 4 equilibrium conditions.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-9702009_1.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Accuracy of formulas for rotational end moments.</p>
+</div>
+<p>aforementioned nodes. In these figures we present the comparison of some of the results: rotational moments at the extremes of members obtained with the application of G. Kani Method (distribution moments: these are the values shown in parentheses), and the results of the rotational moments calculated at the ends on the bars of the structure through the analysis executed by NTSA (whose values are outside the parentheses) that can improve the accuracy and speed of the results (Ben Mark) [9] .</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_5-9702009_2.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Accuracy of formulas for total end moments.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x117.png" />Kani’s Method: ( ): NTSA System: --------</p>
+ <p class=" sacImgMarkCss"><a name="f27" id="f27"><span class="cs_fig_con">Figure 27</span></a>. Rotational end moments whit horizontal displacement.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-9702009x118.png" />Kani’s Method: ( ): NTSA System: --------</p>
+ <p class=" sacImgMarkCss"><a name="f28" id="f28"><span class="cs_fig_con">Figure 28</span></a>. Total end moment’s whit horizontal displacement.</p>
+</div>
+<p class="E-Title1">7. Conclusions</p>
+<p>1) There is a knack for designing primitive network inspired in a simple lattice model of the proposed structure, since this automatically suggests the neural network topology, connectivity type and even the number of hidden layers and the number of constituent neurons.</p>
+<p>2) The design of the various models of artificial neural networks is highly didactic, and from the primitive model the topology design of each NTSA is obtained, including the number of hidden layers, number of neurons per layer, and the way that these are connected.</p>
+<p>3) In general, the algorithm is self-supervised learning NTSA common to all models. They differ in the judgments that define the individual architecture.</p>
+<p>4) The NTSA models are connected in series allowing interaction between artificial neural network architecture with different connectivity (feed-forward-backward).</p>
+<p>5) All NTSA models are linear, which significantly reduces the complexity calculations.</p>
+<p>6) In conventional neural networks results hidden layers are not known; through the NSTA system we can know the values or results of the hidden layers of the network.</p>
+<p>7) NTSA system introduces a new algorithm based on biology.</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>L.R.P.M. thanks to Prof. Alfonzo G. Cerezo for his advice developing this work.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579701' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Pinto, L.R. and Zambrano, A.R. (2014) Unsupervised Neural Network Approach to Frame Analysis of Conventional Buildings. Int. J. Communications, Network and Systems Sciences, 7, 203-211.<br/>http://dx.doi.org/10.4236/ijcns.2014.77022
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579702' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Rivero-Angeles, F.J., Gomez-Ramirez, E., Gomez-Gonzalez, B. and Garrido, R. (2005) Fault Detection in Shear Buildings Subject to Earthquakes Using a Neural Network. Proceeding of the Eighth International Conference on the Application of Artificial Intelligence to Civil, Structural and Environmental Engineering, Edited by B. H. V. Topping, 107, ISBN 1-905088-03-05. <br/>http://dx.doi.org/10.4203/ccp.82
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579703' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Pinto, L. (2008) Tesis Doctoral: AETN Analisis de Estructuras Mediante Topología Neuronal.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579704' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        DARPA (1987-1988) Neural Network Study (U.S.). Published by AFCEA International Press, a Division of the Armed Forces Communications and Electronics Association 4406 Fair Lakes Court Fairfax Virginia 22033-3899 USA.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579705' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Beale, M., Hagan, M.T. and Demuth, H.B. (1995) Neural Network Design. Thomson Learning, Boston.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579706' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Eaton, L.K. (2001) Hardy Cross and the “Moment Distribution Method”. Nexus Network Journal, 3, 15-24.<br/>http://dx.doi.org/10.1007/s00004-001-0020-y
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579707' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Hoffmann, F. Biological Therapies and Cancer. Produced through an educational grant from La Roche Ltd.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579708' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Biological Foundations—Neuron Communication. <br/>www.studyblue.com/notes/note
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579709' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Kani, G. (1955) Cálculo de Pórticos de Varios Pisos. In: Reverte, S.A., Ed., 1978-1979, Printed in Spain, ISBN-84-291-2051-6, 19-20-21-22.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579710' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Boso, D., Lefik, M. and Schnefler, B. (2005) Joint Finite Element: Artificial Neural Network Numerical Analysis of Multilevel Composites Artificial Intelligence to Civil, Structural and Environmental Engineering. Edited by B. H. V. Topping, Civil Comp. Ltd., 101, ISBN 1-905088-03-05.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579711' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Lu, Y., Roychowdhury, V. and Vanderberghe, L. (2007) Distributed Parallel Support Vector Machines in Strongly Connected Networks. Neural Networks. A Publication of the IEEE Computational Intelligence Society.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1579712' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Bebbahani, S. and Nasrabadi, A.M. (2009) Application of Som Neural Network in Clustering.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=4" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=4" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=4" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=4" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=4"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=4"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=4" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=4" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=4" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=4" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=4" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=4"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=4"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=4" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=4&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=4&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=4" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=4" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=4" target="_blank">IJCNS
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=4" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=4" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=4" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=4" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=4" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=4" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=4" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ijcns.2015.89036" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60104 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +4 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +4 +"&paperid=" +60104 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

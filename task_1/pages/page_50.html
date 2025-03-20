@@ -1,0 +1,1430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Mechanism of Generation and Collapse of a Longitudinal Vortex System Induced around the Leading Edge of a Delta Wing
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/OJFD_2015092915402349.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60050" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60050.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60050" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60050" />
+<meta property="og:title" content="Mechanism of Generation and Collapse of a Longitudinal Vortex System Induced around the Leading Edge of a Delta Wing" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/OJFD2024061816394207.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/OJFD2024061816394207.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Mechanism of Generation and Collapse of a Longitudinal Vortex System Induced around the Leading Edge of a Delta Wing" />
+<meta name="keywords" content="Delta Wing,Longitudinal Vortex,Vortex Breakdown,CFD" />
+<meta name="description" content="Discover the mechanism and collapse of a longitudinal vortex system induced around a delta wing. CFD analysis reveals cone-shaped configuration and pressure variations. Explore the stability and transition to transverse vortex. Read now!" />
+<meta name="citation_journal_title" content="Open Journal of Fluid Dynamics" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Shigeru Ogawa;Jumpei Takeda" />
+<meta name="citation_author" content="Shigeru Ogawa" />
+<meta name="citation_author" content="Jumpei Takeda" />
+<meta name="citation_title" content="Mechanism of Generation and Collapse of a Longitudinal Vortex System Induced around the Leading Edge of a Delta Wing" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-08-14" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ojfd.2015.53028" />
+<meta name="citation_issnPrint" content="2165-3852" />
+<meta name="citation_issnOnline" content="2165-3860" />
+<meta name="citation_abstract" content="The purpose of the paper is to clarify the mechanism of generation and collapse of a longitudinal vortex system induced around the leading edge of a delta wing. CFD captured well characteristics of flow structure of the vortex system. It is found that the vortex system has a cone-shaped configuration, and both rotational velocity and vorticity have their largest values at the tip of the vortex and reduce downstream along the vortical axis. This resulted in inducing the largest negative pressure at the tip of the delta wing surface. The collapse of the vortex system was also studied. The system can still remain until the tip angle of 110 degrees. However, between 110 degrees and 120 degrees, the system becomes unstable. Over 120 degrees, the characteristics of the vortex are considered to have converted from the longitudinal vortex to the transverse one." />
+<meta name="citation_publication_date" content="2015/8/14" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/OJFD_2015092915402349.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/OJFD_2015092915402349.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60050" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60050" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60050" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60050.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60050.xml" />
+<meta name="citation_issue" content="3" />
+<meta name="citation_online_date" content="2015/8/14" />
+<meta name="citation_firstpage" content="265" />
+<meta name="citation_lastpage" content="274" />
+
+<meta name="dc.title" content="Mechanism of Generation and Collapse of a Longitudinal Vortex System Induced around the Leading Edge of a Delta Wing" />
+
+<meta name="dc.creator" content="Shigeru Ogawa" />
+<meta name="dc.creator" content="Jumpei Takeda" /><meta name="dcterms.issued" content="2015-08-14" />
+<meta name="dc.description" content="The purpose of the paper is to clarify the mechanism of generation and collapse of a longitudinal vortex system induced around the leading edge of a delta wing. CFD captured well characteristics of flow structure of the vortex system. It is found that the vortex system has a cone-shaped configuration, and both rotational velocity and vorticity have their largest values at the tip of the vortex and reduce downstream along the vortical axis. This resulted in inducing the largest negative pressure at the tip of the delta wing surface. The collapse of the vortex system was also studied. The system can still remain until the tip angle of 110 degrees. However, between 110 degrees and 120 degrees, the system becomes unstable. Over 120 degrees, the characteristics of the vortex are considered to have converted from the longitudinal vortex to the transverse one." />
+<meta name="dc.source" content="Open Journal of Fluid Dynamics" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-08-14" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ojfd.2015.53028" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-08-14" />
+<meta name="prism.issnPrint" content="2165-3852" />
+<meta name="prism.issnOnline" content="2165-3860" />
+<meta name="prism.publicationName" content="Open Journal of Fluid Dynamics" />
+<meta name="prism.publicationDate" content="2015-08-14" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="3" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="265" />
+<meta name="prism.doi" content="10.4236/ojfd.2015.53028" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60050" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA4LTE0ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXtATxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9U2hpZ2VydSsrT2dhd2Emc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5TaGlnZXJ1ICBPZ2F3YTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1KdW1wZWkrK1Rha2VkYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkp1bXBlaSAgVGFrZWRhPC9hPjxzdXA+PC9zdXA+IGQCAg9kFgJmDxYCHwQFpgI8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURlcGFydG1lbnQrb2YrTWVjaGFuaWNhbCtFbmdpbmVlcmluZyUyYytOYXRpb25hbCtJbnN0aXR1dGUrb2YrVGVjaG5vbG9neSUyYytLdXJlK0NvbGxlZ2UlMmMrSGlyb3NoaW1hJTJjK0phcGFuJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RGVwYXJ0bWVudCBvZiBNZWNoYW5pY2FsIEVuZ2luZWVyaW5nLCBOYXRpb25hbCBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neSwgS3VyZSBDb2xsZWdlLCBIaXJvc2hpbWEsIEphcGFuPC9hPi48YnIgLz5kAgUPFgIfBAUFNSwyMTdkAgYPFgIfBAUFNiwwMjBkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFpQM8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPURlbHRhK1dpbmcmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5EZWx0YSBXaW5nPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rTG9uZ2l0dWRpbmFsK1ZvcnRleCZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBMb25naXR1ZGluYWwgVm9ydGV4PC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rVm9ydGV4K0JyZWFrZG93biZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBWb3J0ZXggQnJlYWtkb3duPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rQ0ZEJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IENGRDwvYT4gZAIKDxYCHwQF0AJPZ2F3YSwgUy4gIGFuZCBUYWtlZGEsIEouICAgKDIwMTUpIE1lY2hhbmlzbSBvZiBHZW5lcmF0aW9uIGFuZCBDb2xsYXBzZSBvZiBhIExvbmdpdHVkaW5hbCBWb3J0ZXggU3lzdGVtIEluZHVjZWQgYXJvdW5kIHRoZSBMZWFkaW5nIEVkZ2Ugb2YgYSBEZWx0YSBXaW5nLiA8aT5PcGVuIEpvdXJuYWwgb2YgRmx1aWQgRHluYW1pY3M8L2k+LCA8Yj41PC9iPiwgMjY1LTI3NC4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L29qZmQuMjAxNS41MzAyOCcgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDA1MCknPjEwLjQyMzYvb2pmZC4yMDE1LjUzMDI4PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIOFhxmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2MjknIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQExvwFMaWdodGhpbGwsIE0uSi4gKDE5NTIpIE9uIFNvdW5kIEdlbmVyYXRlZCBBZXJvZHluYW1pY2FsbHkgSS4gR2VuZXJhbCBUaGVvcnkuIFByb2NlZWRpbmdzIG9mIHRoZSBSb3lhbCBTb2NpZXR5IEEsIDIxMSwgNTY0LTU4Ny4gPGJyLz5odHRwOi8vcnNwYS5yb3lhbHNvY2lldHlwdWJsaXNoaW5nLm9yZy9jb250ZW50LzIxMS8xMTA3LzU2NGQCAQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjMwJyB0YXJnZXQ9J19ibGFuayc+MjwvYT5dATIBMvMBQ3VybGUsIE4uICgxOTU1KSBUaGUgSW5mbHVlbmNlIG9mIFNvbGlkIEJvdW5kYXJpZXMgdXBvbiBBZXJvZHluYW1pYyBTb3VuZC4gUHJvY2VlZGluZ3Mgb2YgdGhlIFJveWFsIFNvY2lldHkgQSwgMjMxLCA1MDUtNTE0LiA8YnIvPmh0dHA6Ly9yc3BhLnJveWFsc29jaWV0eXB1Ymxpc2hpbmcub3JnL2NvbnRlbnQvMjMxLzExODcvNTA1LnNob3J0IA0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDk4L3JzcGEuMTk1NS4wMTkxZAICD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2MzEnIHRhcmdldD0nX2JsYW5rJz4zPC9hPl0BMwEzeEhvd2UsIE0uUy4gKDIwMDMpIFRoZW9yeSBvZiBWb3J0ZXggU291bmQ6IENhbWJyaWRnZSBUZXh0cyBpbiBBcHBsaWVkIE1hdGhlbWF0aWNzLiBDYW1icmlkZ2UgVW5pdmVyc2l0eSBQcmVzcywgQ2FtYnJpZGdlLmQCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjMyJyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNFlIb3dlLCBNLlMuICgyMDE0KSBBY291c3RpY3MgYW5kIEFlcm9keW5hbWljIFNvdW5kLiBDYW1icmlkZ2UgVW5pdmVyc2l0eSBQcmVzcywgQ2FtYnJpZGdlLmQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjMzJyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNeYBSGFydW5hLCBTLiwgTm91emF3YSwgVC4sIEthbWltb3RvLCBJLiBhbmQgU2F0bywgSC4gKDE5OTApIEFuIEV4cGVyaW1lbnRhbCBBbmFseXNpcyBhbmQgRXN0aW1hdGlvbiBvZiBBZXJvZHluYW1pYyBOb2lzZSBVc2luZyBhIFByb2R1Y3Rpb24gVmVoaWNsZS4gU0FFIFRyYW5zYWN0aW9uczogSm91cm5hbCBvZiBQYXNzZW5nZXIgQ2FycywgOTkuIDxici8+aHR0cDovL3BhcGVycy5zYWUub3JnLzkwMDMxNi9kAgUPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzYzNCcgdGFyZ2V0PSdfYmxhbmsnPjY8L2E+XQE2ATbiAU5vdXphd2EsIFQuLCBMaSwgWS4gYW5kIE5ha2FtdXJhLCBULiAoMjAxMSkgTWVjaGFuaXNtIG9mIEFlcm9keW5hbWljIE5vaXNlIEdlbmVyYXRlZCBmcm9tIEZyb250LVBpbGxhciBhbmQgRG9vciBNaXJyb3Igb2YgQXV0b21vYmlsZS4gSm91cm5hbCBvZiBFbnZpcm9ubWVudCBhbmQgRW5naW5lZXJpbmcsIDYsIDYxNS02MjYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTI5OS9qZWUuNi42MTVkAgYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzYzNScgdGFyZ2V0PSdfYmxhbmsnPjc8L2E+XQE3ATeLAkhhbWFtb3RvLE4uLCBPa3V0c3UsWS4gYW5kIFlhbmFnaW1vdG8sIEsuICgyMDEzKSBJbnZlc3RpZ2F0aW9uIGZvciB0aGUgRWZmZWN0IG9mIHRoZSBFeHRlcm5hbCBOb2lzZSBTb3VyY2VzIG9udG8gdGhlIEludGVyaW9yIEFlcm9keW5hbWljIE5vaXNlLiBQcm9jZWVkaW5ncyBvZiBTQUUgMjAxMyBXb3JsZCBDb25ncmVzcyAmIEV4aGliaXRpb24sIERldHJvaXQsIDE2LTE4IEFwcmlsIDIwMTMuIA0KPGJyLz5odHRwOi8vcGFwZXJzLnNhZS5vcmcvMjAxMy0wMS0xMjU3L2QCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjM2JyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOOIBSGFydW5hLCBTLiwgSGFzaGlndWNoaSwgTS4sIEthbWltb3RvLCBJLiBhbmQgS3V3YWhhcmEsIEsuICgxOTkyKSBOdW1lcmljYWwgU3R1ZHkgb2YgQWVyb2R5bmFtaWMgTm9pc2UgUmFkaWF0ZWQgZnJvbSBhIFRocmVlLURpbWVuc2lvbmFsIFdpbmcuIFNBRSBUcmFuc2FjdGlvbnM6IEpvdXJuYWwgb2YgUGFzc2VuZ2VyIENhcnMsIDEwMS4gPGJyLz5odHRwOi8vcGFwZXJzLnNhZS5vcmcvOTIwMzQxL2QCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjM3JyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBOckBVGFrZWRhLCBKLiBhbmQgT2dhd2EsIFMuICgyMDE0KSBQcmVkaWN0aW9uIG9mIEFlcm9keW5hbWljIE5vaXNlIFJhZGlhdGVkIGZyb20gYSBEZWx0YSBXaW5nLiBQcm9jZWVkaW5ncyBvZiB0aGUgNHRoIEludGVybmF0aW9uYWwgU3ltcG9zaXVtIG9uIFRlY2hub2xvZ3kgZm9yIFN1c3RhaW5hYmlsaXR5LCBUYWlwZWksIDE5LTIxIE5vdmVtYmVyIDIwMTQuZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2MzgnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwoAJPZ2F3YSwgUy4gYW5kIExpLCBZLiAoMjAxNCkgQ29udHJvbCBvZiBMb25naXR1ZGluYWwgVm9ydGV4IEdlbmVyYXRlZCBhcm91bmQgRnJvbnQgUGlsbGFyIG9mIFZlaGljbGVzLCBCYXNlZCBvbiBDbGFyaWZpY2F0aW9uIG9mIHRoZSBWb3J0ZXggR2VuZXJhdGlvbiBNZWNoYW5pc20gVXNpbmcgYSBEZWx0YS1XaW5nLiBQcm9jZWVkaW5ncyBvZiB0aGUgMTJ0aCBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gTW90aW9uIGFuZCBWaWJyYXRpb24gQ29udHJvbCwgSG9ra2FpZG8sIDMtNyBBdWd1c3QgMjAxNC5kAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzYzOScgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTG+AkphY29iaSwgQS5NLiBhbmQgU2hhaCwgUi5LLiAoMTk5NSkgSGVhdCBUcmFuc2ZlciBTdXJmYWNlIEVuaGFuY2VtZW50IHRocm91Z2ggdGhlIFVzZSBvZiBMb25naXR1ZGluYWwgVm9ydGljZXMsIEEgUmV2aWV3IG9mIFJlY2VudCBQcm9ncmVzcy4gRXhwZXJpbWVudGFsIFRoZXJtYWwgYW5kIEZsdWlkIFNjaWVuY2UsIDExLCAyOTUtMzA5LiANCjxici8+aHR0cDovL3d3dy5zY2llbmNlZGlyZWN0LmNvbS9zY2llbmNlL2FydGljbGUvcGlpLzA4OTQxNzc3OTUwMDA2NlUNCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi8wODk0LTE3NzcoOTUpMDAwNjYtVWQCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjQwJyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMqsBSXdhc2FraSwgTS4sIEhhcmEsIEouIGFuZCBIb25kYSwgSS4gKDIwMTQpIERldmVsb3BtZW50IG9mIFZvcnRleCBHZW5lcmF0b3IgZm9yIEVHUiBDb29sZXIuIFByb2NlZWRpbmdzIG9mIEZJU0lUQSAyMDE0IFdvcmxkIEF1dG9tb3RpdmUgQ29uZ3Jlc3MsIE1hYXN0cmljaHQsIDItNiBKdW5lIDIwMTQuZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NDEnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEzkQFPZ2F3YSwgUy4gKDE5OTUpIEFlcm9keW5hbWljIE5vaXNlIG9mIGEgQm9keSB3aXRoIFNlcGFyYXRlZCBhbmQgUmVhdHRhY2hlZCBGbG93IGJ5IExvbmdpdHVkaW5hbCBWb3J0aWNlcy4gUGhEIFRoZXNpcywgVW5pdmVyc2l0eSBvZiBUb2t5bywgVG9reW8uZAIND2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NDInIHRhcmdldD0nX2JsYW5rJz4xNDwvYT5dAjE0AjE0vwFPZ2F3YSwgUy4gKDE5OTUpIEdlbmVyYXRpb24gTWVjaGFuaXNtIG9mIEFlcm9keW5hbWljIE5vaXNlIGJ5IEludGVyZmVyZW5jZSBiZXR3ZWVuIExvbmdpdHVkaW5hbCBWb3J0ZXggYW5kIEJvZHkuIFByb2NlZWRpbmdzIG9mIHRoZSBKYXBhbiBOYXRpb25hbCBDb25ncmVzcyBmb3IgQXBwbGllZCBNZWNoYW5pY3MsIDQ0LCAyMTUtMjIwLmQCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJEB09KQklQSFkET0pCTQNPSkMET0pDQgRPSkNEBE9KQ0UET0pDTQNPSkQFT0pEZXIET0pETQNPSkUET0pFRQRPSkVNBU9KRU1EBU9KRXBpBE9KRVIDT0pGBE9K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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=1004" title="Open Journal of Fluid Dynamics">
+                    Open Journal of Fluid Dynamics</a> &gt; <a href="home?issueid=6845#60050">Vol.5 No.3, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Mechanism of Generation and Collapse of a Longitudinal Vortex System Induced around the Leading Edge of a Delta Wing <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Shigeru++Ogawa&searchfield=authors&page=1' target='_blank'>Shigeru  Ogawa</a><sup></sup>, <a href='articles?searchcode=Jumpei++Takeda&searchfield=authors&page=1' target='_blank'>Jumpei  Takeda</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Department+of+Mechanical+Engineering%2c+National+Institute+of+Technology%2c+Kure+College%2c+Hiroshima%2c+Japan&searchfield=affs&page=1' target='_blank'>Department of Mechanical Engineering, National Institute of Technology, Kure College, Hiroshima, Japan</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ojfd.2015.53028"
+                    target="_blank" onclick='SetNum(60050)'>10.4236/ojfd.2015.53028</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/OJFD_2015092915402349.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60050)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60050' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60050.xml' target='_blank' onclick='SetNum(60050)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    5,217</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    6,020</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60050&JournalID=1004' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">The purpose of the paper is to clarify the mechanism of generation and collapse of a longitudinal vortex system induced around the leading edge of a delta wing. CFD captured well characteristics of flow structure of the vortex system. It is found that the vortex system has a cone-shaped configuration, and both rotational velocity and vorticity have their largest values at the tip of the vortex and reduce downstream along the vortical axis. This resulted in inducing the largest negative pressure at the tip of the delta wing surface. The collapse of the vortex system was also studied. The system can still remain until the tip angle of 110 degrees. However, between 110 degrees and 120 degrees, the system becomes unstable. Over 120 degrees, the characteristics of the vortex are considered to have converted from the longitudinal vortex to the transverse one.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Delta+Wing&searchfield=keyword&page=1' target='_blank'>Delta Wing</a>, <a href='articles?searchcode=+Longitudinal+Vortex&searchfield=keyword&page=1' target='_blank'> Longitudinal Vortex</a>, <a href='articles?searchcode=+Vortex+Breakdown&searchfield=keyword&page=1' target='_blank'> Vortex Breakdown</a>, <a href='articles?searchcode=+CFD&searchfield=keyword&page=1' target='_blank'> CFD</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Ogawa, S.  and Takeda, J.   (2015) Mechanism of Generation and Collapse of a Longitudinal Vortex System Induced around the Leading Edge of a Delta Wing. <i>Open Journal of Fluid Dynamics</i>, <b>5</b>, 265-274. doi: <a href='http://dx.doi.org/10.4236/ojfd.2015.53028' target='_blank' onclick='SetNum(60050)'>10.4236/ojfd.2015.53028</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p>The sound induced by turbulence in an unbounded fluid is generally called aerodynamic sound. With respect to aerodynamic sound, Lighthill [1] , Curle [2] and Howe [3] [4] have made their theoretical contributions to clarifying the relationship between turbulent flow and sound. Lighthill [1] transformed the Navier-Stokes and continuity equations to form an exact, inhomogeneous wave equation whose source terms were important only within the turbulent region. This equation is called Lighthill’s equation. In most applications of Lighthill’s theory, it is necessary to generalize the solution to account for the presence of solid bodies in the flow. Curle [2] has made an extension to Lighthill’s general theory of aerodynamic sound so as to incorporate the influence of solid boundaries upon the sound field. Howe [3] [4] recasts Lighthill’s equation in a form that emphasizes the prominent role of vorticity in the production of sound by taking the total enthalpy as the independent acoustic variable, which leads to the vortex sound equation. These theories have emphasized that unsteady motions of the vortex play a crucial role in the generation of aerodynamic sound.</p> 
+<p>Regarding the vortex, emphasis has been placed especially on longitudinal vortex which rotates on the axis whose direction coincides with the flow direction. In the automobile industry, the reduction of aerodynamic noise becomes more and more important for the comfortable vehicle since noises caused by engine, power train, tires, and other noise sources have been steadily reduced in recent years. It is well known that the front pillar of an automobile is regarded as one of the most dominant areas in generating aerodynamic noise due to strong longitudinal vortices. Separated flows behind the front pillar generate the longitudinal vortices. Based on the theories as mentioned above, many researchers have so far tried to reveal the generation mechanism of aerodynamic sound. Haruna, Nouzawa, Kamimoto and Sato [5] applied the Lighthill-Curle’s theory of aerodynamic sound to automobiles and experimentally estimated dipole noise emitted from the pressure fluctuations on the body surface. Recently Nouzawa, Li and Nakamura [6] have studied the mechanism of aerodynamic noise generated from front pillar and door mirror. Hamamoto, Okutsu and Yanagimoto [7] have investigated the effect of the external aerodynamic noise sources onto the interior noise around the front pillar where longitudinal vortices exist. Numerical approaches have also been conducted with delta wings and actual vehicles (Haruna, Hashiguchi, Kamimoto and Kuwahara [8] , Takeda and Ogawa [9] , Ogawa and Li [10] ). In addition to the aerodynamic engineering field, longitudinal vortex also has been focused in the heat transfer engineering field. Jacobi and Shah [11] reviewed enhancement of heat transfer through the use of longitudinal vortices. Recently Iwasaki, Hara and Honda [12] used longitudinal vortices for EGR (exhaust gas recirculation) system to cool down the temperature of exhaust gas from the engine.</p> 
+<p>There have been so many studies to reveal the generation mechanism of aerodynamic noise produced by longitudinal vortex. However, it has not yet been clarified that how the longitudinal vortex system has been generated and how this system produces the aerodynamic noise. The final objective of our study, therefore, is to simplify this specific aerodynamic noise problem to obtain a thorough understanding of how the longitudinal vortex is produced, and how the noise can be estimated quantitatively. As a first step, the present paper aims to reproduce the longitudinal vortex generated behind the front pillar of a vehicle by a simple delta wing model, and to clarify the mechanism of generation and collapse of the longitudinal vortex system.</p> 
+<p class="E-Title1">2. Visualization of the Longitudinal Vortex System by Running Water Channel</p> 
+<p><a href="#f1" target="_self">Figure 1</a> shows the delta wing employed for reproduction of the longitudinal system. The wing model has three dimensions with 260 mm long, 160 mm wide and 3 mm thick. The model with attack of angles 15 degrees was immersed in the running water channel shown in <a href="#f2" target="_self">Figure 2</a> whose uniform flow is 0.4 m/s. The test section is 1500 mm wide &times; 800 mm high &times; 4000 mm long which is large enough to visualize the flow around the delta wing. The delta wing has the tip angle of 90 degrees. <a href="#f3" target="_self">Figure 3</a> depicts the longitudinal vortex visualized by the hydrogen bubble method in the running water channel. It was found that the separated flows around the leading edge are rotating upward. This method captured clearly the longitudinal vortex rotating in the form of a coned-shaped configuration shown in red line in the figure.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x5.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. The delta wing employed.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x6.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Running water channel.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x7.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Longitudinal vortex system of the delta wing visualized by the hydrogen bubble method.</p> 
+</div> 
+<p class="E-Title1">3. The Method of Numerical Simulation</p> 
+<p>As a next step, CFD will be employed to analytically investigate the structure of the longitudinal vortex. The study uses the software STAR-CCM+ with software V9.04.009. In the simulation, tip angles of the wing model vary from 40 degrees to 140 degrees in every 10 degrees step.</p> 
+<p class="E-Title2">3.1. Numerical Method</p> 
+<p>This study employed RANS (Reynolds Averaged Navier-Stokes Simulation). This approach is valid when the maximum Mach number in the domain is less than 0.2 - 0.3, and when unsteady wake effects are not important.</p> 
+<p>Eddy viscosity models use the concept of a turbulent viscosity to model the Reynolds stress tensor as a function of mean flow quantities. K-ω model was used as the eddy viscosity model. It therefore follows that the flows are three-dimensionally calculated in steady state with turbulent model.</p> 
+<p>In the steady state analysis, the maximum step number is 3500. The speed of the water flow is 0.4 m/s as in the running water channel experiment. Reynolds number is defined in Equation (1), where U = 0.4 m/s, L = 0.26 m, and ν = 1.28 &times; 10<sup>−6</sup> m<sup>2</sup>/s and results in Re = 8.1 &times; 10<sup>4</sup>. This implies that the flow is turbulent and Mach number is 0.001.</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/5-2320240x8.png" /><span class="bracketMark">(1)</span></p> 
+<p class="E-Title2">3.2. Mesh Generation Method</p> 
+<p><a href="#f4" target="_self">Figure 4</a> shows the wing model in numerical wind tunnel. The model employed in simulation has the tip angel 90 degrees with three dimensions shown in <a href="#f1" target="_self">Figure 1</a>. The scale of the numerical wind tunnel is 600 mm &times; 600 mm &times; 1260 mm. The wind scale was determined so that the uniform flows can be maintained around the delta wing model. The attack of angles for the model is 15 degrees the same as that used in the running water channel. Total number of mesh ranges from 7.48 million to 8.11 million, depending on the tip angles of the model. Minimum mesh size is 0.25 mm in closest vicinity to the leading edge of the model. In generating mesh, prism layer meshing method was adopted. This meshing method was used to optimize the mesh size in the boundary layer as shown in <a href="#f5" target="_self">Figure 5</a>. The prism layer mesh model is used with a core volume mesh to generate orthogonal prismatic cells next to wall surfaces or boundaries. This layer of cells is necessary to improve the accuracy of the flow solution. The prism layer mesh is defined in terms of its thickness, the number of cell layers, and the size distribution of the layers. In this study the thickness of prism layer is 3 mm and the number of cell layer is 5 and mesh size is 0.5 mm closest to the model surface.</p> 
+<p class="E-Title1">4. Numerical Results and Discussion</p> 
+<p class="E-Title2">4.1. Structure of Longitudinal Vortex</p> 
+<p>To investigate the longitudinal vortex in more detail, the numerical simulation was conducted. As shown in</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x9.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. The numerical wind tunnel and the delta wing model.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x10.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Mesh condition around a delta wing surface.</p> 
+</div> 
+<p><a href="#f6" target="_self">Figure 6</a>, the longitudinal vortex was reproduced just as the experimental result. The longitudinal vortex system in <a href="#f6" target="_self">Figure 6</a> was depicted so that incoming streamlines can go through the region with total pressure coefficient Cp<sub>t</sub> less than 0.8 in the section B. The streamlines of the vortex indicate the characteristics that the configuration is cone-shaped and the flow at the tip of the vortex is fastest, which is shown by red-colored streamlines. The flows are separating at the leading edge and rotating around the vortex axis upward. At the place of the tip flows firstly separate due to the wing configuration and flows are going upward with the flow rotating around the vortical axis. The fastest flow velocity decreases their velocity along the vortical axis. This is because there are strong interactions between flows and the wing body. As a result, fluid particles dissipate their energy due to viscosity and convection.</p> 
+<p>Vorticity in the longitudinal axis was investigated in each section of A, B, and C as shown in <a href="#f7" target="_self">Figure 7</a>. The red shows a stronger vorticity whereas the dark blue shows a weaker vorticity. The vorticity is the strongest at the tip of the vortex at the section A, and the vorticity becomes weaker downstream along the vortical axis at the section B and C. It is found that there exists a pair of vortices whose rotating directions are opposite. Basically, firstly flows separated at the leading edge generate the clockwise vortex, which secondly induces counterclockwise one due to viscosity of the flows. Although the current numerical simulation does not reveal all the vortices, it is considered that a pair of vortices whose rotating directions are opposite exists infinitely at the each section. The properties of the vortices distribution shown in <a href="#f7" target="_self">Figure 7</a> showed good agreement with the experimental results obtained by hot wire anemometers for an actual vehicle by Ogawa [13] [14] .</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x11.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Streamlines of the longitudinal vortex generated behind the leading edge of the delta wing with the tip angle of 90 degrees.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x12.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Vortices distribution of each section A, B, and C for the tip angle of 90 degrees.</p> 
+</div> 
+<p><a href="#f8" target="_self">Figure 8</a> shows equi-contour lines of pressure coefficients. The definition of pressure coefficients is described in Equation (2).</p> 
+<p class="imgPCss"> <img class="bracketImgMark" src="//html.scirp.org/file/5-2320240x13.png" /><span class="bracketMark">(2)</span></p> 
+<p>This C<sub>p</sub> coefficient shows how the pressure on the wing indicates, compared with the pressure in the uniform flows. It, therefore, follows that if C<sub>p</sub> has negative value, the pressure on the wing surface is lower than one in the uniform flows.</p> 
+<p>Characteristics of the longitudinal vortex are well reflected by pressure coefficients on the wing surface. The fast flows at the wing tip are rapidly separated, but the rotational radius is small. Since the centrifugal force has the property that it is proportional to the square of the velocity and is in inverse proportion to the rotational radius, this causes the tip of the longitudinal vortex to induce the largest negative pressure. As a result, the wing tip has the lowest pressure coefficients as shown in <a href="#f8" target="_self"></a><a href="#f" target="_self">Figure </a>8. The pressures in the longitudinal vortex gradually tend to recover due to the diffusion of the vorticity and convection of flows. In addition, the existence of two vortices is confirmed by distribution of pressure coefficients as shown in red chain lines of <a href="#f8" target="_self"></a><a href="#f" target="_self">Figure </a>8. These two red chain lines have much to do with a pair of vortices shown in <a href="#f7" target="_self"></a><a href="#f" target="_self">Figure </a>7. The characteristics of equi-contour lines of pressure coefficients in <a href="#f" target="_self">Figure </a>agree well with the experimental results of actual vehicle by Ogawa [13] [14] .</p> 
+<p class="E-Title2">4.2. Collapse Phenomena of Longitudinal Vortex</p> 
+<p>In order to clarify the collapse phenomena of the longitudinal vortex, tip angles of the wing model were varied from 40 degrees to 140 degrees at every 10 degrees. Vorticity was used as a physical quantity for evaluating the transformation of the vortex. The vorticity will be described in Equation (3) to Equation (7) with respect to X, Y, Z coordinate axes and velocity vector<img src="//html.scirp.org/file/5-2320240x14.png" class="200" />. Three components<img src="//html.scirp.org/file/5-2320240x15.png" class="200" />, <img src="//html.scirp.org/file/5-2320240x16.png" class="200" />, and <img src="//html.scirp.org/file/5-2320240x17.png" class="200" /> express the vorticity in X, Y, Z axial directions respectively, and <img src="//html.scirp.org/file/5-2320240x18.png" class="200" /> expresses the magnitude of the vorticity.</p> 
+<p> <img src="//html.scirp.org/file/5-2320240x19.png" class="200" /> (3)</p> 
+<p> <img src="//html.scirp.org/file/5-2320240x20.png" class="200" /> (4)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-2320240x21.png" /> (5)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-2320240x22.png" /> (6)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/5-2320240x23.png" /> (7)</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x24.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Equi-contour lines of pressure coefficients. Two red chain lines are considered the existence of the vortex axes for two different vortices.</p> 
+</div> 
+<p>In evaluating the transformation of the vortex, time-averaged vorticity was employed for the extracted region where total pressure coefficient Cp<sub>t</sub> is less than 0.8 in each section A, B, and C. Cp<sub>t</sub> was used as a physical quantity for identifying the region where the vortex exists.</p> 
+<p><a href="#f9" target="_self">Figure 9</a> shows the relationship between vorticities and tip angles in each section of A, B, and C. In each section three quantities (<img class="200" data-original="//html.scirp.org/file/5-2320240x25.png" />, <img class="200" data-original="//html.scirp.org/file/5-2320240x26.png" />, and<img class="200" data-original="//html.scirp.org/file/5-2320240x27.png" />) fluctuate sharply whereas <img class="200" data-original="//html.scirp.org/file/5-2320240x28.png" /> remains almost constant. In particular, <img class="200" data-original="//html.scirp.org/file/5-2320240x29.png" />decreases rapidly between 110 degrees and 120 degrees in section A. Over 120 degrees, <img class="200" data-original="//html.scirp.org/file/5-2320240x30.png" />barely decreases. At 110 degrees <img class="200" data-original="//html.scirp.org/file/5-2320240x31.png" /> is almost equivalent to <img class="200" data-original="//html.scirp.org/file/5-2320240x32.png" /> in both section A and section B. However, <img class="200" data-original="//html.scirp.org/file/5-2320240x33.png" />is greater than <img class="200" data-original="//html.scirp.org/file/5-2320240x34.png" /> in all sections over 120 degrees and increase in all sections over 120 degrees. <img class="200" data-original="//html.scirp.org/file/5-2320240x35.png" />greatly decreases at 120 degrees. This is due to the large decrease of<img class="200" data-original="//html.scirp.org/file/5-2320240x36.png" />. Over 120 degrees, <img class="200" data-original="//html.scirp.org/file/5-2320240x37.png" />begins to increase again due to increase of<img class="200" data-original="//html.scirp.org/file/5-2320240x38.png" />.</p> 
+<p>The longitudinal vortex can still remain until the tip angle of 110 degrees. However, between 110 degrees and</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x39.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. Relationship between vorticities and tip angles. (a) Section A, (b) Section B, (c) Section C.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/5-2320240x40.png" /></p> 
+ <p class=" sacImgMarkCss"><a name="f10" id="f10"><span class="cs_fig_con">Figure 10</span></a>. Streamlines of the longitudinal vortex whose tip angle change from 100 degrees to 140 degrees. (a) Tip angle of 100 degrees, (b) Tip angle of 110 degrees, (c) Tip angle of 120 degrees, (d) Tip angle of 130 degrees, (e) Tip angle of 140 degrees.</p> 
+</div> 
+<p>120 degrees the longitudinal characteristics become unstable. Over 120 degrees the characteristics of the vortex are considered to have converted from the longitudinal to the transverse one. It follows, therefore, that the longitudinal characteristics of the vortex are converted to the transverse vortex.</p> 
+<p>In order to investigate qualitatively the configuration of the vortex generated behind the leading edge, the streamlines of the vortex were investigated for tip angles from 100 degrees to 140 degrees at every 10 degrees.</p> 
+<p><a href="#f10" target="_self">Figure 10</a> shows the streamlines of the longitudinal vortex generated behind the leading edge of the delta</p> 
+<p>wing with the tip angle from 100 degrees to 140 degrees. The depicted region where a threshold value of Cp<sub>t</sub> less than 0.8 in section B is established in order to extract the streamlines at the region which exists the vortex. The configuration of the vortex still remains cone-shaped until 100 degrees. At 110 degrees the vortex system becomes unstable. Over 120 degrees, the rotational radius of the vortex increases and the configuration of the vortex begins to shift from cone-shaped to elliptical-shaped. That is, the vortex generated behind the leading edge changed from the longitudinal to the transverse vortex which rotates on the Y axis lying at right angles to flow direction. After the shift from the longitudinal vortex to the transverse vortex, <img class="200" data-original="//html.scirp.org/file/5-2320240x41.png" />start to become strong again as the tip angle increases.</p> 
+<p>It follows, therefore, that the longitudinal vortex can remain until the tip angle of 100 degrees, and undergoing the transient region around 110 degrees, the longitudinal vortex has been changed to the transverse vortex over 120 degrees.</p> 
+<p class="E-Title1">5. Conclusions</p> 
+<p>The mechanism of generation and collapse of a longitudinal vortex system induced around the leading edge of a delta wing was investigated. The results obtained are summarized as follows.</p> 
+<p>1) CFD captured well characteristics of flow structure of the longitudinal vortex system. It is found that the longitudinal vortex has a cone-shaped configuration, and both rotational velocity and vorticity have their largest values at the tip of the vortex and reduce downstream along the vertical axis. This resulted in inducing the largest negative pressure at the tip of the delta wing surface.</p> 
+<p>2) With respect to the vortical characteristics, the following was clarified. The longitudinal vortex can still remain until the tip angle of 110 degrees. However, between 110 degrees and 120 degrees, the longitudinal characteristics become unstable. Over 120 degrees, the characteristics of the vortex are considered to have converted from the longitudinal to the transverse one.</p>     
+<p class="E-Title1">Nomenclature</p> 
+<p>Re: Reynolds Number</p> 
+<p>U: Flow Velocity (m/s)</p> 
+<p>L: Representative Length (m)</p> 
+<p>ν: Kinematic Viscosity (m<sup>2</sup>/s)</p> 
+<p>ω: Vorticity (1/s)</p> 
+<p>θ: Tip Angle of the Delta Wing (degree)</p> 
+<p>Cp<sub>t</sub>: Total Pressure Coefficient</p> 
+<p>C<sub>p</sub>: Pressure Coefficient</p> 
+<p>P<sub>m</sub>: Pressure of Measuring Point on the Wing (Pa)</p> 
+<p>P<sub>∞</sub>: Pressure in the Uniform Flow (Pa)</p> 
+<p>ρ: Density of Fluid (kg/m<sup>3</sup>)</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577629' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Lighthill, M.J. (1952) On Sound Generated Aerodynamically I. General Theory. Proceedings of the Royal Society A, 211, 564-587. <br/>http://rspa.royalsocietypublishing.org/content/211/1107/564
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577630' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Curle, N. (1955) The Influence of Solid Boundaries upon Aerodynamic Sound. Proceedings of the Royal Society A, 231, 505-514. <br/>http://rspa.royalsocietypublishing.org/content/231/1187/505.short 
+<br/>http://dx.doi.org/10.1098/rspa.1955.0191
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577631' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Howe, M.S. (2003) Theory of Vortex Sound: Cambridge Texts in Applied Mathematics. Cambridge University Press, Cambridge.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577632' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Howe, M.S. (2014) Acoustics and Aerodynamic Sound. Cambridge University Press, Cambridge.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577633' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Haruna, S., Nouzawa, T., Kamimoto, I. and Sato, H. (1990) An Experimental Analysis and Estimation of Aerodynamic Noise Using a Production Vehicle. SAE Transactions: Journal of Passenger Cars, 99. <br/>http://papers.sae.org/900316/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577634' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Nouzawa, T., Li, Y. and Nakamura, T. (2011) Mechanism of Aerodynamic Noise Generated from Front-Pillar and Door Mirror of Automobile. Journal of Environment and Engineering, 6, 615-626. <br/>http://dx.doi.org/10.1299/jee.6.615
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577635' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Hamamoto,N., Okutsu,Y. and Yanagimoto, K. (2013) Investigation for the Effect of the External Noise Sources onto the Interior Aerodynamic Noise. Proceedings of SAE 2013 World Congress & Exhibition, Detroit, 16-18 April 2013. 
+<br/>http://papers.sae.org/2013-01-1257/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577636' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Haruna, S., Hashiguchi, M., Kamimoto, I. and Kuwahara, K. (1992) Numerical Study of Aerodynamic Noise Radiated from a Three-Dimensional Wing. SAE Transactions: Journal of Passenger Cars, 101. <br/>http://papers.sae.org/920341/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577637' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Takeda, J. and Ogawa, S. (2014) Prediction of Aerodynamic Noise Radiated from a Delta Wing. Proceedings of the 4th International Symposium on Technology for Sustainability, Taipei, 19-21 November 2014.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577638' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Ogawa, S. and Li, Y. (2014) Control of Longitudinal Vortex Generated around Front Pillar of Vehicles, Based on Clarification of the Vortex Generation Mechanism Using a Delta-Wing. Proceedings of the 12th International Conference on Motion and Vibration Control, Hokkaido, 3-7 August 2014.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577639' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Jacobi, A.M. and Shah, R.K. (1995) Heat Transfer Surface Enhancement through the Use of Longitudinal Vortices, A Review of Recent Progress. Experimental Thermal and Fluid Science, 11, 295-309. 
+<br/>http://www.sciencedirect.com/science/article/pii/089417779500066U
+<br/>http://dx.doi.org/10.1016/0894-1777(95)00066-U
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577640' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Iwasaki, M., Hara, J. and Honda, I. (2014) Development of Vortex Generator for EGR Cooler. Proceedings of FISITA 2014 World Automotive Congress, Maastricht, 2-6 June 2014.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577641' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Ogawa, S. (1995) Aerodynamic Noise of a Body with Separated and Reattached Flow by Longitudinal Vortices. PhD Thesis, University of Tokyo, Tokyo.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577642' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Ogawa, S. (1995) Generation Mechanism of Aerodynamic Noise by Interference between Longitudinal Vortex and Body. Proceedings of the Japan National Congress for Applied Mechanics, 44, 215-220.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=1004" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=1004" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=1004" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=1004" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=1004"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=1004"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=1004" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=1004" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=1004" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=1004" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=1004" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=1004"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=1004"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=1004" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=1004&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=1004&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=1004" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=1004" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=1004" target="_blank">OJFD
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=1004" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=1004" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=1004" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=1004" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=1004" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=1004" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=1004" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ojfd.2015.53028" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60050 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +1004 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +1004 +"&paperid=" +60050 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

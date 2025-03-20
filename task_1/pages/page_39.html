@@ -1,0 +1,1729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Feasibility Study of a Hydro PV Hybrid  System Operating at a Dam for  Water Supply in Southern Brazil
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JPEE_2015092914582426.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60039" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60039.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60039" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60039" />
+<meta property="og:title" content="Feasibility Study of a Hydro PV Hybrid  System Operating at a Dam for  Water Supply in Southern Brazil" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JPEE2015012717105085.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JPEE2015012717105085.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Feasibility Study of a Hydro PV Hybrid  System Operating at a Dam for  Water Supply in Southern Brazil" />
+<meta name="keywords" content="Hydro PV Hybrid System,PV Floating Cover,Water Supply Dam,Software Homer" />
+<meta name="description" content="Unlocking Hydroelectric Potential: A Pre-Feasibility Study on Combining PV Modules and a 227 kW Hydroelectric Plant in Southern Brazil&#39;s Val de Serra Dam. Discover the cost-effective solution for sustainable energy generation." />
+<meta name="citation_journal_title" content="Journal of Power and Energy Engineering" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Luis E. Teixeira;Johan Caux;Alexandre Beluco;Ivo Bertoldo;José Antônio S. Louzada;Ricardo C. Eifler" />
+<meta name="citation_author" content="Luis E. Teixeira" />
+<meta name="citation_author" content="Johan Caux" />
+<meta name="citation_author" content="Alexandre Beluco" />
+<meta name="citation_author" content="Ivo Bertoldo" />
+<meta name="citation_author" content="José Antônio S. Louzada" />
+<meta name="citation_author" content="Ricardo C. Eifler" />
+<meta name="citation_title" content="Feasibility Study of a Hydro PV Hybrid  System Operating at a Dam for  Water Supply in Southern Brazil" />
+<meta name="citation_volume" content="3" />
+<meta name="citation_date" content="2015-09-10" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jpee.2015.39006" />
+<meta name="citation_issnPrint" content="2327-588X" />
+<meta name="citation_issnOnline" content="2327-5901" />
+<meta name="citation_abstract" content="Dams for water supply usually represent an untapped hydroelectric potential. It is a small energetic potential, in most situations, usually requiring a particular solution to be viable. The use of pumps as power turbines often represents an alternative that enables the power generation in hydraulic structures already in operation, as is the case of dams in water supply systems. This potential can be exploited in conjunction with the implementation of PV modules on the water surface, installed on floating structures, both operating in a hydro PV hybrid system. The floating structure can also contribute to reducing the evaporation of water and providing a small increase in hydroelectric power available. This paper presents a pre-feasibility study for implementation of a hydroelectric power plant and PV modules on floating structures in the reservoir formed by the dam of Val de Serra, in southern Brazil. The dam is operated to provide drinking water to about  60% of the population of the city of Santa Maria, in the state of Rio Grande do Sul, in southern Brazil. The pre-feasibility study conducted with Homer software, version Legacy, indicated that the hydroelectric plant with a capacity of 227 kW can operate together with 60 kW of PV modules. This combination will result (in one of the configurations considered) in an initial cost of USD$ 1715.83 per kW installed and a cost of energy of USD$ 0.059/kWh." />
+<meta name="citation_publication_date" content="2015/9/10" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JPEE_2015092914582426.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JPEE_2015092914582426.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60039" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60039" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60039" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60039.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60039.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/10" />
+<meta name="citation_firstpage" content="70" />
+<meta name="citation_lastpage" content="83" />
+
+<meta name="dc.title" content="Feasibility Study of a Hydro PV Hybrid  System Operating at a Dam for  Water Supply in Southern Brazil" />
+
+<meta name="dc.creator" content="Luis E. Teixeira" />
+<meta name="dc.creator" content="Johan Caux" />
+<meta name="dc.creator" content="Alexandre Beluco" />
+<meta name="dc.creator" content="Ivo Bertoldo" />
+<meta name="dc.creator" content="José Antônio S. Louzada" />
+<meta name="dc.creator" content="Ricardo C. Eifler" /><meta name="dcterms.issued" content="2015-09-10" />
+<meta name="dc.description" content="Dams for water supply usually represent an untapped hydroelectric potential. It is a small energetic potential, in most situations, usually requiring a particular solution to be viable. The use of pumps as power turbines often represents an alternative that enables the power generation in hydraulic structures already in operation, as is the case of dams in water supply systems. This potential can be exploited in conjunction with the implementation of PV modules on the water surface, installed on floating structures, both operating in a hydro PV hybrid system. The floating structure can also contribute to reducing the evaporation of water and providing a small increase in hydroelectric power available. This paper presents a pre-feasibility study for implementation of a hydroelectric power plant and PV modules on floating structures in the reservoir formed by the dam of Val de Serra, in southern Brazil. The dam is operated to provide drinking water to about  60% of the population of the city of Santa Maria, in the state of Rio Grande do Sul, in southern Brazil. The pre-feasibility study conducted with Homer software, version Legacy, indicated that the hydroelectric plant with a capacity of 227 kW can operate together with 60 kW of PV modules. This combination will result (in one of the configurations considered) in an initial cost of USD$ 1715.83 per kW installed and a cost of energy of USD$ 0.059/kWh." />
+<meta name="dc.source" content="Journal of Power and Energy Engineering" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-10" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jpee.2015.39006" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-10" />
+<meta name="prism.issnPrint" content="2327-588X" />
+<meta name="prism.issnOnline" content="2327-5901" />
+<meta name="prism.publicationName" content="Journal of Power and Energy Engineering" />
+<meta name="prism.publicationDate" content="2015-09-10" />
+<meta name="prism.volume" content="3" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="70" />
+<meta name="prism.doi" content="10.4236/jpee.2015.39006" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60039" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAmEPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTEwZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAX+BTxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9THVpcytFLisrVGVpeGVpcmEmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5MdWlzIEUuICBUZWl4ZWlyYTwvYT48c3VwPjE8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9Sm9oYW4rK0NhdXgmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Kb2hhbiAgQ2F1eDwvYT48c3VwPjEsMjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1BbGV4YW5kcmUrK0JlbHVjbyZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkFsZXhhbmRyZSAgQmVsdWNvPC9hPjxzdXA+MSo8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SXZvKytCZXJ0b2xkbyZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkl2byAgQmVydG9sZG88L2E+PHN1cD4zPC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUpvcyVjMyVhOStBbnQlYzMlYjRuaW8rUy4rK0xvdXphZGEmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Kb3PDqSBBbnTDtG5pbyBTLiAgTG91emFkYTwvYT48c3VwPjE8L3N1cD4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9UmljYXJkbytDLisrRWlmbGVyJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+UmljYXJkbyBDLiAgRWlmbGVyPC9hPjxzdXA+NDwvc3VwPiBkAgIPZBYCZg8WAh8EBbQIPHN1cD4xPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1JbnN0aXR1dG8rZGUrUGVzcXVpc2FzK0hpZHIlYzMlYTF1bGljYXMlMmMrVW5pdmVyc2lkYWRlK0ZlZGVyYWwrZG8rUmlvK0dyYW5kZStkbytTdWwlMmMrUG9ydG8rQWxlZ3JlJTJjK0JyYXppbCZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkluc3RpdHV0byBkZSBQZXNxdWlzYXMgSGlkcsOhdWxpY2FzLCBVbml2ZXJzaWRhZGUgRmVkZXJhbCBkbyBSaW8gR3JhbmRlIGRvIFN1bCwgUG9ydG8gQWxlZ3JlLCBCcmF6aWw8L2E+LjxiciAvPjxzdXA+Mjwvc3VwPjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9RWNvbGUrTmF0aW9uYWxlK1N1cGVyaWV1cmUrZGUrbCVlMiU4MCU5OUVuZXJnaWUlMmMrbCVlMiU4MCU5OUVhdStldCtsJWUyJTgwJTk5RW52aXJvbm5lbWVudCUyYytHcmVub2JsZStJTlAlMmMrR3Jlbm9ibGUlMmMrRnJhbmNlJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RWNvbGUgTmF0aW9uYWxlIFN1cGVyaWV1cmUgZGUgbOKAmUVuZXJnaWUsIGzigJlFYXUgZXQgbOKAmUVudmlyb25uZW1lbnQsIEdyZW5vYmxlIElOUCwgR3Jlbm9ibGUsIEZyYW5jZTwvYT4uPGJyIC8+PHN1cD4zPC9zdXA+PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1Db21wYW5oaWErUmlvZ3JhbmRlbnNlK2RlK1NhbmVhbWVudG8lMmMrU2FudGErTWFyaWElMmMrQnJhemlsJnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+Q29tcGFuaGlhIFJpb2dyYW5kZW5zZSBkZSBTYW5lYW1lbnRvLCBTYW50YSBNYXJpYSwgQnJhemlsPC9hPi48YnIgLz48c3VwPjQ8L3N1cD48YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUNvbXBhbmhpYStFc3RhZHVhbCtkZStFbmVyZ2lhK0VsJWMzJWE5dHJpY2ElMmMrU2FsdG8rZG8rSmFjdSVjMyVhZCUyYytCcmF6aWwmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Db21wYW5oaWEgRXN0YWR1YWwgZGUgRW5lcmdpYSBFbMOpdHJpY2EsIFNhbHRvIGRvIEphY3XDrSwgQnJhemlsPC9hPi48YnIgLz5kAgUPFgIfBAUFOCw5NDJkAgYPFgIfBAUGMTIsNDI3ZAIHDxYCHwMFD0Rpc3BsYXk6aW5saW5lO2QCCA9kFgICAQ8WAh8EBc8DPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1IeWRybytQVitIeWJyaWQrU3lzdGVtJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+SHlkcm8gUFYgSHlicmlkIFN5c3RlbTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1BWK0Zsb2F0aW5nK0NvdmVyJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFBWIEZsb2F0aW5nIENvdmVyPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rV2F0ZXIrU3VwcGx5K0RhbSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBXYXRlciBTdXBwbHkgRGFtPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rU29mdHdhcmUrSG9tZXImc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU29mdHdhcmUgSG9tZXI8L2E+IGQCCg8WAh8EBYEDVGVpeGVpcmEsIEwuICwgQ2F1eCwgSi4gLCBCZWx1Y28sIEEuICwgQmVydG9sZG8sIEkuICwgTG91emFkYSwgSi4gIGFuZCBFaWZsZXIsIFIuICAgKDIwMTUpIEZlYXNpYmlsaXR5IFN0dWR5IG9mIGEgSHlkcm8gUFYgSHlicmlkICBTeXN0ZW0gT3BlcmF0aW5nIGF0IGEgRGFtIGZvciAgV2F0ZXIgU3VwcGx5IGluIFNvdXRoZXJuIEJyYXppbC4gPGk+Sm91cm5hbCBvZiBQb3dlciBhbmQgRW5lcmd5IEVuZ2luZWVyaW5nPC9pPiwgPGI+MzwvYj4sIDcwLTgzLiBkb2k6IDxhIGhyZWY9J2h0dHA6Ly9keC5kb2kub3JnLzEwLjQyMzYvanBlZS4yMDE1LjM5MDA2JyB0YXJnZXQ9J19ibGFuaycgb25jbGljaz0nU2V0TnVtKDYwMDM5KSc+MTAuNDIzNi9qcGVlLjIwMTUuMzkwMDY8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50AicWTmYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI3OCcgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATGDAk11aGlkYSwgUi4sIE1vc3RhdmFuLCBBLiwgU3VqYXRtaWtvLCBXLiwgUGFyaywgTS4gYW5kIE1hdHN1dXJhLCBLLiAoMjAwMSkgVGhlIDEwIFllYXJzIE9wZXJhdGlvbiBvZiBhIFBWIE1pY3JvIEh5ZHJvIEh5YnJpZCBTeXN0ZW0gaW4gVGFyYXRhaywgSW5kb25lc2lhLiBTb2xhciBFbmVyZ3kgTWF0ZXJpYWxzICYgU29sYXIgQ2VsbHMsIDY3LCA2MjEtNjI3LiANCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9TMDkyNy0wMjQ4KDAwKTAwMzM0LTJkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI3OScgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATLYAUJla2VsZSwgRy4gYW5kIFRhZGVzc2UsIEcuICgyMDEyKSBGZWFzaWJpbGl0eSBTdHVkeSBvZiBTbWFsbCBIeWRybyBQViBXaW5kIEh5YnJpZCBTeXN0ZW0gZm9yIE9mZiBHcmlkIFJ1cmFsIEVsZWN0cmlmaWNhdGlvbiBpbiBFdGhpb3BpYS4gQXBwbGllZCBFbmVyZ3ksIDk3LCA1LTE1LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5hcGVuZXJneS4yMDExLjExLjA1OWQCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MjgwJyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM9kBTmZhaCwgRS5NLiBhbmQgTmd1bmRhbSwgSi5NLiAoMjAwOSkgRmVhc2liaWxpdHkgb2YgUGljbyBIeWRybyBhbmQgUGhvdG92b2x0YWljIEh5YnJpZCBQb3dlciBTeXN0ZW1zIGZvciBSZW1vdGUgVmlsbGFnZXMgaW4gQ2FtZXJvb24uIFJlbmV3YWJsZSBFbmVyZ3ksIDM0LCAxNDQ1LTE0NTAuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLnJlbmVuZS4yMDA4LjEwLjAxOWQCAw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MjgxJyB0YXJnZXQ9J19ibGFuayc+NDwvYT5dATQBNKICS2VuZmFjaywgSi4sIE5laXJhYywgRi5QLiwgVGF0aWV0c2UsIFQuVC4sIE1heWVyLCBELiwgRm9ndWUsIE0uIGFuZCBMZWpldW5lLCBFLiAoMjAwOSkgTWljcm8gSHlkcm8gUFYgSHlicmlkIFN5c3RlbTogU2l6aW5nIGEgU21hbGwgSHlkcm8gUFYgSHlicmlkIFN5c3RlbSBmb3IgUnVyYWwgRWxlY3RyaWZpY2F0aW9uIGluIERldmVsb3BpbmcgQ291bnRyaWVzLiBSZW5ld2FibGUgRW5lcmd5LCAzNCwgMjI1OS0yMjYzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5yZW5lbmUuMjAwOC4xMi4wMzhkAgQPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI4MicgdGFyZ2V0PSdfYmxhbmsnPjU8L2E+XQE1ATXVAU1haGVyLCBQLiwgU21pdGgsIE4uUC5BLiBhbmQgV2lsbGlhbXMsIEEuQS4gKDIwMDMpIEFzc2Vzc21lbnQgb2YgUGljbyBIeWRybyBhcyBhbiBPcHRpb24gZm9yIE9mZiBHcmlkIEVsZWN0cmlmaWNhdGlvbiBpbiBLZW55YS4gUmVuZXdhYmxlIEVuZXJneSwgMjgsIDEzNTctMTM2OS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L1MwOTYwLTE0ODEoMDIpMDAyMTYtMWQCBQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MjgzJyB0YXJnZXQ9J19ibGFuayc+NjwvYT5dATYBNtIBU2FudGFyZWxsaSwgTS4gYW5kIE1hY2Fnbm8sIFMuICgyMDA0KSBIeWRyb2dlbiBhcyBhbiBFbmVyZ3kgQ2FycmllciBpbiBTdGFuZCBhbG9uZSBBcHBsaWNhdGlvbnMgQmFzZWQgb24gUFYgYW5kIFBWIE1pY3JvIEh5ZHJvIFN5c3RlbXMuIEVuZXJneSwgMjksIDExNTktMTE4Mi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouZW5lcmd5LjIwMDQuMDIuMDIzZAIGD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcyODQnIHRhcmdldD0nX2JsYW5rJz43PC9hPl0BNwE3wAFNYXJnZXRhLCBKLiBhbmQgR2xhc25vdmljLCBaLiAoMjAxMSkgRXhwbG9pdGF0aW9uIG9mIFRlbXBvcmFyeSBXYXRlciBGbG93IGJ5IEh5YnJpZCBQViBIeWRyb2VsZWN0cmljIFBsYW50LiBSZW5ld2FibGUgRW5lcmd5LCAzNiwgMjI2OC0yMjc3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5yZW5lbmUuMjAxMS4wMS4wMDFkAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI4NScgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4ATinAUJlbHVjbywgQS4sIFNvdXphLCBQLksuIGFuZCBLcmVuemluZ2VyLCBBLiAoMjAwOCkgUFYgSHlkcm8gSHlicmlkIFN5c3RlbXMuIElFRUUgTGF0aW4gQW1lcmljYSBUcmFuc2FjdGlvbnMsIDYsIDYyNi02MzEuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEwOS9UTEEuMjAwOC40OTE3NDM0ZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcyODYnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5lQJCZWx1Y28sIEEuLCBTb3V6YSwgUC5LLiBhbmQgS3JlbnppbmdlciwgQS4gKDIwMTIpIEEgTWV0aG9kIHRvIEV2YWx1YXRlIHRoZSBFZmZlY3Qgb2YgQ29tcGxlbWVudGFyaXR5IGluIFRpbWUgYmV0d2VlbiBIeWRybyBhbmQgU29sYXIgRW5lcmd5IG9uIHRoZSBQZXJmb3JtYW5jZSBvZiBIeWJyaWQgSHlkcm8gUFYgR2VuZXJhdGluZyBQbGFudHMuIFJlbmV3YWJsZSBFbmVyZ3ksIDQ1LCAyNC0zMC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucmVuZW5lLjIwMTIuMDEuMDk2ZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcyODcnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwlAJCZWx1Y28sIEEuLCBTb3V6YSwgUC5LLiBhbmQgS3JlbnppbmdlciwgQS4gKDIwMTMpIEluZmx1ZW5jZSBvZiBEaWZmZXJlbnQgRGVncmVlcyBvZiBDb21wbGVtZW50YXJpdHkgb2YgU29sYXIgYW5kIEh5ZHJvIEF2YWlsYWJpbGl0eSBvbiB0aGUgUGVyZm9ybWFuY2Ugb2YgSHlicmlkIEh5ZHJvIFBWIEdlbmVyYXRpbmcgUGxhbnRzLiBFbmVyZ3kgYW5kIFBvd2VyIEVuZ2luZWVyaW5nLCA1LCAzMzItMzQyLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjQyMzYvZXBlLjIwMTMuNTQwMzRkAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI4OCcgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTHKAUVobmJlcmcsIFMuRy5KLiBhbmQgQm9sbGVuLCBNLkguSi4gKDIwMDUpIFJlbGlhYmlsaXR5IG9mIGEgU21hbGwgUG93ZXIgU3lzdGVtIFVzaW5nIFNvbGFyIFBvd2VyIGFuZCBIeWRyby4gRWxlY3RyaWMgUG93ZXIgU3lzdGVtcyBSZXNlYXJjaCwgNzQsIDExOS0xMjcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLmVwc3IuMjAwNC4wOS4wMDlkAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI4OScgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTKFAk1hcmdldGEsIEouIGFuZCBHbGFzbm92aWMsIFouICgyMDEwKSBGZWFzaWJpbGl0eSBvZiB0aGUgR3JlZW4gRW5lcmd5IFByb2R1Y3Rpb24gYnkgSHlicmlkIFNvbGFyICsgSHlkcm8gUG93ZXIgU3lzdGVtIGluIEV1cm9wZSBhbmQgU2ltaWxhciBDbGltYXRlIEFyZWFzLiBSZW5ld2FibGUgYW5kIFN1c3RhaW5hYmxlIEVuZXJneSBSZXZpZXdzLCAxNCwgMTU4MC0xNTkwLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucnNlci4yMDEwLjAxLjAxOWQCDA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MjkwJyB0YXJnZXQ9J19ibGFuayc+MTM8L2E+XQIxMwIxM8oBRGVuaG9sbSwgUC4gYW5kIE1hcmdvbGlzLCBSLk0uICgyMDA3KSBFdmFsdWF0aW5nIHRoZSBMaW1pdHMgb2YgU29sYXIgUGhvdG92b2x0YWljcyBpbiBUcmFkaXRpb25hbCBFbGVjdHJpYyBQb3dlciBTeXN0ZW1zLiBFbmVyZ3kgUG9saWN5LCAzNSwgMjg1Mi0yODYxLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5lbnBvbC4yMDA2LjEwLjAxNGQCDQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MjkxJyB0YXJnZXQ9J19ibGFuayc+MTQ8L2E+XQIxNAIxNLoBSG9mZm1hbm4sIFcuICgyMDA2KSBQViBTb2xhciBFbGVjdHJpY2l0eSBJbmR1c3RyeTogTWFya2V0IEdyb3d0aCBhbmQgUGVyc3BlY3RpdmUuIFNvbGFyIEVuZXJneSBNYXRlcmlhbHMgJiBTb2xhciBDZWxscywgOTAsIDMyODUtMzMxMS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouc29sbWF0LjIwMDUuMDkuMDIyZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcyOTInIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE1yAFHbGFzbm92aWMsIFouLCBSb2dvc2ljLCBNLiBhbmQgTWFyZ2V0YSwgSi4gKDIwMTEpIEEgTW9kZWwgZm9yIE9wdGltYWwgU2l6aW5nIG9mIFNvbGFyIFRoZXJtYWwgSHlkcm9lbGVjdHJpYyBQb3dlciBQbGFudC4gU29sYXIgRW5lcmd5LCA4NSwgNzk0LTgwNy4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouc29sZW5lci4yMDExLjAxLjAxNWQCDw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MjkzJyB0YXJnZXQ9J19ibGFuayc+MTY8L2E+XQIxNgIxNr8BR2xhc25vdmljLCBaLiBhbmQgTWFyZ2V0YSwgSi4gKDIwMTEpIFZpc2lvbiBvZiBUb3RhbCBSZW5ld2FibGUgRWxlY3RyaWNpdHkgU2NlbmFyaW8uIFJlbmV3YWJsZSBhbmQgU3VzdGFpbmFibGUgRW5lcmd5IFJldmlld3MsIDE1LCAxODczLTE4ODQuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLnJzZXIuMjAxMC4xMi4wMTZkAhAPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI5NCcgdGFyZ2V0PSdfYmxhbmsnPjE3PC9hPl0CMTcCMTcZaHR0cHM6Ly9nb28uZ2wvbWFwcy9FOVZKU2QCEQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3Mjk1JyB0YXJnZXQ9J19ibGFuayc+MTg8L2E+XQIxOAIxOBlodHRwczovL2dvby5nbC9tYXBzL21qM2JYZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcyOTYnIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5GWh0dHBzOi8vZ29vLmdsL21hcHMvcE9RQzNkAhMPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzI5NycgdGFyZ2V0PSdfYmxhbmsnPjIwPC9hPl0CMjACMjAZaHR0cHM6Ly9nb28uZ2wvbWFwcy9sTlZsUGQCFA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3Mjk4JyB0YXJnZXQ9J19ibGFuayc+MjE8L2E+XQIyMQIyMRlodHRwczovL2dvby5nbC9tYXBzL0hkSG9DZAIVD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzcyOTknIHRhcmdldD0nX2JsYW5rJz4yMjwvYT5dAjIyAjIyGWh0dHBzOi8vZ29vLmdsL21hcHMvMHloOEdkAhYPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzMwMCcgdGFyZ2V0PSdfYmxhbmsnPjIzPC9hPl0CMjMCMjORAUFCIFZhbHZlcyBHbWJIICgyMDE0KSBIb3dlbGwgQnVuZ2VyIFZhbHZlcy4NCjxici8+aHR0cDovL2FidmFsdmVzLmNvbS9hYi12YWx2ZXMvaW1hZ2VzL1BERi9BdXRvbWF0aWNfQ29udHJvbF9WYWx2ZXMvMTAuX0hKRVRfLV9UZXh0X25ld19jb3Zlci5wZGZkAhcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzMwMScgdGFyZ2V0PSdfYmxhbmsnPjI0PC9hPl0CMjQCMjSWAVN0ZWx6ZXIsIFIuUy4gYW5kIFdhbHRlcnMsIFIuTi4gKDE5NzcpIEVzdGltYXRpbmcgUmV2ZXJzaWJsZSBQdW1wIFR1cmJpbmUgQ2hhcmFjdGVyaXN0aWNzLiBVLlMuIERlcGFydG1lbnQgb2YgSW50ZXJpb3IsIEJ1cmVhdSBvZiBSZWNsYW1hdGlvbiwgRGVudmVyLmQCGA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MzAyJyB0YXJnZXQ9J19ibGFuayc+MjU8L2E+XQIyNQIyNY0CRGVyYWtoc2hhbiwgUy4gYW5kIE5vdXJiYWtoc2gsIEEuICgyMDA4KSBFeHBlcmltZW50YWwgU3R1ZHkgb2YgQ2hhcmFjdGVyaXN0aWMgQ3VydmVzIG9mIENlbnRyaWZ1Z2FsIFB1bXBzIFdvcmtpbmcgYXMgVHVyYmluZXMgaW4gRGlmZmVyZW50IFNwZWNpZmljIFNwZWVkcy4gRXhwZXJpbWVudGFsIFRoZXJtYWwgYW5kIEZsdWlkIFNjaWVuY2UsIDMyLCA4MDAtODA3Lg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouZXhwdGhlcm1mbHVzY2kuMjAwNy4xMC4wMDRkAhkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzMwMycgdGFyZ2V0PSdfYmxhbmsnPjI2PC9hPl0CMjYCMjaqAVdpbGxpYW1zLCBBLkEuICgxOTk2KSBQdW1wcyBhcyBUdXJiaW5lcyBmb3IgTG93IENvc3QgbWljcm8gSHlkcm8gUG93ZXIuIFdvcmxkIFJlbmV3YWJsZSBFbmVyZ3kgQ29uZ3Jlc3MsIDksIDEyMjctMTIzNC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2LzA5NjAtMTQ4MSg5Nik4ODQ5OC05ZAIaD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzczMDQnIHRhcmdldD0nX2JsYW5rJz4yNzwvYT5dAjI3AjI3uAFBcnJpYWdhLCBNLiAoMjAxMCkgUHVtcCBhcyBUdXJiaW5lLCBhIFBpY28gSHlkcm8gQWx0ZXJuYXRpdmUgaW4gTGFvIFBlb3BsZeKAmXMgRGVtb2NyYXRpYyBSZXB1YmxpYy4gUmVuZXdhYmxlIEVuZXJneSwgMzUsIDExMDktMTExNS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucmVuZW5lLjIwMDkuMDguMDIyZAIbD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzczMDUnIHRhcmdldD0nX2JsYW5rJz4yODwvYT5dAjI4AjI4hwJBbnR3ZXJwZW4sIEguSi4gYW5kIEdyZXl2ZW5zdGVpbiwgRy5QLiAoMjAwNSkgVXNlIG9mIFR1cmJpbmVzIGZvciBTaW11bHRhbmVvdXMgUHJlc3N1cmUgUmVndWxhdGlvbiBhbmQgUmVjb3ZlcnkgaW4gU2Vjb25kYXJ5IENvb2xpbmcgV2F0ZXIgU3lzdGVtcyBpbiBEZWVwIE1pbmVzLiBFbmVyZ3kgQ29udmVyc2lvbiBhbmQgTWFuYWdlbWVudCwgNDYsIDU2My01NzUuDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5lbmNvbm1hbi4yMDA0LjA0LjAwNmQCHA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MzA2JyB0YXJnZXQ9J19ibGFuayc+Mjk8L2E+XQIyOQIyObQBVmFydW4sIE4uSC4sIEt1bWFyLCBBLiBhbmQgWWFkYXYsIFMuICgyMDExKSBFeHBlcmltZW50YWwgSW52ZXN0aWdhdGlvbiBvZiBDZW50cmlmdWdhbCBQdW1wIFdvcmtpbmcgYXMgVHVyYmluZSBmb3IgU21hbGwgSHlkcm9wb3dlciBTeXN0ZW1zLiBFbmVyZ3kgU2NpZW5jZSBhbmQgVGVjaG5vbG9neSwgMSwgNzktODYuZAIdD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzczMDcnIHRhcmdldD0nX2JsYW5rJz4zMDwvYT5dAjMwAjMwsAFSYW1vcywgSC4gYW5kIEJvcmdhLCBBLiAoMTk5OSkgUHVtcHMgYXMgVHVyYmluZXM6IEFuIFVuY29udmVudGlvbmFsIFNvbHV0aW9uIHRvIEVuZXJneSBQcm9kdWN0aW9uLiBVcmJhbiBXYXRlciwgMSwgMjYxLTI2My4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L1MxNDYyLTA3NTgoMDApMDAwMTYtOWQCHg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MzA4JyB0YXJnZXQ9J19ibGFuayc+MzE8L2E+XQIzMQIzMZwCVGVpeGVpcmEsIEwuRS4gKDIwMTQpIEh5ZHJvZWxlY3RyaWMgUG93ZXIgR2VuZXJhdGlvbiBpbiBXYXRlciBTdXBwbHkgZGFtcy4gTWFzdGVyIERpc3NlcnRhdGlvbiwgUHJvZ3JhbWEgZGUgUMOzcyBHcmFkdWEmY2NlZGlsOyZhdGlsZGU7byBlbSBSZWN1cnNvcyBIw61kcmljb3MgZSBTYW5lYW1lbnRvIEFtYmllbnRhbCwgSW5zdGl0dXRvIGRlIFBlc3F1aXNhcyBIaWRyJmFhY3V0ZTt1bGljYXMsIFVuaXZlcnNpZGFkZSBGZWRlcmFsIGRvIFJpbyBHcmFuZGUgZG8gU3VsLiAoSW4gUG9ydHVndWVzZSlkAh8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzMwOScgdGFyZ2V0PSdfYmxhbmsnPjMyPC9hPl0CMzICMzKEAkdpc2JlcnQsIEMuTS5GLiwgR29ueiZhYWN1dGU7bHZleiwgSi5KLkYuLCBTYW50YWbDqSwgTS5SLiwgR2lzYmVydCwgUC5TLkYuLCBSb21lcm8sIEYuSi5TLiBhbmQgU29sZXIsIEouQi5ULiAoMjAxMykgQSBOZXcgUGhvdG92b2x0YWljIEZsb2F0aW5nIENvdmVyIFN5c3RlbSBmb3IgV2F0ZXIgUmVzZXJ2b2lycy4gUmVuZXdhYmxlIEVuZXJneSwgNjAsIDYzLTcwLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucmVuZW5lLjIwMTMuMDQuMDA3ZAIgD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzczMTAnIHRhcmdldD0nX2JsYW5rJz4zMzwvYT5dAjMzAjMznwJTYW50YWbDqSwgTS5SLiwgR3NiZXJ0LCBQLlMuRi4sIFJvbWVybywgRi5KLlMuLCBTb2xlciwgSi5CLlQuLCBHb256JmFhY3V0ZTtsdmV6LCBKLkouRi4gYW5kIEdpc2JlcnQsIEMuTS5GLiAoMjAxNCkgSW1wbGVtZW50YXRpb24gb2YgYSBQaG90b3ZvbHRhaWMgRmxvYXRpbmcgQ292ZXIgZm9yIElycmlnYXRpb24gUmVzZXJ2b2lycy4gSm91cm5hbCBvZiBDbGVhbmVyIFByb2R1Y3Rpb24sIDY2LCA1NjgtNTcwLg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouamNsZXByby4yMDEzLjExLjAwNmQCIQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MzExJyB0YXJnZXQ9J19ibGFuayc+MzQ8L2E+XQIzNAIzNHVIb21lckVuZXJneSwgTC5MLkMuICgyMDE0KSBTb2Z0d2FyZSBIT01FUiwgVmVyc2lvbiAyLjY4IEJldGE7IHRoZSBNaWNyb3Bvd2VyIE9weWltaXphdGlvbiBNb2RlbC4NCnd3dy5ob21lcmVuZXJneS5jb21kAiIPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzMxMicgdGFyZ2V0PSdfYmxhbmsnPjM1PC9hPl0CMzUCMzXqAUxpbGllbnRoYWwsIFAuRC4sIExhbWJlcnQsIFQuVy4gYW5kIEdpbG1hbiwgUC4gKDIwMDQpIENvbXB1dGVyIE1vZGVsaW5nIG9mIFJlbmV3YWJsZSBQb3dlciBTeXN0ZW1zLiBJbjogQ2xldmVsYW5kLCBDLkouLCBFZC4sIEVuY3ljbG9wZWRpYSBvZiBFbmVyZ3ksIEVsc2V2aWVyLCBBbXN0ZXJkYW4sIDYzMy02NDcuDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvYjAtMTItMTc2NDgwLXgvMDA1MjItMmQCIw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MzEzJyB0YXJnZXQ9J19ibGFuayc+MzY8L2E+XQIzNgIzNo8CTGFtYmVydCwgVC5XLiwgR2lsbWFuLCBQLiBhbmQgTGlsaWVudGhhbCwgUC5ELiAoMjAwNSkgTWljcm9wb3dlciBTeXN0ZW0gTW9kZWxpbmcgd2l0aCBIb21lci4gSW46IEZhcnJldCwgRi5BLiBhbmQgU2ltJm90aWxkZTtlcywgTS5HLiwgRWRzLiwgSW50ZWdyYXRpb24gb2YgQWx0ZXJuYXRpdmUgU291cmNlcyBvZiBFbmVyZ3ksIEpvaG4gV2lsZXkgJiBTb25zLCBIb2Jva2VuLCAzNzktNDE4Lg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDAyLzA0NzE3NTU2MjEuY2gxNWQCJA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MzE0JyB0YXJnZXQ9J19ibGFuayc+Mzc8L2E+XQIzNwIzN+cBQmVsdWNvLCBBLiwgU291emEsIFAuSy4gYW5kIEtyZW56aW5nZXIsIEEuICgyMDA4KSBBIERpbWVuc2lvbmxlc3MgSW5kZXggRXZhbHVhdGluZyB0aGUgVGltZSBDb21wbGVtZW50YXJpdHkgYmV0d2VlbiBTb2xhciBhbmQgSHlkcmF1bGljIEVuZXJnaWVzLiBSZW5ld2FibGUgRW5lcmd5LCAzMywgMjE1Ny0yMTY1Lg0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oucmVuZW5lLjIwMDguMDEuMDE5ZAIlD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzczMTUnIHRhcmdldD0nX2JsYW5rJz4zODwvYT5dAjM4AjM4jwFCcnV0c2FlcnQsIFcuICgyMDA1KSBIeWRyb2xvZ3ksIGFuIEludHJvZHVjdGlvbi4gQ2FtYnJpZGdlIFVuaXZlcnNpdHkgUHJlc3MsIENhbWJyaWRnZSwgNjE4IHAuDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTcvQ0JPOTc4MDUxMTgwODQ3MGQCJg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3MzE2JyB0YXJnZXQ9J19ibGFuayc+Mzk8L2E+XQIzOQIzOVVBZyZlY2lyYztuY2lhIE5hY2lvbmFsIGRlICZBYWN1dGU7Z3VhcyAoQU5BKSAoMjAxNCkgSGlkcm9XZWIuIHd3dy5oaWRyb3dlYi5hbmEuZ292LmJyZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9E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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=2433" title="Journal of Power and Energy Engineering">
+                    Journal of Power and Energy Engineering</a> &gt; <a href="home?issueid=6959#60039">Vol.3 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Feasibility Study of a Hydro PV Hybrid  System Operating at a Dam for  Water Supply in Southern Brazil <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Luis+E.++Teixeira&searchfield=authors&page=1' target='_blank'>Luis E.  Teixeira</a><sup>1</sup>, <a href='articles?searchcode=Johan++Caux&searchfield=authors&page=1' target='_blank'>Johan  Caux</a><sup>1,2</sup>, <a href='articles?searchcode=Alexandre++Beluco&searchfield=authors&page=1' target='_blank'>Alexandre  Beluco</a><sup>1*</sup>, <a href='articles?searchcode=Ivo++Bertoldo&searchfield=authors&page=1' target='_blank'>Ivo  Bertoldo</a><sup>3</sup>, <a href='articles?searchcode=Jos%c3%a9+Ant%c3%b4nio+S.++Louzada&searchfield=authors&page=1' target='_blank'>José Antônio S.  Louzada</a><sup>1</sup>, <a href='articles?searchcode=Ricardo+C.++Eifler&searchfield=authors&page=1' target='_blank'>Ricardo C.  Eifler</a><sup>4</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><sup>1</sup><a href='articles?searchcode=Instituto+de+Pesquisas+Hidr%c3%a1ulicas%2c+Universidade+Federal+do+Rio+Grande+do+Sul%2c+Porto+Alegre%2c+Brazil&searchfield=affs&page=1' target='_blank'>Instituto de Pesquisas Hidráulicas, Universidade Federal do Rio Grande do Sul, Porto Alegre, Brazil</a>.<br /><sup>2</sup><a href='articles?searchcode=Ecole+Nationale+Superieure+de+l%e2%80%99Energie%2c+l%e2%80%99Eau+et+l%e2%80%99Environnement%2c+Grenoble+INP%2c+Grenoble%2c+France&searchfield=affs&page=1' target='_blank'>Ecole Nationale Superieure de l’Energie, l’Eau et l’Environnement, Grenoble INP, Grenoble, France</a>.<br /><sup>3</sup><a href='articles?searchcode=Companhia+Riograndense+de+Saneamento%2c+Santa+Maria%2c+Brazil&searchfield=affs&page=1' target='_blank'>Companhia Riograndense de Saneamento, Santa Maria, Brazil</a>.<br /><sup>4</sup><a href='articles?searchcode=Companhia+Estadual+de+Energia+El%c3%a9trica%2c+Salto+do+Jacu%c3%ad%2c+Brazil&searchfield=affs&page=1' target='_blank'>Companhia Estadual de Energia Elétrica, Salto do Jacuí, Brazil</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jpee.2015.39006"
+                    target="_blank" onclick='SetNum(60039)'>10.4236/jpee.2015.39006</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JPEE_2015092914582426.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60039)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60039' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60039.xml' target='_blank' onclick='SetNum(60039)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    8,942</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    12,427</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60039&JournalID=2433' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">Dams for water supply usually represent an untapped hydroelectric potential. It is a small energetic potential, in most situations, usually requiring a particular solution to be viable. The use of pumps as power turbines often represents an alternative that enables the power generation in hydraulic structures already in operation, as is the case of dams in water supply systems. This potential can be exploited in conjunction with the implementation of PV modules on the water surface, installed on floating structures, both operating in a hydro PV hybrid system. The floating structure can also contribute to reducing the evaporation of water and providing a small increase in hydroelectric power available. This paper presents a pre-feasibility study for implementation of a hydroelectric power plant and PV modules on floating structures in the reservoir formed by the dam of Val de Serra, in southern Brazil. The dam is operated to provide drinking water to about  60% of the population of the city of Santa Maria, in the state of Rio Grande do Sul, in southern Brazil. The pre-feasibility study conducted with Homer software, version Legacy, indicated that the hydroelectric plant with a capacity of 227 kW can operate together with 60 kW of PV modules. This combination will result (in one of the configurations considered) in an initial cost of USD$ 1715.83 per kW installed and a cost of energy of USD$ 0.059/kWh.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Hydro+PV+Hybrid+System&searchfield=keyword&page=1' target='_blank'>Hydro PV Hybrid System</a>, <a href='articles?searchcode=+PV+Floating+Cover&searchfield=keyword&page=1' target='_blank'> PV Floating Cover</a>, <a href='articles?searchcode=+Water+Supply+Dam&searchfield=keyword&page=1' target='_blank'> Water Supply Dam</a>, <a href='articles?searchcode=+Software+Homer&searchfield=keyword&page=1' target='_blank'> Software Homer</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Teixeira, L. , Caux, J. , Beluco, A. , Bertoldo, I. , Louzada, J.  and Eifler, R.   (2015) Feasibility Study of a Hydro PV Hybrid  System Operating at a Dam for  Water Supply in Southern Brazil. <i>Journal of Power and Energy Engineering</i>, <b>3</b>, 70-83. doi: <a href='http://dx.doi.org/10.4236/jpee.2015.39006' target='_blank' onclick='SetNum(60039)'>10.4236/jpee.2015.39006</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>Brazil is experiencing a time of uncertainty about the ability of the interconnected system to meet the demands of consumers for electricity. On the one hand, the pressures exerted by the economy, with an advertised and encouraged growth but not yet materialized in fact in all its possibilities. On the other hand, investments in the expansion and maintenance of installed capacity, faced with a scenario of little flexibility in achieving the necessary projects.</p>
+<p>In this scenario, it is important to ensure a reasonable increase of installed capacity to the grid, especially when potential that are available and not used can be added to the system with simplified and fast work can be identified. Dams for water supply have reasonable storage capacity and are already in operation, making feasible the necessary investments for the implementation of micro and small scale hydropower plants.</p>
+<p>The area flooded by the dam can also be utilized for the installation of a photovoltaic power plant. In many sites, the shading provided by the photovoltaic modules is seen as a negative point. In a dam for water supply, installing the photovoltaic modules would result in the reduction of water evaporation and a possible increase in the amount of water available for power generation, depending on local conditions.</p>
+<p>A hybrid system constituted in this way, a hydro PV hybrid system, might seem unfeasible. A hydroelectric power plant implemented in an existing dam may represent a set of unsurpassable obstacles. The use of photovoltaic modules always seems to bump into excessively high initial costs. However, such a hybrid system has been studied for some time and these apparent difficulties can at least partially be overcome.</p>
+<p>It’s been over a decade; [1] described the ten years of a PV micro hydro hybrid system in Indonesia. Reference [2] also considered hydro PV hybrid systems for off grid rural electrification of Ethiopia. Reference [3] evaluated the feasibility of PV pico hydro systems for electrification in Cameroon. Reference [4] analyzed with Homer a PV micro hydro system that can be considered as a reference also for electrification of Cameroon.</p>
+<p>Reference [5] does not consider hydro PV hybrid systems, but presents an interesting comparison between hydroelectric and PV ystems. Reference [6] evaluates the hydrogen production integrated with a hydro PV hybrid system in micro scale. Margeta and Glasnovic [7] evaluate a concept of hydro PV hybrid system in which photovoltaic modules create temporary flow rate for a hydroelectric power plant.</p>
+<p>Referring to hydro PV hybrid systems, [8] present some general comments and evaluate some effects of possible complementarity between solar and hydroelectric resources. Subsequent works, [9] [10] , explore the influence of energetic complementarity in time on the performance of hydro photovoltaic hybrid systems. A site with good complementarity in time between energy resources can lead to a hybrid system with less installed power and consequently lower costs.</p>
+<p>Reference [11] evaluates the use of a PV system and a hydroelectric plant with reservoir to raise the capacity factor of the PV system. This idea has been explored in several research projects. Margeta and Glasnovic [12] evaluate the applicability of a concept in which photovoltaics and hydroelectric systems would be operated as hydro PV hybrid systems throughout Europe, based on energy storage in the hydraulic way.</p>
+<p>Following this line of reasoning, leading to the natural growth of the use of photovoltaic modules, [13] evaluate the limit of solar penetration in interconnected systems. Reference [14] analyzes the growth of production of photovoltaic modules and presents interesting comments on how this growth should be accompanied with the appropriate incentives and regulations.</p>
+<p>Glasnovic et al. [15] proposed a hydroelectric solar thermal hybrid system intending to overcome seasonal minimum energy availability, but would contribute mainly to raise the capacity factor of the solar thermal system. Glasnovic and Margeta [16] proposed a systematic alternative to obtaining energy supplies from systems with energy storage in hydroelectric reversible plants, in joint operation with other renewable resources.</p>
+<p>This paper presents a pre-feasibility study of a hydro PV hybrid system to be installed at a dam for water supply in southern Brazil. The focus of the paper is to identify conditions mainly relating to components of photovoltaic installment, for which the system becomes feasible. The dam considered in the study is the dam of Val de Serra, in Santa Maria, in southern Brazil. This dam will be described in the next section.</p>
+<p>In addition, the paper considers the installation of the photovoltaic modules in floating devices, possibly reducing evaporation and possibly increasing the amount of water available for generating power. The sections on power generation at a dam for water supply and the proposed hybrid system, below, discusses in more detail the adaptation of these hydraulic structures for power generation and the use of photovoltaic modules on floating structures.</p>
+<p class="E-Title1">2. Method of Analysis</p>
+<p>The focus of this work is a dam used for water supply. This dam has been used only for water supply and the starting point of the work is the design of a power plant for harnessing the hydroelectric potential. The next section describes this dam and the following section discusses the power generation in water supply dams.</p>
+<p>The feasibility study of a hydro PV hybrid system to be installed in this dam will be made with the use of the Homer software, Legacy version. This software can be learned with great ease and short time periods, with universal access at no cost. Section 5 presents the proposed system and Section 6 discusses the simulations with Homer.</p>
+<p>It is worth noting that Homer software presents a space with optimal solutions to the problem being studied. However, a strong reason for its use is the way Homer performs the calculations and displays the results. Thus, the final solution may be chosen from the optimal solutions, and also considering the solutions that have not been selected as optimal solutions.</p>
+<p>Finally, Section 7 then presents and discusses the results and section 8 reports the conclusions.</p>
+<p class="E-Title1">3. The Val de Serra Dam</p>
+<p>The dam Rodolfo Costa e Silva, known as Val de Serra, was inaugurated on December 17, 1999. The reservoir is operated by the Companhia Riograndense de Saneamento, CORSAN, and is located on the boundary between the municipalities of Itaara [17] and S&atilde;o Martinho da Serra [18] , in the center of the State of Rio Grande do Sul [19] , the southernmost state of Brazil. The reservoir is responsible for supplying 60% of consumers in the urban area of the city of Santa Maria [20] .</p>
+<p>The reservoir covers an area [21] of 275 hectares and is located between the geographical coordinates: 29˚29'01&quot; to 29˚30'56&quot; South and 53˚43'32&quot; to 53˚45'29&quot; West (<a href="#f1" target="_self">Figure 1</a>). The dam [22] is built with roller compacted concrete, with a maximum height of 36.5 meters, maximum height above the river bed of 34.0 meters, crest length of 684 meters and energy dissipation with stepped spillway. <a href="#f2" target="_self">Figure 2</a> shows the structure of energy dissipation.</p>
+<p><a href="#f3" target="_self">Figure 3</a> shows a view of the lake formed by the dam. The drainage area contributing to the reservoir is 49.4 km<sup>2</sup> and total useful volume is 23 million cubic meters. The reservoir is in the area of influence of a subtropical climate with an average annual temperature of 22˚C, with maximum temperatures exceeding 30˚C and minimum temperatures below 5˚C. November is the least rainy month and June, September and October are the rainiest months.</p>
+<p>The mean flow is regulated by a booster valve type Howell Bunger [23] , with a nominal diameter of 600 mm. This valve has a fixed aperture to maintain constant flow equal to 1.25 m<sup>3</sup>/s. The water level in the dam will vary over the year as that shown in <a href="#f4" target="_self">Figure 4</a>. These data were supplied by the utility company and were obtained with sensors installed on site with data acquisition every 5 minutes.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x6.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Image of the reservoir formed by the dam Val de Serra.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x7.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. View of the structure of energy dissipation.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x8.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Partial view of the dam and lake.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x9.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Levels in the dam Val de Serra during the year 2011.</p>
+</div>
+<p class="E-Title1">4. Power Generation at a Dam for Water Supply</p>
+<p>The water supply dams are usually designed with the sole purpose of reservation of water, mainly because of the usually small hydroelectric potential. Thus, the hydraulic structures are often designed to vent the necessary amounts of water, showing no appropriate structures for water adduction, machine room and returning water to the river. Moreover, they are operated in a simpler way, maintaining a constant flow, unlike hydroelectric plants.</p>
+<p>The use of these structures in order to obtain energy supplies requires a solution with technical and economic commitment. The design of a conventional power plant will surely lead to infeasibility. It is necessary to devise an approach based on opportunity cost solution. That is why the use of pumps as turbines shown as the best solution for its simplicity and cost advantage over conventional turbines, without significant reduction in efficiency.</p>
+<p>The adaptation of supply dams for power generation then require a change in design of water adduction, enabling installation of energy conversion machines where before there was an outlet valve. Moreover, it is necessary to design the installation of hydraulic machines and assembly of power conversion equipment, a living engine, a hydraulic structure that receives the water after its passage through hydraulic machine and then route the water to the riverbed.</p>
+<p>The use of pumps as power turbines are already studied for several decades [24] [25] and is always considered as an alternative to electrification with lower costs [26] [27] . An idea that arose from the use of pumps as turbines for pressure recovery, still a subject of research [28] , and that follows awakening interest for being an unconventional solution [29] [30] .</p>
+<p class="E-Title1">5. The Proposed Hydro PV Hybrid System</p>
+<p>Val de Serra has an untapped potential of about 260 kW, hardly feasible with a conventional hydroelectric project but feasible with a design based on the use of pumps as turbines. The area flooded by the dam would suggest the use of PV modules to compose a hybrid system. The modules should be installed on floating device and its use contribute to reducing the evaporation of water from the reservoir. The hybrid system thus obtained is shown schematically in <a href="#f5" target="_self">Figure 5</a>.</p>
+<p>The hydro power plant to be installed will have three centrifugal pumps for operation at 16.2 m, 1125 m<sup>3</sup>/h and 880 rpm, used as power turbines [31] . The engine room will be located at the base of the dam. The hydraulic machines will be installed at the end of the pipe that currently leads to the Howell Bunger water valve (cited above). These pumps will be connected by a shaft to electrical machines, which will be connected to the grid.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x10.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Schematic representation of hydro PV hybrid system to be adopted in Val de Serra.</p>
+</div>
+<p>The PV module assembly will be installed on floating structures, as recently suggested by [32] [33] . They propose and test a system with polyethylene floating modules that occupy an area that would not be used in a better way and that also contribute reducing evaporation. This study has not yet detailed the floating structures, having been restricted so far to the question of economic feasibility.</p>
+<p>The reservoir has a relatively large area and full coverage would lead to a photovoltaic generator with an installed capacity of just over 100 MW. As the hydroelectric potential is much smaller, it was decided to consider in this study photovoltaic panels that add power comparable to the power of the proposed hydroelectric power plant. Thus, floating structures with installed capacity of 60 kW were considered in the simulations.</p>
+<p>In addition to these components, there is still a connection to the grid and the converter. The connection to the grid is used together with the consumer load to simulate the power supply to be inserted in the interconnected system. The converter operates only as an inverter, allowing current flow from the dc bus to the ac bus. Energy storage was not considered in this study. The converter operates with an efficiency of 92% with a expected lifespan of 10 years.</p>
+<p class="E-Title1">6. Simulations with Homer</p>
+<p>Homer [34] is a software for optimization of hybrid systems on micro and small scale. It was originally developed by National Renewable Energy Laboratory (NREL) and is available for universal access in its Legacy version. Homer simulates a system for power generation over the time period of 25 years at intervals of 60 minutes, presenting the results for a period of one year [35] [36] .</p>
+<p>PV modules with costs between US$ 4000/kW and USD$ 2000/kW were considered. The installation of floating structures, as suggested by [32] [33] , raise the cost by 30%. <a href="#f6" target="_self">Figure 6</a> shows the solar radiation incident</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x11.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Solar radiation incident on a horizontal plane in Val de Serra.</p>
+</div>
+<p>on a horizontal plane on the site of Val de Serra. The first figure shows the minimum, average and maximum monthly values. The second figure shows the hourly distribution of the values throughout the year.</p>
+<p>The operation of Val de Serra as a plant is a little different from a normal plant: height undergoes variation as the flow rate remains approximately constant. In fact, the flow also varies, as it consists in a reservoir being emptied, but this variation is small and was neglected. The hydroelectric plant will then have a flow of 1.25 m<sup>3</sup>/s and a variable height (<a href="#f4" target="_self">Figure 4</a>). Thus, for simulation purposes, it was considered a height of 29.6 m and flow rates were then calculated again. <a href="#f7" target="_self">Figure 7</a> then shows the values used for the flow rate.</p>
+<p>The data shown in <a href="#f6" target="_self">Figure 6</a> and <a href="#f7" target="_self">Figure 7</a> suggest a complementarity in time equal to 0.16 between hydropower and solar energy. The map presented by [37] suggests a much greater complementarity, between 0.8 and 1.0. This difference is due to the consumption profile of the population served with the water stored in the reservoir. This case study clearly shows the influence of a reservoir that has no duties with power generation on energetic complementarity.</p>
+<p>The design flow for sizing equipment was 1118.25 liters per second, the flow rate with 95% permanency, with equipment having efficiency of 80%. Implementation costs of the hydroelectric power plant were estimated at US$ 240,000. The life time was estimated at 25 years. The operation and maintenance as well as replacement costs of a plant equipped with pumps as turbines are approximately equal to those of a traditional plant.</p>
+<p>The installation of floating structures alter evaporation of the water stored in the reservoir. Evaluation of evaporation was performed by traditional methods [38] , with the search for time series data obtained by any instrument near the reservoir region. <a href="#f8" target="_self">Figure 8</a> shows the annual series of evaporation obtained for this work [39] . In the case of PV modules on 100% of the flooded area, values of <a href="#f8" target="_self">Figure 8</a> should be added cumulatively to the data of <a href="#f7" target="_self">Figure 7</a>. The results would be very similar to the values of <a href="#f7" target="_self">Figure 7</a>, with about only 3% more energy.</p>
+<p>Simulations with the system of <a href="#f5" target="_self">Figure 5</a>, with the PV modules assembled on floating structures installed over the flooded surface of the reservoir, were performed. A set of 2,160,000 simulations were performed, with 300 values for optimization variables and 1440 values for sensitivity variables, repeated five times. Approximately 35% of the simulations result in feasible solutions or unfeasible solutions for technical issues; the other solutions correspond to non-viable combinations of the variables considered in the simulations.</p>
+<p>The optimization variables considered were the following: 0 kW, 60 kW, 120 kW, 180 kW and 240 kW for PV array capacity; 0 kW, 60 kW, 120 kW, 180 kW and 240 kW for converter capacity and 0 kW, 60 kW, 120 kW, 180 kW, 240 kW and 300 kW for grid sales capacity.</p>
+<p>The sensitivity inputs were the following: 6000 kWh/d, 6500 kWh/d, 7000 kWh/d, 7500 kWh/d and 8000 kWh/d for AC Load; 0 kW, 30 kW, 60 kW or 90 kW for grid capacity; 0.0%, 2.0%, 4.0%, 6.0%, 8.0% and 10.0% for maximum annual capacity shortage.</p>
+<p>The sensitivity inputs also included USD$ 0.160/kWh, USD$ 0.240/kWh, USD$ 0.360/kWh for off peak energy price and USD$ 0.080/kWh, USD$ 0.120/kWh, USD$ 0.180/kWh for off peak energy sellback price, these two linked; 0.85, 1.00, 1.15, 1.30 for PV capital cost multiplier, for PV replacement cost multiplier and</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x12.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Monthly flow values for a height of 29.6 m equivalent to height variation (shown in Figure 4) for a flow of 1.25 m<sup>3</sup>/s.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x13.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Annual daily values of evaporation obtained for the location of the dam considered in this work [39] .</p>
+</div>
+<p>operation and maintenance cost multiplier, these three linked.</p>
+<p>All these calculations were repeated for the values of USD$ 2000.00/kW, USD$ 2500.00/kW, USD$ 3000.00/ kW, USD$ 3500.00/kW and USD$ 4000.00/kW of PV modules.</p>
+<p class="E-Title1">7. Results and Discussion</p>
+<p>First, the optimization results provided by Homer should be analyzed. The simulations for lower energy costs obtained from the grid and higher PV modules acquisition costs always result solely in solutions composed of hydroelectric power plant and connection to the grid. The results including photovoltaic modules appear only for PV modules at USD$ 2500.00/kW and USD$ 2000.00/kW and at USD$ 0.24/kWh and USD$ 0.32/kWh. In a strict point of view, the optimal solutions provided by Homer does not include PV modules.</p>
+<p><a href="#f9" target="_self">Figure 9</a> shows the optimization space for the PV capital cost multiplier as a function of the load, for the system of <a href="#f5" target="_self">Figure 5</a> without selling surplus energy to the grid, with power dispatch so there are no failures in the supply of energy to consumers, with PV modules acquired by USD$ 2500.00/kW. The results indicate two combinations of components: connection to the grid and hydroelectric plant with or without photovoltaic modules. The lowest demand and highest PV capital cost multiplier are met with hydro and grid while larger demands are met with hydro PV hybrid system, also connected to the grid.</p>
+<p><a href="#f10" target="_self">Figure 10</a> and <a href="#f11" target="_self">Figure 11</a> show the optimization space for the PV capital cost multiplier as a function of the load for the same system without selling surplus energy to the grid, with power dispatch so there are no failures in the supply of energy to consumers, with photovoltaic modules acquired by USD$ 2000.00/kW. <a href="#f12" target="_self">Figure 12</a> shows the optimization space for the photovoltaic modules capital cost multiplier as a function of the load for this same system with excess energy sold to the grid. Along these figures, the same combinations of components appear with a clear increase in the number of solutions including photovoltaic modules.</p>
+<p>The range of the photovoltaic capital cost multiplier values were chosen because the installation of floating structures represents an increase of 30% in costs (as suggested by [32] [33] ). The results point out a change in slope of the separation line between the two different solutions in the optimization space.</p>
+<p>It is obviously easier to reduce costs of floating structures than PV modules costs. This change in slope occurs close to the value of 30% corresponding to the increase in costs due to floating structures, suggesting a reduction in these structures costs can be decisive to include PV modules among the viable solutions.</p>
+<p>This change in slope is defined by the relationship between capital costs and operating and maintenance costs. This change clearly presses the cost of the PV modules downward so that the system can be feasible. The smaller the number of PV modules, the greater will be the need for purchasing energy from the grid.</p>
+<p><a href="#f13" target="_self">Figure 13</a> shows the system of <a href="#f12" target="_self">Figure 12</a> simulated with 8% failure in the power supply. In this case, the optimization space finally presents solutions including PV modules for the PV capital cost multiplier equal to 1.3. The solutions including PV modules appear nearest to the load of 7000 kWh/day, but the optimal solutions at the top of the chart show costs very close to the costs of the “non optimal” solutions, suggesting its feasibility.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x14.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. Optimization space for the system of Figure 5, with PV modules acquired by USD$ 2500/kW.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x15.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f10" id="f10"><span class="cs_fig_con">Figure 10</span></a>. Optimization space for the system of Figure 5, with PV modules acquired by US$ 2000/kW.</p>
+</div>
+<p>In a second stage of analysis, “not so optimal” but still possibly appropriate solutions can be found among the other results provided by Homer. <a href="#f14" target="_self">Figure 14</a> shows the results provided by Homer to 7000 kWh per day, PV capital cost multiplier equal to 1.3, USD$ 0.32 per kWh from the grid and a grid sale capacity of 90 kW, corresponding to the PV capital costs equal to, from top to bottom, USD$ 2000/kW, USD$ 2500/kW, USD$ 3000/ kW, USD$ 3500/kW and USD$ 4000/kW.</p>
+<p>Solutions in the second lines in all five excerpts from Homer results screen, shown in <a href="#f14" target="_self">Figure 14</a>, indicate a combination of hydroelectric power plant of 227 kW and a photovoltaic generator with 60 kW. These solutions showed cost of energy with values ranging between USD$ 0.080/kWh and USD$ 0.090/kWh with a renewable fraction equal to 0.84.</p>
+<p><a href="#f15" target="_self">Figure 15</a> shows initial costs, above, and cost of energy, below, as a function of PV capital cost for this system with 227 kW hydropower and 60 kW photovoltaic. Below, there is curves for power acquired from the grid at USD$ 0.32/kWh and USD$ 0.16/kWh. For power purchased from the grid at USD$ 0.16/kWh and PV modules at USD$ 3000/kW, closer to actual values, the initial cost will be USD$ 492,444 (or USD$ 1715.83/kW)</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x16.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f11" id="f11"><span class="cs_fig_con">Figure 11</span></a>. Optimization space for the system of Figure 5, with PV modules acquired by USD$ 2000/kW.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x17.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f12" id="f12"><span class="cs_fig_con">Figure 12</span></a>. Optimization space for the system of Figure 5, with PV modules acquired by USD$ 2000/kW, with excess energy sold to the grid.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x18.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f13" id="f13"><span class="cs_fig_con">Figure 13</span></a>. Optimization space for the system of Figure 5, with PV modules acquired by USD$ 2000/kW, with excess energy sold to the grid, with 8% failure in the power supply.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x19.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x20.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x21.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x22.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x23.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f14" id="f14"><span class="cs_fig_con">Figure 14</span></a>. Results provided by Homer corresponding to the PV capital costs equal to, from top to bottom, USD$ 2000/kW, USD$ 2500/kW, USD$ 3000/kW, USD$ 3500/kW and USD$ 4000/kW.</p>
+</div>
+<p>and the cost of energy will be USD$ 0.059/kWh.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/6-1770159x24.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f15" id="f15"><span class="cs_fig_con">Figure 15</span></a>. Initial costs of the system, above, and cost of energy, below, for a system with 227 kW hydropower and 60 kW photovoltaic as a function of PV capital cost. Below, there is curves for power from the grid at USD$ 0.32/kWh and USD$ 0.16/kWh.</p>
+</div>
+<p class="E-Title1">8. Conclusions</p>
+<p>This paper presented a pre feasibility study of a hydro PV hybrid system to be installed at the dam of Val de Serra, a dam for water supply in southern Brazil, aiming to identify conditions related to the components of PV generator for which the hybrid system becomes feasible. This paper considered the installation of PV modules on floating structures, but small, without influence on the evaporation of water from the reservoir or the amount of energy available.</p>
+<p>The study was performed with the software Homer and results in a more conservative point of view indicated that it is not feasible to install the PV modules. However, an analysis of the “non optimal” solutions provided by Homer can identify a configuration that would present a cost slightly higher than the cost of only hydroelectric plant.</p>
+<p>For this “non optimal” solution, for power purchased from the grid at USD$ 0.16/kWh and PV modules at USD$ 3000/kW, closer to actual values, the initial cost will be USD$ 492,444 (or USD$ 1715.83/kW) and the cost of energy will be USD$ 0.059/kWh. This solution was considered acceptable and it is the final outcome of this study.</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>The authors wish to thank the institutions involved for their support to research activities related to renewable energy, which resulted, among other things, in this article. Specifically, the third author would like to thank the partial financial support provided by CNPq through a support grant for research productivity.</p>
+<p class="E-Title1">NOTES</p>
+<p><sup>*</sup>Corresponding author.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577278' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Muhida, R., Mostavan, A., Sujatmiko, W., Park, M. and Matsuura, K. (2001) The 10 Years Operation of a PV Micro Hydro Hybrid System in Taratak, Indonesia. Solar Energy Materials & Solar Cells, 67, 621-627. 
+<br/>http://dx.doi.org/10.1016/S0927-0248(00)00334-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577279' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Bekele, G. and Tadesse, G. (2012) Feasibility Study of Small Hydro PV Wind Hybrid System for Off Grid Rural Electrification in Ethiopia. Applied Energy, 97, 5-15. <br/>http://dx.doi.org/10.1016/j.apenergy.2011.11.059
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577280' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Nfah, E.M. and Ngundam, J.M. (2009) Feasibility of Pico Hydro and Photovoltaic Hybrid Power Systems for Remote Villages in Cameroon. Renewable Energy, 34, 1445-1450. <br/>http://dx.doi.org/10.1016/j.renene.2008.10.019
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577281' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Kenfack, J., Neirac, F.P., Tatietse, T.T., Mayer, D., Fogue, M. and Lejeune, E. (2009) Micro Hydro PV Hybrid System: Sizing a Small Hydro PV Hybrid System for Rural Electrification in Developing Countries. Renewable Energy, 34, 2259-2263. <br/>http://dx.doi.org/10.1016/j.renene.2008.12.038
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577282' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Maher, P., Smith, N.P.A. and Williams, A.A. (2003) Assessment of Pico Hydro as an Option for Off Grid Electrification in Kenya. Renewable Energy, 28, 1357-1369. <br/>http://dx.doi.org/10.1016/S0960-1481(02)00216-1
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577283' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Santarelli, M. and Macagno, S. (2004) Hydrogen as an Energy Carrier in Stand alone Applications Based on PV and PV Micro Hydro Systems. Energy, 29, 1159-1182. <br/>http://dx.doi.org/10.1016/j.energy.2004.02.023
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577284' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Margeta, J. and Glasnovic, Z. (2011) Exploitation of Temporary Water Flow by Hybrid PV Hydroelectric Plant. Renewable Energy, 36, 2268-2277. <br/>http://dx.doi.org/10.1016/j.renene.2011.01.001
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577285' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Beluco, A., Souza, P.K. and Krenzinger, A. (2008) PV Hydro Hybrid Systems. IEEE Latin America Transactions, 6, 626-631. <br/>http://dx.doi.org/10.1109/TLA.2008.4917434
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577286' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Beluco, A., Souza, P.K. and Krenzinger, A. (2012) A Method to Evaluate the Effect of Complementarity in Time between Hydro and Solar Energy on the Performance of Hybrid Hydro PV Generating Plants. Renewable Energy, 45, 24-30. <br/>http://dx.doi.org/10.1016/j.renene.2012.01.096
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577287' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Beluco, A., Souza, P.K. and Krenzinger, A. (2013) Influence of Different Degrees of Complementarity of Solar and Hydro Availability on the Performance of Hybrid Hydro PV Generating Plants. Energy and Power Engineering, 5, 332-342. <br/>http://dx.doi.org/10.4236/epe.2013.54034
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577288' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Ehnberg, S.G.J. and Bollen, M.H.J. (2005) Reliability of a Small Power System Using Solar Power and Hydro. Electric Power Systems Research, 74, 119-127. <br/>http://dx.doi.org/10.1016/j.epsr.2004.09.009
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577289' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Margeta, J. and Glasnovic, Z. (2010) Feasibility of the Green Energy Production by Hybrid Solar + Hydro Power System in Europe and Similar Climate Areas. Renewable and Sustainable Energy Reviews, 14, 1580-1590.
+<br/>http://dx.doi.org/10.1016/j.rser.2010.01.019
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577290' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Denholm, P. and Margolis, R.M. (2007) Evaluating the Limits of Solar Photovoltaics in Traditional Electric Power Systems. Energy Policy, 35, 2852-2861. <br/>http://dx.doi.org/10.1016/j.enpol.2006.10.014
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577291' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Hoffmann, W. (2006) PV Solar Electricity Industry: Market Growth and Perspective. Solar Energy Materials & Solar Cells, 90, 3285-3311. <br/>http://dx.doi.org/10.1016/j.solmat.2005.09.022
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577292' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Glasnovic, Z., Rogosic, M. and Margeta, J. (2011) A Model for Optimal Sizing of Solar Thermal Hydroelectric Power Plant. Solar Energy, 85, 794-807. <br/>http://dx.doi.org/10.1016/j.solener.2011.01.015
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577293' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Glasnovic, Z. and Margeta, J. (2011) Vision of Total Renewable Electricity Scenario. Renewable and Sustainable Energy Reviews, 15, 1873-1884. <br/>http://dx.doi.org/10.1016/j.rser.2010.12.016
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577294' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        https://goo.gl/maps/E9VJS
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577295' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        https://goo.gl/maps/mj3bX
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577296' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        https://goo.gl/maps/pOQC3
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577297' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        https://goo.gl/maps/lNVlP
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577298' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        https://goo.gl/maps/HdHoC
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577299' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        https://goo.gl/maps/0yh8G
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577300' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        AB Valves GmbH (2014) Howell Bunger Valves.
+<br/>http://abvalves.com/ab-valves/images/PDF/Automatic_Control_Valves/10._HJET_-_Text_new_cover.pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577301' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        Stelzer, R.S. and Walters, R.N. (1977) Estimating Reversible Pump Turbine Characteristics. U.S. Department of Interior, Bureau of Reclamation, Denver.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577302' target='_blank'>25</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref25" id="ref25"></a>
+                                        Derakhshan, S. and Nourbakhsh, A. (2008) Experimental Study of Characteristic Curves of Centrifugal Pumps Working as Turbines in Different Specific Speeds. Experimental Thermal and Fluid Science, 32, 800-807.
+<br/>http://dx.doi.org/10.1016/j.expthermflusci.2007.10.004
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577303' target='_blank'>26</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref26" id="ref26"></a>
+                                        Williams, A.A. (1996) Pumps as Turbines for Low Cost micro Hydro Power. World Renewable Energy Congress, 9, 1227-1234. <br/>http://dx.doi.org/10.1016/0960-1481(96)88498-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577304' target='_blank'>27</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref27" id="ref27"></a>
+                                        Arriaga, M. (2010) Pump as Turbine, a Pico Hydro Alternative in Lao People’s Democratic Republic. Renewable Energy, 35, 1109-1115. <br/>http://dx.doi.org/10.1016/j.renene.2009.08.022
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577305' target='_blank'>28</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref28" id="ref28"></a>
+                                        Antwerpen, H.J. and Greyvenstein, G.P. (2005) Use of Turbines for Simultaneous Pressure Regulation and Recovery in Secondary Cooling Water Systems in Deep Mines. Energy Conversion and Management, 46, 563-575.
+<br/>http://dx.doi.org/10.1016/j.enconman.2004.04.006
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577306' target='_blank'>29</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref29" id="ref29"></a>
+                                        Varun, N.H., Kumar, A. and Yadav, S. (2011) Experimental Investigation of Centrifugal Pump Working as Turbine for Small Hydropower Systems. Energy Science and Technology, 1, 79-86.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577307' target='_blank'>30</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref30" id="ref30"></a>
+                                        Ramos, H. and Borga, A. (1999) Pumps as Turbines: An Unconventional Solution to Energy Production. Urban Water, 1, 261-263. <br/>http://dx.doi.org/10.1016/S1462-0758(00)00016-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577308' target='_blank'>31</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref31" id="ref31"></a>
+                                        Teixeira, L.E. (2014) Hydroelectric Power Generation in Water Supply dams. Master Dissertation, Programa de Pós Gradua&ccedil;&atilde;o em Recursos Hídricos e Saneamento Ambiental, Instituto de Pesquisas Hidr&aacute;ulicas, Universidade Federal do Rio Grande do Sul. (In Portuguese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577309' target='_blank'>32</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref32" id="ref32"></a>
+                                        Gisbert, C.M.F., Gonz&aacute;lvez, J.J.F., Santafé, M.R., Gisbert, P.S.F., Romero, F.J.S. and Soler, J.B.T. (2013) A New Photovoltaic Floating Cover System for Water Reservoirs. Renewable Energy, 60, 63-70.
+<br/>http://dx.doi.org/10.1016/j.renene.2013.04.007
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577310' target='_blank'>33</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref33" id="ref33"></a>
+                                        Santafé, M.R., Gsbert, P.S.F., Romero, F.J.S., Soler, J.B.T., Gonz&aacute;lvez, J.J.F. and Gisbert, C.M.F. (2014) Implementation of a Photovoltaic Floating Cover for Irrigation Reservoirs. Journal of Cleaner Production, 66, 568-570.
+<br/>http://dx.doi.org/10.1016/j.jclepro.2013.11.006
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577311' target='_blank'>34</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref34" id="ref34"></a>
+                                        HomerEnergy, L.L.C. (2014) Software HOMER, Version 2.68 Beta; the Micropower Opyimization Model.
+www.homerenergy.com
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577312' target='_blank'>35</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref35" id="ref35"></a>
+                                        Lilienthal, P.D., Lambert, T.W. and Gilman, P. (2004) Computer Modeling of Renewable Power Systems. In: Cleveland, C.J., Ed., Encyclopedia of Energy, Elsevier, Amsterdan, 633-647.
+<br/>http://dx.doi.org/10.1016/b0-12-176480-x/00522-2
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577313' target='_blank'>36</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref36" id="ref36"></a>
+                                        Lambert, T.W., Gilman, P. and Lilienthal, P.D. (2005) Micropower System Modeling with Homer. In: Farret, F.A. and Sim&otilde;es, M.G., Eds., Integration of Alternative Sources of Energy, John Wiley & Sons, Hoboken, 379-418.
+<br/>http://dx.doi.org/10.1002/0471755621.ch15
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577314' target='_blank'>37</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref37" id="ref37"></a>
+                                        Beluco, A., Souza, P.K. and Krenzinger, A. (2008) A Dimensionless Index Evaluating the Time Complementarity between Solar and Hydraulic Energies. Renewable Energy, 33, 2157-2165.
+<br/>http://dx.doi.org/10.1016/j.renene.2008.01.019
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577315' target='_blank'>38</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref38" id="ref38"></a>
+                                        Brutsaert, W. (2005) Hydrology, an Introduction. Cambridge University Press, Cambridge, 618 p.
+<br/>http://dx.doi.org/10.1017/CBO9780511808470
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577316' target='_blank'>39</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref39" id="ref39"></a>
+                                        Ag&ecirc;ncia Nacional de &Aacute;guas (ANA) (2014) HidroWeb. www.hidroweb.ana.gov.br
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2433" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2433" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2433" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2433" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2433"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2433"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2433" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=2433" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=2433" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=2433" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=2433" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=2433"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=2433"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=2433" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=2433&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=2433&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=2433" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=2433" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=2433" target="_blank">JPEE
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=2433" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=2433" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=2433" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=2433" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=2433" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=2433" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=2433" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jpee.2015.39006" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60039 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +2433 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +2433 +"&paperid=" +60039 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

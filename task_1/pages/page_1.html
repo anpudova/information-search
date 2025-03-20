@@ -1,0 +1,1482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Some Elucidations of the Theory on Revised Quantum Electrodynamics
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JMP_2015092816222046.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60001" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60001.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60001" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60001" />
+<meta property="og:title" content="Some Elucidations of the Theory on Revised Quantum Electrodynamics" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JMP2024060314222254.png" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JMP2024060314222254.png" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Some Elucidations of the Theory on Revised Quantum Electrodynamics" />
+<meta name="keywords" content="Quantum Electrodynamics,Zero Point Energy,Standard Model and Beyond" />
+<meta name="description" content="Discover the groundbreaking theory of revised quantum electrodynamics (RQED) in a concise format. Explore key topics like electromagnetic field equations, Zero Point Energy (ZPE), quantization, particle models, individual photons, and experimental evidence." />
+<meta name="citation_journal_title" content="Journal of Modern Physics" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Bo Lehnert" />
+<meta name="citation_author" content="Bo Lehnert" />
+<meta name="citation_title" content="Some Elucidations of the Theory on Revised Quantum Electrodynamics" />
+<meta name="citation_volume" content="6" />
+<meta name="citation_date" content="2015-09-10" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jmp.2015.611171" />
+<meta name="citation_issnPrint" content="2153-1196" />
+<meta name="citation_issnOnline" content="2153-120X" />
+<meta name="citation_abstract" content="A theory elaborated by the author on revised quantum electrodynamics (RQED) is elucidated in a condensed form on special important points. The latter concerns the basic electromagnetic field equations in a vacuum state, the connection of this state with the Zero Point Energy (ZPE), the procedure of quantization, steady states of particle models, the concept of the individual photon, and examples on experimental support of the theory." />
+<meta name="citation_publication_date" content="2015/9/10" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JMP_2015092816222046.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JMP_2015092816222046.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60001" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60001" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60001" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60001.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60001.xml" />
+<meta name="citation_issue" content="11" />
+<meta name="citation_online_date" content="2015/9/10" />
+<meta name="citation_firstpage" content="1695" />
+<meta name="citation_lastpage" content="1700" />
+
+<meta name="dc.title" content="Some Elucidations of the Theory on Revised Quantum Electrodynamics" />
+
+<meta name="dc.creator" content="Bo Lehnert" /><meta name="dcterms.issued" content="2015-09-10" />
+<meta name="dc.description" content="A theory elaborated by the author on revised quantum electrodynamics (RQED) is elucidated in a condensed form on special important points. The latter concerns the basic electromagnetic field equations in a vacuum state, the connection of this state with the Zero Point Energy (ZPE), the procedure of quantization, steady states of particle models, the concept of the individual photon, and examples on experimental support of the theory." />
+<meta name="dc.source" content="Journal of Modern Physics" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-10" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jmp.2015.611171" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-10" />
+<meta name="prism.issnPrint" content="2153-1196" />
+<meta name="prism.issnOnline" content="2153-120X" />
+<meta name="prism.publicationName" content="Journal of Modern Physics" />
+<meta name="prism.publicationDate" content="2015-09-10" />
+<meta name="prism.volume" content="6" />
+<meta name="prism.number" content="11" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="1695" />
+<meta name="prism.doi" content="10.4236/jmp.2015.611171" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60001" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAk0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTEwZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAVxPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1CbysrTGVobmVydCZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkJvICBMZWhuZXJ0PC9hPjxzdXA+Kjwvc3VwPiBkAgIPZBYCZg8WAh8EBeQBPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1BbGZ2JWMzJWE5bitMYWJvcmF0b3J5JTJjK1JveWFsK0luc3RpdHV0ZStvZitUZWNobm9sb2d5JTJjK1N0b2NraG9sbSUyYytTd2VkZW4mc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5BbGZ2w6luIExhYm9yYXRvcnksIFJveWFsIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5LCBTdG9ja2hvbG0sIFN3ZWRlbjwvYT4uPGJyIC8+ZAIFDxYCHwQFBjPCoDMyOGQCBg8WAh8EBQY0wqA0ODRkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQF9QI8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVF1YW50dW0rRWxlY3Ryb2R5bmFtaWNzJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+UXVhbnR1bSBFbGVjdHJvZHluYW1pY3M8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStaZXJvK1BvaW50K0VuZXJneSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBaZXJvIFBvaW50IEVuZXJneTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1N0YW5kYXJkK01vZGVsK2FuZCtCZXlvbmQmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gU3RhbmRhcmQgTW9kZWwgYW5kIEJleW9uZDwvYT4gZAIKDxYCHwQFjQJMZWhuZXJ0LCBCLiAgICgyMDE1KSBTb21lIEVsdWNpZGF0aW9ucyBvZiB0aGUgVGhlb3J5IG9uIFJldmlzZWQgUXVhbnR1bSBFbGVjdHJvZHluYW1pY3MuIDxpPkpvdXJuYWwgb2YgTW9kZXJuIFBoeXNpY3M8L2k+LCA8Yj42PC9iPiwgMTY5NS0xNzAwLiBkb2k6IDxhIGhyZWY9J2h0dHA6Ly9keC5kb2kub3JnLzEwLjQyMzYvam1wLjIwMTUuNjExMTcxJyB0YXJnZXQ9J19ibGFuaycgb25jbGljaz0nU2V0TnVtKDYwMDAxKSc+MTAuNDIzNi9qbXAuMjAxNS42MTExNzE8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50AhMWJmYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjM4OCcgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATFeTGVobmVydCwgQi4gKDIwMTMpIFJldmlzZWQgUXVhbnR1bSBFbGVjdHJvZHluYW1pY3MuIE5vdmEgU2NpZW5jZSBQdWJsaWNhdGlvbnMsIEluYy4sIE5ldyBZb3JrLmQCAQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2Mzg5JyB0YXJnZXQ9J19ibGFuayc+MjwvYT5dATIBMltTY2hpZmYsIEwuICgxOTQ5KSBRdWFudHVtIE1lY2hhbmljcy4gTWNHcmF3LUhpbGwgQm9vayBDb21wLiwgSW5jLiwgTmV3IFlvcmstVG9yb250by1Mb25kb24uZAICD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzYzOTAnIHRhcmdldD0nX2JsYW5rJz4zPC9hPl0BMwEzalF1aWdnLCBDLiAoMjAwOCkgU2NpZW50aWZpYyBBbWVyaWNhbiwgMjk4LCA0Ni01My4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDM4L3NjaWVudGlmaWNhbWVyaWNhbjAyMDgtNDZkAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjM5MScgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATRuQWJib3R0LCBMLiAoMTk4OCkgU2NpZW50aWZpYyBBbWVyaWNhbiwgMjU4LCAxMDYtMTEzLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMzgvc2NpZW50aWZpY2FtZXJpY2FuMDU4OC0xMDZkAgQPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjM5MicgdGFyZ2V0PSdfYmxhbmsnPjU8L2E+XQE1ATU6Q2FzaW1pciwgSC5CLkcuICgxOTQ4KSBQcm9jLiBOZWQuIEFrYWQuIFdldC4sIDUxLCA3OTMtNzk1LmQCBQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2MzkzJyB0YXJnZXQ9J19ibGFuayc+NjwvYT5dATYBNmhMYW1vcmVhdXgsIFMuSy4gKDE5OTcpIFBoeXNpY2FsIFJldmlldyBMZXR0ZXJzLCA3OCwgNS04LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDMvUGh5c1JldkxldHQuNzguNWQCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2Mzk0JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN2BUZXJsZXRza2lpLCBZdS5ELiAoMTk3MSkgU3RhdGlzdGljYWwgUGh5c2ljcy4gTm9ydGgtSG9sbGFuZCBQdWJsaXNoaW5nIENvbXAuLCBBbXN0ZXJkYW0sIExvbmRvbi5kAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjM5NScgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4ATiZAU1pbG9ubmksIFAuVy4gKDE5OTQpIFRoZSBRdWFudHVtIFZhY3V1bS4gQW1lcmljYW4gUHJlc3MgSW5jLiwgSGFyY291cnQgQnJhY2UgYW5kIENvbXBhbnksIEJvc3RvbiwgU2FuIERpZWdvLCBOZXcgWW9yaywgTG9uZG9uLCBTeWRuZXksIFRva3lvIGFuZCBUb3JvbnRvLmQCCA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2Mzk2JyB0YXJnZXQ9J19ibGFuayc+OTwvYT5dATkBOVZMb3Vkb24sIFIuICgyMDAwKSBUaGUgUXVhbnR1bSBUaGVvcnkgb2YgTGlnaHQuIFRoaXJkIEVkaXRpb24sIE94Zm9yZCBVbml2ZXJzaXR5IFByZXNzLmQCCQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2Mzk3JyB0YXJnZXQ9J19ibGFuayc+MTA8L2E+XQIxMAIxMHhSaWVzcywgQS5HLiBhbmQgVHVybmVyLCBNLlMuICgyMDA0KSBTY2llbnRpZmljIEFtZXJpY2FuLCA1MC01NS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDM4L3NjaWVudGlmaWNhbWVyaWNhbjAyMDQtNjJkAgoPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjM5OCcgdGFyZ2V0PSdfYmxhbmsnPjExPC9hPl0CMTECMTFkSGVpdGxlciwgVy4gKDE5NTQpIFRoZSBRdWFudHVtIFRoZW9yeSBvZiBSYWRpYXRpb24uIFRoaXJkIEVkaXRpb24sIENsYXJlbmRvbiBQcmVzcywgT3hmb3JkLCA1NywgNDA5LmQCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2Mzk5JyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMmtMZWhuZXJ0LCBCLiAoMjAxMykgSm91cm5hbCBvZiBQbGFzbWEgUGh5c2ljcywgNzksIDMyNy0zMzQuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNy9zMDAyMjM3NzgxMjAwMTA1NWQCDA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDAwJyB0YXJnZXQ9J19ibGFuayc+MTM8L2E+XQIxMwIxM4UBTGVobmVydCwgQi4gKDIwMTQpIEpvdXJuYWwgb2YgRWxlY3Ryb21hZ25ldGljIEFuYWx5c2lzIGFuZCBBcHBsaWNhdGlvbnMsIDYsIDMxOS0zMjcuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qZW1hYS4yMDE0LjYxMDAzMmQCDQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDAxJyB0YXJnZXQ9J19ibGFuayc+MTQ8L2E+XQIxNAIxNGdMZWhuZXJ0LCBCLiAoMjAxNSkgSm91cm5hbCBvZiBNb2Rlcm4gUGh5c2ljcywgNiwgNDQ4LTQ1Mi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2ptcC4yMDE1LjY0MDQ4ZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0MDInIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE1MUxlaG5lcnQsIEIuICgyMDEzKSBQcm9ncmVzcyBpbiBQaHlzaWNzLCAzLCAzMS0zMi5kAg8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjQwMycgdGFyZ2V0PSdfYmxhbmsnPjE2PC9hPl0CMTYCMTYwTGVobmVydCwgQi4gKDIwMTQpIFByb2dyZXNzIGluIFBoeXNpY3MsIDEwLCA1LTcuZAIQD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0MDQnIHRhcmdldD0nX2JsYW5rJz4xNzwvYT5dAjE3AjE3aUFhZCwgRy4sIGV0IGFsLiAoMjAxMikgUGh5c2ljcyBMZXR0ZXJzLCBCNzE2LCAxLTI5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5waHlzbGV0Yi4yMDEyLjA4LjAyMGQCEQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDA1JyB0YXJnZXQ9J19ibGFuayc+MTg8L2E+XQIxOAIxOHFDaGF0cmNoeWFuLCBTLiwgZXQgYWwuICgyMDEyKSBQaHlzaWNzIExldHRlcnMsIEI3MTYsIDMwLTYxLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5waHlzbGV0Yi4yMDEyLjA4LjAyMWQCEg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDA2JyB0YXJnZXQ9J19ibGFuayc+MTk8L2E+XQIxOQIxOWNIaWdncywgUC5XLiAoMTk2NikgUGh5c2ljYWwgUmV2aWV3LCAxNTQsIDExNTYtMTE2OC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTAzL3BoeXNyZXYuMTQ1LjExNTZkAggPZBYEAgcPFgIfAwUNRGlzUGxheTpOb25lO2QCCA8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAILD2QWAmYPFgIeB1Zpc2libGVnZAIMD2QWAgIBD2QWAgIBD2QWAgIDDxAPFgYeDURhdGFUZXh0RmllbGQFCVNob3J0TmFtZR4ORGF0YVZhbHVlRmllbGQFCUpvdXJuYWxJRB4LXyFEYXRhQm91bmRnZBAVgAIOU2VsZWN0IEpvdXJuYWwCQUEDQUFEA0FBUgZBQVNvY2kEQUFTVANBQkIDQUJDBEFCQ1IEQUNFUwNBQ1MDQUNUAkFEA0FEUgJBRQNBRVIDQUhTA0FJRANBaU0DQUlUBEFKQUMDQUpDBEFKQ0MEQUpDTQVBSklCTQRBSk1CBEFKT1IEQUpQUwVBTEFNVANBTEMDQUxTAkFNA0FNSQRBTVBDA0FOUANBUEQDQVBFA0FQTQNBUlMFQVJTY2kCQVMDQVNNA0JMUgJDQwJDRQdDZWxsQmlvBkNoblN0ZAJDTQNDTUICQ04EQ1JDTQJDUwRDU1RBA0NVUwVDV0VFRQlEZXRlY3Rpb24ERU1BRQNFTkcDRVBFBEVUU04ERk1BUgNGTlMDR0VQA0dJUwJHTQhHcmFwaGVuZQNHU0MGSGVhbHRoAklCA0lDQQNJSU0ESUpBQQZJSkFNU0MFSUpDQ0UESUpDTQVJSkNOUwNJSkcFSUpJRFMESUpJUwZJSk1OVEEISUpNUENFUk8ESUpOTQRJSk9DBklKT0hOUwtJbmZyYU1hdGljcwVKQUNFTgRKQU1QBUpBU01JBEpCQlMFSkJDUFIFSkJpU0UDSkJNBEpCTkIESkJQQwNKQ0MFSkNEU0EESkNQVANKQ1QFSkRBSVADSkRNBEpFQVMFSkVDVEMFSkVNQUEDSkVQBUpGQ01WBEpGUk0ESkdJUwZKSEVQR0MFSkhSU1MGSklCVFZBBUpJTFNBA0pJUwNKTUYGSk1HQk5EBUpNTUNFA0pNUARKUEVFBEpRSVMESlNCUwRKU0VBBkpTRU1BVARKU0lQA0pTUwRKU1NNA0pTVANKVFIESlRTVARKVFRzBUpXQVJQA0xDRQJNQwJNRQJNSQNNTUUFTU5TTVMDTVBTAk1SA01SQwNNUkkDTVNBBE1TQ0UETkpHQwJOTQJOUgJOUwVPQUxpYgZPQUxpYkoET0RFTQNPSkEET0pBQgZPSkFjY3QGT0pBbmVzBE9KQVAFT0pBcG8GT0pBcHBTBU9KQVByBE9KQVMET0pCRAdPSkJJUEhZBE9KQk0DT0pDBE9K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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=nbhKwR1Oxldo88IqKSPXdjHZtvJJs8lUIgW_Px6JXqsU14OEPTlsfYc1iFwkKjKQFuU0A5B023C_t5MMw-na4wjNK5fA91XK5AnyAlxXUms1&amp;t=637461269481343508" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=pGcs6pxlC35gRrkU-shVxpWZoCnFV8u84WJcSmiMxzu6Ck0U5QE3O35G5nj5IpjUnOLUbKfyeJAPgY7NM9wyaeXbLGnLaq6HMCjKil7Fa01s2Wj_tz_O7lREhqN2werxnA_Essq6sQ-jYGcvTtSwHlt3-Ow6qYGLVobZINxBRUIQLDoT0WA7vd3tQitIrOyo0&amp;t=2fe674eb" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+
+
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;UserControl_search_common_btnSearch2&#39;)">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=172" title="Journal of Modern Physics">
+                    Journal of Modern Physics</a> &gt; <a href="home?issueid=6960#60001">Vol.6 No.11, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Some Elucidations of the Theory on Revised Quantum Electrodynamics <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Bo++Lehnert&searchfield=authors&page=1' target='_blank'>Bo  Lehnert</a><sup>*</sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Alfv%c3%a9n+Laboratory%2c+Royal+Institute+of+Technology%2c+Stockholm%2c+Sweden&searchfield=affs&page=1' target='_blank'>Alfvén Laboratory, Royal Institute of Technology, Stockholm, Sweden</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jmp.2015.611171"
+                    target="_blank" onclick='SetNum(60001)'>10.4236/jmp.2015.611171</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JMP_2015092816222046.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60001)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60001' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60001.xml' target='_blank' onclick='SetNum(60001)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    3 328</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    4 484</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60001&JournalID=172' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">A theory elaborated by the author on revised quantum electrodynamics (RQED) is elucidated in a condensed form on special important points. The latter concerns the basic electromagnetic field equations in a vacuum state, the connection of this state with the Zero Point Energy (ZPE), the procedure of quantization, steady states of particle models, the concept of the individual photon, and examples on experimental support of the theory.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Quantum+Electrodynamics&searchfield=keyword&page=1' target='_blank'>Quantum Electrodynamics</a>, <a href='articles?searchcode=+Zero+Point+Energy&searchfield=keyword&page=1' target='_blank'> Zero Point Energy</a>, <a href='articles?searchcode=+Standard+Model+and+Beyond&searchfield=keyword&page=1' target='_blank'> Standard Model and Beyond</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Lehnert, B.   (2015) Some Elucidations of the Theory on Revised Quantum Electrodynamics. <i>Journal of Modern Physics</i>, <b>6</b>, 1695-1700. doi: <a href='http://dx.doi.org/10.4236/jmp.2015.611171' target='_blank' onclick='SetNum(60001)'>10.4236/jmp.2015.611171</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>A revised quantum electrodynamic theory (RQED) on the vacuum state has earlier been elaborated by the author, as described in a monograph [1] and in a number of associated publications. The present paper has the purpose of being complementary to this work, and to elucidate it in a condensed form on special important points being characteristic of and only available by RQED.</p>
+<p class="E-Title1">2. Points of Consideration</p>
+<p class="E-Title2">2.1. The Conventional Electromagnetic Field Equations</p>
+<p>The conventional electromagnetic field equations have been used as a guideline and basis for proper inter- pretation, also of a quantum electrodynamical approach as stated by Schiff [2] among others. There are then strong restrictions imposed through the symmetry of the electric and magnetic field strengths E and B due to a vanishing electric field divergence divE, in the Standard Model of a vacuum state of empty space. These restrictions are hardly removed by an added quantization process, as also being supported in the following Section 2.4 of this paper. Thereby the corresponding solutions lead to models of particles and wave packets which have no integrated rest mass, electric charge, or angular momentum (spin) [1] . Even in cases where there are local contributions to a spin, its total integrated value still vanishes, such as in a model of the individual photon. These statements are also in accordance with that of Quigg [3] which implies that the symmetry of the conventional field equations does not permit masses for leptons and quarks.</p>
+<p class="E-Title2">2.2. The Zero Point Energy</p>
+<p>The vacuum is however not a state of empty space. The solutions of the harmonic oscillator do not only lead to the Planck electromagnetic wave energy, but also to a lowest nonzero energy of one-half quantum per state, i.e. the Zero Point Energy (ZPE). The vacuum state therefore includes fluctuations part of which also carry electric charges, as pointed out by Abbott [4] . An example of these fluctuations has been given by Casimir [5] who predicted that two metal plates will attract each other when being sufficiently close together. This Casimir force was first confirmed experimentally by Lamoreaux [6] . It reveals the existence of a real macroscopic pressure and energy density originating from the photon-like fluctuations of the ZPE.</p>
+<p>The low-frequency part of the ZPE fluctuations has thus to be accepted as an experimental fact, but there exists a problem with their high-frequency part. As demonstrated by Terletskii [7] , Milonni [8] , and Loudon [9] among others, conventional theory results in a spectrum having infinite total (integrated) energy density. This is an unacceptable result, both from the physical point of view and due to the fact that the underlying analysis is underdetermined, i.e. in not having defined a total energy of the system, and in treating the infinite number of included states with the same statistical probability, even being equal to the unacceptable value of unity. Consequently, several investigators such as Riess and Turner [10] and Heitler [11] have thrown doubts upon this approach.</p>
+<p>To overcome these difficulties, the author [12] - [14] has proposed the ensemble of ZPE modes to be subject to a separate treatment, also being applicable at the temperature T = 0. Such a treatment has to be self-consistent, in having a given and finite total energy density, and being conducted in the standard way of an ensemble of ZPE photons of frequency<img src="//html.scirp.org/file/24-7502381x5.png" class="200" />, populating the available states in statistical equilibrium with a probability not being equal to unity but to a Boltzmann factor<img src="//html.scirp.org/file/24-7502381x6.png" class="200" />. Here <img src="//html.scirp.org/file/24-7502381x7.png" class="200" /> is the average and finite member energy of the ensemble. This leads to a physically acceptable and finite total pressure of the ZPE “photons”.</p>
+<p class="E-Title2">2.3. The Extended Electromagnetic Field Equations</p>
+<p>The restrictions and shortcomings of the conventional field equations governing the vacuum state can be eliminated by including the ZPE effects into the theoretical foundation, thereby breaking the symmetry between E and B, and introducing an extra source term. To preserve the Lorentz and gauge invariance at the same time, this is done by including a four-current <img src="//html.scirp.org/file/24-7502381x8.png" class="200" /> in the vacuum, with j as the corresponding three-space current density and <img src="//html.scirp.org/file/24-7502381x9.png" class="100" /> as the related electric charge density. This form of J is reconcilable with the corres- ponding standard form of Maxwell's equations with sources due to a current density j and a charge density<img src="//html.scirp.org/file/24-7502381x10.png" class="200" />.</p>
+<p>Since J has to vanish when there is no charge density, the final form of the four-current density becomes [1]</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/24-7502381x11.png" /><span class="bracketMark">(1)</span></p>
+<p>where c is a velocity vector having a modulus equal to the velocity constant c of light. In three-space the extended electromagnetic field equations of the vacuum state then become</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/24-7502381x12.png" /><span class="bracketMark">(2)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/24-7502381x13.png" /><span class="bracketMark">(3)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/24-7502381x14.png" /><span class="bracketMark">(4)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/24-7502381x15.png" /><span class="bracketMark">(5)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/24-7502381x16.png" /><span class="bracketMark">(6)</span></p>
+<p>where <img src="//html.scirp.org/file/24-7502381x17.png" class="200" /> and <img src="//html.scirp.org/file/24-7502381x18.png" class="200" /> are the magnetic and electrostatic potentials. Here the first term of the right-hand side of Equation (2) and Equation (6) represent the new features of RQED. They introduce fundamental changes in the resulting analysis. These added effects disappear with the electric charge density, in what case we are back to the restricted and symmetric theory of Maxwell’s equations for an empty vacuum state.</p>
+<p>The nonzero electric field divergence of Equation (6) acts here somewhat like a “hidden” variable, removing the condition<img src="//html.scirp.org/file/24-7502381x19.png" class="200" />. This enhances the available degrees of freedom, thus making it possible to impose necessary quantum conditions of a self-consistent analysis. It may also be added that the hypothesis of a nonzero electric field divergence becomes conceptually acceptable even without the present ZPE interpretation. It has then to be observed that the total average electric charge of the universe appears to be zero.</p>
+<p>The solutions which come out of Equations (1)-(6) for models of particles and waves include nonzero integrated rest masses, net electric charges, and spin. There are thus configurations with nonzero local electric charge density which after spatial integration result both in nonzero and zero net electric charge, at the same time as both the local and integrated energy densities and corresponding masses become nonzero and finite.</p>
+<p class="E-Title2">2.4. Quantization</p>
+<p>To convert the present approach into a quantized electrodynamic theory, the quantum conditions could be included into the deductions already from the outset. Here we shall instead make a short-cut and simplification, by first determining the general solutions of the basic field equations, and then imposing relevant quantum conditions. This is at least justified by the fact that a quantization of the general electrodynamic field equations merely results into the same equations in which the potentials and currents are replaced by their expectation values as shown by Heitler [11] . Such a way in handling the quantization should therefore not be too far from the truth, e.g. by using the most probable trajectories and states in a first approximation. The final results of the theory are then obtained after imposing a number of quantum conditions, such as those concerning energy, magnetic moment, and spin.</p>
+<p>Here we finally notice that the conventional symmetric field equations for an empty vacuum space lead to imposed restrictions which therefore cannot be removed by quantization.</p>
+<p class="E-Title2">2.5. Steady States</p>
+<p>A characteristic feature of RQED, not being available from conventional theory on the vacuum, is the steady states obtained from Equations (1)-(6) in the case of no explicit time dependence. This leads to models for particles being at rest. In the case of spatially limited axisymmetric configurations, spherical coordinates are then introduced, and the magnetic and electrostatic potentials as well as the charge density can all be derived from a generating function [1] . When the latter becomes separable into the product of a radial and polar part, particle-like configurations with net electric charge arise from a divergent radial part and a polar part with top- bottom symmetry. In the remaining cases the configurations have no integrated net electric charge.</p>
+<p class="E-Title3">2.5.1. Particle Configurations with Net Electric Charge</p>
+<p>For a divergent radial part models can thus be elaborated in a spherical frame of coordinates <img src="//html.scirp.org/file/24-7502381x20.png" class="200" /> of an axisymmetric state of the electron, muon, and tauon [1] which all have been observed to have an electric charge equal to the elementary value <img class="200" data-original="//html.scirp.org/file/24-7502381x21.png" /> C. Due to the present theory, the corresponding configurations result in point-charge-like geometry with very small and unspecified radial dimensions. The divergence is treated in terms of a revised renormalization procedure. After imposing the quantum conditions on angular momentum, magnetic moment, and magnetic flux, this results in finite integrated values of net charge and of the product between particle magnetic moment and mass. The net charge then has the form</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/24-7502381x22.png" /><span class="bracketMark">(7)</span></p>
+<p>where</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/24-7502381x23.png" /><span class="bracketMark">(8)</span></p>
+<p>with<img class="200" data-original="//html.scirp.org/file/24-7502381x24.png" />. Here <img class="200" data-original="//html.scirp.org/file/24-7502381x25.png" /> is a polar function which determines the shape of the con- figuration through the variable<img class="200" data-original="//html.scirp.org/file/24-7502381x26.png" />. A variational analysis searching for the lowest value <img class="200" data-original="//html.scirp.org/file/24-7502381x27.png" /> of the electric charge finally results in a deduced value</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/24-7502381x28.png" /><span class="bracketMark">(9)</span></p>
+<p>where <img class="200" data-original="//html.scirp.org/file/24-7502381x29.png" /> is of the order of a few percent. Within the same limits of variation, the product between magnetic moment and mass also becomes equal to the experimental values. The detailed deductions of relations (7)-(9) are described in an earlier monograph [1] . From the generating function of an axisymmetric steady state, expressions are obtained for the electrostatic and magnetic vector potentials, in their turn leading to general forms of integrated electric charge, magnetic moment, mass, and spin for a model of the electron. Thereby the electric charge comes out as the fundamental charge of Equation (7) multiplied by a dimensionless factor u. The latter contains the amplitudes involved in the general forms of charge and spin, and it is related to the spatial profile of the charge density. A variational analysis on the same amplitudes finally leads to the minimum value of Equation (9). Here it should also be noted that the form of the charge (8) represents a unification of quantum theory with relativity in terms of the present theory.</p>
+<p class="E-Title3">2.5.2. Particle Configurations with Vanishing Net Electric Charge</p>
+<p>For a convergent radial part models can be elaborated for neutral particles, i.e. those with vanishing net integrated charge. This case does not require a revised renormalization procedure, and it is associated with a finite and defined characteristic radial dimension.</p>
+<p>One example is given by the Z boson considered by the author [15] [16] . Here a mass of 91 GeV yields a characteristic radius in the range of <img class="200" data-original="//html.scirp.org/file/24-7502381x30.png" /> m to <img class="200" data-original="//html.scirp.org/file/24-7502381x31.png" /> m according to the present theory. This is of the same order as the radial dimension of about <img class="200" data-original="//html.scirp.org/file/24-7502381x32.png" /> m given by Quigg [3] . It could be taken as a support of the theory.</p>
+<p>The particle discovered at CERN [17] [18] is unstable, has vanishing electric charge and spin, and a rest mass of 125 GeV, not being specified by the theory of Higgs [19] . It is generally believed to be a confirmation of the boson proposed by Higgs. Thereby Quigg [3] has pointed out that the Higgs is perhaps not a truly fundamental particle, but is built out of as yet unobserved constituents to form a composite particle. According to the author [15] [16] such a particle can be formed by superimposing two Z boson solutions with opposite spin directions, thus having no intrinsic magnetic field and being purely electrostatic and highly unstable. With the observed masses, 91 and 125 GeV, of the Z boson and the detected particle at CERN, the characteristic radius of the composite particle should be in the range of <img class="200" data-original="//html.scirp.org/file/24-7502381x33.png" /> m to <img class="200" data-original="//html.scirp.org/file/24-7502381x34.png" /> m due to the present theory. If the radius given by Quigg for the Z boson remains correct, these orders of magnitude are thus at least plausible for a particle obtained from two Z boson solutions and representing the detected CERN particle.</p>
+<p>At this stage it may be argued that this composite particle solution is not the particle observed at CERN, and that the latter also has been considered in terms of interactions with the quarks of other elementary particles. This leads to two points of discussion:</p>
+<p>1) It may be questioned if there can exist two non-identical particles which still behave like “twins”, in possessing the same basic properties of vanishing charge and spin as well as rest masses of the same order of magnitude.</p>
+<p>2) The present theory has so far been directed towards individual and free particles. Interaction with bound particles such as quarks, and the related strong forces, have not been considered. But in principle such consi- derations could equally well become applicable to the present composite model.</p>
+<p class="E-Title2">2.6. The Individual Photon</p>
+<p>According to experimental experience, the individual photon is limited in its transverse directions, and it has a nonzero spin. This implies that a physically relevant photon model should have the form of a wave or wave packet of preserved and limited shape, propagating in an undamped way in a defined direction. A single plane wave has infinite spatial extensions and no spin, and is therefore hardly suitable for an individual photon model. This is instead the case of a cylindrical configuration.</p>
+<p>Starting from the basic Equations (1)-(6), the velocity vector then has the form</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/24-7502381x35.png" /><span class="bracketMark">(10)</span></p>
+<p>in a cylindrical frame. For normal propagating modes varying as <img class="200" data-original="//html.scirp.org/file/24-7502381x36.png" /> the dispersion re- lation of the frequency <img class="200" data-original="//html.scirp.org/file/24-7502381x37.png" /> and wave number k becomes</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/24-7502381x38.png" /><span class="bracketMark">(11)</span></p>
+<p>Here the phase and group velocities are both equal to v. In terms of a generating function, the fields E and B are obtained from the basic equations. The normal modes are then superimposed into an axisymmetric wave packet of narrow line width, having a main wave number <img class="200" data-original="//html.scirp.org/file/24-7502381x39.png" /> with a corresponding wave length <img class="200" data-original="//html.scirp.org/file/24-7502381x40.png" /></p>
+<p>and a frequency<img class="200" data-original="//html.scirp.org/file/24-7502381x41.png" />. Among the spatially integrated field quantities, the net electric charge and magnetic moment vanish, whereas the total energy results in an equivalent total mass<img class="200" data-original="//html.scirp.org/file/24-7502381x42.png" />. With<img class="200" data-original="//html.scirp.org/file/24-7502381x43.png" />, we further have</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/24-7502381x44.png" /><span class="bracketMark">(12)</span></p>
+<p>and there is an equivalent “rest mass”</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/24-7502381x45.png" /><span class="bracketMark">(13)</span></p>
+<p>being associated with the transverse velocity component of C in Equation (10), and with a spin of the magnitude<img class="200" data-original="//html.scirp.org/file/24-7502381x46.png" />. A nonzero but small<img class="200" data-original="//html.scirp.org/file/24-7502381x47.png" />, is related to the spin. It is thus required for a relativistic cylindrical wave which both includes a velocity in the direction of propagation, and a spin. In the limit of large photon energies, the ratio of Equation (12) approaches the limit unity.</p>
+<p>These results are summarized as follows [1] [12] :</p>
+<p>1) A nonzero spin does not have to be added to the system as an extra ad hoc assumption, but becomes an integrated property obtained from the field equations.</p>
+<p>2) The concept of Lorentz invariance is extended to apply not only to a plane wave, but also to a cylindrical one. This is done by replacing the scalar velocity c by the velocity vector C.</p>
+<p>3) The existence of a nonzero spin is obtained at the expense of a slight reduction in the velocity v of propagation, from c to<img class="200" data-original="//html.scirp.org/file/24-7502381x48.png" />. This result is thus required by the relativistic invariance.</p>
+<p>4) For relevant radial extensions of an axisymmetric wave packet, this reduction becomes extremely small. It is first appearing in the ninth or tenth decimal of v, as given by Equation (12).</p>
+<p>5) A nonzero spin is related to a nonzero “rest mass”. But the latter does only need to become extremely small to satisfy relevant conditions on the present photon model.</p>
+<p>6) The radial extensions of the photon model become limited. In its turn, this results in such properties as needle radiation and a combined wave-particle behaviour, as well as in increased understanding of the photoelectric effect and two-slit experiments.</p>
+<p class="E-Title1">3. Concluding Remarks</p>
+<p>The present RQED approach is likely to lead to several new possibilities within fundamental physics, being beyond the theories of the Standard Model, Dirac, and Higgs, and including more applications. Examples of consistency with experimental facts are as follows:</p>
+<p>1) The present field equations result in steady particle models having nonzero electric charge, mass, and spin.</p>
+<p>2) The electron is point-charge-like and has very small radial extensions.</p>
+<p>3) The deduced minimum electric charge agrees with the observed elementary charge within an uncertainty of only a few percent.</p>
+<p>4) The charged leptons are prevented by the included magnetic field from “exploding” under the action of their electrostatic eigenforce.</p>
+<p>5) The deduced characteristic radial extension of the Z boson agrees with its so far estimated order of magnitude.</p>
+<p>6) The composite unstable and electrostatic particle obtained from the present theory has at least the same basic properties of vanishing charge, vanishing spin, and order-of-magnitude mass as that detected at CERN.</p>
+<p>7) The model of the individual photon has a nonzero spin. It also contributes to the understanding of the wave-particle nature, needle radiation, the photoelectric effect, and of two-slit experiments.</p>
+<p>The future will show what is relevant and not relevant of these considerations.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576388' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Lehnert, B. (2013) Revised Quantum Electrodynamics. Nova Science Publications, Inc., New York.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576389' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Schiff, L. (1949) Quantum Mechanics. McGraw-Hill Book Comp., Inc., New York-Toronto-London.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576390' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Quigg, C. (2008) Scientific American, 298, 46-53. <br/>http://dx.doi.org/10.1038/scientificamerican0208-46
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576391' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Abbott, L. (1988) Scientific American, 258, 106-113. <br/>http://dx.doi.org/10.1038/scientificamerican0588-106
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576392' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Casimir, H.B.G. (1948) Proc. Ned. Akad. Wet., 51, 793-795.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576393' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Lamoreaux, S.K. (1997) Physical Review Letters, 78, 5-8. <br/>http://dx.doi.org/10.1103/PhysRevLett.78.5
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576394' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Terletskii, Yu.D. (1971) Statistical Physics. North-Holland Publishing Comp., Amsterdam, London.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576395' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Milonni, P.W. (1994) The Quantum Vacuum. American Press Inc., Harcourt Brace and Company, Boston, San Diego, New York, London, Sydney, Tokyo and Toronto.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576396' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Loudon, R. (2000) The Quantum Theory of Light. Third Edition, Oxford University Press.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576397' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Riess, A.G. and Turner, M.S. (2004) Scientific American, 50-55. <br/>http://dx.doi.org/10.1038/scientificamerican0204-62
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576398' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Heitler, W. (1954) The Quantum Theory of Radiation. Third Edition, Clarendon Press, Oxford, 57, 409.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576399' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Lehnert, B. (2013) Journal of Plasma Physics, 79, 327-334. <br/>http://dx.doi.org/10.1017/s0022377812001055
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576400' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Lehnert, B. (2014) Journal of Electromagnetic Analysis and Applications, 6, 319-327. <br/>http://dx.doi.org/10.4236/jemaa.2014.610032
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576401' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Lehnert, B. (2015) Journal of Modern Physics, 6, 448-452. <br/>http://dx.doi.org/10.4236/jmp.2015.64048
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576402' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Lehnert, B. (2013) Progress in Physics, 3, 31-32.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576403' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Lehnert, B. (2014) Progress in Physics, 10, 5-7.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576404' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Aad, G., et al. (2012) Physics Letters, B716, 1-29. <br/>http://dx.doi.org/10.1016/j.physletb.2012.08.020
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576405' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Chatrchyan, S., et al. (2012) Physics Letters, B716, 30-61. <br/>http://dx.doi.org/10.1016/j.physletb.2012.08.021
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576406' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Higgs, P.W. (1966) Physical Review, 154, 1156-1168. <br/>http://dx.doi.org/10.1103/physrev.145.1156
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=172" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=172" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=172" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=172" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=172"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=172"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=172" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=172" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=172" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=172" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=172" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=172"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=172"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=172" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=172&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=172&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=172" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=172" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=172" target="_blank">JMP
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=172" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=172" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=172" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=172" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=172" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=172" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=172" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jmp.2015.611171" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe&#39;)">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60001 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +172 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +172 +"&paperid=" +60001 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

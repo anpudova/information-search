@@ -1,0 +1,1636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	The Behavior of Recycled Concrete  through the Application of an  Isotropic Damage Model
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/OJCE_2015092915450055.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60051" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60051.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60051" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60051" />
+<meta property="og:title" content="The Behavior of Recycled Concrete  through the Application of an  Isotropic Damage Model" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/OJCE2024061415544135.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/OJCE2024061415544135.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="The Behavior of Recycled Concrete  through the Application of an  Isotropic Damage Model" />
+<meta name="keywords" content="Recycled Concrete,Construction and Demolition Waste,Isotropic Damage,Mazars Isotropic Model" />
+<meta name="description" content="Explore the mechanical behavior of CDW recycled concrete in compression using an isotropic damage model. Discover the effects of aggregate replacement rates on strength and find out how the model compares to experimental results." />
+<meta name="citation_journal_title" content="Open Journal of Civil Engineering" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Marcelo Pedreira da Silva;Magno Teixeira Mota;Anderson de Souza Matos Gadéa;Mônica Batista Leite;Koji de Jesus Nagahama" />
+<meta name="citation_author" content="Marcelo Pedreira da Silva" />
+<meta name="citation_author" content="Magno Teixeira Mota" />
+<meta name="citation_author" content="Anderson de Souza Matos Gadéa" />
+<meta name="citation_author" content="Mônica Batista Leite" />
+<meta name="citation_author" content="Koji de Jesus Nagahama" />
+<meta name="citation_title" content="The Behavior of Recycled Concrete  through the Application of an  Isotropic Damage Model" />
+<meta name="citation_volume" content="5" />
+<meta name="citation_date" content="2015-07-21" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/ojce.2015.53034" />
+<meta name="citation_issnPrint" content="2164-3164" />
+<meta name="citation_issnOnline" content="2164-3172" />
+<meta name="citation_abstract" content="The main goal of this paper is to describe the mechanical behavior of the CDW recycled concrete in compression, using an isotropic damage model adapted to the variation of the replacement rate of natural aggregates by recycled ones. The isotropic model by Mazars was used as a constitutive equation for the CDW concrete and its adjustment parameters, A and B, were written as quadratic polynomials according to the aggregates replacement rate. The model was evaluated for conventional and recycled concretes. For the latter ones, the aggregates replacement ratios evaluated were 50% and 100%. The results show good approximation between the analytical and numerical values obtained with the adapted isotropic damage model and experimental concrete results for both compressive and flexural strength." />
+<meta name="citation_publication_date" content="2015/7/21" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/OJCE_2015092915450055.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/OJCE_2015092915450055.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60051" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60051" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60051" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60051.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60051.xml" />
+<meta name="citation_issue" content="3" />
+<meta name="citation_online_date" content="2015/7/21" />
+<meta name="citation_firstpage" content="339" />
+<meta name="citation_lastpage" content="351" />
+
+<meta name="dc.title" content="The Behavior of Recycled Concrete  through the Application of an  Isotropic Damage Model" />
+
+<meta name="dc.creator" content="Marcelo Pedreira da Silva" />
+<meta name="dc.creator" content="Magno Teixeira Mota" />
+<meta name="dc.creator" content="Anderson de Souza Matos Gadéa" />
+<meta name="dc.creator" content="Mônica Batista Leite" />
+<meta name="dc.creator" content="Koji de Jesus Nagahama" /><meta name="dcterms.issued" content="2015-07-21" />
+<meta name="dc.description" content="The main goal of this paper is to describe the mechanical behavior of the CDW recycled concrete in compression, using an isotropic damage model adapted to the variation of the replacement rate of natural aggregates by recycled ones. The isotropic model by Mazars was used as a constitutive equation for the CDW concrete and its adjustment parameters, A and B, were written as quadratic polynomials according to the aggregates replacement rate. The model was evaluated for conventional and recycled concretes. For the latter ones, the aggregates replacement ratios evaluated were 50% and 100%. The results show good approximation between the analytical and numerical values obtained with the adapted isotropic damage model and experimental concrete results for both compressive and flexural strength." />
+<meta name="dc.source" content="Open Journal of Civil Engineering" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-07-21" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/ojce.2015.53034" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-07-21" />
+<meta name="prism.issnPrint" content="2164-3164" />
+<meta name="prism.issnOnline" content="2164-3172" />
+<meta name="prism.publicationName" content="Open Journal of Civil Engineering" />
+<meta name="prism.publicationDate" content="2015-07-21" />
+<meta name="prism.volume" content="5" />
+<meta name="prism.number" content="3" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="339" />
+<meta name="prism.doi" content="10.4236/ojce.2015.53034" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60051" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAl0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA3LTIxZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXGBTxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9TWFyY2VsbytQZWRyZWlyYSsrZGErU2lsdmEmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5NYXJjZWxvIFBlZHJlaXJhICBkYSBTaWx2YTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1NYWdubytUZWl4ZWlyYSsrTW90YSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPk1hZ25vIFRlaXhlaXJhICBNb3RhPC9hPjxzdXA+PC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUFuZGVyc29uK2RlK1NvdXphK01hdG9zKytHYWRlJWNjJTgxYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkFuZGVyc29uIGRlIFNvdXphIE1hdG9zICBHYWRlzIFhPC9hPjxzdXA+PC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPU1vJWNjJTgybmljYStCYXRpc3RhKytMZWl0ZSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPk1vzIJuaWNhIEJhdGlzdGEgIExlaXRlPC9hPjxzdXA+PC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUtvamkrZGUrSmVzdXMrK05hZ2FoYW1hJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+S29qaSBkZSBKZXN1cyAgTmFnYWhhbWE8L2E+PHN1cD48L3N1cD4gZAICD2QWAmYPFgIfBAXKAjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9Q2l2aWwrYW5kK0Vudmlyb25tZW50YWwrRW5naW5lZXJpbmcrUG9zdC1HcmFkdWF0ZStQcm9ncmFtJTJjK1N0YXRlK1VuaXZlcnNpdHkrb2YrRmVpcmErZGUrU2FudGFuYSUyYytGZWlyYStkZStTYW50YW5hJTJjK0JyYXppbCZzZWFyY2hmaWVsZD1hZmZzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkNpdmlsIGFuZCBFbnZpcm9ubWVudGFsIEVuZ2luZWVyaW5nIFBvc3QtR3JhZHVhdGUgUHJvZ3JhbSwgU3RhdGUgVW5pdmVyc2l0eSBvZiBGZWlyYSBkZSBTYW50YW5hLCBGZWlyYSBkZSBTYW50YW5hLCBCcmF6aWw8L2E+LjxiciAvPmQCBQ8WAh8EBQU1LDgzMGQCBg8WAh8EBQU4LDA2MmQCBw8WAh8DBQ9EaXNwbGF5OmlubGluZTtkAggPZBYCAgEPFgIfBAX1AzxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9UmVjeWNsZWQrQ29uY3JldGUmc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5SZWN5Y2xlZCBDb25jcmV0ZTwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0NvbnN0cnVjdGlvbithbmQrRGVtb2xpdGlvbitXYXN0ZSZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBDb25zdHJ1Y3Rpb24gYW5kIERlbW9saXRpb24gV2FzdGU8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStJc290cm9waWMrRGFtYWdlJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IElzb3Ryb3BpYyBEYW1hZ2U8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStNYXphcnMrSXNvdHJvcGljK01vZGVsJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IE1hemFycyBJc290cm9waWMgTW9kZWw8L2E+IGQCCg8WAh8EBeECZGEgU2lsdmEsIE0uICwgTW90YSwgTS4gLCBHYWRlzIFhLCBBLiAsIExlaXRlLCBNLiAgYW5kIE5hZ2FoYW1hLCBLLiAgICgyMDE1KSBUaGUgQmVoYXZpb3Igb2YgUmVjeWNsZWQgQ29uY3JldGUgIHRocm91Z2ggdGhlIEFwcGxpY2F0aW9uIG9mIGFuICBJc290cm9waWMgRGFtYWdlIE1vZGVsLiA8aT5PcGVuIEpvdXJuYWwgb2YgQ2l2aWwgRW5naW5lZXJpbmc8L2k+LCA8Yj41PC9iPiwgMzM5LTM1MS4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L29qY2UuMjAxNS41MzAzNCcgdGFyZ2V0PSdfYmxhbmsnIG9uY2xpY2s9J1NldE51bSg2MDA1MSknPjEwLjQyMzYvb2pjZS4yMDE1LjUzMDM0PC9hPi5kAgsPFgIfBAUtVGhlIGF1dGhvcnMgZGVjbGFyZSBubyBjb25mbGljdHMgb2YgaW50ZXJlc3QuZAINDxYCHgtfIUl0ZW1Db3VudAIYFjBmD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NDMnIHRhcmdldD0nX2JsYW5rJz4xPC9hPl0BMQExogJFdHhlYmVycmlhLCBNLiwgViZhYWN1dGU7c3F1ZXosIEUuLCBNYXImaWFjdXRlOywgQS4gYW5kIEJhcnJhLCBNLiAoMjAwNykgSW5mbHVlbmNlIG9mIEFtb3VudCBvZiBSZWN5Y2xlZCBDb2Fyc2UgQWdncmVnYXRlcyBhbmQgUHJvZHVjdGlvbiBQcm9jZXNzb3IgUHJvcGVydGllcyBvZiBSZWN5Y2xlZCBBZ2dyZWdhdGUgQ29uY3JldGUuIENlbWVudCBhbmQgQ29uY3JldGUgUmVzZWFyY2gsIDM3LCA3MzUtNzQyLiANCjxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAxNi9qLmNlbWNvbnJlcy4yMDA3LjAyLjAwMmQCAQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjQ0JyB0YXJnZXQ9J19ibGFuayc+MjwvYT5dATIBMssBTGVpdGUsIE0uQi4gKDIwMDEpIEV2YWx1YXRpb24gb2YgTWVjaGFuaWNhbCBQcm9wZXJ0aWVzIG9mIENvbmNyZXRlIFByb2R1Y2VkIHdpdGggUmVjeWNsZWQgQWdncmVnYXRlcyBmcm9tIENvbnN0cnVjdGlvbiBhbmQgRGVtb2xpdGlvbiBXYXN0ZS4gUGguRC4gVGhlc2lzLCBVbml2ZXJzaXR5IG9mIFJpbyBHcmFuZGUgZG8gU3VsLiAoSW4gUG9ydHVndWVzZSlkAgIPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY0NScgdGFyZ2V0PSdfYmxhbmsnPjM8L2E+XQEzATP4AU1hcnV5YW1hLCBJLiwgU29nbywgTS4sIFNvZ2FiZSwgVC4sIFNhdG8sIFIuIGFuZCBLYXdhaSwgSy4gKDIwMDQpIEZsZXh1cmFsIFByb3BlcnRpZXMgb2YgUmVpbmZvcmNlZCBDb25jcmV0ZSBCZWFtcy4gSW50ZXJuYXRpb25hbCBSaWxlbSBDb25mZXJlbmNlIG9uIHRoZSBVc2Ugb2YgUmVjeWNsZWQgTWF0ZXJpYWxzIGluIEJ1aWxkaW5ncyBhbmQgU3RydWN0dXJlcywgQmFyY2Vsb25hLCA4LTExIE5vdmVtYmVyIDIwMDQsIDUyNi01MzUuZAIDD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NDYnIHRhcmdldD0nX2JsYW5rJz40PC9hPl0BNAE0zAJEaXNmYW5pLCBNLk0uLCBBcnVscmFqYWgsIEEuLCBIYWdoaWdoaSwgSC4sIE1vaGFtbWFkaW5pYSwgQS4gYW5kIEhvcnBpYnVsc3VrLCBTLiAoMjAxNCkgRmxleHVyYWwgQmVhbSBGYXRpZ3VlIFN0cmVuZ3RoIEV2YWx1YXRpb24gb2YgQ3J1c2hlZCBCcmljayBhcyBhIFN1cHBsZW1lbnRhcnkgTWF0ZXJpYWwgaW4gQ2VtZW50IFN0YWJpbGl6ZWQgUmVjeWNsZWQgQ29uY3JldGUgQWdncmVnYXRlcy4gQ29uc3RydWN0aW9uIGFuZCBCdWlsZGluZyBNYXRlcmlhbHMsIDY4LCA2NjctNjc2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMTYvai5jb25idWlsZG1hdC4yMDE0LjA3LjAwN2QCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjQ3JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNeYBUmFvLCBNLkMuLCBCaGF0dGFjaGFyeXlhLCBTLksuIGFuZCBCYXJhaSwgUy5WLiAoMjAxMSkgQmVoYXZpb3VyIG9mIFJlY3ljbGVkIEFnZ3JlZ2F0ZSBDb25jcmV0ZSB1bmRlciBEcm9wIFdlaWdodCBJbXBhY3QgTG9hZC4gQ29uc3RydWN0aW9uIGFuZCBCdWlsZGluZyBNYXRlcmlhbHMsIDI1LCA2OS04MC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouY29uYnVpbGRtYXQuMjAxMC4wNi4wNTVkAgUPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY0OCcgdGFyZ2V0PSdfYmxhbmsnPjY8L2E+XQE2ATagAlJlaXMsIEMuTi5TLiwgTGVpdGUsIE0uQi4gYW5kIExpbWEsIFAuUi5MLiAoMjAxMSkgSW5mbHVlbmNlIG9mIHRoZSBEaWFtZXRlciBvZiB0aGUgQmFyIGFuZCBDRFcgQ29udGVudCBvbiB0aGUgQm9uZCBCZWhhdmlvciBvZiBSZWN5Y2xlZCBSZWluZm9yY2VkIENvbmNyZXRlLiAybmQgSW50ZXJuYXRpb25hbCBSSUxFTSBDb25mZXJlbmNlIG9uIFByb2dyZXNzIG9uIFJlY3ljbGluZyBpbiB0aGUgQnVpbHQgRW52aXJvbm1lbnQsIFMmYXRpbGRlO28gUGF1bG8sIDItNCBEZWNlbWJlciAyMDA5LCAyMDctMjE0LmQCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjQ5JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN/IBU2VhcmEtUGF6LCBTLiwgR29ueiZhYWN1dGU7bGV6LUZvbnRlYm9hLCBCLiwgRWlyYXMtTMOzcGV6LCBKLiBhbmQgSGVycmFkb3IsIE0uRi4gKDIwMTQpIEJvbmQgQmVoYXZpb3IgYmV0d2VlbiBTdGVlbCBSZWluZm9yY2VtZW50IGFuZCBSZWN5Y2xlZCBDb25jcmV0ZS4gTWF0ZXJpYWxzIGFuZCBTdHJ1Y3R1cmVzLCA0NywgMzIzLTMzNC4gDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjE2MTcvczExNTI3LTAxMy0wMDYzLXpkAgcPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY1MCcgdGFyZ2V0PSdfYmxhbmsnPjg8L2E+XQE4ATizAUxORUMgRSA0NzEgKDIwMDYpIEd1aWRlbGluZSBvZiBVdGlsaXphdGlvbiBvZiBDb2Fyc2UgUmVjeWNsZWQgQWdncmVnYXRlcyBpbiBIeWRyYXVsaWMgQ2VtZW50aW5nIEJhc2VkIENvbmNyZXRlLiBOYXRpb25hbCBMYWJvcmF0b3J5IG9mIENpdmlsIEVuZ2luZWVyaW5nLCBQb3J0dWdhbC4gKEluIFBvcnR1Z3Vlc2UpZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NTEnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5YE1pbmlzdHJ5IG9mIEZvbWVudG8gKDIwMTEpIENvZGUgb24gU3RydWN0dXJhbCBDb25jcmV0ZS4gTWluaXN0cnkgb2YgRm9tZW50bywgU3BhaW4uIChJbiBTcGFuaXNoKWQCCQ9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjUyJyB0YXJnZXQ9J19ibGFuayc+MTA8L2E+XQIxMAIxMHRSSUxFTSBUQyAxMjEtRFJHICgxOTk0KSBTcGVjaWZpY2F0aW9ucyBmb3IgQ29uY3JldGUgd2l0aCBSZWN5Y2xlZCBBZ2dyZWdhdGVzLiBNYXRlcmlhbHMgYW5kIFN0cnVjdHVyZXMsIDI3LCA1NTctNTU5LmQCCg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc3NjUzJyB0YXJnZXQ9J19ibGFuayc+MTE8L2E+XQIxMQIxMZ8CR3LDvGJsLCBQLiBhbmQgUsO8aGwsIE0uICgxOTk4KSBHZXJtYW4gQ29tbWl0dGVlIGZvciBSZWluZm9yY2VkIENvbmNyZXRlIChEYWZTdGIpIENvZGU6IENvbmNyZXRlIHdpdGggUmVjeWNsZWQgQWdncmVnYXRlLiBJbjogRGhpciwgUi5LLiwgSGVuZGVyc29uLCBOLkEuIGFuZCBMaW1iYWNoaXlhLCBNLkMuLCBFZHMuLCBTdXN0YWluYWJsZSBDb25zdHJ1Y3Rpb246IFVzZSBvZiBSZWN5Y2xlZCBDb25jcmV0ZSBBZ2dyZWdhdGUsIFRob21hcyBUZWxmb3JkIFB1Ymxpc2hpbmcsIExvbmRvbiwgNDA5LTQxOC5kAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY1NCcgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTLaAVhpYW8sIEouWi4sIExpLCBKLkIuIGFuZCBaaGFuZywgQy4gKDIwMDUpIE1lY2hhbmljYWwgUHJvcGVydGllcyBvZiBSZWN5Y2xlZCBBZ2dyZWdhdGUgQ29uY3JldGUgdW5kZXIgVW5pYXhpYWwgTG9hZGluZy4gQ2VtZW50IGFuZCBDb25jcmV0ZSBSZXNlYXJjaCwgMzUsIDExODctMTE5NC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouY2VtY29ucmVzLjIwMDQuMDkuMDIwZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NTUnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEzjQFHdW8sIFouSC4gYW5kIFpoYW5nLCBYLlEuICgxOTgyKSBFeHBlcmltZW50YWwgSW52ZXN0aWdhdGlvbiBvZiBTdHJlc3MtU3RyYWluIEN1cnZlcyBmb3IgQ29uY3JldGUuIEpvdXJuYWwgb2YgQnVpbGRpbmcgYW5kIFN0cnVjdHVyZSwgMywgMS0xMi5kAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY1NicgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTSwAUJoaWtzaG1hLCBWLiBhbmQgS2lzaG9yZSwgUi4gKDIwMTApIERldmVsb3BtZW50IG9mIFN0cmVzcy1TdHJhaW4gQ3VydmVzIGZvciBSZWN5Y2xlZCBBZ2dyZWdhdGUgQ29uY3JldGUuIEFzaWFuIEpvdXJuYWwgb2YgQ2l2aWwgRW5naW5lZXJpbmcgKEJ1aWxkaW5nIGFuZCBIb3VzaW5nKSwgMTEsIDI1My0yNjEuZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NTcnIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE1rgFTYWVueiwgTC5QLiAoMTk2NCkgRGlzY3Vzc2lvbiBvZiBQYXBlciDigJxFcXVhdGlvbiBmb3IgU3RyZXNzLVN0cmFpbiBDdXJ2ZSBvZiBDb25jcmV0ZeKAnSBieSBEZXNhaSwgUC4gYW5kIEtyaXNobmFuLCBTLiBKb3VybmFsIG9mIEFtZXJpY2FuIENvbmNyZXRlIEluc3RpdHV0ZSwgNjEsIDEyMjktMTIzNS5kAg8PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY1OCcgdGFyZ2V0PSdfYmxhbmsnPjE2PC9hPl0CMTYCMTaSAkR1LCBULiwgV2FuZywgVy5ILiwgTGl1LCBaLlguLCBMaW4sIEguTC4gYW5kIEd1bywgVC5QLiAoMjAxMCkgVGhlIENvbXBsZXRlIFN0cmVzcy1TdHJhaW4gQ3VydmUgb2YgUmVjeWNsZWQgQWdncmVnYXRlIENvbmNyZXRlIHVuZGVyIFVuaWF4aWFsIENvbXByZXNzaW9uIExvYWRpbmcuIEpvdXJuYWwgb2YgV3VoYW4gVW5pdmVyc2l0eSBvZiBUZWNobm9sb2d5LU1hdGVyLCAyNSwgODYyLTg2NS4gDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvczExNTk1LTAxMC0wMTA5LTlkAhAPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY1OScgdGFyZ2V0PSdfYmxhbmsnPjE3PC9hPl0CMTcCMTeRAUd1bywgWi5ILiAoMTk5NykgVGhlIFN0cmVuZ3RoIGFuZCBEZWZvcm1hdGlvbiBvZiBDb25jcmV0ZSAoRXhwZXJpbWVudGFsIEJhc2lzIGFuZCBDb25zdGl0dXRpdmUgUmVsYXRpb25zaGlwKS4gVHNpbmdodWEgVW5pdmVyc2l0eSBQcmVzcywgQmVpamluZy5kAhEPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY2MCcgdGFyZ2V0PSdfYmxhbmsnPjE4PC9hPl0CMTgCMTidAU1hemFycywgSi4gKDE5ODQpIEFwcGxpY2F0aW9uIG9mIENvbnRpbnVvdXMgRGFtYWdlIE1lY2hhbmljIHRvIE5vbi1MaW5lYXIgQmVoYXZpb3Igb2YgQ29uY3JldGUgU3RydWN0dXJlcy4gUGhEIFRoZXNpcywgUGFyaXMgNiBVbml2ZXJzaXR5LCBQYXJpcy4gKGluIEZyZW5jaClkAhIPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY2MScgdGFyZ2V0PSdfYmxhbmsnPjE5PC9hPl0CMTkCMTnvASZBQUNVVEU7bHZhcmVzLCBNLlMuICgxOTkzKSBTdHVkeSBvZiBDb25jcmV0ZSBEYW1hZ2UgTW9kZWw6IEZvcm11bGF0aW9uLCBQYXJhbWV0cmljIElkZW50aWZpY2F0aW9uIGFuZCBOdW1lcmljYWwgQXBwbGljYXRpb24gVXNpbmcgRmluaXRlIEVsZW1lbnQgTWV0aG9kLiBEaXNzZXJ0YXRpb24gKE0uU2MuKSwgUyZhdGlsZGU7byBQYXVsbyBVbml2ZXJzaXR5LCBTJmF0aWxkZTtvIENhcmxvcy4gKGluIFBvcnR1Z3Vlc2UpZAITD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NjInIHRhcmdldD0nX2JsYW5rJz4yMDwvYT5dAjIwAjIw2QFMZWl0ZSwgTS5CLiAoMjAwOSkgU3RyZXNzLVN0cmFpbiBCZWhhdmlvciBFdmFsdWF0aW9uIG9mIFJlY3ljbGVkIENvbmNyZXRlIHVuZGVyIENvbXByZXNzaXZlIGFuZCBEaXJlY3QgVGVuc2lsZSBTdHJlbmd0aC4gTW9ub2dyYXBoIG9mIFByb2dyZXNzaW9uIG9mIFByb2Zlc3NvciBmcm9tIFN0YXRlIFVuaXZlcnNpdHkgb2YgRmVpcmEgZGUgU2FudGFuYS4gKGluIFBvcnR1Z3Vlc2UpZAIUD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1Nzc2NjMnIHRhcmdldD0nX2JsYW5rJz4yMTwvYT5dAjIxAjIxigFCcmF6aWxpYW4gU3RhbmRhcmQgKEFCTlQpICgxOTk0KSBOQlIgMTIxNDI6IENvbmNyZXRlLURldGVybWluYXRpb24gb2YgVGVuc2lsZSBTdHJlbmd0aCBpbiBGbGV4aW9uIGluIFRlc3QuIFJpbyBkZSBKYW5laXJvLiAoaW4gUG9ydHVndWVzZSlkAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY2NCcgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjIpRElBTkEgKDIwMDUpIFVzZXLigJlzIE1hbnVhbOKAlFJlbGVhc2UgOS5kAhYPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY2NScgdGFyZ2V0PSdfYmxhbmsnPjIzPC9hPl0CMjMCMjPuAVhpYW8sIEouWi4sIExpLCBXLkcuIGFuZCBQb29uLCBDLlMuICgyMDEyKSBSZWNlbnQgU3R1ZGllcyBvbiBNZWNoYW5pY2FsIFByb3BlcnRpZXMgb2YgUmVjeWNsZWQgQWdncmVnYXRlIENvbmNyZXRlIGluIENoaW5h4oCUQSBSZXZpZXcuIFNjaWVuY2UgQ2hpbmEgVGVjaG5vbG9naWNhbCBTY2llbmNlcywgNTUsIDE0NjMtMTQ4MC4gDQo8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwMDcvczExNDMxLTAxMi00Nzg2LTlkAhcPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NzY2NicgdGFyZ2V0PSdfYmxhbmsnPjI0PC9hPl0CMjQCMjR9Q0VCLUZJUCBNb2RlbCBDb2RlICgxOTkwKSBEZXNpZ24gQ29kZS4gQ29tbWl0dGVlIEV1cm8tSW50ZXJuYXRpb25hbCBkdSBCZXRvbiwgTGF1c2FubmUsIFRob21hcyBUZWxmb3JkIFNlcnZpY2VzIEx0ZC4sIExvbmRvbi5kAggPZBYEAgcPFgIfAwUNRGlzUGxheTpOb25lO2QCCA8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAILD2QWAmYPFgIeB1Zpc2libGVnZAIMD2QWAgIBD2QWAgIBD2QWAgIDDxAPFgYeDURhdGFUZXh0RmllbGQFCVNob3J0TmFtZR4ORGF0YVZhbHVlRmllbGQFCUpvdXJuYWxJRB4LXyFEYXRhQm91bmRnZBAVgAIOU2VsZWN0IEpvdXJuYWwCQUEDQUFEA0FBUgZBQVNvY2kEQUFTVANBQkIDQUJDBEFCQ1IEQUNFUwNBQ1MDQUNUAkFEA0FEUgJBRQNBRVIDQUhTA0FJRANBaU0DQUlUBEFKQUMDQUpDBEFKQ0MEQUpDTQVBSklCTQRBSk1CBEFKT1IEQUpQUwVBTEFNVANBTEMDQUxTAkFNA0FNSQRBTVBDA0FOUANBUEQDQVBFA0FQTQNBUlMFQVJTY2kCQVMDQVNNA0JMUgJDQwJDRQdDZWxsQmlvBkNoblN0ZAJDTQNDTUICQ04EQ1JDTQJDUwRDU1RBA0NVUwVDV0VFRQlEZXRlY3Rpb24ERU1BRQNFTkcDRVBFBEVUU04ERk1BUgNGTlMDR0VQA0dJUwJHTQhHcmFwaGVuZQNHU0MGSGVhbHRoAklCA0lDQQNJSU0ESUpBQQZJSkFNU0MFSUpDQ0UESUpDTQVJSkNOUwNJSkcFSUpJRFMESUpJUwZJSk1OVEEISUpNUENFUk8ESUpOTQRJSk9DBklKT0hOUwtJbmZyYU1hdGljcwVKQUNFTgRKQU1QBUpBU01JBEpCQlMFSkJDUFIFSkJpU0UDSkJNBEpCTkIESkJQQwNKQ0MFSkNEU0EESkNQVANKQ1QFSkRBSVADSkRNBEpFQVMFSkVDVEMFSkVNQUEDSkVQBUpGQ01WBEpGUk0ESkdJUwZKSEVQR0MFSkhSU1MGSklCVFZBBUpJTFNBA0pJUwNKTUYGSk1HQk5EBUpNTUNFA0pNUARKUEVFBEpRSVMESlNCUwRKU0VBBkpTRU1BVARKU0lQA0pTUwRKU1NNA0pTVANKVFIESlRTVARKVFRzBUpXQVJQA0xDRQJNQwJNRQJNSQNNTUUFTU5TTVMDTVBTAk1SA01SQwNNUkkDTVNBBE1TQ0UETkpHQwJOTQJOUgJOUwVPQUxpYgZPQUxpYkoET0RFTQNPSkEET0pBQgZPSkFjY3QGT0pBbmVzBE9KQVAFT0pBcG8GT0pBcHBTBU9KQVByBE9KQVMET0pCRAdPSkJJUEhZBE9KQk0DT0pDBE9KQ0IET0pDRARPSkNFBE9KQ00DT0pEBU9KRGVyBE9KRE0DT0pFBE9KRUUET0pFTQVPSkVNRAVPSkVwaQRPSkVSA09KRgRPSkZEA09KRwVPSkdhcwVPSkdlbgNPSkkET0pJQwRPSklNBU9KSU5NA09KTANPSk0ET0pNQwdPSk1ldGFsBE9KTUgET0pN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" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=788" title="Open Journal of Civil Engineering">
+                    Open Journal of Civil Engineering</a> &gt; <a href="home?issueid=6734#60051">Vol.5 No.3, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                The Behavior of Recycled Concrete  through the Application of an  Isotropic Damage Model <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Marcelo+Pedreira++da+Silva&searchfield=authors&page=1' target='_blank'>Marcelo Pedreira  da Silva</a><sup></sup>, <a href='articles?searchcode=Magno+Teixeira++Mota&searchfield=authors&page=1' target='_blank'>Magno Teixeira  Mota</a><sup></sup>, <a href='articles?searchcode=Anderson+de+Souza+Matos++Gade%cc%81a&searchfield=authors&page=1' target='_blank'>Anderson de Souza Matos  Gadéa</a><sup></sup>, <a href='articles?searchcode=Mo%cc%82nica+Batista++Leite&searchfield=authors&page=1' target='_blank'>Mônica Batista  Leite</a><sup></sup>, <a href='articles?searchcode=Koji+de+Jesus++Nagahama&searchfield=authors&page=1' target='_blank'>Koji de Jesus  Nagahama</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Civil+and+Environmental+Engineering+Post-Graduate+Program%2c+State+University+of+Feira+de+Santana%2c+Feira+de+Santana%2c+Brazil&searchfield=affs&page=1' target='_blank'>Civil and Environmental Engineering Post-Graduate Program, State University of Feira de Santana, Feira de Santana, Brazil</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/ojce.2015.53034"
+                    target="_blank" onclick='SetNum(60051)'>10.4236/ojce.2015.53034</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/OJCE_2015092915450055.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60051)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60051' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60051.xml' target='_blank' onclick='SetNum(60051)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    5,830</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    8,062</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60051&JournalID=788' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">The main goal of this paper is to describe the mechanical behavior of the <em>CDW</em> recycled concrete in compression, using an isotropic damage model adapted to the variation of the replacement rate of natural aggregates by recycled ones. The isotropic model by Mazars was used as a constitutive equation for the <em>CDW</em> concrete and its adjustment parameters,<em> A </em>and <em>B</em>, were written as quadratic polynomials according to the aggregates replacement rate. The model was evaluated for conventional and recycled concretes. For the latter ones, the aggregates replacement ratios evaluated were 50% and 100%. The results show good approximation between the analytical and numerical values obtained with the adapted isotropic damage model and experimental concrete results for both compressive and flexural strength.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Recycled+Concrete&searchfield=keyword&page=1' target='_blank'>Recycled Concrete</a>, <a href='articles?searchcode=+Construction+and+Demolition+Waste&searchfield=keyword&page=1' target='_blank'> Construction and Demolition Waste</a>, <a href='articles?searchcode=+Isotropic+Damage&searchfield=keyword&page=1' target='_blank'> Isotropic Damage</a>, <a href='articles?searchcode=+Mazars+Isotropic+Model&searchfield=keyword&page=1' target='_blank'> Mazars Isotropic Model</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    da Silva, M. , Mota, M. , Gadéa, A. , Leite, M.  and Nagahama, K.   (2015) The Behavior of Recycled Concrete  through the Application of an  Isotropic Damage Model. <i>Open Journal of Civil Engineering</i>, <b>5</b>, 339-351. doi: <a href='http://dx.doi.org/10.4236/ojce.2015.53034' target='_blank' onclick='SetNum(60051)'>10.4236/ojce.2015.53034</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>The description of the mechanical behavior of conventional concrete already has consistent analytical models in science. Models based on the theory of elasticity, plasticity, in the mechanics of fracture and damage and in their combinations, are able to describe the real phenomena in a broad sense. However, special concretes, such as recycled concretes, still need specific constitutive equations so to be analytically represented.</p>
+<p>Recycled concrete, for example, shows a specific mechanical behavior as a consequence of the use of aggregates that show differentiated characteristics when compared to natural aggregates. The construction and demolition waste (CDW) composition and the aggregate production procedures result in the variability of the physical, chemical and mechanical characteristics of the aggregates that will considerably interfere in the mechanical behavior of the recycled concrete achieved.</p>
+<p>Experimental studies of recycled concrete behavior have been carried out by number of researchers, evaluating concrete compressive and flexural strength [1] -[3] , impact load on beams [4] [5] , bond behavior [6] [7] , among other properties. Etxeberria et al. [1] found that the use of 100% of recycled coarse aggregate has reduced the compressive strength by 20% to 25% compared to conventional concrete. Leite [2] identified a great influence of the porosity of the recycled aggregate and the transition zone in the compressive strength of concrete containing CDW.</p>
+<p>Maruyama et al. [3] investigated the flexural properties of recycled concrete beams reinforced with steel bars. Considering the same value of stress in the beam, the authors observed that recycled concrete presented bigger crack width than conventional concrete and furthermore, smaller spacing between the cracks.</p>
+<p>The recycled concrete beam behavior under impact load was evaluated by Rao et al. [5] . For a given impact energy major deformations were found for the concrete with substitution ratios of 50% and 100% when compared to the values obtained for conventional and recycled concretes with 25% of recycled aggregate.</p>
+<p>It can thus be observed that the use of recycled aggregates from CDW for concrete production impairs the concrete properties in the hardened state due to specific characteristics, such as high heterogeneity of the recycled aggregates and their higher porosity [1] [2] .</p>
+<p class="E-Title2">1.1. Considerations about Constitutive Models for Recycled Concrete</p>
+<p>In general the researches focusing on obtaining mathematical models that describe the recycled concrete behavior, are based on consistent models established for conventional concrete. The use of these models to design reinforced concrete members, despite being allowed by international standards, show some restrictions related to the type of the recycled aggregate and to the maximum replacement rate of the natural aggregate [8] -[11] .</p>
+<p>Xiao et al. [12] investigated experimentally the mechanical properties of recycled concrete submitted to uniaxial loading in view of the analytical description of its behavior. Through the expression proposed by Guo and Zhang [13] for conventional concrete and adopted by the Chinese Standard GB50010/2002, the authors adapted the variables shown achieving good approximation for the experimental stress-strain curves of the CDW concrete.</p>
+<p>Bhikshma and Kishore [14] applied the expression proposed by Saenz [15] that describes the conventional concrete behavior in the study of recycled concrete submitted to axial compression. The authors concluded that this model describes in a satisfactory way the mixtures of concrete used in the experimental program.</p>
+<p>Du et al. [16] also investigated the mechanical performance of recycled concrete under axial compression load. The description of the ascending branch of the analytical stress-strain curve was based upon a polynomial equation proposed by Guo [17] . An exponential model using three adjustable parameters was proposed for the descending branch. So, the authors could describe theoretical curves very close to the experimental curves.</p>
+<p>The generalization of the conventional concrete constitutive models for recycled concretes is a big challenge for the researchers in this field. The variability in the gravimetric composition of recycled aggregates and the lack of experimental results are factors that hamper the broad validation of the existing analytical models.</p>
+<p>Thus, the main goal of this study is to propose an analytical model that will incorporate the changes in the behavior of concrete resulting from the variation of the recycled aggregate contents and that will provide the adaptation and generalization needed due to the characteristics of the recycled aggregates. This study is also based on the hypothesis that an analytical model with parameters of explicit adjustment can be used. Furthermore, it can make possible such parameters sensitive to the variability of the recycled aggregate and be able to express the changes in the mechanical behavior of the recycled concrete depending on the aggregates replacement rate. Thereby this approach intends to describe the mechanical behavior of CDW recycled concrete in compression using the isotropic damage model by Mazars [18] .</p>
+<p class="E-Title2">1.2. The Isotropic Damage Model in Compression Proposed by Mazars</p>
+<p>Seen from a mathematical point of view, the isotropic damage model proposed by Mazars [18] named in this paper as Mazars model, is a function that combines in a non-linear form two parameters of adjustment, A and B, that express implicitly inherent characteristics to the modeled material.</p>
+<p>Such a function for the uniaxial cases of load, can be written as follows</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/8-1880375x5.png" /><span class="bracketMark">(1)</span></p>
+<p>if <img src="//html.scirp.org/file/8-1880375x6.png" class="200" /> then <img src="//html.scirp.org/file/8-1880375x7.png" class="200" /> (2)</p>
+<p>if <img src="//html.scirp.org/file/8-1880375x8.png" class="200" /> then <img src="//html.scirp.org/file/8-1880375x9.png" class="200" /> (3)</p>
+<p>where,</p>
+<p>σ = uniaxial strength</p>
+<p>ε = deformation in the direction of load application</p>
+<p>ε<sub>eq</sub> = equivalent deformation</p>
+<p>ε<sub>d</sub><sub>0</sub> = peak deformation in tensile strength</p>
+<p>E = initial longitudinal modulus of elasticity</p>
+<p>D = damage</p>
+<p>A and B = adjustment parameters that incorporate material characteristics</p>
+<p>The contribution of each parameter in the mechanical behavior of the material can be obtained through an analysis of parametric influence, similar to the one carried out by &Aacute;lvares [19] .</p>
+<p class="E-Title2">1.3. Model Parameters</p>
+<p>The values of parameters A, B and ε<sub>d</sub><sub>0</sub> were suggested by Mazars [18] for conventional concrete. The intervals of the parameters are expressed as follows</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/8-1880375x10.png" /><span class="bracketMark"></span></p>
+<p>Using these intervals, &Aacute;lvares [19] studied the influence of the parameters of the model in the development of stress-strain curves for uniaxial loads.</p>
+<p>Observing <a href="#f1" target="_self">Figure 1</a>, the following conclusions were drawn</p>
+<p>・ the variation of ε<sub>d</sub><sub>0</sub> (<a href="#f1" target="_self">Figure 1</a>(a)) influences the beginning and initial slope of the non linear branch of the curve, as well as the asymptotic value of σ.</p>
+<p>・ the variation of B (<a href="#f1" target="_self">Figure 1</a>(b)) alters both the initial slope of the non-linear branch and the peak value of the stress-strain curve.</p>
+<p>・ the variation of parameter A (<a href="#f1" target="_self">Figure 1</a>(c)) has an influence in the initial slope of the non-linear branch of the curve and in the value of the horizontal asymptote.</p>
+<p>It can be observed that each parameter has its own specific influence to build the analytical stress-strain curve.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x11.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x12.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x13.png" />(a) (b) (c)</p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Analysis of the parametric influence of (a) ε<sub>d</sub><sub>0</sub>, (b) B and (c) A [19] .</p>
+</div>
+<p>From the understanding of the parametric influence on, it is necessary to establish values for the parameters considering an experimental curve to be adjusted. For &Aacute;lvares [19] this is one of the most delicate phases in the use of a model, mainly when it has only few parameters available for adjustment.</p>
+<p>According to the second fundamental hypothesis of the Mazars model, the damage is caused only by the existence of stretching in at least one of the main directions of deformation [18] . This way, deformation ε<sub>d</sub><sub>0</sub>, corresponding to the peak stress, determines the beginning of the cracking of the analytical model and must be obtained through direct tensile strength or split tensile strength tests in cylindrical samples. Thus, it is necessary to get a definition of an equivalent deformation (ε<sub>eq</sub>) to apply the model in compression loading situations.</p>
+<p>The equivalent deformation that refers to the positive part of the main deformation in direction is defined by Equation (4) as follows</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/8-1880375x14.png" /><span class="bracketMark">(4)</span></p>
+<p>In the case of the split tension test (Equation (5)) and compression test (Equation (6)) we have</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/8-1880375x15.png" /><span class="bracketMark">(5)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/8-1880375x16.png" /><span class="bracketMark">(6)</span></p>
+<p><img src="//html.scirp.org/file/8-1880375x17.png" class="200" />is the only positive deformation in Equation (5) (deformation in the direction of load application). The remainder being eliminated.</p>
+<p>In Equation (6), <img src="//html.scirp.org/file/8-1880375x18.png" class="200" />is negative <img src="//html.scirp.org/file/8-1880375x19.png" class="200" /> and the components in directions 2 and 3 are positive and proportional to the Poisson ratio<img src="//html.scirp.org/file/8-1880375x20.png" class="200" />.</p>
+<p>The values of parameters A and B can be found using a least square regression.</p>
+<p class="E-Title1">2. Methodology</p>
+<p>The damage parameters adjustment using the Mazars model allows a greater reliability of the prediction of the concrete mechanical properties. As seen before, important modifications occur in the behavior of the recycled concrete with the increase of the aggregate substitution rate, which indicates that this variable is of great importance to the adapting of the original model.</p>
+<p>In this paper, the aggregate substitution rate (ASR) was added to the Mazars model as an independent variable directly associated to the parameters A and B. The adapted model will thus be the function of two independent variables ASR and ε, related respectively to the aggregate substitution rate and to the development of the deformation.</p>
+<p>The relationship between the damage parameters (A and B) and the ASR was established based on the observation of experimental stress-strain curves. The variable ASR was evaluated in the interval of 0% to 100% in three points of its domain, the extreme limits 0% and 100% and the central point. The aimed relationship arises, therefore, from the curve that best adjusts the points that were evaluated and can be expressed by a polynomial function.</p>
+<p>The proceeding that follows shows the stages of this evaluation</p>
+<p>・ obtainment of the experimental curves</p>
+<p>・ parametric identification of the experimental curves</p>
+<p>・ obtainment of the functions for the curves “A versus ASR” and “B versus ASR”.</p>
+<p class="E-Title2">2.1. The Experimental Curves</p>
+<p>In this paper the experimental data that were used for the adapting of the Mazars model were obtained by Leite [20] who studied the mechanical behavior of recycled concretes submitted to axial compression and direct tensile strengths to be applied in elements of pre-cast concrete. The CDW used by Leite [20] showed around 54.5% of mortar, 26% of brick and 16.4% of concrete as a gravimetric composition.</p>
+<p>Leite [20] assessed six concrete mixtures varying the replacement rate of the natural aggregate by recycled ones. The author also casted three samples for each mixture. These mixtures were produced with two water/ce- ment ratios (0.45 and 0.80) and are listed below.</p>
+<p>・ Reference-0% of substitution rate, named here as REF</p>
+<p>・ one mixture using 50% of recycled fine aggregate, named here as H-RFA</p>
+<p>・ one mixture using 50% of recycled coarse aggregate, named here as H-RCA</p>
+<p>・ one mixture using 100% of recycled fine aggregate, named here as F-RFA</p>
+<p>・ one mixture using 100% of recycled coarse aggregate, named here as F-RCA</p>
+<p>・ one mixture using 50% of recycled fine aggregate and 50% of recycled coarse aggregate, named here as H-RFCA.</p>
+<p>The experimental curves were achieved from axial compression tests with displacement control at 28 days of age. Leite [20] used a hydraulic servo-controlled machine, model UH-F 1000kN- and a system of data acquisition composed of an ADS2000 conditioner of 16 bits and an AQDados&reg; software.</p>
+<p class="E-Title2">2.2. Parametric Identification of the Experimental Curves</p>
+<p>Applying a regression method to obtain the values of A and B parameters ensures the best adjustment of the model of the experimental data as well as it allows the evaluation of the quality of the adjustment achieved through R<sup>2</sup>. According to &Aacute;lvares [19] , the parametric evaluation must begin by the choice of the error function (Equation (7)) making possible the evaluation of the numeric answer with relation to the experimental one. Using the least squares regression, the error is estimated by Equation (7).</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x21.png" /><span class="bracketMark">(7)</span></p>
+<p>where,</p>
+<p>Err = global error;</p>
+<p><img class="200" data-original="//html.scirp.org/file/8-1880375x22.png" />= function of the discrete experimental values x<sub>i</sub> e y<sub>i</sub>;</p>
+<p><img class="200" data-original="//html.scirp.org/file/8-1880375x23.png" />= function to be adjusted depending on x<sub>i</sub> and the parameters of the model, in this case A and B.</p>
+<p>The adjustment of the Mazars model resulted in a system of coupled equations, not linear, in order to fulfill the conditions established by Equation (7). The solution of systems like these needs iterative methods. So, the Levenberg-Marquardt method was chosen in this study. The initial values of the parameters A and B were the same that were used in conventional concrete as suggested by Mazars [18] . The parametric identification pro- cess was done for each experimental curve obtained by Leite [20] in order to increase the accuracy of the results in a total of 36 compression curves.</p>
+<p class="E-Title2">2.3. Obtaining the Functions for the Curves “A versus ASR” and “B versus ASR”</p>
+<p>The behavior of the parameters of the analytical model in relation to the substitution of aggregates is observed by designing curves that adjust the three points previously chosen in the domain (0%, 50% and 100%). The choice of the adjustment function obeys the following criteria</p>
+<p>・ the curve must necessarily pass through the 3 points that were obtained experimentally</p>
+<p>・ the curve in the intervals between the points (0% to 50% and 50% to 100%) must have a linear or quadratic shape.</p>
+<p class="E-Title1">3. Presentation and Analysis of Results</p>
+<p>Using the average curves of axial and lateral stress-strain of the evaluated mixtures, Leite [20] observed that, in general, the recycled concretes present lower rupture stresses and, comparing a same stress, larger deformations than conventional concretes (reference). <a href="#f2" target="_self">Figure 2</a> shows graphically the behavior of the mixtures for the water/cement ratio of 0.45.</p>
+<p class="E-Title2">3.1. Identification of the Parameters A and B of the Studied Mixtures</p>
+<p>Using the previously presented methodology (Section 2.3), it was possible to obtain values for the parameters of the damage model from the experimental stress-strain curves. As follows, <a href="#f3" target="_self">Figure 3</a> shows the main aspects that were observed in the parametric identification of the model. Then, <a href="#t1" target="_self">Table 1</a> shows the values of the mixture parameters with the water/cement ratio equal to 0.45.</p>
+<p><a href="#f3" target="_self">Figure 3</a> shows graphically the quality of the obtained adjustment through the least square regression. It can be observed that the determination coefficient that was found, 0.988, certifies that the chosen analytical model, even having few adjustment parameters, represents satisfactorily the recycled concrete.</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x24.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Stress-strain curves for the water/cement ratio equal to 0.45 [20] .</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x25.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. Linear adjustment H-RCA with w/c = 0.45, sample 1.</p>
+</div>
+<p><a href="#t1" target="_self">Table 1</a> shows the results of the parametric identification for the mixtures of the water/cement ratio equal to 0.45. It can be observed that the smallest coefficient of determination is 0.910 corresponding to the mixture H-RCA (sample 3). The values achieved for the parameter A are close to the inferior limit of the interval suggested by Mazars [18] for this parameter, the variation found ranges from 0.64 to 1. Regarding the parameter B its values lie between 1045.60 and 2251.62, coherent with the expectations for the applied analytical model.</p>
+<p>For the mixtures with the water/cement ratio equal to 0.80 the values of the parameter A lie between 0.55 and 0.88 and of the parameter B between 1185.50 and 2057.15.</p>
+<p class="E-Title2">3.2. Behavior of the Parameters Referring to ASR</p>
+<p>Using the average of the values that were obtained for the parameters A and B as shown, the curves “A versus ASR” and “B versus ASR” were drawn. Eight representative curves as follow that represent the behavior of each parameter regarding to the aggregates types-RFA and RCA- and the water/cement ratios −0.45 and 0.80 were found. <a href="#f4" target="_self">Figure 4</a> and <a href="#f5" target="_self">Figure 5</a> show the curves that arose and their respective polynomial functions.</p>
+<p>Thus, the model of isotropic damage proposed by Mazars [18] presented in item 1.2 by the Equations (1)-(3), can be adapted to the description of recycled concrete substituting its parameters A and B (originally arbitrated) by polynomial functions that show the degradation of the mechanical properties of the concrete with the substitution of natural aggregates by recycled ones, Equations (8) to (15). Thus, the recycled concrete studied in this paper can be described by the Mazars model using the following functions that result from the behavior shown in <a href="#f4" target="_self">Figure 4</a> and <a href="#f5" target="_self">Figure 5</a>.</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_8-1880375_1.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Parametric identification for mixtures.</p>
+</div>
+<p>・ Mixtures with the w/c = 0.45 and substitution of RFA</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x26.png" /><span class="bracketMark">(8)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x27.png" /><span class="bracketMark">(9)</span></p>
+<p>・ Mixtures with the w/c = 0.45 and substitution of RCA</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x28.png" /><span class="bracketMark">(10)</span></p>
+<p><img class="200" data-original="//html.scirp.org/file/8-1880375x29.png" /> (11)</p>
+<p>・ Mixtures with the w/c = 0.80 and substitution of RFA</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x30.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x31.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. Behavior of the parameters A and B for the w/c = 0.45.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x32.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x33.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. Behavior of the parameters A and B for the w/c = 0.80.</p>
+</div>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x34.png" /><span class="bracketMark">(12)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x35.png" /><span class="bracketMark">(13)</span></p>
+<p>・ Mixtures with the w/c = 0.80 and substitution of RCA</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x36.png" /><span class="bracketMark">(14)</span></p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x37.png" /><span class="bracketMark">(15)</span></p>
+<p class="E-Title2">3.3. Validation of the Adapted Mazars Model</p>
+<p>The evaluation of the efficiency of the model created for the recycled concrete was done through the description of the experimental axial compression curves. The suggested model was implemented in the MATLAB&reg; software. The original equation by Mazars [18] had its parameters A and B substituted by the functions presented in item 3.2 according to the characteristics of the mixtures of the experimental program. As follows, Figures 7-11 show graphically the comparisons for some mixtures.</p>
+<p>It is possible to note that the model proposed by the authors (adapted Mazars) does not exactly describe individually any of the experimental curves for the mixtures with the water/cement of 0.45 as well as for the water/cement ratio of 0.80. However, the curves allow to observe that the adapted Mazars model is able to draw the approximate behavior of recycled concrete for the different substitution contents. This results in a generalized model with analytical curves that are very close to the experimental curves for all the mixtures.</p>
+<p class="E-Title1">4. Numerical Application</p>
+<p>The analytical model validated in the item 3.3 (Figures 6-10) was used in numerical simulations so to represent the behavior under compression of the recycled concrete. Through the finite element method studies of flexural tensile strength were simulated using the mixtures defined in item 2.1 referring to the water/cement ratio equal to 0.80.</p>
+<p>The conditions of geometry and loading for the building of the model followed the guidelines of the Brazilian Standard NBR12142 [21] . <a href="#f11" target="_self">Figure 11</a> shows schematically the configuration of the test.</p>
+<p>The considerations assumed to build the numerical model using the DIANA&reg; software are shown in <a href="#t2" target="_self">Table 2</a>.</p>
+<p>The adapted Mazars model was included in the analyses through stress-strain curves under compression obtained by the substitution of the equations of item 3.2 chosen according to the type of the mixture, in Equation (3), the original Mazars model. The behavior of flexural tensile strength after cracking was represented by a distributed cracking model using the function developed by Hordijk et al. (1986) apud [22] . The band width of</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x38.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x39.png" />(a) (b)</p>
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. Validation of the model for (a) REF and (b) H-RFA both with the w/c = 0.45.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x40.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x41.png" />(a) (b)</p>
+ <p class=" sacImgMarkCss"><a name="f7" id="f7"><span class="cs_fig_con">Figure 7</span></a>. Validation of the model for (a) F-RFA and (b) H-RCA both with the w/c = 0.45.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x42.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x43.png" />(a) (b)</p>
+ <p class=" sacImgMarkCss"><a name="f8" id="f8"><span class="cs_fig_con">Figure 8</span></a>. Validation of the model for (a) F-RCA with the w/c = 0.45 and (b) REF with the w/c = 0.80.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x44.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x45.png" />(a) (b)</p>
+ <p class=" sacImgMarkCss"><a name="f9" id="f9"><span class="cs_fig_con">Figure 9</span></a>. Validation of the model for (a) H-RFA and (b) F-RFA both with the w/c = 0.80.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x46.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x47.png" />(a) (b)</p>
+ <p class=" sacImgMarkCss"><a name="f10" id="f10"><span class="cs_fig_con">Figure 10</span></a>. Validation of the model for (a) H-RCA and (b) F-RCA both with the w/c = 0.80.</p>
+</div>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/8-1880375x48.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f11" id="f11"><span class="cs_fig_con">Figure 11</span></a>. Geometry of the flexural tensile strength test (dimensions in centimeters).</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_8-1880375_2.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Parameters used in the numerical model.</p>
+</div>
+<p>cracking (h) was calculated based on the dimensions of the finite element according to Equation (16) suggested by the DIANA&reg; software user guide.</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x49.png" /><span class="bracketMark">(16)</span></p>
+<p>where,</p>
+<p>S = finite element surface</p>
+<p>The fracture energies (G<sub>f</sub>) that were considered, <a href="#t3" target="_self">Table 3</a>, were calculated for each mixture based on Equation (17) [23] .</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x50.png" /><span class="bracketMark">(17)</span></p>
+<p>where,</p>
+<p>G<sub>f</sub> = fracture energy</p>
+<p>b = parameter with value equal to 85.93;</p>
+<p>b<sub>1</sub> = parameter with value equal to 0.125;</p>
+<p>b<sub>2</sub> = parameter with value equal to 0.211;</p>
+<p>d = maximum size of aggregate;</p>
+<p>d<sub>20</sub> = parameter with value equal to 20 mm;</p>
+<p>t = cure time in days;</p>
+<p>t<sub>30</sub> = parameter with value equal to 30 days;</p>
+<p>λ = parameter with value equal to 1.</p>
+<p><a href="#t3" target="_self">Table 3</a> shows the results that were found from the numerical model and their comparison with the experimental values obtained by Leite [20] . The flexural tensile strength was estimated based on the values obtained in direct tensile strength tests following the Equation (18) proposed by the CEB-FIP 90 [24] .</p>
+<p class="imgPCss"><img class="bracketImgMark" data-original="//html.scirp.org/file/8-1880375x51.png" /><span class="bracketMark">(18)</span></p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_8-1880375_3.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t3" id="t3"><span class="cs_fig_con">Table 3</span></a>. Values used for the fracture energies G<sub>f</sub> and results of numerical modeling.</p>
+</div>
+<p><sup>1</sup>Flexural tensile strength.</p>
+<p>where,</p>
+<p>f<sub>t</sub> = direct tensile strength;</p>
+<p>f<sub>t,fl</sub> = flexural tensile strength;</p>
+<p>h<sub>b</sub> = beam height (mm);</p>
+<p>h<sub>0</sub> = 100 mm.</p>
+<p class="E-Title1">5. Conclusions</p>
+<p>In this article an isotropic damage model was applied for the description of the mechanical behavior of recycled concrete by means of adapting the parameters A and B described by Mazars [18] for conventional concrete. The results presented allow to conclude that</p>
+<p>・ The adapted Mazars model of isotropic damage is able to represent the mechanical behavior of recycled concrete under compression with good approximations. In this paper the determination coefficients found are higher than 0.90;</p>
+<p>・ The hypothesis that the generalization of a constitutive analytical model for recycled concrete is possible through the manipulation of its parameters was confirmed. Using the studies of the influence of the parameters A and B to draw the stress-strain curves under compression it was possible to express through polynomial functions the variation of the values of these parameters with the increase of the replacement rate of the aggregates;</p>
+<p>・ The methodology used allowed that the applying of the Mazars model could be done through the attribution of values of a single variable, replacement rate of the aggregates (ASR). The validation of the model that was created allowed to observe the proximity of the analytical curves, generated by the model in relation to the experimental curves.</p>
+<p class="E-Title1">Acknowledgements</p>
+<p>The authors thank CAPES and CNPq for their financial support to this research.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577643' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Etxeberria, M., V&aacute;squez, E., Mar&iacute;, A. and Barra, M. (2007) Influence of Amount of Recycled Coarse Aggregates and Production Processor Properties of Recycled Aggregate Concrete. Cement and Concrete Research, 37, 735-742. 
+<br/>http://dx.doi.org/10.1016/j.cemconres.2007.02.002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577644' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Leite, M.B. (2001) Evaluation of Mechanical Properties of Concrete Produced with Recycled Aggregates from Construction and Demolition Waste. Ph.D. Thesis, University of Rio Grande do Sul. (In Portuguese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577645' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Maruyama, I., Sogo, M., Sogabe, T., Sato, R. and Kawai, K. (2004) Flexural Properties of Reinforced Concrete Beams. International Rilem Conference on the Use of Recycled Materials in Buildings and Structures, Barcelona, 8-11 November 2004, 526-535.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577646' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Disfani, M.M., Arulrajah, A., Haghighi, H., Mohammadinia, A. and Horpibulsuk, S. (2014) Flexural Beam Fatigue Strength Evaluation of Crushed Brick as a Supplementary Material in Cement Stabilized Recycled Concrete Aggregates. Construction and Building Materials, 68, 667-676. <br/>http://dx.doi.org/10.1016/j.conbuildmat.2014.07.007
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577647' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Rao, M.C., Bhattacharyya, S.K. and Barai, S.V. (2011) Behaviour of Recycled Aggregate Concrete under Drop Weight Impact Load. Construction and Building Materials, 25, 69-80. <br/>http://dx.doi.org/10.1016/j.conbuildmat.2010.06.055
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577648' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Reis, C.N.S., Leite, M.B. and Lima, P.R.L. (2011) Influence of the Diameter of the Bar and CDW Content on the Bond Behavior of Recycled Reinforced Concrete. 2nd International RILEM Conference on Progress on Recycling in the Built Environment, S&atilde;o Paulo, 2-4 December 2009, 207-214.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577649' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Seara-Paz, S., Gonz&aacute;lez-Fonteboa, B., Eiras-López, J. and Herrador, M.F. (2014) Bond Behavior between Steel Reinforcement and Recycled Concrete. Materials and Structures, 47, 323-334. 
+<br/>http://dx.doi.org/10.1617/s11527-013-0063-z
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577650' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        LNEC E 471 (2006) Guideline of Utilization of Coarse Recycled Aggregates in Hydraulic Cementing Based Concrete. National Laboratory of Civil Engineering, Portugal. (In Portuguese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577651' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Ministry of Fomento (2011) Code on Structural Concrete. Ministry of Fomento, Spain. (In Spanish)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577652' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        RILEM TC 121-DRG (1994) Specifications for Concrete with Recycled Aggregates. Materials and Structures, 27, 557-559.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577653' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Grübl, P. and Rühl, M. (1998) German Committee for Reinforced Concrete (DafStb) Code: Concrete with Recycled Aggregate. In: Dhir, R.K., Henderson, N.A. and Limbachiya, M.C., Eds., Sustainable Construction: Use of Recycled Concrete Aggregate, Thomas Telford Publishing, London, 409-418.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577654' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Xiao, J.Z., Li, J.B. and Zhang, C. (2005) Mechanical Properties of Recycled Aggregate Concrete under Uniaxial Loading. Cement and Concrete Research, 35, 1187-1194. <br/>http://dx.doi.org/10.1016/j.cemconres.2004.09.020
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577655' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Guo, Z.H. and Zhang, X.Q. (1982) Experimental Investigation of Stress-Strain Curves for Concrete. Journal of Building and Structure, 3, 1-12.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577656' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Bhikshma, V. and Kishore, R. (2010) Development of Stress-Strain Curves for Recycled Aggregate Concrete. Asian Journal of Civil Engineering (Building and Housing), 11, 253-261.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577657' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Saenz, L.P. (1964) Discussion of Paper “Equation for Stress-Strain Curve of Concrete” by Desai, P. and Krishnan, S. Journal of American Concrete Institute, 61, 1229-1235.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577658' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Du, T., Wang, W.H., Liu, Z.X., Lin, H.L. and Guo, T.P. (2010) The Complete Stress-Strain Curve of Recycled Aggregate Concrete under Uniaxial Compression Loading. Journal of Wuhan University of Technology-Mater, 25, 862-865. 
+<br/>http://dx.doi.org/10.1007/s11595-010-0109-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577659' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Guo, Z.H. (1997) The Strength and Deformation of Concrete (Experimental Basis and Constitutive Relationship). Tsinghua University Press, Beijing.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577660' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Mazars, J. (1984) Application of Continuous Damage Mechanic to Non-Linear Behavior of Concrete Structures. PhD Thesis, Paris 6 University, Paris. (in French)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577661' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        &AACUTE;lvares, M.S. (1993) Study of Concrete Damage Model: Formulation, Parametric Identification and Numerical Application Using Finite Element Method. Dissertation (M.Sc.), S&atilde;o Paulo University, S&atilde;o Carlos. (in Portuguese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577662' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Leite, M.B. (2009) Stress-Strain Behavior Evaluation of Recycled Concrete under Compressive and Direct Tensile Strength. Monograph of Progression of Professor from State University of Feira de Santana. (in Portuguese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577663' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Brazilian Standard (ABNT) (1994) NBR 12142: Concrete-Determination of Tensile Strength in Flexion in Test. Rio de Janeiro. (in Portuguese)
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577664' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        DIANA (2005) User’s Manual—Release 9.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577665' target='_blank'>23</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref23" id="ref23"></a>
+                                        Xiao, J.Z., Li, W.G. and Poon, C.S. (2012) Recent Studies on Mechanical Properties of Recycled Aggregate Concrete in China—A Review. Science China Technological Sciences, 55, 1463-1480. 
+<br/>http://dx.doi.org/10.1007/s11431-012-4786-9
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1577666' target='_blank'>24</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref24" id="ref24"></a>
+                                        CEB-FIP Model Code (1990) Design Code. Committee Euro-International du Beton, Lausanne, Thomas Telford Services Ltd., London.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=788" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=788" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=788" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=788" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=788"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=788"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=788" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=788" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=788" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=788" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=788" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=788"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=788"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=788" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=788&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=788&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=788" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=788" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=788" target="_blank">OJCE
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=788" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=788" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=788" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=788" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=788" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=788" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=788" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/ojce.2015.53034" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60051 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +788 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +788 +"&paperid=" +60051 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

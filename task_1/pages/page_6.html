@@ -1,0 +1,1518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	A Configuration for Realizing Voltage  Controlled Floating Inductance and Its  Application
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/CS_2015092817113357.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60006" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60006.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60006" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60006" />
+<meta property="og:title" content="A Configuration for Realizing Voltage  Controlled Floating Inductance and Its  Application" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/CS2016042217101261.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/CS2016042217101261.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="A Configuration for Realizing Voltage  Controlled Floating Inductance and Its  Application" />
+<meta name="keywords" content="Inductance Simulation,Voltage-Controlled Impedances,Multiplier,Filter,Oscillator,Current Feedback Operational Amplifier" />
+<meta name="description" content="Discover a powerful configuration using AD844 and AD534 amplifiers for Voltage Controlled Floating Inductance. Explore band pass filters, notch filters, and Hartley oscillators with simulation results. Unleash the workability of this innovative configuration." />
+<meta name="citation_journal_title" content="Circuits and Systems" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Praween K. Sinha;Dr Neelam Sharma;Rohit Mishra" />
+<meta name="citation_author" content="Praween K. Sinha" />
+<meta name="citation_author" content="Dr Neelam Sharma" />
+<meta name="citation_author" content="Rohit Mishra" />
+<meta name="citation_title" content="A Configuration for Realizing Voltage  Controlled Floating Inductance and Its  Application" />
+<meta name="citation_volume" content="6" />
+<meta name="citation_date" content="2015-09-28" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/cs.2015.69020" />
+<meta name="citation_issnPrint" content="2153-1285" />
+<meta name="citation_issnOnline" content="2153-1293" />
+<meta name="citation_abstract" content="A configuration using current feedback amplifiers AD844 and multiplier AD534 has been presented, which is capable of realizing Voltage Controlled Floating Inductance (proportional and in-verse proportional). The application of band pass filter in Figure 4(a), notch filter in Figure 5(a) and Hartley oscillator in Figure 6(a) and simulation result in Figures 4(b)-(d), Figures 5(b)-(d), Figures 6(b)-(d) shows the workability of proposed configuration." />
+<meta name="citation_publication_date" content="2015/9/28" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/CS_2015092817113357.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/CS_2015092817113357.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60006" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60006" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60006" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60006.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60006.xml" />
+<meta name="citation_issue" content="9" />
+<meta name="citation_online_date" content="2015/9/28" />
+<meta name="citation_firstpage" content="189" />
+<meta name="citation_lastpage" content="199" />
+
+<meta name="dc.title" content="A Configuration for Realizing Voltage  Controlled Floating Inductance and Its  Application" />
+
+<meta name="dc.creator" content="Praween K. Sinha" />
+<meta name="dc.creator" content="Dr Neelam Sharma" />
+<meta name="dc.creator" content="Rohit Mishra" /><meta name="dcterms.issued" content="2015-09-28" />
+<meta name="dc.description" content="A configuration using current feedback amplifiers AD844 and multiplier AD534 has been presented, which is capable of realizing Voltage Controlled Floating Inductance (proportional and in-verse proportional). The application of band pass filter in Figure 4(a), notch filter in Figure 5(a) and Hartley oscillator in Figure 6(a) and simulation result in Figures 4(b)-(d), Figures 5(b)-(d), Figures 6(b)-(d) shows the workability of proposed configuration." />
+<meta name="dc.source" content="Circuits and Systems" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-28" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/cs.2015.69020" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-28" />
+<meta name="prism.issnPrint" content="2153-1285" />
+<meta name="prism.issnOnline" content="2153-1293" />
+<meta name="prism.publicationName" content="Circuits and Systems" />
+<meta name="prism.publicationDate" content="2015-09-28" />
+<meta name="prism.volume" content="6" />
+<meta name="prism.number" content="9" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="189" />
+<meta name="prism.doi" content="10.4236/cs.2015.69020" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60006" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAlUPFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTI4ZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAXuAjxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9UHJhd2VlbitLLisrU2luaGEmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5QcmF3ZWVuIEsuICBTaW5oYTwvYT48c3VwPjwvc3VwPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1EcitOZWVsYW0rK1NoYXJtYSZzZWFyY2hmaWVsZD1hdXRob3JzJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkRyIE5lZWxhbSAgU2hhcm1hPC9hPjxzdXA+PC9zdXA+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPVJvaGl0KytNaXNocmEmc2VhcmNoZmllbGQ9YXV0aG9ycyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5Sb2hpdCAgTWlzaHJhPC9hPjxzdXA+PC9zdXA+IGQCAg9kFgJmDxYCHwQFoAI8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUVsZWN0cm9uaWNzK2FuZCtDb21tdW5pY2F0aW9uK0RlcGFydG1lbnQlMmMrTWFoYXJhamErQWdyYXNlbitJbnN0aXR1dGUrb2YrVGVjaG5vbG9neSUyYytOZXcrRGVsaGklMmMrSW5kaWEmc2VhcmNoZmllbGQ9YWZmcyZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz5FbGVjdHJvbmljcyBhbmQgQ29tbXVuaWNhdGlvbiBEZXBhcnRtZW50LCBNYWhhcmFqYSBBZ3Jhc2VuIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5LCBOZXcgRGVsaGksIEluZGlhPC9hPi48YnIgLz5kAgUPFgIfBAUFMyw2ODlkAgYPFgIfBAUFNCw0ODJkAgcPFgIfAwUPRGlzcGxheTppbmxpbmU7ZAIID2QWAgIBDxYCHwQFzQU8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPUluZHVjdGFuY2UrU2ltdWxhdGlvbiZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPkluZHVjdGFuY2UgU2ltdWxhdGlvbjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K1ZvbHRhZ2UtQ29udHJvbGxlZCtJbXBlZGFuY2VzJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFZvbHRhZ2UtQ29udHJvbGxlZCBJbXBlZGFuY2VzPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rTXVsdGlwbGllciZzZWFyY2hmaWVsZD1rZXl3b3JkJnBhZ2U9MScgdGFyZ2V0PSdfYmxhbmsnPiBNdWx0aXBsaWVyPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rRmlsdGVyJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEZpbHRlcjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K09zY2lsbGF0b3Imc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gT3NjaWxsYXRvcjwvYT4sIDxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9K0N1cnJlbnQrRmVlZGJhY2srT3BlcmF0aW9uYWwrQW1wbGlmaWVyJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IEN1cnJlbnQgRmVlZGJhY2sgT3BlcmF0aW9uYWwgQW1wbGlmaWVyPC9hPiBkAgoPFgIfBAW1AlNpbmhhLCBQLiAsIFNoYXJtYSwgRC4gIGFuZCBNaXNocmEsIFIuICAgKDIwMTUpIEEgQ29uZmlndXJhdGlvbiBmb3IgUmVhbGl6aW5nIFZvbHRhZ2UgIENvbnRyb2xsZWQgRmxvYXRpbmcgSW5kdWN0YW5jZSBhbmQgSXRzICBBcHBsaWNhdGlvbi4gPGk+Q2lyY3VpdHMgYW5kIFN5c3RlbXM8L2k+LCA8Yj42PC9iPiwgMTg5LTE5OS4gZG9pOiA8YSBocmVmPSdodHRwOi8vZHguZG9pLm9yZy8xMC40MjM2L2NzLjIwMTUuNjkwMjAnIHRhcmdldD0nX2JsYW5rJyBvbmNsaWNrPSdTZXROdW0oNjAwMDYpJz4xMC40MjM2L2NzLjIwMTUuNjkwMjA8L2E+LmQCCw8WAh8EBS1UaGUgYXV0aG9ycyBkZWNsYXJlIG5vIGNvbmZsaWN0cyBvZiBpbnRlcmVzdC5kAg0PFgIeC18hSXRlbUNvdW50AhEWImYPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjQ2MicgdGFyZ2V0PSdfYmxhbmsnPjE8L2E+XQExATHQAU5heSwgSy5XLiBhbmQgQnVkYWssIEEuICgxOTgzKSBBIFZvbHRhZ2UtQ29udHJvbGxlZCBSZXNpc3RhbmNlIHdpdGggV2lkZSBEeW5hbWljIFJhbmdlIGFuZCBObyBEaXN0b3J0aW9uLiBJRUVFIFRyYW5zYWN0aW9uIG9uIENpcmN1aXRzIGFuZCBTeXN0ZW1zLCAzMCwgNzcwLTc3Mi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5L1RDUy4xOTgzLjEwODUyOTBkAgEPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjQ2MycgdGFyZ2V0PSdfYmxhbmsnPjI8L2E+XQEyATKoAU5heSwgSy5XLiBhbmQgQnVkYWssIEEuICgxOTg1KSBBIFZhcmlhYmxlIE5lZ2F0aXZlIFJlc2lzdGFuY2UuIElFRUUgVHJhbnNhY3Rpb25zIG9uIENpcmN1aXRzIGFuZCBTeXN0ZW1zLCAzMiwgMTE5My0xMTk0LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvVENTLjE5ODUuMTA4NTYzN2QCAg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDY0JyB0YXJnZXQ9J19ibGFuayc+MzwvYT5dATMBM7MBU2VuYW5pLCBSLiBhbmQgQmhhc2thciwgRC5SLiAoMTk5MSkgUmVhbGl6YXRpb24gb2YgVm9sdGFnZS1Db250cm9sbGVkIEltcGVkYW5jZXMuIElFRUUgVHJhbnNhY3Rpb25zIG9uIENpcmN1aXRzIGFuZCBTeXN0ZW1zLCAzOCwgMTA4MS0xMDg2LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvMzEuODM4NzlkAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjQ2NScgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATTGAVNlbmFuaSwgUi4gYW5kIEJoYXNrYXIsIEQuUi4gKDE5OTIpIEEgU2ltcGxlIENvbmZpZ3VyYXRpb24gZm9yIFJlYWxpemluZyBWb2x0YWdlLUNvbnRyb2xsZWQgSW1wZWRhbmNlcy4gSUVFRSBUcmFuc2FjdGlvbnMgb24gQ2lyY3VpdHMgYW5kIFN5c3RlbXMsIDM5LCA1Mi01OS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMTA5LzgxLjEwOTI0NGQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDY2JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNcgBU2VuYW5pLCBSLiBhbmQgQmhhc2thciwgRC5SLiAoMTk5NCkgVmVyc2F0aWxlIFZvbHRhZ2UtQ29udHJvbGxlZCBJbXBlZGFuY2UgQ29uZmlndXJhdGlvbi4gSUVFRSBQcm9jZWVkaW5nc+KAlCBDaXJjdWl0cyBEZXZpY2VzIGFuZCBTeXN0ZW1zLCAxNDEsIDQxNC00MTYuIDxici8+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTA0OS9pcC1jZHM6MTk5NDEyOTZkAgUPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjQ2NycgdGFyZ2V0PSdfYmxhbmsnPjY8L2E+XQE2ATa3AVNlbmFuaSwgUi4gKDE5OTUpIFVuaXZlcnNhbCBMaW5lYXIgVm9sdGFnZS1Db250cm9sbGVkIEltcGVkYW5jZSBDb25maWd1cmF0aW9uLiBJRUUgUHJvY2VlZGluZ3PigJRDaXJjdWl0cyBEZXZpY2VzIGFuZCBTeXN0ZW1zLCAxNDIsIDIwOC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDQ5L2lwLWNkczoxOTk1MTk0NGQCBg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDY4JyB0YXJnZXQ9J19ibGFuayc+NzwvYT5dATcBN5YBTmRqb3VudGNoZSwgVC4gKDE5OTYpIExpbmVhciBWb2x0YWdlLUNvbnRyb2xsZWQgSW1wZWRhbmNlIEFyY2hpdGVjdHVyZS4gRWxlY3Ryb25pY3MgTGV0dGVycywgMzIsIDE1MjgtMTUyOS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDQ5L2VsOjE5OTYxMDIwZAIHD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0NjknIHRhcmdldD0nX2JsYW5rJz44PC9hPl0BOAE4/QFMZXVjaXVjLCBBLiBhbmQgR29yYXMsIEwuICgxOTk4KSBOZXcgR2VuZXJhbCBJbW1pdHRhbmNlIENvbnZlcnRlciBKRkVUIFZvbHRhZ2UtQ29udHJvbGxlZCBJbXBlZGFuY2VzIGFuZCBUaGVpciBBcHBsaWNhdGlvbnMgdG8gQ29udHJvbGxlZCBCaXF1YWRzIFN5bnRoZXNpcy4gSUVFRSBUcmFuc2FjdGlvbnMgb24gQ2lyY3VpdHMgYW5kIFN5c3RlbXMsIDQ1LCA2NzgtNjgyLiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjExMDkvODEuNjc4NDk0ZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0NzAnIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5pgFTZW5hbmksIFIuICgxOTk0KSBSZWFsaXNhdGlvbiBvZiBMaW5lYXIgVm9sdGFnZS1Db250cm9sbGVkIFJlc2lzdGFuY2UgaW4gRmxvYXRpbmcgRm9ybS4gRWxlY3Ryb25pY3MgTGV0dGVycywgMzAsIDE5MDktMTkxMS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDQ5L2VsOjE5OTQxMzEzZAIJD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0NzEnIHRhcmdldD0nX2JsYW5rJz4xMDwvYT5dAjEwAjEwoAFTZW5hbmksIFIuICgxOTk1KSBGbG9hdGluZyBHTklDL0dOSUkgQ29uZmlndXJhdGlvbiBSZWFsaXplZCB3aXRoIE9ubHkgYSBTaW5nbGUgT01BLiBFbGVjdHJvbmljcyBMZXR0ZXJzLCAzMSwgNDIzLTQyNC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDQ5L2VsOjE5OTUwMjg3ZAIKD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0NzInIHRhcmdldD0nX2JsYW5rJz4xMTwvYT5dAjExAjExsQFLaXJhbm9uLCBXLiBhbmQgUGF3YXJhbmdrb29uLCBQLiAoMTk5NykgRmxvYXRpbmcgSW5kdWN0YW5jZSBTaW11bGF0aW9uIEJhc2VkIG9uIEN1cnJlbnQgQ29udmV5b3JzLiBFbGVjdHJvbmljcyBMZXR0ZXJzLCAzMywgMTc0OC0xNzQ5LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwNDkvZWw6MTk5NzEyMDJkAgsPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjQ3MycgdGFyZ2V0PSdfYmxhbmsnPjEyPC9hPl0CMTICMTKmAUFidWVsbWFhdHRpLCBNLlQuICgxOTk4KSBDb21tZW50OiBGbG9hdGluZyBJbmR1Y3RhbmNlIFNpbXVsYXRpb24gQmFzZWQgb24gQ3VycmVudCBDb252ZXlvcnMuIEVsZWN0cm9uaWNzIExldHRlcnMsIDM0LCAxMDM3LiA8YnIvPmh0dHA6Ly9keC5kb2kub3JnLzEwLjEwNDkvZWw6MTk5ODA3NDNkAgwPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3NjQ3NCcgdGFyZ2V0PSdfYmxhbmsnPjEzPC9hPl0CMTMCMTP4AUxheW9zLCBNLkMuIGFuZCBIYXJpdGFudGlzLCBJLiAoMTk5NykgT24gdGhlIERlcml2YXRpb24gb2YgQ3VycmVudC1Nb2RlIEZsb2F0aW5nIEluZHVjdG9ycy4gSW50ZXJuYXRpb25hbCBKb3VybmFsIG9mIENpcmN1aXQgVGhlb3J5IGFuZCBBcHBsaWNhdGlvbnMsIDI1LCAyOS0zNi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDAyLyhTSUNJKTEwOTctMDA3WCgxOTk3MDEvMDIpMjU6MTwyOTo6QUlELUNUQTk0OD4zLjAuQ087Mi0jZAIND2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0NzUnIHRhcmdldD0nX2JsYW5rJz4xNDwvYT5dAjE0AjE09wFZdWNlLCBFLiwgQ2ljZWtvZ2x1LCBPLiBhbmQgTWluYWVpLCBTLiAoMjAwNikgQ0NJSS1CYXNlZCBHcm91bmRlZCB0byBGbG9hdGluZyBJbW1pdHRhbmNlIENvbnZlcnRlciBhbmQgYSBGbG9hdGluZyBJbmR1Y3RhbmNlIFNpbXVsYXRvci4gQW5hbG9nIEludGVncmF0ZWQgQ2lyY3VpdHMgYW5kIFNpZ25hbCBQcm9jZXNzaW5nLCA0NiwgMjg3LTI5MS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDA3L3MxMDQ3MC0wMDYtMTYyNC03ZAIOD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0NzYnIHRhcmdldD0nX2JsYW5rJz4xNTwvYT5dAjE1AjE11wFFbHdhbiwgSC5PLiBhbmQgU29saW1hbiwgQS4gKDE5OTcpIE5vdmVsIENNT1MgRGlmZmVyZW50aWFsIFZvbHRhZ2UgQ3VycmVudCBDb252ZXlvciBhbmQgSXRzIEFwcGxpY2F0aW9ucy4gSUVFRSBQcm9jZWVkaW5nc+KAlENpcmN1aXRzIERldmljZXMgYW5kIFN5c3RlbXMsIDE0NCwgMTk1LTIwMC4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDQ5L2lwLWNkczoxOTk3MTA4MWQCDw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc2NDc3JyB0YXJnZXQ9J19ibGFuayc+MTY8L2E+XQIxNgIxNpQCTmRqb3VudGNoZSwgVC4sIFVuYmVoYXVlbiwgUi4gYW5kIEx1bywgRi5MLiAoMTk5OSkgRWxlY3Ryb25pY2FsbHkgVHVuYWJsZSBHZW5lcmFsaXplZCBJbXBlZGFuY2UgQ29udmVydGVyIFN0cnVjdHVyZXMuIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBDaXJjdWl0IFRoZW9yeSBhbmQgQXBwbGljYXRpb25zLCAyNywgNTE3LTUyMi4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDAyLyhTSUNJKTEwOTctMDA3WCgxOTk5MDkvMTApMjc6NTw1MTc6OkFJRC1DVEE3Nj4zLjAuQ087Mi1ZZAIQD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzY0NzgnIHRhcmdldD0nX2JsYW5rJz4xNzwvYT5dAjE3AjE3YlNlbmFuaSwgUi4gKDE5OTYpIE5vdmVsIExpbmVhciBWb2x0YWdlIENvbnRyb2xsZWQgRmxvYXRpbmctSW1wZWRhbmNlIENvbmZpZ3VyYXRpb25zLiBFTEwvOTYvNTM0NTAuZAIID2QWBAIHDxYCHwMFDURpc1BsYXk6Tm9uZTtkAggPFgIfAwUNRGlzUGxheTpOb25lO2QCCw9kFgJmDxYCHgdWaXNpYmxlZ2QCDA9kFgICAQ9kFgICAQ9kFgICAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQlTaG9ydE5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlKb3VybmFsSUQeC18hRGF0YUJvdW5kZ2QQFYACDlNlbGVjdCBKb3VybmFsAkFBA0FBRANBQVIGQUFTb2NpBEFBU1QDQUJCA0FCQwRBQkNSBEFDRVMDQUNTA0FDVAJBRANBRFICQUUDQUVSA0FIUwNBSUQDQWlNA0FJVARBSkFDA0FKQwRBSkNDBEFKQ00FQUpJQk0EQUpNQgRBSk9SBEFKUFMFQUxBTVQDQUxDA0FMUwJBTQNBTUkEQU1QQwNBTlADQVBEA0FQRQNBUE0DQVJTBUFSU2NpAkFTA0FTTQNCTFICQ0MCQ0UHQ2VsbEJpbwZDaG5TdGQCQ00DQ01CAkNOBENSQ00CQ1MEQ1NUQQNDVVMFQ1dFRUUJRGV0ZWN0aW9uBEVNQUUDRU5HA0VQRQRFVFNOBEZNQVIDRk5TA0dFUANHSVMCR00IR3JhcGhlbmUDR1NDBkhlYWx0aAJJQgNJQ0EDSUlNBElKQUEGSUpBTVNDBUlKQ0NFBElKQ00FSUpDTlMDSUpHBUlKSURTBElKSVMGSUpNTlRBCElKTVBDRVJPBElKTk0ESUpPQwZJSk9ITlMLSW5mcmFNYXRpY3MFSkFDRU4ESkFNUAVKQVNNSQRKQkJTBUpCQ1BSBUpCaVNFA0pCTQRKQk5CBEpCUEMDSkNDBUpDRFNBBEpDUFQDSkNUBUpEQUlQA0pETQRKRUFTBUpFQ1RDBUpFTUFBA0pFUAVKRkNNVgRKRlJNBEpHSVMGSkhFUEdDBUpIUlNTBkpJQlRWQQVKSUxTQQNKSVMDSk1GBkpNR0JORAVKTU1DRQNKTVAESlBFRQRKUUlTBEpTQlMESlNFQQZKU0VNQVQESlNJUANKU1MESlNTTQNKU1QDSlRSBEpUU1QESlRUcwVKV0FSUANMQ0UCTUMCTUUCTUkDTU1FBU1OU01TA01QUwJNUgNNUkMDTVJJA01TQQRNU0NFBE5KR0MCTk0CTlICTlMFT0FMaWIGT0FMaWJKBE9ERU0DT0pBBE9KQUIGT0pBY2N0Bk9KQW5lcwRPSkFQBU9KQXBvBk9KQXBwUwVPSkFQcgRPSkFTBE9KQkQHT0pCSVBIWQRPSkJNA09KQwRPSkNCBE9KQ0QET0pDRQRPSkNNA09KRAVPSkRlcgRPSkRNA09KRQRPSkVFBE9KRU0FT0pFTUQFT0pFcGkET0pFUgNPSkYET0pGRANPSkcFT0pHYXMFT0pHZW4DT0pJBE9KSUMET0pJTQVPSklOTQNPSkwDT0pNBE9KTUMHT0pNZXRhbARPSk1IBE9KTUkFT0pNSVAET0pNTARPSk1NBE9KTU4ET0pNUARPSk1TBU9KTVNpA09KTgZPSk5lcGgDT0pPBE9KT0cGT0pPR2FzBE9KT3AFT0pPcGgFT0pPUE0FT0pPVFMLT0pQYXRob2xvZ3kET0pQQwdPSlBDaGVtBU9KUGVkBE9KUE0ET0pQUARPSlBTB09KUHN5Y2gET0pSQQVPSlJhZARPSlJEBE9KUk0DT0pTBE9KU1MFT0pTU1QET0pTVAVPSlNUQQRPSlRSBE9KVFMDT0pVBE9KVk0DT1BKA1BPUwJQUANQU1QFUFNZQ0gDU0FSA1NDRARTR1JFAlNNAlNOA1NOTARTb2Z0AlNTA1RFTAJUSQRVT0FKAlZQA1dFVANXSkEEV0pDRAVXSkNNUARXSkNTBFdKRVQDV0pNBFdKTlMFV0pOU0UFV0pOU1QDV0pWA1dTTgJZTRWAAgEwAzczNwQxNDA4BDE0MDYEMTAwMgQyNDIzAzE2NAM2MTEEMTQ3OAM0NzMDNDkyBDE1NzkEMjQzNwQyNDQyBDI0NDQEMjQyNgQyMzE2AzgwMwQxMDAwAzQ3NgMyMDMEMjQyMgQxMzA0AzUzNQM4ODQDNTMyAzUyOQMyMDcDOTk2BDE1MTcEMjMxNwMxNjADNDc3AzY3NQQxNTczBDE1NzQDNzQzAzUxMwQxNTc1BDI0NDUDMTkxAzgxMgMyNjAEMjQ1NQMxMzYEMjA3NAQxNDkzAzEyMgM5ODkCOTIEMjAzMwMxNzMEMTQ5MgQyNDM4BDE1MTgEMjQ1NAQyNDU3AjY0AjkzBDEzMTEEMjMxNQMyMDgEMjQzMgQyNDYyAzU0MQQxNjkwAzUxMgI2NQMxMDMDMTc2AzExMQM0OTAEMjQ0OQQxMzkxAzIwMgE0AzIwOQQyNDI4Azc0NwQxMjYxBDE1NzgEMTUxOQM1MjcEMTQ3NwQxMjk4BDE5ODAEMjQzNgM1MjUDNDc1BDI0NDMCMzAEMjQzNQMyMzADMTYyBDI0MzEDNTMwAzUyNgMxMjUEMjQyNQM0NzkDNTMxAzY5MQIyOQMxNDQEMTk4NgQxMzk1AzExNAQyNDYxBDI0MjEEMTQxMQMxMDIDMTc1AzY0OAMzOTcEMTc1MwMxNzIEMjQzMwM1OTEDOTkwAjQ1AzU0MwMzMzkEMjQzMAIyOAM0NzgEMjQzOQQyNDYwAzM1NwI0NgMyMTAEMTQ4NQMxNjMDNzg3Azc4NgM5MTcDODE1BDI0NDEEMTQ4NwQxNTc2AzE3NAQyNDM0AzUyOAMyMDUDMTkyAjY5BDI0NTkEMjQ2MwQyNDUzAzczOAQxNDgwBDE1OTADODE0BDE0MDcEMTQ3OQQxMDAzBDI0NDYDNjAxAzgwNgM3ODUEMjQ0NwQyNDUyAzk5NwM2MDYDNzg4Azc5MgQxOTc3AzgxMAM1ODYDNjE0BDE1NzcEMjQ1NgM4MTEDODE2BDE5NzkDNzM2BDEwMDQDNTg3AzgxNwM2MTMDNjAyAzU5MgM1OTMDNzkzBDExODYDNTg4Azc5MAM3ODQDNzM5AzgyMAM2MTIDNzQyAzk5OQM4MjIDOTk4AzU5NgQyNDI0AzYwNQM4MjEDODA0AzYwNAQyNDY0BDE5NzgDODA1Azc5NAM4MjMDODEzAzU4OQM3OTEDNjA5AzYxMAM3NDEDNzQ0AzYwMwM4MDcDNzg5AzgyNAQxMzk0AzU5MAM3MzUDNjAwAzYwNwQxNDg2BDI0NDgDODA4AzUwOQQxMDAxAzU0NwI3MQMyMDYEMjQ0MAMxNDgEMjQ1MAM1MzMDMTM1AzQ3NAQxNTg5AzQ5MQQyMDM0AzIwNAM2NjYDMTA0BDE0MDUEMjQ1OAMxNDYDNTExAzgxOAM1MDIDODA5BDI0NTEDNTA2AzYxNQM0OTMDNTM0AzUxMAI0MQQyNDY1FCsDgAJnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkPJios/DDtb1lmsKV58c2XLZP0SNERgU5hZA916VGoWA=" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=173" title="Circuits and Systems">
+                    Circuits and Systems</a> &gt; <a href="home?issueid=7013#60006">Vol.6 No.9, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                A Configuration for Realizing Voltage  Controlled Floating Inductance and Its  Application <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Praween+K.++Sinha&searchfield=authors&page=1' target='_blank'>Praween K.  Sinha</a><sup></sup>, <a href='articles?searchcode=Dr+Neelam++Sharma&searchfield=authors&page=1' target='_blank'>Dr Neelam  Sharma</a><sup></sup>, <a href='articles?searchcode=Rohit++Mishra&searchfield=authors&page=1' target='_blank'>Rohit  Mishra</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Electronics+and+Communication+Department%2c+Maharaja+Agrasen+Institute+of+Technology%2c+New+Delhi%2c+India&searchfield=affs&page=1' target='_blank'>Electronics and Communication Department, Maharaja Agrasen Institute of Technology, New Delhi, India</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/cs.2015.69020"
+                    target="_blank" onclick='SetNum(60006)'>10.4236/cs.2015.69020</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/CS_2015092817113357.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60006)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60006' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60006.xml' target='_blank' onclick='SetNum(60006)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    3,689</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    4,482</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60006&JournalID=173' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">A configuration using current feedback amplifiers AD844 and multiplier AD534 has been presented, which is capable of realizing Voltage Controlled Floating Inductance (proportional and in-verse proportional). The application of band pass filter in Figure 4(a), notch filter in Figure 5(a) and Hartley oscillator in Figure 6(a) and simulation result in Figures 4(b)-(d), Figures 5(b)-(d), Figures 6(b)-(d) shows the workability of proposed configuration.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Inductance+Simulation&searchfield=keyword&page=1' target='_blank'>Inductance Simulation</a>, <a href='articles?searchcode=+Voltage-Controlled+Impedances&searchfield=keyword&page=1' target='_blank'> Voltage-Controlled Impedances</a>, <a href='articles?searchcode=+Multiplier&searchfield=keyword&page=1' target='_blank'> Multiplier</a>, <a href='articles?searchcode=+Filter&searchfield=keyword&page=1' target='_blank'> Filter</a>, <a href='articles?searchcode=+Oscillator&searchfield=keyword&page=1' target='_blank'> Oscillator</a>, <a href='articles?searchcode=+Current+Feedback+Operational+Amplifier&searchfield=keyword&page=1' target='_blank'> Current Feedback Operational Amplifier</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Sinha, P. , Sharma, D.  and Mishra, R.   (2015) A Configuration for Realizing Voltage  Controlled Floating Inductance and Its  Application. <i>Circuits and Systems</i>, <b>6</b>, 189-199. doi: <a href='http://dx.doi.org/10.4236/cs.2015.69020' target='_blank' onclick='SetNum(60006)'>10.4236/cs.2015.69020</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                     
+<p></p>      
+<p class="E-Title1">1. Introduction</p> 
+<p>Simulation of inductor has been popular area of analog circuit research. Due to the well known difficulties of realizing on chip inductors of moderate to high values and high quality factors, simulated inductors have been the alternative choice for realizing inductor-based integrated circuit. Simulated inductors are also useful in discrete designs in which case they can replace bulky Passive inductors and after the advantages of reduced size, reduced cost and complete elimination of undesirable mutual coupling when several inductors are being used in a circuit.</p> 
+<p>Electronically controlled inductor such as voltage controlled floating inductance finds application in automatic gain controller, filter and oscillator circuit. A number of configuration using a variety of active elements such as op-amps, operational-mirrored amplifier, current controlled conveyors, OTA and Combination have so far been presented in the literature for realizing such elements in Floating Form [1] -[16] .</p> 
+<p>Recently, the current feedback op-amps (CFOAs) such as AD844 have attracted considerable attention in literature as alternative building blocks for analog circuit design due to the following advantages</p> 
+<p>i) Widen bandwidth that is relatively independent closed loop gain.</p> 
+<p>ii) Very high slew rate (2000 V/us).</p> 
+<p>iii) Ease of realizing various functions with least number of external passive components.</p> 
+<p>The main objective of paper is therefore to present a new configuration which is capable of realizing voltage controlled Floating inductance both in proportional and inversely proportional form and its application.</p> 
+<p>The paper is organized as follow:</p> 
+<p><a href="#f1" target="_self">Figure 1</a>(a) is the basic terminal equation of CFOA.</p> 
+<p><a href="#f1" target="_self">Figure 1</a>(b) is the basic structure of multiplier.</p> 
+<p><a href="#f2" target="_self">Figure 2</a>(a) is the first case of the floating voltage controlled inductance.</p> 
+<p><a href="#f3" target="_self">Figure 3</a>(a) is the another case of floating voltage controlled inductance</p> 
+<p><a href="#f4" target="_self">Figure 4</a>(a) explained the application of voltage controlled inductance as BPF.</p> 
+<p><a href="#f5" target="_self">Figure 5</a>(a) explained the application of voltage controlled inductance as notch filter.</p> 
+<p><a href="#f6" target="_self">Figure 6</a>(a) explained the application of voltage controlled inductance as an oscillator.</p> 
+<p>Terminal Equations of CFA:</p> 
+<p>・ <img src="//html.scirp.org/file/1-7600393x5.png" class="200" /></p> 
+<p>・ <img src="//html.scirp.org/file/1-7600393x6.png" class="200" /></p> 
+<p>・ <img src="//html.scirp.org/file/1-7600393x7.png" class="200" /></p> 
+<p>・ <img src="//html.scirp.org/file/1-7600393x8.png" class="200" /></p> 
+<p>As shown in <a href="#f1" target="_self">Figure 1</a>(a). The x and y terminal of CFA are denoted by (−) sign and (+) sign respectively. A CFA is equivalent to a plus type conveyor with a voltage buffer and is very suitable building block for realization of active circuit.</p> 
+<p>MPY534 as MULTIPLIER</p> 
+<p>Description</p> 
+<p>The MPY534 is a highly accurate, general purpose four-quadrant analog multiplier. Its accurately laser trimmed transfer characteristics make it easy to use in a wide variety of applications with a minimum of external parts and trimming circuitry. Its differential X, Y and Z inputs allow configuration as multiplier, squarer, divider, square-rooter and other functions while maintaining high accuracy.</p> 
+<p class="E-Title1">2. Proposed Configuration</p> 
+<p class="E-Title2">2.1. Case 1</p> 
+<p>Implementation of voltage controlled floating inductance which is directly proportional to control voltage (V<sub>c</sub>).</p> 
+<p>The proposed configuration shown in the <a href="#f2" target="_self">Figure 2</a>(a) where each CFOAs is characterized by<img src="//html.scirp.org/file/1-7600393x9.png" class="200" />, <img src="//html.scirp.org/file/1-7600393x10.png" class="200" />, <img src="//html.scirp.org/file/1-7600393x11.png" class="200" />, <img src="//html.scirp.org/file/1-7600393x12.png" class="200" />and multiplier with two resistance and capacitance is used for realizing the voltage controlled floating inductance.</p> 
+<p class="E-Title3">Mathematical Analysis</p> 
+<p>From CFOA (3) applying KCL</p> 
+<p> <img src="//html.scirp.org/file/1-7600393x13.png" class="200" /> (1)</p> 
+<p>From CFOA (4) Applying KCL across capacitor:</p> 
+<p> <img src="//html.scirp.org/file/1-7600393x14.png" class="200" /> (2)</p> 
+<p>Applying KCL again at input port of CFOA (4)</p> 
+<p> <img src="//html.scirp.org/file/1-7600393x15.png" class="200" /></p> 
+<p>Thus</p> 
+<p> <img src="//html.scirp.org/file/1-7600393x16.png" class="200" /> (3)</p> 
+<p>From CFOA (2)</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x17.png" />(a)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x18.png" />(b)</p> 
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. (a) CFA Symbol; (b) Multiplier pin diagram.</p> 
+</div> 
+<p> <img src="//html.scirp.org/file/1-7600393x19.png" class="200" /></p> 
+<p>Applying KCL</p> 
+<p> <img src="//html.scirp.org/file/1-7600393x20.png" class="200" /> (4)</p> 
+<p>From CFOA(1)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x21.png" /></p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x22.png" /></p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x23.png" /> (5)</p> 
+<p>Now subtracting the equation no. (5) from equation No. (4)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x24.png" /> (6)</p> 
+<p>Now from standard floating inductor:</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x25.png" /></p> 
+<p>Putting the value of (V<sub>1</sub> − V<sub>2</sub>) and (I<sub>1</sub> − I<sub>2</sub>) from Equation (3) and (6)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x26.png" /></p> 
+<p>After simplification we get,</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x27.png" /></p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x28.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x29.png" />(a) (b)</p> 
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. (a) Proposed floating voltage controlled inductance configuration; (b) Realized floating inductor.</p> 
+</div> 
+<p>Thus inductance (L) is directly proportional to control voltage (V<sub>c</sub>)</p> 
+<p class="E-Title2">2.2. Case 2</p> 
+<p>Implementation of voltage controlled floating impedance with inversely proportional to control voltage.</p> 
+<p>The proposed configuration shown in the <a href="#f3" target="_self">Figure 3</a>(a). where each CFOAs is characterized by<img class="200" data-original="//html.scirp.org/file/1-7600393x30.png" />, <img class="200" data-original="//html.scirp.org/file/1-7600393x31.png" />, <img class="200" data-original="//html.scirp.org/file/1-7600393x32.png" />, <img class="200" data-original="//html.scirp.org/file/1-7600393x33.png" />and multiplier with two resistance and capacitance is used for realizing the floating voltage controlled inductance.</p> 
+<p class="E-Title3">Mathematical Analysis</p> 
+<p>Output of the multiplier</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x34.png" /></p> 
+<p>From CFOA (1)</p> 
+<p>Applying KCL across capacitor</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x35.png" /></p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x36.png" /> (1)</p> 
+<p>Now from CFOA (2)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x37.png" /> (2)</p> 
+<p>Now subtracting the equation No. (1) from equation No. (2)</p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x38.png" /></p> 
+<p>From CFOA (3) Applying KCL across capacitor we get<sub> </sub></p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x39.png" /></p> 
+<p> <img class="200" data-original="//html.scirp.org/file/1-7600393x40.png" /> (3)</p> 
+<p>Again applying KCL at input node</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x41.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x42.png" />(a) (b)</p> 
+ <p class=" sacImgMarkCss"><a name="f3" id="f3"><span class="cs_fig_con">Figure 3</span></a>. (a) Proposed floating linear voltage controlled inductance configuration; (b) Realized floating inductor.</p> 
+</div> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x43.png" /><span class="bracketMark"></span></p> 
+<p>rearranging the equation we get,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x44.png" /><span class="bracketMark">(4)</span></p> 
+<p>Now from standard floating inductor:</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x45.png" /><span class="bracketMark"></span></p> 
+<p>Putting the value of (V<sub>1</sub> − V<sub>2</sub>) and (I<sub>1</sub> − I<sub>2</sub>) from Equation (3) and (4)</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x46.png" /><span class="bracketMark"></span></p> 
+<p>Putting the value of I<sub>3</sub></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x47.png" /><span class="bracketMark"></span></p> 
+<p>After simplifying we get,</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x48.png" /><span class="bracketMark"></span></p> 
+<p>Thus inductance (L) is inversely proportional to control voltage (V<sub>c</sub>)</p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x49.png" /><span class="bracketMark"></span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x50.png" /><span class="bracketMark">,</span></p> 
+<p class="imgPCss"> <img class="bracketImgMark" data-original="//html.scirp.org/file/1-7600393x52.png" /><span class="bracketMark"></span></p> 
+<p>Thus inductance is inversely proportional to control voltage (V<sub>c</sub>).</p> 
+<p class="E-Title1">3. Application of Floating Inductor Realized in <a href="#f2" target="_self">Figure 2</a>(a) and <a href="#f3" target="_self">Figure 3</a>(a)</p> 
+<p class="E-Title2">3.1. Band Pass Filter</p> 
+<p>In <a href="#f4" target="_self">Figure 4</a>(a), we realized a Band pass filter using voltage controlled floating inductance and resistance, capacitance.</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x53.png" />(a)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x54.png" />(b)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x55.png" />(c)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x56.png" />(d)</p> 
+ <p class=" sacImgMarkCss"><a name="f4" id="f4"><span class="cs_fig_con">Figure 4</span></a>. (a) A passive prototype RLC band pass filter; (b) Frequency response of the band pass filter (with C<sub>0</sub> = 10 uF, R<sub>0</sub> = 1 K, V<sub>c</sub> = 1 V, L<sub>0</sub> = 0.1 mH); (c) Frequency response of the band pass filter (with C<sub>0</sub> = 10 uF, R<sub>0</sub> = 1 K, V<sub>c</sub> = 2 V, L<sub>0</sub> = 0.05 mH); (d) Frequency response of the band pass filter (with C<sub>0</sub> = 10 uF, R<sub>0</sub> = 1 K, V<sub>c</sub> = 4 V, L<sub>0</sub> = 0.025 mH).</p> 
+</div> 
+<p class="E-Title3">3.1.1. Simulation Results</p> 
+<p>Please see Figures 4(b)-(d).</p> 
+<p class="E-Title3">3.1.2. Result</p> 
+<p>In the above simulation result, we show the frequency response of band pass filter made from voltage controlled floating inductance, a resistance and a capacitor. The band pass filter was designed for frequency f<sub>0</sub> = 5 kHz, 7.1 kHz and 10 kHz with different value of inductance as given in <a href="#t1" target="_self">Table 1</a>. The center frequency of filter was found to be electronically tunable from 5 kHz to 10 kHz with V<sub>c</sub> varying from 1 to 4.</p> 
+<p>Thus from the above result it can be seen that by varying the control voltage (V<sub>c</sub>) center frequency (F<sub>c</sub>) of the band pass filter can be changed . Thus we can control the center frequency by varying V<sub>c</sub>.</p> 
+<p class="E-Title2">3.2. Notch Filter</p> 
+<p>In <a href="#f5" target="_self">Figure 5</a>(a), we realized a RLC notch filter using voltage controlled floating inductance and resistance, capacitance.</p> 
+<p class="E-Title3">3.2.1. Simulation Results</p> 
+<p>Please see Figures 5(b)-(d).</p> 
+<p class="E-Title3">3.2.2. Result</p> 
+<p>In the above simulation result, we show the frequency response of notch filter made from voltage controlled floating inductance, a resistance and a capacitor. The notch filter was designed for frequency f<sub>0</sub> = 5 kHz, 7.1 kHz and 10 kHz with different value of inductance as given in <a href="#t2" target="_self">Table 2</a>. The center frequency of filter was found to be electronically tunable from 5 kHz to 10 kHz with V<sub>c</sub> varying from 1 to 4.</p> 
+<p>Thus from the above result it can be seen that by varying the control voltage (V<sub>c</sub>) center frequency (F<sub>c</sub>) of the notch pass filter can be changed .Thus we can control the center frequency by varying V<sub>c</sub>.</p> 
+<p class="E-Title2">3.3. Hartley Oscillator</p> 
+<p>In <a href="#f6" target="_self">Figure 6</a>(a), we realized an op-amp Hartley oscillator using voltage controlled floating inductance and, capacitance.</p> 
+<p class="E-Title3">3.3.1. Simulation Results</p> 
+<p>Please see Figures 6(b)-(d).</p> 
+<p class="E-Title3">3.3.2. Result</p> 
+<p>In the above simulation results, we show the frequency response of Hartley oscillator made from voltage controlled</p> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_1-7600393_1.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Effect of variation in control voltage (V<sub>c</sub>) on center frequency (f<sub>c</sub>) of band pass filter.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_1-7600393_2.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Effect of variation in control voltage (V<sub>c</sub> ) on center frequency (f<sub>c</sub>) of notch filter.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x57.png" />(a)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x58.png" />(b)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x59.png" />(c)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x60.png" />(d)</p> 
+ <p class=" sacImgMarkCss"><a name="f5" id="f5"><span class="cs_fig_con">Figure 5</span></a>. (a) A passive prototype RLC notch filter; (b) Frequency response of the notch filter (with C<sub>0</sub> = 10 uF, R<sub>0</sub> = 1 K, V<sub>c</sub> = 1 V, L<sub>0</sub> = 0.1 mH); (c) Frequency response of the notch filter (with C<sub>0</sub> = 10 uF, R<sub>0</sub> = 1 K, V<sub>c</sub> = 2V, L<sub>0</sub>= 0.05 mH); (d) Frequency response of the notch filter (with C<sub>0</sub> = 10 uF, R<sub>0</sub> = 1 K, V<sub>c</sub> = 4 V, L<sub>0</sub> = 0.025 mH).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_h"> <img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x61.png" />(a)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x62.png" />(b)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x63.png" />(c)<img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/1-7600393x64.png" />(d)</p> 
+ <p class=" sacImgMarkCss"><a name="f6" id="f6"><span class="cs_fig_con">Figure 6</span></a>. (a) A prototype of op-amp Hartley oscillator; (b) Frequency response of the oscillator (with C = 100 uF, V<sub>C</sub> = 1 V, L<sub>1</sub> = L<sub>2</sub> = 0.1 mH) Center frequency = <img class="200" data-original="//html.scirp.org/file/1-7600393x65.png" /> = 1.125 kHz (where L = L<sub>1</sub> + L<sub>2</sub>)); (c) Frequency response of the oscillator (with C = 100 uF ,V<sub>C</sub> = 2 V, L<sub>1</sub> = L<sub>2</sub> = 0.05 mH) Center frequency = <img class="200" data-original="//html.scirp.org/file/1-7600393x66.png" /> = 1.59 kHz (where L = L<sub>1</sub> + L<sub>2</sub>)); (d) Frequency response of the oscillator. with C = 100 uF ,V<sub>C</sub> = 4 V, L<sub>1</sub> = L<sub>2</sub> = 0.025 mH Center frequency = <img class="200" data-original="//html.scirp.org/file/1-7600393x67.png" /> = 2.25 kHz (where L = L<sub>1</sub> + L<sub>2</sub>)).</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_1-7600393_3.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t3" id="t3"><span class="cs_fig_con">Table 3</span></a>. Effect of variation in control voltage (V<sub>c</sub>) on center frequency (f<sub>c</sub>) of Hartley oscillator.</p> 
+</div> 
+<div class="Css_sac"> 
+ <p class="imgGroupCss_v"><a href="//html.scirp.org/file/_1-7600393_4.htm" target="_blank"> <img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t4" id="t4"><span class="cs_fig_con">Table 4</span></a>. Comparison of results of reference [17] and proposed realization.</p> 
+</div> 
+<p>floating inductance, an op-amp and a capacitor. The Hartley oscillator was designed for frequency f<sub>0</sub> = 1.125 kHz, 1.59 kHz and 2.25 kHz with different value of inductance as given in <a href="#t3" target="_self">Table 3</a>. The center frequency of oscillator was found to be electronically tunable from 1.125 kHz to 2.25 kHz with V<sub>c</sub> varying from 1 to 4.</p> 
+<p>From the above result, it can be seen that by varying the control voltage (V<sub>c</sub>) center frequency of oscillation of Hartley oscillator can be changed .Thus we can control the frequency of oscillation by varying V<sub>c</sub>.</p> 
+<p class="E-Title1">4. Conclusion</p> 
+<p>The proposed circuit in <a href="#f2" target="_self">Figure 2</a>(a) and <a href="#f3" target="_self">Figure 3</a>(a) realized and compared with reference [17] . In <a href="#t4" target="_self">Table 4</a>, we</p> 
+<p>have used less number of CFOAs and less number of passive components. The use of multiplier nullifies the effect of non linearity of FET. The application of BPF, notch filter a Hartley oscillator have been discussed.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576462' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Nay, K.W. and Budak, A. (1983) A Voltage-Controlled Resistance with Wide Dynamic Range and No Distortion. IEEE Transaction on Circuits and Systems, 30, 770-772. <br/>http://dx.doi.org/10.1109/TCS.1983.1085290
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576463' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Nay, K.W. and Budak, A. (1985) A Variable Negative Resistance. IEEE Transactions on Circuits and Systems, 32, 1193-1194. <br/>http://dx.doi.org/10.1109/TCS.1985.1085637
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576464' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Senani, R. and Bhaskar, D.R. (1991) Realization of Voltage-Controlled Impedances. IEEE Transactions on Circuits and Systems, 38, 1081-1086. <br/>http://dx.doi.org/10.1109/31.83879
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576465' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Senani, R. and Bhaskar, D.R. (1992) A Simple Configuration for Realizing Voltage-Controlled Impedances. IEEE Transactions on Circuits and Systems, 39, 52-59. <br/>http://dx.doi.org/10.1109/81.109244
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576466' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        Senani, R. and Bhaskar, D.R. (1994) Versatile Voltage-Controlled Impedance Configuration. IEEE Proceedings— Circuits Devices and Systems, 141, 414-416. <br/>http://dx.doi.org/10.1049/ip-cds:19941296
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576467' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Senani, R. (1995) Universal Linear Voltage-Controlled Impedance Configuration. IEE Proceedings—Circuits Devices and Systems, 142, 208. <br/>http://dx.doi.org/10.1049/ip-cds:19951944
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576468' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Ndjountche, T. (1996) Linear Voltage-Controlled Impedance Architecture. Electronics Letters, 32, 1528-1529. <br/>http://dx.doi.org/10.1049/el:19961020
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576469' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Leuciuc, A. and Goras, L. (1998) New General Immittance Converter JFET Voltage-Controlled Impedances and Their Applications to Controlled Biquads Synthesis. IEEE Transactions on Circuits and Systems, 45, 678-682. <br/>http://dx.doi.org/10.1109/81.678494
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576470' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Senani, R. (1994) Realisation of Linear Voltage-Controlled Resistance in Floating Form. Electronics Letters, 30, 1909-1911. <br/>http://dx.doi.org/10.1049/el:19941313
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576471' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Senani, R. (1995) Floating GNIC/GNII Configuration Realized with Only a Single OMA. Electronics Letters, 31, 423-424. <br/>http://dx.doi.org/10.1049/el:19950287
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576472' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Kiranon, W. and Pawarangkoon, P. (1997) Floating Inductance Simulation Based on Current Conveyors. Electronics Letters, 33, 1748-1749. <br/>http://dx.doi.org/10.1049/el:19971202
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576473' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Abuelmaatti, M.T. (1998) Comment: Floating Inductance Simulation Based on Current Conveyors. Electronics Letters, 34, 1037. <br/>http://dx.doi.org/10.1049/el:19980743
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576474' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Layos, M.C. and Haritantis, I. (1997) On the Derivation of Current-Mode Floating Inductors. International Journal of Circuit Theory and Applications, 25, 29-36. <br/>http://dx.doi.org/10.1002/(SICI)1097-007X(199701/02)25:1<29::AID-CTA948>3.0.CO;2-#
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576475' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Yuce, E., Cicekoglu, O. and Minaei, S. (2006) CCII-Based Grounded to Floating Immittance Converter and a Floating Inductance Simulator. Analog Integrated Circuits and Signal Processing, 46, 287-291. <br/>http://dx.doi.org/10.1007/s10470-006-1624-7
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576476' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Elwan, H.O. and Soliman, A. (1997) Novel CMOS Differential Voltage Current Conveyor and Its Applications. IEEE Proceedings—Circuits Devices and Systems, 144, 195-200. <br/>http://dx.doi.org/10.1049/ip-cds:19971081
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576477' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Ndjountche, T., Unbehauen, R. and Luo, F.L. (1999) Electronically Tunable Generalized Impedance Converter Structures. International Journal of Circuit Theory and Applications, 27, 517-522. <br/>http://dx.doi.org/10.1002/(SICI)1097-007X(199909/10)27:5<517::AID-CTA76>3.0.CO;2-Y
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1576478' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Senani, R. (1996) Novel Linear Voltage Controlled Floating-Impedance Configurations. ELL/96/53450.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=173" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=173" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=173" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=173" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=173"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=173"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=173" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=173" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=173" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=173" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=173" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=173"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=173"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=173" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=173&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=173&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=173" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=173" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=173" target="_blank">CS
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=173" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=173" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=173" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=173" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=173" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=173" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=173" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/cs.2015.69020" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60006 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +173 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +173 +"&paperid=" +60006 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,1535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Financial Risk Measurement for Turkish  Insurance Companies Using VaR Models
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="robots" content="all" /><link href="//www.scirp.org/favicon.ico" rel="shortcut icon" /><meta name="MSSmartTagsPreventParsing" content="True" /><meta http-equiv="MSThemeCompatible" content="Yes" />
+    <script type="text/javascript" src="//www.scirp.org/js/jquery.js"></script>
+    <link href="//www.scirp.org/css/bootstrap.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/font-awesome.min.css" rel="stylesheet" /><link href="//www.scirp.org/css/styletwo.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
+    <script src="//www.scirp.org/js/modernizr.js" type="text/javascript"></script>   
+
+    
+    <link rel="alternate" type="application/pdf" title="PDF Full-Text" href="//www.scirp.org/pdf/JFRM_2015093011083961.pdf" />
+
+    
+    <link rel="alternate" type="text/html" title="HTML Full-Text" href="//www.scirp.org/journal/paperinformation?paperid=60072" />
+    
+    <link rel="alternate" type="text/xml" title="XML Full-Text" href="//www.scirp.org/xml/60072.xml" />
+    
+    <link rel="canonical" href="https://www.scirp.org/journal/paperinformation?paperid=60072" />
+
+
+<meta property="og:site_name" content="SCIRP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.scirp.org/journal/paperinformation?paperid=60072" />
+<meta property="og:title" content="Financial Risk Measurement for Turkish  Insurance Companies Using VaR Models" />
+
+
+<meta property="og:image" content="https://file.scirp.org/image/JFRM2016070713112677.jpg" />
+<meta property="og:image:secure_url" content="https://file.scirp.org/image/JFRM2016070713112677.jpg" />
+
+
+
+
+
+ <script type="text/javascript">
+
+     var ajaxj = {
+         tryList: function () {
+             var xhrj = null;
+             for (var i = 0; i < arguments.length; i++) {
+                 var lambda = arguments[i];
+                 try { xhrj = lambda(); break; } catch (e) { }
+             }
+             return xhrj;
+         },
+         init: function () {
+             return this.tryList(
+         function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+         function () { return new XMLHttpRequest(); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+         function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+         function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+         function () { return new ActiveXObject('MSXML.XMLHttp'); },
+         function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+         ) || null;
+         },
+         post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('POST', encodeURI(sUrl), bAsync);
+
+             xhrj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+             xhrj.send(sArgs);
+         },
+         get: function (sUrl, bAsync, fCallBack, errmsg) {
+             var xhrj = this.init();
+             xhrj.onreadystatechange = function () {
+                 if (xhrj.readyState == 4) {
+                     if (xhrj.responseText) {
+                         if (fCallBack.constructor == Function) { fCallBack(xhrj); }
+                     } else {
+
+                     }
+                 }
+             };
+             xhrj.open('GET', encodeURI(sUrl), bAsync);
+             xhrj.send('Null');
+         }
+     }
+
+     function RndNum(n) {
+         var rnd = "";
+         for (var i = 0; i < n; i++)
+             rnd += Math.floor(Math.random() * 10);
+         return rnd;
+     }
+
+     function SetNum(item) {
+         var url = "//www.scirp.org/journal/senddownloadnum";
+         var args = "paperid=" + item;
+         url = url + "?" + args + "&rand=" + RndNum(4);
+         window.setTimeout("show('" + url + "')", 3000);
+     }
+
+
+     function show(url) {
+         var callback = function (xhrj) { }
+         ajaxj.get(url, true, callback, "try");
+     }
+
+
+        </script>
+
+        <script type="text/javascript">
+            var ajax2 = {//xmlhttp request
+                tryList: function () {
+                    var xhr2 = null;
+                    for (var i = 0; i < arguments.length; i++) {
+                        var lambda = arguments[i];
+                        try { xhr2 = lambda(); break; } catch (e) { }
+                    }
+                    return xhr2;
+                },
+                init: function () {
+                    return this.tryList(
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.6.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.3.0'); },
+                        function () { return new XMLHttpRequest(); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.5.0'); },
+                        function () { return new ActiveXObject('MSXML2.XMLHttp.4.0'); },
+                        function () { return new ActiveXObject('Msxml2.XMLHTTP'); },
+                        function () { return new ActiveXObject('MSXML.XMLHttp'); },
+                        function () { return new ActiveXObject('Microsoft.XMLHTTP'); }
+                        ) || null;
+                },
+                post: function (sUrl, sArgs, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                //alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('POST', encodeURI(sUrl), bAsync);
+                    xhr2.setRequestHeader('Content-Length', sArgs.length);
+                    xhr2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr2.send(sArgs);
+                },
+                get: function (sUrl, bAsync, fCallBack, errmsg) {
+                    var xhr2 = this.init();
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4) {
+                            if (xhr2.responseText) {
+                                if (fCallBack.constructor == Function) { fCallBack(xhr2); }
+                            } else {
+                                alert(errmsg);
+                            }
+                        }
+                    };
+                    xhr2.open('GET', encodeURI(sUrl), bAsync);
+                    xhr2.send('Null');
+                }
+            }
+
+
+
+
+            function SetSearchLink(item) {
+
+                var url = "../journal/recordsearchinformation";
+                var skid = $(":hidden[id$=HiddenField_SKID]").val();
+                var args = "skid=" + skid;
+                url = url + "?" + args + "&urllink=" + item;
+                window.setTimeout("showSearchUrl('" + url + "')", 300);
+            }
+
+            function showSearchUrl(url) {
+                var callback2 = function (xhr2) { }
+
+                ajax2.get(url, true, callback2, "try");
+            }
+
+        </script>
+
+
+
+
+
+<meta name="title" content="Financial Risk Measurement for Turkish  Insurance Companies Using VaR Models" />
+<meta name="keywords" content="Insurance,Financial Risk,Foreign Exchange Risk,VaR" />
+<meta name="description" content="Discover the impact of foreign exchange risks on insurance companies. Analyzing 7 Borsa Istanbul-listed insurers, this study employs VaR, Historical Simulation, and Monte Carlo Simulation methods to measure risks. Explore the losses incurred due to exchange risk, with Monte Carlo Simulation revealing greater losses than Historical Simulation." />
+<meta name="citation_journal_title" content="Journal of Financial Risk Management" />
+<meta name="citation_publisher" content="Scientific Research Publishing" />
+<meta name="citation_authors" content="Ismail Yildirim" />
+<meta name="citation_author" content="Ismail Yildirim" />
+<meta name="citation_title" content="Financial Risk Measurement for Turkish  Insurance Companies Using VaR Models" />
+<meta name="citation_volume" content="4" />
+<meta name="citation_date" content="2015-09-01" />
+<meta name="citation_year" content="2015" />
+<meta name="citation_doi" content="10.4236/jfrm.2015.43013" />
+<meta name="citation_issnPrint" content="2167-9533" />
+<meta name="citation_issnOnline" content="2167-9541" />
+<meta name="citation_abstract" content="This study aims to measure the foreign exchange risks that the insurance companies are exposed to. In this context, this study analyzes 7 insurance companies listed in Borsa Istanbul (Istanbul Stock Exchange). The foreign exchange risks that the insurance companies are exposed to were measured using VaR models, Historical Simulation and Monte Carlo Simulation methods. Data obtained from the analysis show the losses that the insurance companies suffer due to exchange risk. The losses calculated using the Monte Carlo Simulation were found to be greater than the losses calculated using Historical Simulation." />
+<meta name="citation_publication_date" content="2015/9/1" />
+<meta name="citation_pdf_url" content="https://www.scirp.org/pdf/JFRM_2015093011083961.pdf" />
+<meta name="fulltext_pdf" content="https://www.scirp.org/pdf/JFRM_2015093011083961.pdf" />
+<meta name="citation_abstract_html_url" content="https://www.scirp.org/journal/paperabs?paperid=60072" />
+<meta name="citation_fulltext_html_url" content="https://www.scirp.org/journal/paperinformation?paperid=60072" />
+<meta name="fulltext_html" content="https://www.scirp.org/journal/paperinformation?paperid=60072" />
+<meta name="citation_xml_url" content="https://www.scirp.org/xml/60072.xml" />
+<meta name="fulltext_xml" content="https://www.scirp.org/xml/60072.xml" />
+<meta name="citation_issue" content="3" />
+<meta name="citation_online_date" content="2015/9/1" />
+<meta name="citation_firstpage" content="158" />
+<meta name="citation_lastpage" content="167" />
+
+<meta name="dc.title" content="Financial Risk Measurement for Turkish  Insurance Companies Using VaR Models" />
+
+<meta name="dc.creator" content="Ismail Yildirim" /><meta name="dcterms.issued" content="2015-09-01" />
+<meta name="dc.description" content="This study aims to measure the foreign exchange risks that the insurance companies are exposed to. In this context, this study analyzes 7 insurance companies listed in Borsa Istanbul (Istanbul Stock Exchange). The foreign exchange risks that the insurance companies are exposed to were measured using VaR models, Historical Simulation and Monte Carlo Simulation methods. Data obtained from the analysis show the losses that the insurance companies suffer due to exchange risk. The losses calculated using the Monte Carlo Simulation were found to be greater than the losses calculated using Historical Simulation." />
+<meta name="dc.source" content="Journal of Financial Risk Management" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.publisher" content="Scientific Research Publishing" />
+<meta name="dc.date" content="2015-09-01" />
+<meta name="dc.type" content="Article" />
+<meta name="dc.identifier" content="doi:10.4236/jfrm.2015.43013" />
+<meta name="dc.language" content="en" />
+<meta name="dc.issued" content="2015-09-01" />
+<meta name="prism.issnPrint" content="2167-9533" />
+<meta name="prism.issnOnline" content="2167-9541" />
+<meta name="prism.publicationName" content="Journal of Financial Risk Management" />
+<meta name="prism.publicationDate" content="2015-09-01" />
+<meta name="prism.volume" content="4" />
+<meta name="prism.number" content="3" />
+<meta name="prism.section" content="Article" />
+<meta name="prism.startingPage" content="158" />
+<meta name="prism.doi" content="10.4236/jfrm.2015.43013" />
+<meta name="Author" content="Scientific Research Publishing" />
+<meta name="dc.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/" />
+<meta name="dc.rights" content="(c) 2015 by author(s) and Scientific Research Publishing Inc." /></head>
+<body>
+    <form method="post" action="./paperinformation?paperid=60072" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUxNjI0NzYxOQ9kFgJmD2QWBGYPZBYCAk0PFgQeBG5hbWUFDmRjdGVybXMuaXNzdWVkHgdjb250ZW50BQoyMDE1LTA5LTAxZAIBD2QWCgIDD2QWAmYPZBYCZg8PZBYCHgpvbmtleXByZXNzBZ0BaWYoZXZlbnQua2V5Q29kZT09MTMpe2RvY3VtZW50LmFsbC5Vc2VyQ29udHJvbF9zZWFyY2hfY29tbW9uX2J0blNlYXJjaDIuZm9jdXMoKTtkb2N1bWVudC5hbGwuVXNlckNvbnRyb2xfc2VhcmNoX2NvbW1vbl9idG5TZWFyY2gyLmNsaWNrKCk7ICAgcmV0dXJuICAgZmFsc2U7fWQCBA9kFgICAQ9kFhRmDxYCHgVzdHlsZQUrY29sb3I6Z3JheTtmb250LXdlaWdodDpub3JtYWw7RGlzcGxheTpOb25lO2QCAQ8WAh4EVGV4dAV6PGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1Jc21haWwrK1lpbGRpcmltJnNlYXJjaGZpZWxkPWF1dGhvcnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+SXNtYWlsICBZaWxkaXJpbTwvYT48c3VwPjwvc3VwPiBkAgIPZBYCZg8WAh8EBeQBPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT1EZXBhcnRtZW50K29mK0ZpbmFuY2UlMmMrQmFua2luZythbmQrSW5zdXJhbmNlJTJjK0hpdGl0K1VuaXZlcnNpdHklMmMrVHVya2V5JnNlYXJjaGZpZWxkPWFmZnMmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+RGVwYXJ0bWVudCBvZiBGaW5hbmNlLCBCYW5raW5nIGFuZCBJbnN1cmFuY2UsIEhpdGl0IFVuaXZlcnNpdHksIFR1cmtleTwvYT4uPGJyIC8+ZAIFDxYCHwQFBTcsNjg5ZAIGDxYCHwQFBjEwLDEzMWQCBw8WAh8DBQ9EaXNwbGF5OmlubGluZTtkAggPZBYCAgEPFgIfBAWjAzxhIGhyZWY9J2FydGljbGVzP3NlYXJjaGNvZGU9SW5zdXJhbmNlJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+SW5zdXJhbmNlPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rRmluYW5jaWFsK1Jpc2smc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gRmluYW5jaWFsIFJpc2s8L2E+LCA8YSBocmVmPSdhcnRpY2xlcz9zZWFyY2hjb2RlPStGb3JlaWduK0V4Y2hhbmdlK1Jpc2smc2VhcmNoZmllbGQ9a2V5d29yZCZwYWdlPTEnIHRhcmdldD0nX2JsYW5rJz4gRm9yZWlnbiBFeGNoYW5nZSBSaXNrPC9hPiwgPGEgaHJlZj0nYXJ0aWNsZXM/c2VhcmNoY29kZT0rVmFSJnNlYXJjaGZpZWxkPWtleXdvcmQmcGFnZT0xJyB0YXJnZXQ9J19ibGFuayc+IFZhUjwvYT4gZAIKDxYCHwQFoQJZaWxkaXJpbSwgSS4gICAoMjAxNSkgRmluYW5jaWFsIFJpc2sgTWVhc3VyZW1lbnQgZm9yIFR1cmtpc2ggIEluc3VyYW5jZSBDb21wYW5pZXMgVXNpbmcgVmFSIE1vZGVscy4gPGk+Sm91cm5hbCBvZiBGaW5hbmNpYWwgUmlzayBNYW5hZ2VtZW50PC9pPiwgPGI+NDwvYj4sIDE1OC0xNjcuIGRvaTogPGEgaHJlZj0naHR0cDovL2R4LmRvaS5vcmcvMTAuNDIzNi9qZnJtLjIwMTUuNDMwMTMnIHRhcmdldD0nX2JsYW5rJyBvbmNsaWNrPSdTZXROdW0oNjAwNzIpJz4xMC40MjM2L2pmcm0uMjAxNS40MzAxMzwvYT4uZAILDxYCHwQFLVRoZSBhdXRob3JzIGRlY2xhcmUgbm8gY29uZmxpY3RzIG9mIGludGVyZXN0LmQCDQ8WAh4LXyFJdGVtQ291bnQCFhYsZg9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzM0JyB0YXJnZXQ9J19ibGFuayc+MTwvYT5dATEBMf8BQWRhbXMsIFouLCBGw7xzcywgUi4sICYgR3JvcHAsIFIuICgyMDE0KS4gU3BpbGxvdmVyIEVmZmVjdHMgYW1vbmcgRmluYW5jaWFsIEluc3RpdHV0aW9uczogQSBTdGF0ZS1EZXBlbmRlbnQgU2Vuc2l0aXZpdHkgVmFsdWUtYXQtUmlzayBBcHByb2FjaC4gSm91cm5hbCBvZiBGaW5hbmNpYWwgYW5kIFF1YW50aXRhdGl2ZSBBbmFseXNpcywgNDksIDU3NS01OTguIA0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE3L1MwMDIyMTA5MDE0MDAwMzI1ZAIBD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzMzUnIHRhcmdldD0nX2JsYW5rJz4yPC9hPl0BMgEy8QFBc3NhZiwgQS4gKDIwMTUpLiBWYWx1ZS1hdC1SaXNrIEFuYWx5c2lzIGluIHRoZSBNRU5BIEVxdWl0eSBNYXJrZXRzOiBGYXQgVGFpbHMgYW5kIENvbmRpdGlvbmFsIEFzeW1tZXRyaWVzIGluIFJldHVybiBEaXN0cmlidXRpb25zLiBKb3VybmFsIG9mIE11bHRpbmF0aW9uYWwgRmluYW5jaWFsIE1hbmFnZW1lbnQsIDI5LCAzMC00NS4gPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2oubXVsZmluLjIwMTQuMTEuMDAyZAICD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzMzYnIHRhcmdldD0nX2JsYW5rJz4zPC9hPl0BMwEzfEJhY2l1LCBPLkEuICgyMDE0KS4gVmFsdWUtYXQtUmlzayBFc3RpbWF0aW9uIG9uIEJ1Y2hhcmVzdCBTdG9jayBFeGNoYW5nZS4gSm91cm5hbCBvZiBBcHBsaWVkIFF1YW50aXRhdGl2ZSBNZXRob2RzLCA5LCBOby4gNC5kAgMPZBYCZg8VBFNbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODMzNycgdGFyZ2V0PSdfYmxhbmsnPjQ8L2E+XQE0ATSKAUJhc2VsIENvbW1pdHRlZSBvbiBCYW5raW5nIFN1cGVydmlzaW9uICgyMDA5KS4gUmV2aXNpb25zIHRvIHRoZSBCYXNlbCBJSSBNYXJrZXQgUmlzayBGcmFtZXdvcmsuIA0KPGJyLz5odHRwOi8vd3d3LmJpcy5vcmcvcHVibC9iY2JzMTU4Lmh0bWQCBA9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzM4JyB0YXJnZXQ9J19ibGFuayc+NTwvYT5dATUBNdABQklTICgyMDA1KS4gU3RyZXNzIFRlc3RpbmcgYXQgTWFqb3IgRmluYW5jaWFsIEluc3RpdHV0aW9uczogU3VydmV5IFJlc3VsdHMgYW5kIFByYWN0aWNlLiBXb3JraW5nIEdyb3VwIFJlcG9ydCwgQ29tbWl0dGVlIG9uIHRoZSBHbG9iYWwgRmluYW5jaWFsIFN5c3RlbSwgQmFuayBmb3IgSW50ZXJuYXRpb25hbCBTZXR0bGVtZW50cywgQkFTRUwsIFN3aXR6ZXJsYW5kLmQCBQ9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzM5JyB0YXJnZXQ9J19ibGFuayc+NjwvYT5dATYBNlhCb2xnw7xuLCBLLiBFLiwgJiBBayZjY2VkaWxheSwgQi4gKDIwMDkpLiBSaXNrIFkmb3VtbG5ldGltaS4gSXN0YW5idWw6IFNjYWxhIFlheWluY2lsaWsuZAIGD2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzNDAnIHRhcmdldD0nX2JsYW5rJz43PC9hPl0BNwE3swFHaWRkeSwgSS4sICYgRHVmZXksIEcuICgyMDA2KS4gVGhlIE1hbmFnZW1lbnQgb2YgRm9yZWlnbiBFeGNoYW5nZSBSaXNrLiBOZXcgWW9yazogTmV3IFlvcmsgVW5pdmVyc2l0eSwgU3Rlcm4gU2Nob29sIG9mIEJ1c2luZXNzLiA8YnIvPmh0dHA6Ly9wYWdlcy5zdGVybi5ueXUuZWR1L35pZ2lkZHkvZnhyaXNrLmh0bWQCBw9kFgJmDxUEU1s8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzQxJyB0YXJnZXQ9J19ibGFuayc+ODwvYT5dATgBOFhHbGFzc2VybWFuLCBQLiAoMjAwNCkuIE1vbnRlIENhcmxvIE1ldGhvZHMgaW4gRmluYW5jaWFsIEVuZ2luZWVyaW5nLiBOZXcgWW9yazogU3ByaW5nZXIuZAIID2QWAmYPFQRTWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzNDInIHRhcmdldD0nX2JsYW5rJz45PC9hPl0BOQE5mQFHdW8sIEwuICgyMDA4KS4gRWZmZWN0aXZlIFN0cmVzcyBUZXN0aW5nIGluIEVudGVycHJpc2UgUmlzayBNYW5hZ2VtZW50LiANCjxici8+aHR0cDovL2ZpbGU6Ly8vQzovVXNlcnMvRnVqaXRzdS9Eb3dubG9hZHMvbW9uby0yMDA4LW0tYXMwOC0xLWd1byUyMCgxKS5wZGZkAgkPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODM0MycgdGFyZ2V0PSdfYmxhbmsnPjEwPC9hPl0CMTACMTCOAklnbGVzaWFzLCBFLiBNLiAoMjAxNSkuIFZhbHVlIGF0IFJpc2sgYW5kIEV4cGVjdGVkIFNob3J0ZmFsbCBvZiBGaXJtcyBpbiB0aGUgTWFpbiBFdXJvcGVhbiBVbmlvbiBTdG9jayBNYXJrZXQgSW5kZXhlczogQSBEZXRhaWxlZCBBbmFseXNpcyBieSBFY29ub21pYyBTZWN0b3JzIGFuZCBHZW9ncmFwaGljYWwgU2l0dWF0aW9uLiBFY29ub21pYyBNb2RlbGxpbmcsIDUwLCAxLTguIA0KPGJyLz5odHRwOi8vZHguZG9pLm9yZy8xMC4xMDE2L2ouZWNvbm1vZC4yMDE1LjA2LjAwNGQCCg9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzQ0JyB0YXJnZXQ9J19ibGFuayc+MTE8L2E+XQIxMQIxMcoBSW5zdXJhbmNlIEV1cm9wZSAoMjAxMykuIEN1cnJlbmN5IFJpc2ssIEJyaWVmaW5nIE5vdGUuIA0KPGJyLz5odHRwOi8vZmluYW5jaWFsLXN0YWJpbGl0eS5vcmcvcmVzZWFyY2gvYXJ0aWtlbC8yMDEzLzIwMTMtcTEvMjAxMy1xMS1kZXRhaWwvZGF0ZS8yMDEzL21hcmNoL2FydGljbGUvc29sdmVuY3ktaWktY3VycmVuY3ktcmlzay1tb2R1bGUtZmxhd2VkL2QCCw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzQ1JyB0YXJnZXQ9J19ibGFuayc+MTI8L2E+XQIxMgIxMqsBSW9yZ3VsZXNjdWEsIEYuICgyMDEyKS4gQmFja3Rlc3RpbmcgVmFsdWUtYXQtUmlzazogQ2FzZSBTdHVkeSBvbiB0aGUgUm9tYW5pYW4gQ2FwaXRhbCBNYXJrZXQuIFByb2NlZGlh4oCUU29jaWFsIGFuZCBCZWhhdmlvcmFsIFNjaWVuY2VzLCA2MiwgNzk2LTgwMC4gd3d3LnNjaWVuY2VkaXJlY3QuY29tZAIMD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzNDYnIHRhcmdldD0nX2JsYW5rJz4xMzwvYT5dAjEzAjEzwAFKYW5zc2VuLCBNLiBKLiBKLiAoMjAwOSkuIFBvcnRmb2xpbyBPcHRpbWl6YXRpb24gd2l0aCBhIFZhbHVlIGF0IFJpc2sgQ29uc3RyYWludCBpbiB0aGUgUHJlc2VuY2Ugb2YgVW5oZWRnZWFibGUgUmlza3MuIEFtc3RlcmRhbTogRGVwYXJ0bWVudCBvZiBRdWFudGl0YXRpdmUgRWNvbm9taWNzLCBVbml2ZXJzaXR5IG9mIEFtc3RlcmRhbS5kAg0PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODM0NycgdGFyZ2V0PSdfYmxhbmsnPjE0PC9hPl0CMTQCMTRuSm9yaW9uLCBQLiAoMjAwMCkuIFZhbHVlIGF0IFJpc2s6IFRoZSBOZXcgQmVuY2htYXJrIGZvciBDb250cm9sbGluZyBSaXNrICgybmQgZWQuKS4gTmV3IFlvcms6IE1jR3Jhdy1IaWxsIEluYy5kAg4PZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODM0OCcgdGFyZ2V0PSdfYmxhbmsnPjE1PC9hPl0CMTUCMTWrAUtlJmNjZWRpbGVjaSwgRi4gTi4sICYgU2FydWwsIEwuIFMuICgyMDE0KS4gQXBwbGljYXRpb24gb2YgVmFsdWUgYXQgUmlzayAoVmFSKSBNb2RlbHMgb24gSW5zdXJhbmNlIENsYWltIERhdGEuIERpZ2l0YWwgUHJvY2VlZGluZyBvZiB0aGUgSVNEU+KAmTIwMTQsIFNpZGUsIDEwLTE0IE1heSAyMDE0LmQCDw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzQ5JyB0YXJnZXQ9J19ibGFuayc+MTY8L2E+XQIxNgIxNoUBTWFqdW1kYXIsIEMuICgyMDA4KS4gVmFSIChWYWx1ZSBhdCBSaXNrKSBmb3IgSW5zdXJhbmNlIFJpc2vigJRBIFNpbXBsZSBNb2RlbC4gMTB0aCBHbG9iYWwgQ29uZmVyZW5jZSBvZiBBY3R1YXJpZXMsIDctOCBGZWJydWFyeSAyMDA4LmQCEA9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzUwJyB0YXJnZXQ9J19ibGFuayc+MTc8L2E+XQIxNwIxN3xNYW5nYW5lbGxpLCBTLiwgJiBFbmdsZSwgUi4gRi4gKDIwMDEpLiBWYWx1ZSBhdCBSaXNrIE1vZGVsIGluIEZpbmFuY2UuIEV1cm9wZWFuIENlbnRyYWwgQmFuayBXb3JraW5nIFBhcGVyIFNlcmllcywgNzUsIDEtNDAuZAIRD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzNTEnIHRhcmdldD0nX2JsYW5rJz4xODwvYT5dAjE4AjE45QFQYWxsb3R0YSwgTS4sICYgWmVudGksIFIuICgyMDAwKS4gUmlzayBBbmFseXNpcyBmb3IgQXNzZXQgTWFuYWdlcnM6IEhpc3RvcmljYWwgU2ltdWxhdGlvbiwgdGhlIEJvb3RzdHJhcCBBcHByb2FjaCBhbmQgVmFsdWUgYXQgUmlzayBDYWxjdWxhdGlvbi4gUkFTIEFzc2V0IE1hbmFnZW1lbnQuIDxici8+aHR0cDovL3BhcGVycy5zc3JuLmNvbS9zb2wzL3BhcGVycy5jZm0/YWJzdHJhY3RfaWQ9MjUxNjY5ZAISD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzNTInIHRhcmdldD0nX2JsYW5rJz4xOTwvYT5dAjE5AjE5vAFQaXJvb3pmYXIsIEcuICgyMDA5KS4gRm9yZWNhc3RpbmcgVmFsdWUgYXQgUmlzayB3aXRoIEhpc3RvcmljYWwgYW5kIEZpbHRlcmVkIEhpc3RvcmljYWwgU2ltdWxhdGlvbiBNZXRob2RzLiBVLlUuRC5NLiBQcm9qZWN0IFJlcG9ydCwgVXBwc2FsYTogRGVwYXJ0bWVudCBvZiBNYXRoZW1hdGljcywgVXBwc2FsYSBVbml2ZXJzaXR5LmQCEw9kFgJmDxUEVFs8YSBocmVmPScuLi9yZWZlcmVuY2UvcmVmZXJlbmNlc3BhcGVycz9yZWZlcmVuY2VpZD0xNTc4MzUzJyB0YXJnZXQ9J19ibGFuayc+MjA8L2E+XQIyMAIyMKsBUG9wb3YsIFYuLCAmIFN0dXR6bWFubiwgWS4gKDIwMDMpLiBIb3cgSXMgRm9yZWlnbiBFeGNoYW5nZSBNYW5hZ2VkOiBBbiBFbXBpcmljYWwgU3R1ZHkgQXBwbGllZCB0byBUd28gU3dpc3MgQ29tcGFuaWVzLiBNYXN0ZXLigJlzIFRoZXNpcywgTGF1c2FubmU6IFVuaXZlcnNpdHkgb2YgTGF1c2FubmUuZAIUD2QWAmYPFQRUWzxhIGhyZWY9Jy4uL3JlZmVyZW5jZS9yZWZlcmVuY2VzcGFwZXJzP3JlZmVyZW5jZWlkPTE1NzgzNTQnIHRhcmdldD0nX2JsYW5rJz4yMTwvYT5dAjIxAjIxtAFTdSwgQi4gSi4gKDIwMTUpLiBWYWx1ZS1hdC1SaXNrIEVzdGltYXRlcyBvZiB0aGUgU3RvY2sgSW5kaWNlcyBpbiBEZXZlbG9wZWQgYW5kIEVtZXJnaW5nIE1hcmtldHMgSW5jbHVkaW5nIHRoZSBTcGlsbG92ZXIgRWZmZWN0cyBvZiBDdXJyZW5jeSBNYXJrZXQuIEVjb25vbWljIE1vZGVsaW5nLCA0NiwgMjA0LTIyNC5kAhUPZBYCZg8VBFRbPGEgaHJlZj0nLi4vcmVmZXJlbmNlL3JlZmVyZW5jZXNwYXBlcnM/cmVmZXJlbmNlaWQ9MTU3ODM1NScgdGFyZ2V0PSdfYmxhbmsnPjIyPC9hPl0CMjICMjKoAVlpbGRpcmltLCBJLiAoMjAxMikuIFN0cmVzcyBUZXN0aW5nIGluIFJpc2sgTWFuYWdlbWVudDogQW4gQXBwbGljYXRpb24gaW4gdGhlIFR1cmtpc2ggQmFua2luZyBTZWN0b3IuIEludGVybmF0aW9uYWwgSm91cm5hbCBvZiBUcmFkZSwgRWNvbm9taWNzIGFuZCBGaW5hbmNlLCAzLCA0NDEtNDQ0LmQCCA9kFgQCBw8WAh8DBQ1EaXNQbGF5Ok5vbmU7ZAIIDxYCHwMFDURpc1BsYXk6Tm9uZTtkAgsPZBYCZg8WAh4HVmlzaWJsZWdkAgwPZBYCAgEPZBYCAgEPZBYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUJU2hvcnROYW1lHg5EYXRhVmFsdWVGaWVsZAUJSm91cm5hbElEHgtfIURhdGFCb3VuZGdkEBWAAg5TZWxlY3QgSm91cm5hbAJBQQNBQUQDQUFSBkFBU29jaQRBQVNUA0FCQgNBQkMEQUJDUgRBQ0VTA0FDUwNBQ1QCQUQDQURSAkFFA0FFUgNBSFMDQUlEA0FpTQNBSVQEQUpBQwNBSkMEQUpDQwRBSkNNBUFKSUJNBEFKTUIEQUpPUgRBSlBTBUFMQU1UA0FMQwNBTFMCQU0DQU1JBEFNUEMDQU5QA0FQRANBUEUDQVBNA0FSUwVBUlNjaQJBUwNBU00DQkxSAkNDAkNFB0NlbGxCaW8GQ2huU3RkAkNNA0NNQgJDTgRDUkNNAkNTBENTVEEDQ1VTBUNXRUVFCURldGVjdGlvbgRFTUFFA0VORwNFUEUERVRTTgRGTUFSA0ZOUwNHRVADR0lTAkdNCEdyYXBoZW5lA0dTQwZIZWFsdGgCSUIDSUNBA0lJTQRJSkFBBklKQU1TQwVJSkNDRQRJSkNNBUlKQ05TA0lKRwVJSklEUwRJSklTBklKTU5UQQhJSk1QQ0VSTwRJSk5NBElKT0MGSUpPSE5TC0luZnJhTWF0aWNzBUpBQ0VOBEpBTVAFSkFTTUkESkJCUwVKQkNQUgVKQmlTRQNKQk0ESkJOQgRKQlBDA0pDQwVKQ0RTQQRKQ1BUA0pDVAVKREFJUANKRE0ESkVBUwVKRUNUQwVKRU1BQQNKRVAFSkZDTVYESkZSTQRKR0lTBkpIRVBHQwVKSFJTUwZKSUJUVkEFSklMU0EDSklTA0pNRgZKTUdCTkQFSk1NQ0UDSk1QBEpQRUUESlFJUwRKU0JTBEpTRUEGSlNFTUFUBEpTSVADSlNTBEpTU00DSlNUA0pUUgRKVFNUBEpUVHMFSldBUlADTENFAk1DAk1FAk1JA01NRQVNTlNNUwNNUFMCTVIDTVJDA01SSQNNU0EETVNDRQROSkdDAk5NAk5SAk5TBU9BTGliBk9BTGliSgRPREVNA09KQQRPSkFCBk9KQWNjdAZPSkFuZXMET0pBUAVPSkFwbwZPSkFwcFMFT0pBUHIET0pBUwRPSkJEB09KQklQSFkET0pCTQNPSkMET0pDQgRPSkNEBE9KQ0UET0pDTQNPSkQFT0pEZXIET0pETQNPSkUET0pFRQRPSkVNBU9KRU1EBU9KRXBpBE9KRVIDT0pGBE9KRkQDT0pHBU9KR2FzBU9KR2VuA09KSQRPSklDBE9KSU0FT0pJTk0DT0pMA09KTQRPSk1DB09KTWV0YWwET0pNSARPSk1JBU9KTUlQBE9KTUwET0pNTQRPSk1OBE9KTVAET0pNUwVPSk1TaQNPSk4GT0pOZXBoA09KTwRPSk9HBk9KT0dhcwRPSk9wBU9KT3BoBU9KT1BNBU9KT1RTC09KUGF0aG9sb2d5BE9KUEMHT0pQQ2hlbQVPSlBlZARPSlBNBE9KUFAET0pQUwdPSlBzeWNoBE9KUkEFT0pSYWQET0pSRARPSlJNA09KUwRPSlNTBU9KU1NUBE9KU1QFT0pTVEEET0pUUgRPSlRTA09KVQRPSlZNA09QSgNQT1MCUFADUFNUBVBTWUNIA1NBUgNTQ0QEU0dSRQJTTQJTTgNTTkwEU29mdAJTUwNURUwCVEkEVU9BSgJWUANXRVQDV0pBBFdKQ0QFV0pDTVAEV0pDUwRXSkVUA1dKTQRXSk5TBVdKTlNFBVdKTlNUA1dKVgNXU04CWU0VgAIBMAM3MzcEMTQwOAQxNDA2BDEwMDIEMjQyMwMxNjQDNjExBDE0NzgDNDczAzQ5MgQxNTc5BDI0MzcEMjQ0MgQyNDQ0BDI0MjYEMjMxNgM4MDMEMTAwMAM0NzYDMjAzBDI0MjIEMTMwNAM1MzUDODg0AzUzMgM1MjkDMjA3Azk5NgQxNTE3BDIzMTcDMTYwAzQ3NwM2NzUEMTU3MwQxNTc0Azc0MwM1MTMEMTU3NQQyNDQ1AzE5MQM4MTIDMjYwBDI0NTUDMTM2BDIwNzQEMTQ5MwMxMjIDOTg5AjkyBDIwMzMDMTczBDE0OTIEMjQzOAQxNTE4BDI0NTQEMjQ1NwI2NAI5MwQxMzExBDIzMTUDMjA4BDI0MzIEMjQ2MgM1NDEEMTY5MAM1MTICNjUDMTAzAzE3NgMxMTEDNDkwBDI0NDkEMTM5MQMyMDIBNAMyMDkEMjQyOAM3NDcEMTI2MQQxNTc4BDE1MTkDNTI3BDE0NzcEMTI5OAQxOTgwBDI0MzYDNTI1AzQ3NQQyNDQzAjMwBDI0MzUDMjMwAzE2MgQyNDMxAzUzMAM1MjYDMTI1BDI0MjUDNDc5AzUzMQM2OTECMjkDMTQ0BDE5ODYEMTM5NQMxMTQEMjQ2MQQyNDIxBDE0MTEDMTAyAzE3NQM2NDgDMzk3BDE3NTMDMTcyBDI0MzMDNTkxAzk5MAI0NQM1NDMDMzM5BDI0MzACMjgDNDc4BDI0MzkEMjQ2MAMzNTcCNDYDMjEwBDE0ODUDMTYzAzc4NwM3ODYDOTE3AzgxNQQyNDQxBDE0ODcEMTU3NgMxNzQEMjQzNAM1MjgDMjA1AzE5MgI2OQQyNDU5BDI0NjMEMjQ1MwM3MzgEMTQ4MAQxNTkwAzgxNAQxNDA3BDE0NzkEMTAwMwQyNDQ2AzYwMQM4MDYDNzg1BDI0NDcEMjQ1MgM5OTcDNjA2Azc4OAM3OTIEMTk3NwM4MTADNTg2AzYxNAQxNTc3BDI0NTYDODExAzgxNgQxOTc5AzczNgQxMDA0AzU4NwM4MTcDNjEzAzYwMgM1OTIDNTkzAzc5MwQxMTg2AzU4OAM3OTADNzg0AzczOQM4MjADNjEyAzc0MgM5OTkDODIyAzk5OAM1OTYEMjQyNAM2MDUDODIxAzgwNAM2MDQEMjQ2NAQxOTc4AzgwNQM3OTQDODIzAzgxMwM1ODkDNzkxAzYwOQM2MTADNzQxAzc0NAM2MDMDODA3Azc4OQM4MjQEMTM5NAM1OTADNzM1AzYwMAM2MDcEMTQ4NgQyNDQ4AzgwOAM1MDkEMTAwMQM1NDcCNzEDMjA2BDI0NDADMTQ4BDI0NTADNTMzAzEzNQM0NzQEMTU4OQM0OTEEMjAzNAMyMDQDNjY2AzEwNAQxNDA1BDI0NTgDMTQ2AzUxMQM4MTgDNTAyAzgwOQQyNDUxAzUwNgM2MTUDNDkzAzUzNAM1MTACNDEEMjQ2NRQrA4ACZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkZC2+Xeq/99Qqvh4LSPFTh6i8Hbbs6v+ZnMwQPVgjzFyK" />
+
+
+<script src="/ScriptResource.axd?d=mQBWVXSQvywKG0wBehnziCfcFgrNM4av8J0HgAKchKpJWZgg0r5Xs80ubwoKV7AD4O3M7796UejusG1WTVZtPN-HH1OVRu1qdJQeBwraVdFzAa5uhBZ1xzdJTuUJ8jxsoiOWVycBi-EqnhEbamCkYQaM6illNzJ1XnAiTPTM4lY1&amp;t=2fe674eb" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D21FCB0F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+
+
+        
+
+        
+
+
+
+
+<header>
+    <div class="container row clearfix center-block">
+        <div class="col-sm-8 col-xs-9 column" style="padding: 10px 0;"><a href="//www.scirp.org" title="SCIRP - An Academic Publisher" target="_blank">
+            <img src="../images/SRP_logo.svg" height="50"></a>
+        </div>
+        <div class="col-sm-3 col-xs-3 column text-center" style="padding: 20px 0;">
+            <a href="/journal/openaccess" title="OPEN ACCESS" target="_blank">
+                <img src="../images/Open-Access.svg" height="30"></a>
+        </div>
+        <div class="col-sm-1 col-xs-2 column visible-lg visible-md visible-sm " style="padding: 20px 0;">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" title="Login">
+                <button type="button" class="btn btn-default btn-xs" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; padding: 0 15px; border: #2f2f2f 1px solid; border-radius: 5px; float: right;">Login</button></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 10px;">
+    <div class="container container-fluid center-block">
+        <div class="navbar-header">
+            <a href="https://papersubmission.scirp.org/login.jsp" target="_blank" ><button type="button" class="btn btn-xs btn-default navbar-brand visible-xs" style="width: 80px; height: 30px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; margin: 10px; padding: 0 15px; border-radius: 5px;">Login</button></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+
+
+
+
+<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    <ul class="nav navbar-nav" style="font-size: 18px;">
+        <li><a href="../" target="_top">Home</a></li>
+        <li><a href="../journal/articles" target="_top">Articles</a></li>
+        <li><a href="../journal/" target="_top">Journals</a></li>
+        <li><a href="../book/" target="_top">Books</a></li>
+        <li><a href="../news/" target="_top">News</a></li>
+        <li><a href="../aboutus/" target="_top">About</a></li>
+        <li><a href="../author/" target="_top">Services</a></li>
+        <li><a href="//papersubmission.scirp.org/login.jsp?sub=true" target="_blank">Submit</a></li>
+    </ul>
+</div>
+
+
+    </div>
+</nav>
+
+
+
+        <div class="container-fluid link_here" style="margin-bottom: 15px;">
+            <div class="row container center-block clearfix" style="padding: 0;">
+
+                <!--页面导航栏-->
+                <div class="col-md-7 column" style="padding: 0;">
+                    
+<ul class="breadcrumb">
+        <li><i class="fa fa-home" style="color: #d71318;"></i>&nbsp;&nbsp;<a href="../index">Home</a></li>
+        <li><a href="index">Journals</a></li>
+        <li class="active">Article</li>
+    </ul>
+
+                </div>
+
+                <!--搜索框-->
+                <div class="col-md-5 column">
+                    <div class="" style="padding: 5px 0;">
+                        <div id="UserControl_search_common_Panel2">
+	
+    <div class="form-inline search2">
+        <input name="ctl00$UserControl_search_common$TextBox_searchCode2" type="text" value="Search Title, Keywords, Author, etc." id="UserControl_search_common_TextBox_searchCode2" class="input2" onFocus="return ClearSearchCondition2();" onBlur="return ShowSearchCondition2();" onkeypress="if(event.keyCode==13){document.all.UserControl_search_common_btnSearch2.focus();document.all.UserControl_search_common_btnSearch2.click();   return   false;}" style="height: 28px;" />
+        <button class="btn-md btn_or" type="button">
+          <input type="submit" name="ctl00$UserControl_search_common$btnSearch2" value=" " id="UserControl_search_common_btnSearch2" style="width:25px; height:25px; background: none; border:none;background-image: url(../Images/search001.png);  " />  
+        </button>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function ClearSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+            if (text2 == "Search Title, Keywords, Author, etc.")
+            { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = ""; }
+        }
+
+        function ShowSearchCondition2() {
+            var text2 = document.getElementById('UserControl_search_common_TextBox_searchCode2').value;
+                if (text2 == "")
+                { document.getElementById('UserControl_search_common_TextBox_searchCode2').value = "Search Title, Keywords, Author, etc."; }
+            }
+
+
+            function checkLog() {
+
+                var keywords = document.getElementById("UserControl_search_common_TextBox_searchCode2").value;  //关键字
+
+            if (trim(keywords) == "") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            if (trim(keywords) == "Search Title, Keywords, Author, etc.") {
+                alert('Please enter keywords!');
+                return false;
+            }
+
+            return true;
+        }
+
+        //除去左右空格
+        function trim(string) {
+            return string.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+
+    </script>
+
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-md-9 column col-md-push-3">
+                    <div class="clearfix con_main" style="margin-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+                        
+       
+
+<div id="JournalInfor_div_nav_journal" class="column up_link1 clearfix" style="padding: 0;">
+            <div class="col-md-9 col-sm-8 txt7">
+                <a href="journalarticles?journalid=1395" title="Journal of Financial Risk Management">
+                    Journal of Financial Risk Management</a> &gt; <a href="home?issueid=6917#60072">Vol.4 No.3, September 2015</a>
+            </div>
+            </div>
+
+    <div id="JournalInfor_div_paper" class="articles_main">
+            <div class="art_title" style="text-align:left;">
+                Financial Risk Measurement for Turkish  Insurance Companies Using VaR Models <span id="JournalInfor_reviewpaper_show" style="color:gray;font-weight:normal;Display:None;">()</span>
+            </div>
+            
+        <div style="float: left; width: 100%; margin-top: 5px; margin-bottom: 10px;">
+                <a href='articles?searchcode=Ismail++Yildirim&searchfield=authors&page=1' target='_blank'>Ismail  Yildirim</a><sup></sup> 
+                <br />
+                <span id="JournalInfor_div_affs"><a href='articles?searchcode=Department+of+Finance%2c+Banking+and+Insurance%2c+Hitit+University%2c+Turkey&searchfield=affs&page=1' target='_blank'>Department of Finance, Banking and Insurance, Hitit University, Turkey</a>.<br /></span>
+               
+                <span id="JournalInfor_showDOI" style="clear: left;"><b>DOI: </b><a href="http://dx.doi.org/10.4236/jfrm.2015.43013"
+                    target="_blank" onclick='SetNum(60072)'>10.4236/jfrm.2015.43013</a></span>&nbsp;&nbsp;
+                      
+                <a href="//www.scirp.org/pdf/JFRM_2015093011083961.pdf" target="_blank" style="font-size: 14px; font-weight: bold;" onclick='SetNum(60072)'>
+                    PDF</a>
+            &nbsp;&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"><a href='//www.scirp.org/journal/paperinformation?paperid=60072' target='_blank'>HTML</a></span>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;"> <a href='//www.scirp.org/xml/60072.xml' target='_blank' onclick='SetNum(60072)' >XML</a></span>&nbsp;&nbsp;
+                <span style="font-weight: bold; color: Red;">
+                    7,689</span>
+                <span style="color: #535353;">Downloads</span>&nbsp;&nbsp;<span style="font-weight: bold; color: Red;">
+                    10,131</span>
+                <span style="color: #535353;">Views</span>&nbsp;&nbsp;
+                <span id="JournalInfor_span_citations" style="Display:inline;"><a href='papercitationdetails?paperid=60072&JournalID=1395' target="_blank"><span style="text-decoration: underline;">Citations</span></a></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;"><a name="abstract" style="color: #2f2f2f;">Abstract</a></p>
+                <p style="text-align:left;">This study aims to measure the foreign exchange risks that the insurance companies are exposed to. In this context, this study analyzes 7 insurance companies listed in Borsa Istanbul (Istanbul Stock Exchange). The foreign exchange risks that the insurance companies are exposed to were measured using VaR models, Historical Simulation and Monte Carlo Simulation methods. Data obtained from the analysis show the losses that the insurance companies suffer due to exchange risk. The losses calculated using the Monte Carlo Simulation were found to be greater than the losses calculated using Historical Simulation.</p>
+            </div>
+
+            <div id="JournalInfor_div_showkeywords" style="margin-bottom: 10px;">
+                <p style="font-weight: bold; font-size: 16px;">Keywords</p>
+                <p><a href='articles?searchcode=Insurance&searchfield=keyword&page=1' target='_blank'>Insurance</a>, <a href='articles?searchcode=+Financial+Risk&searchfield=keyword&page=1' target='_blank'> Financial Risk</a>, <a href='articles?searchcode=+Foreign+Exchange+Risk&searchfield=keyword&page=1' target='_blank'> Foreign Exchange Risk</a>, <a href='articles?searchcode=+VaR&searchfield=keyword&page=1' target='_blank'> VaR</a> </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Share and Cite: </p>
+                <div id="JournalInfor_div_share">   
+                  <!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_sina_weibo"></a>
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+                    
+
+                                      
+                </div>
+                <div style="margin-top: 10px; text-align:left;">
+                    Yildirim, I.   (2015) Financial Risk Measurement for Turkish  Insurance Companies Using VaR Models. <i>Journal of Financial Risk Management</i>, <b>4</b>, 158-167. doi: <a href='http://dx.doi.org/10.4236/jfrm.2015.43013' target='_blank' onclick='SetNum(60072)'>10.4236/jfrm.2015.43013</a>.
+                </div>
+            </div>
+            <div style="margin-top:10px;" id="htmlContent">
+                 
+<p></p>
+<p class="E-Title1">1. Introduction</p>
+<p>It is possible to briefly define risk as a liability with potential loss. There are many risks that life insurance and pension companies are exposed to. However, the most significant risks arise from the core business of a company. These are risks that a company undertakes in return for premiums collected as a result of insurance contracts. Potential risks most commonly involve such risks.</p>
+<p>As insurance industry constitutes an important part of the finance system especially in developed countries, it is exposed to financial risks. It is a common practice for insurance companies to invest in several financial assets in order to utilize the insurance premiums they have collected. Therefore, it is inevitable that insurance companies are faced with financial risks. Among the common risks other than insurance transactions that life insurance and pension companies are exposed to, there are financial risks such as interest rate risk, credit risk, liquidity risk, exchange rate risk. In addition, market risk, group risk, operational risk, modeling risk, and regulatory restrictions risk are also significant when it comes to insurance companies.</p>
+<p>Financial risks involve two major factors. The first one is the deteriorations in the macroeconomic capacity as a result of political or economic crises both in national and international settings. As these kinds of risks arise from an imbalance in the system, they are also known as market or system risks. The second risk component is the unsystematic risks which commonly arise from the internal structure of a company and are defined by factors such as management quality, integrity of the financial structure, and the ability to be competitive. These two types of risks combined are called the “total risk”. Risk management models first define and classify the risks. The next step for risk management models is to measure and assess the risks while the third step involves the creation of a risk map in order to reduce these risks. The following processes involve continuous risk tracking and regular reports to the risk management department.</p>
+<p>Insurance companies, when holding assets in the form of foreign currencies in order to meet their obligations, are exposed to foreign exchange risk. This type of risk results from the fluctuations in exchange rates. This practice creates a threat in terms of foreign exchange rate when the company is indebted in foreign currencies. Insurance companies take foreign exchange risks into consideration as part of their assessments for the next twelve months when calculating their minimum capital requirements. The foreign exchange risk is a factor not just insurance and reassurance companies but any company must take into consideration <a href="#p166" target="_self"> (Insurance Europe, 2013) </a>. According to Giddy &amp; Dufey, foreign exchange risk is “the impact of the unpredictable exchange rate changes on a company” <a href="#p166" target="_self"> (Giddy &amp; Dufey, 2006) </a>.</p>
+<p>The foreign exchange risk cannot be eliminated altogether yet, there are several solutions in order to minimize its impact. The foreign exchange risk is especially an important issue for international companies. The research showed that the profits of international companies were affected by the fluctuations in the exchange rates <a href="#p167" target="_self"> (Popov &amp; Stutzmann, 2003) </a>.</p>
+<p>This study aims to measure the foreign exchange risk that the insurance companies are exposed to. For this purpose, this study measures the risks arising from exchange rate positions of 7 insurance companies listed in Borsa Istanbul (BIST).</p>
+<p class="E-Title1">2. Literature Survey</p>
+<p>Value at Risk is a measure which can be used for any company which is exposed to financial risk. It is commonly used by banks, insurance companies, pension funds, and other financial corporations for which risk management is a must <a href="#p166" target="_self"> (Jorion, 2000) </a>. Literature shows that studies on Value at Risk mainly focus on such organizations.</p>
+<p><a href="#p166" target="_self"> Assaf (2015) </a>, <a href="#p167" target="_self"> Su (2015) </a>, <a href="#p166" target="_self"> Iglesias (2015) </a>, and <a href="#p166" target="_self"> Baciu (2014) </a> used Value at Risk in order to measure the risks stock markets are exposed to. <a href="#p166" target="_self"> Assaf (2015) </a> investigated the performance of stock markets operating in MENA (Middle East and North Africa) countries using the Value at Risk method. <a href="#p167" target="_self"> Su (2015) </a> investigated the performance of stock markets operating in developing countries using the Value at Risk method. <a href="#p166" target="_self"> Iglesias (2015) </a> analyzed the stock markets operating in the EUROZONE using the Value at Risk method for a period between 2000 and 2012. <a href="#p166" target="_self"> Baciu (2014) </a> calculated the risk of the Romanian stock market using the Value at Risk method.</p>
+<p><a href="#p166" target="_self"> Ke&ccedil;eci &amp; Sarul (2014) </a>, <a href="#p166" target="_self"> Adams et al. (2014) </a>, <a href="#p166" target="_self"> Janssen (2009) </a>, and <a href="#p166" target="_self"> Majumdar (2008) </a> have conducted Value at Risk calculations for insurance and financial organizations. <a href="#p166" target="_self"> Adams et al. (2014) </a> assessed the direction, extent and duration of the risk dispersion between financial organizations using Value at Risk methods. <a href="#p166" target="_self"> Ke&ccedil;eci &amp; Sarul (2014) </a> turned to VaR methods in order to measure the market risk Turkish insurance companies are exposed to. <a href="#p166" target="_self"> Majumdar (2008) </a> measured the insurance risks using historical simulation and Monte Carlo simulation, methods used in VaR calculations. <a href="#p166" target="_self"> Janssen (2009) </a> measured the portfolio risks European insurance companies are exposed to as part of Solvency II using VaR methods.</p>
+<p>This study measures the foreign exchange risk of 7 insurance companies operating in Turkey listed in Borsa Istanbul are exposed to using Value at Risk methods. In this respect, this study is expected to contribute to the literature.</p>
+<p class="E-Title1">3. Data and Methodology</p>
+<p>This study uses Value at Risk methods in order to measure the foreign exchange risk insurance companies are exposed to. Value at Risk is a method commonly used in order to measure the market risk.</p>
+<p>Value at Risk is a risk measure first developed by J.P. Morgan in 1994 to estimate the loss expected for a fixed portfolio for a time period of “t” with a specified “p” probability value. Thus, it is possible to measure the total risk a portfolio is exposed to with a single number. Being a simple and easy-to-use method, this technique is quickly adopted by several financial organizations and has gained widespread use <a href="#p166" target="_self"> (Iorgulescua, 2012) </a>. It gained widespread use in risk measurements especially after the Financial Crisis of 2008 <a href="#p167" target="_self"> (Piroozfar, 2009) </a>.</p>
+<p>Stress testing for portfolio performance measurements in extraordinary market conditions is used in addition to the VaR methods which is ideal for normal market conditions. This is shown in <a href="#f1" target="_self">Figure 1</a>.</p>
+<p>Risks occurring from extraordinary market conditions and extreme price movements influence the condition of the portfolio <a href="#p166" target="_self"> (BIS, 2005, 4) </a>. The Value at Risk methods used is classified into two groups, namely, Parametric Methods (Variance-Covariance Method) and Non-Parametric Methods (Historical Simulation, Monte Carlo Simulation Methods).</p>
+<p class="E-Title2">3.1. Historical Simulation Method</p>
+<p>Historical Simulation Method involves the application of asset returns of a time series of past 250 days to the current portfolio weights <a href="#p166" target="_self"> (Bolg&uuml;n &amp; Ak&ccedil;ay, 2009) </a>.</p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-2410143x5.png" /><span class="bracketMark"></span></p>
+<p class="imgPCss"><img class="bracketImgMark" src="//html.scirp.org/file/4-2410143x6.png" /><span class="bracketMark"></span></p>
+<p>W: Current weight of the risk factors in a portfolio</p>
+<p>R: Change in returns</p>
+<p>Probable portfolio value is estimated using the changes in return for w weights and a time period of t, and VaR is calculated for a confidence level of 95% or 99%. The full valuation method involves the whole set of prices while Historical Value at Risk requires efficiency curves which proves the realism inherent for this method.</p>
+<p>Thus, the model risk decreases while it is fully eliminated when not available in the data. Therefore, this method can be used as both linear and nonlinear investment tools <a href="#p166" target="_self"> (Manganelli &amp; Engle, 2001) </a>.</p>
+<p>The criticism about this method focuses on the disadvantage arising from ignoring some risks by failing to consider possible future changes as the method focuses on the changes in the sample being based on historical data <a href="#p167" target="_self"> (Pallotta &amp; Zenti, 2000) </a>.</p>
+<p class="E-Title2">3.2. Monte Carlo Simulation Method</p>
+<p>Monte Carlo Simulation requires the generation of various random numbers in order to reach the correct VaR. Random number generation should be increased by 100-fold in order to increase the accuracy of VaR by a digit <a href="#p166" target="_self"> (Glasserman, 2004) </a>. Nevertheless, Monte Carlo Simulation is commonly used in stress testing <a href="#p166" target="_self"> (Guo, 2008) </a>.</p>
+<p>Parameters Used in the Value at Risk Measurement.</p>
+<p>VaR calculations depend on a number of parameters. These are holding period, confidence level, sampling period and calculation of capital requirement.</p>
+<p class="E-Title2">3.3. Holding Period</p>
+<p>Considering Value at Risk is based on the measurement of the price changes of a portfolio or an individual asset</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_v"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-2410143x7.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f1" id="f1"><span class="cs_fig_con">Figure 1</span></a>. Value at Risk. Source: BIS, 2005.</p>
+</div>
+<p>in a “certain time period”, the holding period is a parameter concerning the time period in which assets will be held in the portfolio. In other words, the holding period is the time horizon in which the change in the portfolio value is to be calculated <a href="#p166" target="_self"> (Assaf, 2015) </a>.</p>
+<p>The holding period is calculated by taking the square root of the period as part of the VaR calculations <a href="#p166" target="_self"> (Iglesias, 2015) </a>.</p>
+<p>1 day holding period = <img src="//html.scirp.org/file/4-2410143x8.png" class="200" /> = 1</p>
+<p>10 days holding period = <img src="//html.scirp.org/file/4-2410143x9.png" class="200" /> = 3.162278</p>
+<p>21 days holding period = <img src="//html.scirp.org/file/4-2410143x10.png" class="200" /> = 4.582576</p>
+<p>252 days holding period = <img src="//html.scirp.org/file/4-2410143x11.png" class="200" /> = 15.87451</p>
+<p>The VaR calculated for a holding period is multiplied with the square root of that holding period which VaR is to be calculated for. Therefore, the result obtained for a holding period of 10 days is higher than the result obtained for a holding period of 1 day. The VaR increases as the holding period increases.</p>
+<p class="E-Title2">3.4. Confidence Interval</p>
+<p>Confidence interval should be estimated beforehand in VaR calculations. The confidence level is determined based on the company’s risk appetite and its economic capital stock <a href="#p167" target="_self"> (Yildirim, 2012) </a>. Standard VaR calculations aim to measure potential future losses in a specified confidence level (commonly 95% or 99%) <a href="#p166" target="_self"> (Bolg&uuml;n &amp; Ak&ccedil;ay, 2009) </a>.</p>
+<p>Confidence level when defined as 99% for VaR estimation means that the probability of the maximum loss for a day exceeding the VaR level is only at 1%. The VaR value calculated increases with the increasing confidence level.</p>
+<p class="E-Title2">3.5. Sampling Period</p>
+<p>Another parameter of the Value at Risk (VaR) measurements is the determination of past observation periods for which the volatility and correlations will be calculated and price changes will be observed.</p>
+<p>The success of VaR calculations depends on the dataset to be used in volatility and correlation calculations. Volatility values calculated for different sampling periods will give different results therefore resulting in different VaR values. The Basel Committee defined a minimum of a year (252 working days) as the sampling period and obliged companies to update their dataset in specific intervals and to calculate VaR according to the new dataset <a href="#p166" target="_self"> (Basel Committee on Banking Supervision, 2009, 13) </a>. The sampling period shall be no less than a year (250 working days).</p>
+<p class="E-Title2">3.6. Capital Requirement Calculation</p>
+<p>Capital requirement calculation is not a primary parameter of VaR calculations. However, capital requirement will be calculated for the market risk following the VaR calculation. In other words, risk exposure should be stated in capital in order to make it possible to compare capital costs of all risks in a common plane. Therefore, Bank for International Settlements (BIS) set the capital coefficient to be 3 at a minimum. This value alternates between 3 and 4. The BIS is subject to serious criticism on this subject. Some claim that this capital coefficient lacks the necessary basis. Actors of the market find this coefficient higher than it should be <a href="#p166" target="_self"> (Bolg&uuml;n &amp; Ak&ccedil;ay, 2009) </a>.</p>
+<p>It is a common practice for banking organizations to associate VaR results with their capital adequacy by multiplying the VaR results with the capital coefficient, 3 as part of the capital requirement calculations. Yet, there are no standards defined for the insurance companies.</p>
+<p>Insurance companies included in this study and their exchange rate positions are shown in <a href="#t1" target="_self">Table 1</a> and <a href="#t2" target="_self">Table 2</a>.</p>
+<p>This study analyzes 7 insurance companies operating in Turkey listed in Borsa Istanbul. 6 of these insurance companies focus their activities in fields other than life insurance while 1 of them operates in life insurance. It was not required to calculate the risks life insurance companies and others are exposed to separately as financial risks were in question. Exchange rate positions of the insurance companies included in the analysis are given in <a href="#t2" target="_self">Table 2</a>.</p>
+<p>6 of the insurance companies have a positive foreign exchange position. In other words, they do not have a</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-2410143_1.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t1" id="t1"><span class="cs_fig_con">Table 1</span></a>. Insurance companies which are included in the analysis.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-2410143_2.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t2" id="t2"><span class="cs_fig_con">Table 2</span></a>. Exchange rate positions of the insurance companies.</p>
+</div>
+<p>foreign exchange deficit. Only Aviva insurance had a negative foreign exchange position. USD and Euro were included in the study in terms of foreign exchange positions of the companies. Other currencies which account for small amounts were not included in the foreign exchange positions of insurance companies. In addition, amounts which were listed under the “other” option were not included in the portfolio.</p>
+<p>Net positions of the insurance companies in USD and Euro as stated in their balance sheets were calculated in Turkish Lira dividing the amounts by the average exchange rates issued by the Central Bank of Turkey for the date of 31.12.2014 (USD = 2.1343; Euro = 2.9365).</p>
+<p>The analysis was based on the daily exchange rates for 252 working days between 01.01.2014 and 31.12.2014. It is required to take data for at least 252 days into account when calculating the VaR. <a href="#f2" target="_self">Figure 2</a> shows the value of the Euro and USD against Turkish Lira.</p>
+<p>The analysis involved the value of the Euro and USD for 252 days. According to the increases and decreases in the value of the USD (<a href="#f2" target="_self">Figure 2</a>) it was found that the maximum increase in the value accounted for 5% while the maximum decrease in the value accounted for 4%. The Euro, on the other hand, suffered a value loss by 6% against the Turkish Lira in 2014 while increasing by over 4% for the same period.</p>
+<p class="E-Title1">4. Empirical Findings</p>
+<p>The first phase of this study involved calculations of the Value at Risk for insurance companies in question. The second phase involved the estimation of the impact of Value at Risk on the capital adequacy ratios of these insurance companies. The Calculations involved Historical Simulation Method and Monte Carlo Simulation Method with a confidence level of 99% and holding periods of 1 and 10 days.</p>
+<p>Descriptive statistics for foreign exchange rates used in the market risk calculations are shown in <a href="#t3" target="_self">Table 3</a>.</p>
+<p>The skewness and kurtosis coefficients need to be investigated in order to look into the distribution structure of the return series with irregular distribution. Skewness measures the symmetry of the distribution while</p>
+<div class="Css_sac">
+ <p class="imgGroupCss_h"><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-2410143x12.png" /><img class=" imgMarkCss lazy" data-original="//html.scirp.org/file/4-2410143x13.png" /></p>
+ <p class=" sacImgMarkCss"><a name="f2" id="f2"><span class="cs_fig_con">Figure 2</span></a>. Euro and USD exchange rate changes.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-2410143_3.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t3" id="t3"><span class="cs_fig_con">Table 3</span></a>. Descriptive statistics for foreign exchange rates.</p>
+</div>
+<p>kurtosis measures the peakedness of the distribution. A normal distribution gives a skewness coefficient of 0 while giving a kurtosis coefficient of 3. The skewness coefficient values greater than 0 implies that the distribution is left-skewed; while values smaller than 0 implies that the distribution is right-skewed. Kurtosis, on the other hand, gives information about the distribution frequencies if they are accumulated around the average or if they diverge from the average in order to form a flat structure. Kurtosis coefficient values greater than 3 implies that the distribution is peaked; while values smaller than 3 implies that the distribution is flat.</p>
+<p>Considering the skewness coefficients of the foreign exchange rates in question, it was found that the skewness coefficients of the Euro and USD were both greater than 0. This means that the return distribution of these currencies was left-skewed. Kurtosis coefficients of the Euro and USD distributions were smaller than 3 and it was found that the distributions were flat-topped.</p>
+<p>The foreign exchange rates in question do not exhibit normal distribution characteristics. As Historical Simulation Method does not require estimation of any parameters such as volatility or correlation, misinterpretation of the parameters was not an issue.</p>
+<p class="E-Title2">4.1. Results of the Historical Simulation Method</p>
+<p>Results of the Historical Simulation Method give the maximum expected loss for a time interval of 252 days under normal market conditions with a confidence level of 99%. The results obtained from the Historical Simulation Method against Foreign Exchange risk are shown in <a href="#t4" target="_self">Table 4</a>.</p>
+<p>When the Historical Simulation results of the insurance companies were analyzed it was found that their daily losses ranged between 0.59 and 1.75. Halk Insurance suffered the greatest loss with 1.75%. The losses insurance companies suffer increased with the increasing holding periods. Losses calculated for a holding period of 10 days range between 1.86% and 5.54%.</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-2410143_4.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t4" id="t4"><span class="cs_fig_con">Table 4</span></a>. Historical simulation method results for insurance companies based on foreign exchange risk.</p>
+</div>
+<p class="E-Title2">4.2. Results of the Monte Carlo Simulation Method</p>
+<p>Monte Carlo Simulation Method reveals the most unfavorable conditions insurance companies may face under normal market conditions with a confidence level of 99%. Results of the Monte Carlo Simulation against the Foreign Exchange risk are shown in <a href="#t5" target="_self">Table 5</a>.</p>
+<p>When the results given in <a href="#t5" target="_self">Table 5</a> are analyzed it was found that daily losses ranged between 0.35% and 0.93%. G&uuml;neş Insurance suffered the greatest daily loss with 0.93%, while Ak Insurance suffered the lowest daily loss with 0.35%. According to the VaR results obtained from a holding period of 1 day using the Monte Carlo Simulation, Ak Insurance suffered the second greatest loss with 0.90%.</p>
+<p>When the Value at Risk positions were calculated using the Monte Carlo Simulation is proportioned to their current values; daily losses with respect to a holding period of 10 days was found to be in a range between 1.10% and 2.95%. G&uuml;neş Insurance suffered the greatest loss with 2.95% according to the Monte Carlo Simulation results obtained from a holding period of 10 days. The lowest loss, on the other hand, was 1.10% in the case of Ak Insurance. Halk Insurance suffered the second greatest loss with 2.85% according to the results obtained from a holding period of 10 days.</p>
+<p>VaR results obtained using the Historical Simulation Method for holding periods of 1 day with a confidence level of 99% were higher than those calculated using the Monte Carlo Simulation. Similarly, the results obtained for a holding period of 10 days is higher than the results obtained for a holding period of 1 day.</p>
+<p class="E-Title2">4.3. Association of VaR Results with Capital Adequacy</p>
+<p>Capital adequacy correlation is a necessary process in order to determine the impact of the VaR results on the capital adequacy of insurance companies. Especially the regulatory and auditing authorities will be interested to see the erosion in the capital adequacies of insurance companies caused by the VaR results.</p>
+<p>We have mentioned that the Bank for International Settlements (BIS) identified a capital coefficient at a minimum of 3 for the calculations of capital adequacy according to the Value at Risk (VaR) results. However, several authorities claim that this capital coefficient lacks the necessary basis. In fact, when the capital coefficient is taken 3 in the correlations between the VaR results and capital adequacies it would take the capital adequacy ratios to a lower level. Banking Regulatory and Supervisory Agency also recommends the capital coefficient to be taken 3. Yet, there are no standards defined for the insurance companies in Turkey in this respect. This study used the capital coefficient of 3 in the correlations between the VaR values of insurance companies and their capital adequacy ratios.</p>
+<p><a href="#t6" target="_self">Table 6</a> shows the current capital adequacy ratios of insurance companies as of 2014.</p>
+<p>Insurance companies operating in Turkey calculate their capital adequacy ratios by dividing their capitals by their minimum required capital. According to the capital adequacy ratios obtained, capital adequacy ratio of Aviva Insurance is found to be below 100. Anadolu Life Insurance was found to be the insurance company with the greatest capital adequacy ratio.</p>
+<p>The required capital is most commonly calculated using two methods in Turkey. According to the first method, the capital is calculated separately for fields such as insurance other than life insurance, life insurance and pension. This method involves the use of the highest of the two amounts found based on the premium and dam-</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-2410143_5.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t5" id="t5"><span class="cs_fig_con">Table 5</span></a>. Monte Carlo simulation results for insurance companies based on foreign exchange risk.</p>
+</div> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-2410143_6.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t6" id="t6"><span class="cs_fig_con">Table 6</span></a>. Capital adequacies of the insurance companies.</p>
+</div>
+<p><sup>*</sup>Capital/Minimum Required Capital. Source: 31.12.2014 Balance Sheet Annotations.</p> 
+<div class="Css_sac">
+ <p class="imgGroupCss_v"> <a href="//html.scirp.org/file/_4-2410143_7.htm" target="_blank"><img class="lazy" data-original="Images/Table_Tmp.jpg" /></a></p> 
+ <p class="sacImgMarkCss"><a name="t7" id="t7"><span class="cs_fig_con">Table 7</span></a>. The impact of foreign exchange risk analysis on the capital adequacy of insurance companies.</p>
+</div>
+<p><sup>*</sup>1-day VaR results are multiplied by 3 capital factor.</p>
+<p>ages for insurance other than life insurance and the use of the total amount for results related to obligation and risk for life insurance. According to the second method, required capital equals to the sum of active risk, reassurance risk, risk of overly increased premiums, risk of provision for outstanding claims, notation risk and foreign exchange risk.</p>
+<p>Insurance companies operating in Turkey most commonly prefer the first method when calculating the minimum required capital. The minimum required capitals included in this study are directly taken from the balance sheet annotations of the insurance companies in question.</p>
+<p>The impacts of the Historical and Monte Carlo Simulation Methods on the capital adequacy ratios were found at different levels (<a href="#t7" target="_self">Table 7</a>). Values obtained from the Historical Simulation Method have taken the capital adequacy ratio to a point lower than the ones obtained from the Monte Carlo Simulation Method. However, this decrease was not significant. The VaR results obtained appears to have no adverse impact on the capital adequacy ratios.</p>
+<p class="E-Title1">5. Conclusion</p>
+<p>Insurance companies are exposed to financial risks as it is the case for any other financial organization due to their assets and their obligations. Among these risks, financial risks are risks such as foreign exchange risk, interest rate risk, credit risk, and liquidity risk. Aforementioned risks have an impact on the operations of insurance companies to a degree close to the banking industry and they tend to result in loss when they are realized.</p>
+<p>This study measured the foreign exchange risks which insurance companies may be exposed to using the VaR models. 7 insurance companies listed in Borsa Istanbul were analyzed. Value at Risk was calculated for the foreign exchange positions of insurance companies. The results showed that:</p>
+<p>Results obtained from the Historical Simulation Method were higher than those obtained from the Monte Carlo Simulation, both being methods of the VaR calculation. Similarly, the losses calculated for a holding period of 10 days were higher than the ones calculated for a holding period of 1 day. The VaR results obtained appear to have no adverse impact on the capital adequacy ratios.</p>
+            </div>
+
+        
+         
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">Conflicts of Interest</p>
+                <p style="text-align: justify;">The authors declare no conflicts of interest.</p>
+            </div>
+     
+
+            <div style="margin-top: 10px;">
+                <p style="font-size: 16px; font-weight: bold;">
+                    <a name="reference" style="color: #2f2f2f;">References</a>
+                </p>
+                <p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="text-align: left; word-break: break-word; ">
+                        
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578334' target='_blank'>1</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref1" id="ref1"></a>
+                                        Adams, Z., Füss, R., & Gropp, R. (2014). Spillover Effects among Financial Institutions: A State-Dependent Sensitivity Value-at-Risk Approach. Journal of Financial and Quantitative Analysis, 49, 575-598. 
+<br/>http://dx.doi.org/10.1017/S0022109014000325
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578335' target='_blank'>2</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref2" id="ref2"></a>
+                                        Assaf, A. (2015). Value-at-Risk Analysis in the MENA Equity Markets: Fat Tails and Conditional Asymmetries in Return Distributions. Journal of Multinational Financial Management, 29, 30-45. <br/>http://dx.doi.org/10.1016/j.mulfin.2014.11.002
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578336' target='_blank'>3</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref3" id="ref3"></a>
+                                        Baciu, O.A. (2014). Value-at-Risk Estimation on Bucharest Stock Exchange. Journal of Applied Quantitative Methods, 9, No. 4.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578337' target='_blank'>4</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref4" id="ref4"></a>
+                                        Basel Committee on Banking Supervision (2009). Revisions to the Basel II Market Risk Framework. 
+<br/>http://www.bis.org/publ/bcbs158.htm
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578338' target='_blank'>5</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref5" id="ref5"></a>
+                                        BIS (2005). Stress Testing at Major Financial Institutions: Survey Results and Practice. Working Group Report, Committee on the Global Financial System, Bank for International Settlements, BASEL, Switzerland.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578339' target='_blank'>6</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref6" id="ref6"></a>
+                                        Bolgün, K. E., & Ak&ccedilay, B. (2009). Risk Y&oumlnetimi. Istanbul: Scala Yayincilik.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578340' target='_blank'>7</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref7" id="ref7"></a>
+                                        Giddy, I., & Dufey, G. (2006). The Management of Foreign Exchange Risk. New York: New York University, Stern School of Business. <br/>http://pages.stern.nyu.edu/~igiddy/fxrisk.htm
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578341' target='_blank'>8</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref8" id="ref8"></a>
+                                        Glasserman, P. (2004). Monte Carlo Methods in Financial Engineering. New York: Springer.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578342' target='_blank'>9</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref9" id="ref9"></a>
+                                        Guo, L. (2008). Effective Stress Testing in Enterprise Risk Management. 
+<br/>http://file:///C:/Users/Fujitsu/Downloads/mono-2008-m-as08-1-guo%20(1).pdf
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578343' target='_blank'>10</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref10" id="ref10"></a>
+                                        Iglesias, E. M. (2015). Value at Risk and Expected Shortfall of Firms in the Main European Union Stock Market Indexes: A Detailed Analysis by Economic Sectors and Geographical Situation. Economic Modelling, 50, 1-8. 
+<br/>http://dx.doi.org/10.1016/j.econmod.2015.06.004
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578344' target='_blank'>11</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref11" id="ref11"></a>
+                                        Insurance Europe (2013). Currency Risk, Briefing Note. 
+<br/>http://financial-stability.org/research/artikel/2013/2013-q1/2013-q1-detail/date/2013/march/article/solvency-ii-currency-risk-module-flawed/
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578345' target='_blank'>12</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref12" id="ref12"></a>
+                                        Iorgulescua, F. (2012). Backtesting Value-at-Risk: Case Study on the Romanian Capital Market. Procedia—Social and Behavioral Sciences, 62, 796-800. www.sciencedirect.com
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578346' target='_blank'>13</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref13" id="ref13"></a>
+                                        Janssen, M. J. J. (2009). Portfolio Optimization with a Value at Risk Constraint in the Presence of Unhedgeable Risks. Amsterdam: Department of Quantitative Economics, University of Amsterdam.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578347' target='_blank'>14</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref14" id="ref14"></a>
+                                        Jorion, P. (2000). Value at Risk: The New Benchmark for Controlling Risk (2nd ed.). New York: McGraw-Hill Inc.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578348' target='_blank'>15</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref15" id="ref15"></a>
+                                        Ke&ccedileci, F. N., & Sarul, L. S. (2014). Application of Value at Risk (VaR) Models on Insurance Claim Data. Digital Proceeding of the ISDS’2014, Side, 10-14 May 2014.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578349' target='_blank'>16</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref16" id="ref16"></a>
+                                        Majumdar, C. (2008). VaR (Value at Risk) for Insurance Risk—A Simple Model. 10th Global Conference of Actuaries, 7-8 February 2008.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578350' target='_blank'>17</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref17" id="ref17"></a>
+                                        Manganelli, S., & Engle, R. F. (2001). Value at Risk Model in Finance. European Central Bank Working Paper Series, 75, 1-40.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578351' target='_blank'>18</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref18" id="ref18"></a>
+                                        Pallotta, M., & Zenti, R. (2000). Risk Analysis for Asset Managers: Historical Simulation, the Bootstrap Approach and Value at Risk Calculation. RAS Asset Management. <br/>http://papers.ssrn.com/sol3/papers.cfm?abstract_id=251669
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578352' target='_blank'>19</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref19" id="ref19"></a>
+                                        Piroozfar, G. (2009). Forecasting Value at Risk with Historical and Filtered Historical Simulation Methods. U.U.D.M. Project Report, Uppsala: Department of Mathematics, Uppsala University.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578353' target='_blank'>20</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref20" id="ref20"></a>
+                                        Popov, V., & Stutzmann, Y. (2003). How Is Foreign Exchange Managed: An Empirical Study Applied to Two Swiss Companies. Master’s Thesis, Lausanne: University of Lausanne.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578354' target='_blank'>21</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref21" id="ref21"></a>
+                                        Su, B. J. (2015). Value-at-Risk Estimates of the Stock Indices in Developed and Emerging Markets Including the Spillover Effects of Currency Market. Economic Modeling, 46, 204-224.
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="45" valign="top">
+                                        [<a href='../reference/referencespapers?referenceid=1578355' target='_blank'>22</a>]
+                                    </td>
+                                    <td valign="top" style="word-wrap:break-word; ">
+                                        <a target="_self" name="ref22" id="ref22"></a>
+                                        Yildirim, I. (2012). Stress Testing in Risk Management: An Application in the Turkish Banking Sector. International Journal of Trade, Economics and Finance, 3, 441-444.
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    
+
+    
+    <link href="//www.scirp.org/css/html.css?timestamp=202411141045303414" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="//www.scirp.org/js/lazyload.js?timestamp=202411141045303414"></script>
+    <script type="text/javascript" src="//www.scirp.org/js/ref.js?timestamp=202411141045303414"></script>
+    
+
+
+    <script type="text/javascript"  src="//www.scirp.org/js/htmlinsert.js?timestamp=202411141045303414"></script>
+<script type="text/javascript" >
+
+    window.onload = function () {
+        var device = tools.currDevice()
+        // ipad mobile 和 ipad true
+        // iphone mobile 和 iphone true
+        // android mobile 和 android true
+        if (device.isMobile && (device.iphone || device.android)) {
+            return false;
+        }
+        tools.replaceNode()
+    }
+</script>
+
+
+<script src="//www.scirp.org/js/crossmark_widget.js" type="text/javascript"></script>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 column col-md-pull-9">
+                    <div class="row clearfix bg_w visible-md visible-lg">
+                        <div class="title_up">Journals Menu</div>
+                        <div class="column txt3">
+                            
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=1395" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=1395" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=1395" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=1395" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=1395"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=1395"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=1395" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix bg_w visible-xs visible-sm">
+                        <div class="panel-group column" id="accordion" style="margin-bottom: 0;">
+                            <div class="panel panel-default" style="border: none;">
+                                <div class="panel-heading" style="background: #fff; padding: 0; margin: 0;">
+                                    <h4 class="panel-title">
+                                        <a class="link1" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Journals Menu&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body txt3" style="padding: 10px 0 0 0;">
+                                        
+
+<ul class="list-unstyled">
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/journalarticles?journalid=1395" target="_top">&nbsp;&nbsp;Articles</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/home?journalid=1395" target="_top">&nbsp;&nbsp;Archive</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/indexing?journalid=1395" target="_top">&nbsp;&nbsp;Indexing</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/aimscope?journalid=1395" target="_top">&nbsp;&nbsp;Aims & Scope</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/editorialboard?journalid=1395"  target="_top">&nbsp;&nbsp;Editorial Board</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/forauthors?journalid=1395"  target="_top">&nbsp;&nbsp;For Authors</a></li>
+    <li><i class="fa fa-chevron-right" style="color: #d71318;"></i><a href="../journal/apc?journalid=1395" target="_top">&nbsp;&nbsp;Publication Fees</a></li>
+</ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div id="relatedArticles"></div>
+                    <div id="div_sep" class="row clearfix bg_w">
+                       
+
+<div class="column left_link1">
+    <ul class="list-unstyled">
+        <li><a href="../journal/openspecialissues?journalid=1395&PubState=false" target="_blank">
+            Open Special Issues</a></li>
+        <li><a href="../journal/openspecialissues?journalid=1395&PubState=true" target="_blank">
+            Published Special Issues</a></li>
+        <li><a href="../journal/openspecialissuesguideline?journalid=1395" target="_blank">
+            Special Issues Guideline</a></li>
+    </ul>
+</div>
+
+                    </div>
+                    
+
+<div class="row clearfix bg_w">
+    <div class="column right_link1">
+        <ul class="list-unstyled">
+            <li><a href="../journal/newslettersubscription?journalid=1395" target="_blank">
+                E-Mail Alert</a></li>            
+            <li><a href="../journal/subscribejournal?journalid=1395" target="_blank">JFRM
+                Subscription</a></li>
+            <li><a href="../journal/publicat_ethics_statement?journalid=1395" target="_blank">
+                Publication Ethics & OA Statement</a></li>
+            <li><a href="../journal/faq?journalid=1395" target="_blank">
+                Frequently Asked Questions</a></li>
+            <li><a href="../journal/recommendtopeers?journalid=1395" target="_blank">
+                Recommend to Peers</a></li>
+            <li><a href="../journal/recommendtolibrary?journalid=1395" target="_blank">
+                Recommend to Library</a></li>
+            <li><a href="../journal/contactus?journalid=1395" target="_blank">
+                Contact us</a></li>
+            <li id="UserControl_Reacommend_div_ojuDisclaimer" style="DisPlay:None;"><a href="../journal/disclaimer?journalid=1395" target="_blank">
+                Disclaimer</a></li>
+            <li id="UserControl_Reacommend_div_historyIssue" style="DisPlay:None;"><a href="../journal/historyissue?journalid=1395" target="_blank">
+                History Issue</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                    <div id="journalSponsors"></div>
+
+                    
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Follow SCIRP</div>
+    <div style="padding-top: 10px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left"><a href="https://twitter.com/Scirp_Papers" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Twitter" target="_blank">
+                    <img src="../images/Twitter.svg" height="30" alt="Twitter"></a></td>
+                <td align="left"><a href="https://www.facebook.com/Scientific-Research-Publishing-267429817016644/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Facebook" target="_blank">
+                    <img src="../images/fb.svg" height="30" alt="Facebook"></a></td>
+                <td align="left"><a href="https://www.linkedin.com/company/scientific-research-publishing/" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Linkedin" target="_blank">
+                    <img src="../images/in.svg" height="30" alt="Linkedin"></a></td>
+                <td align="left"><a href="http://e.weibo.com/scirp" class="tooltip-hide" data-toggle="tooltip" data-placement="left" title="Weibo" target="_blank">
+                    <img src="../images/weibo.svg" height="30" alt="Weibo"></a></td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="row clearfix bg_w">
+                        
+
+
+
+<div class="column">
+    <div class="title_up">Contact us</div>
+    <div style="padding-top: 5px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/phone02.jpg"  style="float: left;" /></td>
+                <td style="padding-left:5px;">+1 323-425-8868</td>           
+            </tr>
+            <tr>
+                <td style="text-align:left; width:25px;" ><img border='0' src="../images/emailsrp.png"  style="float: left;" /></td>
+                <td style="padding-left:5px;"><a href="mailto:customer@scirp.org" target="_blank">customer@scirp.org</a></td>           
+            </tr>
+            <tr>
+                <td><img border='0' src="../images/whatsapplogo.jpg" alt='WhatsApp' title='WhatsApp' style="float: left;" /></td>
+                <td style="padding-left:5px;">+86 18163351462(WhatsApp)</td>
+            </tr>
+            <tr>
+                <td><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow"><img border='0' src="../Images/qq25.jpg" alt='Click here to send a message to me' title='Click here to send a message to me' style="float: left;" /></a></td>
+                <td style="padding-left:5px;"><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1655362766&site=qq&menu=yes' rel="nofollow">1655362766</a></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;"><img border='0' src="../images/weixinlogo.jpg"  /></td>
+                <td style="padding-left:5px;"><img border='0' src="../images/weixinsrp120.jpg"  /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:5px;">Paper Publishing WeChat</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="papercopyright">
+            <div id="UserControl_PaperCopyRight_div_showby" class="clearfix text-center" style="border-top: #ccc 2px solid; background: #fff; padding: 10px; margin-top: 10px; font-size: 12px;">
+    <p>Copyright &copy; 2025 by authors and Scientific Research Publishing Inc. </p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" title="Creative Commons License" style="border-width: 0" src="../Images/ccby.png" width="88" height="31" /></a></p>
+    <p>This work and the related PDF file are licensed under a <a about="http://dx.doi.org/10.4236/jfrm.2015.43013" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+
+
+        </div>
+        <div id="footer">
+            
+
+
+
+<div style="border-top: #d71318 8px solid; padding: 20px 0; margin-top: 20px;">
+    <div class="container row clearfix center-block" style="padding: 0;">
+        
+
+<script type="text/javascript">
+    function checksubscribe() {
+        
+        var email = $("#UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email").val();//Email   id=UserControl_NewsletterSubscription_TextBox_email       
+        if (email == "" || email == "E-mail address") {
+            alert('Please enter an email address!');
+            return false;
+        }
+        var emailRegExp = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+        if (!emailRegExp.test(email) || email.indexOf('.') == -1) {
+            alert('The email address that you entered is invalid!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="col-sm-3 column" style="padding-right: 30px;">
+    <span style="margin-bottom: 10px; font-size: 16px; line-height: 1.2em;"><strong>Free SCIRP Newsletters</strong></span>
+    <div style="background: #dddddd; border-radius: 6px; box-shadow: 3px 3px 0px #9f9f9f; padding: 10px; margin-bottom: 10px;">
+
+        <div role="form" class="form-inline">
+            <div id="UserControl_footer_UserControl_NewsletterSubscription_panel_newsletter">
+	
+                <div class="form-group" style="margin-bottom: 5px;">
+                    <span for="name" style="font-size: 12px; line-height: 1.5em; font-weight: bold;">Add your e-mail address to receive free newsletters from SCIRP.</span>
+
+                    <input name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$TextBox_nls_email" type="text" value="E-mail address" id="UserControl_footer_UserControl_NewsletterSubscription_TextBox_nls_email" class="form-control" onFocus="javascript:if(this.value==&#39;E-mail address&#39;) {this.value=&#39;&#39;;}" onBlur="javascript:if(this.value==&#39;&#39;){this.value=&#39;E-mail address&#39;;}" style="width: 100%; background: #fff; border: #2f2f2f 1px solid; border-radius: 0; height: 25px;" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 5px; width: 100%;">
+
+                    <select name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$DropDownList_journal" id="UserControl_footer_UserControl_NewsletterSubscription_DropDownList_journal" class="form-control" style="width: 100%; height: 25px; border: #2f2f2f 1px solid; border-radius: 0; padding: 0 8px; color: #999;">
+		<option value="0">Select Journal</option>
+		<option value="737">AA</option>
+		<option value="1408">AAD</option>
+		<option value="1406">AAR</option>
+		<option value="1002">AASoci</option>
+		<option value="2423">AAST</option>
+		<option value="164">ABB</option>
+		<option value="611">ABC</option>
+		<option value="1478">ABCR</option>
+		<option value="473">ACES</option>
+		<option value="492">ACS</option>
+		<option value="1579">ACT</option>
+		<option value="2437">AD</option>
+		<option value="2442">ADR</option>
+		<option value="2444">AE</option>
+		<option value="2426">AER</option>
+		<option value="2316">AHS</option>
+		<option value="803">AID</option>
+		<option value="1000">AiM</option>
+		<option value="476">AIT</option>
+		<option value="203">AJAC</option>
+		<option value="2422">AJC</option>
+		<option value="1304">AJCC</option>
+		<option value="535">AJCM</option>
+		<option value="884">AJIBM</option>
+		<option value="532">AJMB</option>
+		<option value="529">AJOR</option>
+		<option value="207">AJPS</option>
+		<option value="996">ALAMT</option>
+		<option value="1517">ALC</option>
+		<option value="2317">ALS</option>
+		<option value="160">AM</option>
+		<option value="477">AMI</option>
+		<option value="675">AMPC</option>
+		<option value="1573">ANP</option>
+		<option value="1574">APD</option>
+		<option value="743">APE</option>
+		<option value="513">APM</option>
+		<option value="1575">ARS</option>
+		<option value="2445">ARSci</option>
+		<option value="191">AS</option>
+		<option value="812">ASM</option>
+		<option value="260">BLR</option>
+		<option value="2455">CC</option>
+		<option value="136">CE</option>
+		<option value="2074">CellBio</option>
+		<option value="1493">ChnStd</option>
+		<option value="122">CM</option>
+		<option value="989">CMB</option>
+		<option value="92">CN</option>
+		<option value="2033">CRCM</option>
+		<option value="173">CS</option>
+		<option value="1492">CSTA</option>
+		<option value="2438">CUS</option>
+		<option value="1518">CWEEE</option>
+		<option value="2454">Detection</option>
+		<option value="2457">EMAE</option>
+		<option value="64">ENG</option>
+		<option value="93">EPE</option>
+		<option value="1311">ETSN</option>
+		<option value="2315">FMAR</option>
+		<option value="208">FNS</option>
+		<option value="2432">GEP</option>
+		<option value="2462">GIS</option>
+		<option value="541">GM</option>
+		<option value="1690">Graphene</option>
+		<option value="512">GSC</option>
+		<option value="65">Health</option>
+		<option value="103">IB</option>
+		<option value="176">ICA</option>
+		<option value="111">IIM</option>
+		<option value="490">IJAA</option>
+		<option value="2449">IJAMSC</option>
+		<option value="1391">IJCCE</option>
+		<option value="202">IJCM</option>
+		<option value="4">IJCNS</option>
+		<option value="209">IJG</option>
+		<option value="2428">IJIDS</option>
+		<option value="747">IJIS</option>
+		<option value="1261">IJMNTA</option>
+		<option value="1578">IJMPCERO</option>
+		<option value="1519">IJNM</option>
+		<option value="527">IJOC</option>
+		<option value="1477">IJOHNS</option>
+		<option value="1298">InfraMatics</option>
+		<option value="1980">JACEN</option>
+		<option value="2436">JAMP</option>
+		<option value="525">JASMI</option>
+		<option value="475">JBBS</option>
+		<option value="2443">JBCPR</option>
+		<option value="30">JBiSE</option>
+		<option value="2435">JBM</option>
+		<option value="230">JBNB</option>
+		<option value="162">JBPC</option>
+		<option value="2431">JCC</option>
+		<option value="530">JCDSA</option>
+		<option value="526">JCPT</option>
+		<option value="125">JCT</option>
+		<option value="2425">JDAIP</option>
+		<option value="479">JDM</option>
+		<option value="531">JEAS</option>
+		<option value="691">JECTC</option>
+		<option value="29">JEMAA</option>
+		<option value="144">JEP</option>
+		<option value="1986">JFCMV</option>
+		<option value="1395">JFRM</option>
+		<option value="114">JGIS</option>
+		<option value="2461">JHEPGC</option>
+		<option value="2421">JHRSS</option>
+		<option value="1411">JIBTVA</option>
+		<option value="102">JILSA</option>
+		<option value="175">JIS</option>
+		<option value="648">JMF</option>
+		<option value="397">JMGBND</option>
+		<option value="1753">JMMCE</option>
+		<option value="172">JMP</option>
+		<option value="2433">JPEE</option>
+		<option value="591">JQIS</option>
+		<option value="990">JSBS</option>
+		<option value="45">JSEA</option>
+		<option value="543">JSEMAT</option>
+		<option value="339">JSIP</option>
+		<option value="2430">JSS</option>
+		<option value="28">JSSM</option>
+		<option value="478">JST</option>
+		<option value="2439">JTR</option>
+		<option value="2460">JTST</option>
+		<option value="357">JTTs</option>
+		<option value="46">JWARP</option>
+		<option value="210">LCE</option>
+		<option value="1485">MC</option>
+		<option value="163">ME</option>
+		<option value="787">MI</option>
+		<option value="786">MME</option>
+		<option value="917">MNSMS</option>
+		<option value="815">MPS</option>
+		<option value="2441">MR</option>
+		<option value="1487">MRC</option>
+		<option value="1576">MRI</option>
+		<option value="174">MSA</option>
+		<option value="2434">MSCE</option>
+		<option value="528">NJGC</option>
+		<option value="205">NM</option>
+		<option value="192">NR</option>
+		<option value="69">NS</option>
+		<option value="2459">OALib</option>
+		<option value="2463">OALibJ</option>
+		<option value="2453">ODEM</option>
+		<option value="738">OJA</option>
+		<option value="1480">OJAB</option>
+		<option value="1590">OJAcct</option>
+		<option value="814">OJAnes</option>
+		<option value="1407">OJAP</option>
+		<option value="1479">OJApo</option>
+		<option value="1003">OJAppS</option>
+		<option value="2446">OJAPr</option>
+		<option value="601">OJAS</option>
+		<option value="806">OJBD</option>
+		<option value="785">OJBIPHY</option>
+		<option value="2447">OJBM</option>
+		<option value="2452">OJC</option>
+		<option value="997">OJCB</option>
+		<option value="606">OJCD</option>
+		<option value="788">OJCE</option>
+		<option value="792">OJCM</option>
+		<option value="1977">OJD</option>
+		<option value="810">OJDer</option>
+		<option value="586">OJDM</option>
+		<option value="614">OJE</option>
+		<option value="1577">OJEE</option>
+		<option value="2456">OJEM</option>
+		<option value="811">OJEMD</option>
+		<option value="816">OJEpi</option>
+		<option value="1979">OJER</option>
+		<option value="736">OJF</option>
+		<option value="1004">OJFD</option>
+		<option value="587">OJG</option>
+		<option value="817">OJGas</option>
+		<option value="613">OJGen</option>
+		<option value="602">OJI</option>
+		<option value="592">OJIC</option>
+		<option value="593">OJIM</option>
+		<option value="793">OJINM</option>
+		<option value="1186">OJL</option>
+		<option value="588">OJM</option>
+		<option value="790">OJMC</option>
+		<option value="784">OJMetal</option>
+		<option value="739">OJMH</option>
+		<option value="820">OJMI</option>
+		<option value="612">OJMIP</option>
+		<option value="742">OJML</option>
+		<option value="999">OJMM</option>
+		<option value="822">OJMN</option>
+		<option value="998">OJMP</option>
+		<option value="596">OJMS</option>
+		<option value="2424">OJMSi</option>
+		<option value="605">OJN</option>
+		<option value="821">OJNeph</option>
+		<option value="804">OJO</option>
+		<option value="604">OJOG</option>
+		<option value="2464">OJOGas</option>
+		<option value="1978">OJOp</option>
+		<option value="805">OJOph</option>
+		<option value="794">OJOPM</option>
+		<option value="823">OJOTS</option>
+		<option value="813">OJPathology</option>
+		<option value="589">OJPC</option>
+		<option value="791">OJPChem</option>
+		<option value="609">OJPed</option>
+		<option value="610">OJPM</option>
+		<option value="741">OJPP</option>
+		<option value="744">OJPS</option>
+		<option value="603">OJPsych</option>
+		<option value="807">OJRA</option>
+		<option value="789">OJRad</option>
+		<option value="824">OJRD</option>
+		<option value="1394">OJRM</option>
+		<option value="590">OJS</option>
+		<option value="735">OJSS</option>
+		<option value="600">OJSST</option>
+		<option value="607">OJST</option>
+		<option value="1486">OJSTA</option>
+		<option value="2448">OJTR</option>
+		<option value="808">OJTS</option>
+		<option value="509">OJU</option>
+		<option value="1001">OJVM</option>
+		<option value="547">OPJ</option>
+		<option value="71">POS</option>
+		<option value="206">PP</option>
+		<option value="2440">PST</option>
+		<option value="148">PSYCH</option>
+		<option value="2450">SAR</option>
+		<option value="533">SCD</option>
+		<option value="135">SGRE</option>
+		<option value="474">SM</option>
+		<option value="1589">SN</option>
+		<option value="491">SNL</option>
+		<option value="2034">Soft</option>
+		<option value="204">SS</option>
+		<option value="666">TEL</option>
+		<option value="104">TI</option>
+		<option value="1405">UOAJ</option>
+		<option value="2458">VP</option>
+		<option value="146">WET</option>
+		<option value="511">WJA</option>
+		<option value="818">WJCD</option>
+		<option value="502">WJCMP</option>
+		<option value="809">WJCS</option>
+		<option value="2451">WJET</option>
+		<option value="506">WJM</option>
+		<option value="615">WJNS</option>
+		<option value="493">WJNSE</option>
+		<option value="534">WJNST</option>
+		<option value="510">WJV</option>
+		<option value="41">WSN</option>
+		<option value="2465">YM</option>
+
+	</select>
+
+
+                </div>
+
+                <input type="submit" name="ctl00$UserControl_footer$UserControl_NewsletterSubscription$btnSubscribe" value="Subscribe" onclick="return checksubscribe();" id="UserControl_footer_UserControl_NewsletterSubscription_btnSubscribe" class="btn btn-default" style="background: #2f2f2f; border-radius: 5px; color: #fff; padding: 2px 4px;" />
+
+
+            
+</div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="col-sm-9 column">
+        
+
+
+
+    <div class="row clearfix foot_links">
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled" >
+                <li><h4><strong><a href="//www.scirp.org/" target="_top">Home</a></strong></h4></li>
+                <li><a href="../journal/indexbytitle" target="_blank">Journals A-Z</a></li>
+                <li><a href="../journal/" target="_blank">Subject</a></li>
+                <li><a href="../book/" target="_blank">Books</a></li>
+                <li><a href="../sitemap/index.xml" target="_blank">Sitemap</a></li>
+                <li><a href="../aboutus/#contactus" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link1" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/" target="_blank">About SCIRP</a></strong></h4></li>
+                <li><a href="../aboutus/publicationfees" target="_blank">Publication Fees</a></li>
+                <li><a href="../aboutus/forauthors" target="_blank">For Authors</a></li>
+                <li><a href="../journal/peer-review" target="_blank">Peer-Review Issues</a></li>
+                <li><a href="../journal/callforspecialissueproposals" target="_blank">Special Issues</a></li>
+                <li><a href="../news/" target="_blank">News</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link2" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/careers/" target="_blank">Service</a></strong></h4></li>
+                <li><a href="//papersubmission.scirp.org" target="_blank">Manuscript Tracking System</a></li>
+                <li><a href="../aboutus/subscription" target="_blank">Subscription</a></li>
+                <li><a href="../author/" target="_blank">Translation & Proofreading</a></li>
+                <li><a href="../aboutus/faq" target="_blank">FAQ</a></li>
+                <li><a href="//www.scirp.org/journalvolume.html" target="_blank">Volume & Issue</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-xs-6 column f_link3" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+                <li><h4><strong><a href="//www.scirp.org/aboutus/policies" target="_blank">Policies</a></strong></h4></li>
+                <li><a href="../journal/openaccess" target="_blank">Open Access</a></li>
+                <li><a href="../aboutus/publicationethics" target="_blank">Publication Ethics</a></li>
+                <li><a href="../aboutus/preservation" target="_blank">Preservation</a></li>
+                <li><a href="../aboutus/retraction" target="_blank">Retraction</a></li>
+                <li><a href="../aboutus/privacypolicy" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="background: #dddddd; line-height: 2em; padding: 10px; color: #666;">
+    <div class="text-center">
+        Copyright &copy; 2006-2025 Scientific Research Publishing Inc. All Rights Reserved.    
+    </div>
+</div>
+
+<a href="#0" class="cd-top">Top</a>
+
+
+
+
+
+        </div>
+
+        <input type="hidden" name="ctl00$Hidden_JournalID" id="Hidden_JournalID" />
+    </form>
+
+
+
+        <script type="text/javascript">
+            $.ajax({
+                type: "GET",
+                url: "relatedarticles?paperid=" +60072 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#relatedArticles").html(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "journalsponsor?journalid=" +1395 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+                $("#journalSponsors").html(msg);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "paperviewsdownloads?journalid=" +1395 +"&paperid=" +60072 +"&timspan=" + new Date().getTime(),
+            async: true,
+            error: function (msg) {
+                result = msg;
+            },
+            success: function (msg) {
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+    <!-- jQuery Frameworks    ============================================= -->
+    <script src="//www.scirp.org/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//www.scirp.org/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript"  defer="defer" src="//www.scirp.org/js/gtm.js"></script>
+
+   
+
+
+<script type="text/javascript" src="//www.scirp.org/js/viewer.min.js"></script>
+<link rel="stylesheet" href="//www.scirp.org/css/viewer.min.css"  />
+<script type="text/javascript">
+    $(function () {
+        try {
+            $("img.lazy").lazyload();
+        } catch (e) {
+
+        }
+
+    });
+    $(function () {
+        try {
+            var images = document.querySelectorAll('.lazy');
+            images.forEach(function (image) {
+                new Viewer(image, {
+                    // 在这里定义您的 Viewer 配置选项，和之前示例相同
+                    title: false,
+                    navbar: false,
+                    // ...其他配置
+                });
+            });
+        } catch (e) {
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+
+
+</html>
