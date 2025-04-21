@@ -4,11 +4,12 @@ from collections import defaultdict
 from bs4 import BeautifulSoup
 import nltk
 from nltk.corpus import stopwords, words
-from nltk.stem import WordNetLemmatizer
-from nltk.corpus import wordnet
 
-# Настройка лемматизатора и ресурсов
-lemmatizer = WordNetLemmatizer()
+# Загрузка ресурсов NLTK
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('words')
+
 stop_words = set(stopwords.words('english'))
 english_vocab = set(words.words())
 
@@ -23,17 +24,6 @@ class BooleanSearchEngine:
     def is_english_word(self, word):
         return word.lower() in english_vocab
 
-    def get_wordnet_pos(self, word):
-        tag = nltk.pos_tag([word])[0][1]
-        if tag.startswith('V'):
-            return wordnet.VERB
-        elif tag.startswith('N'):
-            return wordnet.NOUN
-        elif tag.startswith('R'):
-            return wordnet.ADV
-        else:
-            return wordnet.ADJ
-
     def clean_tokens(self, tokens):
         return {
             t.lower()
@@ -44,31 +34,15 @@ class BooleanSearchEngine:
             and t.lower() not in stop_words
         }
 
-    def lemmatize_tokens(self, tokens):
-        lemmas = {}
-        for token in tokens:
-            pos = self.get_wordnet_pos(token)
-            lemma = lemmatizer.lemmatize(token, pos)  # Лемматизация с учетом части речи
-            if lemma not in lemmas:
-                lemmas[lemma] = set()
-            lemmas[lemma].add(token.lower())
-
-        for lemma in lemmas:
-            lemmas[lemma] = " ".join(sorted(lemmas[lemma]))
-
-        return lemmas
-    
-    def tokenize_and_lemmatize(self, text):
+    def tokenize_and_clean(self, text):
         tokens = nltk.word_tokenize(text.lower())
-        clean = self.clean_tokens(tokens)
-        lemmatized = self.lemmatize_tokens(clean)
-        return lemmatized.keys()
+        return self.clean_tokens(tokens)
 
     def build_inverted_index(self, documents):
         index = defaultdict(set)
         for doc_id, text in enumerate(documents):
-            for lemma in self.tokenize_and_lemmatize(text):
-                index[lemma].add(doc_id)
+            for token in self.tokenize_and_clean(text):
+                index[token].add(doc_id)
         return index
 
     def parse_query(self, query):
@@ -85,8 +59,8 @@ class BooleanSearchEngine:
             elif token == '(' or token == ')':
                 return token
             else:
-                lemma = next(iter(self.tokenize_and_lemmatize(token)), token.lower())
-                return f"self.index.get('{lemma}', set())"
+                cleaned = next(iter(self.tokenize_and_clean(token)), token.lower())
+                return f"self.index.get('{cleaned}', set())"
 
         tokens = re.findall(r'\(|\)|\w+|AND|OR|NOT|И|ИЛИ|НЕ', query)
         parsed = ' '.join(repl(token) for token in tokens)
@@ -97,7 +71,7 @@ class BooleanSearchEngine:
             for term in sorted(self.index):
                 doc_ids = sorted(self.index[term])
                 f.write(f"{term}: {doc_ids}\n")
-                
+
     def search(self, query):
         try:
             parsed_query = self.parse_query(query)
@@ -121,14 +95,17 @@ def load_html_documents_from_folder(folder_path):
                     documents[doc_id] = text
     return documents
 
+# Загрузка документов
 folder_path = "information-search/task_1/pages"
 documents_dict = load_html_documents_from_folder(folder_path)
 
 documents = [documents_dict[k] for k in sorted(documents_dict.keys())]
-doc_id_map = {i: k for i, k in enumerate(sorted(documents_dict.keys()))} 
+doc_id_map = {i: k for i, k in enumerate(sorted(documents_dict.keys()))}
 
+# Инициализация поисковой системы
 engine = BooleanSearchEngine(documents)
 
+# Интерфейс пользователя
 print("Введите булев запрос (используйте AND, OR, NOT). Для выхода введите 'exit'.\n")
 while True:
     query = input("Запрос: ").strip()
