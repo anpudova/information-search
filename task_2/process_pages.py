@@ -4,44 +4,43 @@ from bs4 import BeautifulSoup
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-from nltk.corpus import wordnet
+from nltk.corpus import wordnet, words, stopwords
 
 #nltk.download('punkt')
 #nltk.download('wordnet')
 #nltk.download('averaged_perceptron_tagger_eng')
+#nltk.download('words')
 #nltk.download('omw-1.4')
+#nltk.download('stopwords')
 
 lemmatizer = WordNetLemmatizer()
+english_vocab = set(words.words())
+stop_words = set(stopwords.words('english'))
 
-STOPWORDS = set([
-    "i", "me", "my", "we", "you", "he", "she", "it", "they", "a", "an", "the", 
-    "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", 
-    "by", "for", "with", "about", "against", "between", "into", "through", "during", 
-    "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", 
-    "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", 
-    "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", 
-    "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", 
-    "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", 
-    "now"
-])
-
-INPUT_FOLDER = "pages"
-OUTPUT_TOKENS = "tokens.txt"
-OUTPUT_LEMMAS = "lemmas.txt"
+INPUT_FOLDER = "information-search/task_1/pages"
+OUTPUT_TOKENS = "information-search/task_2/tokens/tokens"
+OUTPUT_LEMMAS = "information-search/task_2/lemmas/lemmas"
 
 def clear_files():
     open(OUTPUT_TOKENS, 'w', encoding='utf-8').close()
     open(OUTPUT_LEMMAS, 'w', encoding='utf-8').close()
 
-def is_english_word(word):
-    return bool(re.match(r'^[a-zA-Z]+$', word))
-
 def extract_text_from_html(html_content):
     soup = BeautifulSoup(html_content, "html.parser")
     return soup.get_text()
 
+def is_english_word(word):
+    return word.lower() in english_vocab
+
 def clean_tokens(tokens):
-    return {t.lower() for t in tokens if t.isalpha() and is_english_word(t) and t.lower() not in STOPWORDS}
+    return {
+        t.lower()
+        for t in tokens
+        if t.isalpha()
+        and len(t) > 1
+        and is_english_word(t)
+        and t.lower() not in stop_words
+    }
 
 def get_wordnet_pos(word):
     tag = nltk.pos_tag([word])[0][1]
@@ -71,29 +70,29 @@ def lemmatize_tokens(tokens):
 def process_files():
     all_tokens = set()
 
+    os.makedirs("information-search/task_2/tokens", exist_ok=True)
+    os.makedirs("information-search/task_2/lemmas", exist_ok=True)
     for filename in os.listdir(INPUT_FOLDER):
         if filename.endswith(".html"):
             with open(os.path.join(INPUT_FOLDER, filename), "r", encoding="utf-8") as file:
+                all_tokens = set()
+                lemmas = {}
                 html_content = file.read()
                 text = extract_text_from_html(html_content)
-                tokens = word_tokenize(text)  # Токенизация
+                tokens = word_tokenize(text.lower())  # Токенизация
                 clean_tokens_list = clean_tokens(tokens)  # Фильтрация
                 all_tokens.update(clean_tokens_list)  # Добавляем в общий список
+                lemmas = lemmatize_tokens(all_tokens)
 
-    # Лемматизация
-    lemmas = lemmatize_tokens(all_tokens)
-    clear_files()
+                 # Запись
+                with open(OUTPUT_TOKENS + "_" +  str(int(re.search(r'\d+', filename).group())) + ".txt", "w", encoding="utf-8") as f:
+                    for token in sorted(all_tokens):
+                        f.write(f"{token}\n")
 
-    # Запись
-    with open(OUTPUT_TOKENS, "w", encoding="utf-8") as f:
-        for token in sorted(all_tokens):
-            f.write(f"{token}\n")
+                with open(OUTPUT_LEMMAS + "_" +  str(int(re.search(r'\d+', filename).group())) + ".txt", "w", encoding="utf-8") as f:
+                    for lemma, words in sorted(lemmas.items()):
+                        f.write(f"{lemma}: {words}\n")
 
-    with open(OUTPUT_LEMMAS, "w", encoding="utf-8") as f:
-        for lemma, words in sorted(lemmas.items()):
-            f.write(f"{lemma}: {words}\n")
-
-    print(f"Файлы сохранены: {OUTPUT_TOKENS}, {OUTPUT_LEMMAS}")
 
 process_files()
 
