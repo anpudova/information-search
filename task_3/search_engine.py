@@ -6,9 +6,9 @@ import nltk
 from nltk.corpus import stopwords, words
 
 # Загрузка ресурсов NLTK
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('words')
+# nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('words')
 
 stop_words = set(stopwords.words('english'))
 english_vocab = set(words.words())
